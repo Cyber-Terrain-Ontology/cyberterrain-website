@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>STONES — STIX Ontology for Network Environments</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0f1117;
+      color: #e2e8f0;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1a1f2e 0%, #0f1117 100%);
+      border-bottom: 1px solid #2d3748;
+      padding: 2.5rem 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #63b3ed;
+      letter-spacing: -0.5px;
+    }
+
+    header p.subtitle {
+      font-size: 1.1rem;
+      color: #a0aec0;
+      margin-top: 0.5rem;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #2d3748;
+      color: #68d391;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.2rem 0.6rem;
+      border-radius: 9999px;
+      margin-top: 0.75rem;
+      letter-spacing: 0.05em;
+    }
+
+    main {
+      max-width: 860px;
+      margin: 2.5rem auto;
+      padding: 0 1.5rem;
+    }
+
+    section { margin-bottom: 2.5rem; }
+
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #90cdf4;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      border-bottom: 1px solid #2d3748;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    p { color: #cbd5e0; margin-bottom: 0.75rem; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+
+    td {
+      padding: 0.6rem 0.75rem;
+      border-bottom: 1px solid #2d3748;
+      vertical-align: top;
+    }
+
+    td:first-child {
+      color: #a0aec0;
+      white-space: nowrap;
+      width: 160px;
+      font-weight: 500;
+    }
+
+    a { color: #63b3ed; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .download-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+
+    .download-card {
+      background: #1a1f2e;
+      border: 1px solid #2d3748;
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      transition: border-color 0.2s;
+    }
+
+    .download-card:hover { border-color: #63b3ed; }
+
+    .download-card .label {
+      font-size: 0.8rem;
+      color: #a0aec0;
+      margin-bottom: 0.25rem;
+    }
+
+    .download-card a {
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    code {
+      background: #1a1f2e;
+      border: 1px solid #2d3748;
+      border-radius: 4px;
+      padding: 0.15rem 0.4rem;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 0.85rem;
+      color: #fbd38d;
+    }
+
+    pre {
+      background: #1a1f2e;
+      border: 1px solid #2d3748;
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      overflow-x: auto;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 0.85rem;
+      color: #fbd38d;
+      line-height: 1.5;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #4a5568;
+      font-size: 0.85rem;
+      border-top: 1px solid #2d3748;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>STONES</h1>
+  <p class="subtitle">STIX Ontology for Network Environments</p>
+  <span class="badge">v0.1.0 &nbsp;·&nbsp; OWL 2 &nbsp;·&nbsp; CC BY 4.0</span>
+</header>
+
+<main>
+
+  <section>
+    <h2>Description</h2>
+    <p>
+      STONES is an OWL 2 ontology modelling the STIX 2.1 specification. It provides a class hierarchy
+      for all STIX Domain Objects (SDOs), Cyber Observable Objects (SCOs), Relationship Objects (SROs),
+      Meta Objects, and structured sub-types, together with datatype and object properties covering all
+      standard STIX properties.
+    </p>
+  </section>
+
+  <section>
+    <h2>Ontology Metadata</h2>
+    <table>
+      <tr>
+        <td>IRI</td>
+        <td><code>https://cyberterrain.org/ns/stones#</code></td>
+      </tr>
+      <tr>
+        <td>Version IRI</td>
+        <td><code>https://cyberterrain.org/ns/stones/0.1.0</code></td>
+      </tr>
+      <tr>
+        <td>Version</td>
+        <td>0.1.0</td>
+      </tr>
+      <tr>
+        <td>Creator</td>
+        <td>Hohimer Intelligence Strategies LLC</td>
+      </tr>
+      <tr>
+        <td>License</td>
+        <td><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0</a></td>
+      </tr>
+      <tr>
+        <td>Based on</td>
+        <td><a href="https://docs.oasis-open.org/cti/stix/v2.1/stix-v2.1.html" target="_blank">STIX 2.1 (OASIS)</a></td>
+      </tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Downloads</h2>
+    <div class="download-grid">
+      <div class="download-card">
+        <div class="label">Core Ontology</div>
+        <a href="stones.ttl">stones.ttl</a>
+      </div>
+      <div class="download-card">
+        <div class="label">Object Properties</div>
+        <a href="object-properties.ttl">object-properties.ttl</a>
+      </div>
+      <div class="download-card">
+        <div class="label">Datatype Properties</div>
+        <a href="datatype-properties.ttl">datatype-properties.ttl</a>
+      </div>
+      <div class="download-card">
+        <div class="label">Vocabularies</div>
+        <a href="vocabularies.ttl">vocabularies.ttl</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Usage</h2>
+    <p>Reference the ontology in your Turtle files:</p>
+    <pre>@prefix stones: &lt;https://cyberterrain.org/ns/stones#&gt; .</pre>
+    <p>Or import it in OWL:</p>
+    <pre>owl:imports &lt;https://cyberterrain.org/ns/stones#&gt; .</pre>
+  </section>
+
+  <section>
+    <h2>Imports</h2>
+    <table>
+      <tr>
+        <td><a href="datatype-properties.ttl">datatype-properties</a></td>
+        <td><code>https://cyberterrain.org/ns/datatype-properties#</code></td>
+      </tr>
+      <tr>
+        <td><a href="object-properties.ttl">object-properties</a></td>
+        <td><code>https://cyberterrain.org/ns/object-properties#</code></td>
+      </tr>
+      <tr>
+        <td><a href="vocabularies.ttl">vocabularies</a></td>
+        <td><code>https://cyberterrain.org/ns/vocabularies#</code></td>
+      </tr>
+      <tr>
+        <td><a href="http://www.w3.org/2004/02/skos/core" target="_blank">SKOS Core</a></td>
+        <td><code>http://www.w3.org/2004/02/skos/core</code></td>
+      </tr>
+    </table>
+  </section>
+
+</main>
+
+<footer>
+  &copy; Hohimer Intelligence Strategies LLC &nbsp;·&nbsp;
+  <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+</footer>
+
+</body>
+</html>
