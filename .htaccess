@@ -1,24 +1,20 @@
 
 # Ontology namespace: content negotiation for /ns/* (must run before WordPress)
+# Uses 303 redirects to avoid mod_dir/mod_rewrite ordering issues.
+# Pattern [^/.] matches bare names only (e.g. "stones"), not "stones.ttl" or "stones/doc/..."
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /
 
-# Serve actual /ns/ files directly (e.g. /ns/stones.ttl, /ns/stones.html)
-RewriteCond %{REQUEST_FILENAME} -f
-RewriteRule ^ns/ - [L]
-
-# RDF/semantic web clients: serve Turtle
-RewriteCond %{REQUEST_FILENAME} !-f
+# RDF/semantic web clients: 303 redirect to Turtle
 RewriteCond %{HTTP_ACCEPT} text/turtle [OR]
 RewriteCond %{HTTP_ACCEPT} application/x-turtle [OR]
 RewriteCond %{HTTP_ACCEPT} application/rdf\+xml [OR]
 RewriteCond %{HTTP_ACCEPT} application/owl\+xml
-RewriteRule ^ns/([^/.]+)/?$ /ns/$1.ttl [L,T=text/turtle]
+RewriteRule ^ns/([^/.]+)/?$ /ns/$1.ttl [R=303,L]
 
-# Browser fallback: serve HTML
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^ns/([^/.]+)/?$ /ns/$1.html [L]
+# Browsers: 303 redirect to HTML
+RewriteRule ^ns/([^/.]+)/?$ /ns/$1.html [R=303,L]
 </IfModule>
 
 # BEGIN WordPress
