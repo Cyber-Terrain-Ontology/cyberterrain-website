@@ -1,8 +1,24 @@
 
-# Pass /ns/ requests to subdirectory .htaccess for ontology content negotiation
+# Ontology namespace: content negotiation for /ns/* (must run before WordPress)
 <IfModule mod_rewrite.c>
 RewriteEngine On
+RewriteBase /
+
+# Serve actual /ns/ files directly (e.g. /ns/stones.ttl, /ns/stones.html)
+RewriteCond %{REQUEST_FILENAME} -f
 RewriteRule ^ns/ - [L]
+
+# RDF/semantic web clients: serve Turtle
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{HTTP_ACCEPT} text/turtle [OR]
+RewriteCond %{HTTP_ACCEPT} application/x-turtle [OR]
+RewriteCond %{HTTP_ACCEPT} application/rdf\+xml [OR]
+RewriteCond %{HTTP_ACCEPT} application/owl\+xml
+RewriteRule ^ns/([^/.]+)/?$ /ns/$1.ttl [L,T=text/turtle]
+
+# Browser fallback: serve HTML
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ns/([^/.]+)/?$ /ns/$1.html [L]
 </IfModule>
 
 # BEGIN WordPress
