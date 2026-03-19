@@ -1,4 +1,10 @@
 
+# Pass /ns/ requests to subdirectory .htaccess for ontology content negotiation
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule ^ns/ - [L]
+</IfModule>
+
 # BEGIN WordPress
 # The directives (lines) between "BEGIN WordPress" and "END WordPress" are
 # dynamically generated, and should only be modified via WordPress filters.
