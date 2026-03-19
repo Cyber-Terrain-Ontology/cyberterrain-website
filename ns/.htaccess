@@ -1,12 +1,15 @@
 Options +FollowSymLinks
 RewriteEngine On
+DirectorySlash Off
 
 # Serve actual files directly (e.g. stones.ttl, stones.html)
 RewriteCond %{REQUEST_FILENAME} -f
 RewriteRule ^ - [L]
 
 # Content negotiation for ontology IRIs (e.g. /ns/stones)
+# A directory with the same name (e.g. ns/stones/) must not interfere.
 # Semantic web clients: serve Turtle
+RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{HTTP_ACCEPT} text/turtle [OR]
 RewriteCond %{HTTP_ACCEPT} application/x-turtle [OR]
 RewriteCond %{HTTP_ACCEPT} application/rdf\+xml [OR]
@@ -14,4 +17,5 @@ RewriteCond %{HTTP_ACCEPT} application/owl\+xml
 RewriteRule ^(.+)$ $1.ttl [L,T=text/turtle]
 
 # Browser fallback: redirect to human-readable HTML page
+RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.+)$ $1.html [L]
