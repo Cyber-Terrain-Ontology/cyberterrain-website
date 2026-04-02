@@ -8,10 +8,6 @@
 
 <https://cyberterrain.org/ns/stones#> rdf:type owl:Ontology ;
                                        owl:versionIRI <https://cyberterrain.org/ns/stones/0.1.0> ;
-                                       owl:imports <http://www.w3.org/2004/02/skos/core> ,
-                                                   <https://cyberterrain.org/ns/datatype-properties#> ,
-                                                   <https://cyberterrain.org/ns/object-properties#> ,
-                                                   <https://cyberterrain.org/ns/vocabularies#> ;
                                        <http://purl.org/dc/terms/creator> "Hohimer Intelligence Strategies LLC" ;
                                        <http://purl.org/dc/terms/description> "An OWL 2 ontology modelling the STIX 2.1 specification. Provides a class hierarchy for all STIX Domain Objects (SDOs), Cyber Observable Objects (SCOs), Relationship Objects (SROs), Meta Objects, and structured sub-types, together with datatype and object properties covering all standard STIX properties."@en ;
                                        <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
@@ -23,276 +19,37 @@
 #    Annotation properties
 #################################################################
 
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/terms/license
 <http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
 
 
-###  http://www.w3.org/2004/02/skos/core#altLabel
-<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty ;
-                                               rdfs:comment "The range of skos:altLabel is the class of RDF plain literals."@en ,
-                                                            "skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties."@en ;
-                                               rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-                                               rdfs:label "alternative label"@en ;
-                                               <http://www.w3.org/2004/02/skos/core#definition> "An alternative lexical label for a resource."@en ;
-                                               <http://www.w3.org/2004/02/skos/core#example> "Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept. Mis-spelled terms are normally included as hidden labels (see skos:hiddenLabel)."@en ;
-                                               rdfs:subPropertyOf rdfs:label .
-
-
-###  http://www.w3.org/2004/02/skos/core#changeNote
-<http://www.w3.org/2004/02/skos/core#changeNote> rdf:type owl:AnnotationProperty ;
-                                                 rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-                                                 rdfs:label "change note"@en ;
-                                                 <http://www.w3.org/2004/02/skos/core#definition> "A note about a modification to a concept."@en ;
-                                                 rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#note> .
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#definition
-<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty ;
-                                                 rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-                                                 rdfs:label "definition"@en ;
-                                                 <http://www.w3.org/2004/02/skos/core#definition> "A statement or formal explanation of the meaning of a concept."@en ;
-                                                 rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#note> .
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
 
 
-###  http://www.w3.org/2004/02/skos/core#editorialNote
-<http://www.w3.org/2004/02/skos/core#editorialNote> rdf:type owl:AnnotationProperty ;
-                                                    rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-                                                    rdfs:label "editorial note"@en ;
-                                                    <http://www.w3.org/2004/02/skos/core#definition> "A note for an editor, translator or maintainer of the vocabulary."@en ;
-                                                    rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#note> .
-
-
-###  http://www.w3.org/2004/02/skos/core#example
-<http://www.w3.org/2004/02/skos/core#example> rdf:type owl:AnnotationProperty ;
-                                              rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-                                              rdfs:label "example"@en ;
-                                              <http://www.w3.org/2004/02/skos/core#definition> "An example of the use of a concept."@en ;
-                                              rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#note> .
-
-
-###  http://www.w3.org/2004/02/skos/core#hiddenLabel
-<http://www.w3.org/2004/02/skos/core#hiddenLabel> rdf:type owl:AnnotationProperty ;
-                                                  rdfs:comment "The range of skos:hiddenLabel is the class of RDF plain literals."@en ,
-                                                               "skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties."@en ;
-                                                  rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-                                                  rdfs:label "hidden label"@en ;
-                                                  <http://www.w3.org/2004/02/skos/core#definition> "A lexical label for a resource that should be hidden when generating visual displays of the resource, but should still be accessible to free text search operations."@en ;
-                                                  rdfs:subPropertyOf rdfs:label .
-
-
-###  http://www.w3.org/2004/02/skos/core#historyNote
-<http://www.w3.org/2004/02/skos/core#historyNote> rdf:type owl:AnnotationProperty ;
-                                                  rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-                                                  rdfs:label "history note"@en ;
-                                                  <http://www.w3.org/2004/02/skos/core#definition> "A note about the past state/use/meaning of a concept."@en ;
-                                                  rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#note> .
-
-
-###  http://www.w3.org/2004/02/skos/core#note
-<http://www.w3.org/2004/02/skos/core#note> rdf:type owl:AnnotationProperty ;
-                                           rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-                                           rdfs:label "note"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "A general note, for any purpose."@en ;
-                                           <http://www.w3.org/2004/02/skos/core#scopeNote> "This property may be used directly, or as a super-property for more specific note types."@en .
+###  http://www.w3.org/2004/02/skos/core#notation
+<http://www.w3.org/2004/02/skos/core#notation> rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#prefLabel
-<http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty ;
-                                                rdfs:comment "A resource has no more than one value of skos:prefLabel per language tag, and no more than one value of skos:prefLabel without language tag."@en ,
-                                                             "The range of skos:prefLabel is the class of RDF plain literals."@en ,
-                                                             """skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise
-      disjoint properties."""@en ;
-                                                rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-                                                rdfs:label "preferred label"@en ;
-                                                <http://www.w3.org/2004/02/skos/core#definition> "The preferred lexical label for a resource, in a given language."@en ;
-                                                rdfs:subPropertyOf rdfs:label .
-
-
-###  http://www.w3.org/2004/02/skos/core#scopeNote
-<http://www.w3.org/2004/02/skos/core#scopeNote> rdf:type owl:AnnotationProperty ;
-                                                rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-                                                rdfs:label "scope note"@en ;
-                                                <http://www.w3.org/2004/02/skos/core#definition> "A note that helps to clarify the meaning and/or the use of a concept."@en ;
-                                                rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#note> .
+<http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty .
 
 
 #################################################################
 #    Object Properties
 #################################################################
-
-###  http://www.w3.org/2004/02/skos/core#broadMatch
-<http://www.w3.org/2004/02/skos/core#broadMatch> rdf:type owl:ObjectProperty ;
-                                                 rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#broader> ,
-                                                                    <http://www.w3.org/2004/02/skos/core#mappingRelation> ;
-                                                 owl:inverseOf <http://www.w3.org/2004/02/skos/core#narrowMatch> ;
-                                                 rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-                                                 rdfs:label "has broader match"@en ;
-                                                 <http://www.w3.org/2004/02/skos/core#definition> "skos:broadMatch is used to state a hierarchical mapping link between two conceptual resources in different concept schemes."@en .
-
-
-###  http://www.w3.org/2004/02/skos/core#broader
-<http://www.w3.org/2004/02/skos/core#broader> rdf:type owl:ObjectProperty ;
-                                              rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#broaderTransitive> ;
-                                              rdfs:comment "Broader concepts are typically rendered as parents in a concept hierarchy (tree)."@en ;
-                                              rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-                                              rdfs:label "has broader"@en ;
-                                              <http://www.w3.org/2004/02/skos/core#definition> "Relates a concept to a concept that is more general in meaning."@en ;
-                                              <http://www.w3.org/2004/02/skos/core#scopeNote> "By convention, skos:broader is only used to assert an immediate (i.e. direct) hierarchical link between two conceptual resources."@en .
-
-
-###  http://www.w3.org/2004/02/skos/core#broaderTransitive
-<http://www.w3.org/2004/02/skos/core#broaderTransitive> rdf:type owl:ObjectProperty ;
-                                                        rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#semanticRelation> ;
-                                                        owl:inverseOf <http://www.w3.org/2004/02/skos/core#narrowerTransitive> ;
-                                                        rdf:type owl:TransitiveProperty ;
-                                                        rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-                                                        rdfs:label "has broader transitive"@en ;
-                                                        <http://www.w3.org/2004/02/skos/core#definition> "skos:broaderTransitive is a transitive superproperty of skos:broader." ;
-                                                        <http://www.w3.org/2004/02/skos/core#scopeNote> "By convention, skos:broaderTransitive is not used to make assertions. Rather, the properties can be used to draw inferences about the transitive closure of the hierarchical relation, which is useful e.g. when implementing a simple query expansion algorithm in a search application."@en .
-
-
-###  http://www.w3.org/2004/02/skos/core#closeMatch
-<http://www.w3.org/2004/02/skos/core#closeMatch> rdf:type owl:ObjectProperty ;
-                                                 rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#mappingRelation> ;
-                                                 rdf:type owl:SymmetricProperty ;
-                                                 rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-                                                 rdfs:label "has close match"@en ;
-                                                 <http://www.w3.org/2004/02/skos/core#definition> "skos:closeMatch is used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications. In order to avoid the possibility of \"compound errors\" when combining mappings across more than two concept schemes, skos:closeMatch is not declared to be a transitive property."@en .
-
-
-###  http://www.w3.org/2004/02/skos/core#exactMatch
-<http://www.w3.org/2004/02/skos/core#exactMatch> rdf:type owl:ObjectProperty ;
-                                                 rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#closeMatch> ;
-                                                 rdf:type owl:SymmetricProperty ,
-                                                          owl:TransitiveProperty ;
-                                                 rdfs:comment "skos:exactMatch is disjoint with each of the properties skos:broadMatch and skos:relatedMatch."@en ;
-                                                 rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-                                                 rdfs:label "has exact match"@en ;
-                                                 <http://www.w3.org/2004/02/skos/core#definition> "skos:exactMatch is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications. skos:exactMatch is a transitive property, and is a sub-property of skos:closeMatch."@en .
-
-
-###  http://www.w3.org/2004/02/skos/core#hasTopConcept
-<http://www.w3.org/2004/02/skos/core#hasTopConcept> rdf:type owl:ObjectProperty ;
-                                                    owl:inverseOf <http://www.w3.org/2004/02/skos/core#topConceptOf> ;
-                                                    rdfs:domain <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
-                                                    rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                                    rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-                                                    rdfs:label "has top concept"@en ;
-                                                    <http://www.w3.org/2004/02/skos/core#definition> "Relates, by convention, a concept scheme to a concept which is topmost in the broader/narrower concept hierarchies for that scheme, providing an entry point to these hierarchies."@en .
-
-
-###  http://www.w3.org/2004/02/skos/core#inScheme
-<http://www.w3.org/2004/02/skos/core#inScheme> rdf:type owl:ObjectProperty ;
-                                               rdfs:range <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
-                                               rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-                                               rdfs:label "is in scheme"@en ;
-                                               <http://www.w3.org/2004/02/skos/core#definition> "Relates a resource (for example a concept) to a concept scheme in which it is included."@en ;
-                                               <http://www.w3.org/2004/02/skos/core#scopeNote> "A concept may be a member of more than one concept scheme."@en .
-
-
-###  http://www.w3.org/2004/02/skos/core#mappingRelation
-<http://www.w3.org/2004/02/skos/core#mappingRelation> rdf:type owl:ObjectProperty ;
-                                                      rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#semanticRelation> ;
-                                                      rdfs:comment "These concept mapping relations mirror semantic relations, and the data model defined below is similar (with the exception of skos:exactMatch) to the data model defined for semantic relations. A distinct vocabulary is provided for concept mapping relations, to provide a convenient way to differentiate links within a concept scheme from links between concept schemes. However, this pattern of usage is not a formal requirement of the SKOS data model, and relies on informal definitions of best practice."@en ;
-                                                      rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-                                                      rdfs:label "is in mapping relation with"@en ;
-                                                      <http://www.w3.org/2004/02/skos/core#definition> "Relates two concepts coming, by convention, from different schemes, and that have comparable meanings"@en .
-
-
-###  http://www.w3.org/2004/02/skos/core#member
-<http://www.w3.org/2004/02/skos/core#member> rdf:type owl:ObjectProperty ;
-                                             rdfs:domain <http://www.w3.org/2004/02/skos/core#Collection> ;
-                                             rdfs:range [ rdf:type owl:Class ;
-                                                          owl:unionOf ( <http://www.w3.org/2004/02/skos/core#Collection>
-                                                                        <http://www.w3.org/2004/02/skos/core#Concept>
-                                                                      )
-                                                        ] ;
-                                             rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-                                             rdfs:label "has member"@en ;
-                                             <http://www.w3.org/2004/02/skos/core#definition> "Relates a collection to one of its members."@en .
-
-
-###  http://www.w3.org/2004/02/skos/core#memberList
-<http://www.w3.org/2004/02/skos/core#memberList> rdf:type owl:ObjectProperty ,
-                                                          owl:FunctionalProperty ;
-                                                 rdfs:domain <http://www.w3.org/2004/02/skos/core#OrderedCollection> ;
-                                                 rdfs:range rdf:List ;
-                                                 rdfs:comment """For any resource, every item in the list given as the value of the
-      skos:memberList property is also a value of the skos:member property."""@en ;
-                                                 rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-                                                 rdfs:label "has member list"@en ;
-                                                 <http://www.w3.org/2004/02/skos/core#definition> "Relates an ordered collection to the RDF list containing its members."@en .
-
-
-###  http://www.w3.org/2004/02/skos/core#narrowMatch
-<http://www.w3.org/2004/02/skos/core#narrowMatch> rdf:type owl:ObjectProperty ;
-                                                  rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#mappingRelation> ,
-                                                                     <http://www.w3.org/2004/02/skos/core#narrower> ;
-                                                  rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-                                                  rdfs:label "has narrower match"@en ;
-                                                  <http://www.w3.org/2004/02/skos/core#definition> "skos:narrowMatch is used to state a hierarchical mapping link between two conceptual resources in different concept schemes."@en .
-
-
-###  http://www.w3.org/2004/02/skos/core#narrower
-<http://www.w3.org/2004/02/skos/core#narrower> rdf:type owl:ObjectProperty ;
-                                               rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#narrowerTransitive> ;
-                                               owl:inverseOf <http://www.w3.org/2004/02/skos/core#broader> ;
-                                               rdfs:comment "Narrower concepts are typically rendered as children in a concept hierarchy (tree)."@en ;
-                                               rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-                                               rdfs:label "has narrower"@en ;
-                                               <http://www.w3.org/2004/02/skos/core#definition> "Relates a concept to a concept that is more specific in meaning."@en ;
-                                               <http://www.w3.org/2004/02/skos/core#scopeNote> "By convention, skos:broader is only used to assert an immediate (i.e. direct) hierarchical link between two conceptual resources."@en .
-
-
-###  http://www.w3.org/2004/02/skos/core#narrowerTransitive
-<http://www.w3.org/2004/02/skos/core#narrowerTransitive> rdf:type owl:ObjectProperty ;
-                                                         rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#semanticRelation> ;
-                                                         rdf:type owl:TransitiveProperty ;
-                                                         rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-                                                         rdfs:label "has narrower transitive"@en ;
-                                                         <http://www.w3.org/2004/02/skos/core#definition> "skos:narrowerTransitive is a transitive superproperty of skos:narrower." ;
-                                                         <http://www.w3.org/2004/02/skos/core#scopeNote> "By convention, skos:narrowerTransitive is not used to make assertions. Rather, the properties can be used to draw inferences about the transitive closure of the hierarchical relation, which is useful e.g. when implementing a simple query expansion algorithm in a search application."@en .
-
-
-###  http://www.w3.org/2004/02/skos/core#related
-<http://www.w3.org/2004/02/skos/core#related> rdf:type owl:ObjectProperty ;
-                                              rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#semanticRelation> ;
-                                              rdf:type owl:SymmetricProperty ;
-                                              rdfs:comment "skos:related is disjoint with skos:broaderTransitive"@en ;
-                                              rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-                                              rdfs:label "has related"@en ;
-                                              <http://www.w3.org/2004/02/skos/core#definition> "Relates a concept to a concept with which there is an associative semantic relationship."@en .
-
-
-###  http://www.w3.org/2004/02/skos/core#relatedMatch
-<http://www.w3.org/2004/02/skos/core#relatedMatch> rdf:type owl:ObjectProperty ;
-                                                   rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#mappingRelation> ,
-                                                                      <http://www.w3.org/2004/02/skos/core#related> ;
-                                                   rdf:type owl:SymmetricProperty ;
-                                                   rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-                                                   rdfs:label "has related match"@en ;
-                                                   <http://www.w3.org/2004/02/skos/core#definition> "skos:relatedMatch is used to state an associative mapping link between two conceptual resources in different concept schemes."@en .
-
-
-###  http://www.w3.org/2004/02/skos/core#semanticRelation
-<http://www.w3.org/2004/02/skos/core#semanticRelation> rdf:type owl:ObjectProperty ;
-                                                       rdfs:domain <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                                       rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                                       rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-                                                       rdfs:label "is in semantic relation with"@en ;
-                                                       <http://www.w3.org/2004/02/skos/core#definition> "Links a concept to a concept related by meaning."@en ;
-                                                       <http://www.w3.org/2004/02/skos/core#scopeNote> "This property should not be used directly, but as a super-property for all properties denoting a relationship of meaning between concepts."@en .
-
-
-###  http://www.w3.org/2004/02/skos/core#topConceptOf
-<http://www.w3.org/2004/02/skos/core#topConceptOf> rdf:type owl:ObjectProperty ;
-                                                   rdfs:subPropertyOf <http://www.w3.org/2004/02/skos/core#inScheme> ;
-                                                   rdfs:domain <http://www.w3.org/2004/02/skos/core#Concept> ;
-                                                   rdfs:range <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
-                                                   rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-                                                   rdfs:label "is top concept in scheme"@en ;
-                                                   <http://www.w3.org/2004/02/skos/core#definition> "Relates a concept to the concept scheme that it is a top level concept of."@en .
-
 
 ###  https://cyberterrain.org/ns/stones#accountType
 :accountType rdf:type owl:ObjectProperty ;
@@ -445,6 +202,7 @@
 
 ###  https://cyberterrain.org/ns/stones#createdByRef
 :createdByRef rdf:type owl:ObjectProperty ;
+              rdfs:domain :StixCoreObject ;
               rdfs:range :Identity ;
               rdfs:comment "(STIX: created_by_ref)" ;
               rdfs:isDefinedBy <https://cyberterrain.org/ns/stones#> ;
@@ -524,6 +282,7 @@
 
 ###  https://cyberterrain.org/ns/stones#externalReferences
 :externalReferences rdf:type owl:ObjectProperty ;
+                    rdfs:domain :StixCoreObject ;
                     rdfs:range :ExternalReference ;
                     rdfs:comment "(STIX: external_references)" ;
                     rdfs:isDefinedBy <https://cyberterrain.org/ns/stones#> ;
@@ -549,6 +308,7 @@
 
 ###  https://cyberterrain.org/ns/stones#granularMarkings
 :granularMarkings rdf:type owl:ObjectProperty ;
+                  rdfs:domain :StixCoreObject ;
                   rdfs:range :GranularMarking ;
                   rdfs:comment "(STIX: granular_markings)" ;
                   rdfs:isDefinedBy <https://cyberterrain.org/ns/stones#> ;
@@ -670,6 +430,7 @@
 
 ###  https://cyberterrain.org/ns/stones#objectMarkingRefs
 :objectMarkingRefs rdf:type owl:ObjectProperty ;
+                   rdfs:domain :StixCoreObject ;
                    rdfs:range :MarkingDefinitionObject ;
                    rdfs:comment "(STIX: object_marking_refs)" ;
                    rdfs:isDefinedBy <https://cyberterrain.org/ns/stones#> ;
@@ -1055,14 +816,6 @@
 #    Data properties
 #################################################################
 
-###  http://www.w3.org/2004/02/skos/core#notation
-<http://www.w3.org/2004/02/skos/core#notation> rdf:type owl:DatatypeProperty ;
-                                               rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-                                               rdfs:label "notation"@en ;
-                                               <http://www.w3.org/2004/02/skos/core#definition> "A notation, also known as classification code, is a string of characters such as \"T58.5\" or \"303.4833\" used to uniquely identify a concept within the scope of a given concept scheme."@en ;
-                                               <http://www.w3.org/2004/02/skos/core#scopeNote> "By convention, skos:notation is used with a typed literal in the object position of the triple."@en .
-
-
 ###  https://cyberterrain.org/ns/stones#abstract
 :abstract rdf:type owl:DatatypeProperty ;
           rdfs:domain :Note ;
@@ -1380,6 +1133,7 @@
 
 ###  https://cyberterrain.org/ns/stones#created
 :created rdf:type owl:DatatypeProperty ;
+         rdfs:domain :StixCoreObject ;
          rdfs:range xsd:dateTime ;
          rdfs:comment "(STIX: created)" ;
          rdfs:isDefinedBy <https://cyberterrain.org/ns/stones#> ;
@@ -1969,6 +1723,7 @@
 
 ###  https://cyberterrain.org/ns/stones#modified
 :modified rdf:type owl:DatatypeProperty ;
+          rdfs:domain :StixCoreObject ;
           rdfs:range xsd:dateTime ;
           rdfs:comment "(STIX: modified)" ;
           rdfs:isDefinedBy <https://cyberterrain.org/ns/stones#> ;
@@ -2763,42 +2518,6 @@
 #    Classes
 #################################################################
 
-###  http://www.w3.org/2004/02/skos/core#Collection
-<http://www.w3.org/2004/02/skos/core#Collection> rdf:type owl:Class ;
-                                                 owl:disjointWith <http://www.w3.org/2004/02/skos/core#Concept> ,
-                                                                  <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
-                                                 rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-                                                 rdfs:label "Collection"@en ;
-                                                 <http://www.w3.org/2004/02/skos/core#definition> "A meaningful collection of concepts."@en ;
-                                                 <http://www.w3.org/2004/02/skos/core#scopeNote> "Labelled collections can be used where you would like a set of concepts to be displayed under a 'node label' in the hierarchy."@en .
-
-
-###  http://www.w3.org/2004/02/skos/core#Concept
-<http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class ;
-                                              owl:disjointWith <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
-                                              rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-                                              rdfs:label "Concept"@en ;
-                                              <http://www.w3.org/2004/02/skos/core#definition> "An idea or notion; a unit of thought."@en .
-
-
-###  http://www.w3.org/2004/02/skos/core#ConceptScheme
-<http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type owl:Class ;
-                                                    rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-                                                    rdfs:label "Concept Scheme"@en ;
-                                                    <http://www.w3.org/2004/02/skos/core#definition> "A set of concepts, optionally including statements about semantic relationships between those concepts."@en ;
-                                                    <http://www.w3.org/2004/02/skos/core#example> "Thesauri, classification schemes, subject heading lists, taxonomies, 'folksonomies', and other types of controlled vocabulary are all examples of concept schemes. Concept schemes are also embedded in glossaries and terminologies."@en ;
-                                                    <http://www.w3.org/2004/02/skos/core#scopeNote> "A concept scheme may be defined to include concepts from different sources."@en .
-
-
-###  http://www.w3.org/2004/02/skos/core#OrderedCollection
-<http://www.w3.org/2004/02/skos/core#OrderedCollection> rdf:type owl:Class ;
-                                                        rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Collection> ;
-                                                        rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core> ;
-                                                        rdfs:label "Ordered Collection"@en ;
-                                                        <http://www.w3.org/2004/02/skos/core#definition> "An ordered collection of concepts, where both the grouping and the ordering are meaningful."@en ;
-                                                        <http://www.w3.org/2004/02/skos/core#scopeNote> "Ordered collections can be used where you would like a set of concepts to be displayed in a specific order, and optionally under a 'node label'."@en .
-
-
 ###  https://cyberterrain.org/ns/stones#AccountTypeVocabulary
 :AccountTypeVocabulary rdf:type owl:Class ;
                        rdfs:subClassOf :OpenVocabulary .
@@ -2806,7 +2525,11 @@
 
 ###  https://cyberterrain.org/ns/stones#AlternateDataStream
 :AlternateDataStream rdf:type owl:Class ;
-                     rdfs:subClassOf :StixSubType ;
+                     rdfs:subClassOf :StixSubType ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :name ;
+                                       owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                     ] ;
                      rdfs:isDefinedBy <https://cyberterrain.org/ns/stones#> ;
                      <http://www.w3.org/2004/02/skos/core#definition> "An NTFS Alternate Data Stream (ADS) attached to a file, identified by name with optional hashes and size." ;
                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Alternate Data Stream"@en .
@@ -2843,7 +2566,11 @@
                                                         ) ;
                                      rdf:type owl:Class
                                    ] ;
-               rdfs:subClassOf :StixDomainObject ;
+               rdfs:subClassOf :StixDomainObject ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :name ;
+                                 owl:minCardinality "1"^^xsd:nonNegativeInteger
+                               ] ;
                rdfs:isDefinedBy <https://cyberterrain.org/ns/stones#> ;
                <http://www.w3.org/2004/02/skos/core#definition> "A type of Tactics, Techniques, and Procedures (TTP) that describes ways that adversaries attempt to compromise targets. Often maps to MITRE ATT&CK techniques." ;
                <http://www.w3.org/2004/02/skos/core#prefLabel> "Attack Pattern"@en .
@@ -2880,7 +2607,11 @@
                                                    ) ;
                                 rdf:type owl:Class
                               ] ;
-          rdfs:subClassOf :StixDomainObject ;
+          rdfs:subClassOf :StixDomainObject ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :name ;
+                            owl:minCardinality "1"^^xsd:nonNegativeInteger
+                          ] ;
           rdfs:isDefinedBy <https://cyberterrain.org/ns/stones#> ;
           <http://www.w3.org/2004/02/skos/core#definition> "A grouping of adversary behaviours and resources with a common objective pursued over a period of time. Campaigns may be attributed to intrusion sets or threat actors." ;
           <http://www.w3.org/2004/02/skos/core#prefLabel> "Campaign"@en .
@@ -2896,7 +2627,11 @@
                                                          ) ;
                                       rdf:type owl:Class
                                     ] ;
-                rdfs:subClassOf :StixDomainObject ;
+                rdfs:subClassOf :StixDomainObject ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :name ;
+                                  owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                ] ;
                 rdfs:isDefinedBy <https://cyberterrain.org/ns/stones#> ;
                 <http://www.w3.org/2004/02/skos/core#definition> "A recommendation for a specific measure to be taken in response to an attack. May describe automated responses, playbook steps, or manual mitigations." ;
                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Course of Action"@en .
@@ -3021,7 +2756,11 @@
 
 ###  https://cyberterrain.org/ns/stones#ExternalReference
 :ExternalReference rdf:type owl:Class ;
-                   rdfs:subClassOf :StixSubType ;
+                   rdfs:subClassOf :StixSubType ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :sourceName ;
+                                     owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                   ] ;
                    rdfs:isDefinedBy <https://cyberterrain.org/ns/stones#> ;
                    <http://www.w3.org/2004/02/skos/core#definition> "A structured reference to non-STIX information, such as a CVE entry, MITRE ATT&CK technique, or external URL. Used to link STIX content to authoritative external sources." ;
                    <http://www.w3.org/2004/02/skos/core#prefLabel> "External Reference"@en .
@@ -3045,7 +2784,15 @@
 
 ###  https://cyberterrain.org/ns/stones#GranularMarking
 :GranularMarking rdf:type owl:Class ;
-                 rdfs:subClassOf :StixSubType ;
+                 rdfs:subClassOf :StixSubType ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :markingRef ;
+                                   owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :selectors ;
+                                   owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                 ] ;
                  rdfs:isDefinedBy <https://cyberterrain.org/ns/stones#> ;
                  <http://www.w3.org/2004/02/skos/core#definition> "A property-level data handling marking that applies a marking definition to specific named fields of a STIX object, enabling fine-grained access control." ;
                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Granular Marking"@en .
@@ -3061,7 +2808,15 @@
                                                    ) ;
                                 rdf:type owl:Class
                               ] ;
-          rdfs:subClassOf :StixDomainObject ;
+          rdfs:subClassOf :StixDomainObject ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :context ;
+                            owl:minCardinality "1"^^xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :objectRefs ;
+                            owl:minCardinality "1"^^xsd:nonNegativeInteger
+                          ] ;
           rdfs:isDefinedBy <https://cyberterrain.org/ns/stones#> ;
           <http://www.w3.org/2004/02/skos/core#definition> "Explicitly asserts that a set of STIX objects share a common context without implying the existence of a threat report. Useful for linking related objects without a formal report." ;
           <http://www.w3.org/2004/02/skos/core#prefLabel> "Grouping"@en .
@@ -3074,7 +2829,15 @@
 
 ###  https://cyberterrain.org/ns/stones#HashEntry
 :HashEntry rdf:type owl:Class ;
-           rdfs:subClassOf :StixSubType ;
+           rdfs:subClassOf :StixSubType ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :algorithm ;
+                             owl:minCardinality "1"^^xsd:nonNegativeInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hashValue ;
+                             owl:minCardinality "1"^^xsd:nonNegativeInteger
+                           ] ;
            rdfs:isDefinedBy <https://cyberterrain.org/ns/stones#> ;
            <http://www.w3.org/2004/02/skos/core#definition> "A single cryptographic hash entry associating a hashing algorithm with its hex-encoded digest value. Used to represent entries in the STIX hashes dictionary." ;
            <http://www.w3.org/2004/02/skos/core#prefLabel> "Hash Entry"@en .
@@ -3127,7 +2890,11 @@
                                                    ) ;
                                 rdf:type owl:Class
                               ] ;
-          rdfs:subClassOf :StixDomainObject ;
+          rdfs:subClassOf :StixDomainObject ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :name ;
+                            owl:minCardinality "1"^^xsd:nonNegativeInteger
+                          ] ;
           rdfs:isDefinedBy <https://cyberterrain.org/ns/stones#> ;
           <http://www.w3.org/2004/02/skos/core#definition> "Actual individuals, organisations, or groups, as well as classes of individuals, organisations, systems, or groups. Used to represent victims, producers, or any other real-world actor." ;
           <http://www.w3.org/2004/02/skos/core#prefLabel> "Identity"@en .
@@ -3153,7 +2920,23 @@
                                                     ) ;
                                  rdf:type owl:Class
                                ] ;
-           rdfs:subClassOf :StixDomainObject ;
+           rdfs:subClassOf :StixDomainObject ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :indicatorTypes ;
+                             owl:minCardinality "1"^^xsd:nonNegativeInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :patternType ;
+                             owl:minCardinality "1"^^xsd:nonNegativeInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :pattern ;
+                             owl:minCardinality "1"^^xsd:nonNegativeInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :validFrom ;
+                             owl:minCardinality "1"^^xsd:nonNegativeInteger
+                           ] ;
            rdfs:isDefinedBy <https://cyberterrain.org/ns/stones#> ;
            <http://www.w3.org/2004/02/skos/core#definition> "Contains a pattern that can be used to detect suspicious or malicious cyber activity. Patterns are expressed using the STIX Patterning Language or another supported pattern language." ;
            <http://www.w3.org/2004/02/skos/core#prefLabel> "Indicator"@en .
@@ -3179,7 +2962,15 @@
                                                          ) ;
                                       rdf:type owl:Class
                                     ] ;
-                rdfs:subClassOf :StixDomainObject ;
+                rdfs:subClassOf :StixDomainObject ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :infrastructureTypes ;
+                                  owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :name ;
+                                  owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                ] ;
                 rdfs:isDefinedBy <https://cyberterrain.org/ns/stones#> ;
                 <http://www.w3.org/2004/02/skos/core#definition> "Represents systems, software services, or any group of resources used to conduct cyber operations. Infrastructure is used by threat actors and intrusion sets both offensively and defensively." ;
                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Infrastructure"@en .
@@ -3200,7 +2991,11 @@
                                                        ) ;
                                     rdf:type owl:Class
                                   ] ;
-              rdfs:subClassOf :StixDomainObject ;
+              rdfs:subClassOf :StixDomainObject ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :name ;
+                                owl:minCardinality "1"^^xsd:nonNegativeInteger
+                              ] ;
               rdfs:isDefinedBy <https://cyberterrain.org/ns/stones#> ;
               <http://www.w3.org/2004/02/skos/core#definition> "A grouped set of adversarial behaviours and resources with common properties, believed to be orchestrated by a single organisation. Often represents a named APT group." ;
               <http://www.w3.org/2004/02/skos/core#prefLabel> "Intrusion Set"@en .
@@ -3208,7 +3003,15 @@
 
 ###  https://cyberterrain.org/ns/stones#KillChainPhase
 :KillChainPhase rdf:type owl:Class ;
-                rdfs:subClassOf :StixSubType ;
+                rdfs:subClassOf :StixSubType ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :killChainName ;
+                                  owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :phaseName ;
+                                  owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                ] ;
                 rdfs:isDefinedBy <https://cyberterrain.org/ns/stones#> ;
                 <http://www.w3.org/2004/02/skos/core#definition> "Represents a phase within a named kill chain framework, such as the MITRE ATT&CK or Lockheed Martin Cyber Kill Chain, used to categorise the stage of an attack." ;
                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Kill Chain Phase"@en .
@@ -3240,7 +3043,23 @@
                                                    ) ;
                                 rdf:type owl:Class
                               ] ;
-          rdfs:subClassOf :StixDomainObject ;
+          rdfs:subClassOf :StixDomainObject ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :region ;
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :country ;
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :latitude ;
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :longitude ;
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                          ] ;
           rdfs:isDefinedBy <https://cyberterrain.org/ns/stones#> ;
           <http://www.w3.org/2004/02/skos/core#definition> "Represents a geographic location. May be as specific as a latitude/longitude coordinate or as broad as a continent. At least one of region, country, or latitude/longitude must be provided." ;
           <http://www.w3.org/2004/02/skos/core#prefLabel> "Location"@en .
@@ -3272,7 +3091,15 @@
                                                   ) ;
                                rdf:type owl:Class
                              ] ;
-         rdfs:subClassOf :StixDomainObject ;
+         rdfs:subClassOf :StixDomainObject ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :malwareTypes ;
+                           owl:minCardinality "1"^^xsd:nonNegativeInteger
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :isFamily ;
+                           owl:minCardinality "1"^^xsd:nonNegativeInteger
+                         ] ;
          rdfs:isDefinedBy <https://cyberterrain.org/ns/stones#> ;
          <http://www.w3.org/2004/02/skos/core#definition> "A type of TTP that represents malicious code. Captures both malware families (when is_family is true) and specific instances or samples." ;
          <http://www.w3.org/2004/02/skos/core#prefLabel> "Malware"@en .
@@ -3288,7 +3115,11 @@
                                                           ) ;
                                        rdf:type owl:Class
                                      ] ;
-                 rdfs:subClassOf :StixDomainObject ;
+                 rdfs:subClassOf :StixDomainObject ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :product ;
+                                   owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                 ] ;
                  rdfs:isDefinedBy <https://cyberterrain.org/ns/stones#> ;
                  <http://www.w3.org/2004/02/skos/core#definition> "Captures the results of a malware analysis process, whether static or dynamic. Represents the output of a specific analysis run on a specific sample." ;
                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Malware Analysis"@en .
@@ -3396,7 +3227,15 @@
                                                ) ;
                             rdf:type owl:Class
                           ] ;
-      rdfs:subClassOf :StixDomainObject ;
+      rdfs:subClassOf :StixDomainObject ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :objectRefs ;
+                        owl:minCardinality "1"^^xsd:nonNegativeInteger
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :content ;
+                        owl:minCardinality "1"^^xsd:nonNegativeInteger
+                      ] ;
       rdfs:isDefinedBy <https://cyberterrain.org/ns/stones#> ;
       <http://www.w3.org/2004/02/skos/core#definition> "Conveys informational text to provide further context and/or to assess the accuracy of existing STIX information. Similar to a comment or annotation on other STIX objects." ;
       <http://www.w3.org/2004/02/skos/core#prefLabel> "Note"@en .
@@ -3412,7 +3251,23 @@
                                                        ) ;
                                     rdf:type owl:Class
                                   ] ;
-              rdfs:subClassOf :StixDomainObject ;
+              rdfs:subClassOf :StixDomainObject ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :objectRefs ;
+                                owl:minCardinality "1"^^xsd:nonNegativeInteger
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :firstObserved ;
+                                owl:minCardinality "1"^^xsd:nonNegativeInteger
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :lastObserved ;
+                                owl:minCardinality "1"^^xsd:nonNegativeInteger
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :numberObserved ;
+                                owl:minCardinality "1"^^xsd:nonNegativeInteger
+                              ] ;
               rdfs:isDefinedBy <https://cyberterrain.org/ns/stones#> ;
               <http://www.w3.org/2004/02/skos/core#definition> "Conveys information observed on systems and networks, wrapping one or more SCO references together with observation metadata such as first and last observed timestamps." ;
               <http://www.w3.org/2004/02/skos/core#prefLabel> "Observed Data"@en .
@@ -3433,7 +3288,15 @@
                                                   ) ;
                                rdf:type owl:Class
                              ] ;
-         rdfs:subClassOf :StixDomainObject ;
+         rdfs:subClassOf :StixDomainObject ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :objectRefs ;
+                           owl:minCardinality "1"^^xsd:nonNegativeInteger
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :opinion ;
+                           owl:minCardinality "1"^^xsd:nonNegativeInteger
+                         ] ;
          rdfs:isDefinedBy <https://cyberterrain.org/ns/stones#> ;
          <http://www.w3.org/2004/02/skos/core#definition> "An assessment of the correctness of information in one or more STIX objects. Allows analysts to express agreement or disagreement with existing intelligence." ;
          <http://www.w3.org/2004/02/skos/core#prefLabel> "Opinion"@en .
@@ -3493,7 +3356,19 @@
                                                        ) ;
                                     rdf:type owl:Class
                                   ] ;
-              rdfs:subClassOf :StixRelationshipObject ;
+              rdfs:subClassOf :StixRelationshipObject ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :sourceRef ;
+                                owl:minCardinality "1"^^xsd:nonNegativeInteger
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :targetRef ;
+                                owl:minCardinality "1"^^xsd:nonNegativeInteger
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :relationshipType ;
+                                owl:minCardinality "1"^^xsd:nonNegativeInteger
+                              ] ;
               rdfs:isDefinedBy <https://cyberterrain.org/ns/stones#> ;
               <http://www.w3.org/2004/02/skos/core#definition> "A directed link between two STIX Core Objects. The semantics of the link are defined by the relationship_type property." ;
               <http://www.w3.org/2004/02/skos/core#prefLabel> "Relationship"@en .
@@ -3509,7 +3384,23 @@
                                                  ) ;
                               rdf:type owl:Class
                             ] ;
-        rdfs:subClassOf :StixDomainObject ;
+        rdfs:subClassOf :StixDomainObject ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :objectRefs ;
+                          owl:minCardinality "1"^^xsd:nonNegativeInteger
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :reportTypes ;
+                          owl:minCardinality "1"^^xsd:nonNegativeInteger
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :name ;
+                          owl:minCardinality "1"^^xsd:nonNegativeInteger
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :published ;
+                          owl:minCardinality "1"^^xsd:nonNegativeInteger
+                        ] ;
         rdfs:isDefinedBy <https://cyberterrain.org/ns/stones#> ;
         <http://www.w3.org/2004/02/skos/core#definition> "A collection of threat intelligence focused on one or more topics, such as a description of a threat actor, malware, or attack technique. Used to package related STIX content." ;
         <http://www.w3.org/2004/02/skos/core#prefLabel> "Report"@en .
@@ -3530,7 +3421,11 @@
                                                    ) ;
                                 rdf:type owl:Class
                               ] ;
-          rdfs:subClassOf :StixRelationshipObject ;
+          rdfs:subClassOf :StixRelationshipObject ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :sightingOfRef ;
+                            owl:minCardinality "1"^^xsd:nonNegativeInteger
+                          ] ;
           rdfs:isDefinedBy <https://cyberterrain.org/ns/stones#> ;
           <http://www.w3.org/2004/02/skos/core#definition> "Records that a STIX object such as an indicator, malware, tool, or threat actor was seen. Wraps observation metadata around a reference to the sighted object." ;
           <http://www.w3.org/2004/02/skos/core#prefLabel> "Sighting"@en .
@@ -3570,7 +3465,15 @@
 
 ###  https://cyberterrain.org/ns/stones#StixCoreObject
 :StixCoreObject rdf:type owl:Class ;
-                rdfs:subClassOf :StixObject ;
+                rdfs:subClassOf :StixObject ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :created ;
+                                  owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :modified ;
+                                  owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                ] ;
                 rdfs:isDefinedBy <https://cyberterrain.org/ns/stones#> ;
                 <http://www.w3.org/2004/02/skos/core#definition> "Abstract class for STIX Core Objects, comprising SDOs, SCOs, and SROs. Core objects carry a type-qualified identifier and created/modified timestamps, and may be referenced by other objects." ;
                 <http://www.w3.org/2004/02/skos/core#prefLabel> "STIX Core Object"@en .
@@ -3602,6 +3505,18 @@
 
 ###  https://cyberterrain.org/ns/stones#StixObject
 :StixObject rdf:type owl:Class ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty :specVersion ;
+                              owl:minCardinality "1"^^xsd:nonNegativeInteger
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :stixId ;
+                              owl:minCardinality "1"^^xsd:nonNegativeInteger
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :stixType ;
+                              owl:minCardinality "1"^^xsd:nonNegativeInteger
+                            ] ;
             owl:disjointWith :StixSubType ;
             owl:hasKey ( :stixId
                        ) ;
@@ -3635,7 +3550,15 @@
                                                       ) ;
                                    rdf:type owl:Class
                                  ] ;
-             rdfs:subClassOf :StixDomainObject ;
+             rdfs:subClassOf :StixDomainObject ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :threatActorTypes ;
+                               owl:minCardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :name ;
+                               owl:minCardinality "1"^^xsd:nonNegativeInteger
+                             ] ;
              rdfs:isDefinedBy <https://cyberterrain.org/ns/stones#> ;
              <http://www.w3.org/2004/02/skos/core#definition> "Actual individuals, groups, or organisations believed to be operating with malicious intent. Unlike Identity, a ThreatActor carries adversarial connotations." ;
              <http://www.w3.org/2004/02/skos/core#prefLabel> "Threat Actor"@en .
@@ -3666,7 +3589,15 @@
                                                ) ;
                             rdf:type owl:Class
                           ] ;
-      rdfs:subClassOf :StixDomainObject ;
+      rdfs:subClassOf :StixDomainObject ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :toolTypes ;
+                        owl:minCardinality "1"^^xsd:nonNegativeInteger
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :name ;
+                        owl:minCardinality "1"^^xsd:nonNegativeInteger
+                      ] ;
       rdfs:isDefinedBy <https://cyberterrain.org/ns/stones#> ;
       <http://www.w3.org/2004/02/skos/core#definition> "Legitimate software that can be used by threat actors to perform attacks. Distinguishable from malware by being designed for benign purposes but repurposed maliciously." ;
       <http://www.w3.org/2004/02/skos/core#prefLabel> "Tool"@en .
@@ -3723,7 +3654,11 @@
                                                         ) ;
                                      rdf:type owl:Class
                                    ] ;
-               rdfs:subClassOf :StixDomainObject ;
+               rdfs:subClassOf :StixDomainObject ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :name ;
+                                 owl:minCardinality "1"^^xsd:nonNegativeInteger
+                               ] ;
                rdfs:isDefinedBy <https://cyberterrain.org/ns/stones#> ;
                <http://www.w3.org/2004/02/skos/core#definition> "A mistake in software that can be directly used by a threat actor to gain access to a system or network. Typically identified by a CVE number via an external reference." ;
                <http://www.w3.org/2004/02/skos/core#prefLabel> "Vulnerability"@en .
@@ -3748,7 +3683,11 @@
 
 ###  https://cyberterrain.org/ns/stones#WindowsPeSection
 :WindowsPeSection rdf:type owl:Class ;
-                  rdfs:subClassOf :StixSubType ;
+                  rdfs:subClassOf :StixSubType ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :name ;
+                                    owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                  ] ;
                   rdfs:isDefinedBy <https://cyberterrain.org/ns/stones#> ;
                   <http://www.w3.org/2004/02/skos/core#definition> "A single section entry within a Windows PE (Portable Executable) binary, described by its name, size, and optional entropy value." ;
                   <http://www.w3.org/2004/02/skos/core#prefLabel> "Windows PE Section"@en .
@@ -3794,7 +3733,11 @@
 
 ###  https://cyberterrain.org/ns/stones#WindowsRegistryValue
 :WindowsRegistryValue rdf:type owl:Class ;
-                      rdfs:subClassOf :StixSubType ;
+                      rdfs:subClassOf :StixSubType ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :name ;
+                                        owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                      ] ;
                       rdfs:isDefinedBy <https://cyberterrain.org/ns/stones#> ;
                       <http://www.w3.org/2004/02/skos/core#definition> "A single value entry within a Windows Registry key, comprising a name, a data string, and a registry data type." ;
                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Windows Registry Value"@en .
