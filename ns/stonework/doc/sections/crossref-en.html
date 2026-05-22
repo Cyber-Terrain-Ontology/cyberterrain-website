@@ -1,0 +1,821 @@
+<h2 id="crossreference" class="list">Cross-reference for [Ontology Name] classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by [Ontology Name].
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#Agent" title="https://cyberterrain.org/ns/stonework#Agent">Agent</a></li>
+  <li><a href="#AttackTechnique" title="https://cyberterrain.org/ns/stonework#AttackTechnique">AttackTechnique</a></li>
+  <li><a href="#Control" title="https://cyberterrain.org/ns/stonework#Control">Control</a></li>
+  <li><a href="#CyberTechnique" title="https://cyberterrain.org/ns/stonework#CyberTechnique">CyberTechnique</a></li>
+  <li><a href="#DefendTechnique" title="https://cyberterrain.org/ns/stonework#DefendTechnique">DefendTechnique</a></li>
+  <li><a href="#Group" title="https://cyberterrain.org/ns/stonework#Group">Group</a></li>
+  <li><a href="#Impact" title="https://cyberterrain.org/ns/stonework#Impact">Impact</a></li>
+  <li><a href="#Likelihood" title="https://cyberterrain.org/ns/stonework#Likelihood">Likelihood</a></li>
+  <li><a href="#Organization" title="https://cyberterrain.org/ns/stonework#Organization">Organization</a></li>
+  <li><a href="#Person" title="https://cyberterrain.org/ns/stonework#Person">Person</a></li>
+  <li><a href="#Procedure" title="https://cyberterrain.org/ns/stonework#Procedure">Procedure</a></li>
+  <li><a href="#Product" title="https://cyberterrain.org/ns/stonework#Product">Product</a></li>
+  <li><a href="#Risk" title="https://cyberterrain.org/ns/stonework#Risk">Risk</a></li>
+  <li><a href="#Tactic" title="https://cyberterrain.org/ns/stonework#Tactic">Tactic</a></li>
+  <li><a href="#Technique" title="https://cyberterrain.org/ns/stonework#Technique">Technique</a></li>
+  <li><a href="#Threat" title="https://cyberterrain.org/ns/stonework#Threat">Threat</a></li>
+  <li><a href="#ThreatScenario" title="https://cyberterrain.org/ns/stonework#ThreatScenario">ThreatScenario</a></li>
+  <li><a href="#Weakness" title="https://cyberterrain.org/ns/stonework#Weakness">Weakness</a></li>
+ </ul>
+ <div class="entity" id="Agent">
+  <h3>Agent<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#Agent</p>
+  <div class="comment">
+   <span class="markdown">Any entity that can act, perform actions, or be attributed responsibility in a cyber or sociotechnical context.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://cyberterrain.org/ns/stones#StixCoreObject" target="_blank" title="https://cyberterrain.org/ns/stones#StixCoreObject">Stix Core Object</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Group" title="https://cyberterrain.org/ns/stonework#Group">Group</a> <sup class="type-c" title="class">c</sup>, <a href="#Person" title="https://cyberterrain.org/ns/stonework#Person">Person</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="AttackTechnique">
+  <h3>AttackTechnique<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#AttackTechnique</p>
+  <div class="comment">
+   <span class="markdown">A prescribed offensive method used by an adversary to achieve a specific tactical objective within a target environment.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#CyberTechnique" title="https://cyberterrain.org/ns/stonework#CyberTechnique">CyberTechnique</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasTechnique" title="https://cyberterrain.org/ns/stonework#hasTechnique">hasTechnique</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Control">
+  <h3>Control<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#Control</p>
+  <div class="comment">
+   <span class="markdown">Instances of stonework:Control may represent individual controls, control enhancements, or sub‑controls. Framework‑specific identifiers (e.g., "AC‑2", "CIS 4.1") SHOULD be modeled using explicit properties rather than encoded in the class IRI. Control text SHOULD be referenced via citations rather than reproduced verbatim.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">A prescribed security or privacy safeguard that specifies an action, capability, or condition intended to reduce risk, enforce policy, or achieve a defined protection objective within an information system or organization.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://cyberterrain.org/ns/stones#StixDomainObject" target="_blank" title="https://cyberterrain.org/ns/stones#StixDomainObject">Stix Domain Object</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#mitigatesAttackPattern" title="https://cyberterrain.org/ns/stonework#mitigatesAttackPattern">mitigatesAttackPattern</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CyberTechnique">
+  <h3>CyberTechnique<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#CyberTechnique</p>
+  <div class="comment">
+   <span class="markdown">A technique performed within or against cyberspace, encompassing both offensive and defensive cyber operations.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Technique" title="https://cyberterrain.org/ns/stonework#Technique">Technique</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#AttackTechnique" title="https://cyberterrain.org/ns/stonework#AttackTechnique">AttackTechnique</a> <sup class="type-c" title="class">c</sup>, <a href="#DefendTechnique" title="https://cyberterrain.org/ns/stonework#DefendTechnique">DefendTechnique</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DefendTechnique">
+  <h3>DefendTechnique<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#DefendTechnique</p>
+  <div class="comment">
+   <span class="markdown">A prescribed defensive method used to detect, prevent, or respond to adversary behavior within a target environment.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#CyberTechnique" title="https://cyberterrain.org/ns/stonework#CyberTechnique">CyberTechnique</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Group">
+  <h3>Group<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#Group</p>
+  <div class="comment">
+   <span class="markdown">Any collection of Persons, Organizations, or other Groups that share a common purpose or identity but do not necessarily have formal legal structure.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Agent" title="https://cyberterrain.org/ns/stonework#Agent">Agent</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Organization" title="https://cyberterrain.org/ns/stonework#Organization">Organization</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasMembers" title="https://cyberterrain.org/ns/stonework#hasMembers">hasMembers</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#membersOf" title="https://cyberterrain.org/ns/stonework#membersOf">membersOf</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Impact">
+  <h3>Impact<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#Impact</p>
+  <div class="comment">
+   <span class="markdown">Instances of stonework:Impact SHOULD specify the affected asset or mission, the type of consequence, and the severity level. Impact SHOULD be represented using explicit properties rather than encoded in class IRIs or labels.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">The magnitude of harm, loss, or adverse effects that would result if a threat were realized and a compromise occurred, expressed in terms of mission, business, operational, or technical consequences.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://cyberterrain.org/ns/stones#StixDomainObject" target="_blank" title="https://cyberterrain.org/ns/stones#StixDomainObject">Stix Domain Object</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Likelihood">
+  <h3>Likelihood<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#Likelihood</p>
+  <div class="comment">
+   <span class="markdown">Instances of stonework:Likelihood may incorporate assumptions, uncertainty, adversary behavior, historical frequency, or environmental conditions. Likelihood SHOULD be represented using explicit properties rather than encoded in class IRIs or labels.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">The estimated probability, plausibility, or frequency with which a threat could be realized and lead to a compromise under specified conditions.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://cyberterrain.org/ns/stones#StixDomainObject" target="_blank" title="https://cyberterrain.org/ns/stones#StixDomainObject">Stix Domain Object</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Organization">
+  <h3>Organization<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#Organization</p>
+  <div class="comment">
+   <span class="markdown">A formal or semi-formal structured entity such as a company, government agency, non-profit, military unit, or consortium with defined boundaries and usually legal identity.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Group" title="https://cyberterrain.org/ns/stonework#Group">Group</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Person">
+  <h3>Person<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#Person</p>
+  <div class="comment">
+   <span class="markdown">A single human individual.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Agent" title="https://cyberterrain.org/ns/stonework#Agent">Agent</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Procedure">
+  <h3>Procedure<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#Procedure</p>
+  <div class="comment">
+   <span class="markdown">Procedures are instances or patterns of execution that realize a technique. They may include command lines, API calls, malware behaviors, or operator playbook steps. Procedures are distinct from techniques, which describe generalized methods.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">A concrete, observable sequence of actions, commands, or behaviors that implements a technique in a specific operational context.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://cyberterrain.org/ns/stones#StixDomainObject" target="_blank" title="https://cyberterrain.org/ns/stones#StixDomainObject">Stix Domain Object</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Product">
+  <h3>Product<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#Product</p>
+  <div class="comment">
+   <span class="markdown">Instances of stonework:Product may include operating systems, applications, libraries, devices, or embedded components. Versioning, vendor attribution, and edition details SHOULD be represented using explicit properties rather than encoded strings.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">A software, hardware, or firmware entity identified by its vendor, product name, and version characteristics, used to represent a specific platform or component within vulnerability, configuration, or threat‑intelligence contexts.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    https://cyberterrain.org/ns/stonework#
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://cyberterrain.org/ns/stones#StixDomainObject" target="_blank" title="https://cyberterrain.org/ns/stones#StixDomainObject">Stix Domain Object</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#affected" title="https://cyberterrain.org/ns/stonework#affected">affected</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Risk">
+  <h3>Risk<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#Risk</p>
+  <div class="comment">
+   <span class="markdown">Instances of stonework:Risk may reference the threat being considered, the assets affected, the expected impact of compromise, and the likelihood of occurrence. Risk values may be qualitative or quantitative, and SHOULD be represented using explicit properties rather than encoded in class IRIs or labels.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">A measure of the potential for loss or adverse effects arising from the realization of a threat, expressed as a function of the impact of compromise and the likelihood that the compromise will occur.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://cyberterrain.org/ns/stones#StixDomainObject" target="_blank" title="https://cyberterrain.org/ns/stones#StixDomainObject">Stix Domain Object</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Tactic">
+  <h3>Tactic<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#Tactic</p>
+  <div class="comment">
+   <span class="markdown">Instances of stonework:Tactic SHOULD correspond to high‑level adversary goals. Techniques are typically modeled as children or members of a tactic.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">A high‑level adversary objective or strategic goal that groups related techniques by the purpose they serve during an intrusion or operation.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://cyberterrain.org/ns/stones#StixDomainObject" target="_blank" title="https://cyberterrain.org/ns/stones#StixDomainObject">Stix Domain Object</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasTechnique" title="https://cyberterrain.org/ns/stonework#hasTechnique">hasTechnique</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Technique">
+  <h3>Technique<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#Technique</p>
+  <div class="comment">
+   <span class="markdown">Mirrors D3FEND's Technique class and reflects the PROV-O Plan philosophy: a technique is a plan that describes how an action should be carried out, distinct from the activity that executes it. Subclassed by stonework:CyberTechnique for cyber-specific methods.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">A reusable, prescribed method for achieving an objective, which may be instantiated as a concrete execution by an actor or system.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://cyberterrain.org/ns/stones#StixDomainObject" target="_blank" title="https://cyberterrain.org/ns/stones#StixDomainObject">Stix Domain Object</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#CyberTechnique" title="https://cyberterrain.org/ns/stonework#CyberTechnique">CyberTechnique</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#techniqueOf" title="https://cyberterrain.org/ns/stonework#techniqueOf">techniqueOf</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Threat">
+  <h3>Threat<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#Threat</p>
+  <div class="comment">
+   <span class="markdown">Instances of stonework:Threat may describe adversary capabilities, strategic objectives, targeting patterns, or environmental conditions that increase the likelihood of harmful action. Threats may be linked to threat actors, campaigns, malware, TTPs, weaknesses, or assets, but are conceptually distinct from the actions or events that realize them.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">A potential or actual source of harm arising from an adversary's capability, intent, and opportunity to exploit weaknesses or create adverse effects within a system, organization, or mission.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://cyberterrain.org/ns/stones#StixDomainObject" target="_blank" title="https://cyberterrain.org/ns/stones#StixDomainObject">Stix Domain Object</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ThreatScenario">
+  <h3>ThreatScenario<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#ThreatScenario</p>
+  <div class="comment">
+   <span class="markdown">Instances of stonework:ThreatScenario may include assumptions, triggering conditions, targeted assets, adversary profiles, attack paths, and expected impacts. Threat scenarios are distinct from threats, attacks, or incidents; they represent hypothetical or anticipated sequences rather than observed events.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">A structured description of how a threat could materialize against specific assets or missions, incorporating adversary intent, capability, opportunity, preconditions, and potential consequences.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://cyberterrain.org/ns/stones#StixDomainObject" target="_blank" title="https://cyberterrain.org/ns/stones#StixDomainObject">Stix Domain Object</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Weakness">
+  <h3>Weakness<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#Weakness</p>
+  <div class="comment">
+   <span class="markdown">Instances of stonework:Weakness may represent base weaknesses, variant weaknesses, or compound weaknesses. CWE identifiers (e.g., "CWE‑79") SHOULD be modeled using explicit properties rather than encoded in the class IRI. Descriptions and extended details SHOULD be referenced via citations rather than reproduced verbatim.</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">A type of flaw, fault, or design condition in software, hardware, or system architecture that can enable vulnerabilities, reduce security assurance, or increase the likelihood of exploitable behavior.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://cyberterrain.org/ns/stones#StixDomainObject" target="_blank" title="https://cyberterrain.org/ns/stones#StixDomainObject">Stix Domain Object</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#weaknessOf" title="https://cyberterrain.org/ns/stonework#weaknessOf">weaknessOf</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#exploitsWeakness" title="https://cyberterrain.org/ns/stonework#exploitsWeakness">exploitsWeakness</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasWeakness" title="https://cyberterrain.org/ns/stonework#hasWeakness">hasWeakness</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#affected" title="https://cyberterrain.org/ns/stonework#affected">affected</a></li>
+  <li><a href="#https://cyberterrain.org/ns/stones#attributed_to" title="https://cyberterrain.org/ns/stones#attributed_to">attributed_to</a></li>
+  <li><a href="#https://cyberterrain.org/ns/stones#detects" title="https://cyberterrain.org/ns/stones#detects">detects</a></li>
+  <li><a href="#https://cyberterrain.org/ns/stones#exploits" title="https://cyberterrain.org/ns/stones#exploits">exploits</a></li>
+  <li><a href="#exploitsWeakness" title="https://cyberterrain.org/ns/stonework#exploitsWeakness">exploitsWeakness</a></li>
+  <li><a href="#hasMembers" title="https://cyberterrain.org/ns/stonework#hasMembers">hasMembers</a></li>
+  <li><a href="#hasTechnique" title="https://cyberterrain.org/ns/stonework#hasTechnique">hasTechnique</a></li>
+  <li><a href="#hasWeakness" title="https://cyberterrain.org/ns/stonework#hasWeakness">hasWeakness</a></li>
+  <li><a href="#https://cyberterrain.org/ns/stones#indicates" title="https://cyberterrain.org/ns/stones#indicates">indicates</a></li>
+  <li><a href="#membersOf" title="https://cyberterrain.org/ns/stonework#membersOf">membersOf</a></li>
+  <li><a href="#https://cyberterrain.org/ns/stones#mitigates" title="https://cyberterrain.org/ns/stones#mitigates">mitigates</a></li>
+  <li><a href="#mitigatesAttackPattern" title="https://cyberterrain.org/ns/stonework#mitigatesAttackPattern">mitigatesAttackPattern</a></li>
+  <li><a href="#https://cyberterrain.org/ns/stones#related_to" title="https://cyberterrain.org/ns/stones#related_to">related_to</a></li>
+  <li><a href="#relatedAttackPattern" title="https://cyberterrain.org/ns/stonework#relatedAttackPattern">relatedAttackPattern</a></li>
+  <li><a href="#https://cyberterrain.org/ns/stones#revoked_by" title="https://cyberterrain.org/ns/stones#revoked_by">revoked_by</a></li>
+  <li><a href="#https://cyberterrain.org/ns/stones#subtechnique_of" title="https://cyberterrain.org/ns/stones#subtechnique_of">subtechnique_of</a></li>
+  <li><a href="#https://cyberterrain.org/ns/stones#targets" title="https://cyberterrain.org/ns/stones#targets">targets</a></li>
+  <li><a href="#techniqueOf" title="https://cyberterrain.org/ns/stonework#techniqueOf">techniqueOf</a></li>
+  <li><a href="#https://cyberterrain.org/ns/stones#uses" title="https://cyberterrain.org/ns/stones#uses"> <span>uses</span> </a></li>
+  <li><a href="#uses" title="https://cyberterrain.org/ns/stonework#uses">uses</a></li>
+  <li><a href="#weaknessOf" title="https://cyberterrain.org/ns/stonework#weaknessOf">weaknessOf</a></li>
+ </ul>
+ <div class="entity" id="affected">
+  <h3>affected<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#affected</p>
+  <div class="comment">
+   <span class="markdown">Relates a vulnerability to a product known to be affected by it.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://cyberterrain.org/ns/stones#Vulnerability" target="_blank" title="https://cyberterrain.org/ns/stones#Vulnerability">Vulnerability</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Product" title="https://cyberterrain.org/ns/stonework#Product">Product</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://cyberterrain.org/ns/stones#attributed_to">
+  <h3>attributed_to<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stones#attributed_to</p>
+  <div class="comment">
+   <span class="markdown">Shortcut triple: source Campaign or IntrusionSet is attributed to target ThreatActor or IntrusionSet. Corresponds to STIX relationship_type 'attributed-to'.</span>
+  </div>
+ </div>
+ <div class="entity" id="https://cyberterrain.org/ns/stones#detects">
+  <h3>detects<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stones#detects</p>
+  <div class="comment">
+   <span class="markdown">Shortcut triple: source CourseOfAction or Indicator detects target. Corresponds to STIX relationship_type 'detects'.</span>
+  </div>
+ </div>
+ <div class="entity" id="https://cyberterrain.org/ns/stones#exploits">
+  <h3>exploits<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stones#exploits</p>
+  <div class="comment">
+   <span class="markdown">Shortcut triple: source Malware or ThreatActor exploits target Vulnerability. Corresponds to STIX relationship_type 'exploits'.</span>
+  </div>
+ </div>
+ <div class="entity" id="exploitsWeakness">
+  <h3>exploitsWeakness<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#exploitsWeakness</p>
+  <div class="comment">
+   <span class="markdown">Relates a vulnerability to the weakness class it exploits or instantiates.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://cyberterrain.org/ns/stones#Vulnerability" target="_blank" title="https://cyberterrain.org/ns/stones#Vulnerability">Vulnerability</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Weakness" title="https://cyberterrain.org/ns/stonework#Weakness">Weakness</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasMembers">
+  <h3>hasMembers<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#hasMembers</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Group" title="https://cyberterrain.org/ns/stonework#Group">Group</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#membersOf" title="https://cyberterrain.org/ns/stonework#membersOf">membersOf</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasTechnique">
+  <h3>hasTechnique<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#hasTechnique</p>
+  <div class="comment">
+   <span class="markdown">Relates a tactic to an offensive technique that serves that tactic's goal.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Tactic" title="https://cyberterrain.org/ns/stonework#Tactic">Tactic</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#AttackTechnique" title="https://cyberterrain.org/ns/stonework#AttackTechnique">AttackTechnique</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#techniqueOf" title="https://cyberterrain.org/ns/stonework#techniqueOf">techniqueOf</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasWeakness">
+  <h3>hasWeakness<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#hasWeakness</p>
+  <div class="comment">
+   <span class="markdown">Relates a vulnerability to the weakness class it exploits or instantiates.</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> asymmetric</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://cyberterrain.org/ns/stones#Vulnerability" target="_blank" title="https://cyberterrain.org/ns/stones#Vulnerability">Vulnerability</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Weakness" title="https://cyberterrain.org/ns/stonework#Weakness">Weakness</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#weaknessOf" title="https://cyberterrain.org/ns/stonework#weaknessOf">weaknessOf</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://cyberterrain.org/ns/stones#indicates">
+  <h3>indicates<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stones#indicates</p>
+  <div class="comment">
+   <span class="markdown">Shortcut triple: source Indicator indicates presence of target. Corresponds to STIX relationship_type 'indicates'.</span>
+  </div>
+ </div>
+ <div class="entity" id="membersOf">
+  <h3>membersOf<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#membersOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Group" title="https://cyberterrain.org/ns/stonework#Group">Group</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#hasMembers" title="https://cyberterrain.org/ns/stonework#hasMembers">hasMembers</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://cyberterrain.org/ns/stones#mitigates">
+  <h3>mitigates<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stones#mitigates</p>
+  <div class="comment">
+   <span class="markdown">Shortcut triple: source CourseOfAction mitigates target AttackPattern or Vulnerability. Corresponds to STIX relationship_type 'mitigates'.</span>
+  </div>
+ </div>
+ <div class="entity" id="mitigatesAttackPattern">
+  <h3>mitigatesAttackPattern<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#mitigatesAttackPattern</p>
+  <div class="comment">
+   <span class="markdown">Relates a security control to an attack pattern or technique it helps mitigate or counter.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Control" title="https://cyberterrain.org/ns/stonework#Control">Control</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="https://cyberterrain.org/ns/stones#AttackPattern" target="_blank" title="https://cyberterrain.org/ns/stones#AttackPattern">Attack Pattern</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://cyberterrain.org/ns/stones#related_to">
+  <h3>related_to<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stones#related_to</p>
+  <div class="comment">
+   <span class="markdown">Shortcut triple: generic relationship. Corresponds to STIX relationship_type 'related-to'.</span>
+  </div>
+ </div>
+ <div class="entity" id="relatedAttackPattern">
+  <h3>relatedAttackPattern<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#relatedAttackPattern</p>
+  <div class="comment">
+   <span class="markdown">Relates any STIX object to an attack pattern it exploits, instantiates, or operationalizes.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://cyberterrain.org/ns/stones#StixObject" target="_blank" title="https://cyberterrain.org/ns/stones#StixObject">Stix Object</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="https://cyberterrain.org/ns/stones#AttackPattern" target="_blank" title="https://cyberterrain.org/ns/stones#AttackPattern">Attack Pattern</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://cyberterrain.org/ns/stones#revoked_by">
+  <h3>revoked_by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stones#revoked_by</p>
+  <div class="comment">
+   <span class="markdown">Shortcut triple: source STIX object is revoked and superseded by target. Corresponds to STIX relationship_type 'revoked-by'.</span>
+  </div>
+ </div>
+ <div class="entity" id="https://cyberterrain.org/ns/stones#subtechnique_of">
+  <h3>subtechnique_of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stones#subtechnique_of</p>
+  <div class="comment">
+   <span class="markdown">Shortcut triple: source AttackPattern is a sub-technique of target AttackPattern. Corresponds to STIX relationship_type 'subtechnique-of' (hyphens converted to underscores in the predicate IRI).</span>
+  </div>
+ </div>
+ <div class="entity" id="https://cyberterrain.org/ns/stones#targets">
+  <h3>targets<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stones#targets</p>
+  <div class="comment">
+   <span class="markdown">Shortcut triple: source targets the target Identity, Vulnerability, or Location. Corresponds to STIX relationship_type 'targets'.</span>
+  </div>
+ </div>
+ <div class="entity" id="techniqueOf">
+  <h3>techniqueOf<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#techniqueOf</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Technique" title="https://cyberterrain.org/ns/stonework#Technique">Technique</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#hasTechnique" title="https://cyberterrain.org/ns/stonework#hasTechnique">hasTechnique</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="https://cyberterrain.org/ns/stones#uses">
+  <h3>uses<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stones#uses</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#uses" title="https://cyberterrain.org/ns/stonework#uses">uses</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="uses">
+  <h3>uses<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#uses</p>
+  <div class="comment">
+   <span class="markdown">Relates a threat actor group or campaign to an offensive technique they are known to employ.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has sub-properties
+    </dt>
+    <dd>
+     <a href="#https://cyberterrain.org/ns/stones#uses" title="https://cyberterrain.org/ns/stones#uses">uses</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://cyberterrain.org/ns/stones#IntrusionSet" target="_blank" title="https://cyberterrain.org/ns/stones#IntrusionSet">Intrusion Set</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="https://cyberterrain.org/ns/stones#AttackPattern" target="_blank" title="https://cyberterrain.org/ns/stones#AttackPattern">Attack Pattern</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="weaknessOf">
+  <h3>weaknessOf<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#weaknessOf</p>
+  <div class="comment">
+   <span class="markdown">Relates a weakness to the vulnerability that exploits or instantiates it.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Weakness" title="https://cyberterrain.org/ns/stonework#Weakness">Weakness</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="https://cyberterrain.org/ns/stones#Vulnerability" target="_blank" title="https://cyberterrain.org/ns/stones#Vulnerability">Vulnerability</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#hasWeakness" title="https://cyberterrain.org/ns/stonework#hasWeakness">hasWeakness</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#https://cyberterrain.org/ns/stones#relationshipType" title="https://cyberterrain.org/ns/stones#relationshipType">relationshipType</a></li>
+ </ul>
+ <div class="entity" id="https://cyberterrain.org/ns/stones#relationshipType">
+  <h3>relationshipType<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stones#relationshipType</p>
+  <div class="comment">
+   <span class="markdown">The relationship_type string value from the STIX 2.1 SRO (e.g. 'uses', 'mitigates', 'subtechnique-of'). Drawn from the STIX 2.1 open vocabulary; corresponding named individuals are declared as stones:RelationshipTypeVocabulary instances in vocabularies.ttl. A shortcut object property is also asserted: stones:&lt;type_underscored&gt; from source to target.</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://cyberterrain.org/ns/stones#Relationship" target="_blank" title="https://cyberterrain.org/ns/stones#Relationship">Relationship</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+</div>
+</div>
