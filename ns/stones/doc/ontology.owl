@@ -10,9 +10,13 @@
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://cyberterrain.org/ns/stones#">
         <owl:versionIRI rdf:resource="https://cyberterrain.org/ns/stones/0.1.0"/>
+        <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <owl:imports rdf:resource="https://cyberterrain.org/ns/datatype-properties#"/>
+        <owl:imports rdf:resource="https://cyberterrain.org/ns/object-properties#"/>
+        <owl:imports rdf:resource="https://cyberterrain.org/ns/vocabularies#"/>
         <terms:creator>Hohimer Intelligence Strategies LLC</terms:creator>
         <terms:description xml:lang="en">An OWL 2 ontology modelling the STIX 2.1 specification. Provides a class hierarchy for all STIX Domain Objects (SDOs), Cyber Observable Objects (SCOs), Relationship Objects (SROs), Meta Objects, and structured sub-types, together with datatype and object properties covering all standard STIX properties.</terms:description>
-        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:license rdf:resource="https://opensource.org/licenses/MIT"/>
         <terms:title xml:lang="en">STONES — STIX ONtology Expression System</terms:title>
         <rdfs:label xml:lang="en">STONES</rdfs:label>
         <owl:versionInfo>0.1.0</owl:versionInfo>
@@ -32,20 +36,6 @@
     
 
 
-    <!-- http://purl.org/dc/terms/creator -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/description -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
-    
-
-
     <!-- http://purl.org/dc/terms/license -->
 
 
@@ -53,31 +43,132 @@
     
 
 
-    <!-- http://purl.org/dc/terms/title -->
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
 
 
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel">
+        <rdfs:comment xml:lang="en">The range of skos:altLabel is the class of RDF plain literals.</rdfs:comment>
+        <rdfs:comment xml:lang="en">skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">alternative label</rdfs:label>
+        <skos:definition xml:lang="en">An alternative lexical label for a resource.</skos:definition>
+        <skos:example xml:lang="en">Acronyms, abbreviations, spelling variants, and irregular plural/singular forms may be included among the alternative labels for a concept. Mis-spelled terms are normally included as hidden labels (see skos:hiddenLabel).</skos:example>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#changeNote -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#changeNote">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">change note</rdfs:label>
+        <skos:definition xml:lang="en">A note about a modification to a concept.</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#note"/>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://www.w3.org/2004/02/skos/core#definition -->
 
 
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">definition</rdfs:label>
+        <skos:definition xml:lang="en">A statement or formal explanation of the meaning of a concept.</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#note"/>
+    </owl:AnnotationProperty>
     
 
 
-    <!-- http://www.w3.org/2004/02/skos/core#notation -->
+    <!-- http://www.w3.org/2004/02/skos/core#editorialNote -->
 
 
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#notation"/>
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#editorialNote">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">editorial note</rdfs:label>
+        <skos:definition xml:lang="en">A note for an editor, translator or maintainer of the vocabulary.</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#note"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#example -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#example">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">example</rdfs:label>
+        <skos:definition xml:lang="en">An example of the use of a concept.</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#note"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#hiddenLabel -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#hiddenLabel">
+        <rdfs:comment xml:lang="en">The range of skos:hiddenLabel is the class of RDF plain literals.</rdfs:comment>
+        <rdfs:comment xml:lang="en">skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">hidden label</rdfs:label>
+        <skos:definition xml:lang="en">A lexical label for a resource that should be hidden when generating visual displays of the resource, but should still be accessible to free text search operations.</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#historyNote -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#historyNote">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">history note</rdfs:label>
+        <skos:definition xml:lang="en">A note about the past state/use/meaning of a concept.</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#note"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#note -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#note">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">note</rdfs:label>
+        <skos:definition xml:lang="en">A general note, for any purpose.</skos:definition>
+        <skos:scopeNote xml:lang="en">This property may be used directly, or as a super-property for more specific note types.</skos:scopeNote>
+    </owl:AnnotationProperty>
     
 
 
     <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
 
 
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel">
+        <rdfs:comment xml:lang="en">A resource has no more than one value of skos:prefLabel per language tag, and no more than one value of skos:prefLabel without language tag.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The range of skos:prefLabel is the class of RDF plain literals.</rdfs:comment>
+        <rdfs:comment xml:lang="en">skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise
+      disjoint properties.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">preferred label</rdfs:label>
+        <skos:definition xml:lang="en">The preferred lexical label for a resource, in a given language.</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#scopeNote -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#scopeNote">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">scope note</rdfs:label>
+        <skos:definition xml:lang="en">A note that helps to clarify the meaning and/or the use of a concept.</skos:definition>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#note"/>
+    </owl:AnnotationProperty>
     
 
 
@@ -90,6 +181,251 @@
      -->
 
 
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#broadMatch -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#broadMatch">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#broader"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#mappingRelation"/>
+        <owl:inverseOf rdf:resource="http://www.w3.org/2004/02/skos/core#narrowMatch"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">has broader match</rdfs:label>
+        <skos:definition xml:lang="en">skos:broadMatch is used to state a hierarchical mapping link between two conceptual resources in different concept schemes.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#broader -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#broader">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#broaderTransitive"/>
+        <rdfs:comment xml:lang="en">Broader concepts are typically rendered as parents in a concept hierarchy (tree).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">has broader</rdfs:label>
+        <skos:definition xml:lang="en">Relates a concept to a concept that is more general in meaning.</skos:definition>
+        <skos:scopeNote xml:lang="en">By convention, skos:broader is only used to assert an immediate (i.e. direct) hierarchical link between two conceptual resources.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#broaderTransitive -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#broaderTransitive">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#semanticRelation"/>
+        <owl:inverseOf rdf:resource="http://www.w3.org/2004/02/skos/core#narrowerTransitive"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">has broader transitive</rdfs:label>
+        <skos:definition>skos:broaderTransitive is a transitive superproperty of skos:broader.</skos:definition>
+        <skos:scopeNote xml:lang="en">By convention, skos:broaderTransitive is not used to make assertions. Rather, the properties can be used to draw inferences about the transitive closure of the hierarchical relation, which is useful e.g. when implementing a simple query expansion algorithm in a search application.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#closeMatch -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#closeMatch">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#mappingRelation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">has close match</rdfs:label>
+        <skos:definition xml:lang="en">skos:closeMatch is used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications. In order to avoid the possibility of &quot;compound errors&quot; when combining mappings across more than two concept schemes, skos:closeMatch is not declared to be a transitive property.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#exactMatch -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#exactMatch">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#closeMatch"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:comment xml:lang="en">skos:exactMatch is disjoint with each of the properties skos:broadMatch and skos:relatedMatch.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">has exact match</rdfs:label>
+        <skos:definition xml:lang="en">skos:exactMatch is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications. skos:exactMatch is a transitive property, and is a sub-property of skos:closeMatch.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#hasTopConcept -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#hasTopConcept">
+        <owl:inverseOf rdf:resource="http://www.w3.org/2004/02/skos/core#topConceptOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">has top concept</rdfs:label>
+        <skos:definition xml:lang="en">Relates, by convention, a concept scheme to a concept which is topmost in the broader/narrower concept hierarchies for that scheme, providing an entry point to these hierarchies.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#inScheme -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#inScheme">
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">is in scheme</rdfs:label>
+        <skos:definition xml:lang="en">Relates a resource (for example a concept) to a concept scheme in which it is included.</skos:definition>
+        <skos:scopeNote xml:lang="en">A concept may be a member of more than one concept scheme.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#mappingRelation -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#mappingRelation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#semanticRelation"/>
+        <rdfs:comment xml:lang="en">These concept mapping relations mirror semantic relations, and the data model defined below is similar (with the exception of skos:exactMatch) to the data model defined for semantic relations. A distinct vocabulary is provided for concept mapping relations, to provide a convenient way to differentiate links within a concept scheme from links between concept schemes. However, this pattern of usage is not a formal requirement of the SKOS data model, and relies on informal definitions of best practice.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">is in mapping relation with</rdfs:label>
+        <skos:definition xml:lang="en">Relates two concepts coming, by convention, from different schemes, and that have comparable meanings</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#member -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#member">
+        <rdfs:domain rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Collection"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">has member</rdfs:label>
+        <skos:definition xml:lang="en">Relates a collection to one of its members.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#memberList -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#memberList">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2004/02/skos/core#OrderedCollection"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+        <rdfs:comment xml:lang="en">For any resource, every item in the list given as the value of the
+      skos:memberList property is also a value of the skos:member property.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">has member list</rdfs:label>
+        <skos:definition xml:lang="en">Relates an ordered collection to the RDF list containing its members.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#narrowMatch -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#narrowMatch">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#mappingRelation"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#narrower"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">has narrower match</rdfs:label>
+        <skos:definition xml:lang="en">skos:narrowMatch is used to state a hierarchical mapping link between two conceptual resources in different concept schemes.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#narrower -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#narrower">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#narrowerTransitive"/>
+        <owl:inverseOf rdf:resource="http://www.w3.org/2004/02/skos/core#broader"/>
+        <rdfs:comment xml:lang="en">Narrower concepts are typically rendered as children in a concept hierarchy (tree).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">has narrower</rdfs:label>
+        <skos:definition xml:lang="en">Relates a concept to a concept that is more specific in meaning.</skos:definition>
+        <skos:scopeNote xml:lang="en">By convention, skos:broader is only used to assert an immediate (i.e. direct) hierarchical link between two conceptual resources.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#narrowerTransitive -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#narrowerTransitive">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#semanticRelation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">has narrower transitive</rdfs:label>
+        <skos:definition>skos:narrowerTransitive is a transitive superproperty of skos:narrower.</skos:definition>
+        <skos:scopeNote xml:lang="en">By convention, skos:narrowerTransitive is not used to make assertions. Rather, the properties can be used to draw inferences about the transitive closure of the hierarchical relation, which is useful e.g. when implementing a simple query expansion algorithm in a search application.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#related -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#related">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#semanticRelation"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:comment xml:lang="en">skos:related is disjoint with skos:broaderTransitive</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">has related</rdfs:label>
+        <skos:definition xml:lang="en">Relates a concept to a concept with which there is an associative semantic relationship.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#relatedMatch -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#relatedMatch">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#mappingRelation"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">has related match</rdfs:label>
+        <skos:definition xml:lang="en">skos:relatedMatch is used to state an associative mapping link between two conceptual resources in different concept schemes.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#semanticRelation -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#semanticRelation">
+        <rdfs:domain rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">is in semantic relation with</rdfs:label>
+        <skos:definition xml:lang="en">Links a concept to a concept related by meaning.</skos:definition>
+        <skos:scopeNote xml:lang="en">This property should not be used directly, but as a super-property for all properties denoting a relationship of meaning between concepts.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#topConceptOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2004/02/skos/core#topConceptOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">is top concept in scheme</rdfs:label>
+        <skos:definition xml:lang="en">Relates a concept to the concept scheme that it is a top level concept of.</skos:definition>
+    </owl:ObjectProperty>
     
 
 
@@ -1211,6 +1547,18 @@
      -->
 
 
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#notation -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2004/02/skos/core#notation">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">notation</rdfs:label>
+        <skos:definition xml:lang="en">A notation, also known as classification code, is a string of characters such as &quot;T58.5&quot; or &quot;303.4833&quot; used to uniquely identify a concept within the scope of a given concept scheme.</skos:definition>
+        <skos:scopeNote xml:lang="en">By convention, skos:notation is used with a typed literal in the object position of the triple.</skos:scopeNote>
+    </owl:DatatypeProperty>
     
 
 
@@ -3704,6 +4052,58 @@
     
 
 
+    <!-- http://www.w3.org/2004/02/skos/core#Collection -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Collection">
+        <owl:disjointWith rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <owl:disjointWith rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">Collection</rdfs:label>
+        <skos:definition xml:lang="en">A meaningful collection of concepts.</skos:definition>
+        <skos:scopeNote xml:lang="en">Labelled collections can be used where you would like a set of concepts to be displayed under a &apos;node label&apos; in the hierarchy.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept">
+        <owl:disjointWith rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">Concept</rdfs:label>
+        <skos:definition xml:lang="en">An idea or notion; a unit of thought.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#ConceptScheme -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">Concept Scheme</rdfs:label>
+        <skos:definition xml:lang="en">A set of concepts, optionally including statements about semantic relationships between those concepts.</skos:definition>
+        <skos:example xml:lang="en">Thesauri, classification schemes, subject heading lists, taxonomies, &apos;folksonomies&apos;, and other types of controlled vocabulary are all examples of concept schemes. Concept schemes are also embedded in glossaries and terminologies.</skos:example>
+        <skos:scopeNote xml:lang="en">A concept scheme may be defined to include concepts from different sources.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#OrderedCollection -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#OrderedCollection">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Collection"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+        <rdfs:label xml:lang="en">Ordered Collection</rdfs:label>
+        <skos:definition xml:lang="en">An ordered collection of concepts, where both the grouping and the ordering are meaningful.</skos:definition>
+        <skos:scopeNote xml:lang="en">Ordered collections can be used where you would like a set of concepts to be displayed in a specific order, and optionally under a &apos;node label&apos;.</skos:scopeNote>
+    </owl:Class>
+    
+
+
     <!-- https://cyberterrain.org/ns/stones#AccountTypeVocabulary -->
 
 
@@ -4982,6 +5382,15 @@
         <rdfs:isDefinedBy rdf:resource="https://cyberterrain.org/ns/stones#"/>
         <skos:definition>A directed link between two STIX Core Objects. The semantics of the link are defined by the relationship_type property.</skos:definition>
         <skos:prefLabel xml:lang="en">Relationship</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stones#RelationshipTypeVocabulary -->
+
+
+    <owl:Class rdf:about="https://cyberterrain.org/ns/stones#RelationshipTypeVocabulary">
+        <rdfs:subClassOf rdf:resource="https://cyberterrain.org/ns/stones#OpenVocabulary"/>
     </owl:Class>
     
 
@@ -6355,6 +6764,16 @@
     
 
 
+    <!-- https://cyberterrain.org/ns/stonex#_analysis-of -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonex#_analysis-of">
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stones#RelationshipTypeVocabulary"/>
+        <skos:notation>analysis-of</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://cyberterrain.org/ns/stonex#_anomalous-activity -->
 
 
@@ -6476,6 +6895,16 @@
     
 
 
+    <!-- https://cyberterrain.org/ns/stonex#_attributed-to -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonex#_attributed-to">
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stones#RelationshipTypeVocabulary"/>
+        <skos:notation>attributed-to</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://cyberterrain.org/ns/stonex#_attribution -->
 
 
@@ -6492,6 +6921,16 @@
     <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonex#_australia-new-zealand">
         <rdf:type rdf:resource="https://cyberterrain.org/ns/stones#RegionVocabulary"/>
         <skos:notation>australia-new-zealand</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonex#_authored-by -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonex#_authored-by">
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stones#RelationshipTypeVocabulary"/>
+        <skos:notation>authored-by</skos:notation>
     </owl:NamedIndividual>
     
 
@@ -6516,12 +6955,32 @@
     
 
 
+    <!-- https://cyberterrain.org/ns/stonex#_based-on -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonex#_based-on">
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stones#RelationshipTypeVocabulary"/>
+        <skos:notation>based-on</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://cyberterrain.org/ns/stonex#_bash -->
 
 
     <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonex#_bash">
         <rdf:type rdf:resource="https://cyberterrain.org/ns/stones#ImplementationLanguageVocabulary"/>
         <skos:notation>bash</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonex#_beacons-to -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonex#_beacons-to">
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stones#RelationshipTypeVocabulary"/>
+        <skos:notation>beacons-to</skos:notation>
     </owl:NamedIndividual>
     
 
@@ -6667,6 +7126,16 @@
     
 
 
+    <!-- https://cyberterrain.org/ns/stonex#_characterizes -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonex#_characterizes">
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stones#RelationshipTypeVocabulary"/>
+        <skos:notation>characterizes</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://cyberterrain.org/ns/stonex#_chemical -->
 
 
@@ -6773,6 +7242,16 @@
     <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonex#_compromised">
         <rdf:type rdf:resource="https://cyberterrain.org/ns/stones#IndicatorTypeVocabulary"/>
         <skos:notation>compromised</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonex#_compromises -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonex#_compromises">
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stones#RelationshipTypeVocabulary"/>
+        <skos:notation>compromises</skos:notation>
     </owl:NamedIndividual>
     
 
@@ -6927,6 +7406,26 @@
     
 
 
+    <!-- https://cyberterrain.org/ns/stonex#_derived-from -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonex#_derived-from">
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stones#RelationshipTypeVocabulary"/>
+        <skos:notation>derived-from</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonex#_detects -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonex#_detects">
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stones#RelationshipTypeVocabulary"/>
+        <skos:notation>detects</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://cyberterrain.org/ns/stonex#_determines-c2-server -->
 
 
@@ -6987,12 +7486,52 @@
     
 
 
+    <!-- https://cyberterrain.org/ns/stonex#_downloads -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonex#_downloads">
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stones#RelationshipTypeVocabulary"/>
+        <skos:notation>downloads</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://cyberterrain.org/ns/stonex#_dropper -->
 
 
     <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonex#_dropper">
         <rdf:type rdf:resource="https://cyberterrain.org/ns/stones#MalwareTypeVocabulary"/>
         <skos:notation>dropper</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonex#_drops -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonex#_drops">
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stones#RelationshipTypeVocabulary"/>
+        <skos:notation>drops</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonex#_duplicate-of -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonex#_duplicate-of">
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stones#RelationshipTypeVocabulary"/>
+        <skos:notation>duplicate-of</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonex#_dynamic-analysis-of -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonex#_dynamic-analysis-of">
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stones#RelationshipTypeVocabulary"/>
+        <skos:notation>dynamic-analysis-of</skos:notation>
     </owl:NamedIndividual>
     
 
@@ -7137,6 +7676,16 @@
     
 
 
+    <!-- https://cyberterrain.org/ns/stonex#_exfiltrates-to -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonex#_exfiltrates-to">
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stones#RelationshipTypeVocabulary"/>
+        <skos:notation>exfiltrates-to</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://cyberterrain.org/ns/stonex#_exfiltration -->
 
 
@@ -7173,6 +7722,16 @@
     <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonex#_exploitation">
         <rdf:type rdf:resource="https://cyberterrain.org/ns/stones#ToolTypeVocabulary"/>
         <skos:notation>exploitation</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonex#_exploits -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonex#_exploits">
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stones#RelationshipTypeVocabulary"/>
+        <skos:notation>exploits</skos:notation>
     </owl:NamedIndividual>
     
 
@@ -7368,6 +7927,16 @@
     
 
 
+    <!-- https://cyberterrain.org/ns/stonex#_hosts -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonex#_hosts">
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stones#RelationshipTypeVocabulary"/>
+        <skos:notation>hosts</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://cyberterrain.org/ns/stonex#_ia-64 -->
 
 
@@ -7394,6 +7963,16 @@
     <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonex#_ideology">
         <rdf:type rdf:resource="https://cyberterrain.org/ns/stones#AttackMotivationVocabulary"/>
         <skos:notation>ideology</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonex#_indicates -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonex#_indicates">
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stones#RelationshipTypeVocabulary"/>
+        <skos:notation>indicates</skos:notation>
     </owl:NamedIndividual>
     
 
@@ -7599,6 +8178,16 @@
     
 
 
+    <!-- https://cyberterrain.org/ns/stonex#_located-at -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonex#_located-at">
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stones#RelationshipTypeVocabulary"/>
+        <skos:notation>located-at</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://cyberterrain.org/ns/stonex#_low -->
 
 
@@ -7765,6 +8354,16 @@
     <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonex#_mips-le">
         <rdf:type rdf:resource="https://cyberterrain.org/ns/stones#ProcessorArchitectureVocabulary"/>
         <skos:notation>mips-le</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonex#_mitigates -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonex#_mitigates">
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stones#RelationshipTypeVocabulary"/>
+        <skos:notation>mitigates</skos:notation>
     </owl:NamedIndividual>
     
 
@@ -7970,6 +8569,26 @@
     
 
 
+    <!-- https://cyberterrain.org/ns/stonex#_originates-from -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonex#_originates-from">
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stones#RelationshipTypeVocabulary"/>
+        <skos:notation>originates-from</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonex#_owns -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonex#_owns">
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stones#RelationshipTypeVocabulary"/>
+        <skos:notation>owns</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://cyberterrain.org/ns/stonex#_pcre -->
 
 
@@ -8160,6 +8779,26 @@
     
 
 
+    <!-- https://cyberterrain.org/ns/stonex#_related-to -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonex#_related-to">
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stones#RelationshipTypeVocabulary"/>
+        <skos:notation>related-to</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonex#_remediates -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonex#_remediates">
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stones#RelationshipTypeVocabulary"/>
+        <skos:notation>remediates</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://cyberterrain.org/ns/stonex#_remote-access -->
 
 
@@ -8206,6 +8845,16 @@
     <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonex#_revenge">
         <rdf:type rdf:resource="https://cyberterrain.org/ns/stones#AttackMotivationVocabulary"/>
         <skos:notation>revenge</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonex#_revoked-by -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonex#_revoked-by">
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stones#RelationshipTypeVocabulary"/>
+        <skos:notation>revoked-by</skos:notation>
     </owl:NamedIndividual>
     
 
@@ -8420,6 +9069,16 @@
     
 
 
+    <!-- https://cyberterrain.org/ns/stonex#_static-analysis-of -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonex#_static-analysis-of">
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stones#RelationshipTypeVocabulary"/>
+        <skos:notation>static-analysis-of</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://cyberterrain.org/ns/stonex#_steals-authentication-credentials -->
 
 
@@ -8466,6 +9125,16 @@
     <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonex#_strongly-disagree">
         <rdf:type rdf:resource="https://cyberterrain.org/ns/stones#OpinionEnumeration"/>
         <skos:notation>strongly-disagree</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonex#_subtechnique-of -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonex#_subtechnique-of">
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stones#RelationshipTypeVocabulary"/>
+        <skos:notation>subtechnique-of</skos:notation>
     </owl:NamedIndividual>
     
 
@@ -8537,6 +9206,16 @@
     <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonex#_tacacs">
         <rdf:type rdf:resource="https://cyberterrain.org/ns/stones#AccountTypeVocabulary"/>
         <skos:notation>tacacs</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonex#_targets -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonex#_targets">
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stones#RelationshipTypeVocabulary"/>
+        <skos:notation>targets</skos:notation>
     </owl:NamedIndividual>
     
 
@@ -8706,12 +9385,32 @@
     
 
 
+    <!-- https://cyberterrain.org/ns/stonex#_uses -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonex#_uses">
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stones#RelationshipTypeVocabulary"/>
+        <skos:notation>uses</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://cyberterrain.org/ns/stonex#_utilities -->
 
 
     <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonex#_utilities">
         <rdf:type rdf:resource="https://cyberterrain.org/ns/stones#IndustrySectorVocabulary"/>
         <skos:notation>utilities</skos:notation>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonex#_variant-of -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonex#_variant-of">
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stones#RelationshipTypeVocabulary"/>
+        <skos:notation>variant-of</skos:notation>
     </owl:NamedIndividual>
     
 
