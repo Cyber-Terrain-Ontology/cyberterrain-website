@@ -153,7 +153,7 @@
 <header>
   <h1>STONEWORK</h1>
   <p class="subtitle">Semantic Threat Ontology and Research Framework</p>
-  <span class="badge">v0.2.0 &nbsp;·&nbsp; OWL 2 &nbsp;·&nbsp; MIT</span>
+  <span class="badge">v0.4.0 &nbsp;·&nbsp; OWL 2 &nbsp;·&nbsp; MIT</span>
 </header>
 
 <main>
@@ -161,16 +161,16 @@
   <section>
     <h2>Description</h2>
     <p>
-      STONEWORK is an OWL 2 ontology and research framework that serves as the evolutionary successor
-      to the STONES ontology. It provides a forward-looking, extensible foundation for modeling
-      next-generation cyber threat intelligence concepts, objects, relationships, workflows, and
-      knowledge beyond the scope of STIX 2.1.
+      STONEWORK is an OWL 2 ontology and research framework for modeling cyber threat intelligence
+      concepts, objects, relationships, workflows, and knowledge. It is the primary ontology in the
+      CyberTerrain ecosystem — the ground-truth model that all other CyberTerrain work is built on.
     </p>
     <p>
-      STONEWORK extends STONES with classes for security controls, weaknesses, products, tactics,
-      techniques, procedures, threat scenarios, risk, likelihood, and impact — and defines a semantic
-      interoperability layer connecting heterogeneous CTI frameworks such as ATT&amp;CK, CAPEC, CWE,
-      CVE, CPE, and CIS Controls.
+      STONEWORK defines classes for security controls, weaknesses, products, tactics, techniques,
+      procedures, threat scenarios, risk, likelihood, and impact, and establishes a semantic
+      interoperability layer that aligns with established CTI framework ontologies — including
+      STIX (via STONES), ATT&amp;CK, CAPEC, CWE, CVE, and CPE — treating each as an
+      authoritative reference vocabulary rather than a base to extend.
     </p>
   </section>
 
@@ -191,11 +191,11 @@
       </tr>
       <tr>
         <td>Version IRI</td>
-        <td><code>https://cyberterrain.org/ns/stonework/0.2.0</code></td>
+        <td><code>https://cyberterrain.org/ns/stonework/0.4.0</code></td>
       </tr>
       <tr>
         <td>Version</td>
-        <td>0.2.0</td>
+        <td>0.4.0</td>
       </tr>
       <tr>
         <td>Creator</td>
@@ -206,8 +206,8 @@
         <td><a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a></td>
       </tr>
       <tr>
-        <td>Extends</td>
-        <td><a href="stones.html">STONES — STIX ONtology Expression System</a></td>
+        <td>Aligns with</td>
+        <td><a href="stones.html">STONES</a> (STIX), ATT&amp;CK, CAPEC, CWE, CVE, CPE</td>
       </tr>
     </table>
   </section>
@@ -231,7 +231,12 @@
   </section>
 
   <section>
-    <h2>Imports</h2>
+    <h2>Related Framework Ontologies</h2>
+    <p>
+      STONEWORK does not import these ontologies — it aligns with them as independently maintained
+      reference vocabularies, in the same way CVE, CWE, and CAPEC function as framework ontologies
+      in their own right.
+    </p>
     <table>
       <tr>
         <td><a href="stones.html">STONES</a></td>
