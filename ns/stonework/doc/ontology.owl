@@ -9,13 +9,13 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://cyberterrain.org/ns/stonework#">
-        <owl:versionIRI rdf:resource="https://cyberterrain.org/ns/stonework/0.6.0"/>
+        <owl:versionIRI rdf:resource="https://cyberterrain.org/ns/stonework/0.6.1"/>
         <terms:creator>Hohimer Intelligence Strategies LLC</terms:creator>
         <terms:description>A semantic threat ontology and research framework that serves as the ground-truth model for cyber threat intelligence in the CyberTerrain ecosystem. It provides an extensible foundation for modeling cyber threat intelligence concepts, objects, relationships, workflows, and knowledge, and aligns with established CTI framework ontologies — including STONES (STIX 2.1), ATT&amp;CK, CAPEC, CWE, CVE, and CPE — as authoritative reference vocabularies rather than ontologies it imports and extends.</terms:description>
         <terms:license rdf:resource="https://opensource.org/licenses/MIT"/>
         <terms:title xml:lang="en">STONEWORK — Semantic Threat Ontology and Research Framework</terms:title>
         <rdfs:label xml:lang="en">STONEWORK</rdfs:label>
-        <owl:versionInfo>0.6.0</owl:versionInfo>
+        <owl:versionInfo>0.6.1</owl:versionInfo>
     </owl:Ontology>
     
 

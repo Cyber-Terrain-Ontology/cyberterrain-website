@@ -46,10 +46,10 @@
     "@value" : "STONEWORK"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework/0.6.0"
+    "@id" : "https://cyberterrain.org/ns/stonework/0.6.1"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.6.0"
+    "@value" : "0.6.1"
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#AIAgent",
