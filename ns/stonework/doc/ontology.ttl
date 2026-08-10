@@ -7,13 +7,13 @@
 @base <https://cyberterrain.org/ns/stonework#> .
 
 <https://cyberterrain.org/ns/stonework#> rdf:type owl:Ontology ;
-                                          owl:versionIRI <https://cyberterrain.org/ns/stonework/0.4.0> ;
+                                          owl:versionIRI <https://cyberterrain.org/ns/stonework/0.6.0> ;
                                           <http://purl.org/dc/terms/creator> "Hohimer Intelligence Strategies LLC" ;
                                           <http://purl.org/dc/terms/description> "A semantic threat ontology and research framework that serves as the ground-truth model for cyber threat intelligence in the CyberTerrain ecosystem. It provides an extensible foundation for modeling cyber threat intelligence concepts, objects, relationships, workflows, and knowledge, and aligns with established CTI framework ontologies — including STONES (STIX 2.1), ATT&CK, CAPEC, CWE, CVE, and CPE — as authoritative reference vocabularies rather than ontologies it imports and extends." ;
                                           <http://purl.org/dc/terms/license> <https://opensource.org/licenses/MIT> ;
                                           <http://purl.org/dc/terms/title> "STONEWORK — Semantic Threat Ontology and Research Framework"@en ;
                                           rdfs:label "STONEWORK"@en ;
-                                          owl:versionInfo "0.4.0" .
+                                          owl:versionInfo "0.6.0" .
 
 #################################################################
 #    Annotation properties
@@ -72,6 +72,16 @@
           <http://www.w3.org/2004/02/skos/core#prefLabel> "achieves" .
 
 
+###  https://cyberterrain.org/ns/stonework#actsOn
+:actsOn rdf:type owl:ObjectProperty ;
+        rdfs:domain :CyberActivity ;
+        rdfs:range :CyberEntity ;
+        rdfs:seeAlso <http://www.w3.org/ns/prov#used> ;
+        <http://www.w3.org/2004/02/skos/core#definition> "Links a CyberActivity to the CyberEntity it acted upon — the asset, artifact, or resource the activity operated against."@en ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel> "actsOn" ;
+        <http://www.w3.org/2004/02/skos/core#scopeNote> "Mirrors prov:used (an Activity used an Entity). Typical range instances are stonework:Host, stonework:RuntimeProcess, or other stonework:DigitalArtifact/stonework:Infrastructure individuals — e.g. the specific lsass.exe stonework:RuntimeProcess a credential-dumping attempt acted on. Distinct from stonework:targets: targets is a direct, open-domain/range lift of the STIX 2.1 relationship_type 'targets' shortcut, describing higher-level strategic targeting (a Sector, a Location, an Agent) by a Campaign/MalwareSample/ThreatActor. actsOn is purpose-built for the concrete technical asset one execution-trace Activity acted upon — the same distinction develop draws between stonework:mitigates (open, STIX-lifted) and stonework:mitigatesAttackPattern (purpose-built, controlled domain/range)."@en .
+
+
 ###  https://cyberterrain.org/ns/stonework#affected
 :affected rdf:type owl:ObjectProperty ;
           rdfs:domain :Vulnerability ;
@@ -94,10 +104,9 @@
 
 ###  https://cyberterrain.org/ns/stonework#attributedTo
 :attributedTo rdf:type owl:ObjectProperty ;
-              rdfs:domain :CyberActivity ;
-              rdfs:range :ThreatActor ;
-              <http://www.w3.org/2004/02/skos/core#definition> "Links a CyberActivity (Campaign, CyberActivityCluster, Incident, etc.) to the ThreatActor (Individual or Group) responsible for it. Corresponds to STIX relationship_type 'attributed-to'." ;
-              <http://www.w3.org/2004/02/skos/core#prefLabel> "attributedTo" .
+              <http://www.w3.org/2004/02/skos/core#definition> "Links a CyberActivity to the Agent responsible for, or associated with, performing it." ;
+              <http://www.w3.org/2004/02/skos/core#prefLabel> "attributedTo" ;
+              <http://www.w3.org/2004/02/skos/core#scopeNote> "Domain/range intentionally left unset: this property is a direct lift of the STIX 2.1 relationship_type 'attributed-to' shortcut. STIX does not schema-constrain which SDO/SCO types may appear as source_ref/target_ref for a given relationship_type — that's producer convention, not enforceable structure, and a closed domain/range here would misrepresent real STIX 2.1 data and mislead reasoner-based consumers. In practice the object is typically a stonework:Agent — most often a stonework:ThreatActor in the adversarial case, matching STIX's own convention for 'attributed-to' — but stonework:CyberActivity is a general occurrence class covering defensive and neutral activities too (Investigations, a ControlPlan's Process), so the performer need not be adversarial."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#attributedToAgent
@@ -113,6 +122,15 @@
             rdfs:domain :Provenance ;
             rdfs:range :Agent ;
             <http://www.w3.org/2004/02/skos/core#prefLabel> "authoredBy"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#boundTo
+:boundTo rdf:type owl:ObjectProperty ;
+         rdfs:domain :Variable ;
+         rdfs:range owl:Thing ;
+         <http://www.w3.org/2004/02/skos/core#definition> "Binds a Variable, at execution time, to the individual it actually resolved to — e.g. the specific SecurityCondition instance a successful attempt produced."@en ;
+         <http://www.w3.org/2004/02/skos/core#prefLabel> "boundTo" ;
+         <http://www.w3.org/2004/02/skos/core#scopeNote> "Used when the bound value is an instance of a class rather than a scalar; see stonework:boundToLiteral for scalar bindings. Tested by stonework:guardType on a Transition."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#categorizedBy
@@ -170,6 +188,17 @@
           <http://www.w3.org/2004/02/skos/core#prefLabel> "contains" .
 
 
+###  https://cyberterrain.org/ns/stonework#correspondsToStep
+:correspondsToStep rdf:type owl:ObjectProperty ,
+                            owl:FunctionalProperty ;
+                   rdfs:domain :CyberActivity ;
+                   rdfs:range :Step ;
+                   rdfs:seeAlso <http://purl.org/net/p-plan#correspondsToStep> ;
+                   <http://www.w3.org/2004/02/skos/core#definition> "Links an executing CyberActivity to the Step it is the concrete performance of."@en ;
+                   <http://www.w3.org/2004/02/skos/core#prefLabel> "correspondsToStep" ;
+                   <http://www.w3.org/2004/02/skos/core#scopeNote> "Directly mirrors p-plan:correspondsToStep (domain prov:Activity, range p-plan:Step), narrowed to stonework:CyberActivity/stonework:Step. Declared functional, matching p-plan: a single CyberActivity corresponds to at most one Step, but a Step may still be the target of many CyberActivity instances across retries or repeated executions. Fills the gap noted on stonework:Step: the property linking an executing Activity back to the Step it realizes."@en .
+
+
 ###  https://cyberterrain.org/ns/stonework#counters
 :counters rdf:type owl:ObjectProperty ;
           rdfs:domain :AnalyticTechnique ,
@@ -197,14 +226,19 @@
              <http://www.w3.org/2004/02/skos/core#prefLabel> "derivedFrom" .
 
 
+###  https://cyberterrain.org/ns/stonework#describesInfrastructure
+:describesInfrastructure rdf:type owl:ObjectProperty ;
+                         rdfs:range :Infrastructure ;
+                         <http://www.w3.org/2004/02/skos/core#definition> "Links a Software Bill of Materials to the enterprise infrastructure, system, or application whose component composition it inventories." ;
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "describes infrastructure" ;
+                         <http://www.w3.org/2004/02/skos/core#scopeNote> "Domain intentionally left unset. The primary subject is stonework:SoftwareBillOfMaterials, but other provenance-bearing artifacts may describe infrastructure without being SBOMs. Multiple SBOMs may describe the same Infrastructure over time, enabling historical component inventory."@en .
+
+
 ###  https://cyberterrain.org/ns/stonework#detects
 :detects rdf:type owl:ObjectProperty ;
-         rdfs:domain :AnalyticTechnique ,
-                     :DefendTechnique ,
-                     :DetectionRule ,
-                     :Sensor ;
          <http://www.w3.org/2004/02/skos/core#definition> "Relates a source DetectionRule, Sensor, Indicator, or defensive technique to the threat, activity, or artifact it is capable of detecting. Corresponds to STIX relationship_type 'detects'."@en ;
-         <http://www.w3.org/2004/02/skos/core#prefLabel> "detects" .
+         <http://www.w3.org/2004/02/skos/core#prefLabel> "detects" ;
+         <http://www.w3.org/2004/02/skos/core#scopeNote> "Domain/range intentionally left unset: this property is a direct lift of the STIX 2.1 relationship_type 'detects' shortcut. STIX does not schema-constrain which SDO/SCO types may appear as source_ref/target_ref for a given relationship_type — that's producer convention, not enforceable structure, and a closed domain/range here would misrepresent real STIX 2.1 data and mislead reasoner-based consumers."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#downloads
@@ -236,12 +270,9 @@
 
 ###  https://cyberterrain.org/ns/stonework#exploits
 :exploits rdf:type owl:ObjectProperty ;
-          rdfs:domain :Campaign ,
-                      :MalwareSample ,
-                      :ThreatActor ;
-          rdfs:range :Vulnerability ;
           <http://www.w3.org/2004/02/skos/core#definition> "Shortcut triple: source Malware or ThreatActor exploits target Vulnerability. Corresponds to STIX relationship_type 'exploits'." ;
-          <http://www.w3.org/2004/02/skos/core#prefLabel> "exploits" .
+          <http://www.w3.org/2004/02/skos/core#prefLabel> "exploits" ;
+          <http://www.w3.org/2004/02/skos/core#scopeNote> "Domain/range intentionally left unset: this property is a direct lift of the STIX 2.1 relationship_type 'exploits' shortcut. STIX does not schema-constrain which SDO/SCO types may appear as source_ref/target_ref for a given relationship_type — that's producer convention, not enforceable structure, and a closed domain/range here would misrepresent real STIX 2.1 data and mislead reasoner-based consumers."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#exploitsWeakness
@@ -263,6 +294,40 @@
                 <http://www.w3.org/2004/02/skos/core#scopeNote> "The range is a stonework:VersionedProduct individual whose IRI is derived deterministically from the CPE identifier. Populated by CVE/patch ingest."@en .
 
 
+###  https://cyberterrain.org/ns/stonework#fromStep
+:fromStep rdf:type owl:ObjectProperty ;
+          rdfs:domain :Transition ;
+          rdfs:range :Step ;
+          <http://www.w3.org/2004/02/skos/core#definition> "The Step a Transition leaves."@en ;
+          <http://www.w3.org/2004/02/skos/core#prefLabel> "fromStep" .
+
+
+###  https://cyberterrain.org/ns/stonework#guardOperator
+:guardOperator rdf:type owl:ObjectProperty ;
+               rdfs:domain :Transition ;
+               rdfs:range :ComparisonOperator ;
+               <http://www.w3.org/2004/02/skos/core#definition> "The comparison operator applied between guardVariable's bound literal value and guardLiteralValue."@en ;
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "guardOperator" ;
+               <http://www.w3.org/2004/02/skos/core#scopeNote> "Omitted = Equals, preserving equality-only guard semantics without requiring this property on every Transition."@en .
+
+
+###  https://cyberterrain.org/ns/stonework#guardType
+:guardType rdf:type owl:ObjectProperty ;
+           rdfs:domain :Transition ;
+           rdfs:range rdfs:Class ;
+           <http://www.w3.org/2004/02/skos/core#definition> "A Transition fires only if guardVariable's stonework:boundTo value is an instance of this class."@en ;
+           <http://www.w3.org/2004/02/skos/core#prefLabel> "guardType" ;
+           <http://www.w3.org/2004/02/skos/core#scopeNote> "Used for guards that test whether a Variable was bound to an instance of a particular class (e.g. testing that an attempt's outcome Variable was bound to a stonework:SecurityCondition instance) rather than testing equality against a scalar."@en .
+
+
+###  https://cyberterrain.org/ns/stonework#guardVariable
+:guardVariable rdf:type owl:ObjectProperty ;
+               rdfs:domain :Transition ;
+               rdfs:range :Variable ;
+               <http://www.w3.org/2004/02/skos/core#definition> "The Variable whose bound value is tested to decide whether a Transition is taken."@en ;
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "guardVariable" .
+
+
 ###  https://cyberterrain.org/ns/stonework#hasAccount
 :hasAccount rdf:type owl:ObjectProperty ;
             rdfs:domain :Agent ;
@@ -282,9 +347,10 @@
 ###  https://cyberterrain.org/ns/stonework#hasBomEntry
 :hasBomEntry rdf:type owl:ObjectProperty ;
              rdfs:domain :SoftwareBillOfMaterials ;
-             rdfs:range :VersionedProduct ;
-             <http://www.w3.org/2004/02/skos/core#definition> "Relates an SBOM to a component VersionedProduct it inventories."@en ;
-             <http://www.w3.org/2004/02/skos/core#prefLabel> "hasBomEntry"@en .
+             rdfs:range :BomEntry ;
+             <http://www.w3.org/2004/02/skos/core#definition> "Relates a Software Bill of Materials to one of its component entries."@en ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "has BOM entry" ;
+             <http://www.w3.org/2004/02/skos/core#scopeNote> "Each BomEntry carries the component's VersionedProduct reference (via stonework:installationOf) and any component-specific metadata (PURL, license, hash, component type). Range is BomEntry rather than VersionedProduct directly because the same VersionedProduct may appear in multiple SBOMs with different component-level attributes."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#hasCvssMetric
@@ -326,6 +392,23 @@
                <http://www.w3.org/2004/02/skos/core#prefLabel> "hasIdentifier" .
 
 
+###  https://cyberterrain.org/ns/stonework#hasInputVariable
+:hasInputVariable rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Behavior ;
+                  rdfs:range :Variable ;
+                  <http://www.w3.org/2004/02/skos/core#definition> "Declares a Variable whose value must be bound before the Behavior or Step executes."@en ;
+                  <http://www.w3.org/2004/02/skos/core#prefLabel> "hasInputVariable" .
+
+
+###  https://cyberterrain.org/ns/stonework#hasInstalledProduct
+:hasInstalledProduct rdf:type owl:ObjectProperty ;
+                     rdfs:domain :Infrastructure ;
+                     rdfs:range :VersionedProduct ;
+                     <http://www.w3.org/2004/02/skos/core#definition> "Links an enterprise infrastructure to a versioned product known to be installed in that environment." ;
+                     <http://www.w3.org/2004/02/skos/core#prefLabel> "has installed product" ;
+                     <http://www.w3.org/2004/02/skos/core#scopeNote> "Used in the user-data graph to assert enterprise inventory directly. Combined with stonework:versionOf and stonework:affected, enables traversal from installed software to applicable CVEs. For SBOM-based ingest with full component provenance, see stonework:SoftwareBillOfMaterials and stonework:hasBomEntry."@en .
+
+
 ###  https://cyberterrain.org/ns/stonework#hasMember
 :hasMember rdf:type owl:ObjectProperty ;
            rdfs:domain :Group ,
@@ -344,11 +427,28 @@
                <http://www.w3.org/2004/02/skos/core#scopeNote> "The range covers any SCO type: stonework:IPAddress, stonework:Domain, stonework:File, stonework:NetworkTraffic, stonework:RuntimeProcess, stonework:UserAccount, etc. Corresponds to STIX observed-data object_refs. Inspired by SOSA sosa:hasResult."@en .
 
 
+###  https://cyberterrain.org/ns/stonework#hasOutputVariable
+:hasOutputVariable rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Behavior ;
+                   rdfs:range :Variable ;
+                   <http://www.w3.org/2004/02/skos/core#definition> "Declares a Variable whose value is bound only once the Behavior or Step has executed."@en ;
+                   <http://www.w3.org/2004/02/skos/core#prefLabel> "hasOutputVariable" .
+
+
 ###  https://cyberterrain.org/ns/stonework#hasPhoneNumber
 :hasPhoneNumber rdf:type owl:ObjectProperty ;
                 rdfs:domain :Agent ;
                 rdfs:range :PhoneNumber ;
                 <http://www.w3.org/2004/02/skos/core#prefLabel> "hasPhoneNumber"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#hasStep
+:hasStep rdf:type owl:ObjectProperty ;
+         rdfs:domain :Behavior ;
+         rdfs:range :Step ;
+         <http://www.w3.org/2004/02/skos/core#definition> "Relates a Behavior (Procedure, Playbook, ThreatScenario, Control, or another Step) to a Step that decomposes it."@en ;
+         <http://www.w3.org/2004/02/skos/core#prefLabel> "hasStep" ;
+         <http://www.w3.org/2004/02/skos/core#scopeNote> "Domain is the general Behavior root rather than a specific subclass, so decomposition applies uniformly across Procedure, Playbook, ThreatScenario, and — recursively, since Step is itself a Behavior — Step."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#hasTechnique
@@ -404,31 +504,47 @@
           <http://www.w3.org/2004/02/skos/core#prefLabel> "hostedBy" .
 
 
+###  https://cyberterrain.org/ns/stonework#implementedBy
+:implementedBy rdf:type owl:ObjectProperty ;
+               owl:inverseOf :implements ;
+               rdfs:domain :Behavior ;
+               rdfs:range :Behavior ;
+               <http://www.w3.org/2004/02/skos/core#definition> "Relates an abstract Behavior to a concrete, Step-decomposed Behavior that realizes it."@en ;
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "implementedBy" .
+
+
+###  https://cyberterrain.org/ns/stonework#implements
+:implements rdf:type owl:ObjectProperty ;
+            rdfs:domain :Behavior ;
+            rdfs:range :Behavior ;
+            <http://www.w3.org/2004/02/skos/core#definition> "Relates a concrete, Step-decomposed Behavior to the more abstract Behavior it is a specific realization of."@en ;
+            <http://www.w3.org/2004/02/skos/core#prefLabel> "implements" ;
+            <http://www.w3.org/2004/02/skos/core#scopeNote> "General-purpose relationship covering both offense (a Procedure implements a Technique) and defense (a ControlPlan implements a Control) with one property rather than a bespoke one per pairing."@en .
+
+
 ###  https://cyberterrain.org/ns/stonework#indicates
 :indicates rdf:type owl:ObjectProperty ;
            rdfs:domain :Indicator ;
-           rdfs:range [ rdf:type owl:Class ;
-                        owl:unionOf ( :AttackPattern
-                                      :AttackTechnique
-                                      :Campaign
-                                      :CyberActivityCluster
-                                      :Infrastructure
-                                      :Malware
-                                      :ThreatActor
-                                      :Tool
-                                    )
-                      ] ;
            <http://www.w3.org/2004/02/skos/core#definition> "Asserts that when the source Indicator's pattern is matched, it signals the presence of the target adversary behavior, malware, campaign, or threat actor." ;
            <http://www.w3.org/2004/02/skos/core#prefLabel> "indicates"@en ;
-           <http://www.w3.org/2004/02/skos/core#scopeNote> "Corresponds to STIX relationship_type 'indicates'. The domain is always stonework:Indicator. The range covers the principal threat intelligence objects an indicator can point to: AttackPattern/AttackTechnique (technique-level indicators), Malware (malware family or sample indicators), Campaign and CyberActivityCluster (campaign-attribution indicators), ThreatActor and its subclasses (actor-attribution indicators), Infrastructure (C2/hosting indicators), and Tool (tool-use indicators). A single Indicator may indicate multiple targets."@en .
+           <http://www.w3.org/2004/02/skos/core#scopeNote> "Corresponds to STIX relationship_type 'indicates'. Domain is stonework:Indicator — unlike the source side of other STIX relationship shortcuts, this is definitional rather than open-world convention: an object is only ever an Indicator because it indicates something, per STIX's own spec role for that object type. Range is intentionally left unset: an Indicator may indicate all sorts of things (AttackPattern/AttackTechnique, Malware, Campaign, CyberActivityCluster, ThreatActor, Infrastructure, Tool, and whatever else a producer's pattern targets), and STIX does not schema-constrain the target_ref type for a given relationship_type. A single Indicator may indicate multiple targets."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#installationOf
 :installationOf rdf:type owl:ObjectProperty ;
-                rdfs:domain :ProductInstallation ;
                 rdfs:range :VersionedProduct ;
-                <http://www.w3.org/2004/02/skos/core#definition> "Relates a specific installation instance to the versioned product it instantiates."@en ;
-                <http://www.w3.org/2004/02/skos/core#prefLabel> "installationOf"@en .
+                <http://www.w3.org/2004/02/skos/core#definition> "Relates a component context to the versioned product it references or instantiates."@en ;
+                <http://www.w3.org/2004/02/skos/core#prefLabel> "installation of" ;
+                <http://www.w3.org/2004/02/skos/core#scopeNote> "Used by both stonework:BomEntry (declarative — a component listed in an SBOM) and stonework:ProductInstallation (observational — a verified deployment on a specific system). Domain is intentionally left unset to avoid restricting future component-context subclasses; intended subjects are subclasses of stonework:ComponentContext."@en .
+
+
+###  https://cyberterrain.org/ns/stonework#isStepOf
+:isStepOf rdf:type owl:ObjectProperty ;
+          owl:inverseOf :hasStep ;
+          rdfs:domain :Step ;
+          rdfs:range :Behavior ;
+          <http://www.w3.org/2004/02/skos/core#definition> "Relates a Step to the Behavior it decomposes."@en ;
+          <http://www.w3.org/2004/02/skos/core#prefLabel> "isStepOf" .
 
 
 ###  https://cyberterrain.org/ns/stonework#linkedTo
@@ -478,11 +594,19 @@
 
 ###  https://cyberterrain.org/ns/stonework#mitigates
 :mitigates rdf:type owl:ObjectProperty ;
-           rdfs:domain :Countermeasure ;
-           rdfs:range :AttackPattern ,
-                      :Vulnerability ;
            <http://www.w3.org/2004/02/skos/core#definition> "Relates a Mitigation, CourseOfAction, or Control to the AttackPattern or Vulnerability it addresses. Corresponds to STIX relationship_type 'mitigates'."@en ;
-           <http://www.w3.org/2004/02/skos/core#prefLabel> "mitigates" .
+           <http://www.w3.org/2004/02/skos/core#prefLabel> "mitigates" ;
+           <http://www.w3.org/2004/02/skos/core#scopeNote> "Domain/range intentionally left unset: this property is a direct lift of the STIX 2.1 relationship_type 'mitigates' shortcut. STIX does not schema-constrain which SDO/SCO types may appear as source_ref/target_ref for a given relationship_type — that's producer convention, not enforceable structure, and a closed domain/range here would misrepresent real STIX 2.1 data and mislead reasoner-based consumers. Contrast with stonework:mitigatesAttackPattern, a purpose-built subproperty with a controlled domain/range, populated by materialize-technique-links.sparql rather than lifted directly from STIX."@en .
+
+
+###  https://cyberterrain.org/ns/stonework#mitigatesAttackPattern
+:mitigatesAttackPattern rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :mitigates ;
+                        rdfs:domain :Countermeasure ;
+                        rdfs:range :AttackPattern ;
+                        <http://www.w3.org/2004/02/skos/core#definition> "Relates a Countermeasure (e.g. a CIS Control safeguard) to the AttackPattern it mitigates, resolved from a shared technique identifier."@en ;
+                        <http://www.w3.org/2004/02/skos/core#prefLabel> "mitigatesAttackPattern" ;
+                        <http://www.w3.org/2004/02/skos/core#scopeNote> "Materialized by joining a framework's technique-identifier literal (see stonework:relatedTechniqueIdentifier, e.g. cis:mitigatesTechniqueId) against the ATT&CK technique's external reference. Framework ontologies declare their concrete property (e.g. cis:mitigatesTechnique) as rdfs:subPropertyOf this."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#observedIn
@@ -519,12 +643,57 @@
            <http://www.w3.org/2004/02/skos/core#prefLabel> "playsRole" .
 
 
+###  https://cyberterrain.org/ns/stonework#precededByStep
+:precededByStep rdf:type owl:ObjectProperty ;
+                rdfs:domain :Step ;
+                rdfs:range :Step ;
+                <http://www.w3.org/2004/02/skos/core#definition> "Relates a Step to another Step that must occur before it within the same parent Behavior."@en ;
+                <http://www.w3.org/2004/02/skos/core#prefLabel> "precededByStep" ;
+                <http://www.w3.org/2004/02/skos/core#scopeNote> "Deliberately distinct from stonework:precedes, whose domain and range are IntelligenceProduct (report-version succession) — an unrelated relationship. precededByStep expresses a graph that may contain cycles: an edge targeting an already-reached Step is a loop, not an error. Use stonework:Transition instead when the edge itself needs a guard condition or other structure attached."@en .
+
+
 ###  https://cyberterrain.org/ns/stonework#precedes
 :precedes rdf:type owl:ObjectProperty ;
           rdfs:domain :IntelligenceProduct ;
           rdfs:range :IntelligenceProduct ;
           <http://www.w3.org/2004/02/skos/core#definition> "Temporal succession of Information (v1 precedes v2 of a report)"@en ;
           <http://www.w3.org/2004/02/skos/core#prefLabel> "precedes" .
+
+
+###  https://cyberterrain.org/ns/stonework#predictedType
+:predictedType rdf:type owl:ObjectProperty ;
+               rdfs:domain :Hypothesis ;
+               rdfs:range rdfs:Class ;
+               <http://www.w3.org/2004/02/skos/core#definition> "The class a Hypothesis predicts its stonework:predictsVariable will be bound to an instance of, once executed."@en ;
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "predictedType" ;
+               <http://www.w3.org/2004/02/skos/core#scopeNote> "Mirrors stonework:guardType on Transition. Exists because a Hypothesis is typically formed before the Variable's eventual value has been constructed — at prediction time there is usually no individual yet to name via stonework:predictedValue, only an expected class of outcome (e.g. 'this attempt will produce some stonework:SecurityCondition')."@en .
+
+
+###  https://cyberterrain.org/ns/stonework#predictedValue
+:predictedValue rdf:type owl:ObjectProperty ;
+                rdfs:domain :Hypothesis ;
+                rdfs:range owl:Thing ;
+                <http://www.w3.org/2004/02/skos/core#definition> "The individual a Hypothesis predicts its stonework:predictsVariable will be bound to, once executed."@en ;
+                <http://www.w3.org/2004/02/skos/core#prefLabel> "predictedValue" ;
+                <http://www.w3.org/2004/02/skos/core#scopeNote> "Mirrors stonework:boundTo on the actual-result side; usable only when a specific pre-existing individual is predicted. See stonework:predictedType for the more common case of predicting a class of outcome rather than a specific not-yet-constructed individual, and stonework:predictedLiteral for predictions of a scalar."@en .
+
+
+###  https://cyberterrain.org/ns/stonework#predictsVariable
+:predictsVariable rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Hypothesis ;
+                  rdfs:range :Variable ;
+                  <http://www.w3.org/2004/02/skos/core#definition> "The Variable whose eventual binding a Hypothesis is a prediction about."@en ;
+                  <http://www.w3.org/2004/02/skos/core#prefLabel> "predictsVariable" ;
+                  <http://www.w3.org/2004/02/skos/core#scopeNote> "Because stonework:hasInputVariable/stonework:hasOutputVariable are declared on stonework:Behavior, and stonework:Step is itself a Behavior, a Hypothesis may predict a Variable declared at any level of a Step/Plan decomposition — a top-level Plan's overall outcome or a single Step's individual result — without a separate property per level."@en .
+
+
+###  https://cyberterrain.org/ns/stonework#produces
+:produces rdf:type owl:ObjectProperty ;
+          rdfs:domain :CyberActivity ;
+          rdfs:range :CyberEntity ;
+          <http://www.w3.org/2004/02/skos/core#definition> "Links an executing CyberActivity to a CyberEntity it constructed or generated in the course of executing."@en ;
+          <http://www.w3.org/2004/02/skos/core#prefLabel> "produces" ;
+          <http://www.w3.org/2004/02/skos/core#scopeNote> "General-purpose construction/generation link — e.g. the CyberActivity realizing a Step is what actually constructs the value a Variable ends up stonework:boundTo, or a complex output artifact (a dataset, a report) that value refers to."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#references
@@ -548,13 +717,21 @@
                 <http://www.w3.org/2004/02/skos/core#prefLabel> "registeredWith" .
 
 
+###  https://cyberterrain.org/ns/stonework#relatedAttackPattern
+:relatedAttackPattern rdf:type owl:ObjectProperty ;
+                      rdfs:range :AttackPattern ;
+                      <http://www.w3.org/2004/02/skos/core#definition> "Relates an entity to an AttackPattern representing the same underlying technique in a different framework shape, resolved from a shared technique identifier (e.g. a CAPEC entry and the MITRE ATT&CK technique it maps to, or a CWE weakness and the CAPEC pattern that exploits it)."@en ;
+                      <http://www.w3.org/2004/02/skos/core#prefLabel> "relatedAttackPattern" ;
+                      <http://www.w3.org/2004/02/skos/core#scopeNote> "Domain intentionally left unset: subjects include stonework:Weakness (CWE → CAPEC) and stonework:AttackPattern itself (CAPEC → ATT&CK). Materialized by joining a framework's technique-identifier literal (see stonework:relatedTechniqueIdentifier) against the ATT&CK technique's external reference. Framework ontologies declare their concrete property (e.g. capec:relatedAttackTechnique, cwe:relatedAttackPattern) as rdfs:subPropertyOf this."@en .
+
+
 ###  https://cyberterrain.org/ns/stonework#relatedTechnique
 :relatedTechnique rdf:type owl:ObjectProperty ;
                   rdfs:domain :CyberTechnique ;
                   rdfs:range :CyberTechnique ;
                   <http://www.w3.org/2004/02/skos/core#definition> "Relates a CyberTechnique to another related CyberTechnique via a cross-framework or cross-abstraction-level association."@en ;
                   <http://www.w3.org/2004/02/skos/core#prefLabel> "relatedTechnique" ;
-                  <http://www.w3.org/2004/02/skos/core#scopeNote> "Used for links such as CWE weakness → CAPEC technique (exploits/instantiates) and CAPEC technique → ATT&CK technique (operationalizes). Domain is CyberTechnique; framework-specific individuals populate the relationships at the framework mapping layer."@en .
+                  <http://www.w3.org/2004/02/skos/core#scopeNote> "For technique-to-technique associations where both ends are already stonework:CyberTechnique individuals. Where the association instead crosses AttackPattern shapes (e.g. CWE weakness → CAPEC pattern, CAPEC pattern → ATT&CK technique), use stonework:relatedAttackPattern, whose domain is not restricted to CyberTechnique."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#relatedTo
@@ -624,15 +801,9 @@
 
 ###  https://cyberterrain.org/ns/stonework#targets
 :targets rdf:type owl:ObjectProperty ;
-         rdfs:domain :Campaign ,
-                     :MalwareSample ,
-                     :ThreatActor ;
-         rdfs:range :Agent ,
-                    :Location ,
-                    :Sector ,
-                    :Vulnerability ;
          <http://www.w3.org/2004/02/skos/core#definition> "Shortcut triple: source targets the target Identity, Vulnerability, or Location. Corresponds to STIX relationship_type 'targets'." ;
-         <http://www.w3.org/2004/02/skos/core#prefLabel> "targets" .
+         <http://www.w3.org/2004/02/skos/core#prefLabel> "targets" ;
+         <http://www.w3.org/2004/02/skos/core#scopeNote> "Domain/range intentionally left unset: this property is a direct lift of the STIX 2.1 relationship_type 'targets' shortcut. STIX does not schema-constrain which SDO/SCO types may appear as source_ref/target_ref for a given relationship_type — that's producer convention, not enforceable structure, and a closed domain/range here would misrepresent real STIX 2.1 data and mislead reasoner-based consumers."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#techniqueOf
@@ -647,6 +818,15 @@
              <http://www.w3.org/2004/02/skos/core#scopeNote> "This is the inverse of hasTechnique. A single Technique may support multiple Tactics (e.g. 'Phishing' supports both Initial Access and Credential Access)."@en .
 
 
+###  https://cyberterrain.org/ns/stonework#toStep
+:toStep rdf:type owl:ObjectProperty ;
+        rdfs:domain :Transition ;
+        rdfs:range :Step ;
+        <http://www.w3.org/2004/02/skos/core#definition> "The Step a Transition enters."@en ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel> "toStep" ;
+        <http://www.w3.org/2004/02/skos/core#scopeNote> "A Transition whose toStep was already reached earlier in the same Behavior's Step graph expresses a loop back-edge; a self-loop (toStep equal to fromStep) is the degenerate case."@en .
+
+
 ###  https://cyberterrain.org/ns/stonework#urlOf
 :urlOf rdf:type owl:ObjectProperty ;
        rdfs:domain :URI ;
@@ -655,13 +835,9 @@
 
 ###  https://cyberterrain.org/ns/stonework#uses
 :uses rdf:type owl:ObjectProperty ;
-      rdfs:domain :Campaign ,
-                  :MalwareSample ,
-                  :ThreatActor ;
-      rdfs:range :AttackTechnique ;
-      <http://www.w3.org/2004/02/skos/core#definition> "Relates a threat actor group or campaign to an offensive technique they are known to employ." ;
+      <http://www.w3.org/2004/02/skos/core#definition> "Relates a threat actor group, campaign, malware, or tool to an offensive technique, malware, or tool it is known to employ." ;
       <http://www.w3.org/2004/02/skos/core#prefLabel> "uses" ;
-      <http://www.w3.org/2004/02/skos/core#scopeNote> "Sub-property stones:uses carries the shortcut triples emitted by the STIX 2.1 transform for relationship_type 'uses'." .
+      <http://www.w3.org/2004/02/skos/core#scopeNote> "Domain/range intentionally left unset: this property is a direct lift of the STIX 2.1 relationship_type 'uses' shortcut (sub-property stones:uses carries the shortcut triples emitted by the STIX 2.1 transform). STIX does not schema-constrain which SDO/SCO types may appear as source_ref/target_ref for a given relationship_type — that's producer convention, not enforceable structure. In the MITRE ATT&CK bundle alone, observed 'uses' sources include Campaign, IntrusionSet, Malware, and Tool, and observed targets include AttackTechnique, Malware, and Tool — a closed domain/range would misrepresent this real data and mislead reasoner-based consumers. Query-time discrimination (e.g. selecting only IntrusionSet users of a technique) should filter on the asserted stones:stixType literal or a specific rdf:type, not assume it from this property alone."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#usesRule
@@ -714,6 +890,32 @@
 #################################################################
 #    Data properties
 #################################################################
+
+###  https://cyberterrain.org/ns/stonework#bomFormat
+:bomFormat rdf:type owl:DatatypeProperty ;
+           rdfs:range xsd:string ;
+           <http://www.w3.org/2004/02/skos/core#definition> "The exchange format and version in which a Bill of Materials was originally serialized (e.g. 'CycloneDX 1.6', 'SPDX 2.3')." ;
+           <http://www.w3.org/2004/02/skos/core#prefLabel> "BOM format" ;
+           <http://www.w3.org/2004/02/skos/core#scopeNote> "Domain intentionally left unset. Serves as provenance metadata on stonework:SoftwareBillOfMaterials instances, distinguishing the source format from the STONEWORK representation." .
+
+
+###  https://cyberterrain.org/ns/stonework#boundToLiteral
+:boundToLiteral rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Variable ;
+                rdfs:range rdfs:Literal ;
+                <http://www.w3.org/2004/02/skos/core#definition> "Binds a Variable, at execution time or at plan instantiation, to a scalar result value such as a boolean, count, or numeric score."@en ;
+                <http://www.w3.org/2004/02/skos/core#prefLabel> "boundToLiteral" ;
+                <http://www.w3.org/2004/02/skos/core#scopeNote> "Tested by stonework:guardLiteralValue and stonework:guardOperator on a Transition. When the guard uses an ordering operator (LessThan, GreaterThanOrEqual, etc.), this value MUST carry a numeric datatype (xsd:decimal, xsd:double, or xsd:integer) — untyped or string literals do not compare numerically under SPARQL."@en .
+
+
+###  https://cyberterrain.org/ns/stonework#confidence
+:confidence rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Hypothesis ;
+            rdfs:range xsd:integer ;
+            <http://www.w3.org/2004/02/skos/core#definition> "A numeric estimate, from 0 to 100, of the degree of belief that a Hypothesis's prediction will be borne out."@en ;
+            <http://www.w3.org/2004/02/skos/core#prefLabel> "confidence" ;
+            <http://www.w3.org/2004/02/skos/core#scopeNote> "Matches the 0-100 scale of the STIX 2.1 confidence property, for consistency with STIX round-tripping."@en .
+
 
 ###  https://cyberterrain.org/ns/stonework#cvssBaseScore
 :cvssBaseScore rdf:type owl:DatatypeProperty ,
@@ -773,6 +975,77 @@
              <http://www.w3.org/2004/02/skos/core#scopeNote> "Corresponds to cveMetadata.dateUpdated in CVE JSON 5.x. cve:dateUpdated is declared owl:equivalentProperty of this property."@en .
 
 
+###  https://cyberterrain.org/ns/stonework#endedAtTime
+:endedAtTime rdf:type owl:DatatypeProperty ,
+                      owl:FunctionalProperty ;
+             rdfs:domain :CyberActivity ;
+             rdfs:range xsd:dateTime ;
+             rdfs:seeAlso <http://www.w3.org/ns/prov#endedAtTime> ;
+             <http://www.w3.org/2004/02/skos/core#definition> "The date and time at which a CyberActivity ended."@en ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "endedAtTime" .
+
+
+###  https://cyberterrain.org/ns/stonework#guardLiteralValue
+:guardLiteralValue rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Transition ;
+                   rdfs:range rdfs:Literal ;
+                   <http://www.w3.org/2004/02/skos/core#definition> "The literal value that guardVariable's bound value is compared against."@en ;
+                   <http://www.w3.org/2004/02/skos/core#prefLabel> "guardLiteralValue" ;
+                   <http://www.w3.org/2004/02/skos/core#scopeNote> "Compared using the operator given by stonework:guardOperator; if guardOperator is omitted, comparison defaults to Equals. Must share a compatible, numerically-typed datatype with the guardVariable's stonework:boundToLiteral value when an ordering operator is used."@en .
+
+
+###  https://cyberterrain.org/ns/stonework#predictedLiteral
+:predictedLiteral rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Hypothesis ;
+                  rdfs:range rdfs:Literal ;
+                  <http://www.w3.org/2004/02/skos/core#definition> "The scalar value a Hypothesis predicts its stonework:predictsVariable will be bound to, once executed."@en ;
+                  <http://www.w3.org/2004/02/skos/core#prefLabel> "predictedLiteral" ;
+                  <http://www.w3.org/2004/02/skos/core#scopeNote> "Mirrors stonework:boundToLiteral on the actual-result side; see stonework:predictedValue for predictions of an individual rather than a scalar."@en .
+
+
+###  https://cyberterrain.org/ns/stonework#relatedTechniqueIdentifier
+:relatedTechniqueIdentifier rdf:type owl:DatatypeProperty ;
+                            rdfs:range xsd:string ;
+                            <http://www.w3.org/2004/02/skos/core#definition> "A framework-native technique identifier string (e.g. a MITRE ATT&CK technique ID such as 'T1003.001') carried on an entity from another framework, both for provenance and as the join key used to materialize the corresponding stonework:relatedAttackPattern or stonework:mitigatesAttackPattern edge."@en ;
+                            <http://www.w3.org/2004/02/skos/core#prefLabel> "relatedTechniqueIdentifier" ;
+                            <http://www.w3.org/2004/02/skos/core#scopeNote> "Domain intentionally left unset: populated on entities as different as capec:AttackPattern and cis:Control. Framework-specific subproperties (e.g. capec:attackTechniqueId, cis:mitigatesTechniqueId) carry the concrete literal. Retained after materialization — it records the source string as ingested, distinct from the resolved object-property edge."@en .
+
+
+###  https://cyberterrain.org/ns/stonework#serialNumber
+:serialNumber rdf:type owl:DatatypeProperty ;
+              rdfs:range xsd:string ;
+              <http://www.w3.org/2004/02/skos/core#definition> "A globally unique identifier for a BOM document, typically expressed as a URN UUID (e.g. urn:uuid:...) per the CycloneDX specification or as a document namespace per SPDX." ;
+              <http://www.w3.org/2004/02/skos/core#prefLabel> "serial number" ;
+              <http://www.w3.org/2004/02/skos/core#scopeNote> "Domain intentionally left unset. Primary subject is stonework:SoftwareBillOfMaterials. Use dcterms:created for the BOM timestamp."@en .
+
+
+###  https://cyberterrain.org/ns/stonework#startedAtTime
+:startedAtTime rdf:type owl:DatatypeProperty ,
+                        owl:FunctionalProperty ;
+               rdfs:domain :CyberActivity ;
+               rdfs:range xsd:dateTime ;
+               rdfs:seeAlso <http://www.w3.org/ns/prov#startedAtTime> ;
+               <http://www.w3.org/2004/02/skos/core#definition> "The date and time at which a CyberActivity began."@en ;
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "startedAtTime" .
+
+
+###  https://cyberterrain.org/ns/stonework#stepOrder
+:stepOrder rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Step ;
+           rdfs:range xsd:integer ;
+           <http://www.w3.org/2004/02/skos/core#definition> "An optional ordinal position for a Step within a strictly linear Behavior, where the full precededByStep graph is unnecessary."@en ;
+           <http://www.w3.org/2004/02/skos/core#prefLabel> "stepOrder" ;
+           <http://www.w3.org/2004/02/skos/core#scopeNote> "Most CTI procedure write-ups (a numbered list of adversary actions) are linear. stepOrder is a low-overhead alternative to precededByStep for that common case; the two are not mutually exclusive."@en .
+
+
+###  https://cyberterrain.org/ns/stonework#variableName
+:variableName rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Variable ;
+              rdfs:range xsd:string ;
+              <http://www.w3.org/2004/02/skos/core#definition> "A short name identifying a Variable within the scope of its declaring Behavior, allowing it to be referenced consistently across Steps and Transitions."@en ;
+              <http://www.w3.org/2004/02/skos/core#prefLabel> "variableName" .
+
+
 ###  https://cyberterrain.org/ns/stonework#vulnerabilityId
 :vulnerabilityId rdf:type owl:DatatypeProperty ,
                           owl:FunctionalProperty ;
@@ -786,6 +1059,10 @@
 #################################################################
 #    Classes
 #################################################################
+
+###  http://www.w3.org/2000/01/rdf-schema#Class
+rdfs:Class rdf:type owl:Class .
+
 
 ###  https://cyberterrain.org/ns/stonework#AIAgent
 :AIAgent rdf:type owl:Class ;
@@ -846,15 +1123,17 @@
 :AttackPattern rdf:type owl:Class ;
                rdfs:subClassOf :Behavior ;
                <http://www.w3.org/2004/02/skos/core#definition> "A type of Tactics, Techniques, and Procedures (TTP) that describes ways that adversaries attempt to compromise targets. Often maps to MITRE ATT&CK techniques."@en ;
-               <http://www.w3.org/2004/02/skos/core#prefLabel> "Attack Pattern"@en .
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "Attack Pattern"@en ;
+               <http://www.w3.org/2004/02/skos/core#scopeNote> "The abstract concept spanning framework-specific shapes that are not structurally identical: CAPEC's shape (capec:AttackPattern) is a taxonomy entry with severity/likelihood/prerequisite fields; MITRE ATT&CK's shape (stonework:AttackTechnique) is an operationalized technique with sub-techniques, procedures, mitigations, and detections. Both are AttackPatterns; stonework:relatedAttackPattern links instances across shapes that describe the same underlying technique."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#AttackTechnique
 :AttackTechnique rdf:type owl:Class ;
-                 rdfs:subClassOf :CyberTechnique ;
+                 rdfs:subClassOf :AttackPattern ,
+                                 :CyberTechnique ;
                  <http://www.w3.org/2004/02/skos/core#definition> "A prescribed offensive method used by an adversary to achieve a specific tactical objective within a target environment."@en ;
                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Attack Technique"@en ;
-                 <http://www.w3.org/2004/02/skos/core#scopeNote> "Aligns with MITRE ATT&CK techniques and D3FEND OffensiveTechnique. Not a subclass of stones:AttackPattern — attack patterns (e.g. CAPEC) are abstract descriptions of attack classes, whereas AttackTechnique is an operationalized plan for execution. Framework-specific subclasses (e.g. attack:Technique) provide the concrete individuals."@en .
+                 <http://www.w3.org/2004/02/skos/core#scopeNote> "Aligns with MITRE ATT&CK techniques and D3FEND OffensiveTechnique. The MITRE ATT&CK-shaped realization of stonework:AttackPattern — operationalized for execution, as distinct from CAPEC's more abstract taxonomy-entry shape (capec:AttackPattern, also a stonework:AttackPattern). Framework-specific subclasses (e.g. attack:Technique) provide the concrete individuals. A specific, concrete realization of this technique is modeled as a stonework:Procedure, linked back via stonework:implementedBy."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#AutonomousSystem
@@ -870,6 +1149,15 @@
           <http://www.w3.org/2004/02/skos/core#definition> "A pattern of actions or methods characteristic of an entity, particularly adversaries."@en ;
           <http://www.w3.org/2004/02/skos/core#prefLabel> "Behavior" ;
           <http://www.w3.org/2004/02/skos/core#scopeNote> "Groups TTP-related classes: Tactic, Technique (and subclasses), and Procedure. In BFO terms, Behaviors are GenericallyDependentContinuants — specifications or patterns describing how actions are carried out. The execution of a Technique is a CyberActivity; the Technique itself is a Behavior. Aligns with IAO PlanSpecification."@en .
+
+
+###  https://cyberterrain.org/ns/stonework#BomEntry
+:BomEntry rdf:type owl:Class ;
+          rdfs:subClassOf :ComponentContext ;
+          rdfs:comment "BomEntry is the STONEWORK representation of a CycloneDX component element or SPDX package entry. It links a VersionedProduct into the context of a particular SBOM document via stonework:installationOf, and may carry component-specific metadata (PURL, license, hash, component type) that does not belong on the VersionedProduct itself."@en ;
+          <http://www.w3.org/2004/02/skos/core#definition> "A single component entry within a Software Bill of Materials, asserting that a specific VersionedProduct is included in the artifact or system described by the SBOM."@en ;
+          <http://www.w3.org/2004/02/skos/core#prefLabel> "BOM Entry" ;
+          <http://www.w3.org/2004/02/skos/core#scopeNote> "An SBOM import creates one BomEntry per declared component. The BomEntry IRI is scoped to the SBOM (e.g. <sbom-iri/entry/<component-ref>>). Multiple BomEntry instances across different SBOMs may reference the same VersionedProduct via stonework:installationOf."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#Campaign
@@ -902,6 +1190,20 @@
       <http://www.w3.org/2004/02/skos/core#prefLabel> "City" .
 
 
+###  https://cyberterrain.org/ns/stonework#ComparisonOperator
+:ComparisonOperator rdf:type owl:Class ;
+                    <http://www.w3.org/2004/02/skos/core#definition> "A controlled vocabulary of operators used to compare a Variable's bound value against a threshold in a Transition guard."@en ;
+                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Comparison Operator" ;
+                    <http://www.w3.org/2004/02/skos/core#scopeNote> "Individuals are stonework:Equals, stonework:NotEquals, stonework:LessThan, stonework:LessThanOrEqual, stonework:GreaterThan, and stonework:GreaterThanOrEqual. Referenced by stonework:guardOperator; omitting an operator on a guard defaults to Equals semantics."@en .
+
+
+###  https://cyberterrain.org/ns/stonework#ComponentContext
+:ComponentContext rdf:type owl:Class ;
+                  <http://www.w3.org/2004/02/skos/core#definition> "An abstract class representing a context-specific reference to a VersionedProduct: the same product version appears differently depending on whether it is declared in a bill of materials or observed as a running installation on a specific system."@en ;
+                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Component Context" ;
+                  <http://www.w3.org/2004/02/skos/core#scopeNote> "Subclassed by stonework:BomEntry (declarative — listed in an SBOM document) and stonework:ProductInstallation (observational — verified deployment via SWID tag or scan). Unifies these two evidence bases under a single superclass so that stonework:installationOf can span both without domain restrictions forcing incorrect inferences."@en .
+
+
 ###  https://cyberterrain.org/ns/stonework#Control
 :Control rdf:type owl:Class ;
          rdfs:subClassOf :Countermeasure ;
@@ -909,6 +1211,14 @@
          <http://www.w3.org/2004/02/skos/core#definition> "A prescribed security or privacy safeguard that specifies an action, capability, or condition intended to reduce risk, enforce policy, or achieve a defined protection objective within an information system or organization." ;
          <http://www.w3.org/2004/02/skos/core#prefLabel> "Control" ;
          <http://www.w3.org/2004/02/skos/core#scopeNote> "This class provides a semantic representation of security and privacy controls from frameworks such as NIST SP 800‑53 and the CIS Controls. It supports mapping to external control identifiers and families without embedding copyrighted control text." .
+
+
+###  https://cyberterrain.org/ns/stonework#ControlPlan
+:ControlPlan rdf:type owl:Class ;
+             rdfs:subClassOf :Behavior ;
+             <http://www.w3.org/2004/02/skos/core#definition> "A concrete, Step-decomposed sequence of actions that implements a Control in a specific operational context."@en ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "Control Plan" ;
+             <http://www.w3.org/2004/02/skos/core#scopeNote> "Mirrors the Technique/Procedure split on the defensive side: stonework:Control is the abstract prescribed safeguard (a catalog entry, e.g. NIST AC-2 or a CIS control); ControlPlan is its concrete implementation as a Step sequence, linked back via stonework:implements. A ControlPlan is typically invoked from within a Playbook or DetectionPlan by a Step that stonework:implements it."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#Countermeasure
@@ -993,6 +1303,14 @@
                  <http://www.w3.org/2004/02/skos/core#definition> "A high-level defensive objective that groups related countermeasure techniques by the protection goal they serve." ;
                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Defensive Tactic" ;
                  <http://www.w3.org/2004/02/skos/core#scopeNote> "Aligns with MITRE D3FEND defensive tactics (e.g. Harden, Detect, Isolate, Evict, Restore). Individuals are typically drawn from D3FEND or similar defensive frameworks via the framework mapping layer."@en .
+
+
+###  https://cyberterrain.org/ns/stonework#DetectionPlan
+:DetectionPlan rdf:type owl:Class ;
+               rdfs:subClassOf :InvestigationPlan ;
+               <http://www.w3.org/2004/02/skos/core#definition> "A Step-decomposed sequence of actions for determining whether observed activity constitutes a security-relevant violation, as distinct from the offensive or defensive action plans that respond to one."@en ;
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "Detection Plan" ;
+               <http://www.w3.org/2004/02/skos/core#scopeNote> "A specialization of stonework:InvestigationPlan narrowly scoped to violation triage: orchestrating DetectionRule/Signature evaluation and analytic logic to identify whether a violation occurred, typically triggering a defensive Playbook or ControlPlan via a guarded Transition once one is confirmed. Where a Playbook is an action plan carried out by an interested party — offensive (an adversary's operational playbook) or defensive (an incident responder's playbook) — a DetectionPlan plays a neutral, evaluative role, watching for the kind of changes an InvestigationPlan more broadly investigates."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#DetectionRule
@@ -1101,6 +1419,14 @@
              <http://www.w3.org/2004/02/skos/core#scopeNote> "Often used in HUMINT or OSINT contexts. Reliability scoring is commonly applied to human sources."@en .
 
 
+###  https://cyberterrain.org/ns/stonework#Hypothesis
+:Hypothesis rdf:type owl:Class ;
+            rdfs:subClassOf :IntelligenceProduct ;
+            <http://www.w3.org/2004/02/skos/core#definition> "A structured, falsifiable prediction about the value a Variable will resolve to once the Behavior or Step declaring that Variable executes."@en ;
+            <http://www.w3.org/2004/02/skos/core#prefLabel> "Hypothesis" ;
+            <http://www.w3.org/2004/02/skos/core#scopeNote> "Formalizes the anticipated side of the Variable lifecycle described in stonework:Variable's scopeNote: a Hypothesis names, in advance, the value an output Variable is predicted to be bound to. Linked to the Variable it predicts via stonework:predictsVariable, and to the prediction itself via stonework:predictedType (a class, the common case — mirrors stonework:guardType), stonework:predictedValue (a specific individual), or stonework:predictedLiteral (a scalar) — mirroring stonework:boundTo/stonework:boundToLiteral on the actual-result side. A Transition's guard properties, which test a Variable's actual bound value, implicitly test agreement with whichever Hypothesis predicted that Variable — confirming it if they match, refuting it otherwise. May attach at any level of a Step/Plan decomposition, since stonework:Step is itself a stonework:Behavior."@en .
+
+
 ###  https://cyberterrain.org/ns/stonework#IPAddress
 :IPAddress rdf:type owl:Class ;
            rdfs:subClassOf :Infrastructure ;
@@ -1169,6 +1495,15 @@
                <http://www.w3.org/2004/02/skos/core#definition> "A systematic Process of inquiry, evidence collection, analysis, hypothesis testing, and conclusion to understand, attribute, or resolve security incidents, threats, anomalies, or other matters of interest." ;
                <http://www.w3.org/2004/02/skos/core#prefLabel> "Investigation" ;
                <http://www.w3.org/2004/02/skos/core#scopeNote> "Includes digital forensics, threat hunting, root cause analysis, and incident investigations. Links to Sightings, Evidence (via categorizedBy), Sensors, and produces Findings or updated Assessments."@en .
+
+
+###  https://cyberterrain.org/ns/stonework#InvestigationPlan
+:InvestigationPlan rdf:type owl:Class ;
+                   rdfs:subClassOf :Behavior ;
+                   rdfs:comment "An InvestigationPlan is a plan specification; executing one produces an instance of stonework:Investigation."@en ;
+                   <http://www.w3.org/2004/02/skos/core#definition> "A Step-decomposed sequence of actions for systematically examining a cyber entity, artifact, or event to determine its nature, extent, or significance."@en ;
+                   <http://www.w3.org/2004/02/skos/core#prefLabel> "Investigation Plan" ;
+                   <http://www.w3.org/2004/02/skos/core#scopeNote> "The general assessment-plan counterpart to stonework:Playbook on the production side: where a Playbook's execution changes state in the world, an InvestigationPlan's execution (a stonework:Investigation) produces judgment about something that already exists or happened — typically a stonework:Analysis or stonework:Assessment. stonework:DetectionPlan is a specialized subclass, narrowly scoped to determining whether observed activity constitutes a security-relevant violation; broader analytical work (forensic analysis, malware analysis, vulnerability assessment) is modeled directly as InvestigationPlan."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#Likelihood
@@ -1311,6 +1646,14 @@
            <http://www.w3.org/2004/02/skos/core#scopeNote> "Operations are broader in scope than Campaigns — a single Operation may encompass multiple Campaigns executed over an extended period. Applies to both offensive operations (e.g. state-sponsored cyber operations) and defensive operations (e.g. incident response operations, threat hunting operations)."@en .
 
 
+###  https://cyberterrain.org/ns/stonework#OperationPlan
+:OperationPlan rdf:type owl:Class ;
+               rdfs:subClassOf :Playbook ;
+               <http://www.w3.org/2004/02/skos/core#definition> "A Playbook specifically representing an adversary's operational plan — the offensive counterpart within the Playbook hierarchy."@en ;
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "Operation Plan" ;
+               <http://www.w3.org/2004/02/skos/core#scopeNote> "Named to avoid colliding with the already-established stonework:AttackPattern and stonework:AttackTechnique, and to align with stonework:Operation, whose definition ('a coordinated set of activities... unified command, intent, or resourcing') describes the executed counterpart of an OperationPlan. Generic stonework:Playbook remains available for the undifferentiated or defensive case."@en .
+
+
 ###  https://cyberterrain.org/ns/stonework#Opinion
 :Opinion rdf:type owl:Class ;
          rdfs:subClassOf :IntelligenceProduct ;
@@ -1346,12 +1689,12 @@
 
 ###  https://cyberterrain.org/ns/stonework#Playbook
 :Playbook rdf:type owl:Class ;
-          rdfs:subClassOf :Process ;
-          rdfs:comment "Playbooks are often versioned, tested, and executed as instances of Process."@en ;
+          rdfs:subClassOf :Behavior ;
+          rdfs:comment "A Playbook is a plan specification; executing one produces instances of stonework:Process. Playbooks are often versioned and tested before use."@en ;
           rdfs:seeAlso <http://www.w3.org/ns/prov#Plan> ;
-          <http://www.w3.org/2004/02/skos/core#definition> "A documented, structured Process that defines a sequenced set of steps, decisions, and actions to be executed in response to a specific type of event, incident, or operational need."@en ;
+          <http://www.w3.org/2004/02/skos/core#definition> "A documented, structured Behavior that defines a sequenced set of steps, decisions, and actions to be executed in response to a specific type of event, incident, or operational need."@en ;
           <http://www.w3.org/2004/02/skos/core#prefLabel> "Playbook" ;
-          <http://www.w3.org/2004/02/skos/core#scopeNote> "A Playbook provides reusable, often automated or semi-automated guidance for security operations, incident response, threat hunting, recovery, or routine tasks. It typically includes triggers, decision points, assigned roles (Agents), inputs/outputs, and success criteria.  Playbooks bridge planning and execution."@en .
+          <http://www.w3.org/2004/02/skos/core#scopeNote> "A Playbook may be offensive (an adversary's operational playbook — see stonework:OperationPlan) or defensive (an incident response, threat hunting, or recovery playbook) — both are action plans carried out by an interested party, as distinct from stonework:DetectionPlan, which plays a neutral, evaluative role. A Playbook decomposes into Steps via stonework:hasStep; its actual execution is recorded as a stonework:Process."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#Procedure
@@ -1360,7 +1703,7 @@
            rdfs:comment "Procedures are instances or patterns of execution that realize a technique. They may include command lines, API calls, malware behaviors, or operator playbook steps. Procedures are distinct from techniques, which describe generalized methods." ;
            <http://www.w3.org/2004/02/skos/core#definition> "A concrete, observable sequence of actions, commands, or behaviors that implements a technique in a specific operational context." ;
            <http://www.w3.org/2004/02/skos/core#prefLabel> "Procedure" ;
-           <http://www.w3.org/2004/02/skos/core#scopeNote> "Procedures describe the actual steps an adversary takes, such as specific commands, scripts, tools, or configurations. They represent the most granular level of adversary behavior." .
+           <http://www.w3.org/2004/02/skos/core#scopeNote> "Procedures describe the actual steps an adversary takes, such as specific commands, scripts, tools, or configurations. They represent the most granular level of adversary behavior. Links back to the AttackTechnique it operationalizes via stonework:implements (Procedure implements AttackTechnique); may itself decompose into stonework:Step individuals via stonework:hasStep." .
 
 
 ###  https://cyberterrain.org/ns/stonework#Process
@@ -1370,7 +1713,7 @@
                       <https://www.opmw.org/model/p-plan/> ;
          <http://www.w3.org/2004/02/skos/core#definition> "An identifiable activity or sequence of activities performed over time by one or more agents to achieve an operational, security, or business objective. It transforms inputs (artifacts, data, configurations) into outputs and may be governed by plans, controls, or policies." ;
          <http://www.w3.org/2004/02/skos/core#prefLabel> "Process"@en ;
-         <http://www.w3.org/2004/02/skos/core#scopeNote> "This class operates at the enterprise/operational level and is distinct from low-level runtime Process objects (e.g., STIX SCO Process). It is intended for modeling Controls, Playbooks, Mitigations, Threat Scenarios, and other repeatable or planned workflows."@en .
+         <http://www.w3.org/2004/02/skos/core#scopeNote> "This class operates at the enterprise/operational level and is distinct from low-level runtime Process objects (e.g., STIX SCO Process). It is the execution-side counterpart to Behavior-side plan specifications such as Playbook, ControlPlan, and ThreatScenario — e.g. executing a Playbook produces a Process instance."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#Product
@@ -1385,9 +1728,10 @@
 
 ###  https://cyberterrain.org/ns/stonework#ProductInstallation
 :ProductInstallation rdf:type owl:Class ;
+                     rdfs:subClassOf :ComponentContext ;
                      rdfs:comment "Represents the most granular product identity level: not what software exists, but where and how it is installed. Multiple ProductInstallation individuals may reference the same VersionedProduct."@en ;
                      <http://www.w3.org/2004/02/skos/core#definition> "A specific installed instance of a VersionedProduct on a particular system or environment, as identified by a SWID tag or equivalent installation record."@en ;
-                     <http://www.w3.org/2004/02/skos/core#prefLabel> "ProductInstallation" ;
+                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Product Installation" ;
                      <http://www.w3.org/2004/02/skos/core#scopeNote> "stonework:ProductInstallation is the intended target for SWID tag data. The installing system, path, licensee, and configuration details belong here rather than on stonework:VersionedProduct."@en .
 
 
@@ -1460,10 +1804,6 @@
                 <http://www.w3.org/2004/02/skos/core#scopeNote> "Represents low-level OS process objects observed during execution — distinct from stonework:Process (enterprise-level workflows). Mutex objects created by a process are linked as stonework:Mutex individuals. Corresponds to STIX 2.1 Process SCO."@en .
 
 
-###  https://cyberterrain.org/ns/stonework#Sector
-:Sector rdf:type owl:Class .
-
-
 ###  https://cyberterrain.org/ns/stonework#SecurityCondition
 :SecurityCondition rdf:type owl:Class ;
                    rdfs:subClassOf :CyberEntity ;
@@ -1507,10 +1847,19 @@
 
 ###  https://cyberterrain.org/ns/stonework#SoftwareBillOfMaterials
 :SoftwareBillOfMaterials rdf:type owl:Class ;
-                         rdfs:comment "An SBOM asserts that specific VersionedProduct instances are components of a containing artifact. The containing artifact may itself be a VersionedProduct related to this SBOM via stonework:hasBomEntry."@en ;
+                         rdfs:comment "An SBOM asserts that specific VersionedProduct instances are components of a containing artifact. Component entries are represented as stonework:BomEntry instances linked via stonework:hasBomEntry."@en ;
                          <http://www.w3.org/2004/02/skos/core#definition> "A formal, machine-readable inventory of VersionedProduct components that constitute a software artifact or system, expressed in a standard format such as CycloneDX or SPDX."@en ;
-                         <http://www.w3.org/2004/02/skos/core#prefLabel> "SoftwareBillOfMaterials" ;
-                         <http://www.w3.org/2004/02/skos/core#scopeNote> "Instances of stonework:SoftwareBillOfMaterials correspond to SBOM documents. Component membership is expressed via stonework:hasBomEntry. Format metadata (CycloneDX, SPDX, etc.) SHOULD be carried as datatype properties."@en .
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Software Bill of Materials" ;
+                         <http://www.w3.org/2004/02/skos/core#scopeNote> "SoftwareBillOfMaterials is a native STONEWORK class — not a subclass of any STIX domain object, as STIX 2.1 has no SBOM concept. Instances correspond to SBOM documents; format provenance (CycloneDX 1.6, SPDX 2.3, etc.) is expressed via stonework:bomFormat."@en .
+
+
+###  https://cyberterrain.org/ns/stonework#Step
+:Step rdf:type owl:Class ;
+      rdfs:subClassOf :Behavior ;
+      rdfs:seeAlso <http://purl.org/net/p-plan#Step> ;
+      <http://www.w3.org/2004/02/skos/core#definition> "A single, individually addressable unit of action within a Behavior that models a multi-step process, such as a Procedure, Playbook, ThreatScenario, or Control."@en ;
+      <http://www.w3.org/2004/02/skos/core#prefLabel> "Step" ;
+      <http://www.w3.org/2004/02/skos/core#scopeNote> "A Step is itself a Behavior — a plan specification for a sub-action, not its execution — consistent with p-plan:Step subclassing prov:Plan rather than prov:Activity. Because Step is a Behavior, a Step MAY itself decompose into further Steps via stonework:hasStep, supporting nested sub-procedures (e.g. a Kill Chain phase decomposing into candidate technique attempts) without a separate composite class. The activity that executes a Step is a stonework:CyberActivity; it links back to the Step it realizes via stonework:correspondsToStep."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#Tactic
@@ -1582,6 +1931,13 @@
       <http://www.w3.org/2004/02/skos/core#scopeNote> "Includes commercial penetration testing tools, remote administration utilities, and living-off-the-land binaries (LOLBins) repurposed by adversaries, as well as defender-operated tools such as scanners, EDR agents, and forensic utilities. Corresponds to STIX 2.1 Tool SDO."@en .
 
 
+###  https://cyberterrain.org/ns/stonework#Transition
+:Transition rdf:type owl:Class ;
+            <http://www.w3.org/2004/02/skos/core#definition> "A directed edge between two Steps within the same parent Behavior's Step graph, representing progression from one Step to the next."@en ;
+            <http://www.w3.org/2004/02/skos/core#prefLabel> "Transition" ;
+            <http://www.w3.org/2004/02/skos/core#scopeNote> "Unconditioned, a Transition expresses plain sequence — an alternative to stonework:precededByStep for the same purpose, used when a Step has more than one possible successor and the edges themselves need to be individually referenceable. When a Transition's stonework:toStep targets a Step already reached earlier in the same graph, it expresses a loop back-edge; looping is not a separate construct. Guard/condition properties for conditional branching (testing a bound Variable's value) are not yet defined — this class currently captures only the structural edge via stonework:fromStep and stonework:toStep."@en .
+
+
 ###  https://cyberterrain.org/ns/stonework#URI
 :URI rdf:type owl:Class ;
      rdfs:subClassOf :Identifier ;
@@ -1609,6 +1965,15 @@
            rdfs:subClassOf :DigitalIdentity ;
            <http://www.w3.org/2004/02/skos/core#definition> "Represents a user group on a system or service, including local OS groups, cloud groups, and social media groups."@en ;
            <http://www.w3.org/2004/02/skos/core#prefLabel> "User Group" .
+
+
+###  https://cyberterrain.org/ns/stonework#Variable
+:Variable rdf:type owl:Class ;
+          rdfs:subClassOf :CyberEntity ;
+          rdfs:seeAlso <http://purl.org/net/p-plan#Variable> ;
+          <http://www.w3.org/2004/02/skos/core#definition> "A named placeholder for a value declared by a Behavior or Step, bound to an actual value only once the corresponding execution occurs."@en ;
+          <http://www.w3.org/2004/02/skos/core#prefLabel> "Variable" ;
+          <http://www.w3.org/2004/02/skos/core#scopeNote> "Declared via stonework:hasInputVariable or stonework:hasOutputVariable. An input Variable is typically bound before its Step executes, from an already-known fact (e.g. a Vulnerability's CVSS score); an output Variable is bound only after its Step executes, from a result the execution produced (e.g. a Technique attempt's outcome). Bound via stonework:boundTo (an individual) or stonework:boundToLiteral (a scalar). The bound value is what stonework:Transition guard properties test, and — in a future deviation-detection layer — what an actual result is compared against what the Step declared as expected."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#VersionedProduct
@@ -1704,6 +2069,14 @@
          <http://www.w3.org/2004/02/skos/core#prefLabel> "Dropper"@en .
 
 
+###  https://cyberterrain.org/ns/stonework#Equals
+:Equals rdf:type owl:NamedIndividual ,
+                 :ComparisonOperator ;
+        <http://www.w3.org/2004/02/skos/core#definition> "The guardVariable's bound value equals guardLiteralValue."@en ;
+        <http://www.w3.org/2004/02/skos/core#notation> "eq" ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel> "Equals"@en .
+
+
 ###  https://cyberterrain.org/ns/stonework#ExploitKit
 :ExploitKit rdf:type owl:NamedIndividual ,
                      :MalwareType ;
@@ -1712,12 +2085,52 @@
             <http://www.w3.org/2004/02/skos/core#prefLabel> "Exploit Kit"@en .
 
 
+###  https://cyberterrain.org/ns/stonework#GreaterThan
+:GreaterThan rdf:type owl:NamedIndividual ,
+                      :ComparisonOperator ;
+             <http://www.w3.org/2004/02/skos/core#definition> "The guardVariable's bound value is greater than guardLiteralValue."@en ;
+             <http://www.w3.org/2004/02/skos/core#notation> "gt" ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "Greater Than"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#GreaterThanOrEqual
+:GreaterThanOrEqual rdf:type owl:NamedIndividual ,
+                             :ComparisonOperator ;
+                    <http://www.w3.org/2004/02/skos/core#definition> "The guardVariable's bound value is greater than or equal to guardLiteralValue."@en ;
+                    <http://www.w3.org/2004/02/skos/core#notation> "ge" ;
+                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Greater Than Or Equal"@en .
+
+
 ###  https://cyberterrain.org/ns/stonework#Keylogger
 :Keylogger rdf:type owl:NamedIndividual ,
                     :MalwareType ;
            <http://www.w3.org/2004/02/skos/core#definition> "Malware that records keystrokes on an infected system to capture credentials, sensitive data, or communications."@en ;
            <http://www.w3.org/2004/02/skos/core#notation> "keylogger" ;
            <http://www.w3.org/2004/02/skos/core#prefLabel> "Keylogger"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#LessThan
+:LessThan rdf:type owl:NamedIndividual ,
+                   :ComparisonOperator ;
+          <http://www.w3.org/2004/02/skos/core#definition> "The guardVariable's bound value is less than guardLiteralValue."@en ;
+          <http://www.w3.org/2004/02/skos/core#notation> "lt" ;
+          <http://www.w3.org/2004/02/skos/core#prefLabel> "Less Than"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#LessThanOrEqual
+:LessThanOrEqual rdf:type owl:NamedIndividual ,
+                          :ComparisonOperator ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "The guardVariable's bound value is less than or equal to guardLiteralValue."@en ;
+                 <http://www.w3.org/2004/02/skos/core#notation> "le" ;
+                 <http://www.w3.org/2004/02/skos/core#prefLabel> "Less Than Or Equal"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#NotEquals
+:NotEquals rdf:type owl:NamedIndividual ,
+                    :ComparisonOperator ;
+           <http://www.w3.org/2004/02/skos/core#definition> "The guardVariable's bound value does not equal guardLiteralValue."@en ;
+           <http://www.w3.org/2004/02/skos/core#notation> "ne" ;
+           <http://www.w3.org/2004/02/skos/core#prefLabel> "Not Equals"@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#Ransomware
