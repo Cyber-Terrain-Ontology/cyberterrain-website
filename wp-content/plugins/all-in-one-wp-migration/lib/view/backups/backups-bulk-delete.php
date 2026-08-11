@@ -1,16 +1,5 @@
 <?php
 /**
- * Plugin Name: All-in-One WP Migration and Backup
- * Plugin URI: https://servmask.com/
- * Description: All-in-One WP Migration makes moving your entire WordPress site simple. Export or import your database, media, plugins, and themes with just a few clicks.
- * Author: ServMask
- * Author URI: https://servmask.com/
- * Version: 7.107
- * Text Domain: all-in-one-wp-migration
- * Domain Path: /languages
- * Network: True
- * License: GPLv3
- *
  * Copyright (C) 2014-2025 ServMask Inc.
  *
  * This program is free software: you can redistribute it and/or modify
@@ -39,38 +28,13 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	die( 'Kangaroos cannot jump here' );
 }
+?>
 
-// Check SSL mode
-if ( isset( $_SERVER['HTTP_X_FORWARDED_PROTO'] ) && ( $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https' ) ) {
-	$_SERVER['HTTPS'] = 'on';
-}
-
-// Plugin basename
-define( 'AI1WM_PLUGIN_BASENAME', basename( __DIR__ ) . '/' . basename( __FILE__ ) );
-
-// Plugin path
-define( 'AI1WM_PATH', __DIR__ );
-
-// Plugin URL
-define( 'AI1WM_URL', plugins_url( '', AI1WM_PLUGIN_BASENAME ) );
-
-// Plugin storage URL
-define( 'AI1WM_STORAGE_URL', plugins_url( 'storage', AI1WM_PLUGIN_BASENAME ) );
-
-// Include functions
-require_once __DIR__ . DIRECTORY_SEPARATOR . 'functions.php';
-
-// Include constants
-require_once __DIR__ . DIRECTORY_SEPARATOR . 'constants.php';
-
-// Include deprecated
-require_once __DIR__ . DIRECTORY_SEPARATOR . 'deprecated.php';
-
-// Include exceptions
-require_once __DIR__ . DIRECTORY_SEPARATOR . 'exceptions.php';
-
-// Include loader
-require_once __DIR__ . DIRECTORY_SEPARATOR . 'loader.php';
-
-// Plugin initialization
-$main_controller = new Ai1wm_Main_Controller();
+<p class="ai1wm-backup-bulk-delete-holder">
+	<a href="#" id="ai1wm-backup-bulk-delete" class="ai1wm-hide">
+		<i class="ai1wm-icon-close"></i>
+		<span class="ai1wm-backup-bulk-delete-text">
+			<?php esc_html_e( 'Delete selected', 'all-in-one-wp-migration' ); ?>
+		</span>
+	</a>
+</p>
