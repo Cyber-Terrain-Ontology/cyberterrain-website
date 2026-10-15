@@ -4,6 +4,10 @@
 // that reach this directory before mod_rewrite can intercept them.
 $accept = $_SERVER['HTTP_ACCEPT'] ?? '';
 
+// The answer depends on Accept: don't let shared caches reuse it (see ../.htaccess).
+header('Vary: Accept');
+header('Cache-Control: private, no-cache');
+
 if (
     strpos($accept, 'text/turtle') !== false ||
     strpos($accept, 'application/x-turtle') !== false ||
