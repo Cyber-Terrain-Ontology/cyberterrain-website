@@ -552,17 +552,21 @@
 }, {
   "@id" : "_:genid258",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#VersionedProduct"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#installationOf"
   } ]
 }, {
   "@id" : "_:genid259",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#falsePositiveRateScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -571,7 +575,7 @@
   "@id" : "_:genid260",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#financialAccountTypeScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#falsePositiveRateScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -580,7 +584,7 @@
   "@id" : "_:genid261",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#financialInstitutionTypeScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#financialAccountTypeScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -589,7 +593,7 @@
   "@id" : "_:genid262",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#hypothesisStatusScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#financialInstitutionTypeScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -598,7 +602,7 @@
   "@id" : "_:genid263",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#impactLevelScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#hypothesisStatusScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -607,7 +611,7 @@
   "@id" : "_:genid264",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#impactTypeScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#impactLevelScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -616,7 +620,7 @@
   "@id" : "_:genid265",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#incidentStatusScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#impactTypeScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -625,7 +629,7 @@
   "@id" : "_:genid266",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#industryScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#incidentStatusScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -634,7 +638,7 @@
   "@id" : "_:genid267",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#infrastructureTypeScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#industryScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -643,7 +647,7 @@
   "@id" : "_:genid268",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#killChainPhaseScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#infrastructureTypeScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -652,7 +656,7 @@
   "@id" : "_:genid269",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#likelihoodLevelScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#killChainPhaseScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -661,7 +665,7 @@
   "@id" : "_:genid270",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#malwareTypeScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#likelihoodLevelScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -670,7 +674,7 @@
   "@id" : "_:genid271",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#markingScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#malwareTypeScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -679,7 +683,7 @@
   "@id" : "_:genid272",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#metricTypeScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#markingScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -688,7 +692,7 @@
   "@id" : "_:genid273",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#motivationScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#metricTypeScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -697,7 +701,7 @@
   "@id" : "_:genid274",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#paymentInstrumentScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#motivationScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -706,7 +710,7 @@
   "@id" : "_:genid275",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#productTypeScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#paymentInstrumentScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -714,17 +718,21 @@
 }, {
   "@id" : "_:genid276",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#resourceLevelScheme"
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#VersionedProduct"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#installationOf"
   } ]
 }, {
   "@id" : "_:genid277",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#riskLevelScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#productTypeScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -733,7 +741,7 @@
   "@id" : "_:genid278",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#sectorScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#resourceLevelScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -742,7 +750,7 @@
   "@id" : "_:genid279",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#sophisticationLevelScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#riskLevelScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -765,7 +773,7 @@
   "@id" : "_:genid280",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#threatActorRoleScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#sectorScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -774,13 +782,31 @@
   "@id" : "_:genid281",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#threatActorTypeScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#sophisticationLevelScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
   "@id" : "_:genid282",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#threatActorRoleScheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
+  "@id" : "_:genid283",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#threatActorTypeScheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
+  "@id" : "_:genid284",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#transactionTypeScheme"
@@ -1041,7 +1067,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/description",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/identifier",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
@@ -1086,7 +1112,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
   "@id" : "http://www.w3.org/2004/02/skos/core#notation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
 }, {
   "@id" : "http://www.w3.org/2004/02/skos/core#prefLabel",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
@@ -1114,10 +1140,10 @@
     "@value" : "STONEWORK"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework/0.7.0"
+    "@id" : "https://cyberterrain.org/ns/stonework/0.10.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.7.0"
+    "@value" : "0.10.0"
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#AIAgent",
@@ -1431,6 +1457,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#ComponentContext"
+  }, {
+    "@id" : "_:genid258"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -1516,7 +1544,7 @@
   }, {
     "@id" : "https://cyberterrain.org/ns/stonework#CyberEntity"
   }, {
-    "@id" : "_:genid258"
+    "@id" : "_:genid259"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -1586,7 +1614,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
-    "@value" : "Subclassed by stonework:BomEntry (declarative — listed in an SBOM document) and stonework:ProductInstallation (observational — verified deployment via SWID tag or scan). Unifies these two evidence bases under a single superclass so that stonework:installationOf can span both without domain restrictions forcing incorrect inferences."
+    "@value" : "Subclassed by stonework:BomEntry (declarative — listed in an SBOM document), stonework:ProductInstallation (observational — verified deployment via SWID tag or scan), and framework-specific subclasses such as cve:AffectedProduct (advisory — named in a source vulnerability record, possibly against several VersionedProduct individuals at once). Unifies these evidence bases under a single superclass so that stonework:installationOf can span all of them without domain restrictions forcing incorrect inferences. BomEntry and ProductInstallation are additionally restricted to at most one installationOf value each; ComponentContext itself imposes no such limit, since not every subclass shares that one-to-one shape."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#Control",
@@ -1729,6 +1757,24 @@
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
     "@value" : "The range of stonework:currency on stonework:MonetaryAmount. Fiat units are supplied as a closed controlled vocabulary in stonework:fiatCurrencyScheme (ISO 4217). Crypto units are stonework:CryptoAsset individuals, created as needed rather than pre-enumerated. Currency itself carries no instances directly."
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#CvssMetric",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Assessment"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A structured technical-severity assessment of a vulnerability using the Common Vulnerability Scoring System, carrying a version, vector, base score, and qualitative severity."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "CVSS Metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Use stonework:hasCvssMetric to attach one or more source-specific assessments to a Vulnerability. Identify the scoring authority with stonework:createdBy and preserve the source record with stonework:hasProvenance. The direct stonework:cvssBaseScore, stonework:cvssSeverity, and stonework:cvssVector properties are query-friendly headline projections. CVSS base metrics are context-neutral; environmental metrics may adjust technical severity for a deployment context, but CVSS does not establish whether the vulnerable product is present or constitute a full enterprise risk assessment. Use stonework:VulnerabilityAssessment for that contextual judgment. A plan that calculates or consumes a CVSS assessment may bind a Variable to this assessment, but the Variable is an execution-time value and does not replace the vulnerability-to-metric relationship."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#CyberActivity",
@@ -2096,7 +2142,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid259"
+    "@id" : "_:genid260"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2164,7 +2210,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid260"
+    "@id" : "_:genid261"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2198,7 +2244,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid261"
+    "@id" : "_:genid262"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2379,7 +2425,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid262"
+    "@id" : "_:genid263"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2498,7 +2544,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid263"
+    "@id" : "_:genid264"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2514,7 +2560,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid264"
+    "@id" : "_:genid265"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2547,7 +2593,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid265"
+    "@id" : "_:genid266"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2581,7 +2627,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Sector"
   }, {
-    "@id" : "_:genid266"
+    "@id" : "_:genid267"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2614,7 +2660,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid267"
+    "@id" : "_:genid268"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2713,7 +2759,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid268"
+    "@id" : "_:genid269"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2803,7 +2849,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid269"
+    "@id" : "_:genid270"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2948,7 +2994,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid270"
+    "@id" : "_:genid271"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2968,7 +3014,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid271"
+    "@id" : "_:genid272"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -3002,7 +3048,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid272"
+    "@id" : "_:genid273"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -3073,7 +3119,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid273"
+    "@id" : "_:genid274"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -3276,7 +3322,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid274"
+    "@id" : "_:genid275"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -3435,6 +3481,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#ComponentContext"
+  }, {
+    "@id" : "_:genid276"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -3453,7 +3501,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid275"
+    "@id" : "_:genid277"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -3657,7 +3705,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid276"
+    "@id" : "_:genid278"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -3708,7 +3756,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid277"
+    "@id" : "_:genid279"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -3848,7 +3896,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid278"
+    "@id" : "_:genid280"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -3881,7 +3929,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
-    "@value" : "Use stonework:madeByActuator for the deployed mechanism, stonework:appliesCountermeasure for the safeguard or procedure being carried out, and stonework:actsOn for each affected entity. Unlike a Countermeasure specification, a SecurityActuation is an occurrence and may carry execution times and produced results. Inspired by SOSA sosa:Actuation without formally importing SOSA."
+    "@value" : "Use stonework:madeByActuator for the deployed mechanism, stonework:appliesCountermeasure for the safeguard or procedure being carried out, and stonework:actsOn for each affected entity. Unlike a Countermeasure specification, a SecurityActuation is an occurrence and may carry execution times and produced results. Inspired by SOSA sosa:Actuation without formally importing SOSA. The baseline SHACL profile requires madeByActuator at violation severity — the acting tool's own identity is always self-asserted and known at creation time — but only warns on a missing actsOn: the tooling that performed an actuation typically knows what it acted on in source-native terms (an IP, a hostname, a process ID) before that reference resolves to a canonical CyberEntity individual, the same resolution lag as stonework:RoleAssignment's roleContext or stonework:MetricObservation's metricFor. A SecurityActuation with no actsOn yet is incomplete, not malformed."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#SecurityActuator",
@@ -4017,7 +4065,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid279"
+    "@id" : "_:genid281"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -4189,7 +4237,7 @@
   }, {
     "@id" : "https://cyberterrain.org/ns/stonework#Role"
   }, {
-    "@id" : "_:genid280"
+    "@id" : "_:genid282"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -4209,7 +4257,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid281"
+    "@id" : "_:genid283"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -4268,7 +4316,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid282"
+    "@id" : "_:genid284"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -4421,7 +4469,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
-    "@value" : "Declared via stonework:hasInputVariable or stonework:hasOutputVariable. An input Variable is typically bound before its Step executes, from an already-known fact (e.g. a Vulnerability's CVSS score); an output Variable is bound only after its Step executes, from a result the execution produced (e.g. a Technique attempt's outcome). Bound via stonework:boundTo (an individual) or stonework:boundToLiteral (a scalar). The bound value is what stonework:Transition guard properties test, and — in a future deviation-detection layer — what an actual result is compared against what the Step declared as expected."
+    "@value" : "Declared via stonework:hasInputVariable or stonework:hasOutputVariable. An input Variable is typically bound before its Step executes from an already-known fact; for example, a plan may bind to an existing stonework:CvssMetric assessment. An output Variable is bound only after its Step executes, such as when an Investigation constructs a stonework:VulnerabilityAssessment. Variables carry execution-time values and do not replace persistent domain relationships. Bound via stonework:boundTo (an individual) or stonework:boundToLiteral (a scalar). The bound value is what stonework:Transition guard properties test, and — in a future deviation-detection layer — what an actual result is compared against what the Step declared as expected."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#VersionedProduct",
@@ -4435,7 +4483,7 @@
     "@value" : "A specific versioned release or build of a Product, identified by a CPE name or equivalent product identifier. Represents the unit of software actually deployed and potentially affected by vulnerabilities."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
-    "@value" : "VersionedProduct"
+    "@value" : "Versioned Product"
   } ],
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
@@ -4498,7 +4546,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
-    "@value" : "Captures VEX-style assessments: whether a product is affected, not affected, fixed, or under investigation, together with the justification and any remediation statement. Distinct from stonework:Vulnerability (which describes the flaw itself) — a VulnerabilityAssessment is an opinion about that flaw in a specific context."
+    "@value" : "Captures VEX-style assessments: whether a product is affected, not affected, fixed, or under investigation, together with the justification and any remediation statement. Distinct from stonework:Vulnerability (which describes the flaw itself) and stonework:CvssMetric (which gives context-neutral technical severity): a VulnerabilityAssessment is a judgment about applicability and risk in a specific product, deployment, or enterprise context. It may be constructed by an Investigation executing a Plan whose inputs include the vulnerability, its CVSS assessment, and current enterprise graph state."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#Weakness",
@@ -4908,6 +4956,27 @@
     "@value" : "addressesAttack"
   } ]
 }, {
+  "@id" : "https://cyberterrain.org/ns/stonework#adjacentTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Location"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a Location to another Location with which it shares a border or boundary, e.g. two neighboring Countries or Regions."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "adjacentTo"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Symmetric and not transitive. Use stonework:locatedWithin for containment rather than adjacency."
+  } ]
+}, {
   "@id" : "https://cyberterrain.org/ns/stonework#affected",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -5076,7 +5145,7 @@
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#assertionObject",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#QualifiedAssertion"
   } ],
@@ -5094,7 +5163,7 @@
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#assertionRelationType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#QualifiedAssertion"
   } ],
@@ -5115,7 +5184,7 @@
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#assertionSubject",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#QualifiedAssertion"
   } ],
@@ -5144,6 +5213,31 @@
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "assessmentOf"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Scheme-specific linking properties, such as stonework:cvssMetricFor, are declared rdfs:subPropertyOf this property, so a query over assessmentOf reaches every Assessment subclass regardless of scheme."
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#assignedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Vulnerability"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Agent"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a vulnerability to the numbering authority that assigned its primary vulnerability identifier."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "assignedBy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Resolve source-native names, UUIDs, or email addresses to an Agent individual. Like stonework:vulnerabilityId and stonework:dateAssigned, this property describes the vulnerability record's single primary identifier; represent independently assigned identifiers as distinct vulnerability records. The unresolved source string is preserved separately on cve:assigner regardless of whether resolution succeeds."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#assignedRole",
@@ -5171,6 +5265,27 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@value" : "associatedWith"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#attackId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#notation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The MITRE ATT&CK identifier of an ATT&CK object, as ATT&CK displays it: Txxxx or Txxxx.yyy (technique, sub-technique), TAxxxx (tactic), Gxxxx (group), Sxxxx (software), Mxxxx (mitigation), Cxxxx (campaign), DETxxxx (detection strategy), ANxxxx (analytic), DCxxxx (data component)."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "attackId"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Domain deliberately unset: every kind of ATT&CK object has an ATT&CK ID. The canonical and source forms are the same, so attack:attackId specializes both this property and stonework:externalId. Not unique across object types (ATT&CK's deprecated mitigations reuse technique T-numbers): look an object up by its ID together with its class. Distinct from stonework:relatedTechniqueIdentifier, which carries an ATT&CK technique ID on another framework's entity (e.g. a CAPEC pattern) as a join key; attackId is the ATT&CK object's own identifier."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#attributedTo",
@@ -5309,7 +5424,7 @@
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#boundTo",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Variable"
   } ],
@@ -5329,7 +5444,7 @@
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#boundToLiteral",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Variable"
   } ],
@@ -5365,8 +5480,32 @@
     "@value" : "byteCount"
   } ]
 }, {
+  "@id" : "https://cyberterrain.org/ns/stonework#capecId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#AttackPattern"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#notation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The CAPEC identifier in the format CAPEC-NNN."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "capecId"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "The canonical form a person types and searches for. The source-native number (e.g. '66') is capec:capecId, which specializes stonework:externalId."
+  } ]
+}, {
   "@id" : "https://cyberterrain.org/ns/stonework#categorizedBy",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   } ],
@@ -5743,6 +5882,30 @@
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "containsFile"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#containsLocation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Location"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#locatedWithin"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a Location to a narrower Location that lies within it, e.g. a Country to one of its Regions or Cities."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "containsLocation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Inverse of stonework:locatedWithin; enables downward traversal of the geographic hierarchy."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#content",
@@ -6190,7 +6353,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
-    "@value" : "Retained as the STONEWORK-level CVE-specific identifier and declared as a subproperty of stonework:vulnerabilityId. Source-native CVE records use cve:cveId, which has the same canonical superproperty."
+    "@value" : "Retained as the STONEWORK-level CVE-specific identifier. cve:cveId (declared rdfs:subPropertyOf this property) is the source-native alias always present on data ingested from CVE JSON; query this property for cross-source lookups."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#cvssBaseScore",
@@ -6203,7 +6366,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "The headline CVSS base score for this vulnerability, on a 0.0–10.0 scale."
+    "@value" : "The headline context-neutral CVSS base score for this vulnerability, on a 0.0–10.0 scale."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -6212,6 +6375,114 @@
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
     "@value" : "When multiple CVSS versions are present, this SHOULD reflect the highest available version (CVSS 4.0 preferred over 3.1, 3.1 over 2.0). For full structured metric data across all CVSS versions use stonework:hasCvssMetric."
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#cvssMetricBaseScore",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#CvssMetric"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The base score calculated by a structured CVSS assessment, on a 0.0-10.0 scale."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "cvssMetricBaseScore"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "cve:baseScore (on cve:CvssMetric) is declared rdfs:subPropertyOf this property (one-way)."
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#cvssMetricBaseSeverity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#CvssMetric"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The qualitative severity corresponding to a structured CVSS assessment's base score."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "cvssMetricBaseSeverity"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "cve:baseSeverity (on cve:CvssMetric) is declared rdfs:subPropertyOf this property (one-way)."
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#cvssMetricFor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#CvssMetric"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Vulnerability"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#assessmentOf"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The vulnerability evaluated by a structured CVSS assessment."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "cvssMetricFor"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Declared rdfs:subPropertyOf stonework:assessmentOf so a query over assessmentOf returns every Assessment of a Vulnerability — CVSS metrics included — without needing to know each scheme's specific property name."
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#cvssMetricVector",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#CvssMetric"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The complete vector string used by a structured CVSS assessment."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "cvssMetricVector"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "cve:vectorString (on cve:CvssMetric) is declared rdfs:subPropertyOf this property (one-way)."
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#cvssMetricVersion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#CvssMetric"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The CVSS specification version used by a structured assessment, such as 3.1 or 4.0."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "cvssMetricVersion"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "cve:version carries this same value on cve:CvssMetric as a plain string, but is not declared a subproperty of this property because cve:version is shared with cve:VersionRange, a class this property's domain does not cover."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#cvssScore",
@@ -6297,6 +6568,9 @@
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#notation"
+  } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
     "@value" : "The CWE identifier in the format CWE-NNN."
@@ -6304,6 +6578,10 @@
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "cweId"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "The canonical form a person types and searches for. The source-native number (e.g. '79') is cwe:cweId, which specializes stonework:externalId."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#dateAssigned",
@@ -6324,7 +6602,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
-    "@value" : "Corresponds to cveMetadata.dateReserved in CVE JSON 5.x. cve:dateAssigned is declared owl:equivalentProperty of this property."
+    "@value" : "Corresponds to cveMetadata.dateReserved in CVE JSON 5.x and equivalent assignment timestamps from other vulnerability sources. cve:dateAssigned is declared rdfs:subPropertyOf this property (one-way)."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#datePublic",
@@ -6345,7 +6623,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
-    "@value" : "Corresponds to cveMetadata.datePublished in CVE JSON 5.x. cve:datePublic is declared owl:equivalentProperty of this property."
+    "@value" : "Corresponds to cveMetadata.datePublished in CVE JSON 5.x and equivalent disclosure timestamps from other vulnerability sources. cve:datePublic is declared rdfs:subPropertyOf this property (one-way)."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#dateUpdated",
@@ -6366,7 +6644,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
-    "@value" : "Corresponds to cveMetadata.dateUpdated in CVE JSON 5.x. cve:dateUpdated is declared owl:equivalentProperty of this property."
+    "@value" : "Corresponds to cveMetadata.dateUpdated in CVE JSON 5.x and equivalent update timestamps from other vulnerability sources. cve:dateUpdated is declared rdfs:subPropertyOf this property (one-way)."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#deliveredVia",
@@ -6433,6 +6711,27 @@
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
     "@value" : "Domain intentionally left unset. The primary subject is stonework:SoftwareBillOfMaterials, but other provenance-bearing artifacts may describe infrastructure without being SBOMs. Multiple SBOMs may describe the same Infrastructure over time, enabling historical component inventory."
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://purl.org/dc/terms/description"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A human-readable description of the described resource."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "description"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Domain is intentionally unset so framework-specific descriptions for vulnerabilities, weaknesses, attack patterns, and threat objects can share this canonical property. Prefer stonework:description in newly authored data."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#detectedBy",
@@ -6517,7 +6816,7 @@
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#drops",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#MalwareSample"
   } ],
@@ -6801,7 +7100,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
-    "@value" : "The range is a stonework:Weakness individual whose IRI is derived from the CWE identifier. Used by cve:exploitsWeakness (rdfs:subPropertyOf this property) when CVE data is loaded."
+    "@value" : "The range is a stonework:Weakness individual whose IRI is derived from the CWE identifier. Used by cve:exploitsWeakness (rdfs:subPropertyOf this property) when CVE data is loaded; query this property directly for cross-source lookups."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#exposesService",
@@ -7510,7 +7809,7 @@
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#fromStep",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Transition"
   } ],
@@ -7615,7 +7914,7 @@
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#guardLiteralValue",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Transition"
   } ],
@@ -7635,7 +7934,7 @@
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#guardOperator",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Transition"
   } ],
@@ -7655,7 +7954,7 @@
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#guardType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Transition"
   } ],
@@ -7675,7 +7974,7 @@
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#guardVariable",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Transition"
   } ],
@@ -7790,6 +8089,12 @@
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Vulnerability"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#CvssMetric"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#cvssMetricFor"
+  } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
     "@value" : "Relates a vulnerability to a structured CVSS metric record carrying the version, vector string, and base/temporal/environmental scores."
@@ -7800,7 +8105,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
-    "@value" : "A single vulnerability may carry metrics for multiple CVSS versions (2.0, 3.1, 4.0). For a single headline score and severity, use stonework:cvssBaseScore and stonework:cvssSeverity directly on the Vulnerability. This property links to the full per-version metric objects populated by CVE ingest."
+    "@value" : "A single vulnerability may carry metrics for multiple CVSS versions (2.0, 3.1, 4.0) or scoring authorities. For a single headline score and severity, use stonework:cvssBaseScore and stonework:cvssSeverity directly on the Vulnerability. Core consumers can represent the common structured fields without an adapter; load the CVSS framework module for decomposed vector components and additional subscores."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#hasDependency",
@@ -8810,7 +9115,7 @@
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#hostedBy",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Infrastructure"
   } ],
@@ -9288,7 +9593,7 @@
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#implements",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Behavior"
   } ],
@@ -9920,11 +10225,11 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
-    "@value" : "Used by both stonework:BomEntry (declarative — a component listed in an SBOM) and stonework:ProductInstallation (observational — a verified deployment on a specific system). Domain is intentionally left unset to avoid restricting future component-context subclasses; intended subjects are subclasses of stonework:ComponentContext."
+    "@value" : "Used by stonework:BomEntry (declarative — a component listed in an SBOM), stonework:ProductInstallation (observational — a verified deployment on a specific system), and other stonework:ComponentContext subclasses. Domain is intentionally left unset to avoid restricting future component-context subclasses. Not declared owl:FunctionalProperty at the property level, because not every ComponentContext subclass is one-to-one with a product — a source-native advisory entry may legitimately name several. BomEntry and ProductInstallation instead carry a local owl:maxQualifiedCardinality 1 restriction on this property (onClass stonework:VersionedProduct), which gives those two classes the same at-most-one guarantee without constraining subclasses that don't share it."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#installedOn",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#ProductInstallation"
   } ],
@@ -10477,6 +10782,48 @@
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "locatedAt"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#locatedWithin",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Location"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a Location to a broader Location that wholly contains it, e.g. a City to its Region or Country, or a Region to its Country."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "locatedWithin"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Transitive: a City locatedWithin a Region that is locatedWithin a Country is also locatedWithin that Country. Assert only the most direct containment and let reasoning supply the rest. Use stonework:locatedAt to place non-Location entities such as Hosts or Organizations at a Location."
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#locationPrecision",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The radius, in meters, of uncertainty around this Location's stonework:latitude and stonework:longitude."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "locationPrecision"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Corresponds to the STIX 2.1 Location precision property. Use it to distinguish an exact facility coordinate from a city- or region-level centroid, such as a geolocated IP address or an event geotagged from a news report. Omit it when the precision is unknown."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#logSource",
@@ -11475,14 +11822,19 @@
     "@id" : "_:genid158"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#Campaign"
+    "@id" : "https://cyberterrain.org/ns/stonework#CyberActivity"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Relates a DigitalArtifact or Infrastructure entity to the Campaign context in which it was observed or collected."
+    "@value" : "Relates an observed entity, such as a DigitalArtifact, Infrastructure, Malware, Product, Behavior, Identifier, or SecurityCondition, to the CyberActivity (for example a Campaign, Incident, or Event) in which it was observed or collected."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
     "@value" : "observedIn"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "A general-purpose shortcut: the kind of context is conveyed by typing the CyberActivity, so narrower subproperties per activity type are unnecessary. Asserting this property does not imply that the object is a Campaign; type it explicitly when that matters. When an observation needs its own metadata, such as observer, time, location, count, or confidence, model it as a stonework:Sighting instead. Not an inverse of stonework:uses, which records that an actor, campaign, or malware employs a technique or tool rather than that an entity was seen in an activity."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#occursOn",
@@ -12131,7 +12483,7 @@
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#predictedLiteral",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Hypothesis"
   } ],
@@ -12151,7 +12503,7 @@
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#predictedType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Hypothesis"
   } ],
@@ -12171,7 +12523,7 @@
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#predictedValue",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Hypothesis"
   } ],
@@ -12191,7 +12543,7 @@
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#predictsVariable",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Hypothesis"
   } ],
@@ -13679,7 +14031,7 @@
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#sightedObject",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Sighting"
   } ],
@@ -14028,6 +14380,27 @@
     "@value" : "storedOn"
   } ]
 }, {
+  "@id" : "https://cyberterrain.org/ns/stonework#streetAddress",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The street address of the location, such as a building number and street name."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "streetAddress"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Corresponds to the STIX 2.1 Location street_address property. Record the postal code with stonework:postalCode and the enclosing City, Region, or Country with stonework:locatedWithin rather than repeating them in this string."
+  } ]
+}, {
   "@id" : "https://cyberterrain.org/ns/stonework#subdomainOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -14082,7 +14455,7 @@
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#supersededBy",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Vulnerability"
   } ],
@@ -14099,7 +14472,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
-    "@value" : "Corresponds to cve:replacedBy in CVE JSON 5.x, but as an object property linking to a stonework:Vulnerability individual rather than a string. The source-specific string form is preserved on cve:replacedBy."
+    "@value" : "Corresponds to cve:replacedBy in CVE JSON 5.x, but as an object property linking to a stonework:Vulnerability individual rather than a string. The source-specific string form is preserved on cve:replacedBy regardless of whether resolution to this property succeeds."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#supersedes",
@@ -14806,7 +15179,7 @@
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#toStep",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Transition"
   } ],
@@ -15399,7 +15772,7 @@
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#versionOf",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#VersionedProduct"
   } ],
@@ -15436,7 +15809,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
-    "@value" : "Source-specific ID properties (e.g. cve:cveId) are declared rdfs:subPropertyOf this property, enabling cross-source queries on a single predicate. Each vulnerability record SHOULD carry exactly one identifier from its primary numbering authority."
+    "@value" : "Identifier-specific core properties such as stonework:cveId are declared as subproperties (and source-native framework aliases such as cve:cveId are declared subproperties of those), enabling cross-source queries on a single predicate. Each vulnerability record SHOULD carry exactly one identifier from its primary numbering authority."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#walletAddress",
