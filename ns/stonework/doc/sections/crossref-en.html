@@ -80,7 +80,9 @@ This section provides details for each class and property defined by STONEWORK.
   <li><a href="#InfrastructureType" title="https://cyberterrain.org/ns/stonework#InfrastructureType">Infrastructure Type</a></li>
   <li><a href="#IntelligenceProduct" title="https://cyberterrain.org/ns/stonework#IntelligenceProduct">Intelligence Product</a></li>
   <li><a href="#Investigation" title="https://cyberterrain.org/ns/stonework#Investigation">Investigation</a></li>
+  <li><a href="#InvestigationOutcome" title="https://cyberterrain.org/ns/stonework#InvestigationOutcome">Investigation Outcome</a></li>
   <li><a href="#InvestigationPlan" title="https://cyberterrain.org/ns/stonework#InvestigationPlan">Investigation Plan</a></li>
+  <li><a href="#InvestigationStatus" title="https://cyberterrain.org/ns/stonework#InvestigationStatus">Investigation Status</a></li>
   <li><a href="#IPAddress" title="https://cyberterrain.org/ns/stonework#IPAddress">IP Address</a></li>
   <li><a href="#IPBlock" title="https://cyberterrain.org/ns/stonework#IPBlock">IP Block</a></li>
   <li><a href="#KillChainPhase" title="https://cyberterrain.org/ns/stonework#KillChainPhase">Kill Chain Phase</a></li>
@@ -117,6 +119,7 @@ This section provides details for each class and property defined by STONEWORK.
   <li><a href="#PhoneNumber" title="https://cyberterrain.org/ns/stonework#PhoneNumber">Phone Number</a></li>
   <li><a href="#PhysicalArtifact" title="https://cyberterrain.org/ns/stonework#PhysicalArtifact">Physical Artifact</a></li>
   <li><a href="#Playbook" title="https://cyberterrain.org/ns/stonework#Playbook">Playbook</a></li>
+  <li><a href="#PriorityLevel" title="https://cyberterrain.org/ns/stonework#PriorityLevel">Priority Level</a></li>
   <li><a href="#Procedure" title="https://cyberterrain.org/ns/stonework#Procedure">Procedure</a></li>
   <li><a href="#Process" title="https://cyberterrain.org/ns/stonework#Process">Process</a></li>
   <li><a href="#Product" title="https://cyberterrain.org/ns/stonework#Product">Product</a></li>
@@ -295,7 +298,7 @@ This section provides details for each class and property defined by STONEWORK.
     is in range of
    </dt>
    <dd>
-    <a href="#accountOf" title="https://cyberterrain.org/ns/stonework#accountOf">accountOf</a> <sup class="type-op" title="object property">op</sup>, <a href="#affiliatedWith" title="https://cyberterrain.org/ns/stonework#affiliatedWith">affiliatedWith</a> <sup class="type-op" title="object property">op</sup>, <a href="#assignedBy" title="https://cyberterrain.org/ns/stonework#assignedBy">assignedBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#attributedToAgent" title="https://cyberterrain.org/ns/stonework#attributedToAgent">attributedToAgent</a> <sup class="type-op" title="object property">op</sup>, <a href="#authoredBy" title="https://cyberterrain.org/ns/stonework#authoredBy">authoredBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#conductedBy" title="https://cyberterrain.org/ns/stonework#conductedBy">conductedBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#createdBy" title="https://cyberterrain.org/ns/stonework#createdBy">createdBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#emailOf" title="https://cyberterrain.org/ns/stonework#emailOf">emailOf</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasVendor" title="https://cyberterrain.org/ns/stonework#hasVendor">hasVendor</a> <sup class="type-op" title="object property">op</sup>, <a href="#hostedBy" title="https://cyberterrain.org/ns/stonework#hostedBy">hostedBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#issuedBy" title="https://cyberterrain.org/ns/stonework#issuedBy">issuedBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#issuedTo" title="https://cyberterrain.org/ns/stonework#issuedTo">issuedTo</a> <sup class="type-op" title="object property">op</sup>, <a href="#ownedBy" title="https://cyberterrain.org/ns/stonework#ownedBy">ownedBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#performedBy" title="https://cyberterrain.org/ns/stonework#performedBy">performedBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#phoneNumberOf" title="https://cyberterrain.org/ns/stonework#phoneNumberOf">phoneNumberOf</a> <sup class="type-op" title="object property">op</sup>, <a href="#registeredTo" title="https://cyberterrain.org/ns/stonework#registeredTo">registeredTo</a> <sup class="type-op" title="object property">op</sup>, <a href="#registeredWith" title="https://cyberterrain.org/ns/stonework#registeredWith">registeredWith</a> <sup class="type-op" title="object property">op</sup>, <a href="#reportedBy" title="https://cyberterrain.org/ns/stonework#reportedBy">reportedBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#sightedBy" title="https://cyberterrain.org/ns/stonework#sightedBy">sightedBy</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#accountOf" title="https://cyberterrain.org/ns/stonework#accountOf">accountOf</a> <sup class="type-op" title="object property">op</sup>, <a href="#affiliatedWith" title="https://cyberterrain.org/ns/stonework#affiliatedWith">affiliatedWith</a> <sup class="type-op" title="object property">op</sup>, <a href="#assignedBy" title="https://cyberterrain.org/ns/stonework#assignedBy">assignedBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#attributedToAgent" title="https://cyberterrain.org/ns/stonework#attributedToAgent">attributedToAgent</a> <sup class="type-op" title="object property">op</sup>, <a href="#authoredBy" title="https://cyberterrain.org/ns/stonework#authoredBy">authoredBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#conductedBy" title="https://cyberterrain.org/ns/stonework#conductedBy">conductedBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#createdBy" title="https://cyberterrain.org/ns/stonework#createdBy">createdBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#emailOf" title="https://cyberterrain.org/ns/stonework#emailOf">emailOf</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasVendor" title="https://cyberterrain.org/ns/stonework#hasVendor">hasVendor</a> <sup class="type-op" title="object property">op</sup>, <a href="#hostedBy" title="https://cyberterrain.org/ns/stonework#hostedBy">hostedBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#issuedBy" title="https://cyberterrain.org/ns/stonework#issuedBy">issuedBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#issuedTo" title="https://cyberterrain.org/ns/stonework#issuedTo">issuedTo</a> <sup class="type-op" title="object property">op</sup>, <a href="#leadInvestigator" title="https://cyberterrain.org/ns/stonework#leadInvestigator">leadInvestigator</a> <sup class="type-op" title="object property">op</sup>, <a href="#ownedBy" title="https://cyberterrain.org/ns/stonework#ownedBy">ownedBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#performedBy" title="https://cyberterrain.org/ns/stonework#performedBy">performedBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#phoneNumberOf" title="https://cyberterrain.org/ns/stonework#phoneNumberOf">phoneNumberOf</a> <sup class="type-op" title="object property">op</sup>, <a href="#registeredTo" title="https://cyberterrain.org/ns/stonework#registeredTo">registeredTo</a> <sup class="type-op" title="object property">op</sup>, <a href="#registeredWith" title="https://cyberterrain.org/ns/stonework#registeredWith">registeredWith</a> <sup class="type-op" title="object property">op</sup>, <a href="#reportedBy" title="https://cyberterrain.org/ns/stonework#reportedBy">reportedBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#sightedBy" title="https://cyberterrain.org/ns/stonework#sightedBy">sightedBy</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -610,13 +613,13 @@ This section provides details for each class and property defined by STONEWORK.
     is in domain of
    </dt>
    <dd>
-    <a href="#affectsAsset" title="https://cyberterrain.org/ns/stonework#affectsAsset">affectsAsset</a> <sup class="type-op" title="object property">op</sup>, <a href="#conductedBy" title="https://cyberterrain.org/ns/stonework#conductedBy">conductedBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#investigatedBy" title="https://cyberterrain.org/ns/stonework#investigatedBy">investigatedBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#objective" title="https://cyberterrain.org/ns/stonework#objective">objective</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#posesThreat" title="https://cyberterrain.org/ns/stonework#posesThreat">posesThreat</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#affectsAsset" title="https://cyberterrain.org/ns/stonework#affectsAsset">affectsAsset</a> <sup class="type-op" title="object property">op</sup>, <a href="#conductedBy" title="https://cyberterrain.org/ns/stonework#conductedBy">conductedBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#objective" title="https://cyberterrain.org/ns/stonework#objective">objective</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#posesThreat" title="https://cyberterrain.org/ns/stonework#posesThreat">posesThreat</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#consistsOfCampaign" title="https://cyberterrain.org/ns/stonework#consistsOfCampaign">consistsOfCampaign</a> <sup class="type-op" title="object property">op</sup>, <a href="#investigates" title="https://cyberterrain.org/ns/stonework#investigates">investigates</a> <sup class="type-op" title="object property">op</sup>, <a href="#involvesCampaign" title="https://cyberterrain.org/ns/stonework#involvesCampaign">involvesCampaign</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#consistsOfCampaign" title="https://cyberterrain.org/ns/stonework#consistsOfCampaign">consistsOfCampaign</a> <sup class="type-op" title="object property">op</sup>, <a href="#involvesCampaign" title="https://cyberterrain.org/ns/stonework#involvesCampaign">involvesCampaign</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -637,7 +640,7 @@ This section provides details for each class and property defined by STONEWORK.
     has sub-classes
    </dt>
    <dd>
-    <a href="#AccountType" title="https://cyberterrain.org/ns/stonework#AccountType">Account Type</a> <sup class="type-c" title="class">c</sup>, <a href="#FalsePositiveRate" title="https://cyberterrain.org/ns/stonework#FalsePositiveRate">False Positive Rate</a> <sup class="type-c" title="class">c</sup>, <a href="#FinancialAccountType" title="https://cyberterrain.org/ns/stonework#FinancialAccountType">Financial Account Type</a> <sup class="type-c" title="class">c</sup>, <a href="#FinancialInstitutionType" title="https://cyberterrain.org/ns/stonework#FinancialInstitutionType">Financial Institution Type</a> <sup class="type-c" title="class">c</sup>, <a href="#HypothesisStatus" title="https://cyberterrain.org/ns/stonework#HypothesisStatus">Hypothesis Status</a> <sup class="type-c" title="class">c</sup>, <a href="#ImpactLevel" title="https://cyberterrain.org/ns/stonework#ImpactLevel">Impact Level</a> <sup class="type-c" title="class">c</sup>, <a href="#ImpactType" title="https://cyberterrain.org/ns/stonework#ImpactType">Impact Type</a> <sup class="type-c" title="class">c</sup>, <a href="#IncidentStatus" title="https://cyberterrain.org/ns/stonework#IncidentStatus">Incident Status</a> <sup class="type-c" title="class">c</sup>, <a href="#InfrastructureType" title="https://cyberterrain.org/ns/stonework#InfrastructureType">Infrastructure Type</a> <sup class="type-c" title="class">c</sup>, <a href="#KillChainPhase" title="https://cyberterrain.org/ns/stonework#KillChainPhase">Kill Chain Phase</a> <sup class="type-c" title="class">c</sup>, <a href="#LikelihoodLevel" title="https://cyberterrain.org/ns/stonework#LikelihoodLevel">Likelihood Level</a> <sup class="type-c" title="class">c</sup>, <a href="#MalwareType" title="https://cyberterrain.org/ns/stonework#MalwareType">Malware Type</a> <sup class="type-c" title="class">c</sup>, <a href="#Markings" title="https://cyberterrain.org/ns/stonework#Markings">Markings</a> <sup class="type-c" title="class">c</sup>, <a href="#MetricType" title="https://cyberterrain.org/ns/stonework#MetricType">Metric Type</a> <sup class="type-c" title="class">c</sup>, <a href="#Motivation" title="https://cyberterrain.org/ns/stonework#Motivation">Motivation</a> <sup class="type-c" title="class">c</sup>, <a href="#PaymentInstrument" title="https://cyberterrain.org/ns/stonework#PaymentInstrument">Payment Instrument</a> <sup class="type-c" title="class">c</sup>, <a href="#ProductType" title="https://cyberterrain.org/ns/stonework#ProductType">Product Type</a> <sup class="type-c" title="class">c</sup>, <a href="#ResourceLevel" title="https://cyberterrain.org/ns/stonework#ResourceLevel">Resource Level</a> <sup class="type-c" title="class">c</sup>, <a href="#RiskLevel" title="https://cyberterrain.org/ns/stonework#RiskLevel">Risk Level</a> <sup class="type-c" title="class">c</sup>, <a href="#Sector" title="https://cyberterrain.org/ns/stonework#Sector">Sector</a> <sup class="type-c" title="class">c</sup>, <a href="#SophisticationLevel" title="https://cyberterrain.org/ns/stonework#SophisticationLevel">Sophistication Level</a> <sup class="type-c" title="class">c</sup>, <a href="#ThreatActorRole" title="https://cyberterrain.org/ns/stonework#ThreatActorRole">Threat Actor Role</a> <sup class="type-c" title="class">c</sup>, <a href="#ThreatActorType" title="https://cyberterrain.org/ns/stonework#ThreatActorType">Threat Actor Type</a> <sup class="type-c" title="class">c</sup>, <a href="#TransactionType" title="https://cyberterrain.org/ns/stonework#TransactionType">Transaction Type</a> <sup class="type-c" title="class">c</sup>
+    <a href="#AccountType" title="https://cyberterrain.org/ns/stonework#AccountType">Account Type</a> <sup class="type-c" title="class">c</sup>, <a href="#FalsePositiveRate" title="https://cyberterrain.org/ns/stonework#FalsePositiveRate">False Positive Rate</a> <sup class="type-c" title="class">c</sup>, <a href="#FinancialAccountType" title="https://cyberterrain.org/ns/stonework#FinancialAccountType">Financial Account Type</a> <sup class="type-c" title="class">c</sup>, <a href="#FinancialInstitutionType" title="https://cyberterrain.org/ns/stonework#FinancialInstitutionType">Financial Institution Type</a> <sup class="type-c" title="class">c</sup>, <a href="#HypothesisStatus" title="https://cyberterrain.org/ns/stonework#HypothesisStatus">Hypothesis Status</a> <sup class="type-c" title="class">c</sup>, <a href="#ImpactLevel" title="https://cyberterrain.org/ns/stonework#ImpactLevel">Impact Level</a> <sup class="type-c" title="class">c</sup>, <a href="#ImpactType" title="https://cyberterrain.org/ns/stonework#ImpactType">Impact Type</a> <sup class="type-c" title="class">c</sup>, <a href="#IncidentStatus" title="https://cyberterrain.org/ns/stonework#IncidentStatus">Incident Status</a> <sup class="type-c" title="class">c</sup>, <a href="#InfrastructureType" title="https://cyberterrain.org/ns/stonework#InfrastructureType">Infrastructure Type</a> <sup class="type-c" title="class">c</sup>, <a href="#InvestigationOutcome" title="https://cyberterrain.org/ns/stonework#InvestigationOutcome">Investigation Outcome</a> <sup class="type-c" title="class">c</sup>, <a href="#InvestigationStatus" title="https://cyberterrain.org/ns/stonework#InvestigationStatus">Investigation Status</a> <sup class="type-c" title="class">c</sup>, <a href="#KillChainPhase" title="https://cyberterrain.org/ns/stonework#KillChainPhase">Kill Chain Phase</a> <sup class="type-c" title="class">c</sup>, <a href="#LikelihoodLevel" title="https://cyberterrain.org/ns/stonework#LikelihoodLevel">Likelihood Level</a> <sup class="type-c" title="class">c</sup>, <a href="#MalwareType" title="https://cyberterrain.org/ns/stonework#MalwareType">Malware Type</a> <sup class="type-c" title="class">c</sup>, <a href="#Markings" title="https://cyberterrain.org/ns/stonework#Markings">Markings</a> <sup class="type-c" title="class">c</sup>, <a href="#MetricType" title="https://cyberterrain.org/ns/stonework#MetricType">Metric Type</a> <sup class="type-c" title="class">c</sup>, <a href="#Motivation" title="https://cyberterrain.org/ns/stonework#Motivation">Motivation</a> <sup class="type-c" title="class">c</sup>, <a href="#PaymentInstrument" title="https://cyberterrain.org/ns/stonework#PaymentInstrument">Payment Instrument</a> <sup class="type-c" title="class">c</sup>, <a href="#PriorityLevel" title="https://cyberterrain.org/ns/stonework#PriorityLevel">Priority Level</a> <sup class="type-c" title="class">c</sup>, <a href="#ProductType" title="https://cyberterrain.org/ns/stonework#ProductType">Product Type</a> <sup class="type-c" title="class">c</sup>, <a href="#ResourceLevel" title="https://cyberterrain.org/ns/stonework#ResourceLevel">Resource Level</a> <sup class="type-c" title="class">c</sup>, <a href="#RiskLevel" title="https://cyberterrain.org/ns/stonework#RiskLevel">Risk Level</a> <sup class="type-c" title="class">c</sup>, <a href="#Sector" title="https://cyberterrain.org/ns/stonework#Sector">Sector</a> <sup class="type-c" title="class">c</sup>, <a href="#SophisticationLevel" title="https://cyberterrain.org/ns/stonework#SophisticationLevel">Sophistication Level</a> <sup class="type-c" title="class">c</sup>, <a href="#ThreatActorRole" title="https://cyberterrain.org/ns/stonework#ThreatActorRole">Threat Actor Role</a> <sup class="type-c" title="class">c</sup>, <a href="#ThreatActorType" title="https://cyberterrain.org/ns/stonework#ThreatActorType">Threat Actor Type</a> <sup class="type-c" title="class">c</sup>, <a href="#TransactionType" title="https://cyberterrain.org/ns/stonework#TransactionType">Transaction Type</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     is in range of
@@ -1725,6 +1728,12 @@ This section provides details for each class and property defined by STONEWORK.
    <dd>
     <a href="#hasHypothesisStatus" title="https://cyberterrain.org/ns/stonework#hasHypothesisStatus">hasHypothesisStatus</a> <sup class="type-op" title="object property">op</sup>, <a href="#predictedLiteral" title="https://cyberterrain.org/ns/stonework#predictedLiteral">predictedLiteral</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#predictedType" title="https://cyberterrain.org/ns/stonework#predictedType">predictedType</a> <sup class="type-op" title="object property">op</sup>, <a href="#predictedValue" title="https://cyberterrain.org/ns/stonework#predictedValue">predictedValue</a> <sup class="type-op" title="object property">op</sup>, <a href="#predictsVariable" title="https://cyberterrain.org/ns/stonework#predictsVariable">predictsVariable</a> <sup class="type-op" title="object property">op</sup>
    </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#testsHypothesis" title="https://cyberterrain.org/ns/stonework#testsHypothesis">testsHypothesis</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="HypothesisStatus">
@@ -1924,13 +1933,13 @@ This section provides details for each class and property defined by STONEWORK.
     is in domain of
    </dt>
    <dd>
-    <a href="#affectsAsset" title="https://cyberterrain.org/ns/stonework#affectsAsset">affectsAsset</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasEvent" title="https://cyberterrain.org/ns/stonework#hasEvent">hasEvent</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasIncidentStatus" title="https://cyberterrain.org/ns/stonework#hasIncidentStatus">hasIncidentStatus</a> <sup class="type-op" title="object property">op</sup>, <a href="#investigatedBy" title="https://cyberterrain.org/ns/stonework#investigatedBy">investigatedBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#involvesCampaign" title="https://cyberterrain.org/ns/stonework#involvesCampaign">involvesCampaign</a> <sup class="type-op" title="object property">op</sup>, <a href="#severity" title="https://cyberterrain.org/ns/stonework#severity">severity</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#triggersPlaybook" title="https://cyberterrain.org/ns/stonework#triggersPlaybook">triggersPlaybook</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#affectsAsset" title="https://cyberterrain.org/ns/stonework#affectsAsset">affectsAsset</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasEvent" title="https://cyberterrain.org/ns/stonework#hasEvent">hasEvent</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasIncidentStatus" title="https://cyberterrain.org/ns/stonework#hasIncidentStatus">hasIncidentStatus</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasPriority" title="https://cyberterrain.org/ns/stonework#hasPriority">hasPriority</a> <sup class="type-op" title="object property">op</sup>, <a href="#involvesCampaign" title="https://cyberterrain.org/ns/stonework#involvesCampaign">involvesCampaign</a> <sup class="type-op" title="object property">op</sup>, <a href="#severity" title="https://cyberterrain.org/ns/stonework#severity">severity</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#triggersPlaybook" title="https://cyberterrain.org/ns/stonework#triggersPlaybook">triggersPlaybook</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#compromisedIn" title="https://cyberterrain.org/ns/stonework#compromisedIn">compromisedIn</a> <sup class="type-op" title="object property">op</sup>, <a href="#investigates" title="https://cyberterrain.org/ns/stonework#investigates">investigates</a> <sup class="type-op" title="object property">op</sup>, <a href="#triggeredBy" title="https://cyberterrain.org/ns/stonework#triggeredBy">triggeredBy</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#compromisedIn" title="https://cyberterrain.org/ns/stonework#compromisedIn">compromisedIn</a> <sup class="type-op" title="object property">op</sup>, <a href="#triggeredBy" title="https://cyberterrain.org/ns/stonework#triggeredBy">triggeredBy</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -2086,7 +2095,7 @@ This section provides details for each class and property defined by STONEWORK.
     is in range of
    </dt>
    <dd>
-    <a href="#opinionOf" title="https://cyberterrain.org/ns/stonework#opinionOf">opinionOf</a> <sup class="type-op" title="object property">op</sup>, <a href="#precedes" title="https://cyberterrain.org/ns/stonework#precedes">precedes</a> <sup class="type-op" title="object property">op</sup>, <a href="#provenanceOf" title="https://cyberterrain.org/ns/stonework#provenanceOf">provenanceOf</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#examines" title="https://cyberterrain.org/ns/stonework#examines">examines</a> <sup class="type-op" title="object property">op</sup>, <a href="#opinionOf" title="https://cyberterrain.org/ns/stonework#opinionOf">opinionOf</a> <sup class="type-op" title="object property">op</sup>, <a href="#precedes" title="https://cyberterrain.org/ns/stonework#precedes">precedes</a> <sup class="type-op" title="object property">op</sup>, <a href="#provenanceOf" title="https://cyberterrain.org/ns/stonework#provenanceOf">provenanceOf</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -2107,13 +2116,40 @@ This section provides details for each class and property defined by STONEWORK.
     is in domain of
    </dt>
    <dd>
-    <a href="#collects" title="https://cyberterrain.org/ns/stonework#collects">collects</a> <sup class="type-op" title="object property">op</sup>, <a href="#investigates" title="https://cyberterrain.org/ns/stonework#investigates">investigates</a> <sup class="type-op" title="object property">op</sup>, <a href="#producesReport" title="https://cyberterrain.org/ns/stonework#producesReport">producesReport</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#collects" title="https://cyberterrain.org/ns/stonework#collects">collects</a> <sup class="type-op" title="object property">op</sup>, <a href="#examines" title="https://cyberterrain.org/ns/stonework#examines">examines</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasInvestigationOutcome" title="https://cyberterrain.org/ns/stonework#hasInvestigationOutcome">hasInvestigationOutcome</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasInvestigationStatus" title="https://cyberterrain.org/ns/stonework#hasInvestigationStatus">hasInvestigationStatus</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasPriority" title="https://cyberterrain.org/ns/stonework#hasPriority">hasPriority</a> <sup class="type-op" title="object property">op</sup>, <a href="#investigates" title="https://cyberterrain.org/ns/stonework#investigates">investigates</a> <sup class="type-op" title="object property">op</sup>, <a href="#leadInvestigator" title="https://cyberterrain.org/ns/stonework#leadInvestigator">leadInvestigator</a> <sup class="type-op" title="object property">op</sup>, <a href="#mergedInto" title="https://cyberterrain.org/ns/stonework#mergedInto">mergedInto</a> <sup class="type-op" title="object property">op</sup>, <a href="#producesReport" title="https://cyberterrain.org/ns/stonework#producesReport">producesReport</a> <sup class="type-op" title="object property">op</sup>, <a href="#testsHypothesis" title="https://cyberterrain.org/ns/stonework#testsHypothesis">testsHypothesis</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#investigatedBy" title="https://cyberterrain.org/ns/stonework#investigatedBy">investigatedBy</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#investigatedBy" title="https://cyberterrain.org/ns/stonework#investigatedBy">investigatedBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#mergedInto" title="https://cyberterrain.org/ns/stonework#mergedInto">mergedInto</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="InvestigationOutcome">
+  <h3>Investigation Outcome<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#InvestigationOutcome</p>
+  <div class="comment">
+   <span class="markdown">A classification of how a closed investigation ended.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Category" title="https://cyberterrain.org/ns/stonework#Category">Category</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasInvestigationOutcome" title="https://cyberterrain.org/ns/stonework#hasInvestigationOutcome">hasInvestigationOutcome</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#investigationOutcomeBenign" title="https://cyberterrain.org/ns/stonework#investigationOutcomeBenign">Benign</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#investigationOutcomeConfirmed" title="https://cyberterrain.org/ns/stonework#investigationOutcomeConfirmed">Confirmed</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#investigationOutcomeFalsePositive" title="https://cyberterrain.org/ns/stonework#investigationOutcomeFalsePositive">False Positive</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#investigationOutcomeInconclusive" title="https://cyberterrain.org/ns/stonework#investigationOutcomeInconclusive">Inconclusive</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
   </dl>
  </div>
@@ -2138,6 +2174,33 @@ This section provides details for each class and property defined by STONEWORK.
    </dt>
    <dd>
     <a href="#DetectionPlan" title="https://cyberterrain.org/ns/stonework#DetectionPlan">Detection Plan</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="InvestigationStatus">
+  <h3>Investigation Status<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#InvestigationStatus</p>
+  <div class="comment">
+   <span class="markdown">A classification of an investigation's position in its lifecycle.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Category" title="https://cyberterrain.org/ns/stonework#Category">Category</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasInvestigationStatus" title="https://cyberterrain.org/ns/stonework#hasInvestigationStatus">hasInvestigationStatus</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#investigationStatusActive" title="https://cyberterrain.org/ns/stonework#investigationStatusActive">Active</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#investigationStatusClosed" title="https://cyberterrain.org/ns/stonework#investigationStatusClosed">Closed</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#investigationStatusOnHold" title="https://cyberterrain.org/ns/stonework#investigationStatusOnHold">On Hold</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#investigationStatusOpen" title="https://cyberterrain.org/ns/stonework#investigationStatusOpen">Open</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
   </dl>
  </div>
@@ -2449,13 +2512,13 @@ This section provides details for each class and property defined by STONEWORK.
     is in domain of
    </dt>
    <dd>
-    <a href="#accessesRegistry" title="https://cyberterrain.org/ns/stonework#accessesRegistry">accessesRegistry</a> <sup class="type-op" title="object property">op</sup>, <a href="#communicatesWith" title="https://cyberterrain.org/ns/stonework#communicatesWith">communicatesWith</a> <sup class="type-op" title="object property">op</sup>, <a href="#compilationTimestamp" title="https://cyberterrain.org/ns/stonework#compilationTimestamp">compilationTimestamp</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#createsMutex" title="https://cyberterrain.org/ns/stonework#createsMutex">createsMutex</a> <sup class="type-op" title="object property">op</sup>, <a href="#deliveredVia" title="https://cyberterrain.org/ns/stonework#deliveredVia">deliveredVia</a> <sup class="type-op" title="object property">op</sup>, <a href="#downloads" title="https://cyberterrain.org/ns/stonework#downloads">downloads</a> <sup class="type-op" title="object property">op</sup>, <a href="#drops" title="https://cyberterrain.org/ns/stonework#drops">drops</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasArtifact" title="https://cyberterrain.org/ns/stonework#hasArtifact">hasArtifact</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasMalwareType" title="https://cyberterrain.org/ns/stonework#hasMalwareType">hasMalwareType</a> <sup class="type-op" title="object property">op</sup>, <a href="#implants" title="https://cyberterrain.org/ns/stonework#implants">implants</a> <sup class="type-op" title="object property">op</sup>, <a href="#investigatedBy" title="https://cyberterrain.org/ns/stonework#investigatedBy">investigatedBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#isPacked" title="https://cyberterrain.org/ns/stonework#isPacked">isPacked</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#memberOfFamily" title="https://cyberterrain.org/ns/stonework#memberOfFamily">memberOfFamily</a> <sup class="type-op" title="object property">op</sup>, <a href="#packerName" title="https://cyberterrain.org/ns/stonework#packerName">packerName</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#variantOf" title="https://cyberterrain.org/ns/stonework#variantOf">variantOf</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#accessesRegistry" title="https://cyberterrain.org/ns/stonework#accessesRegistry">accessesRegistry</a> <sup class="type-op" title="object property">op</sup>, <a href="#communicatesWith" title="https://cyberterrain.org/ns/stonework#communicatesWith">communicatesWith</a> <sup class="type-op" title="object property">op</sup>, <a href="#compilationTimestamp" title="https://cyberterrain.org/ns/stonework#compilationTimestamp">compilationTimestamp</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#createsMutex" title="https://cyberterrain.org/ns/stonework#createsMutex">createsMutex</a> <sup class="type-op" title="object property">op</sup>, <a href="#deliveredVia" title="https://cyberterrain.org/ns/stonework#deliveredVia">deliveredVia</a> <sup class="type-op" title="object property">op</sup>, <a href="#downloads" title="https://cyberterrain.org/ns/stonework#downloads">downloads</a> <sup class="type-op" title="object property">op</sup>, <a href="#drops" title="https://cyberterrain.org/ns/stonework#drops">drops</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasArtifact" title="https://cyberterrain.org/ns/stonework#hasArtifact">hasArtifact</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasMalwareType" title="https://cyberterrain.org/ns/stonework#hasMalwareType">hasMalwareType</a> <sup class="type-op" title="object property">op</sup>, <a href="#implants" title="https://cyberterrain.org/ns/stonework#implants">implants</a> <sup class="type-op" title="object property">op</sup>, <a href="#isPacked" title="https://cyberterrain.org/ns/stonework#isPacked">isPacked</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#memberOfFamily" title="https://cyberterrain.org/ns/stonework#memberOfFamily">memberOfFamily</a> <sup class="type-op" title="object property">op</sup>, <a href="#packerName" title="https://cyberterrain.org/ns/stonework#packerName">packerName</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#variantOf" title="https://cyberterrain.org/ns/stonework#variantOf">variantOf</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#downloads" title="https://cyberterrain.org/ns/stonework#downloads">downloads</a> <sup class="type-op" title="object property">op</sup>, <a href="#implants" title="https://cyberterrain.org/ns/stonework#implants">implants</a> <sup class="type-op" title="object property">op</sup>, <a href="#investigates" title="https://cyberterrain.org/ns/stonework#investigates">investigates</a> <sup class="type-op" title="object property">op</sup>, <a href="#isSampleOf" title="https://cyberterrain.org/ns/stonework#isSampleOf">isSampleOf</a> <sup class="type-op" title="object property">op</sup>, <a href="#variantOf" title="https://cyberterrain.org/ns/stonework#variantOf">variantOf</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#downloads" title="https://cyberterrain.org/ns/stonework#downloads">downloads</a> <sup class="type-op" title="object property">op</sup>, <a href="#implants" title="https://cyberterrain.org/ns/stonework#implants">implants</a> <sup class="type-op" title="object property">op</sup>, <a href="#isSampleOf" title="https://cyberterrain.org/ns/stonework#isSampleOf">isSampleOf</a> <sup class="type-op" title="object property">op</sup>, <a href="#variantOf" title="https://cyberterrain.org/ns/stonework#variantOf">variantOf</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -3029,6 +3092,33 @@ This section provides details for each class and property defined by STONEWORK.
    </dd>
   </dl>
  </div>
+ <div class="entity" id="PriorityLevel">
+  <h3>Priority Level<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#PriorityLevel</p>
+  <div class="comment">
+   <span class="markdown">A classification of how urgently something should be worked, relative to other work.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Category" title="https://cyberterrain.org/ns/stonework#Category">Category</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasPriority" title="https://cyberterrain.org/ns/stonework#hasPriority">hasPriority</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#priorityCritical" title="https://cyberterrain.org/ns/stonework#priorityCritical">Critical</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#priorityHigh" title="https://cyberterrain.org/ns/stonework#priorityHigh">High</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#priorityLow" title="https://cyberterrain.org/ns/stonework#priorityLow">Low</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#priorityMedium" title="https://cyberterrain.org/ns/stonework#priorityMedium">Medium</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="Procedure">
   <h3>Procedure<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#Procedure</p>
@@ -3268,7 +3358,7 @@ This section provides details for each class and property defined by STONEWORK.
     is in range of
    </dt>
    <dd>
-    <a href="#provenanceOf" title="https://cyberterrain.org/ns/stonework#provenanceOf">provenanceOf</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#opinionOf" title="https://cyberterrain.org/ns/stonework#opinionOf">opinionOf</a> <sup class="type-op" title="object property">op</sup>, <a href="#provenanceOf" title="https://cyberterrain.org/ns/stonework#provenanceOf">provenanceOf</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -3976,13 +4066,13 @@ This section provides details for each class and property defined by STONEWORK.
     is in domain of
    </dt>
    <dd>
-    <a href="#employs" title="https://cyberterrain.org/ns/stonework#employs">employs</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasMember" title="https://cyberterrain.org/ns/stonework#hasMember">hasMember</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasMotivation" title="https://cyberterrain.org/ns/stonework#hasMotivation">hasMotivation</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasResourceLevel" title="https://cyberterrain.org/ns/stonework#hasResourceLevel">hasResourceLevel</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasSophisticationLevel" title="https://cyberterrain.org/ns/stonework#hasSophisticationLevel">hasSophisticationLevel</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasThreatActorType" title="https://cyberterrain.org/ns/stonework#hasThreatActorType">hasThreatActorType</a> <sup class="type-op" title="object property">op</sup>, <a href="#investigatedBy" title="https://cyberterrain.org/ns/stonework#investigatedBy">investigatedBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#objective" title="https://cyberterrain.org/ns/stonework#objective">objective</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#operatesIn" title="https://cyberterrain.org/ns/stonework#operatesIn">operatesIn</a> <sup class="type-op" title="object property">op</sup>, <a href="#posesThreat" title="https://cyberterrain.org/ns/stonework#posesThreat">posesThreat</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#employs" title="https://cyberterrain.org/ns/stonework#employs">employs</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasMember" title="https://cyberterrain.org/ns/stonework#hasMember">hasMember</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasMotivation" title="https://cyberterrain.org/ns/stonework#hasMotivation">hasMotivation</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasResourceLevel" title="https://cyberterrain.org/ns/stonework#hasResourceLevel">hasResourceLevel</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasSophisticationLevel" title="https://cyberterrain.org/ns/stonework#hasSophisticationLevel">hasSophisticationLevel</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasThreatActorType" title="https://cyberterrain.org/ns/stonework#hasThreatActorType">hasThreatActorType</a> <sup class="type-op" title="object property">op</sup>, <a href="#objective" title="https://cyberterrain.org/ns/stonework#objective">objective</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#operatesIn" title="https://cyberterrain.org/ns/stonework#operatesIn">operatesIn</a> <sup class="type-op" title="object property">op</sup>, <a href="#posesThreat" title="https://cyberterrain.org/ns/stonework#posesThreat">posesThreat</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#addresses" title="https://cyberterrain.org/ns/stonework#addresses">addresses</a> <sup class="type-op" title="object property">op</sup>, <a href="#investigates" title="https://cyberterrain.org/ns/stonework#investigates">investigates</a> <sup class="type-op" title="object property">op</sup>, <a href="#memberOf" title="https://cyberterrain.org/ns/stonework#memberOf">memberOf</a> <sup class="type-op" title="object property">op</sup>, <a href="#scenarioActor" title="https://cyberterrain.org/ns/stonework#scenarioActor">scenarioActor</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#addresses" title="https://cyberterrain.org/ns/stonework#addresses">addresses</a> <sup class="type-op" title="object property">op</sup>, <a href="#memberOf" title="https://cyberterrain.org/ns/stonework#memberOf">memberOf</a> <sup class="type-op" title="object property">op</sup>, <a href="#scenarioActor" title="https://cyberterrain.org/ns/stonework#scenarioActor">scenarioActor</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -4455,6 +4545,7 @@ This section provides details for each class and property defined by STONEWORK.
   <li><a href="#emailOf" title="https://cyberterrain.org/ns/stonework#emailOf">emailOf</a></li>
   <li><a href="#employs" title="https://cyberterrain.org/ns/stonework#employs">employs</a></li>
   <li><a href="#evidencedBy" title="https://cyberterrain.org/ns/stonework#evidencedBy">evidencedBy</a></li>
+  <li><a href="#examines" title="https://cyberterrain.org/ns/stonework#examines">examines</a></li>
   <li><a href="#executedOn" title="https://cyberterrain.org/ns/stonework#executedOn">executedOn</a></li>
   <li><a href="#executionOf" title="https://cyberterrain.org/ns/stonework#executionOf">executionOf</a></li>
   <li><a href="#exploits" title="https://cyberterrain.org/ns/stonework#exploits">exploits</a></li>
@@ -4493,6 +4584,8 @@ This section provides details for each class and property defined by STONEWORK.
   <li><a href="#hasInfrastructureType" title="https://cyberterrain.org/ns/stonework#hasInfrastructureType">hasInfrastructureType</a></li>
   <li><a href="#hasInput" title="https://cyberterrain.org/ns/stonework#hasInput">hasInput</a></li>
   <li><a href="#hasInputVariable" title="https://cyberterrain.org/ns/stonework#hasInputVariable">hasInputVariable</a></li>
+  <li><a href="#hasInvestigationOutcome" title="https://cyberterrain.org/ns/stonework#hasInvestigationOutcome">hasInvestigationOutcome</a></li>
+  <li><a href="#hasInvestigationStatus" title="https://cyberterrain.org/ns/stonework#hasInvestigationStatus">hasInvestigationStatus</a></li>
   <li><a href="#hasIPBlock" title="https://cyberterrain.org/ns/stonework#hasIPBlock">hasIPBlock</a></li>
   <li><a href="#hasLikelihood" title="https://cyberterrain.org/ns/stonework#hasLikelihood">hasLikelihood</a></li>
   <li><a href="#hasLikelihoodLevel" title="https://cyberterrain.org/ns/stonework#hasLikelihoodLevel">hasLikelihoodLevel</a></li>
@@ -4509,6 +4602,7 @@ This section provides details for each class and property defined by STONEWORK.
   <li><a href="#hasOutputVariable" title="https://cyberterrain.org/ns/stonework#hasOutputVariable">hasOutputVariable</a></li>
   <li><a href="#hasParentProcess" title="https://cyberterrain.org/ns/stonework#hasParentProcess">hasParentProcess</a></li>
   <li><a href="#hasPhoneNumber" title="https://cyberterrain.org/ns/stonework#hasPhoneNumber">hasPhoneNumber</a></li>
+  <li><a href="#hasPriority" title="https://cyberterrain.org/ns/stonework#hasPriority">hasPriority</a></li>
   <li><a href="#hasProductInstallation" title="https://cyberterrain.org/ns/stonework#hasProductInstallation">hasProductInstallation</a></li>
   <li><a href="#hasProductType" title="https://cyberterrain.org/ns/stonework#hasProductType">hasProductType</a></li>
   <li><a href="#hasProvenance" title="https://cyberterrain.org/ns/stonework#hasProvenance">hasProvenance</a></li>
@@ -4549,6 +4643,7 @@ This section provides details for each class and property defined by STONEWORK.
   <li><a href="#issuedTo" title="https://cyberterrain.org/ns/stonework#issuedTo">issuedTo</a></li>
   <li><a href="#isVulnerableTo" title="https://cyberterrain.org/ns/stonework#isVulnerableTo">isVulnerableTo</a></li>
   <li><a href="#launchedBy" title="https://cyberterrain.org/ns/stonework#launchedBy">launchedBy</a></li>
+  <li><a href="#leadInvestigator" title="https://cyberterrain.org/ns/stonework#leadInvestigator">leadInvestigator</a></li>
   <li><a href="#linkedTo" title="https://cyberterrain.org/ns/stonework#linkedTo">linkedTo</a></li>
   <li><a href="#locatedAt" title="https://cyberterrain.org/ns/stonework#locatedAt">locatedAt</a></li>
   <li><a href="#locatedWithin" title="https://cyberterrain.org/ns/stonework#locatedWithin">locatedWithin</a></li>
@@ -4562,6 +4657,7 @@ This section provides details for each class and property defined by STONEWORK.
   <li><a href="#memberOfActivityCluster" title="https://cyberterrain.org/ns/stonework#memberOfActivityCluster">memberOfActivityCluster</a></li>
   <li><a href="#memberOfFamily" title="https://cyberterrain.org/ns/stonework#memberOfFamily">memberOfFamily</a></li>
   <li><a href="#mentions" title="https://cyberterrain.org/ns/stonework#mentions">mentions</a></li>
+  <li><a href="#mergedInto" title="https://cyberterrain.org/ns/stonework#mergedInto">mergedInto</a></li>
   <li><a href="#metricFor" title="https://cyberterrain.org/ns/stonework#metricFor">metricFor</a></li>
   <li><a href="#metricType" title="https://cyberterrain.org/ns/stonework#metricType">metricType</a></li>
   <li><a href="#mitigates" title="https://cyberterrain.org/ns/stonework#mitigates">mitigates</a></li>
@@ -4593,6 +4689,7 @@ This section provides details for each class and property defined by STONEWORK.
   <li><a href="#protects" title="https://cyberterrain.org/ns/stonework#protects">protects</a></li>
   <li><a href="#provenanceOf" title="https://cyberterrain.org/ns/stonework#provenanceOf">provenanceOf</a></li>
   <li><a href="#references" title="https://cyberterrain.org/ns/stonework#references">references</a></li>
+  <li><a href="#refersTo" title="https://cyberterrain.org/ns/stonework#refersTo">refersTo</a></li>
   <li><a href="#refines" title="https://cyberterrain.org/ns/stonework#refines">refines</a></li>
   <li><a href="#registeredTo" title="https://cyberterrain.org/ns/stonework#registeredTo">registeredTo</a></li>
   <li><a href="#registeredWith" title="https://cyberterrain.org/ns/stonework#registeredWith">registeredWith</a></li>
@@ -4630,6 +4727,7 @@ This section provides details for each class and property defined by STONEWORK.
   <li><a href="#targetsPlatform" title="https://cyberterrain.org/ns/stonework#targetsPlatform">targetsPlatform</a></li>
   <li><a href="#targetsService" title="https://cyberterrain.org/ns/stonework#targetsService">targetsService</a></li>
   <li><a href="#techniqueOf" title="https://cyberterrain.org/ns/stonework#techniqueOf">techniqueOf</a></li>
+  <li><a href="#testsHypothesis" title="https://cyberterrain.org/ns/stonework#testsHypothesis">testsHypothesis</a></li>
   <li><a href="#toStep" title="https://cyberterrain.org/ns/stonework#toStep">toStep</a></li>
   <li><a href="#transactionCurrency" title="https://cyberterrain.org/ns/stonework#transactionCurrency">transactionCurrency</a></li>
   <li><a href="#transfersFile" title="https://cyberterrain.org/ns/stonework#transfersFile">transfersFile</a></li>
@@ -5278,7 +5376,7 @@ This section provides details for each class and property defined by STONEWORK.
      has sub-properties
     </dt>
     <dd>
-     <a href="#hasAccountType" title="https://cyberterrain.org/ns/stonework#hasAccountType">hasAccountType</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasFalsePositiveRate" title="https://cyberterrain.org/ns/stonework#hasFalsePositiveRate">hasFalsePositiveRate</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasHypothesisStatus" title="https://cyberterrain.org/ns/stonework#hasHypothesisStatus">hasHypothesisStatus</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasImpactLevel" title="https://cyberterrain.org/ns/stonework#hasImpactLevel">hasImpactLevel</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasImpactType" title="https://cyberterrain.org/ns/stonework#hasImpactType">hasImpactType</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasIncidentStatus" title="https://cyberterrain.org/ns/stonework#hasIncidentStatus">hasIncidentStatus</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasInfrastructureType" title="https://cyberterrain.org/ns/stonework#hasInfrastructureType">hasInfrastructureType</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasLikelihoodLevel" title="https://cyberterrain.org/ns/stonework#hasLikelihoodLevel">hasLikelihoodLevel</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasMalwareType" title="https://cyberterrain.org/ns/stonework#hasMalwareType">hasMalwareType</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasMotivation" title="https://cyberterrain.org/ns/stonework#hasMotivation">hasMotivation</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasProductType" title="https://cyberterrain.org/ns/stonework#hasProductType">hasProductType</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasResourceLevel" title="https://cyberterrain.org/ns/stonework#hasResourceLevel">hasResourceLevel</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasRiskLevel" title="https://cyberterrain.org/ns/stonework#hasRiskLevel">hasRiskLevel</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasSophisticationLevel" title="https://cyberterrain.org/ns/stonework#hasSophisticationLevel">hasSophisticationLevel</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasThreatActorType" title="https://cyberterrain.org/ns/stonework#hasThreatActorType">hasThreatActorType</a> <sup class="type-op" title="object property">op</sup>
+     <a href="#hasAccountType" title="https://cyberterrain.org/ns/stonework#hasAccountType">hasAccountType</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasFalsePositiveRate" title="https://cyberterrain.org/ns/stonework#hasFalsePositiveRate">hasFalsePositiveRate</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasHypothesisStatus" title="https://cyberterrain.org/ns/stonework#hasHypothesisStatus">hasHypothesisStatus</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasImpactLevel" title="https://cyberterrain.org/ns/stonework#hasImpactLevel">hasImpactLevel</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasImpactType" title="https://cyberterrain.org/ns/stonework#hasImpactType">hasImpactType</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasIncidentStatus" title="https://cyberterrain.org/ns/stonework#hasIncidentStatus">hasIncidentStatus</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasInfrastructureType" title="https://cyberterrain.org/ns/stonework#hasInfrastructureType">hasInfrastructureType</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasInvestigationOutcome" title="https://cyberterrain.org/ns/stonework#hasInvestigationOutcome">hasInvestigationOutcome</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasInvestigationStatus" title="https://cyberterrain.org/ns/stonework#hasInvestigationStatus">hasInvestigationStatus</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasLikelihoodLevel" title="https://cyberterrain.org/ns/stonework#hasLikelihoodLevel">hasLikelihoodLevel</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasMalwareType" title="https://cyberterrain.org/ns/stonework#hasMalwareType">hasMalwareType</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasMotivation" title="https://cyberterrain.org/ns/stonework#hasMotivation">hasMotivation</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasPriority" title="https://cyberterrain.org/ns/stonework#hasPriority">hasPriority</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasProductType" title="https://cyberterrain.org/ns/stonework#hasProductType">hasProductType</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasResourceLevel" title="https://cyberterrain.org/ns/stonework#hasResourceLevel">hasResourceLevel</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasRiskLevel" title="https://cyberterrain.org/ns/stonework#hasRiskLevel">hasRiskLevel</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasSophisticationLevel" title="https://cyberterrain.org/ns/stonework#hasSophisticationLevel">hasSophisticationLevel</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasThreatActorType" title="https://cyberterrain.org/ns/stonework#hasThreatActorType">hasThreatActorType</a> <sup class="type-op" title="object property">op</sup>
     </dd>
     <dt>
      has range
@@ -6015,6 +6113,29 @@ This section provides details for each class and property defined by STONEWORK.
     </dt>
     <dd>
      <a href="#DigitalArtifact" title="https://cyberterrain.org/ns/stonework#DigitalArtifact">Digital Artifact</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="examines">
+  <h3>examines<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#examines</p>
+  <div class="comment">
+   <span class="markdown">Relates an Investigation to an intelligence product it considers as a source, such as a Report, a vendor's threat bulletin, or an imported STIX bundle.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Investigation" title="https://cyberterrain.org/ns/stonework#Investigation">Investigation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#IntelligenceProduct" title="https://cyberterrain.org/ns/stonework#IntelligenceProduct">Intelligence Product</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -6965,6 +7086,66 @@ This section provides details for each class and property defined by STONEWORK.
    </dl>
   </div>
  </div>
+ <div class="entity" id="hasInvestigationOutcome">
+  <h3>hasInvestigationOutcome<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#hasInvestigationOutcome</p>
+  <div class="comment">
+   <span class="markdown">Relates an Investigation to how it ended.</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#categorizedBy" title="https://cyberterrain.org/ns/stonework#categorizedBy">categorizedBy</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Investigation" title="https://cyberterrain.org/ns/stonework#Investigation">Investigation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#InvestigationOutcome" title="https://cyberterrain.org/ns/stonework#InvestigationOutcome">Investigation Outcome</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasInvestigationStatus">
+  <h3>hasInvestigationStatus<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#hasInvestigationStatus</p>
+  <div class="comment">
+   <span class="markdown">Relates an Investigation to its current lifecycle status.</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#categorizedBy" title="https://cyberterrain.org/ns/stonework#categorizedBy">categorizedBy</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Investigation" title="https://cyberterrain.org/ns/stonework#Investigation">Investigation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#InvestigationStatus" title="https://cyberterrain.org/ns/stonework#InvestigationStatus">Investigation Status</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="hasIPBlock">
   <h3>hasIPBlock<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#hasIPBlock</p>
@@ -7371,6 +7552,36 @@ This section provides details for each class and property defined by STONEWORK.
     </dt>
     <dd>
      <a href="#phoneNumberOf" title="https://cyberterrain.org/ns/stonework#phoneNumberOf">phoneNumberOf</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasPriority">
+  <h3>hasPriority<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#hasPriority</p>
+  <div class="comment">
+   <span class="markdown">Relates an Investigation or Incident to how urgently it should be worked.</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#categorizedBy" title="https://cyberterrain.org/ns/stonework#categorizedBy">categorizedBy</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Incident" title="https://cyberterrain.org/ns/stonework#Incident">Incident</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#Investigation" title="https://cyberterrain.org/ns/stonework#Investigation">Investigation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#PriorityLevel" title="https://cyberterrain.org/ns/stonework#PriorityLevel">Priority Level</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -8198,16 +8409,10 @@ This section provides details for each class and property defined by STONEWORK.
   <h3>investigatedBy<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#investigatedBy</p>
   <div class="comment">
-   <span class="markdown">Relates an Incident, Campaign, MalwareSample, or ThreatActor to an Investigation examining it.</span>
+   <span class="markdown">Relates the subject of an Investigation to the Investigation examining it.</span>
   </div>
   <div class="description">
    <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#Campaign" title="https://cyberterrain.org/ns/stonework#Campaign">Campaign</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#Incident" title="https://cyberterrain.org/ns/stonework#Incident">Incident</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#MalwareSample" title="https://cyberterrain.org/ns/stonework#MalwareSample">Malware Sample</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#ThreatActor" title="https://cyberterrain.org/ns/stonework#ThreatActor">Threat Actor</a> <sup class="type-c" title="class">c</sup>
-    </dd>
     <dt>
      has range
     </dt>
@@ -8236,12 +8441,6 @@ This section provides details for each class and property defined by STONEWORK.
     </dt>
     <dd>
      <a href="#Investigation" title="https://cyberterrain.org/ns/stonework#Investigation">Investigation</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="#Campaign" title="https://cyberterrain.org/ns/stonework#Campaign">Campaign</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#Incident" title="https://cyberterrain.org/ns/stonework#Incident">Incident</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#MalwareSample" title="https://cyberterrain.org/ns/stonework#MalwareSample">Malware Sample</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#ThreatActor" title="https://cyberterrain.org/ns/stonework#ThreatActor">Threat Actor</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      is inverse of
@@ -8421,6 +8620,36 @@ This section provides details for each class and property defined by STONEWORK.
     </dt>
     <dd>
      <a href="#UserAccount" title="https://cyberterrain.org/ns/stonework#UserAccount">User Account</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="leadInvestigator">
+  <h3>leadInvestigator<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#leadInvestigator</p>
+  <div class="comment">
+   <span class="markdown">Relates an Investigation to the Agent who leads it and is accountable for its conclusion.</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#performedBy" title="https://cyberterrain.org/ns/stonework#performedBy">performedBy</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Investigation" title="https://cyberterrain.org/ns/stonework#Investigation">Investigation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Agent" title="https://cyberterrain.org/ns/stonework#Agent">Agent</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -8722,6 +8951,30 @@ This section provides details for each class and property defined by STONEWORK.
    </dl>
   </div>
  </div>
+ <div class="entity" id="mergedInto">
+  <h3>mergedInto<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#mergedInto</p>
+  <div class="comment">
+   <span class="markdown">Relates an Investigation to the Investigation it was merged into, once analysts concluded the two examine the same matter.</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Investigation" title="https://cyberterrain.org/ns/stonework#Investigation">Investigation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Investigation" title="https://cyberterrain.org/ns/stonework#Investigation">Investigation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="metricFor">
   <h3>metricFor<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#metricFor</p>
@@ -8935,7 +9188,7 @@ This section provides details for each class and property defined by STONEWORK.
   <h3>opinionOf<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#opinionOf</p>
   <div class="comment">
-   <span class="markdown">Relates an Opinion to the IntelligenceProduct whose correctness or credibility it evaluates.</span>
+   <span class="markdown">Relates an Opinion to the IntelligenceProduct or QualifiedAssertion whose correctness or credibility it evaluates.</span>
   </div>
   <div class="description">
    <dl>
@@ -8949,7 +9202,7 @@ This section provides details for each class and property defined by STONEWORK.
      has range
     </dt>
     <dd>
-     <a href="#IntelligenceProduct" title="https://cyberterrain.org/ns/stonework#IntelligenceProduct">Intelligence Product</a> <sup class="type-c" title="class">c</sup>
+     <a href="#IntelligenceProduct" title="https://cyberterrain.org/ns/stonework#IntelligenceProduct">Intelligence Product</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#QualifiedAssertion" title="https://cyberterrain.org/ns/stonework#QualifiedAssertion">Qualified Assertion</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -9090,6 +9343,12 @@ This section provides details for each class and property defined by STONEWORK.
   </div>
   <div class="description">
    <dl>
+    <dt>
+     has sub-properties
+    </dt>
+    <dd>
+     <a href="#leadInvestigator" title="https://cyberterrain.org/ns/stonework#leadInvestigator">leadInvestigator</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
     <dt>
      has domain
     </dt>
@@ -9430,6 +9689,13 @@ This section provides details for each class and property defined by STONEWORK.
   <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#references</p>
   <div class="comment">
    <span class="markdown">Generic reference from one entity to another. Use a more specific property where one exists.</span>
+  </div>
+ </div>
+ <div class="entity" id="refersTo">
+  <h3>refersTo<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#refersTo</p>
+  <div class="comment">
+   <span class="markdown">Relates an object, typically from an intelligence source, to the canonical entity it refers to, such as an ATT&amp;CK technique, a CVE, or a malware family, when the two are distinct individuals.</span>
   </div>
  </div>
  <div class="entity" id="refines">
@@ -10251,6 +10517,29 @@ This section provides details for each class and property defined by STONEWORK.
     </dt>
     <dd>
      <a href="#hasTechnique" title="https://cyberterrain.org/ns/stonework#hasTechnique">hasTechnique</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="testsHypothesis">
+  <h3>testsHypothesis<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#testsHypothesis</p>
+  <div class="comment">
+   <span class="markdown">Relates an Investigation to a Hypothesis it tests.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Investigation" title="https://cyberterrain.org/ns/stonework#Investigation">Investigation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Hypothesis" title="https://cyberterrain.org/ns/stonework#Hypothesis">Hypothesis</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -14131,6 +14420,7 @@ This section provides details for each class and property defined by STONEWORK.
   <li><a href="#motivationAccidental" title="https://cyberterrain.org/ns/stonework#motivationAccidental">Accidental</a></li>
   <li><a href="#metricAccountBalance" title="https://cyberterrain.org/ns/stonework#metricAccountBalance">Account Balance</a></li>
   <li><a href="#paymentInstrumentAchTransfer" title="https://cyberterrain.org/ns/stonework#paymentInstrumentAchTransfer">ACH Transfer</a></li>
+  <li><a href="#investigationStatusActive" title="https://cyberterrain.org/ns/stonework#investigationStatusActive">Active</a></li>
   <li><a href="#threatActorTypeActivist" title="https://cyberterrain.org/ns/stonework#threatActorTypeActivist">Activist</a></li>
   <li><a href="#sophisticationLevelAdvanced" title="https://cyberterrain.org/ns/stonework#sophisticationLevelAdvanced">Advanced</a></li>
   <li><a href="#Adware" title="https://cyberterrain.org/ns/stonework#Adware">Adware</a></li>
@@ -14142,6 +14432,7 @@ This section provides details for each class and property defined by STONEWORK.
   <li><a href="#productTypeApplication" title="https://cyberterrain.org/ns/stonework#productTypeApplication">Application</a></li>
   <li><a href="#impactTypeAvailability" title="https://cyberterrain.org/ns/stonework#impactTypeAvailability">Availability</a></li>
   <li><a href="#Backdoor" title="https://cyberterrain.org/ns/stonework#Backdoor">Backdoor</a></li>
+  <li><a href="#investigationOutcomeBenign" title="https://cyberterrain.org/ns/stonework#investigationOutcomeBenign">Benign</a></li>
   <li><a href="#Bootkit" title="https://cyberterrain.org/ns/stonework#Bootkit">Bootkit</a></li>
   <li><a href="#Bot" title="https://cyberterrain.org/ns/stonework#Bot">Bot</a></li>
   <li><a href="#infraTypeBotnet" title="https://cyberterrain.org/ns/stonework#infraTypeBotnet">Botnet</a></li>
@@ -14154,6 +14445,7 @@ This section provides details for each class and property defined by STONEWORK.
   <li><a href="#financialAccountTypeChecking" title="https://cyberterrain.org/ns/stonework#financialAccountTypeChecking">Checking Account</a></li>
   <li><a href="#currencyCNY" title="https://cyberterrain.org/ns/stonework#currencyCNY">Chinese Yuan</a></li>
   <li><a href="#incidentStatusClosed" title="https://cyberterrain.org/ns/stonework#incidentStatusClosed">Closed</a></li>
+  <li><a href="#investigationStatusClosed" title="https://cyberterrain.org/ns/stonework#investigationStatusClosed">Closed</a></li>
   <li><a href="#accountTypeCloud" title="https://cyberterrain.org/ns/stonework#accountTypeCloud">Cloud</a></li>
   <li><a href="#resourceLevelClub" title="https://cyberterrain.org/ns/stonework#resourceLevelClub">Club</a></li>
   <li><a href="#motivationCoercion" title="https://cyberterrain.org/ns/stonework#motivationCoercion">Coercion</a></li>
@@ -14163,6 +14455,7 @@ This section provides details for each class and property defined by STONEWORK.
   <li><a href="#metricConfidence" title="https://cyberterrain.org/ns/stonework#metricConfidence">Confidence</a></li>
   <li><a href="#impactTypeConfidentiality" title="https://cyberterrain.org/ns/stonework#impactTypeConfidentiality">Confidentiality</a></li>
   <li><a href="#hypothesisStatusConfirmed" title="https://cyberterrain.org/ns/stonework#hypothesisStatusConfirmed">Confirmed</a></li>
+  <li><a href="#investigationOutcomeConfirmed" title="https://cyberterrain.org/ns/stonework#investigationOutcomeConfirmed">Confirmed</a></li>
   <li><a href="#incidentStatusContained" title="https://cyberterrain.org/ns/stonework#incidentStatusContained">Contained</a></li>
   <li><a href="#productTypeContainerImage" title="https://cyberterrain.org/ns/stonework#productTypeContainerImage">Container Image</a></li>
   <li><a href="#resourceLevelContest" title="https://cyberterrain.org/ns/stonework#resourceLevelContest">Contest</a></li>
@@ -14170,6 +14463,7 @@ This section provides details for each class and property defined by STONEWORK.
   <li><a href="#financialInstitutionTypeCreditUnion" title="https://cyberterrain.org/ns/stonework#financialInstitutionTypeCreditUnion">Credit Union</a></li>
   <li><a href="#threatActorTypeCrimeSyndicate" title="https://cyberterrain.org/ns/stonework#threatActorTypeCrimeSyndicate">Crime Syndicate</a></li>
   <li><a href="#threatActorTypeCriminal" title="https://cyberterrain.org/ns/stonework#threatActorTypeCriminal">Criminal</a></li>
+  <li><a href="#priorityCritical" title="https://cyberterrain.org/ns/stonework#priorityCritical">Critical</a></li>
   <li><a href="#riskLevelCritical" title="https://cyberterrain.org/ns/stonework#riskLevelCritical">Critical</a></li>
   <li><a href="#transactionTypeCurrencyExchange" title="https://cyberterrain.org/ns/stonework#transactionTypeCurrencyExchange">Currency Exchange</a></li>
   <li><a href="#metricCvssBaseScore" title="https://cyberterrain.org/ns/stonework#metricCvssBaseScore">CVSS Base Score</a></li>
@@ -14188,6 +14482,7 @@ This section provides details for each class and property defined by STONEWORK.
   <li><a href="#infraTypeExfiltration" title="https://cyberterrain.org/ns/stonework#infraTypeExfiltration">Exfiltration</a></li>
   <li><a href="#sophisticationLevelExpert" title="https://cyberterrain.org/ns/stonework#sophisticationLevelExpert">Expert</a></li>
   <li><a href="#ExploitKit" title="https://cyberterrain.org/ns/stonework#ExploitKit">Exploit Kit</a></li>
+  <li><a href="#investigationOutcomeFalsePositive" title="https://cyberterrain.org/ns/stonework#investigationOutcomeFalsePositive">False Positive</a></li>
   <li><a href="#transactionTypeFee" title="https://cyberterrain.org/ns/stonework#transactionTypeFee">Fee</a></li>
   <li><a href="#impactTypeFinancial" title="https://cyberterrain.org/ns/stonework#impactTypeFinancial">Financial</a></li>
   <li><a href="#infraTypeFirewall" title="https://cyberterrain.org/ns/stonework#infraTypeFirewall">Firewall</a></li>
@@ -14198,11 +14493,13 @@ This section provides details for each class and property defined by STONEWORK.
   <li><a href="#threatActorTypeHacker" title="https://cyberterrain.org/ns/stonework#threatActorTypeHacker">Hacker</a></li>
   <li><a href="#productTypeHardware" title="https://cyberterrain.org/ns/stonework#productTypeHardware">Hardware</a></li>
   <li><a href="#falsePositiveRateHigh" title="https://cyberterrain.org/ns/stonework#falsePositiveRateHigh">High</a></li>
+  <li><a href="#priorityHigh" title="https://cyberterrain.org/ns/stonework#priorityHigh">High</a></li>
   <li><a href="#riskLevelHigh" title="https://cyberterrain.org/ns/stonework#riskLevelHigh">High</a></li>
   <li><a href="#infraTypeHostingMalware" title="https://cyberterrain.org/ns/stonework#infraTypeHostingMalware">Hosting Malware</a></li>
   <li><a href="#infraTypeHostingTargetLists" title="https://cyberterrain.org/ns/stonework#infraTypeHostingTargetLists">Hosting Target Lists</a></li>
   <li><a href="#motivationIdeology" title="https://cyberterrain.org/ns/stonework#motivationIdeology">Ideology</a></li>
   <li><a href="#incidentStatusInProgress" title="https://cyberterrain.org/ns/stonework#incidentStatusInProgress">In Progress</a></li>
+  <li><a href="#investigationOutcomeInconclusive" title="https://cyberterrain.org/ns/stonework#investigationOutcomeInconclusive">Inconclusive</a></li>
   <li><a href="#indicator" title="https://cyberterrain.org/ns/stonework#indicator">Indicator</a></li>
   <li><a href="#resourceLevelIndividual" title="https://cyberterrain.org/ns/stonework#resourceLevelIndividual">Individual</a></li>
   <li><a href="#threatActorRoleInfrastructureArchitect" title="https://cyberterrain.org/ns/stonework#threatActorRoleInfrastructureArchitect">Infrastructure Architect</a></li>
@@ -14223,9 +14520,11 @@ This section provides details for each class and property defined by STONEWORK.
   <li><a href="#impactLevelLimited" title="https://cyberterrain.org/ns/stonework#impactLevelLimited">Limited</a></li>
   <li><a href="#accountTypeLocal" title="https://cyberterrain.org/ns/stonework#accountTypeLocal">Local</a></li>
   <li><a href="#falsePositiveRateLow" title="https://cyberterrain.org/ns/stonework#falsePositiveRateLow">Low</a></li>
+  <li><a href="#priorityLow" title="https://cyberterrain.org/ns/stonework#priorityLow">Low</a></li>
   <li><a href="#riskLevelLow" title="https://cyberterrain.org/ns/stonework#riskLevelLow">Low</a></li>
   <li><a href="#threatActorRoleMalwareAuthor" title="https://cyberterrain.org/ns/stonework#threatActorRoleMalwareAuthor">Malware Author</a></li>
   <li><a href="#falsePositiveRateMedium" title="https://cyberterrain.org/ns/stonework#falsePositiveRateMedium">Medium</a></li>
+  <li><a href="#priorityMedium" title="https://cyberterrain.org/ns/stonework#priorityMedium">Medium</a></li>
   <li><a href="#riskLevelMedium" title="https://cyberterrain.org/ns/stonework#riskLevelMedium">Medium</a></li>
   <li><a href="#financialAccountTypeMerchantStoredValue" title="https://cyberterrain.org/ns/stonework#financialAccountTypeMerchantStoredValue">Merchant Stored Value</a></li>
   <li><a href="#sophisticationLevelMinimal" title="https://cyberterrain.org/ns/stonework#sophisticationLevelMinimal">Minimal</a></li>
@@ -14237,8 +14536,10 @@ This section provides details for each class and property defined by STONEWORK.
   <li><a href="#metricNormalizedValue" title="https://cyberterrain.org/ns/stonework#metricNormalizedValue">Normalized Value</a></li>
   <li><a href="#NotEquals" title="https://cyberterrain.org/ns/stonework#NotEquals">Not Equals</a></li>
   <li><a href="#motivationNotoriety" title="https://cyberterrain.org/ns/stonework#motivationNotoriety">Notoriety</a></li>
+  <li><a href="#investigationStatusOnHold" title="https://cyberterrain.org/ns/stonework#investigationStatusOnHold">On Hold</a></li>
   <li><a href="#paymentInstrumentOnChainTransfer" title="https://cyberterrain.org/ns/stonework#paymentInstrumentOnChainTransfer">On-Chain Transfer</a></li>
   <li><a href="#incidentStatusOpen" title="https://cyberterrain.org/ns/stonework#incidentStatusOpen">Open</a></li>
+  <li><a href="#investigationStatusOpen" title="https://cyberterrain.org/ns/stonework#investigationStatusOpen">Open</a></li>
   <li><a href="#productTypeOperatingSystem" title="https://cyberterrain.org/ns/stonework#productTypeOperatingSystem">Operating System</a></li>
   <li><a href="#resourceLevelOrganization" title="https://cyberterrain.org/ns/stonework#resourceLevelOrganization">Organization</a></li>
   <li><a href="#motivationOrganizationalGain" title="https://cyberterrain.org/ns/stonework#motivationOrganizationalGain">Organizational Gain</a></li>
@@ -14294,12 +14595,15 @@ This section provides details for each class and property defined by STONEWORK.
   <li><a href="#incidentStatusScheme" title="https://cyberterrain.org/ns/stonework#incidentStatusScheme">STONEWORK Incident Status Scheme</a></li>
   <li><a href="#industryScheme" title="https://cyberterrain.org/ns/stonework#industryScheme">STONEWORK Industry Scheme</a></li>
   <li><a href="#infrastructureTypeScheme" title="https://cyberterrain.org/ns/stonework#infrastructureTypeScheme">STONEWORK Infrastructure Type Scheme</a></li>
+  <li><a href="#investigationOutcomeScheme" title="https://cyberterrain.org/ns/stonework#investigationOutcomeScheme">STONEWORK Investigation Outcome Scheme</a></li>
+  <li><a href="#investigationStatusScheme" title="https://cyberterrain.org/ns/stonework#investigationStatusScheme">STONEWORK Investigation Status Scheme</a></li>
   <li><a href="#killChainPhaseScheme" title="https://cyberterrain.org/ns/stonework#killChainPhaseScheme">STONEWORK Kill Chain Phase Scheme</a></li>
   <li><a href="#likelihoodLevelScheme" title="https://cyberterrain.org/ns/stonework#likelihoodLevelScheme">STONEWORK Likelihood Level Scheme</a></li>
   <li><a href="#malwareTypeScheme" title="https://cyberterrain.org/ns/stonework#malwareTypeScheme">STONEWORK Malware Type Scheme</a></li>
   <li><a href="#metricTypeScheme" title="https://cyberterrain.org/ns/stonework#metricTypeScheme">STONEWORK Metric Type Scheme</a></li>
   <li><a href="#motivationScheme" title="https://cyberterrain.org/ns/stonework#motivationScheme">STONEWORK Motivation Scheme</a></li>
   <li><a href="#paymentInstrumentScheme" title="https://cyberterrain.org/ns/stonework#paymentInstrumentScheme">STONEWORK Payment Instrument Scheme</a></li>
+  <li><a href="#priorityLevelScheme" title="https://cyberterrain.org/ns/stonework#priorityLevelScheme">STONEWORK Priority Level Scheme</a></li>
   <li><a href="#productTypeScheme" title="https://cyberterrain.org/ns/stonework#productTypeScheme">STONEWORK Product Type Scheme</a></li>
   <li><a href="#resourceLevelScheme" title="https://cyberterrain.org/ns/stonework#resourceLevelScheme">STONEWORK Resource Level Scheme</a></li>
   <li><a href="#riskLevelScheme" title="https://cyberterrain.org/ns/stonework#riskLevelScheme">STONEWORK Risk Level Scheme</a></li>
@@ -14438,6 +14742,42 @@ This section provides details for each class and property defined by STONEWORK.
    </dd>
    <dd>
     <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"ACH Transfer"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="investigationStatusActive">
+  <h3>Active<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#investigationStatusActive</p>
+  <div class="comment">
+   <span class="markdown">Analysts are working the investigation.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#InvestigationStatus" title="https://cyberterrain.org/ns/stonework#InvestigationStatus">Investigation Status</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#notation" target="_blank" title="http://www.w3.org/2004/02/skos/core#notation">notation</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"active"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Analysts are working the investigation."@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#categoryScheme" title="https://cyberterrain.org/ns/stonework#categoryScheme">STONEWORK Category Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#investigationStatusScheme" title="https://cyberterrain.org/ns/stonework#investigationStatusScheme">STONEWORK Investigation Status Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Active"@en</span>
    </dd>
   </dl>
  </div>
@@ -14834,6 +15174,42 @@ This section provides details for each class and property defined by STONEWORK.
    </dd>
    <dd>
     <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Backdoor"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="investigationOutcomeBenign">
+  <h3>Benign<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#investigationOutcomeBenign</p>
+  <div class="comment">
+   <span class="markdown">The activity was real but legitimate or authorized, not adverse.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#InvestigationOutcome" title="https://cyberterrain.org/ns/stonework#InvestigationOutcome">Investigation Outcome</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#notation" target="_blank" title="http://www.w3.org/2004/02/skos/core#notation">notation</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"benign"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"The activity was real but legitimate or authorized, not adverse."@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#categoryScheme" title="https://cyberterrain.org/ns/stonework#categoryScheme">STONEWORK Category Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#investigationOutcomeScheme" title="https://cyberterrain.org/ns/stonework#investigationOutcomeScheme">STONEWORK Investigation Outcome Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Benign"@en</span>
    </dd>
   </dl>
  </div>
@@ -15263,6 +15639,42 @@ This section provides details for each class and property defined by STONEWORK.
    </dd>
   </dl>
  </div>
+ <div class="entity" id="investigationStatusClosed">
+  <h3>Closed<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#investigationStatusClosed</p>
+  <div class="comment">
+   <span class="markdown">Work is complete and the investigation has been formally closed; its outcome records how it ended.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#InvestigationStatus" title="https://cyberterrain.org/ns/stonework#InvestigationStatus">Investigation Status</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#notation" target="_blank" title="http://www.w3.org/2004/02/skos/core#notation">notation</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"closed"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Work is complete and the investigation has been formally closed; its outcome records how it ended."@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#categoryScheme" title="https://cyberterrain.org/ns/stonework#categoryScheme">STONEWORK Category Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#investigationStatusScheme" title="https://cyberterrain.org/ns/stonework#investigationStatusScheme">STONEWORK Investigation Status Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Closed"@en</span>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="accountTypeCloud">
   <h3>Cloud<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#accountTypeCloud</p>
@@ -15587,6 +15999,42 @@ This section provides details for each class and property defined by STONEWORK.
    </dd>
   </dl>
  </div>
+ <div class="entity" id="investigationOutcomeConfirmed">
+  <h3>Confirmed<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#investigationOutcomeConfirmed</p>
+  <div class="comment">
+   <span class="markdown">The matter investigated was confirmed: malicious or adverse activity took place, or the threat is real.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#InvestigationOutcome" title="https://cyberterrain.org/ns/stonework#InvestigationOutcome">Investigation Outcome</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#notation" target="_blank" title="http://www.w3.org/2004/02/skos/core#notation">notation</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"confirmed"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"The matter investigated was confirmed: malicious or adverse activity took place, or the threat is real."@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#categoryScheme" title="https://cyberterrain.org/ns/stonework#categoryScheme">STONEWORK Category Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#investigationOutcomeScheme" title="https://cyberterrain.org/ns/stonework#investigationOutcomeScheme">STONEWORK Investigation Outcome Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Confirmed"@en</span>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="incidentStatusContained">
   <h3>Contained<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#incidentStatusContained</p>
@@ -15836,6 +16284,42 @@ This section provides details for each class and property defined by STONEWORK.
    </dd>
    <dd>
     <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Criminal"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="priorityCritical">
+  <h3>Critical<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#priorityCritical</p>
+  <div class="comment">
+   <span class="markdown">Work immediately, ahead of everything else.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#PriorityLevel" title="https://cyberterrain.org/ns/stonework#PriorityLevel">Priority Level</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#notation" target="_blank" title="http://www.w3.org/2004/02/skos/core#notation">notation</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"critical"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Work immediately, ahead of everything else."@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#categoryScheme" title="https://cyberterrain.org/ns/stonework#categoryScheme">STONEWORK Category Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#priorityLevelScheme" title="https://cyberterrain.org/ns/stonework#priorityLevelScheme">STONEWORK Priority Level Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Critical"@en</span>
    </dd>
   </dl>
  </div>
@@ -16469,6 +16953,42 @@ This section provides details for each class and property defined by STONEWORK.
    </dd>
   </dl>
  </div>
+ <div class="entity" id="investigationOutcomeFalsePositive">
+  <h3>False Positive<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#investigationOutcomeFalsePositive</p>
+  <div class="comment">
+   <span class="markdown">What prompted the investigation was an error: the alert, indicator, or report did not reflect what it seemed to.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#InvestigationOutcome" title="https://cyberterrain.org/ns/stonework#InvestigationOutcome">Investigation Outcome</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#notation" target="_blank" title="http://www.w3.org/2004/02/skos/core#notation">notation</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"false-positive"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"What prompted the investigation was an error: the alert, indicator, or report did not reflect what it seemed to."@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#categoryScheme" title="https://cyberterrain.org/ns/stonework#categoryScheme">STONEWORK Category Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#investigationOutcomeScheme" title="https://cyberterrain.org/ns/stonework#investigationOutcomeScheme">STONEWORK Investigation Outcome Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"False Positive"@en</span>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="transactionTypeFee">
   <h3>Fee<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#transactionTypeFee</p>
@@ -16811,6 +17331,42 @@ This section provides details for each class and property defined by STONEWORK.
    </dd>
   </dl>
  </div>
+ <div class="entity" id="priorityHigh">
+  <h3>High<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#priorityHigh</p>
+  <div class="comment">
+   <span class="markdown">Work as soon as possible.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#PriorityLevel" title="https://cyberterrain.org/ns/stonework#PriorityLevel">Priority Level</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#notation" target="_blank" title="http://www.w3.org/2004/02/skos/core#notation">notation</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"high"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Work as soon as possible."@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#categoryScheme" title="https://cyberterrain.org/ns/stonework#categoryScheme">STONEWORK Category Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#priorityLevelScheme" title="https://cyberterrain.org/ns/stonework#priorityLevelScheme">STONEWORK Priority Level Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"High"@en</span>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="riskLevelHigh">
   <h3>High<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#riskLevelHigh</p>
@@ -16988,6 +17544,42 @@ This section provides details for each class and property defined by STONEWORK.
    </dd>
    <dd>
     <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"In Progress"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="investigationOutcomeInconclusive">
+  <h3>Inconclusive<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#investigationOutcomeInconclusive</p>
+  <div class="comment">
+   <span class="markdown">The evidence was not sufficient to reach a conclusion.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#InvestigationOutcome" title="https://cyberterrain.org/ns/stonework#InvestigationOutcome">Investigation Outcome</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#notation" target="_blank" title="http://www.w3.org/2004/02/skos/core#notation">notation</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"inconclusive"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"The evidence was not sufficient to reach a conclusion."@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#categoryScheme" title="https://cyberterrain.org/ns/stonework#categoryScheme">STONEWORK Category Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#investigationOutcomeScheme" title="https://cyberterrain.org/ns/stonework#investigationOutcomeScheme">STONEWORK Investigation Outcome Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Inconclusive"@en</span>
    </dd>
   </dl>
  </div>
@@ -17684,6 +18276,42 @@ This section provides details for each class and property defined by STONEWORK.
    </dd>
   </dl>
  </div>
+ <div class="entity" id="priorityLow">
+  <h3>Low<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#priorityLow</p>
+  <div class="comment">
+   <span class="markdown">Work when higher-priority matters allow.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#PriorityLevel" title="https://cyberterrain.org/ns/stonework#PriorityLevel">Priority Level</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#notation" target="_blank" title="http://www.w3.org/2004/02/skos/core#notation">notation</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"low"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Work when higher-priority matters allow."@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#categoryScheme" title="https://cyberterrain.org/ns/stonework#categoryScheme">STONEWORK Category Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#priorityLevelScheme" title="https://cyberterrain.org/ns/stonework#priorityLevelScheme">STONEWORK Priority Level Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Low"@en</span>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="riskLevelLow">
   <h3>Low<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#riskLevelLow</p>
@@ -17786,6 +18414,42 @@ This section provides details for each class and property defined by STONEWORK.
    </dd>
    <dd>
     <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#falsePositiveRateScheme" title="https://cyberterrain.org/ns/stonework#falsePositiveRateScheme">STONEWORK False Positive Rate Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Medium"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="priorityMedium">
+  <h3>Medium<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#priorityMedium</p>
+  <div class="comment">
+   <span class="markdown">Work in the normal course.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#PriorityLevel" title="https://cyberterrain.org/ns/stonework#PriorityLevel">Priority Level</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#notation" target="_blank" title="http://www.w3.org/2004/02/skos/core#notation">notation</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"medium"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Work in the normal course."@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#categoryScheme" title="https://cyberterrain.org/ns/stonework#categoryScheme">STONEWORK Category Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#priorityLevelScheme" title="https://cyberterrain.org/ns/stonework#priorityLevelScheme">STONEWORK Priority Level Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
     <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Medium"@en</span>
@@ -18179,6 +18843,42 @@ This section provides details for each class and property defined by STONEWORK.
    </dd>
   </dl>
  </div>
+ <div class="entity" id="investigationStatusOnHold">
+  <h3>On Hold<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#investigationStatusOnHold</p>
+  <div class="comment">
+   <span class="markdown">Work is paused, for example while waiting on evidence, a third party, or a decision.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#InvestigationStatus" title="https://cyberterrain.org/ns/stonework#InvestigationStatus">Investigation Status</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#notation" target="_blank" title="http://www.w3.org/2004/02/skos/core#notation">notation</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"on-hold"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Work is paused, for example while waiting on evidence, a third party, or a decision."@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#categoryScheme" title="https://cyberterrain.org/ns/stonework#categoryScheme">STONEWORK Category Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#investigationStatusScheme" title="https://cyberterrain.org/ns/stonework#investigationStatusScheme">STONEWORK Investigation Status Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"On Hold"@en</span>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="paymentInstrumentOnChainTransfer">
   <h3>On-Chain Transfer<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#paymentInstrumentOnChainTransfer</p>
@@ -18245,6 +18945,42 @@ This section provides details for each class and property defined by STONEWORK.
    </dd>
    <dd>
     <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#incidentStatusScheme" title="https://cyberterrain.org/ns/stonework#incidentStatusScheme">STONEWORK Incident Status Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Open"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="investigationStatusOpen">
+  <h3>Open<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#investigationStatusOpen</p>
+  <div class="comment">
+   <span class="markdown">The investigation has been opened and work has not yet started in earnest.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#InvestigationStatus" title="https://cyberterrain.org/ns/stonework#InvestigationStatus">Investigation Status</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#notation" target="_blank" title="http://www.w3.org/2004/02/skos/core#notation">notation</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"open"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"The investigation has been opened and work has not yet started in earnest."@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#categoryScheme" title="https://cyberterrain.org/ns/stonework#categoryScheme">STONEWORK Category Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#investigationStatusScheme" title="https://cyberterrain.org/ns/stonework#investigationStatusScheme">STONEWORK Investigation Status Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
    <dd>
     <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Open"@en</span>
@@ -20153,6 +20889,66 @@ This section provides details for each class and property defined by STONEWORK.
    </dd>
   </dl>
  </div>
+ <div class="entity" id="investigationOutcomeScheme">
+  <h3>STONEWORK Investigation Outcome Scheme<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#investigationOutcomeScheme</p>
+  <div class="comment">
+   <span class="markdown">The controlled vocabulary of investigation outcomes.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/title" target="_blank" title="http://purl.org/dc/terms/title">title</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"STONEWORK Investigation Outcome Scheme"@en</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/isPartOf" target="_blank" title="http://purl.org/dc/terms/isPartOf">is Part Of</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#categoryScheme" title="https://cyberterrain.org/ns/stonework#categoryScheme">STONEWORK Category Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"The controlled vocabulary of investigation outcomes."@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"STONEWORK Investigation Outcome Scheme"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="investigationStatusScheme">
+  <h3>STONEWORK Investigation Status Scheme<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#investigationStatusScheme</p>
+  <div class="comment">
+   <span class="markdown">The controlled vocabulary of investigation lifecycle states.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/title" target="_blank" title="http://purl.org/dc/terms/title">title</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"STONEWORK Investigation Status Scheme"@en</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/isPartOf" target="_blank" title="http://purl.org/dc/terms/isPartOf">is Part Of</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#categoryScheme" title="https://cyberterrain.org/ns/stonework#categoryScheme">STONEWORK Category Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"The controlled vocabulary of investigation lifecycle states."@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"STONEWORK Investigation Status Scheme"@en</span>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="killChainPhaseScheme">
   <h3>STONEWORK Kill Chain Phase Scheme<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#killChainPhaseScheme</p>
@@ -20374,6 +21170,36 @@ This section provides details for each class and property defined by STONEWORK.
    </dd>
    <dd>
     <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"STONEWORK Payment Instrument Scheme"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="priorityLevelScheme">
+  <h3>STONEWORK Priority Level Scheme<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#priorityLevelScheme</p>
+  <div class="comment">
+   <span class="markdown">The controlled vocabulary of work priority levels.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/title" target="_blank" title="http://purl.org/dc/terms/title">title</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"STONEWORK Priority Level Scheme"@en</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/isPartOf" target="_blank" title="http://purl.org/dc/terms/isPartOf">is Part Of</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#categoryScheme" title="https://cyberterrain.org/ns/stonework#categoryScheme">STONEWORK Category Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"The controlled vocabulary of work priority levels."@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"STONEWORK Priority Level Scheme"@en</span>
    </dd>
   </dl>
  </div>

@@ -7,11 +7,11 @@
 @base <https://cyberterrain.org/ns/stonework#> .
 
 <https://cyberterrain.org/ns/stonework#> rdf:type owl:Ontology ;
-                                          owl:versionIRI <https://cyberterrain.org/ns/stonework/0.10.0> ;
+                                          owl:versionIRI <https://cyberterrain.org/ns/stonework/0.11.0> ;
                                           <http://purl.org/dc/terms/creator> "Hohimer Intelligence Strategies LLC" ;
                                           <http://purl.org/dc/terms/license> <https://opensource.org/licenses/MIT> ;
                                           rdfs:label "STONEWORK"@en ;
-                                          owl:versionInfo "0.10.0" .
+                                          owl:versionInfo "0.11.0" .
 
 #################################################################
 #    Annotation properties
@@ -682,6 +682,15 @@ xsd:date rdf:type rdfs:Datatype .
              <http://www.w3.org/2004/02/skos/core#prefLabel> "evidencedBy"@en .
 
 
+###  https://cyberterrain.org/ns/stonework#examines
+:examines rdf:type owl:ObjectProperty ;
+          rdfs:domain :Investigation ;
+          rdfs:range :IntelligenceProduct ;
+          <http://www.w3.org/2004/02/skos/core#definition> "Relates an Investigation to an intelligence product it considers as a source, such as a Report, a vendor's threat bulletin, or an imported STIX bundle."@en ;
+          <http://www.w3.org/2004/02/skos/core#prefLabel> "examines"@en ;
+          <http://www.w3.org/2004/02/skos/core#scopeNote> "The intelligence-side counterpart of stonework:collects, which is for the DigitalArtifacts an Investigation collects as forensic evidence. What an Investigation produces is stonework:producesReport."@en .
+
+
 ###  https://cyberterrain.org/ns/stonework#executedOn
 :executedOn rdf:type owl:ObjectProperty ;
             owl:inverseOf :runs ;
@@ -1028,6 +1037,28 @@ xsd:date rdf:type rdfs:Datatype .
                      <http://www.w3.org/2004/02/skos/core#scopeNote> "Used in the user-data graph to assert enterprise inventory directly. Combined with stonework:versionOf and stonework:affected, enables traversal from installed software to applicable CVEs. For SBOM-based ingest with full component provenance, see stonework:SoftwareBillOfMaterials and stonework:hasBomEntry."@en .
 
 
+###  https://cyberterrain.org/ns/stonework#hasInvestigationOutcome
+:hasInvestigationOutcome rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :categorizedBy ;
+                         rdf:type owl:FunctionalProperty ;
+                         rdfs:domain :Investigation ;
+                         rdfs:range :InvestigationOutcome ;
+                         <http://www.w3.org/2004/02/skos/core#definition> "Relates an Investigation to how it ended."@en ;
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "hasInvestigationOutcome"@en ;
+                         <http://www.w3.org/2004/02/skos/core#scopeNote> "Set when the Investigation is closed (stonework:hasInvestigationStatus Closed). Distinct from a Hypothesis's status: an Investigation can confirm some hypotheses and refute others and still have one outcome."@en .
+
+
+###  https://cyberterrain.org/ns/stonework#hasInvestigationStatus
+:hasInvestigationStatus rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :categorizedBy ;
+                        rdf:type owl:FunctionalProperty ;
+                        rdfs:domain :Investigation ;
+                        rdfs:range :InvestigationStatus ;
+                        <http://www.w3.org/2004/02/skos/core#definition> "Relates an Investigation to its current lifecycle status."@en ;
+                        <http://www.w3.org/2004/02/skos/core#prefLabel> "hasInvestigationStatus"@en ;
+                        <http://www.w3.org/2004/02/skos/core#scopeNote> "At most one current status. Closing an Investigation is the status Closed together with stonework:endedAtTime; how it ended is stonework:hasInvestigationOutcome."@en .
+
+
 ###  https://cyberterrain.org/ns/stonework#hasLikelihood
 :hasLikelihood rdf:type owl:ObjectProperty ;
                rdfs:domain :Risk ;
@@ -1173,6 +1204,21 @@ xsd:date rdf:type rdfs:Datatype .
                 rdfs:range :PhoneNumber ;
                 <http://www.w3.org/2004/02/skos/core#definition> "A PhoneNumber associated with this Agent."@en ;
                 <http://www.w3.org/2004/02/skos/core#prefLabel> "hasPhoneNumber"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#hasPriority
+:hasPriority rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :categorizedBy ;
+             rdf:type owl:FunctionalProperty ;
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( :Incident
+                                         :Investigation
+                                       )
+                         ] ;
+             rdfs:range :PriorityLevel ;
+             <http://www.w3.org/2004/02/skos/core#definition> "Relates an Investigation or Incident to how urgently it should be worked."@en ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "hasPriority"@en ;
+             <http://www.w3.org/2004/02/skos/core#scopeNote> "Priority is a decision about ordering work, distinct from stonework:ImpactLevel and stonework:RiskLevel, which assess consequence and likelihood; a high-impact matter may still be a lower priority than another. At most one current priority."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#hasProductInstallation
@@ -1478,31 +1524,19 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://cyberterrain.org/ns/stonework#investigatedBy
 :investigatedBy rdf:type owl:ObjectProperty ;
-                rdfs:domain [ rdf:type owl:Class ;
-                              owl:unionOf ( :Campaign
-                                            :Incident
-                                            :MalwareSample
-                                            :ThreatActor
-                                          )
-                            ] ;
                 rdfs:range :Investigation ;
-                <http://www.w3.org/2004/02/skos/core#definition> "Relates an Incident, Campaign, MalwareSample, or ThreatActor to an Investigation examining it."@en ;
-                <http://www.w3.org/2004/02/skos/core#prefLabel> "investigatedBy"@en .
+                <http://www.w3.org/2004/02/skos/core#definition> "Relates the subject of an Investigation to the Investigation examining it."@en ;
+                <http://www.w3.org/2004/02/skos/core#prefLabel> "investigatedBy"@en ;
+                <http://www.w3.org/2004/02/skos/core#scopeNote> "Domain intentionally unset; see stonework:investigates."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#investigates
 :investigates rdf:type owl:ObjectProperty ;
               owl:inverseOf :investigatedBy ;
               rdfs:domain :Investigation ;
-              rdfs:range [ rdf:type owl:Class ;
-                           owl:unionOf ( :Campaign
-                                         :Incident
-                                         :MalwareSample
-                                         :ThreatActor
-                                       )
-                         ] ;
               <http://www.w3.org/2004/02/skos/core#definition> "Relates an Investigation to the subject being investigated."@en ;
-              <http://www.w3.org/2004/02/skos/core#prefLabel> "investigates"@en .
+              <http://www.w3.org/2004/02/skos/core#prefLabel> "investigates"@en ;
+              <http://www.w3.org/2004/02/skos/core#scopeNote> "Range intentionally unset: an Investigation may examine any matter of interest, among them an Incident, Campaign, ThreatActor or MalwareSample, a CyberActivityCluster, a Vulnerability or a Product's exposure to it, an Indicator, or an Infrastructure. The earlier union range (Campaign, Incident, MalwareSample, ThreatActor) rejected nothing: OWL only inferred that any other subject belonged to the union, which misclassified it."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#involvesCampaign
@@ -1570,6 +1604,17 @@ xsd:date rdf:type rdfs:Datatype .
             rdfs:range :UserAccount ;
             <http://www.w3.org/2004/02/skos/core#definition> "Relates a RuntimeProcess to the UserAccount under whose context it was launched."@en ;
             <http://www.w3.org/2004/02/skos/core#prefLabel> "launchedBy"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#leadInvestigator
+:leadInvestigator rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :performedBy ;
+                  rdf:type owl:FunctionalProperty ;
+                  rdfs:domain :Investigation ;
+                  rdfs:range :Agent ;
+                  <http://www.w3.org/2004/02/skos/core#definition> "Relates an Investigation to the Agent who leads it and is accountable for its conclusion."@en ;
+                  <http://www.w3.org/2004/02/skos/core#prefLabel> "leadInvestigator"@en ;
+                  <http://www.w3.org/2004/02/skos/core#scopeNote> "At most one lead at a time; others who work the Investigation are related by stonework:performedBy, which this specializes. For a lead in a particular period, or a role other than lead, use a stonework:RoleAssignment."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#linkedTo
@@ -1694,6 +1739,16 @@ xsd:date rdf:type rdfs:Datatype .
           <http://www.w3.org/2004/02/skos/core#prefLabel> "mentions" .
 
 
+###  https://cyberterrain.org/ns/stonework#mergedInto
+:mergedInto rdf:type owl:ObjectProperty ,
+                     owl:FunctionalProperty ;
+            rdfs:domain :Investigation ;
+            rdfs:range :Investigation ;
+            <http://www.w3.org/2004/02/skos/core#definition> "Relates an Investigation to the Investigation it was merged into, once analysts concluded the two examine the same matter."@en ;
+            <http://www.w3.org/2004/02/skos/core#prefLabel> "mergedInto"@en ;
+            <http://www.w3.org/2004/02/skos/core#scopeNote> "Keeps the merged Investigation as a record rather than deleting it, so its identity, findings and history stay traceable. A merge is an analyst's decision; when and by whom are recorded through stonework:hasProvenance or a stonework:QualifiedAssertion."@en .
+
+
 ###  https://cyberterrain.org/ns/stonework#metricFor
 :metricFor rdf:type owl:ObjectProperty ,
                     owl:FunctionalProperty ;
@@ -1789,9 +1844,14 @@ xsd:date rdf:type rdfs:Datatype .
 ###  https://cyberterrain.org/ns/stonework#opinionOf
 :opinionOf rdf:type owl:ObjectProperty ;
            rdfs:domain :Opinion ;
-           rdfs:range :IntelligenceProduct ;
-           <http://www.w3.org/2004/02/skos/core#definition> "Relates an Opinion to the IntelligenceProduct whose correctness or credibility it evaluates."@en ;
-           <http://www.w3.org/2004/02/skos/core#prefLabel> "opinionOf"@en .
+           rdfs:range [ rdf:type owl:Class ;
+                        owl:unionOf ( :IntelligenceProduct
+                                      :QualifiedAssertion
+                                    )
+                      ] ;
+           <http://www.w3.org/2004/02/skos/core#definition> "Relates an Opinion to the IntelligenceProduct or QualifiedAssertion whose correctness or credibility it evaluates."@en ;
+           <http://www.w3.org/2004/02/skos/core#prefLabel> "opinionOf"@en ;
+           <http://www.w3.org/2004/02/skos/core#scopeNote> "An analyst's confirmation or rejection of a single qualified assertion, such as a proposed stonework:refersTo link found by a heuristic, is an Opinion of that QualifiedAssertion: agreement (stones:opinion) with the explanation and author recorded on the Opinion."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#originatesFrom
@@ -2003,6 +2063,13 @@ xsd:date rdf:type rdfs:Datatype .
 :references rdf:type owl:ObjectProperty ;
             <http://www.w3.org/2004/02/skos/core#definition> "Generic reference from one entity to another. Use a more specific property where one exists."@en ;
             <http://www.w3.org/2004/02/skos/core#prefLabel> "references" .
+
+
+###  https://cyberterrain.org/ns/stonework#refersTo
+:refersTo rdf:type owl:ObjectProperty ;
+          <http://www.w3.org/2004/02/skos/core#definition> "Relates an object, typically from an intelligence source, to the canonical entity it refers to, such as an ATT&CK technique, a CVE, or a malware family, when the two are distinct individuals."@en ;
+          <http://www.w3.org/2004/02/skos/core#prefLabel> "refersTo"@en ;
+          <http://www.w3.org/2004/02/skos/core#scopeNote> "Unlike owl:sameAs, it does not merge the two individuals' properties. Two STIX objects with different STIX IDs are different objects even when both describe T1059: stones:stixId is functional, so owl:sameAs between them is inconsistent. Unlike skos:exactMatch, it does not make either end a skos:Concept. Domain and range intentionally unset: any intelligence object can refer to any canonical entity. A link found by a heuristic, such as an identifier parsed from a name, should carry its method and confidence through a stonework:QualifiedAssertion or stonework:hasProvenance."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#refines
@@ -2334,6 +2401,15 @@ xsd:date rdf:type rdfs:Datatype .
              <http://www.w3.org/2004/02/skos/core#definition> "Relates a Technique to a Tactic it supports or to a broader Technique of which it is a specialization."@en ;
              <http://www.w3.org/2004/02/skos/core#prefLabel> "techniqueOf"@en ;
              <http://www.w3.org/2004/02/skos/core#scopeNote> "This is the inverse of hasTechnique. A Technique may support multiple Tactics, and a sub-technique may identify its broader parent Technique through the same hierarchy."@en .
+
+
+###  https://cyberterrain.org/ns/stonework#testsHypothesis
+:testsHypothesis rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Investigation ;
+                 rdfs:range :Hypothesis ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "Relates an Investigation to a Hypothesis it tests."@en ;
+                 <http://www.w3.org/2004/02/skos/core#prefLabel> "testsHypothesis"@en ;
+                 <http://www.w3.org/2004/02/skos/core#scopeNote> "The direct link from an Investigation to its Hypotheses. When the Investigation executes an InvestigationPlan, the Hypothesis also predicts a Variable of a Step in that plan (stonework:predictsVariable); its outcome is stonework:hasHypothesisStatus."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#toStep
@@ -4461,7 +4537,18 @@ rdfs:Class rdf:type owl:Class .
                rdfs:subClassOf :Process ;
                <http://www.w3.org/2004/02/skos/core#definition> "A systematic Process of inquiry, evidence collection, analysis, hypothesis testing, and conclusion to understand, attribute, or resolve security incidents, threats, anomalies, or other matters of interest." ;
                <http://www.w3.org/2004/02/skos/core#prefLabel> "Investigation" ;
-               <http://www.w3.org/2004/02/skos/core#scopeNote> "Includes digital forensics, threat hunting, root cause analysis, and incident investigations. Links to Sightings, Evidence (via categorizedBy), Sensors, and produces Findings or updated Assessments."@en .
+               <http://www.w3.org/2004/02/skos/core#scopeNote> "Includes digital forensics, threat hunting, root cause analysis, and incident investigations, and the cases an analyst works. Its subject is stonework:investigates; its sources are stonework:examines (intelligence products) and stonework:collects (digital artifacts as evidence); its hypotheses are stonework:testsHypothesis; its output is stonework:producesReport. Who works it is stonework:performedBy and stonework:leadInvestigator; when, stonework:startedAtTime and stonework:endedAtTime. Its lifecycle is stonework:hasInvestigationStatus, how it ended is stonework:hasInvestigationOutcome, and its urgency is stonework:hasPriority (all in categories.ttl). An Investigation merged into another keeps its record, linked by stonework:mergedInto."@en .
+
+
+###  https://cyberterrain.org/ns/stonework#InvestigationOutcome
+:InvestigationOutcome rdf:type owl:Class ;
+                      rdfs:subClassOf :Category ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                        owl:hasValue :investigationOutcomeScheme
+                                      ] ;
+                      <http://www.w3.org/2004/02/skos/core#definition> "A classification of how a closed investigation ended."@en ;
+                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Investigation Outcome"@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#InvestigationPlan
@@ -4471,6 +4558,17 @@ rdfs:Class rdf:type owl:Class .
                    <http://www.w3.org/2004/02/skos/core#definition> "A Step-decomposed sequence of actions for systematically examining a cyber entity, artifact, or event to determine its nature, extent, or significance."@en ;
                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Investigation Plan" ;
                    <http://www.w3.org/2004/02/skos/core#scopeNote> "The general assessment-plan counterpart to stonework:Playbook on the production side: where a Playbook's execution changes state in the world, an InvestigationPlan's execution (a stonework:Investigation) produces judgment about something that already exists or happened — typically a stonework:Analysis or stonework:Assessment. stonework:DetectionPlan is a specialized subclass, narrowly scoped to determining whether observed activity constitutes a security-relevant violation; broader analytical work (forensic analysis, malware analysis, vulnerability assessment) is modeled directly as InvestigationPlan."@en .
+
+
+###  https://cyberterrain.org/ns/stonework#InvestigationStatus
+:InvestigationStatus rdf:type owl:Class ;
+                     rdfs:subClassOf :Category ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                       owl:hasValue :investigationStatusScheme
+                                     ] ;
+                     <http://www.w3.org/2004/02/skos/core#definition> "A classification of an investigation's position in its lifecycle."@en ;
+                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Investigation Status"@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#KillChainPhase
@@ -4772,6 +4870,17 @@ rdfs:Class rdf:type owl:Class .
           <http://www.w3.org/2004/02/skos/core#definition> "A documented, structured Behavior that defines a sequenced set of steps, decisions, and actions to be executed in response to a specific type of event, incident, or operational need."@en ;
           <http://www.w3.org/2004/02/skos/core#prefLabel> "Playbook" ;
           <http://www.w3.org/2004/02/skos/core#scopeNote> "A Playbook may be offensive (an adversary's operational playbook — see stonework:OperationPlan) or defensive (an incident response, threat hunting, or recovery playbook) — both are action plans carried out by an interested party, as distinct from stonework:DetectionPlan, which plays a neutral, evaluative role. A Playbook decomposes into Steps via stonework:hasStep; its actual execution is recorded as a stonework:Process."@en .
+
+
+###  https://cyberterrain.org/ns/stonework#PriorityLevel
+:PriorityLevel rdf:type owl:Class ;
+               rdfs:subClassOf :Category ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                 owl:hasValue :priorityLevelScheme
+                               ] ;
+               <http://www.w3.org/2004/02/skos/core#definition> "A classification of how urgently something should be worked, relative to other work."@en ;
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "Priority Level"@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#Procedure
@@ -6326,6 +6435,112 @@ rdfs:Class rdf:type owl:Class .
                           <http://www.w3.org/2004/02/skos/core#prefLabel> "STONEWORK Infrastructure Type Scheme"@en .
 
 
+###  https://cyberterrain.org/ns/stonework#investigationOutcomeBenign
+:investigationOutcomeBenign rdf:type owl:NamedIndividual ,
+                                     <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                     :InvestigationOutcome ;
+                            <http://www.w3.org/2004/02/skos/core#notation> "benign" ;
+                            <http://www.w3.org/2004/02/skos/core#definition> "The activity was real but legitimate or authorized, not adverse."@en ;
+                            <http://www.w3.org/2004/02/skos/core#inScheme> :categoryScheme ,
+                                                                           :investigationOutcomeScheme ;
+                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Benign"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#investigationOutcomeConfirmed
+:investigationOutcomeConfirmed rdf:type owl:NamedIndividual ,
+                                        <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                        :InvestigationOutcome ;
+                               <http://www.w3.org/2004/02/skos/core#notation> "confirmed" ;
+                               <http://www.w3.org/2004/02/skos/core#definition> "The matter investigated was confirmed: malicious or adverse activity took place, or the threat is real."@en ;
+                               <http://www.w3.org/2004/02/skos/core#inScheme> :categoryScheme ,
+                                                                              :investigationOutcomeScheme ;
+                               <http://www.w3.org/2004/02/skos/core#prefLabel> "Confirmed"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#investigationOutcomeFalsePositive
+:investigationOutcomeFalsePositive rdf:type owl:NamedIndividual ,
+                                            <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                            :InvestigationOutcome ;
+                                   <http://www.w3.org/2004/02/skos/core#notation> "false-positive" ;
+                                   <http://www.w3.org/2004/02/skos/core#definition> "What prompted the investigation was an error: the alert, indicator, or report did not reflect what it seemed to."@en ;
+                                   <http://www.w3.org/2004/02/skos/core#inScheme> :categoryScheme ,
+                                                                                  :investigationOutcomeScheme ;
+                                   <http://www.w3.org/2004/02/skos/core#prefLabel> "False Positive"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#investigationOutcomeInconclusive
+:investigationOutcomeInconclusive rdf:type owl:NamedIndividual ,
+                                           <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                           :InvestigationOutcome ;
+                                  <http://www.w3.org/2004/02/skos/core#notation> "inconclusive" ;
+                                  <http://www.w3.org/2004/02/skos/core#definition> "The evidence was not sufficient to reach a conclusion."@en ;
+                                  <http://www.w3.org/2004/02/skos/core#inScheme> :categoryScheme ,
+                                                                                 :investigationOutcomeScheme ;
+                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Inconclusive"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#investigationOutcomeScheme
+:investigationOutcomeScheme rdf:type owl:NamedIndividual ,
+                                     <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                            <http://purl.org/dc/terms/title> "STONEWORK Investigation Outcome Scheme"@en ;
+                            <http://purl.org/dc/terms/isPartOf> :categoryScheme ;
+                            <http://www.w3.org/2004/02/skos/core#definition> "The controlled vocabulary of investigation outcomes."@en ;
+                            <http://www.w3.org/2004/02/skos/core#prefLabel> "STONEWORK Investigation Outcome Scheme"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#investigationStatusActive
+:investigationStatusActive rdf:type owl:NamedIndividual ,
+                                    <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                    :InvestigationStatus ;
+                           <http://www.w3.org/2004/02/skos/core#notation> "active" ;
+                           <http://www.w3.org/2004/02/skos/core#definition> "Analysts are working the investigation."@en ;
+                           <http://www.w3.org/2004/02/skos/core#inScheme> :categoryScheme ,
+                                                                          :investigationStatusScheme ;
+                           <http://www.w3.org/2004/02/skos/core#prefLabel> "Active"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#investigationStatusClosed
+:investigationStatusClosed rdf:type owl:NamedIndividual ,
+                                    <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                    :InvestigationStatus ;
+                           <http://www.w3.org/2004/02/skos/core#notation> "closed" ;
+                           <http://www.w3.org/2004/02/skos/core#definition> "Work is complete and the investigation has been formally closed; its outcome records how it ended."@en ;
+                           <http://www.w3.org/2004/02/skos/core#inScheme> :categoryScheme ,
+                                                                          :investigationStatusScheme ;
+                           <http://www.w3.org/2004/02/skos/core#prefLabel> "Closed"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#investigationStatusOnHold
+:investigationStatusOnHold rdf:type owl:NamedIndividual ,
+                                    <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                    :InvestigationStatus ;
+                           <http://www.w3.org/2004/02/skos/core#notation> "on-hold" ;
+                           <http://www.w3.org/2004/02/skos/core#definition> "Work is paused, for example while waiting on evidence, a third party, or a decision."@en ;
+                           <http://www.w3.org/2004/02/skos/core#inScheme> :categoryScheme ,
+                                                                          :investigationStatusScheme ;
+                           <http://www.w3.org/2004/02/skos/core#prefLabel> "On Hold"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#investigationStatusOpen
+:investigationStatusOpen rdf:type owl:NamedIndividual ,
+                                  <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                  :InvestigationStatus ;
+                         <http://www.w3.org/2004/02/skos/core#notation> "open" ;
+                         <http://www.w3.org/2004/02/skos/core#definition> "The investigation has been opened and work has not yet started in earnest."@en ;
+                         <http://www.w3.org/2004/02/skos/core#inScheme> :categoryScheme ,
+                                                                        :investigationStatusScheme ;
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "Open"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#investigationStatusScheme
+:investigationStatusScheme rdf:type owl:NamedIndividual ,
+                                    <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                           <http://purl.org/dc/terms/title> "STONEWORK Investigation Status Scheme"@en ;
+                           <http://purl.org/dc/terms/isPartOf> :categoryScheme ;
+                           <http://www.w3.org/2004/02/skos/core#definition> "The controlled vocabulary of investigation lifecycle states."@en ;
+                           <http://www.w3.org/2004/02/skos/core#prefLabel> "STONEWORK Investigation Status Scheme"@en .
+
+
 ###  https://cyberterrain.org/ns/stonework#killChainPhaseScheme
 :killChainPhaseScheme rdf:type owl:NamedIndividual ,
                                <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
@@ -6722,6 +6937,59 @@ rdfs:Class rdf:type owl:Class .
                                <http://www.w3.org/2004/02/skos/core#inScheme> :categoryScheme ,
                                                                               :paymentInstrumentScheme ;
                                <http://www.w3.org/2004/02/skos/core#prefLabel> "Wire Transfer"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#priorityCritical
+:priorityCritical rdf:type owl:NamedIndividual ,
+                           <http://www.w3.org/2004/02/skos/core#Concept> ,
+                           :PriorityLevel ;
+                  <http://www.w3.org/2004/02/skos/core#notation> "critical" ;
+                  <http://www.w3.org/2004/02/skos/core#definition> "Work immediately, ahead of everything else."@en ;
+                  <http://www.w3.org/2004/02/skos/core#inScheme> :categoryScheme ,
+                                                                 :priorityLevelScheme ;
+                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Critical"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#priorityHigh
+:priorityHigh rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/2004/02/skos/core#Concept> ,
+                       :PriorityLevel ;
+              <http://www.w3.org/2004/02/skos/core#notation> "high" ;
+              <http://www.w3.org/2004/02/skos/core#definition> "Work as soon as possible."@en ;
+              <http://www.w3.org/2004/02/skos/core#inScheme> :categoryScheme ,
+                                                             :priorityLevelScheme ;
+              <http://www.w3.org/2004/02/skos/core#prefLabel> "High"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#priorityLevelScheme
+:priorityLevelScheme rdf:type owl:NamedIndividual ,
+                              <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                     <http://purl.org/dc/terms/title> "STONEWORK Priority Level Scheme"@en ;
+                     <http://purl.org/dc/terms/isPartOf> :categoryScheme ;
+                     <http://www.w3.org/2004/02/skos/core#definition> "The controlled vocabulary of work priority levels."@en ;
+                     <http://www.w3.org/2004/02/skos/core#prefLabel> "STONEWORK Priority Level Scheme"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#priorityLow
+:priorityLow rdf:type owl:NamedIndividual ,
+                      <http://www.w3.org/2004/02/skos/core#Concept> ,
+                      :PriorityLevel ;
+             <http://www.w3.org/2004/02/skos/core#notation> "low" ;
+             <http://www.w3.org/2004/02/skos/core#definition> "Work when higher-priority matters allow."@en ;
+             <http://www.w3.org/2004/02/skos/core#inScheme> :categoryScheme ,
+                                                            :priorityLevelScheme ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "Low"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#priorityMedium
+:priorityMedium rdf:type owl:NamedIndividual ,
+                         <http://www.w3.org/2004/02/skos/core#Concept> ,
+                         :PriorityLevel ;
+                <http://www.w3.org/2004/02/skos/core#notation> "medium" ;
+                <http://www.w3.org/2004/02/skos/core#definition> "Work in the normal course."@en ;
+                <http://www.w3.org/2004/02/skos/core#inScheme> :categoryScheme ,
+                                                               :priorityLevelScheme ;
+                <http://www.w3.org/2004/02/skos/core#prefLabel> "Medium"@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#productTypeAIModel
