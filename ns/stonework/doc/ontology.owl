@@ -10,11 +10,11 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:stonework="https://cyberterrain.org/ns/stonework#">
     <owl:Ontology rdf:about="https://cyberterrain.org/ns/stonework#">
-        <owl:versionIRI rdf:resource="https://cyberterrain.org/ns/stonework/0.11.0"/>
+        <owl:versionIRI rdf:resource="https://cyberterrain.org/ns/stonework/0.12.0"/>
         <terms:creator>Hohimer Intelligence Strategies LLC</terms:creator>
         <terms:license rdf:resource="https://opensource.org/licenses/MIT"/>
         <rdfs:label xml:lang="en">STONEWORK</rdfs:label>
-        <owl:versionInfo>0.11.0</owl:versionInfo>
+        <owl:versionInfo>0.12.0</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -478,6 +478,7 @@
         <rdfs:range rdf:resource="https://cyberterrain.org/ns/stonework#Agent"/>
         <skos:definition>Links a digital identity to the real-world Agent it is believed to belong to.</skos:definition>
         <skos:prefLabel>attributedToAgent</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Names the identity&apos;s holder, not whoever used it on a given occasion. When an identity is used by someone else, such as an actor holding a victim&apos;s stolen credentials, the activity keeps the identity as its stonework:performedBy and names the Agent responsible with stonework:attributedTo. That someone else controlled the identity for a period, such as an actor holding a mailbox&apos;s credentials from its compromise to its containment, is a stonework:IdentityControl.</skos:scopeNote>
     </owl:ObjectProperty>
     
 
@@ -520,16 +521,44 @@
     
 
 
+    <!-- https://cyberterrain.org/ns/stonework#bindingOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://cyberterrain.org/ns/stonework#bindingOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#VariableBinding"/>
+        <rdfs:range rdf:resource="https://cyberterrain.org/ns/stonework#Variable"/>
+        <skos:definition xml:lang="en">The Variable whose value in one execution a VariableBinding records.</skos:definition>
+        <skos:prefLabel>bindingOf</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#boundIn -->
+
+
+    <owl:ObjectProperty rdf:about="https://cyberterrain.org/ns/stonework#boundIn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#VariableBinding"/>
+        <rdfs:range rdf:resource="https://cyberterrain.org/ns/stonework#CyberActivity"/>
+        <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/prov#wasGeneratedBy"/>
+        <skos:definition xml:lang="en">The execution in which a VariableBinding&apos;s value was bound: the execution of the Step that outputs the Variable, or the run itself for an input supplied when it starts.</skos:definition>
+        <skos:prefLabel>boundIn</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Mirrors prov:wasGeneratedBy. The run a binding belongs to is the execution it is boundIn, or the one that execution is stonework:partOfExecution, at any depth.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://cyberterrain.org/ns/stonework#boundTo -->
 
 
     <owl:ObjectProperty rdf:about="https://cyberterrain.org/ns/stonework#boundTo">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#Variable"/>
+        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#VariableBinding"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <skos:definition xml:lang="en">Binds a Variable, at execution time, to the individual it actually resolved to — e.g. the specific SecurityCondition instance a successful attempt produced.</skos:definition>
+        <skos:definition xml:lang="en">The individual a Variable resolved to in one execution, e.g. the specific SecurityCondition a successful attempt produced.</skos:definition>
         <skos:prefLabel>boundTo</skos:prefLabel>
-        <skos:scopeNote xml:lang="en">Used when the bound value is an instance of a class rather than a scalar; see stonework:boundToLiteral for scalar bindings. Tested by stonework:guardType on a Transition.</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">Used when the bound value is an instance of a class rather than a scalar; see stonework:boundToLiteral for scalar bindings. Tested by stonework:guardType on a Transition. Since 0.12.0 the subject is a stonework:VariableBinding, not the Variable, so each execution has its own value.</skos:scopeNote>
     </owl:ObjectProperty>
     
 
@@ -752,6 +781,32 @@
     
 
 
+    <!-- https://cyberterrain.org/ns/stonework#controlledIdentity -->
+
+
+    <owl:ObjectProperty rdf:about="https://cyberterrain.org/ns/stonework#controlledIdentity">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#IdentityControl"/>
+        <rdfs:range rdf:resource="https://cyberterrain.org/ns/stonework#DigitalIdentity"/>
+        <skos:definition xml:lang="en">The DigitalIdentity, such as a UserAccount, controlled in a stonework:IdentityControl.</skos:definition>
+        <skos:prefLabel xml:lang="en">controlledIdentity</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#controllingAgent -->
+
+
+    <owl:ObjectProperty rdf:about="https://cyberterrain.org/ns/stonework#controllingAgent">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#IdentityControl"/>
+        <rdfs:range rdf:resource="https://cyberterrain.org/ns/stonework#Agent"/>
+        <skos:definition xml:lang="en">The Agent who controlled the identity in a stonework:IdentityControl.</skos:definition>
+        <skos:prefLabel xml:lang="en">controllingAgent</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://cyberterrain.org/ns/stonework#controls -->
 
 
@@ -883,6 +938,21 @@
     
 
 
+    <!-- https://cyberterrain.org/ns/stonework#defaultTransition -->
+
+
+    <owl:ObjectProperty rdf:about="https://cyberterrain.org/ns/stonework#defaultTransition">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#Step"/>
+        <rdfs:range rdf:resource="https://cyberterrain.org/ns/stonework#Transition"/>
+        <rdfs:seeAlso rdf:resource="https://www.omg.org/spec/BPMN/2.0.2/"/>
+        <skos:definition xml:lang="en">The outgoing Transition a Step takes when no other outgoing Transition&apos;s guard holds.</skos:definition>
+        <skos:prefLabel xml:lang="en">defaultTransition</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">BPMN&apos;s default sequence flow, and the default case of a CACAO switch-condition. The Transition leaves this Step (its stonework:fromStep is this Step) and carries no guard of its own: it is the otherwise branch, so a plan doesn&apos;t have to spell out the negation of every other guard. It applies to either stonework:splitKind: with a parallel split, the default is taken only when none of the guarded branches is.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://cyberterrain.org/ns/stonework#deliveredVia -->
 
 
@@ -970,6 +1040,59 @@
     
 
 
+    <!-- https://cyberterrain.org/ns/stonework#deviationExecution -->
+
+
+    <owl:ObjectProperty rdf:about="https://cyberterrain.org/ns/stonework#deviationExecution">
+        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#Deviation"/>
+        <rdfs:range rdf:resource="https://cyberterrain.org/ns/stonework#Process"/>
+        <skos:definition xml:lang="en">An execution in the run that a Deviation concerns, such as the execution performed by the wrong Role.</skos:definition>
+        <skos:prefLabel xml:lang="en">deviationExecution</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Absent for a skipped Step, which has no execution. Needed when a Step runs more than once in a run, to say which execution deviated.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#deviationKind -->
+
+
+    <owl:ObjectProperty rdf:about="https://cyberterrain.org/ns/stonework#deviationKind">
+        <rdfs:subPropertyOf rdf:resource="https://cyberterrain.org/ns/stonework#categorizedBy"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#Deviation"/>
+        <rdfs:range rdf:resource="https://cyberterrain.org/ns/stonework#DeviationKind"/>
+        <skos:definition xml:lang="en">Relates a Deviation to the kind of departure from the Plan it records.</skos:definition>
+        <skos:prefLabel xml:lang="en">deviationKind</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#deviationRun -->
+
+
+    <owl:ObjectProperty rdf:about="https://cyberterrain.org/ns/stonework#deviationRun">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#Deviation"/>
+        <rdfs:range rdf:resource="https://cyberterrain.org/ns/stonework#Process"/>
+        <skos:definition xml:lang="en">The run, the Process that is stonework:executionOf a Plan, in which a Deviation was found.</skos:definition>
+        <skos:prefLabel xml:lang="en">deviationRun</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#deviationStep -->
+
+
+    <owl:ObjectProperty rdf:about="https://cyberterrain.org/ns/stonework#deviationStep">
+        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#Deviation"/>
+        <rdfs:range rdf:resource="https://cyberterrain.org/ns/stonework#Step"/>
+        <skos:definition xml:lang="en">A Step of the run&apos;s Plan that a Deviation concerns.</skos:definition>
+        <skos:prefLabel xml:lang="en">deviationStep</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">One Step for a skipped, wrong-role or misused-identity deviation; both Steps for a same-agent or out-of-order one.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://cyberterrain.org/ns/stonework#downloads -->
 
 
@@ -1050,9 +1173,17 @@
 
 
     <owl:ObjectProperty rdf:about="https://cyberterrain.org/ns/stonework#evidencedBy">
-        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#Sighting"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://cyberterrain.org/ns/stonework#Deviation"/>
+                    <rdf:Description rdf:about="https://cyberterrain.org/ns/stonework#IdentityControl"/>
+                    <rdf:Description rdf:about="https://cyberterrain.org/ns/stonework#Sighting"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="https://cyberterrain.org/ns/stonework#DigitalArtifact"/>
-        <skos:definition xml:lang="en">A Sighting is substantiated by this DigitalArtifact (memory dump, PCAP, log excerpt, sample). Connects analytical observation to forensic evidence.</skos:definition>
+        <skos:definition xml:lang="en">A Sighting, Deviation or IdentityControl is substantiated by this DigitalArtifact (memory dump, PCAP, log excerpt, sample, call record, recorded statement). Connects analytical observation to forensic evidence.</skos:definition>
         <skos:prefLabel xml:lang="en">evidencedBy</skos:prefLabel>
     </owl:ObjectProperty>
     
@@ -1093,7 +1224,7 @@
         <rdfs:range rdf:resource="https://cyberterrain.org/ns/stonework#Behavior"/>
         <skos:definition xml:lang="en">Relates a CyberActivity to the Behavior plan whose execution it represents.</skos:definition>
         <skos:prefLabel xml:lang="en">executionOf</skos:prefLabel>
-        <skos:scopeNote xml:lang="en">Links an overall execution to the Behavior it carries out. This may be a full plan — an Investigation to an InvestigationPlan, an Operation to an OperationPlan, a Process to a Playbook or ControlPlan — or, in the lightweight case, a bare method: a CyberActivity may point directly at the stonework:Technique (or stonework:AttackTechnique) it performs, with no intervening Procedure, Plan, or Step. The lightweight form is the common one for sightings and incident timelines (&apos;actor performed T1003.001 against this host at this time&apos;); it can be elaborated into a Step-decomposed Plan later without changing the executionOf assertion. Use stonework:correspondsToStep for the finer-grained link between an executing CyberActivity and an individual Step when a Plan is present.</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">Links an overall execution to the Behavior it carries out. This may be a full plan — an Investigation to an InvestigationPlan, an Operation to an OperationPlan, a Process to a Playbook or ControlPlan — or, in the lightweight case, a bare method: a CyberActivity may point directly at the stonework:Technique (or stonework:AttackTechnique) it performs, with no intervening Procedure, Plan, or Step. The lightweight form is the common one for sightings and incident timelines (&apos;actor performed T1003.001 against this host at this time&apos;); it can be elaborated into a Step-decomposed Plan later without changing the executionOf assertion. Each run of a Plan is its own CyberActivity, executionOf the same Plan; the executions of its Steps are stonework:partOfExecution the run. Use stonework:correspondsToStep for the finer-grained link between an executing CyberActivity and an individual Step when a Plan is present.</skos:scopeNote>
     </owl:ObjectProperty>
     
 
@@ -1267,6 +1398,19 @@
     
 
 
+    <!-- https://cyberterrain.org/ns/stonework#guardValue -->
+
+
+    <owl:ObjectProperty rdf:about="https://cyberterrain.org/ns/stonework#guardValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#Transition"/>
+        <skos:definition xml:lang="en">The individual that guardVariable&apos;s stonework:boundTo value must be for the Transition to be taken.</skos:definition>
+        <skos:prefLabel xml:lang="en">guardValue</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Tests identity with an individual, such as a category value (stonework:executionOutcomeFailed) or a named asset, where stonework:guardType tests class membership and stonework:guardLiteralValue a literal. Mirrors stonework:predictedValue on the Hypothesis side. Range deliberately unset: the value may be any individual.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://cyberterrain.org/ns/stonework#guardVariable -->
 
 
@@ -1302,6 +1446,20 @@
         <rdfs:range rdf:resource="https://cyberterrain.org/ns/stonework#AccountType"/>
         <skos:definition xml:lang="en">Relates a user account to one or more classifications describing its authentication or deployment context.</skos:definition>
         <skos:prefLabel xml:lang="en">hasAccountType</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#hasAffectedStatus -->
+
+
+    <owl:ObjectProperty rdf:about="https://cyberterrain.org/ns/stonework#hasAffectedStatus">
+        <rdfs:subPropertyOf rdf:resource="https://cyberterrain.org/ns/stonework#categorizedBy"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#VulnerabilityAssessment"/>
+        <rdfs:range rdf:resource="https://cyberterrain.org/ns/stonework#AffectedStatus"/>
+        <skos:definition xml:lang="en">Relates a vulnerability assessment to the applicability judgment it records.</skos:definition>
+        <skos:prefLabel xml:lang="en">hasAffectedStatus</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1414,6 +1572,33 @@
         <rdfs:range rdf:resource="https://cyberterrain.org/ns/stonework#CyberActivity"/>
         <skos:definition xml:lang="en">Relates a Behavior plan to a CyberActivity that executes it.</skos:definition>
         <skos:prefLabel xml:lang="en">hasExecution</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#hasExploitMaturity -->
+
+
+    <owl:ObjectProperty rdf:about="https://cyberterrain.org/ns/stonework#hasExploitMaturity">
+        <rdfs:subPropertyOf rdf:resource="https://cyberterrain.org/ns/stonework#categorizedBy"/>
+        <rdfs:range rdf:resource="https://cyberterrain.org/ns/stonework#ExploitMaturity"/>
+        <skos:definition xml:lang="en">Relates a vulnerability or an individual exploit to its exploit maturity.</skos:definition>
+        <skos:prefLabel xml:lang="en">hasExploitMaturity</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">At most one per subject (stonework:ExploitMaturityShape). On a vulnerability it is a convenience projection: the highest maturity currently known for it, where weaponized ranks above poc. An exploit reference, such as a stonework:OnlineReference or stonework:Tool, carries that exploit&apos;s own maturity. Domain is unset so each of these subjects is valid. Dated history is not recorded on this property.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#hasExploitationReportKind -->
+
+
+    <owl:ObjectProperty rdf:about="https://cyberterrain.org/ns/stonework#hasExploitationReportKind">
+        <rdfs:subPropertyOf rdf:resource="https://cyberterrain.org/ns/stonework#categorizedBy"/>
+        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#MetricObservation"/>
+        <rdfs:range rdf:resource="https://cyberterrain.org/ns/stonework#ExploitationReportKind"/>
+        <skos:definition xml:lang="en">Relates an exploitation-report observation to the kind of report it records.</skos:definition>
+        <skos:prefLabel xml:lang="en">hasExploitationReportKind</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">At most one per observation (stonework:ExploitationReportKindShape). A source that reports several kinds for one vulnerability records one observation per kind.</skos:scopeNote>
     </owl:ObjectProperty>
     
 
@@ -1830,6 +2015,21 @@
     
 
 
+    <!-- https://cyberterrain.org/ns/stonework#hasPlaybookType -->
+
+
+    <owl:ObjectProperty rdf:about="https://cyberterrain.org/ns/stonework#hasPlaybookType">
+        <rdfs:subPropertyOf rdf:resource="https://cyberterrain.org/ns/stonework#categorizedBy"/>
+        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#Plan"/>
+        <rdfs:range rdf:resource="https://cyberterrain.org/ns/stonework#PlaybookType"/>
+        <rdfs:seeAlso rdf:resource="https://docs.oasis-open.org/cacao/security-playbooks/v2.0/security-playbooks-v2.0.html"/>
+        <skos:definition xml:lang="en">Relates a Plan to what it is for: attack, detection, engagement, investigation, mitigation, notification, prevention or remediation.</skos:definition>
+        <skos:prefLabel xml:lang="en">hasPlaybookType</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Not functional: a Plan may have several types, as a CACAO playbook may. The Plan subclasses already say some of this (see stonework:PlaybookType); the type is stated explicitly, not inferred, because a ControlPlan can be any of three.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://cyberterrain.org/ns/stonework#hasPriority -->
 
 
@@ -2010,7 +2210,6 @@
 
 
     <owl:ObjectProperty rdf:about="https://cyberterrain.org/ns/stonework#hasTechnique">
-        <owl:inverseOf rdf:resource="https://cyberterrain.org/ns/stonework#techniqueOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain>
             <owl:Class>
@@ -2137,6 +2336,31 @@
         <rdfs:range rdf:resource="https://cyberterrain.org/ns/stonework#Host"/>
         <skos:definition xml:lang="en">The logical Infrastructure entity runs on this physical or virtual Host. Bridges the abstract infrastructure layer to the concrete system for configuration and vulnerability queries.</skos:definition>
         <skos:prefLabel xml:lang="en">hostedOn</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#hypothesisAbout -->
+
+
+    <owl:ObjectProperty rdf:about="https://cyberterrain.org/ns/stonework#hypothesisAbout">
+        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#Hypothesis"/>
+        <skos:definition xml:lang="en">Relates a Hypothesis to something it is about: a technique, actor, account, asset, vulnerability or event.</skos:definition>
+        <skos:prefLabel xml:lang="en">hypothesisAbout</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">For finding hypotheses (&quot;everything we&apos;ve hypothesized about T1114.003&quot;, &quot;about the controller&apos;s account&quot;), not for judging them. Not functional: &quot;the actor is using a forwarding rule on the controller&apos;s mailbox&quot; is about the actor, the technique and the mailbox. The values carry no roles; a claim whose roles matter, or whose parts can fail separately, is split into parts with stonework:hypothesisPart. A compound Hypothesis is also about whatever its parts are about, so it need not repeat them: follow stonework:hypothesisPart* first. Range deliberately unset, like stonework:noteAbout.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#hypothesisPart -->
+
+
+    <owl:ObjectProperty rdf:about="https://cyberterrain.org/ns/stonework#hypothesisPart">
+        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#Hypothesis"/>
+        <rdfs:range rdf:resource="https://cyberterrain.org/ns/stonework#Hypothesis"/>
+        <skos:definition xml:lang="en">Relates a compound Hypothesis to one of the claims it is the conjunction of: the compound holds only if every part holds.</skos:definition>
+        <skos:prefLabel xml:lang="en">hypothesisPart</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">&quot;X is doing Y&quot; is two claims tested differently: that Y is happening (a search can confirm it) and that X is doing it (only attribution evidence can). Testing them together, a failure says only that something is wrong. As parts, each is a Hypothesis with its own prediction, test, status (stonework:hasHypothesisStatus), confidence and evidence, so the parts with status refuted are the ones that failed, and a confirmed part survives a refuted compound for reuse in a new one. Conjunction only: alternatives (&quot;X or W did it&quot;) are competing Hypotheses, not parts of one. The compound&apos;s status and confidence stay explicit, not inferred; consistency requires that a confirmed compound has only confirmed parts, that a compound with a refuted part is refuted, and that its confidence is no higher than any part&apos;s. Parts may themselves have parts.</skos:scopeNote>
     </owl:ObjectProperty>
     
 
@@ -2404,6 +2628,22 @@
         </rdfs:range>
         <skos:definition xml:lang="en">Relates a Certificate to the entity (Agent or Domain) it was issued to.</skos:definition>
         <skos:prefLabel xml:lang="en">issuedTo</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#joinKind -->
+
+
+    <owl:ObjectProperty rdf:about="https://cyberterrain.org/ns/stonework#joinKind">
+        <rdfs:subPropertyOf rdf:resource="https://cyberterrain.org/ns/stonework#categorizedBy"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#Step"/>
+        <rdfs:range rdf:resource="https://cyberterrain.org/ns/stonework#FlowKind"/>
+        <rdfs:seeAlso rdf:resource="https://www.omg.org/spec/BPMN/2.0.2/"/>
+        <skos:definition xml:lang="en">When a Step entered by several Transitions may start: exclusive, as soon as one incoming Transition is taken; parallel, only after every incoming Transition taken in the same run.</skos:definition>
+        <skos:prefLabel xml:lang="en">joinKind</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Omitted means exclusive. An incoming Transition is taken in a run when its from-Step has an execution that is stonework:partOfExecution that run and its guard held against that execution&apos;s binding. A parallel join therefore waits only for the branches that were started in the run, so a parallel join after an inclusive split (a parallel split with guarded Transitions) is well defined for recorded runs. A run whose join execution starts before the execution of a taken incoming branch has ended departs from the Plan: an out-of-order stonework:Deviation. As with stonework:splitKind, there are no gateway nodes; a BPMN converging gateway maps onto the joinKind of the Step it leads to.</skos:scopeNote>
     </owl:ObjectProperty>
     
 
@@ -2840,6 +3080,21 @@
     
 
 
+    <!-- https://cyberterrain.org/ns/stonework#outcomeVariable -->
+
+
+    <owl:ObjectProperty rdf:about="https://cyberterrain.org/ns/stonework#outcomeVariable">
+        <rdfs:subPropertyOf rdf:resource="https://cyberterrain.org/ns/stonework#hasOutputVariable"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#Behavior"/>
+        <rdfs:range rdf:resource="https://cyberterrain.org/ns/stonework#Variable"/>
+        <skos:definition xml:lang="en">The output Variable that records whether an execution of a Step or Plan succeeded, failed or timed out.</skos:definition>
+        <skos:prefLabel xml:lang="en">outcomeVariable</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Its value in a run is a stonework:ExecutionOutcome (succeeded, failed, timed out), bound like any other output. Transitions guarded on it with stonework:guardValue express CACAO&apos;s on_success and on_failure. Other output Variables carry what the Step found or made; the outcome Variable says only whether it worked, so a search that ran and found nothing has the outcome succeeded.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://cyberterrain.org/ns/stonework#overlapsWith -->
 
 
@@ -2869,6 +3124,20 @@
     
 
 
+    <!-- https://cyberterrain.org/ns/stonework#partOfExecution -->
+
+
+    <owl:ObjectProperty rdf:about="https://cyberterrain.org/ns/stonework#partOfExecution">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#CyberActivity"/>
+        <rdfs:range rdf:resource="https://cyberterrain.org/ns/stonework#CyberActivity"/>
+        <skos:definition xml:lang="en">Relates the execution of a Step to the execution of the Plan or Step it is part of.</skos:definition>
+        <skos:prefLabel>partOfExecution</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Groups a run&apos;s step executions, as a P-Plan bundle groups a plan&apos;s execution trace, so that queries over a plan run many times (which steps ran, which were skipped, which values were bound) are asked of one run at a time. Links to the immediate parent only; nested Steps form a chain to the run, which is the execution that is stonework:executionOf the Plan. An execution may be both a Step&apos;s execution in one plan and a run of another, as when an investigation&apos;s containment Step is carried out by running a ControlPlan: it is then stonework:partOfExecution the investigation, stonework:correspondsToStep the Step, and stonework:executionOf the ControlPlan. Not transitive, so that each execution&apos;s parent stays unambiguous; use a SPARQL property path (stonework:partOfExecution+) for every ancestor.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://cyberterrain.org/ns/stonework#performedBy -->
 
 
@@ -2876,14 +3145,29 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://cyberterrain.org/ns/stonework#Playbook"/>
+                    <rdf:Description rdf:about="https://cyberterrain.org/ns/stonework#Plan"/>
                     <rdf:Description rdf:about="https://cyberterrain.org/ns/stonework#Process"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="https://cyberterrain.org/ns/stonework#Agent"/>
-        <skos:definition xml:lang="en">Relates a Process to the Agent that performs it, or a Playbook to the Agent responsible for carrying it out.</skos:definition>
+        <skos:definition xml:lang="en">Relates a Process to the Agent that performs it, or a Plan to the Agent responsible for carrying it out.</skos:definition>
         <skos:prefLabel xml:lang="en">performedBy</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">On an execution, name the performer as observed. When the evidence shows only an identity, such as an account in an audit log, the performer is that DigitalIdentity, and the Agent behind it is reached through stonework:accountOf or stonework:attributedToAgent. When an identity may have been used by someone other than its holder, keep the identity as the performer and record the Agent believed responsible with stonework:attributedTo; an analyst who establishes the misuse records a stonework:Deviation. Who is expected to perform a Plan&apos;s Steps is given per Step, as Roles (stonework:performerRole).</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#performerRole -->
+
+
+    <owl:ObjectProperty rdf:about="https://cyberterrain.org/ns/stonework#performerRole">
+        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#Step"/>
+        <rdfs:range rdf:resource="https://cyberterrain.org/ns/stonework#Role"/>
+        <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/prov#hadRole"/>
+        <skos:definition xml:lang="en">A Role whose holder is expected to perform this Step: the plan-side assignment of work, as in a BPMN lane.</skos:definition>
+        <skos:prefLabel xml:lang="en">performerRole</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">If several Roles are given, a holder of any one of them may perform the Step; a requirement that two people act (dual control) is two Steps, linked by stonework:separatedFrom. An execution conforms when its performer, or the Agent its performer identity belongs to (stonework:accountOf, stonework:attributedToAgent), holds the Role through a stonework:RoleAssignment whose stonework:roleContext is the Plan&apos;s performer and which is in force (stonework:validFrom, stonework:validUntil) when the execution starts. Someone acting through a role holder&apos;s misused identity passes this check, which is why a misused identity is recorded as a stonework:Deviation.</skos:scopeNote>
     </owl:ObjectProperty>
     
 
@@ -2943,7 +3227,7 @@
         <rdfs:range rdf:resource="https://cyberterrain.org/ns/stonework#Step"/>
         <skos:definition xml:lang="en">Relates a Step to another Step that must occur before it within the same parent Behavior.</skos:definition>
         <skos:prefLabel>precededByStep</skos:prefLabel>
-        <skos:scopeNote xml:lang="en">Deliberately distinct from stonework:precedes, whose domain and range are IntelligenceProduct (report-version succession) — an unrelated relationship. precededByStep expresses a graph that may contain cycles: an edge targeting an already-reached Step is a loop, not an error. Use stonework:Transition instead when the edge itself needs a guard condition or other structure attached.</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">Deliberately distinct from stonework:precedes, whose domain and range are IntelligenceProduct (report-version succession) — an unrelated relationship. precededByStep expresses a graph that may contain cycles: an edge targeting an already-reached Step is a loop, not an error. A Step with several precededByStep values follows all of them; Steps with no precededByStep path between them are unordered and may be performed in parallel, so a dependency graph of precededByStep edges expresses parallel work without stonework:splitKind or stonework:joinKind. Use stonework:Transition instead when the edge itself needs a guard condition or other structure attached.</skos:scopeNote>
     </owl:ObjectProperty>
     
 
@@ -3389,6 +3673,20 @@
     
 
 
+    <!-- https://cyberterrain.org/ns/stonework#separatedFrom -->
+
+
+    <owl:ObjectProperty rdf:about="https://cyberterrain.org/ns/stonework#separatedFrom">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#Step"/>
+        <rdfs:range rdf:resource="https://cyberterrain.org/ns/stonework#Step"/>
+        <skos:definition xml:lang="en">Relates two Steps of a Plan that, in any one run, must be performed by different Agents (segregation of duties).</skos:definition>
+        <skos:prefLabel xml:lang="en">separatedFrom</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Checked per run: a violation when the executions of the two Steps resolve to the same Agent, through stonework:accountOf or stonework:attributedToAgent where the performer is an identity. Roles alone can&apos;t enforce separation, since one Agent can hold both Roles. The check is undetermined when either performer is unknown or doesn&apos;t resolve to an Agent. Nor can it see one Agent acting through two people&apos;s identities: that is a misused identity, established as a stonework:Deviation.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://cyberterrain.org/ns/stonework#sharesCertificate -->
 
 
@@ -3480,6 +3778,35 @@
     
 
 
+    <!-- https://cyberterrain.org/ns/stonework#splitKind -->
+
+
+    <owl:ObjectProperty rdf:about="https://cyberterrain.org/ns/stonework#splitKind">
+        <rdfs:subPropertyOf rdf:resource="https://cyberterrain.org/ns/stonework#categorizedBy"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#Step"/>
+        <rdfs:range rdf:resource="https://cyberterrain.org/ns/stonework#FlowKind"/>
+        <rdfs:seeAlso rdf:resource="https://www.omg.org/spec/BPMN/2.0.2/"/>
+        <skos:definition xml:lang="en">How a Step&apos;s outgoing Transitions are taken when it finishes: exclusive, exactly one, whose guard holds; parallel, every one whose guard holds, as concurrent branches.</skos:definition>
+        <skos:prefLabel xml:lang="en">splitKind</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Omitted means exclusive, the meaning several outgoing Transitions had before splitKind existed. With parallel, an unguarded Transition is always taken, so a parallel split whose Transitions are all unguarded is BPMN&apos;s parallel gateway, and one whose Transitions are guarded is its inclusive gateway. The branches may overlap in time; the Step where they meet says by its stonework:joinKind whether it waits for them all. As in YAWL, a split is a property of the Step it follows, not a separate gateway node, so every Step remains a unit of action; a BPMN diverging gateway maps onto the splitKind of the Step before it.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#stepTarget -->
+
+
+    <owl:ObjectProperty rdf:about="https://cyberterrain.org/ns/stonework#stepTarget">
+        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#Step"/>
+        <rdfs:range rdf:resource="https://cyberterrain.org/ns/stonework#CyberEntity"/>
+        <skos:definition xml:lang="en">What a Step is meant to act on: a specific entity, or a Variable whose value in the run is the target.</skos:definition>
+        <skos:prefLabel xml:lang="en">stepTarget</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">The plan-level counterpart of stonework:actsOn, as stonework:performerRole is of stonework:performedBy; CACAO&apos;s targets on an action step. A specific entity (the mail tenant) is the target in every run. A stonework:Variable (itself a CyberEntity) means whatever that Variable is bound to in the run, such as the mailbox being contained. An execution whose actsOn is neither departs from the Plan: a wrong-target stonework:Deviation.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://cyberterrain.org/ns/stonework#storedIn -->
 
 
@@ -3564,6 +3891,20 @@
     
 
 
+    <!-- https://cyberterrain.org/ns/stonework#suppliedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://cyberterrain.org/ns/stonework#suppliedBy">
+        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#Variable"/>
+        <rdfs:range rdf:resource="https://cyberterrain.org/ns/stonework#Role"/>
+        <rdfs:seeAlso rdf:resource="https://www.omg.org/spec/BPMN/2.0.2/"/>
+        <skos:definition xml:lang="en">Relates a Variable to the Role whose holders supply its value from outside the Plan, as a message from a participant whose own plan isn&apos;t modelled.</skos:definition>
+        <skos:prefLabel xml:lang="en">suppliedBy</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">BPMN&apos;s message flow from a black-box pool: the supplier who sends an invoice, a customer who places an order. The value is bound in the execution that received it. When the sender&apos;s plan is modelled, a Step of that plan declares the Variable with stonework:hasOutputVariable instead, and the receiving execution records stonework:usedBinding of the sender&apos;s binding. A Variable may have both: a payment request is supplied by the supplier, and a business email compromise actor&apos;s OperationPlan can produce one too, which the receiving Step can&apos;t tell apart from the real thing. Steps whose input Variables are supplied from outside the organization are its attack surface for messages.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://cyberterrain.org/ns/stonework#targets -->
 
 
@@ -3603,6 +3944,7 @@
 
 
     <owl:ObjectProperty rdf:about="https://cyberterrain.org/ns/stonework#techniqueOf">
+        <owl:inverseOf rdf:resource="https://cyberterrain.org/ns/stonework#hasTechnique"/>
         <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#Technique"/>
         <rdfs:range>
             <owl:Class>
@@ -3678,7 +4020,7 @@
 
     <owl:ObjectProperty rdf:about="https://cyberterrain.org/ns/stonework#triggeredBy">
         <owl:inverseOf rdf:resource="https://cyberterrain.org/ns/stonework#triggersPlaybook"/>
-        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#Playbook"/>
+        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#Plan"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -3687,7 +4029,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
-        <skos:definition xml:lang="en">Relates a Playbook to the Event or Incident that initiates its execution.</skos:definition>
+        <skos:definition xml:lang="en">Relates a Plan to the Event or Incident that initiates its execution.</skos:definition>
         <skos:prefLabel xml:lang="en">triggeredBy</skos:prefLabel>
     </owl:ObjectProperty>
     
@@ -3705,9 +4047,10 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="https://cyberterrain.org/ns/stonework#Playbook"/>
-        <skos:definition xml:lang="en">Relates an Event or Incident to a Playbook invoked in response.</skos:definition>
+        <rdfs:range rdf:resource="https://cyberterrain.org/ns/stonework#Plan"/>
+        <skos:definition xml:lang="en">Relates an Event or Incident to a Plan invoked in response.</skos:definition>
         <skos:prefLabel xml:lang="en">triggersPlaybook</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Named when only Playbooks could be triggered; since 0.12.0 its range is any stonework:Plan.</skos:scopeNote>
     </owl:ObjectProperty>
     
 
@@ -3719,6 +4062,20 @@
         <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#URI"/>
         <skos:definition xml:lang="en">The entity this URI serves as a locator or persistent identifier for.</skos:definition>
         <skos:prefLabel>urlOf</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#usedBinding -->
+
+
+    <owl:ObjectProperty rdf:about="https://cyberterrain.org/ns/stonework#usedBinding">
+        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#CyberActivity"/>
+        <rdfs:range rdf:resource="https://cyberterrain.org/ns/stonework#VariableBinding"/>
+        <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/prov#used"/>
+        <skos:definition xml:lang="en">Relates an execution to a VariableBinding whose value it received as input.</skos:definition>
+        <skos:prefLabel>usedBinding</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Mirrors prov:used. Records data flow in a run: the binding a Step&apos;s execution received for one of its input Variables, usually bound by an earlier Step&apos;s execution. Recorded rather than inferred from times, because after a loop an output Variable has several bindings in the same run.</skos:scopeNote>
     </owl:ObjectProperty>
     
 
@@ -4106,11 +4463,11 @@
 
     <owl:DatatypeProperty rdf:about="https://cyberterrain.org/ns/stonework#boundToLiteral">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#Variable"/>
+        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#VariableBinding"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <skos:definition xml:lang="en">Binds a Variable, at execution time or at plan instantiation, to a scalar result value such as a boolean, count, or numeric score.</skos:definition>
+        <skos:definition xml:lang="en">The scalar value, such as a boolean, count or numeric score, a Variable took in one execution.</skos:definition>
         <skos:prefLabel>boundToLiteral</skos:prefLabel>
-        <skos:scopeNote xml:lang="en">Tested by stonework:guardLiteralValue and stonework:guardOperator on a Transition. When the guard uses an ordering operator (LessThan, GreaterThanOrEqual, etc.), this value MUST carry a numeric datatype (xsd:decimal, xsd:double, or xsd:integer) — untyped or string literals do not compare numerically under SPARQL.</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">Tested by stonework:guardLiteralValue and stonework:guardOperator on a Transition. When the guard uses an ordering operator (LessThan, GreaterThanOrEqual, etc.), this value MUST carry a numeric datatype (xsd:decimal, xsd:double, or xsd:integer) — untyped or string literals do not compare numerically under SPARQL. Since 0.12.0 the subject is a stonework:VariableBinding, not the Variable.</skos:scopeNote>
     </owl:DatatypeProperty>
     
 
@@ -4279,8 +4636,9 @@
     <owl:DatatypeProperty rdf:about="https://cyberterrain.org/ns/stonework#controlFamily">
         <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#Control"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <skos:definition xml:lang="en">The control family or category grouping (e.g. Access Control, Incident Response).</skos:definition>
+        <skos:definition xml:lang="en">The control family or category grouping a control belongs to, by code or name (e.g. AC or Access Control, IR or Incident Response).</skos:definition>
         <skos:prefLabel xml:lang="en">controlFamily</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">nist:family, the two-letter NIST SP 800-53 family code, is declared rdfs:subPropertyOf this property.</skos:scopeNote>
     </owl:DatatypeProperty>
     
 
@@ -4601,6 +4959,19 @@
     
 
 
+    <!-- https://cyberterrain.org/ns/stonework#epssPercentile -->
+
+
+    <owl:DatatypeProperty rdf:about="https://cyberterrain.org/ns/stonework#epssPercentile">
+        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#Vulnerability"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <skos:definition xml:lang="en">The EPSS percentile (0.0–1.0): the proportion of scored vulnerabilities with an equal or lower EPSS probability.</skos:definition>
+        <skos:prefLabel xml:lang="en">epssPercentile</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Convenience projection for a current percentile. Preserve dated values, source, and EPSS model version with stonework:MetricObservation and stonework:metricEpssPercentile. Distinct from stonework:epssScore, which is the probability itself.</skos:scopeNote>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://cyberterrain.org/ns/stonework#epssScore -->
 
 
@@ -4846,9 +5217,9 @@
     <owl:DatatypeProperty rdf:about="https://cyberterrain.org/ns/stonework#isKnownExploited">
         <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#Vulnerability"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-        <skos:definition xml:lang="en">Indicates whether this vulnerability appears in CISA&apos;s Known Exploited Vulnerabilities (KEV) catalog.</skos:definition>
+        <skos:definition xml:lang="en">Indicates whether this vulnerability appears in a known-exploited-vulnerabilities catalog.</skos:definition>
         <skos:prefLabel xml:lang="en">isKnownExploited</skos:prefLabel>
-        <skos:scopeNote xml:lang="en">Convenience projection for a current catalog snapshot. A false value is only meaningful as of a specific time; preserve dated membership evidence with stonework:MetricObservation and stonework:metricKevMembership.</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">Convenience projection for one current catalog snapshot. A false value is only meaningful as of a specific time and catalog. Preserve dated membership, and identify the catalog, with stonework:MetricObservation, stonework:metricKevMembership, and stonework:hasProvenance.</skos:scopeNote>
     </owl:DatatypeProperty>
     
 
@@ -5170,14 +5541,42 @@
     
 
 
+    <!-- https://cyberterrain.org/ns/stonework#planFormat -->
+
+
+    <owl:DatatypeProperty rdf:about="https://cyberterrain.org/ns/stonework#planFormat">
+        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#Plan"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <skos:definition xml:lang="en">The machine-readable format a Plan is also kept in, e.g. CACAO JSON for a playbook or BPMN for a business process.</skos:definition>
+        <skos:prefLabel xml:lang="en">planFormat</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#planVersion -->
+
+
+    <owl:DatatypeProperty rdf:about="https://cyberterrain.org/ns/stonework#planVersion">
+        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#Plan"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <skos:definition xml:lang="en">The version string of a Plan.</skos:definition>
+        <skos:prefLabel xml:lang="en">planVersion</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">A run follows the version of the Plan individual it is stonework:executionOf.</skos:scopeNote>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://cyberterrain.org/ns/stonework#playbookFormat -->
 
 
     <owl:DatatypeProperty rdf:about="https://cyberterrain.org/ns/stonework#playbookFormat">
+        <rdfs:subPropertyOf rdf:resource="https://cyberterrain.org/ns/stonework#planFormat"/>
         <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#Playbook"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <skos:definition xml:lang="en">The machine-readable format of the playbook (e.g. CACAO JSON, BPMN, YAML).</skos:definition>
         <skos:prefLabel xml:lang="en">playbookFormat</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Deprecated: use stonework:planFormat, which applies to every stonework:Plan.</skos:scopeNote>
     </owl:DatatypeProperty>
     
 
@@ -5186,10 +5585,13 @@
 
 
     <owl:DatatypeProperty rdf:about="https://cyberterrain.org/ns/stonework#playbookVersion">
+        <rdfs:subPropertyOf rdf:resource="https://cyberterrain.org/ns/stonework#planVersion"/>
         <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#Playbook"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
         <skos:definition xml:lang="en">The version string of the playbook.</skos:definition>
         <skos:prefLabel xml:lang="en">playbookVersion</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Deprecated: use stonework:planVersion, which applies to every stonework:Plan.</skos:scopeNote>
     </owl:DatatypeProperty>
     
 
@@ -5682,18 +6084,10 @@
 
 
     <owl:DatatypeProperty rdf:about="https://cyberterrain.org/ns/stonework#url">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://cyberterrain.org/ns/stonework#Feed"/>
-                    <rdf:Description rdf:about="https://cyberterrain.org/ns/stonework#OnlineReference"/>
-                    <rdf:Description rdf:about="https://cyberterrain.org/ns/stonework#Publication"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-        <skos:definition xml:lang="en">The URL of the online resource.</skos:definition>
+        <skos:definition xml:lang="en">The URL of an online resource, or of the canonical web page describing an entity.</skos:definition>
         <skos:prefLabel xml:lang="en">url</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Domain is intentionally unset. For a stonework:Feed, stonework:OnlineReference, or stonework:Publication it is the resource&apos;s own URL; for a framework entity, such as an ATT&amp;CK technique, it is the entity&apos;s page on the framework&apos;s site (attack:url is declared rdfs:subPropertyOf this property).</skos:scopeNote>
     </owl:DatatypeProperty>
     
 
@@ -5896,6 +6290,24 @@
     
 
 
+    <!-- https://cyberterrain.org/ns/stonework#AffectedStatus -->
+
+
+    <owl:Class rdf:about="https://cyberterrain.org/ns/stonework#AffectedStatus">
+        <rdfs:subClassOf rdf:resource="https://cyberterrain.org/ns/stonework#Category"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+                <owl:hasValue rdf:resource="https://cyberterrain.org/ns/stonework#affectedStatusScheme"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:definition xml:lang="en">A judgment of whether a product or version is affected by a vulnerability.</skos:definition>
+        <skos:prefLabel xml:lang="en">Affected Status</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Applied with stonework:hasAffectedStatus on a stonework:VulnerabilityAssessment. Covers the CVE record statuses affected, unaffected, and unknown, and the VEX statuses fixed and under investigation.</skos:scopeNote>
+    </owl:Class>
+    
+
+
     <!-- https://cyberterrain.org/ns/stonework#Agent -->
 
 
@@ -5999,7 +6411,7 @@
         <rdfs:subClassOf rdf:resource="https://cyberterrain.org/ns/stonework#CyberEntity"/>
         <skos:definition xml:lang="en">A pattern of actions or methods characteristic of an entity, particularly adversaries.</skos:definition>
         <skos:prefLabel>Behavior</skos:prefLabel>
-        <skos:scopeNote xml:lang="en">Groups TTP-related classes: Tactic, Technique (and subclasses), and Procedure. In BFO terms, Behaviors are GenericallyDependentContinuants — specifications or patterns describing how actions are carried out. The execution of a Technique is a CyberActivity; the Technique itself is a Behavior. Aligns with IAO PlanSpecification.</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">Groups TTP-related classes (Tactic, Technique and its subclasses), Controls, Mitigations (and so CoursesOfAction), Steps, and stonework:Plan, the step-structured specifications that are executed. Methods such as Techniques, Controls and Mitigations are not Plans; Plans implement them. In BFO terms, Behaviors are GenericallyDependentContinuants — specifications or patterns describing how actions are carried out. The execution of a Technique is a CyberActivity; the Technique itself is a Behavior. Aligns with IAO PlanSpecification.</skos:scopeNote>
     </owl:Class>
     
 
@@ -6020,6 +6432,18 @@
         <skos:definition xml:lang="en">A single component entry within a Software Bill of Materials, asserting that a specific VersionedProduct is included in the artifact or system described by the SBOM.</skos:definition>
         <skos:prefLabel>BOM Entry</skos:prefLabel>
         <skos:scopeNote xml:lang="en">An SBOM import creates one BomEntry per declared component. The BomEntry IRI is scoped to the SBOM (e.g. &lt;sbom-iri/entry/&lt;component-ref&gt;&gt;). Multiple BomEntry instances across different SBOMs may reference the same VersionedProduct via stonework:installationOf.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#BusinessProcess -->
+
+
+    <owl:Class rdf:about="https://cyberterrain.org/ns/stonework#BusinessProcess">
+        <rdfs:subClassOf rdf:resource="https://cyberterrain.org/ns/stonework#Plan"/>
+        <skos:definition xml:lang="en">A Plan by which an organization carries out a routine part of its business, such as paying a supplier, onboarding an employee or granting access, whose Steps may be performed by people or by systems.</skos:definition>
+        <skos:prefLabel>Business Process</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Part of STONEWORK because attacks such as business email compromise succeed or fail inside business processes: whether a Step that implements a stonework:Control (a callback, a second approval) was carried out. The process is the plan; each run of it is a stonework:Process that is stonework:executionOf it, so the name does not make the plan an execution. Process models kept in a notation such as BPMN can be recorded with stonework:planFormat. Distinct from stonework:Playbook, which responds to an event, incident or operational need rather than carrying out the organization&apos;s ordinary work.</skos:scopeNote>
     </owl:Class>
     
 
@@ -6118,10 +6542,10 @@
 
 
     <owl:Class rdf:about="https://cyberterrain.org/ns/stonework#ControlPlan">
-        <rdfs:subClassOf rdf:resource="https://cyberterrain.org/ns/stonework#Behavior"/>
-        <skos:definition xml:lang="en">A concrete, Step-decomposed sequence of actions that implements a Control in a specific operational context.</skos:definition>
+        <rdfs:subClassOf rdf:resource="https://cyberterrain.org/ns/stonework#Plan"/>
+        <skos:definition xml:lang="en">A concrete, Step-decomposed sequence of actions that implements a Control or Mitigation in a specific operational context.</skos:definition>
         <skos:prefLabel>Control Plan</skos:prefLabel>
-        <skos:scopeNote xml:lang="en">Mirrors the Technique/Procedure split on the defensive side: stonework:Control is the abstract prescribed safeguard (a catalog entry, e.g. NIST AC-2 or a CIS control); ControlPlan is its concrete implementation as a Step sequence, linked back via stonework:implements. A ControlPlan is typically invoked from within a Playbook or DetectionPlan by a Step that stonework:implements it.</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">Mirrors the Technique/Procedure split on the defensive side: stonework:Control is the abstract prescribed safeguard (a catalog entry, e.g. NIST AC-2 or a CIS control), and a stonework:Mitigation (e.g. an ATT&amp;CK mitigation) is another; ControlPlan is its concrete implementation as a Step sequence, linked back via stonework:implements. A ControlPlan is typically invoked from within a Playbook or DetectionPlan by a Step that stonework:implements it.</skos:scopeNote>
     </owl:Class>
     
 
@@ -6133,7 +6557,7 @@
         <rdfs:subClassOf rdf:resource="https://cyberterrain.org/ns/stonework#CyberEntity"/>
         <skos:definition xml:lang="en">Any control, mitigation, or safeguard applied to protect against, reduce, or respond to security risks.</skos:definition>
         <skos:prefLabel>Countermeasure</skos:prefLabel>
-        <skos:scopeNote xml:lang="en">Includes Controls, Mitigations, CoursesOfAction, and DetectionRules. The two primary branches are preventive/reactive measures (Mitigation, CourseOfAction, Control) and detection logic (DetectionRule, Signature). A Countermeasure describes the safeguard or procedure; the deployed mechanism that can apply it is a stonework:SecurityActuator, and a particular application is a stonework:SecurityActuation.</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">Includes Controls, Mitigations, CoursesOfAction, and DetectionRules. The two primary branches are preventive/reactive measures (Mitigation, CourseOfAction, Control), which are also stonework:Behaviors that plans implement, and detection logic (DetectionRule, Signature). A Countermeasure describes the safeguard or procedure; the deployed mechanism that can apply it is a stonework:SecurityActuator, and a particular application is a stonework:SecurityActuation.</skos:scopeNote>
     </owl:Class>
     
 
@@ -6316,6 +6740,36 @@
     
 
 
+    <!-- https://cyberterrain.org/ns/stonework#Deviation -->
+
+
+    <owl:Class rdf:about="https://cyberterrain.org/ns/stonework#Deviation">
+        <rdfs:subClassOf rdf:resource="https://cyberterrain.org/ns/stonework#QualifiedAssertion"/>
+        <skos:definition xml:lang="en">An established finding that one run of a Plan departed from that Plan: a required Step was not performed, or was performed by the wrong Role, by the same Agent as a Step it must be separated from, out of order, or through an identity used by someone other than its holder.</skos:definition>
+        <skos:prefLabel xml:lang="en">Deviation</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">The finding of conformance checking, in process mining&apos;s terms. The run is stonework:deviationRun, the Steps concerned stonework:deviationStep, the executions concerned (if any) stonework:deviationExecution, the kind stonework:deviationKind, and the evidence stonework:evidencedBy; the Investigation that establishes it stonework:produces it. A query over runs can propose candidates, such as a Step the Plan&apos;s guards required that has no execution in the run, or an execution whose performer doesn&apos;t hold the Step&apos;s stonework:performerRole. But a missing execution doesn&apos;t show that the Step wasn&apos;t done, only that it wasn&apos;t recorded: the Deviation is the analyst&apos;s finding, with evidence, that it wasn&apos;t. Checks that can&apos;t resolve a performer to an Agent, or whose performer may be a misused identity, report the case as undetermined, not as conforming. A Control that failed is reached through the Step (stonework:deviationStep / stonework:implements).</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#DeviationKind -->
+
+
+    <owl:Class rdf:about="https://cyberterrain.org/ns/stonework#DeviationKind">
+        <rdfs:subClassOf rdf:resource="https://cyberterrain.org/ns/stonework#Category"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+                <owl:hasValue rdf:resource="https://cyberterrain.org/ns/stonework#deviationKindScheme"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:definition xml:lang="en">A classification of how a run departed from its Plan.</skos:definition>
+        <skos:prefLabel xml:lang="en">Deviation Kind</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Applied via stonework:deviationKind to Deviation individuals. Named individuals: skipped, wrong role, same agent, out of order, misused identity, wrong target.</skos:scopeNote>
+    </owl:Class>
+    
+
+
     <!-- https://cyberterrain.org/ns/stonework#DigitalArtifact -->
 
 
@@ -6392,6 +6846,60 @@
         <skos:definition xml:lang="en">An atomic, observable occurrence in a system, network, or environment that has potential security relevance but has not yet been assessed or declared as an Incident.</skos:definition>
         <skos:prefLabel xml:lang="en">Event</skos:prefLabel>
         <skos:scopeNote xml:lang="en">Represents the pre-triage state — a raw log entry, alert, or sensor observation. Distinguished from Incident by the absence of human or automated assessment declaring it significant and adverse. Useful for SIEM, log-based, and threat hunting use cases.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#ExecutionOutcome -->
+
+
+    <owl:Class rdf:about="https://cyberterrain.org/ns/stonework#ExecutionOutcome">
+        <rdfs:subClassOf rdf:resource="https://cyberterrain.org/ns/stonework#Category"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+                <owl:hasValue rdf:resource="https://cyberterrain.org/ns/stonework#executionOutcomeScheme"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:definition xml:lang="en">Whether an execution of a Step or Plan succeeded, failed or timed out.</skos:definition>
+        <skos:prefLabel xml:lang="en">Execution Outcome</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">The value of a Step&apos;s stonework:outcomeVariable in a run. Named individuals: succeeded, failed, timed out. A timeout is kept apart from other failures, as CACAO reports it separately.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#ExploitMaturity -->
+
+
+    <owl:Class rdf:about="https://cyberterrain.org/ns/stonework#ExploitMaturity">
+        <rdfs:subClassOf rdf:resource="https://cyberterrain.org/ns/stonework#Category"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+                <owl:hasValue rdf:resource="https://cyberterrain.org/ns/stonework#exploitMaturityScheme"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:definition xml:lang="en">How mature a known exploit for a vulnerability is.</skos:definition>
+        <skos:prefLabel xml:lang="en">Exploit Maturity</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Applied with stonework:hasExploitMaturity. poc means a proof of concept exists. weaponized means the exploit is reliable against most targets or is built into an attack tool or malware. A source report that exploitation was observed is stonework:metricReportedExploited. Membership in a known-exploited catalog is stonework:metricKevMembership, with the catalog named by the observation&apos;s provenance.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#ExploitationReportKind -->
+
+
+    <owl:Class rdf:about="https://cyberterrain.org/ns/stonework#ExploitationReportKind">
+        <rdfs:subClassOf rdf:resource="https://cyberterrain.org/ns/stonework#Category"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+                <owl:hasValue rdf:resource="https://cyberterrain.org/ns/stonework#exploitationReportKindScheme"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:definition xml:lang="en">What a source&apos;s report that a vulnerability was exploited says about who exploited it.</skos:definition>
+        <skos:prefLabel xml:lang="en">Exploitation Report Kind</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Applied with stonework:hasExploitationReportKind to a stonework:MetricObservation of stonework:metricReportedExploited.</skos:scopeNote>
     </owl:Class>
     
 
@@ -6507,6 +7015,24 @@
     
 
 
+    <!-- https://cyberterrain.org/ns/stonework#FlowKind -->
+
+
+    <owl:Class rdf:about="https://cyberterrain.org/ns/stonework#FlowKind">
+        <rdfs:subClassOf rdf:resource="https://cyberterrain.org/ns/stonework#Category"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+                <owl:hasValue rdf:resource="https://cyberterrain.org/ns/stonework#flowKindScheme"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:definition xml:lang="en">A classification of how control flow splits after a Step or joins before one.</skos:definition>
+        <skos:prefLabel xml:lang="en">Flow Kind</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Applied via stonework:splitKind and stonework:joinKind to Steps. Named individuals: exclusive, parallel.</skos:scopeNote>
+    </owl:Class>
+    
+
+
     <!-- https://cyberterrain.org/ns/stonework#GranularMarking -->
 
 
@@ -6584,7 +7110,7 @@
         <rdfs:subClassOf rdf:resource="https://cyberterrain.org/ns/stonework#IntelligenceProduct"/>
         <skos:definition xml:lang="en">A structured, falsifiable prediction about the value a Variable will resolve to once the Behavior or Step declaring that Variable executes.</skos:definition>
         <skos:prefLabel>Hypothesis</skos:prefLabel>
-        <skos:scopeNote xml:lang="en">Formalizes the anticipated side of the Variable lifecycle described in stonework:Variable&apos;s scopeNote: a Hypothesis names, in advance, the value an output Variable is predicted to be bound to. Linked to the Variable it predicts via stonework:predictsVariable, and to the prediction itself via stonework:predictedType (a class, the common case — mirrors stonework:guardType), stonework:predictedValue (a specific individual), or stonework:predictedLiteral (a scalar) — mirroring stonework:boundTo/stonework:boundToLiteral on the actual-result side. A Transition&apos;s guard properties, which test a Variable&apos;s actual bound value, implicitly test agreement with whichever Hypothesis predicted that Variable — confirming it if they match, refuting it otherwise. May attach at any level of a Step/Plan decomposition, since stonework:Step is itself a stonework:Behavior.</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">Formalizes the anticipated side of the Variable lifecycle described in stonework:Variable&apos;s scopeNote: a Hypothesis names, in advance, the value an output Variable is predicted to be bound to. Linked to the Variable it predicts via stonework:predictsVariable, and to the prediction itself via stonework:predictedType (a class, the common case — mirrors stonework:guardType), stonework:predictedValue (a specific individual), or stonework:predictedLiteral (a scalar) — mirroring stonework:boundTo/stonework:boundToLiteral on the actual-result side. A Hypothesis is judged against the stonework:VariableBinding of its Variable in the Investigation that tests it (stonework:testsHypothesis): the binding stonework:boundIn that Investigation or in an execution stonework:partOfExecution it. When a run binds the Variable more than once, as when one search Step is run for each of several mailboxes, the Step&apos;s own execution (itself an Investigation) tests the Hypothesis, so that one binding judges it. A Transition&apos;s guard properties, which test a Variable&apos;s actual bound value, implicitly test agreement with whichever Hypothesis predicted that Variable — confirming it if they match, refuting it otherwise. May attach at any level of a Step/Plan decomposition, since stonework:Step is itself a stonework:Behavior. What a Hypothesis is about is stonework:hypothesisAbout. A compound claim, such as &quot;actor X is using technique Y&quot;, is a Hypothesis whose stonework:hypothesisPart values are its separately testable claims (the activity, the attribution), so a refuted compound shows which part failed.</skos:scopeNote>
     </owl:Class>
     
 
@@ -6649,6 +7175,18 @@
         <skos:definition xml:lang="en">A first-class representation of a security-relevant identifier value, such as an email address, cryptographic hash, MAC address, phone number, URI, or user-agent string.</skos:definition>
         <skos:prefLabel>Identifier</skos:prefLabel>
         <skos:scopeNote xml:lang="en">Identifier does not provide the RDF identity of every CyberEntity and does not imply that every CyberEntity has an Identifier. Named RDF resources are identified by their IRIs; identifiers originating in external systems are recorded with dcterms:identifier or stonework:externalId. Use the most specific available subclass, such as EmailAddress, Hash, MACAddress, PhoneNumber, URI, or UserAgent. Instantiate Identifier directly only when the identifier type is unknown or no suitable subclass exists.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#IdentityControl -->
+
+
+    <owl:Class rdf:about="https://cyberterrain.org/ns/stonework#IdentityControl">
+        <rdfs:subClassOf rdf:resource="https://cyberterrain.org/ns/stonework#QualifiedAssertion"/>
+        <skos:definition xml:lang="en">A qualified record that an Agent controlled a DigitalIdentity, able to act through it, during an interval.</skos:definition>
+        <skos:prefLabel xml:lang="en">Identity Control</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">The Agent is stonework:controllingAgent, the identity stonework:controlledIdentity, and the interval stonework:validFrom and stonework:validUntil; with no validUntil, control continues or its end is unknown. Evidence is stonework:evidencedBy (the sign-ins, the audit records), and provenance and confidence apply as on any qualified assertion. Three facts about identities differ: stonework:attributedToAgent (and stonework:accountOf) says whose an identity is, with no time; stonework:attributedTo on an activity says who did that one thing; an IdentityControl says who could act through the identity, and when. Control is not exclusive: the holder usually keeps using the account while an actor also controls it, so every execution performed through the identity in the interval and not yet attributed needs review. Typically used for a compromise, but it also fits delegated or shared access. No timeless projection property is declared, since it would lose the interval that is the point. When control is itself in doubt, a stonework:Hypothesis can be stonework:hypothesisAbout the IdentityControl.</skos:scopeNote>
     </owl:Class>
     
 
@@ -6845,7 +7383,7 @@
 
 
     <owl:Class rdf:about="https://cyberterrain.org/ns/stonework#InvestigationPlan">
-        <rdfs:subClassOf rdf:resource="https://cyberterrain.org/ns/stonework#Behavior"/>
+        <rdfs:subClassOf rdf:resource="https://cyberterrain.org/ns/stonework#Plan"/>
         <rdfs:comment xml:lang="en">An InvestigationPlan is a plan specification; executing one produces an instance of stonework:Investigation.</rdfs:comment>
         <skos:definition xml:lang="en">A Step-decomposed sequence of actions for systematically examining a cyber entity, artifact, or event to determine its nature, extent, or significance.</skos:definition>
         <skos:prefLabel>Investigation Plan</skos:prefLabel>
@@ -7059,7 +7597,7 @@
         <rdfs:subClassOf rdf:resource="https://cyberterrain.org/ns/stonework#QualifiedAssertion"/>
         <skos:definition xml:lang="en">A qualified, time-stamped metric value about a cyber entity, carrying its metric type, source provenance, and optional calculation-model version.</skos:definition>
         <skos:prefLabel xml:lang="en">Metric Observation</skos:prefLabel>
-        <skos:scopeNote xml:lang="en">Use for values that change over time or differ by source, including EPSS probability, KEV membership, confidence, likelihood, risk scores, and normalized monetary valuations. A stonework:metricNormalizedValue observation records its output currency with stonework:valuationCurrency. Direct datatype properties remain convenience projections for consumers that need a single current value.</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">Use for values that change over time or differ by source, including EPSS probability and percentile, known-exploited catalog membership, confidence, likelihood, risk scores, and normalized monetary valuations. Which source produced a value is stonework:hasProvenance, not a separate metric type. A stonework:metricNormalizedValue observation records its output currency with stonework:valuationCurrency. Direct datatype properties remain convenience projections for consumers that need a single current value.</skos:scopeNote>
     </owl:Class>
     
 
@@ -7085,11 +7623,12 @@
 
 
     <owl:Class rdf:about="https://cyberterrain.org/ns/stonework#Mitigation">
+        <rdfs:subClassOf rdf:resource="https://cyberterrain.org/ns/stonework#Behavior"/>
         <rdfs:subClassOf rdf:resource="https://cyberterrain.org/ns/stonework#Countermeasure"/>
         <rdfs:seeAlso rdf:resource="https://csrc.nist.gov/glossary/term/mitigation"/>
         <skos:definition xml:lang="en">A deliberate action or control intended to reduce the likelihood, impact, or severity of a risk, threat, vulnerability, or adverse event.</skos:definition>
         <skos:prefLabel>Mitigation</skos:prefLabel>
-        <skos:scopeNote xml:lang="en">Mitigations are proactive or reactive measures applied to address weaknesses or threats. Examples include: applying a security patch, enabling MFA, deploying a firewall rule, isolating a compromised host, or training users. A Mitigation may be a reusable control (ATT&amp;CK sense) or a specific situational action. CourseOfAction is a subclass for contextualized, packaged response actions.</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">Mitigations are proactive or reactive measures applied to address weaknesses or threats. Examples include: applying a security patch, enabling MFA, deploying a firewall rule, isolating a compromised host, or training users. A Mitigation may be a reusable control (ATT&amp;CK sense) or a specific situational action. CourseOfAction is a subclass for contextualized, packaged response actions. Like stonework:Control, a Mitigation is a stonework:Behavior: a specification of how to act, not an occurrence. So a stonework:ControlPlan, or one of its Steps, stonework:implements an ATT&amp;CK mitigation the same way it implements a NIST control, and the technique it mitigates is reached through stonework:mitigatesAttackPattern either way.</skos:scopeNote>
     </owl:Class>
     
 
@@ -7308,16 +7847,48 @@
     
 
 
+    <!-- https://cyberterrain.org/ns/stonework#Plan -->
+
+
+    <owl:Class rdf:about="https://cyberterrain.org/ns/stonework#Plan">
+        <rdfs:subClassOf rdf:resource="https://cyberterrain.org/ns/stonework#Behavior"/>
+        <rdfs:seeAlso rdf:resource="http://purl.org/net/p-plan#Plan"/>
+        <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/prov#Plan"/>
+        <skos:definition xml:lang="en">A specification of actions, usually decomposed into Steps, that an agent intends to carry out, and that can be executed any number of times.</skos:definition>
+        <skos:prefLabel>Plan</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">The common parent of the executable Behaviors: stonework:Playbook (and stonework:OperationPlan), stonework:ControlPlan, stonework:InvestigationPlan (and stonework:DetectionPlan), stonework:BusinessProcess, stonework:Procedure and stonework:ThreatScenario. They differ in scope and stance (whose plan it is, and whether it is believed or hypothesized), not in kind. A Plan decomposes into Steps via stonework:hasStep and declares Variables via stonework:hasInputVariable and stonework:hasOutputVariable; a Plan given only as prose has no Steps. Each execution, or run, is a stonework:CyberActivity (usually a stonework:Process) that is stonework:executionOf the Plan; the executions of its Steps are stonework:partOfExecution that run, and the values its Variables take in that run are stonework:VariableBinding individuals. Distinct from the methods a Plan implements (stonework:Technique, stonework:Control): a method is not executed step by step, and one method has many Plans that realize it. Aligns with prov:Plan and p-plan:Plan; a stonework:Step is part of a Plan rather than a Plan of its own, as p-plan:Step is distinct from p-plan:Plan.</skos:scopeNote>
+    </owl:Class>
+    
+
+
     <!-- https://cyberterrain.org/ns/stonework#Playbook -->
 
 
     <owl:Class rdf:about="https://cyberterrain.org/ns/stonework#Playbook">
-        <rdfs:subClassOf rdf:resource="https://cyberterrain.org/ns/stonework#Behavior"/>
+        <rdfs:subClassOf rdf:resource="https://cyberterrain.org/ns/stonework#Plan"/>
         <rdfs:comment xml:lang="en">A Playbook is a plan specification; executing one produces instances of stonework:Process. Playbooks are often versioned and tested before use.</rdfs:comment>
         <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/prov#Plan"/>
         <skos:definition xml:lang="en">A documented, structured Behavior that defines a sequenced set of steps, decisions, and actions to be executed in response to a specific type of event, incident, or operational need.</skos:definition>
         <skos:prefLabel>Playbook</skos:prefLabel>
-        <skos:scopeNote xml:lang="en">A Playbook may be offensive (an adversary&apos;s operational playbook — see stonework:OperationPlan) or defensive (an incident response, threat hunting, or recovery playbook) — both are action plans carried out by an interested party, as distinct from stonework:DetectionPlan, which plays a neutral, evaluative role. A Playbook decomposes into Steps via stonework:hasStep; its actual execution is recorded as a stonework:Process.</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">A Playbook may be offensive (an adversary&apos;s operational playbook — see stonework:OperationPlan) or defensive (an incident response, threat hunting, or recovery playbook) — both are action plans carried out by an interested party, as distinct from stonework:DetectionPlan, which plays a neutral, evaluative role. A Playbook decomposes into Steps via stonework:hasStep; each execution is recorded as a stonework:Process. An organization&apos;s routine work is a stonework:BusinessProcess, a sibling under stonework:Plan.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#PlaybookType -->
+
+
+    <owl:Class rdf:about="https://cyberterrain.org/ns/stonework#PlaybookType">
+        <rdfs:subClassOf rdf:resource="https://cyberterrain.org/ns/stonework#Category"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+                <owl:hasValue rdf:resource="https://cyberterrain.org/ns/stonework#playbookTypeScheme"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:definition xml:lang="en">A classification of what a Plan is for, from the CACAO playbook types.</skos:definition>
+        <skos:prefLabel xml:lang="en">Playbook Type</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Applied via stonework:hasPlaybookType. The values are CACAO 2.0&apos;s playbook-type-ov. STONEWORK&apos;s Plan subclasses correspond: OperationPlan to attack, DetectionPlan to detection, InvestigationPlan to investigation, and ControlPlan to mitigation, prevention or remediation; engagement and notification have no subclass.</skos:scopeNote>
     </owl:Class>
     
 
@@ -7343,11 +7914,11 @@
 
 
     <owl:Class rdf:about="https://cyberterrain.org/ns/stonework#Procedure">
-        <rdfs:subClassOf rdf:resource="https://cyberterrain.org/ns/stonework#Behavior"/>
+        <rdfs:subClassOf rdf:resource="https://cyberterrain.org/ns/stonework#Plan"/>
         <rdfs:comment>Procedures are instances or patterns of execution that realize a technique. They may include command lines, API calls, malware behaviors, or operator playbook steps. Procedures are distinct from techniques, which describe generalized methods.</rdfs:comment>
         <skos:definition>A concrete, observable sequence of actions, commands, or behaviors that implements a technique in a specific operational context.</skos:definition>
         <skos:prefLabel>Procedure</skos:prefLabel>
-        <skos:scopeNote>One realization path for a single Technique — the specific commands, scripts, tools, or configuration that carry it out (e.g. the comsvcs.dll MiniDump way of doing OS Credential Dumping: LSASS Memory). Technique-scoped and typically linear. A Procedure may be only a prose description — the common case when ingesting MITRE ATT&amp;CK procedure examples — or decomposed into stonework:Step individuals via stonework:hasStep for sub-step depth. Links to the Technique it operationalizes via stonework:implements or its specialization stonework:procedureFor. Distinct from stonework:Playbook / stonework:OperationPlan / stonework:ControlPlan, which are objective-scoped plans that orchestrate several Procedures or Techniques with branching, retry, and control flow; a Plan&apos;s Step commonly stonework:implements a Procedure.</skos:scopeNote>
+        <skos:scopeNote>One realization path for a single Technique — the specific commands, scripts, tools, or configuration that carry it out (e.g. the comsvcs.dll MiniDump way of doing OS Credential Dumping: LSASS Memory). Technique-scoped and typically linear. A Procedure may be only a prose description — the common case when ingesting MITRE ATT&amp;CK procedure examples — or decomposed into stonework:Step individuals via stonework:hasStep for sub-step depth. Links to the Technique it operationalizes via stonework:implements or its specialization stonework:procedureFor. A Procedure is a stonework:Plan at the realization layer, so its runs can be recorded like any other Plan&apos;s. Distinct from stonework:Playbook / stonework:OperationPlan / stonework:ControlPlan, which are objective-scoped plans that orchestrate several Procedures or Techniques with branching, retry, and control flow; a Plan&apos;s Step commonly stonework:implements a Procedure.</skos:scopeNote>
     </owl:Class>
     
 
@@ -7361,7 +7932,7 @@
         <rdfs:seeAlso rdf:resource="https://www.opmw.org/model/p-plan/"/>
         <skos:definition>An identifiable activity or sequence of activities performed over time by one or more agents to achieve an operational, security, or business objective. It transforms inputs (artifacts, data, configurations) into outputs and may be governed by plans, controls, or policies.</skos:definition>
         <skos:prefLabel xml:lang="en">Process</skos:prefLabel>
-        <skos:scopeNote xml:lang="en">This class operates at the enterprise/operational level and is distinct from low-level runtime Process objects (e.g., STIX SCO Process). It is the execution-side counterpart to Behavior-side plan specifications such as Playbook, ControlPlan, and ThreatScenario — e.g. executing a Playbook produces a Process instance.</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">This class operates at the enterprise/operational level and is distinct from low-level runtime Process objects (e.g., STIX SCO Process). It is the execution-side counterpart to stonework:Plan: each run of a Playbook, ControlPlan, BusinessProcess or other Plan is a Process that is stonework:executionOf it, and the executions of its Steps are stonework:partOfExecution that run.</skos:scopeNote>
     </owl:Class>
     
 
@@ -7743,7 +8314,7 @@
     <owl:Class rdf:about="https://cyberterrain.org/ns/stonework#Step">
         <rdfs:subClassOf rdf:resource="https://cyberterrain.org/ns/stonework#Behavior"/>
         <rdfs:seeAlso rdf:resource="http://purl.org/net/p-plan#Step"/>
-        <skos:definition xml:lang="en">A single, individually addressable unit of action within a Behavior that models a multi-step process, such as a Procedure, Playbook, ThreatScenario, or Control.</skos:definition>
+        <skos:definition xml:lang="en">A single, individually addressable unit of action within a Behavior that models a multi-step process, such as a Plan or a Control.</skos:definition>
         <skos:prefLabel>Step</skos:prefLabel>
         <skos:scopeNote xml:lang="en">A Step is itself a Behavior — a plan specification for a sub-action, not its execution — consistent with p-plan:Step subclassing prov:Plan rather than prov:Activity. Because Step is a Behavior, a Step MAY itself decompose into further Steps via stonework:hasStep, supporting nested sub-procedures (e.g. a Kill Chain phase decomposing into candidate technique attempts) without a separate composite class. The activity that executes a Step is a stonework:CyberActivity; it links back to the Step it realizes via stonework:correspondsToStep.</skos:scopeNote>
     </owl:Class>
@@ -7867,11 +8438,11 @@
 
 
     <owl:Class rdf:about="https://cyberterrain.org/ns/stonework#ThreatScenario">
-        <rdfs:subClassOf rdf:resource="https://cyberterrain.org/ns/stonework#Behavior"/>
+        <rdfs:subClassOf rdf:resource="https://cyberterrain.org/ns/stonework#Plan"/>
         <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/prov#Plan"/>
         <skos:definition xml:lang="en">A plan specification describing how a threat could materialize against specific assets or missions — incorporating adversary intent, capability, opportunity, preconditions, attack path, and expected consequences.</skos:definition>
         <skos:prefLabel xml:lang="en">Threat Scenario</skos:prefLabel>
-        <skos:scopeNote xml:lang="en">A ThreatScenario is prescriptive and forward-looking: it specifies a potential sequence of adversary behaviors and environmental conditions rather than recording observed events. Used to guide defensive planning, risk assessment, and Playbook development. Distinct from stonework:Incident (an observed occurrence) and stonework:Threat (an abstract source of harm). Aligns with prov:Plan and P-Plan scenario specifications.</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">A ThreatScenario is prescriptive and forward-looking: it specifies a potential sequence of adversary behaviors and environmental conditions rather than recording observed events. Used to guide defensive planning, risk assessment, and Playbook development. A ThreatScenario is a stonework:Plan held as a hypothesis: an adversary plan that may or may not exist, where a stonework:OperationPlan is one believed to exist. It can be executed, as in a red-team exercise or tabletop, and an observed Incident can be compared against it. Distinct from stonework:Incident (an observed occurrence) and stonework:Threat (an abstract source of harm). Aligns with prov:Plan and P-Plan scenario specifications.</skos:scopeNote>
     </owl:Class>
     
 
@@ -7911,7 +8482,7 @@
     <owl:Class rdf:about="https://cyberterrain.org/ns/stonework#Transition">
         <skos:definition xml:lang="en">A directed edge between two Steps within the same parent Behavior&apos;s Step graph, representing progression from one Step to the next.</skos:definition>
         <skos:prefLabel>Transition</skos:prefLabel>
-        <skos:scopeNote xml:lang="en">Unconditioned, a Transition expresses plain sequence — an alternative to stonework:precededByStep for the same purpose, used when a Step has more than one possible successor and the edges themselves need to be individually referenceable. When a Transition&apos;s stonework:toStep targets a Step already reached earlier in the same graph, it expresses a loop back-edge; looping is not a separate construct. Conditional branching is expressed with the guard properties stonework:guardVariable (the Variable tested), stonework:guardType (a class the bound value must be an instance of) or stonework:guardLiteralValue (a scalar it must equal), and stonework:guardOperator (the comparison; omitting it defaults to equality). The Transition fires when its guard holds against the from-Step&apos;s bound Variable.</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">Unconditioned, a Transition expresses plain sequence — an alternative to stonework:precededByStep for the same purpose, used when a Step has more than one possible successor and the edges themselves need to be individually referenceable. When a Transition&apos;s stonework:toStep targets a Step already reached earlier in the same graph, it expresses a loop back-edge; looping is not a separate construct. Conditional branching is expressed with the guard properties stonework:guardVariable (the Variable tested), stonework:guardType (a class the bound value must be an instance of) or stonework:guardLiteralValue (a scalar it must equal) or stonework:guardValue (an individual it must be), and stonework:guardOperator (the comparison; omitting it defaults to equality). The Transition fires when its guard holds against the value the from-Step&apos;s execution bound: the stonework:VariableBinding of the guard Variable that is stonework:boundIn that execution. Whether a Step&apos;s several outgoing Transitions are alternatives or concurrent branches is given by that Step&apos;s stonework:splitKind, and whether a Step entered by several Transitions waits for all of them by its stonework:joinKind; both default to exclusive (one path). A Step&apos;s stonework:defaultTransition is taken only when no other outgoing Transition&apos;s guard holds. A Transition never leaves its Plan: between Plans, only data passes, as a message through a shared Variable (see stonework:Variable).</skos:scopeNote>
     </owl:Class>
     
 
@@ -7968,9 +8539,23 @@
     <owl:Class rdf:about="https://cyberterrain.org/ns/stonework#Variable">
         <rdfs:subClassOf rdf:resource="https://cyberterrain.org/ns/stonework#CyberEntity"/>
         <rdfs:seeAlso rdf:resource="http://purl.org/net/p-plan#Variable"/>
-        <skos:definition xml:lang="en">A named placeholder for a value declared by a Behavior or Step, bound to an actual value only once the corresponding execution occurs.</skos:definition>
+        <skos:definition xml:lang="en">A named placeholder for a value declared by a Plan or Step, which takes a value in each execution of it.</skos:definition>
         <skos:prefLabel>Variable</skos:prefLabel>
-        <skos:scopeNote xml:lang="en">Declared via stonework:hasInputVariable or stonework:hasOutputVariable. An input Variable is typically bound before its Step executes from an already-known fact; for example, a plan may bind to an existing stonework:CvssMetric assessment. An output Variable is bound only after its Step executes, such as when an Investigation constructs a stonework:VulnerabilityAssessment. Variables carry execution-time values and do not replace persistent domain relationships. Bound via stonework:boundTo (an individual) or stonework:boundToLiteral (a scalar). The bound value is what stonework:Transition guard properties test, and — in a future deviation-detection layer — what an actual result is compared against what the Step declared as expected.</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">Declared via stonework:hasInputVariable or stonework:hasOutputVariable. A Variable belongs to the plan, not to a run: the value it takes in one execution is a stonework:VariableBinding (stonework:bindingOf the Variable, stonework:boundIn the execution that bound it), so a plan run many times keeps every run&apos;s values. Data flows between Steps through a shared Variable, as in P-Plan: one Step declares it as an output, a later Step as an input, and in a run the later Step&apos;s execution records the binding it received with stonework:usedBinding. An input supplied when a run starts, for example an existing stonework:CvssMetric assessment, is bound in the run itself. When the producing Step and the consuming Step belong to different Plans, the data flow is a message between participants (BPMN&apos;s message flow): an adversary&apos;s OperationPlan whose Step outputs the payment request an organization&apos;s BusinessProcess takes as input, for example. Control flow never crosses Plans; only data does. When the sender&apos;s plan isn&apos;t modelled, stonework:suppliedBy names the Role whose holders supply the value, and the value is bound in the execution that received it. Variables carry execution-time values and do not replace persistent domain relationships. A binding&apos;s value is what stonework:Transition guard properties test, and what a stonework:Hypothesis that predicts the Variable is judged against.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#VariableBinding -->
+
+
+    <owl:Class rdf:about="https://cyberterrain.org/ns/stonework#VariableBinding">
+        <rdfs:subClassOf rdf:resource="https://cyberterrain.org/ns/stonework#CyberEntity"/>
+        <rdfs:seeAlso rdf:resource="http://purl.org/net/p-plan#correspondsToVariable"/>
+        <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+        <skos:definition xml:lang="en">The value a Variable took in one execution of the Plan or Step that declares it.</skos:definition>
+        <skos:prefLabel>Variable Binding</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Names the Variable with stonework:bindingOf, the execution that bound it with stonework:boundIn (a Step&apos;s execution for an output, the run itself for an input supplied when it starts), and the value with stonework:boundTo (an individual) or stonework:boundToLiteral (a scalar). An execution that received the value records it with stonework:usedBinding. A Step executed several times in one run, as in a retry loop, binds its output Variables once per execution. In P-Plan the run&apos;s own entity carries p-plan:correspondsToVariable; a binding does the same for literal values, which cannot carry properties, and treats individuals the same way. In PROV terms a binding is an Entity generated by the execution it is boundIn and used by those that record it with usedBinding.</skos:scopeNote>
     </owl:Class>
     
 
@@ -7979,6 +8564,7 @@
 
 
     <owl:Class rdf:about="https://cyberterrain.org/ns/stonework#VersionedProduct">
+        <rdfs:subClassOf rdf:resource="https://cyberterrain.org/ns/stonework#CyberEntity"/>
         <rdfs:comment xml:lang="en">Instances of stonework:VersionedProduct may include operating systems, applications, libraries, devices, or embedded components at a specific release. Versioning, vendor attribution, and edition details SHOULD be represented using explicit properties rather than encoded strings.</rdfs:comment>
         <skos:definition xml:lang="en">A specific versioned release or build of a Product, identified by a CPE name or equivalent product identifier. Represents the unit of software actually deployed and potentially affected by vulnerabilities.</skos:definition>
         <skos:prefLabel>Versioned Product</skos:prefLabel>
@@ -8521,6 +9107,95 @@
     
 
 
+    <!-- https://cyberterrain.org/ns/stonework#affectedStatusAffected -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#affectedStatusAffected">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#AffectedStatus"/>
+        <skos:notation>affected</skos:notation>
+        <skos:definition xml:lang="en">The product or version is affected by the vulnerability.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#affectedStatusScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:prefLabel xml:lang="en">Affected</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#affectedStatusFixed -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#affectedStatusFixed">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#AffectedStatus"/>
+        <skos:notation>fixed</skos:notation>
+        <skos:definition xml:lang="en">The stated product or version contains a fix for the vulnerability.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#affectedStatusScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:prefLabel xml:lang="en">Fixed</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#affectedStatusScheme -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#affectedStatusScheme">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <terms:title xml:lang="en">STONEWORK Affected Status Scheme</terms:title>
+        <terms:isPartOf rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <terms:source rdf:resource="https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html"/>
+        <skos:definition xml:lang="en">The controlled vocabulary of vulnerability applicability judgments.</skos:definition>
+        <skos:prefLabel xml:lang="en">STONEWORK Affected Status Scheme</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#affectedStatusUnaffected -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#affectedStatusUnaffected">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#AffectedStatus"/>
+        <skos:notation>unaffected</skos:notation>
+        <skos:definition xml:lang="en">The product or version is not affected by the vulnerability.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#affectedStatusScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:prefLabel xml:lang="en">Unaffected</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#affectedStatusUnderInvestigation -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#affectedStatusUnderInvestigation">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#AffectedStatus"/>
+        <skos:notation>under-investigation</skos:notation>
+        <skos:definition xml:lang="en">Applicability of the vulnerability to the product or version is still being determined.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#affectedStatusScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:prefLabel xml:lang="en">Under Investigation</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#affectedStatusUnknown -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#affectedStatusUnknown">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#AffectedStatus"/>
+        <skos:notation>unknown</skos:notation>
+        <skos:definition xml:lang="en">It is not known whether the product or version is affected.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#affectedStatusScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:prefLabel xml:lang="en">Unknown</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://cyberterrain.org/ns/stonework#categoryScheme -->
 
 
@@ -8646,6 +9321,110 @@
     
 
 
+    <!-- https://cyberterrain.org/ns/stonework#deviationKindMisusedIdentity -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#deviationKindMisusedIdentity">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#DeviationKind"/>
+        <skos:notation>misused-identity</skos:notation>
+        <skos:definition xml:lang="en">The Step was performed through the identity of someone who holds its Role, but not by that holder: for example, by an actor using the holder&apos;s stolen credentials.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#deviationKindScheme"/>
+        <skos:prefLabel xml:lang="en">Misused identity</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Logs alone can&apos;t show this, since the role and separation checks see the right identity; an analyst establishes it from evidence such as sign-ins from an unfamiliar address.</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#deviationKindOutOfOrder -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#deviationKindOutOfOrder">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#DeviationKind"/>
+        <skos:notation>out-of-order</skos:notation>
+        <skos:definition xml:lang="en">Two Steps were performed in an order the Plan doesn&apos;t allow.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#deviationKindScheme"/>
+        <skos:prefLabel xml:lang="en">Out of order</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#deviationKindSameAgent -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#deviationKindSameAgent">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#DeviationKind"/>
+        <skos:notation>same-agent</skos:notation>
+        <skos:definition xml:lang="en">Two Steps that are stonework:separatedFrom each other were performed by the same Agent in one run.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#deviationKindScheme"/>
+        <skos:prefLabel xml:lang="en">Same agent</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#deviationKindScheme -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#deviationKindScheme">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <terms:title xml:lang="en">STONEWORK Deviation Kind Scheme</terms:title>
+        <terms:isPartOf rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:definition xml:lang="en">The controlled vocabulary of the ways a run can depart from its Plan.</skos:definition>
+        <skos:prefLabel xml:lang="en">STONEWORK Deviation Kind Scheme</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#deviationKindSkipped -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#deviationKindSkipped">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#DeviationKind"/>
+        <skos:notation>skipped</skos:notation>
+        <skos:definition xml:lang="en">A Step the Plan required in this run was not performed.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#deviationKindScheme"/>
+        <skos:prefLabel xml:lang="en">Skipped</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#deviationKindWrongRole -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#deviationKindWrongRole">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#DeviationKind"/>
+        <skos:notation>wrong-role</skos:notation>
+        <skos:definition xml:lang="en">A Step was performed by an Agent who doesn&apos;t hold any of its stonework:performerRole Roles.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#deviationKindScheme"/>
+        <skos:prefLabel xml:lang="en">Wrong role</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#deviationKindWrongTarget -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#deviationKindWrongTarget">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#DeviationKind"/>
+        <skos:notation>wrong-target</skos:notation>
+        <skos:definition xml:lang="en">A Step was performed against something other than its stonework:stepTarget, or other than the value its target Variable had in the run.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#deviationKindScheme"/>
+        <skos:prefLabel xml:lang="en">Wrong target</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://cyberterrain.org/ns/stonework#evidence -->
 
 
@@ -8656,6 +9435,181 @@
         <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
         <skos:prefLabel xml:lang="en">Evidence</skos:prefLabel>
         <skos:scopeNote xml:lang="en">This is a reusable category instance. It is *not* a class. Use stonework:categorizedBy to assert that something is evidence in a given context.</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#executionOutcomeFailed -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#executionOutcomeFailed">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#ExecutionOutcome"/>
+        <skos:notation>failed</skos:notation>
+        <skos:definition xml:lang="en">The execution ended without doing what the Step is for.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#executionOutcomeScheme"/>
+        <skos:prefLabel xml:lang="en">Failed</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#executionOutcomeScheme -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#executionOutcomeScheme">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <terms:title xml:lang="en">STONEWORK Execution Outcome Scheme</terms:title>
+        <terms:isPartOf rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:definition xml:lang="en">The controlled vocabulary of how an execution of a Step or Plan ended.</skos:definition>
+        <skos:prefLabel xml:lang="en">STONEWORK Execution Outcome Scheme</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#executionOutcomeSucceeded -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#executionOutcomeSucceeded">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#ExecutionOutcome"/>
+        <skos:notation>succeeded</skos:notation>
+        <skos:definition xml:lang="en">The execution did what the Step is for. A search that ran and found nothing succeeded.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#executionOutcomeScheme"/>
+        <skos:prefLabel xml:lang="en">Succeeded</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#executionOutcomeTimedOut -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#executionOutcomeTimedOut">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#ExecutionOutcome"/>
+        <skos:notation>timed-out</skos:notation>
+        <skos:definition xml:lang="en">The execution was abandoned because it ran past its time limit.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#executionOutcomeScheme"/>
+        <skos:prefLabel xml:lang="en">Timed out</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#exploitMaturityPoc -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#exploitMaturityPoc">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#ExploitMaturity"/>
+        <skos:notation>poc</skos:notation>
+        <skos:definition xml:lang="en">A proof-of-concept exploit exists. It may be unreliable or require a specific target.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#exploitMaturityScheme"/>
+        <skos:prefLabel xml:lang="en">Proof of Concept</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#exploitMaturityScheme -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#exploitMaturityScheme">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <terms:title xml:lang="en">STONEWORK Exploit Maturity Scheme</terms:title>
+        <terms:isPartOf rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:definition xml:lang="en">The controlled vocabulary of how mature a known exploit is.</skos:definition>
+        <skos:prefLabel xml:lang="en">STONEWORK Exploit Maturity Scheme</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Ordered from least to most mature: poc, then weaponized.</skos:scopeNote>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#exploitMaturityWeaponized -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#exploitMaturityWeaponized">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#ExploitMaturity"/>
+        <skos:notation>weaponized</skos:notation>
+        <skos:definition xml:lang="en">The exploit is reliable against most targets, or it is built into an attack tool or malware.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#exploitMaturityScheme"/>
+        <skos:prefLabel xml:lang="en">Weaponized</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#exploitationReportBotnet -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#exploitationReportBotnet">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#ExploitationReportKind"/>
+        <skos:notation>botnet</skos:notation>
+        <skos:definition xml:lang="en">The source reports the vulnerability as exploited by a botnet.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#exploitationReportKindScheme"/>
+        <skos:prefLabel xml:lang="en">Exploited by a Botnet</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#exploitationReportGeneral -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#exploitationReportGeneral">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#ExploitationReportKind"/>
+        <skos:notation>exploited</skos:notation>
+        <skos:definition xml:lang="en">The source reports the vulnerability as exploited without saying by whom.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#exploitationReportKindScheme"/>
+        <skos:prefLabel xml:lang="en">Exploited</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#exploitationReportKindScheme -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#exploitationReportKindScheme">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <terms:title xml:lang="en">STONEWORK Exploitation Report Kind Scheme</terms:title>
+        <terms:isPartOf rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:definition xml:lang="en">The controlled vocabulary of kinds of exploitation report.</skos:definition>
+        <skos:prefLabel xml:lang="en">STONEWORK Exploitation Report Kind Scheme</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#exploitationReportRansomware -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#exploitationReportRansomware">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#ExploitationReportKind"/>
+        <skos:notation>ransomware</skos:notation>
+        <skos:definition xml:lang="en">The source reports the vulnerability as exploited in ransomware campaigns.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#exploitationReportKindScheme"/>
+        <skos:prefLabel xml:lang="en">Exploited by Ransomware</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#exploitationReportThreatActor -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#exploitationReportThreatActor">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#ExploitationReportKind"/>
+        <skos:notation>threat-actor</skos:notation>
+        <skos:definition xml:lang="en">The source reports the vulnerability as exploited by a threat actor or group.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#exploitationReportKindScheme"/>
+        <skos:prefLabel xml:lang="en">Exploited by a Threat Actor</skos:prefLabel>
     </owl:NamedIndividual>
     
 
@@ -8994,6 +9948,49 @@
         <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
         <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#financialInstitutionTypeScheme"/>
         <skos:prefLabel xml:lang="en">Virtual Asset Service Provider</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#flowKindExclusive -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#flowKindExclusive">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#FlowKind"/>
+        <skos:notation>exclusive</skos:notation>
+        <skos:definition xml:lang="en">One path. As a split, exactly one of the Step&apos;s outgoing Transitions is taken, one whose guard holds. As a join, the Step may start as soon as any one of its incoming Transitions is taken.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#flowKindScheme"/>
+        <skos:prefLabel xml:lang="en">Exclusive</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#flowKindParallel -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#flowKindParallel">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#FlowKind"/>
+        <skos:notation>parallel</skos:notation>
+        <skos:definition xml:lang="en">All paths. As a split, every outgoing Transition whose guard holds is taken, and the branches run concurrently. As a join, the Step starts only after the execution of every Step it is entered from, by a Transition taken in the same run, has ended.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#flowKindScheme"/>
+        <skos:prefLabel xml:lang="en">Parallel</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#flowKindScheme -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#flowKindScheme">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <terms:title xml:lang="en">STONEWORK Flow Kind Scheme</terms:title>
+        <terms:isPartOf rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:definition xml:lang="en">The controlled vocabulary of the ways control flow splits after a Step or joins before one.</skos:definition>
+        <skos:prefLabel xml:lang="en">STONEWORK Flow Kind Scheme</skos:prefLabel>
     </owl:NamedIndividual>
     
 
@@ -9862,6 +10859,21 @@
     
 
 
+    <!-- https://cyberterrain.org/ns/stonework#metricEpssPercentile -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#metricEpssPercentile">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#MetricType"/>
+        <skos:notation>epss-percentile</skos:notation>
+        <skos:definition xml:lang="en">An EPSS percentile on the 0.0–1.0 scale: the proportion of scored vulnerabilities with an equal or lower EPSS probability.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#metricTypeScheme"/>
+        <skos:prefLabel xml:lang="en">EPSS Percentile</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://cyberterrain.org/ns/stonework#metricEpssScore -->
 
 
@@ -9884,10 +10896,11 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#MetricType"/>
         <skos:notation>kev-membership</skos:notation>
-        <skos:definition xml:lang="en">A dated boolean observation of whether a vulnerability appears in the CISA Known Exploited Vulnerabilities catalog.</skos:definition>
+        <skos:definition xml:lang="en">A dated boolean observation of whether a vulnerability appears in a known-exploited-vulnerabilities catalog.</skos:definition>
         <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
         <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#metricTypeScheme"/>
         <skos:prefLabel xml:lang="en">KEV Membership</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">The catalog is the observation&apos;s stonework:hasProvenance. Two catalogs are two observations of this same metric type. stonework:isKnownExploited is one current snapshot and does not record which catalog.</skos:scopeNote>
     </owl:NamedIndividual>
     
 
@@ -9918,6 +10931,22 @@
         <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
         <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#metricTypeScheme"/>
         <skos:prefLabel xml:lang="en">Normalized Value</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#metricReportedExploited -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#metricReportedExploited">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#MetricType"/>
+        <skos:notation>reported-exploited</skos:notation>
+        <skos:definition xml:lang="en">A dated boolean observation that a source reported a vulnerability as exploited.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#metricTypeScheme"/>
+        <skos:prefLabel xml:lang="en">Reported Exploited</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Distinct from stonework:metricKevMembership, which records catalog membership. A source that separately reports exploitation in general, by a threat actor, by ransomware, or by a botnet records each report as its own observation of this metric type, with the report kind as stonework:hasExploitationReportKind. When the source names the threat actor, malware, or botnet, the observation identifies it with stonework:assertionObject. assertionObject is single-valued, so each named actor, malware, or botnet is its own observation, even when the kind is the same.</skos:scopeNote>
     </owl:NamedIndividual>
     
 
@@ -10229,6 +11258,139 @@
         <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
         <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#paymentInstrumentScheme"/>
         <skos:prefLabel xml:lang="en">Wire Transfer</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#playbookTypeAttack -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#playbookTypeAttack">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#PlaybookType"/>
+        <skos:notation>attack</skos:notation>
+        <skos:definition xml:lang="en">Penetration testing or adversary emulation, or an adversary&apos;s own operation as reconstructed from intelligence. stonework:OperationPlan is this type.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#playbookTypeScheme"/>
+        <skos:prefLabel xml:lang="en">Attack</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#playbookTypeDetection -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#playbookTypeDetection">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#PlaybookType"/>
+        <skos:notation>detection</skos:notation>
+        <skos:definition xml:lang="en">Detecting a known security event or expected security-relevant activity, or threat hunting. stonework:DetectionPlan is this type.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#playbookTypeScheme"/>
+        <skos:prefLabel xml:lang="en">Detection</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#playbookTypeEngagement -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#playbookTypeEngagement">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#PlaybookType"/>
+        <skos:notation>engagement</skos:notation>
+        <skos:definition xml:lang="en">Denial, deception and other adversary engagement that raises the adversary&apos;s cost or lowers the value of its operations (see MITRE Engage).</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#playbookTypeScheme"/>
+        <skos:prefLabel xml:lang="en">Engagement</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#playbookTypeInvestigation -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#playbookTypeInvestigation">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#PlaybookType"/>
+        <skos:notation>investigation</skos:notation>
+        <skos:definition xml:lang="en">Investigating what a security event, incident or other activity has affected. stonework:InvestigationPlan is this type.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#playbookTypeScheme"/>
+        <skos:prefLabel xml:lang="en">Investigation</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#playbookTypeMitigation -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#playbookTypeMitigation">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#PlaybookType"/>
+        <skos:notation>mitigation</skos:notation>
+        <skos:definition xml:lang="en">Reducing or limiting the impact of an event or incident until it can be remediated. A stonework:ControlPlan is often this type.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#playbookTypeScheme"/>
+        <skos:prefLabel xml:lang="en">Mitigation</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#playbookTypeNotification -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#playbookTypeNotification">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#PlaybookType"/>
+        <skos:notation>notification</skos:notation>
+        <skos:definition xml:lang="en">Notifying others and disseminating information or playbooks about an event, incident or threat.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#playbookTypeScheme"/>
+        <skos:prefLabel xml:lang="en">Notification</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#playbookTypePrevention -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#playbookTypePrevention">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#PlaybookType"/>
+        <skos:notation>prevention</skos:notation>
+        <skos:definition xml:lang="en">Preventing a known or expected event, incident or threat from occurring. A stonework:ControlPlan is often this type.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#playbookTypeScheme"/>
+        <skos:prefLabel xml:lang="en">Prevention</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#playbookTypeRemediation -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#playbookTypeRemediation">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#PlaybookType"/>
+        <skos:notation>remediation</skos:notation>
+        <skos:definition xml:lang="en">Returning affected systems to a known good state after an event or incident. A stonework:ControlPlan is often this type.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#playbookTypeScheme"/>
+        <skos:prefLabel xml:lang="en">Remediation</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#playbookTypeScheme -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#playbookTypeScheme">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <terms:title xml:lang="en">STONEWORK Playbook Type Scheme</terms:title>
+        <terms:isPartOf rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:definition xml:lang="en">The controlled vocabulary of what a Plan is for, aligned with CACAO 2.0&apos;s playbook types.</skos:definition>
+        <skos:prefLabel xml:lang="en">STONEWORK Playbook Type Scheme</skos:prefLabel>
     </owl:NamedIndividual>
     
 

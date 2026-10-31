@@ -21,7 +21,27 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid102",
+  "@id" : "_:genid100",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://cyberterrain.org/ns/stonework#UserAccount"
+    }, {
+      "@id" : "https://cyberterrain.org/ns/stonework#UserGroup"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid103",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://cyberterrain.org/ns/stonework#MalwareFamily"
+    }, {
+      "@id" : "https://cyberterrain.org/ns/stonework#MalwareSample"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid106",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -33,7 +53,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid106",
+  "@id" : "_:genid110",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -45,7 +65,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid110",
+  "@id" : "_:genid114",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -55,7 +75,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid113",
+  "@id" : "_:genid117",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -65,7 +85,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid116",
+  "@id" : "_:genid120",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -75,7 +95,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid119",
+  "@id" : "_:genid123",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -87,7 +107,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid123",
+  "@id" : "_:genid127",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -97,7 +117,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid128",
+  "@id" : "_:genid132",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -109,7 +129,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid132",
+  "@id" : "_:genid136",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -118,30 +138,6 @@
       "@id" : "https://cyberterrain.org/ns/stonework#NetworkService"
     }, {
       "@id" : "https://cyberterrain.org/ns/stonework#VersionedProduct"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid136",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://cyberterrain.org/ns/stonework#Agent"
-    }, {
-      "@id" : "https://cyberterrain.org/ns/stonework#Domain"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid139",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://cyberterrain.org/ns/stonework#Host"
-    }, {
-      "@id" : "https://cyberterrain.org/ns/stonework#Infrastructure"
-    }, {
-      "@id" : "https://cyberterrain.org/ns/stonework#Organization"
-    }, {
-      "@id" : "https://cyberterrain.org/ns/stonework#PhysicalArtifact"
     } ]
   } ]
 }, {
@@ -159,7 +155,31 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid144",
+  "@id" : "_:genid140",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://cyberterrain.org/ns/stonework#Agent"
+    }, {
+      "@id" : "https://cyberterrain.org/ns/stonework#Domain"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid143",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://cyberterrain.org/ns/stonework#Host"
+    }, {
+      "@id" : "https://cyberterrain.org/ns/stonework#Infrastructure"
+    }, {
+      "@id" : "https://cyberterrain.org/ns/stonework#Organization"
+    }, {
+      "@id" : "https://cyberterrain.org/ns/stonework#PhysicalArtifact"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid148",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -169,7 +189,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid147",
+  "@id" : "_:genid151",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -181,7 +201,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid151",
+  "@id" : "_:genid155",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -201,7 +221,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid159",
+  "@id" : "_:genid163",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -211,7 +231,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid162",
+  "@id" : "_:genid166",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -221,7 +241,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid165",
+  "@id" : "_:genid169",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -231,7 +251,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid168",
+  "@id" : "_:genid172",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -241,17 +261,17 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid171",
+  "@id" : "_:genid175",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "https://cyberterrain.org/ns/stonework#Playbook"
+      "@id" : "https://cyberterrain.org/ns/stonework#Plan"
     }, {
       "@id" : "https://cyberterrain.org/ns/stonework#Process"
     } ]
   } ]
 }, {
-  "@id" : "_:genid176",
+  "@id" : "_:genid180",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -261,7 +281,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid179",
+  "@id" : "_:genid183",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -271,7 +291,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid182",
+  "@id" : "_:genid186",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -281,23 +301,13 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid185",
+  "@id" : "_:genid189",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
       "@id" : "https://cyberterrain.org/ns/stonework#AccessControlList"
     }, {
       "@id" : "https://cyberterrain.org/ns/stonework#Countermeasure"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid188",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://cyberterrain.org/ns/stonework#DataAsset"
-    }, {
-      "@id" : "https://cyberterrain.org/ns/stonework#DigitalArtifact"
     } ]
   } ]
 }, {
@@ -311,7 +321,17 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid191",
+  "@id" : "_:genid192",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://cyberterrain.org/ns/stonework#DataAsset"
+    }, {
+      "@id" : "https://cyberterrain.org/ns/stonework#DigitalArtifact"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid195",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -321,7 +341,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid194",
+  "@id" : "_:genid198",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -331,7 +351,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid197",
+  "@id" : "_:genid201",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -341,7 +361,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid200",
+  "@id" : "_:genid204",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -351,7 +371,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid203",
+  "@id" : "_:genid207",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -361,7 +381,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid206",
+  "@id" : "_:genid210",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -371,7 +391,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid209",
+  "@id" : "_:genid213",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -383,33 +403,13 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid213",
+  "@id" : "_:genid217",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
       "@id" : "https://cyberterrain.org/ns/stonework#Tactic"
     }, {
       "@id" : "https://cyberterrain.org/ns/stonework#Technique"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid216",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://cyberterrain.org/ns/stonework#Event"
-    }, {
-      "@id" : "https://cyberterrain.org/ns/stonework#Incident"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid219",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://cyberterrain.org/ns/stonework#Event"
-    }, {
-      "@id" : "https://cyberterrain.org/ns/stonework#Incident"
     } ]
   } ]
 }, {
@@ -423,7 +423,27 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid222",
+  "@id" : "_:genid220",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://cyberterrain.org/ns/stonework#Event"
+    }, {
+      "@id" : "https://cyberterrain.org/ns/stonework#Incident"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid223",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://cyberterrain.org/ns/stonework#Event"
+    }, {
+      "@id" : "https://cyberterrain.org/ns/stonework#Incident"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid226",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -433,7 +453,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid225",
+  "@id" : "_:genid229",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -447,7 +467,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid230",
+  "@id" : "_:genid234",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -457,7 +477,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid233",
+  "@id" : "_:genid237",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -467,7 +487,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid236",
+  "@id" : "_:genid240",
   "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
   "http://www.w3.org/2002/07/owl#oneOf" : [ {
     "@list" : [ {
@@ -479,7 +499,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid239",
+  "@id" : "_:genid243",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -491,35 +511,13 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid243",
+  "@id" : "_:genid247",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
       "@id" : "https://cyberterrain.org/ns/stonework#HumanSource"
     }, {
       "@id" : "https://cyberterrain.org/ns/stonework#Provenance"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid246",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://cyberterrain.org/ns/stonework#Event"
-    }, {
-      "@id" : "https://cyberterrain.org/ns/stonework#Incident"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid249",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://cyberterrain.org/ns/stonework#Feed"
-    }, {
-      "@id" : "https://cyberterrain.org/ns/stonework#OnlineReference"
-    }, {
-      "@id" : "https://cyberterrain.org/ns/stonework#Publication"
     } ]
   } ]
 }, {
@@ -530,6 +528,16 @@
       "@id" : "https://cyberterrain.org/ns/stonework#Control"
     }, {
       "@id" : "https://cyberterrain.org/ns/stonework#DetectionRule"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid250",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://cyberterrain.org/ns/stonework#Event"
+    }, {
+      "@id" : "https://cyberterrain.org/ns/stonework#Incident"
     } ]
   } ]
 }, {
@@ -544,6 +552,15 @@
 }, {
   "@id" : "_:genid254",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#affectedStatusScheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
+  "@id" : "_:genid255",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
@@ -555,7 +572,7 @@
     "@id" : "https://cyberterrain.org/ns/stonework#installationOf"
   } ]
 }, {
-  "@id" : "_:genid255",
+  "@id" : "_:genid256",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
@@ -564,19 +581,10 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid256",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#falsePositiveRateScheme"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
-  } ]
-}, {
   "@id" : "_:genid257",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#financialAccountTypeScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#deviationKindScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -585,7 +593,7 @@
   "@id" : "_:genid258",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#financialInstitutionTypeScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#executionOutcomeScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -594,7 +602,7 @@
   "@id" : "_:genid259",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#hypothesisStatusScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#exploitMaturityScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -603,7 +611,7 @@
   "@id" : "_:genid260",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#impactLevelScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#exploitationReportKindScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -612,7 +620,7 @@
   "@id" : "_:genid261",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#impactTypeScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#falsePositiveRateScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -621,7 +629,7 @@
   "@id" : "_:genid262",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#incidentStatusScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#financialAccountTypeScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -630,7 +638,7 @@
   "@id" : "_:genid263",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#industryScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#financialInstitutionTypeScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -639,7 +647,7 @@
   "@id" : "_:genid264",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#infrastructureTypeScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#flowKindScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -648,7 +656,7 @@
   "@id" : "_:genid265",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#investigationOutcomeScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#hypothesisStatusScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -657,7 +665,7 @@
   "@id" : "_:genid266",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#investigationStatusScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#impactLevelScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -666,7 +674,7 @@
   "@id" : "_:genid267",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#killChainPhaseScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#impactTypeScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -675,7 +683,7 @@
   "@id" : "_:genid268",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#likelihoodLevelScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#incidentStatusScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -684,7 +692,7 @@
   "@id" : "_:genid269",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#malwareTypeScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#industryScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -693,7 +701,7 @@
   "@id" : "_:genid270",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#markingScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#infrastructureTypeScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -702,7 +710,7 @@
   "@id" : "_:genid271",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#metricTypeScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#investigationOutcomeScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -711,7 +719,7 @@
   "@id" : "_:genid272",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#motivationScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#investigationStatusScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -720,7 +728,7 @@
   "@id" : "_:genid273",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#paymentInstrumentScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#killChainPhaseScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -729,7 +737,7 @@
   "@id" : "_:genid274",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#priorityLevelScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#likelihoodLevelScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -737,21 +745,17 @@
 }, {
   "@id" : "_:genid275",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#VersionedProduct"
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#malwareTypeScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#installationOf"
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
   "@id" : "_:genid276",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#productTypeScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#markingScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -760,7 +764,7 @@
   "@id" : "_:genid277",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#resourceLevelScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#metricTypeScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -769,7 +773,7 @@
   "@id" : "_:genid278",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#riskLevelScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#motivationScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -778,7 +782,7 @@
   "@id" : "_:genid279",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#sectorScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#paymentInstrumentScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -801,7 +805,7 @@
   "@id" : "_:genid280",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#sophisticationLevelScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#playbookTypeScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -810,13 +814,80 @@
   "@id" : "_:genid281",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#threatActorRoleScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#priorityLevelScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
   "@id" : "_:genid282",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#VersionedProduct"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#installationOf"
+  } ]
+}, {
+  "@id" : "_:genid283",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#productTypeScheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
+  "@id" : "_:genid284",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#resourceLevelScheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
+  "@id" : "_:genid285",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#riskLevelScheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
+  "@id" : "_:genid286",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#sectorScheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
+  "@id" : "_:genid287",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#sophisticationLevelScheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
+  "@id" : "_:genid288",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#threatActorRoleScheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
+  "@id" : "_:genid289",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#threatActorTypeScheme"
@@ -825,7 +896,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid283",
+  "@id" : "_:genid290",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#transactionTypeScheme"
@@ -1028,13 +1099,25 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
+      "@id" : "https://cyberterrain.org/ns/stonework#Deviation"
+    }, {
+      "@id" : "https://cyberterrain.org/ns/stonework#IdentityControl"
+    }, {
+      "@id" : "https://cyberterrain.org/ns/stonework#Sighting"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid90",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
       "@id" : "https://cyberterrain.org/ns/stonework#Log"
     }, {
       "@id" : "https://cyberterrain.org/ns/stonework#NetworkTraffic"
     } ]
   } ]
 }, {
-  "@id" : "_:genid89",
+  "@id" : "_:genid93",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -1046,33 +1129,13 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid93",
+  "@id" : "_:genid97",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
       "@id" : "https://cyberterrain.org/ns/stonework#Log"
     }, {
       "@id" : "https://cyberterrain.org/ns/stonework#NetworkTraffic"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid96",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://cyberterrain.org/ns/stonework#UserAccount"
-    }, {
-      "@id" : "https://cyberterrain.org/ns/stonework#UserGroup"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid99",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://cyberterrain.org/ns/stonework#MalwareFamily"
-    }, {
-      "@id" : "https://cyberterrain.org/ns/stonework#MalwareSample"
     } ]
   } ]
 }, {
@@ -1159,10 +1222,10 @@
     "@value" : "STONEWORK"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework/0.11.0"
+    "@id" : "https://cyberterrain.org/ns/stonework/0.12.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.11.0"
+    "@value" : "0.12.0"
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#AIAgent",
@@ -1287,6 +1350,26 @@
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Adware"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#AffectedStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Category"
+  }, {
+    "@id" : "_:genid254"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A judgment of whether a product or version is affected by a vulnerability."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Affected Status"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Applied with stonework:hasAffectedStatus on a stonework:VulnerabilityAssessment. Covers the CVE record statuses affected, unaffected, and unknown, and the VEX statuses fixed and under investigation."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#Agent",
@@ -1465,7 +1548,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
-    "@value" : "Groups TTP-related classes: Tactic, Technique (and subclasses), and Procedure. In BFO terms, Behaviors are GenericallyDependentContinuants — specifications or patterns describing how actions are carried out. The execution of a Technique is a CyberActivity; the Technique itself is a Behavior. Aligns with IAO PlanSpecification."
+    "@value" : "Groups TTP-related classes (Tactic, Technique and its subclasses), Controls, Mitigations (and so CoursesOfAction), Steps, and stonework:Plan, the step-structured specifications that are executed. Methods such as Techniques, Controls and Mitigations are not Plans; Plans implement them. In BFO terms, Behaviors are GenericallyDependentContinuants — specifications or patterns describing how actions are carried out. The execution of a Technique is a CyberActivity; the Technique itself is a Behavior. Aligns with IAO PlanSpecification."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#BomEntry",
@@ -1477,7 +1560,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#ComponentContext"
   }, {
-    "@id" : "_:genid254"
+    "@id" : "_:genid255"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -1539,6 +1622,23 @@
     "@value" : "Bot"
   } ]
 }, {
+  "@id" : "https://cyberterrain.org/ns/stonework#BusinessProcess",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Plan"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A Plan by which an organization carries out a routine part of its business, such as paying a supplier, onboarding an employee or granting access, whose Steps may be performed by people or by systems."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@value" : "Business Process"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Part of STONEWORK because attacks such as business email compromise succeed or fail inside business processes: whether a Step that implements a stonework:Control (a callback, a second approval) was carried out. The process is the plan; each run of it is a stonework:Process that is stonework:executionOf it, so the name does not make the plan an execution. Process models kept in a notation such as BPMN can be recorded with stonework:planFormat. Distinct from stonework:Playbook, which responds to an event, incident or operational need rather than carrying out the organization's ordinary work."
+  } ]
+}, {
   "@id" : "https://cyberterrain.org/ns/stonework#Campaign",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
@@ -1563,7 +1663,7 @@
   }, {
     "@id" : "https://cyberterrain.org/ns/stonework#CyberEntity"
   }, {
-    "@id" : "_:genid255"
+    "@id" : "_:genid256"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -1659,18 +1759,18 @@
   "@id" : "https://cyberterrain.org/ns/stonework#ControlPlan",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#Behavior"
+    "@id" : "https://cyberterrain.org/ns/stonework#Plan"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "A concrete, Step-decomposed sequence of actions that implements a Control in a specific operational context."
+    "@value" : "A concrete, Step-decomposed sequence of actions that implements a Control or Mitigation in a specific operational context."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@value" : "Control Plan"
   } ],
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
-    "@value" : "Mirrors the Technique/Procedure split on the defensive side: stonework:Control is the abstract prescribed safeguard (a catalog entry, e.g. NIST AC-2 or a CIS control); ControlPlan is its concrete implementation as a Step sequence, linked back via stonework:implements. A ControlPlan is typically invoked from within a Playbook or DetectionPlan by a Step that stonework:implements it."
+    "@value" : "Mirrors the Technique/Procedure split on the defensive side: stonework:Control is the abstract prescribed safeguard (a catalog entry, e.g. NIST AC-2 or a CIS control), and a stonework:Mitigation (e.g. an ATT&CK mitigation) is another; ControlPlan is its concrete implementation as a Step sequence, linked back via stonework:implements. A ControlPlan is typically invoked from within a Playbook or DetectionPlan by a Step that stonework:implements it."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#Countermeasure",
@@ -1687,7 +1787,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
-    "@value" : "Includes Controls, Mitigations, CoursesOfAction, and DetectionRules. The two primary branches are preventive/reactive measures (Mitigation, CourseOfAction, Control) and detection logic (DetectionRule, Signature). A Countermeasure describes the safeguard or procedure; the deployed mechanism that can apply it is a stonework:SecurityActuator, and a particular application is a stonework:SecurityActuation."
+    "@value" : "Includes Controls, Mitigations, CoursesOfAction, and DetectionRules. The two primary branches are preventive/reactive measures (Mitigation, CourseOfAction, Control), which are also stonework:Behaviors that plans implement, and detection logic (DetectionRule, Signature). A Countermeasure describes the safeguard or procedure; the deployed mechanism that can apply it is a stonework:SecurityActuator, and a particular application is a stonework:SecurityActuation."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#Country",
@@ -1963,6 +2063,44 @@
     "@value" : "Encompasses pattern-matching signatures (YARA, Snort, Suricata), behavioral rules (Sigma), SIEM correlation logic, and analytic detections. Signature is a subclass for content-centric, indicator-matching rules."
   } ]
 }, {
+  "@id" : "https://cyberterrain.org/ns/stonework#Deviation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#QualifiedAssertion"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "An established finding that one run of a Plan departed from that Plan: a required Step was not performed, or was performed by the wrong Role, by the same Agent as a Step it must be separated from, out of order, or through an identity used by someone other than its holder."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Deviation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "The finding of conformance checking, in process mining's terms. The run is stonework:deviationRun, the Steps concerned stonework:deviationStep, the executions concerned (if any) stonework:deviationExecution, the kind stonework:deviationKind, and the evidence stonework:evidencedBy; the Investigation that establishes it stonework:produces it. A query over runs can propose candidates, such as a Step the Plan's guards required that has no execution in the run, or an execution whose performer doesn't hold the Step's stonework:performerRole. But a missing execution doesn't show that the Step wasn't done, only that it wasn't recorded: the Deviation is the analyst's finding, with evidence, that it wasn't. Checks that can't resolve a performer to an Agent, or whose performer may be a misused identity, report the case as undetermined, not as conforming. A Control that failed is reached through the Step (stonework:deviationStep / stonework:implements)."
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#DeviationKind",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Category"
+  }, {
+    "@id" : "_:genid257"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A classification of how a run departed from its Plan."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Deviation Kind"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Applied via stonework:deviationKind to Deviation individuals. Named individuals: skipped, wrong role, same agent, out of order, misused identity, wrong target."
+  } ]
+}, {
   "@id" : "https://cyberterrain.org/ns/stonework#DigitalArtifact",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
@@ -2132,6 +2270,26 @@
     "@value" : "Represents the pre-triage state — a raw log entry, alert, or sensor observation. Distinguished from Incident by the absence of human or automated assessment declaring it significant and adverse. Useful for SIEM, log-based, and threat hunting use cases."
   } ]
 }, {
+  "@id" : "https://cyberterrain.org/ns/stonework#ExecutionOutcome",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Category"
+  }, {
+    "@id" : "_:genid258"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Whether an execution of a Step or Plan succeeded, failed or timed out."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Execution Outcome"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "The value of a Step's stonework:outcomeVariable in a run. Named individuals: succeeded, failed, timed out. A timeout is kept apart from other failures, as CACAO reports it separately."
+  } ]
+}, {
   "@id" : "https://cyberterrain.org/ns/stonework#ExploitKit",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -2156,12 +2314,52 @@
     "@value" : "Exploit Kit"
   } ]
 }, {
+  "@id" : "https://cyberterrain.org/ns/stonework#ExploitMaturity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Category"
+  }, {
+    "@id" : "_:genid259"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "How mature a known exploit for a vulnerability is."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Exploit Maturity"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Applied with stonework:hasExploitMaturity. poc means a proof of concept exists. weaponized means the exploit is reliable against most targets or is built into an attack tool or malware. A source report that exploitation was observed is stonework:metricReportedExploited. Membership in a known-exploited catalog is stonework:metricKevMembership, with the catalog named by the observation's provenance."
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#ExploitationReportKind",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Category"
+  }, {
+    "@id" : "_:genid260"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "What a source's report that a vulnerability was exploited says about who exploited it."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Exploitation Report Kind"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Applied with stonework:hasExploitationReportKind to a stonework:MetricObservation of stonework:metricReportedExploited."
+  } ]
+}, {
   "@id" : "https://cyberterrain.org/ns/stonework#FalsePositiveRate",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid256"
+    "@id" : "_:genid261"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2229,7 +2427,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid257"
+    "@id" : "_:genid262"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2263,7 +2461,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid258"
+    "@id" : "_:genid263"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2290,6 +2488,26 @@
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
     "@value" : "An occurrent: it starts and settles at a time (stonework:startedAtTime and stonework:endedAtTime), is attributed with stonework:attributedTo, and can be sighted, investigated, and grouped into a stonework:CyberActivityCluster. Originator and beneficiary are given by stonework:originatorAccount and stonework:beneficiaryAccount; correspondent hops by stonework:intermediaryAccount. The transferred value is a stonework:MonetaryAmount via stonework:hasMonetaryValue. Use stonework:originatorMonetaryValue and stonework:beneficiaryMonetaryValue when the debited input and credited output differ, as in a currency exchange. Flat stonework:transactionAmount and stonework:transactionCurrency are convenience projections only for a single-denomination transfer. A blockchain transaction is a FinancialTransaction whose accounts are crypto wallets. Divergent source records of one economic event are handled through stonework:hasProvenance and stonework:Sighting rather than a distinct record class. Use stonework:hasBehavior to link a transaction, or a cluster of them, to a stonework:IllicitFinanceTechnique it exhibits. Use stonework:fundsActivity only when the transaction finances an activity; use stonework:respondsToActivity when a transaction occurs in response to an activity, such as a victim's ransom payment."
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#FlowKind",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Category"
+  }, {
+    "@id" : "_:genid264"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A classification of how control flow splits after a Step or joins before one."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Flow Kind"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Applied via stonework:splitKind and stonework:joinKind to Steps. Named individuals: exclusive, parallel."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#GranularMarking",
@@ -2436,7 +2654,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
-    "@value" : "Formalizes the anticipated side of the Variable lifecycle described in stonework:Variable's scopeNote: a Hypothesis names, in advance, the value an output Variable is predicted to be bound to. Linked to the Variable it predicts via stonework:predictsVariable, and to the prediction itself via stonework:predictedType (a class, the common case — mirrors stonework:guardType), stonework:predictedValue (a specific individual), or stonework:predictedLiteral (a scalar) — mirroring stonework:boundTo/stonework:boundToLiteral on the actual-result side. A Transition's guard properties, which test a Variable's actual bound value, implicitly test agreement with whichever Hypothesis predicted that Variable — confirming it if they match, refuting it otherwise. May attach at any level of a Step/Plan decomposition, since stonework:Step is itself a stonework:Behavior."
+    "@value" : "Formalizes the anticipated side of the Variable lifecycle described in stonework:Variable's scopeNote: a Hypothesis names, in advance, the value an output Variable is predicted to be bound to. Linked to the Variable it predicts via stonework:predictsVariable, and to the prediction itself via stonework:predictedType (a class, the common case — mirrors stonework:guardType), stonework:predictedValue (a specific individual), or stonework:predictedLiteral (a scalar) — mirroring stonework:boundTo/stonework:boundToLiteral on the actual-result side. A Hypothesis is judged against the stonework:VariableBinding of its Variable in the Investigation that tests it (stonework:testsHypothesis): the binding stonework:boundIn that Investigation or in an execution stonework:partOfExecution it. When a run binds the Variable more than once, as when one search Step is run for each of several mailboxes, the Step's own execution (itself an Investigation) tests the Hypothesis, so that one binding judges it. A Transition's guard properties, which test a Variable's actual bound value, implicitly test agreement with whichever Hypothesis predicted that Variable — confirming it if they match, refuting it otherwise. May attach at any level of a Step/Plan decomposition, since stonework:Step is itself a stonework:Behavior. What a Hypothesis is about is stonework:hypothesisAbout. A compound claim, such as \"actor X is using technique Y\", is a Hypothesis whose stonework:hypothesisPart values are its separately testable claims (the activity, the attribution), so a refuted compound shows which part failed."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#HypothesisStatus",
@@ -2444,7 +2662,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid259"
+    "@id" : "_:genid265"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2522,6 +2740,24 @@
     "@value" : "Identifier does not provide the RDF identity of every CyberEntity and does not imply that every CyberEntity has an Identifier. Named RDF resources are identified by their IRIs; identifiers originating in external systems are recorded with dcterms:identifier or stonework:externalId. Use the most specific available subclass, such as EmailAddress, Hash, MACAddress, PhoneNumber, URI, or UserAgent. Instantiate Identifier directly only when the identifier type is unknown or no suitable subclass exists."
   } ]
 }, {
+  "@id" : "https://cyberterrain.org/ns/stonework#IdentityControl",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#QualifiedAssertion"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A qualified record that an Agent controlled a DigitalIdentity, able to act through it, during an interval."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Identity Control"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "The Agent is stonework:controllingAgent, the identity stonework:controlledIdentity, and the interval stonework:validFrom and stonework:validUntil; with no validUntil, control continues or its end is unknown. Evidence is stonework:evidencedBy (the sign-ins, the audit records), and provenance and confidence apply as on any qualified assertion. Three facts about identities differ: stonework:attributedToAgent (and stonework:accountOf) says whose an identity is, with no time; stonework:attributedTo on an activity says who did that one thing; an IdentityControl says who could act through the identity, and when. Control is not exclusive: the holder usually keeps using the account while an actor also controls it, so every execution performed through the identity in the interval and not yet attributed needs review. Typically used for a compromise, but it also fits delegated or shared access. No timeless projection property is declared, since it would lose the interval that is the point. When control is itself in doubt, a stonework:Hypothesis can be stonework:hypothesisAbout the IdentityControl."
+  } ]
+}, {
   "@id" : "https://cyberterrain.org/ns/stonework#IllicitFinanceTechnique",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
@@ -2563,7 +2799,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid260"
+    "@id" : "_:genid266"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2579,7 +2815,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid261"
+    "@id" : "_:genid267"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2612,7 +2848,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid262"
+    "@id" : "_:genid268"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2646,7 +2882,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Sector"
   }, {
-    "@id" : "_:genid263"
+    "@id" : "_:genid269"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2679,7 +2915,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid264"
+    "@id" : "_:genid270"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2733,7 +2969,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid265"
+    "@id" : "_:genid271"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2751,7 +2987,7 @@
     "@value" : "An InvestigationPlan is a plan specification; executing one produces an instance of stonework:Investigation."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#Behavior"
+    "@id" : "https://cyberterrain.org/ns/stonework#Plan"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2770,7 +3006,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid266"
+    "@id" : "_:genid272"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2810,7 +3046,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid267"
+    "@id" : "_:genid273"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2900,7 +3136,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid268"
+    "@id" : "_:genid274"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -3045,7 +3281,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid269"
+    "@id" : "_:genid275"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -3065,7 +3301,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid270"
+    "@id" : "_:genid276"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -3091,7 +3327,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
-    "@value" : "Use for values that change over time or differ by source, including EPSS probability, KEV membership, confidence, likelihood, risk scores, and normalized monetary valuations. A stonework:metricNormalizedValue observation records its output currency with stonework:valuationCurrency. Direct datatype properties remain convenience projections for consumers that need a single current value."
+    "@value" : "Use for values that change over time or differ by source, including EPSS probability and percentile, known-exploited catalog membership, confidence, likelihood, risk scores, and normalized monetary valuations. Which source produced a value is stonework:hasProvenance, not a separate metric type. A stonework:metricNormalizedValue observation records its output currency with stonework:valuationCurrency. Direct datatype properties remain convenience projections for consumers that need a single current value."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#MetricType",
@@ -3099,7 +3335,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid271"
+    "@id" : "_:genid277"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -3116,6 +3352,8 @@
     "@id" : "https://csrc.nist.gov/glossary/term/mitigation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Behavior"
+  }, {
     "@id" : "https://cyberterrain.org/ns/stonework#Countermeasure"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
@@ -3127,7 +3365,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
-    "@value" : "Mitigations are proactive or reactive measures applied to address weaknesses or threats. Examples include: applying a security patch, enabling MFA, deploying a firewall rule, isolating a compromised host, or training users. A Mitigation may be a reusable control (ATT&CK sense) or a specific situational action. CourseOfAction is a subclass for contextualized, packaged response actions."
+    "@value" : "Mitigations are proactive or reactive measures applied to address weaknesses or threats. Examples include: applying a security patch, enabling MFA, deploying a firewall rule, isolating a compromised host, or training users. A Mitigation may be a reusable control (ATT&CK sense) or a specific situational action. CourseOfAction is a subclass for contextualized, packaged response actions. Like stonework:Control, a Mitigation is a stonework:Behavior: a specification of how to act, not an occurrence. So a stonework:ControlPlan, or one of its Steps, stonework:implements an ATT&CK mitigation the same way it implements a NIST control, and the technique it mitigates is reached through stonework:mitigatesAttackPattern either way."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#MobileDevice",
@@ -3170,7 +3408,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid272"
+    "@id" : "_:genid278"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -3373,7 +3611,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid273"
+    "@id" : "_:genid279"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -3436,6 +3674,28 @@
     "@value" : "Sibling of stonework:DigitalArtifact. Covers ICS and OT assets such as PLCs, RTUs, safety systems, and HMIs, as well as other tangible devices in a cyber-physical environment. An ICS device that runs processes and participates in networks may also be typed as stonework:Host. Distinct from stonework:Infrastructure, which groups resources used to conduct cyber operations."
   } ]
 }, {
+  "@id" : "https://cyberterrain.org/ns/stonework#Plan",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://purl.org/net/p-plan#Plan"
+  }, {
+    "@id" : "http://www.w3.org/ns/prov#Plan"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Behavior"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A specification of actions, usually decomposed into Steps, that an agent intends to carry out, and that can be executed any number of times."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@value" : "Plan"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "The common parent of the executable Behaviors: stonework:Playbook (and stonework:OperationPlan), stonework:ControlPlan, stonework:InvestigationPlan (and stonework:DetectionPlan), stonework:BusinessProcess, stonework:Procedure and stonework:ThreatScenario. They differ in scope and stance (whose plan it is, and whether it is believed or hypothesized), not in kind. A Plan decomposes into Steps via stonework:hasStep and declares Variables via stonework:hasInputVariable and stonework:hasOutputVariable; a Plan given only as prose has no Steps. Each execution, or run, is a stonework:CyberActivity (usually a stonework:Process) that is stonework:executionOf the Plan; the executions of its Steps are stonework:partOfExecution that run, and the values its Variables take in that run are stonework:VariableBinding individuals. Distinct from the methods a Plan implements (stonework:Technique, stonework:Control): a method is not executed step by step, and one method has many Plans that realize it. Aligns with prov:Plan and p-plan:Plan; a stonework:Step is part of a Plan rather than a Plan of its own, as p-plan:Step is distinct from p-plan:Plan."
+  } ]
+}, {
   "@id" : "https://cyberterrain.org/ns/stonework#Playbook",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -3446,7 +3706,7 @@
     "@id" : "http://www.w3.org/ns/prov#Plan"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#Behavior"
+    "@id" : "https://cyberterrain.org/ns/stonework#Plan"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -3457,7 +3717,27 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
-    "@value" : "A Playbook may be offensive (an adversary's operational playbook — see stonework:OperationPlan) or defensive (an incident response, threat hunting, or recovery playbook) — both are action plans carried out by an interested party, as distinct from stonework:DetectionPlan, which plays a neutral, evaluative role. A Playbook decomposes into Steps via stonework:hasStep; its actual execution is recorded as a stonework:Process."
+    "@value" : "A Playbook may be offensive (an adversary's operational playbook — see stonework:OperationPlan) or defensive (an incident response, threat hunting, or recovery playbook) — both are action plans carried out by an interested party, as distinct from stonework:DetectionPlan, which plays a neutral, evaluative role. A Playbook decomposes into Steps via stonework:hasStep; each execution is recorded as a stonework:Process. An organization's routine work is a stonework:BusinessProcess, a sibling under stonework:Plan."
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#PlaybookType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Category"
+  }, {
+    "@id" : "_:genid280"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A classification of what a Plan is for, from the CACAO playbook types."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Playbook Type"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Applied via stonework:hasPlaybookType. The values are CACAO 2.0's playbook-type-ov. STONEWORK's Plan subclasses correspond: OperationPlan to attack, DetectionPlan to detection, InvestigationPlan to investigation, and ControlPlan to mitigation, prevention or remediation; engagement and notification have no subclass."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#PriorityLevel",
@@ -3465,7 +3745,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid274"
+    "@id" : "_:genid281"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -3482,7 +3762,7 @@
     "@value" : "Procedures are instances or patterns of execution that realize a technique. They may include command lines, API calls, malware behaviors, or operator playbook steps. Procedures are distinct from techniques, which describe generalized methods."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#Behavior"
+    "@id" : "https://cyberterrain.org/ns/stonework#Plan"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "A concrete, observable sequence of actions, commands, or behaviors that implements a technique in a specific operational context."
@@ -3491,7 +3771,7 @@
     "@value" : "Procedure"
   } ],
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
-    "@value" : "One realization path for a single Technique — the specific commands, scripts, tools, or configuration that carry it out (e.g. the comsvcs.dll MiniDump way of doing OS Credential Dumping: LSASS Memory). Technique-scoped and typically linear. A Procedure may be only a prose description — the common case when ingesting MITRE ATT&CK procedure examples — or decomposed into stonework:Step individuals via stonework:hasStep for sub-step depth. Links to the Technique it operationalizes via stonework:implements or its specialization stonework:procedureFor. Distinct from stonework:Playbook / stonework:OperationPlan / stonework:ControlPlan, which are objective-scoped plans that orchestrate several Procedures or Techniques with branching, retry, and control flow; a Plan's Step commonly stonework:implements a Procedure."
+    "@value" : "One realization path for a single Technique — the specific commands, scripts, tools, or configuration that carry it out (e.g. the comsvcs.dll MiniDump way of doing OS Credential Dumping: LSASS Memory). Technique-scoped and typically linear. A Procedure may be only a prose description — the common case when ingesting MITRE ATT&CK procedure examples — or decomposed into stonework:Step individuals via stonework:hasStep for sub-step depth. Links to the Technique it operationalizes via stonework:implements or its specialization stonework:procedureFor. A Procedure is a stonework:Plan at the realization layer, so its runs can be recorded like any other Plan's. Distinct from stonework:Playbook / stonework:OperationPlan / stonework:ControlPlan, which are objective-scoped plans that orchestrate several Procedures or Techniques with branching, retry, and control flow; a Plan's Step commonly stonework:implements a Procedure."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#Process",
@@ -3513,7 +3793,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
-    "@value" : "This class operates at the enterprise/operational level and is distinct from low-level runtime Process objects (e.g., STIX SCO Process). It is the execution-side counterpart to Behavior-side plan specifications such as Playbook, ControlPlan, and ThreatScenario — e.g. executing a Playbook produces a Process instance."
+    "@value" : "This class operates at the enterprise/operational level and is distinct from low-level runtime Process objects (e.g., STIX SCO Process). It is the execution-side counterpart to stonework:Plan: each run of a Playbook, ControlPlan, BusinessProcess or other Plan is a Process that is stonework:executionOf it, and the executions of its Steps are stonework:partOfExecution that run."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#Product",
@@ -3549,7 +3829,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#ComponentContext"
   }, {
-    "@id" : "_:genid275"
+    "@id" : "_:genid282"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -3568,7 +3848,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid276"
+    "@id" : "_:genid283"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -3772,7 +4052,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid277"
+    "@id" : "_:genid284"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -3823,7 +4103,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid278"
+    "@id" : "_:genid285"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -3963,7 +4243,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid279"
+    "@id" : "_:genid286"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -4132,7 +4412,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid280"
+    "@id" : "_:genid287"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -4177,7 +4457,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "A single, individually addressable unit of action within a Behavior that models a multi-step process, such as a Procedure, Playbook, ThreatScenario, or Control."
+    "@value" : "A single, individually addressable unit of action within a Behavior that models a multi-step process, such as a Plan or a Control."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@value" : "Step"
@@ -4304,7 +4584,7 @@
   }, {
     "@id" : "https://cyberterrain.org/ns/stonework#Role"
   }, {
-    "@id" : "_:genid281"
+    "@id" : "_:genid288"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -4324,7 +4604,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid282"
+    "@id" : "_:genid289"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -4345,7 +4625,7 @@
     "@id" : "http://www.w3.org/ns/prov#Plan"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#Behavior"
+    "@id" : "https://cyberterrain.org/ns/stonework#Plan"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -4357,7 +4637,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
-    "@value" : "A ThreatScenario is prescriptive and forward-looking: it specifies a potential sequence of adversary behaviors and environmental conditions rather than recording observed events. Used to guide defensive planning, risk assessment, and Playbook development. Distinct from stonework:Incident (an observed occurrence) and stonework:Threat (an abstract source of harm). Aligns with prov:Plan and P-Plan scenario specifications."
+    "@value" : "A ThreatScenario is prescriptive and forward-looking: it specifies a potential sequence of adversary behaviors and environmental conditions rather than recording observed events. Used to guide defensive planning, risk assessment, and Playbook development. A ThreatScenario is a stonework:Plan held as a hypothesis: an adversary plan that may or may not exist, where a stonework:OperationPlan is one believed to exist. It can be executed, as in a red-team exercise or tabletop, and an observed Incident can be compared against it. Distinct from stonework:Incident (an observed occurrence) and stonework:Threat (an abstract source of harm). Aligns with prov:Plan and P-Plan scenario specifications."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#Tool",
@@ -4383,7 +4663,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid283"
+    "@id" : "_:genid290"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -4405,7 +4685,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
-    "@value" : "Unconditioned, a Transition expresses plain sequence — an alternative to stonework:precededByStep for the same purpose, used when a Step has more than one possible successor and the edges themselves need to be individually referenceable. When a Transition's stonework:toStep targets a Step already reached earlier in the same graph, it expresses a loop back-edge; looping is not a separate construct. Conditional branching is expressed with the guard properties stonework:guardVariable (the Variable tested), stonework:guardType (a class the bound value must be an instance of) or stonework:guardLiteralValue (a scalar it must equal), and stonework:guardOperator (the comparison; omitting it defaults to equality). The Transition fires when its guard holds against the from-Step's bound Variable."
+    "@value" : "Unconditioned, a Transition expresses plain sequence — an alternative to stonework:precededByStep for the same purpose, used when a Step has more than one possible successor and the edges themselves need to be individually referenceable. When a Transition's stonework:toStep targets a Step already reached earlier in the same graph, it expresses a loop back-edge; looping is not a separate construct. Conditional branching is expressed with the guard properties stonework:guardVariable (the Variable tested), stonework:guardType (a class the bound value must be an instance of) or stonework:guardLiteralValue (a scalar it must equal) or stonework:guardValue (an individual it must be), and stonework:guardOperator (the comparison; omitting it defaults to equality). The Transition fires when its guard holds against the value the from-Step's execution bound: the stonework:VariableBinding of the guard Variable that is stonework:boundIn that execution. Whether a Step's several outgoing Transitions are alternatives or concurrent branches is given by that Step's stonework:splitKind, and whether a Step entered by several Transitions waits for all of them by its stonework:joinKind; both default to exclusive (one path). A Step's stonework:defaultTransition is taken only when no other outgoing Transition's guard holds. A Transition never leaves its Plan: between Plans, only data passes, as a message through a shared Variable (see stonework:Variable)."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#Trojan",
@@ -4529,14 +4809,36 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "A named placeholder for a value declared by a Behavior or Step, bound to an actual value only once the corresponding execution occurs."
+    "@value" : "A named placeholder for a value declared by a Plan or Step, which takes a value in each execution of it."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@value" : "Variable"
   } ],
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
-    "@value" : "Declared via stonework:hasInputVariable or stonework:hasOutputVariable. An input Variable is typically bound before its Step executes from an already-known fact; for example, a plan may bind to an existing stonework:CvssMetric assessment. An output Variable is bound only after its Step executes, such as when an Investigation constructs a stonework:VulnerabilityAssessment. Variables carry execution-time values and do not replace persistent domain relationships. Bound via stonework:boundTo (an individual) or stonework:boundToLiteral (a scalar). The bound value is what stonework:Transition guard properties test, and — in a future deviation-detection layer — what an actual result is compared against what the Step declared as expected."
+    "@value" : "Declared via stonework:hasInputVariable or stonework:hasOutputVariable. A Variable belongs to the plan, not to a run: the value it takes in one execution is a stonework:VariableBinding (stonework:bindingOf the Variable, stonework:boundIn the execution that bound it), so a plan run many times keeps every run's values. Data flows between Steps through a shared Variable, as in P-Plan: one Step declares it as an output, a later Step as an input, and in a run the later Step's execution records the binding it received with stonework:usedBinding. An input supplied when a run starts, for example an existing stonework:CvssMetric assessment, is bound in the run itself. When the producing Step and the consuming Step belong to different Plans, the data flow is a message between participants (BPMN's message flow): an adversary's OperationPlan whose Step outputs the payment request an organization's BusinessProcess takes as input, for example. Control flow never crosses Plans; only data does. When the sender's plan isn't modelled, stonework:suppliedBy names the Role whose holders supply the value, and the value is bound in the execution that received it. Variables carry execution-time values and do not replace persistent domain relationships. A binding's value is what stonework:Transition guard properties test, and what a stonework:Hypothesis that predicts the Variable is judged against."
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#VariableBinding",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://purl.org/net/p-plan#correspondsToVariable"
+  }, {
+    "@id" : "http://www.w3.org/ns/prov#Entity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#CyberEntity"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The value a Variable took in one execution of the Plan or Step that declares it."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@value" : "Variable Binding"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Names the Variable with stonework:bindingOf, the execution that bound it with stonework:boundIn (a Step's execution for an output, the run itself for an input supplied when it starts), and the value with stonework:boundTo (an individual) or stonework:boundToLiteral (a scalar). An execution that received the value records it with stonework:usedBinding. A Step executed several times in one run, as in a retry loop, binds its output Variables once per execution. In P-Plan the run's own entity carries p-plan:correspondsToVariable; a binding does the same for literal values, which cannot carry properties, and treats individuals the same way. In PROV terms a binding is an Entity generated by the execution it is boundIn and used by those that record it with usedBinding."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#VersionedProduct",
@@ -4544,6 +4846,9 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Instances of stonework:VersionedProduct may include operating systems, applications, libraries, devices, or embedded components at a specific release. Versioning, vendor attribution, and edition details SHOULD be represented using explicit properties rather than encoded strings."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#CyberEntity"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -5062,6 +5367,150 @@
     "@value" : "The range is a stonework:VersionedProduct individual whose IRI is derived deterministically from the CPE identifier. The product individual may be populated by a separate CPE ingest; references from CVE data precede that ingest and are resolved when CPE data is loaded."
   } ]
 }, {
+  "@id" : "https://cyberterrain.org/ns/stonework#affectedStatusAffected",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#AffectedStatus"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The product or version is affected by the vulnerability."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#affectedStatusScheme"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "affected"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Affected"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#affectedStatusFixed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#AffectedStatus"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The stated product or version contains a fix for the vulnerability."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#affectedStatusScheme"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "fixed"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Fixed"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#affectedStatusScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/terms/isPartOf" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  } ],
+  "http://purl.org/dc/terms/source" : [ {
+    "@id" : "https://docs.oasis-open.org/csaf/csaf/v2.0/os/csaf-v2.0-os.html"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "STONEWORK Affected Status Scheme"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The controlled vocabulary of vulnerability applicability judgments."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "STONEWORK Affected Status Scheme"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#affectedStatusUnaffected",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#AffectedStatus"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The product or version is not affected by the vulnerability."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#affectedStatusScheme"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "unaffected"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Unaffected"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#affectedStatusUnderInvestigation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#AffectedStatus"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Applicability of the vulnerability to the product or version is still being determined."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#affectedStatusScheme"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "under-investigation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Under Investigation"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#affectedStatusUnknown",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#AffectedStatus"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "It is not known whether the product or version is affected."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#affectedStatusScheme"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "unknown"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Unknown"
+  } ]
+}, {
   "@id" : "https://cyberterrain.org/ns/stonework#affectsAsset",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -5381,6 +5830,10 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@value" : "attributedToAgent"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Names the identity's holder, not whoever used it on a given occasion. When an identity is used by someone else, such as an actor holding a victim's stolen credentials, the activity keeps the identity as its stonework:performedBy and names the Agent responsible with stonework:attributedTo. That someone else controlled the identity for a period, such as an actor holding a mailbox's credentials from its compromise to its containment, is a stonework:IdentityControl."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#authoredBy",
@@ -5458,6 +5911,22 @@
     "@value" : "bic"
   } ]
 }, {
+  "@id" : "https://cyberterrain.org/ns/stonework#bindingOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#VariableBinding"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Variable"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The Variable whose value in one execution a VariableBinding records."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@value" : "bindingOf"
+  } ]
+}, {
   "@id" : "https://cyberterrain.org/ns/stonework#blockchainNetwork",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -5490,44 +5959,67 @@
     "@value" : "Domain intentionally left unset. Serves as provenance metadata on stonework:SoftwareBillOfMaterials instances, distinguishing the source format from the STONEWORK representation."
   } ]
 }, {
+  "@id" : "https://cyberterrain.org/ns/stonework#boundIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#VariableBinding"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#CyberActivity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://www.w3.org/ns/prov#wasGeneratedBy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The execution in which a VariableBinding's value was bound: the execution of the Step that outputs the Variable, or the run itself for an input supplied when it starts."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@value" : "boundIn"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Mirrors prov:wasGeneratedBy. The run a binding belongs to is the execution it is boundIn, or the one that execution is stonework:partOfExecution, at any depth."
+  } ]
+}, {
   "@id" : "https://cyberterrain.org/ns/stonework#boundTo",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#Variable"
+    "@id" : "https://cyberterrain.org/ns/stonework#VariableBinding"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Binds a Variable, at execution time, to the individual it actually resolved to — e.g. the specific SecurityCondition instance a successful attempt produced."
+    "@value" : "The individual a Variable resolved to in one execution, e.g. the specific SecurityCondition a successful attempt produced."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@value" : "boundTo"
   } ],
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
-    "@value" : "Used when the bound value is an instance of a class rather than a scalar; see stonework:boundToLiteral for scalar bindings. Tested by stonework:guardType on a Transition."
+    "@value" : "Used when the bound value is an instance of a class rather than a scalar; see stonework:boundToLiteral for scalar bindings. Tested by stonework:guardType on a Transition. Since 0.12.0 the subject is a stonework:VariableBinding, not the Variable, so each execution has its own value."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#boundToLiteral",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#Variable"
+    "@id" : "https://cyberterrain.org/ns/stonework#VariableBinding"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Binds a Variable, at execution time or at plan instantiation, to a scalar result value such as a boolean, count, or numeric score."
+    "@value" : "The scalar value, such as a boolean, count or numeric score, a Variable took in one execution."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@value" : "boundToLiteral"
   } ],
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
-    "@value" : "Tested by stonework:guardLiteralValue and stonework:guardOperator on a Transition. When the guard uses an ordering operator (LessThan, GreaterThanOrEqual, etc.), this value MUST carry a numeric datatype (xsd:decimal, xsd:double, or xsd:integer) — untyped or string literals do not compare numerically under SPARQL."
+    "@value" : "Tested by stonework:guardLiteralValue and stonework:guardOperator on a Transition. When the guard uses an ordering operator (LessThan, GreaterThanOrEqual, etc.), this value MUST carry a numeric datatype (xsd:decimal, xsd:double, or xsd:integer) — untyped or string literals do not compare numerically under SPARQL. Since 0.12.0 the subject is a stonework:VariableBinding, not the Variable."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#byteCount",
@@ -6019,11 +6511,15 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "The control family or category grouping (e.g. Access Control, Incident Response)."
+    "@value" : "The control family or category grouping a control belongs to, by code or name (e.g. AC or Access Control, IR or Incident Response)."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "controlFamily"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "nist:family, the two-letter NIST SP 800-53 family code, is declared rdfs:subPropertyOf this property."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#controlId",
@@ -6041,6 +6537,40 @@
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "controlId"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#controlledIdentity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#IdentityControl"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#DigitalIdentity"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The DigitalIdentity, such as a UserAccount, controlled in a stonework:IdentityControl."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "controlledIdentity"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#controllingAgent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#IdentityControl"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Agent"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The Agent who controlled the identity in a stonework:IdentityControl."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "controllingAgent"
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#controls",
@@ -6714,6 +7244,30 @@
     "@value" : "Corresponds to cveMetadata.dateUpdated in CVE JSON 5.x and equivalent update timestamps from other vulnerability sources. cve:dateUpdated is declared rdfs:subPropertyOf this property (one-way)."
   } ]
 }, {
+  "@id" : "https://cyberterrain.org/ns/stonework#defaultTransition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Step"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Transition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://www.omg.org/spec/BPMN/2.0.2/"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The outgoing Transition a Step takes when no other outgoing Transition's guard holds."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "defaultTransition"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "BPMN's default sequence flow, and the default case of a CACAO switch-condition. The Transition leaves this Step (its stonework:fromStep is this Step) and carries no guard of its own: it is the otherwise branch, so a plan doesn't have to spell out the negation of every other guard. It applies to either stonework:splitKind: with a parallel split, the default is taken only when none of the guarded branches is."
+  } ]
+}, {
   "@id" : "https://cyberterrain.org/ns/stonework#deliveredVia",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -6830,6 +7384,254 @@
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
     "@value" : "Domain/range intentionally left unset: this property is a direct lift of the STIX 2.1 relationship_type 'detects' shortcut. STIX does not schema-constrain which SDO/SCO types may appear as source_ref/target_ref for a given relationship_type — that's producer convention, not enforceable structure, and a closed domain/range here would misrepresent real STIX 2.1 data and mislead reasoner-based consumers."
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#deviationExecution",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Deviation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Process"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "An execution in the run that a Deviation concerns, such as the execution performed by the wrong Role."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "deviationExecution"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Absent for a skipped Step, which has no execution. Needed when a Step runs more than once in a run, to say which execution deviated."
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#deviationKind",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Deviation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#DeviationKind"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categorizedBy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a Deviation to the kind of departure from the Plan it records."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "deviationKind"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#deviationKindMisusedIdentity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#DeviationKind"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The Step was performed through the identity of someone who holds its Role, but not by that holder: for example, by an actor using the holder's stolen credentials."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#deviationKindScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "misused-identity"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Misused identity"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Logs alone can't show this, since the role and separation checks see the right identity; an analyst establishes it from evidence such as sign-ins from an unfamiliar address."
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#deviationKindOutOfOrder",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#DeviationKind"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Two Steps were performed in an order the Plan doesn't allow."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#deviationKindScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "out-of-order"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Out of order"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#deviationKindSameAgent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#DeviationKind"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Two Steps that are stonework:separatedFrom each other were performed by the same Agent in one run."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#deviationKindScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "same-agent"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Same agent"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#deviationKindScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/terms/isPartOf" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "STONEWORK Deviation Kind Scheme"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The controlled vocabulary of the ways a run can depart from its Plan."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "STONEWORK Deviation Kind Scheme"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#deviationKindSkipped",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#DeviationKind"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A Step the Plan required in this run was not performed."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#deviationKindScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "skipped"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Skipped"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#deviationKindWrongRole",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#DeviationKind"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A Step was performed by an Agent who doesn't hold any of its stonework:performerRole Roles."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#deviationKindScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "wrong-role"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Wrong role"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#deviationKindWrongTarget",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#DeviationKind"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A Step was performed against something other than its stonework:stepTarget, or other than the value its target Variable had in the run."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#deviationKindScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "wrong-target"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Wrong target"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#deviationRun",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Deviation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Process"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The run, the Process that is stonework:executionOf a Plan, in which a Deviation was found."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "deviationRun"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#deviationStep",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Deviation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Step"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A Step of the run's Plan that a Deviation concerns."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "deviationStep"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "One Step for a skipped, wrong-role or misused-identity deviation; both Steps for a same-agent or out-of-order one."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#displayName",
@@ -6994,6 +7796,27 @@
     "@value" : "endedAtTime"
   } ]
 }, {
+  "@id" : "https://cyberterrain.org/ns/stonework#epssPercentile",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Vulnerability"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The EPSS percentile (0.0–1.0): the proportion of scored vulnerabilities with an equal or lower EPSS probability."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "epssPercentile"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Convenience projection for a current percentile. Preserve dated values, source, and EPSS model version with stonework:MetricObservation and stonework:metricEpssPercentile. Distinct from stonework:epssScore, which is the probability itself."
+  } ]
+}, {
   "@id" : "https://cyberterrain.org/ns/stonework#epssScore",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -7041,14 +7864,14 @@
   "@id" : "https://cyberterrain.org/ns/stonework#evidencedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#Sighting"
+    "@id" : "_:genid86"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#DigitalArtifact"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "A Sighting is substantiated by this DigitalArtifact (memory dump, PCAP, log excerpt, sample). Connects analytical observation to forensic evidence."
+    "@value" : "A Sighting, Deviation or IdentityControl is substantiated by this DigitalArtifact (memory dump, PCAP, log excerpt, sample, call record, recorded statement). Connects analytical observation to forensic evidence."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -7134,7 +7957,100 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
-    "@value" : "Links an overall execution to the Behavior it carries out. This may be a full plan — an Investigation to an InvestigationPlan, an Operation to an OperationPlan, a Process to a Playbook or ControlPlan — or, in the lightweight case, a bare method: a CyberActivity may point directly at the stonework:Technique (or stonework:AttackTechnique) it performs, with no intervening Procedure, Plan, or Step. The lightweight form is the common one for sightings and incident timelines ('actor performed T1003.001 against this host at this time'); it can be elaborated into a Step-decomposed Plan later without changing the executionOf assertion. Use stonework:correspondsToStep for the finer-grained link between an executing CyberActivity and an individual Step when a Plan is present."
+    "@value" : "Links an overall execution to the Behavior it carries out. This may be a full plan — an Investigation to an InvestigationPlan, an Operation to an OperationPlan, a Process to a Playbook or ControlPlan — or, in the lightweight case, a bare method: a CyberActivity may point directly at the stonework:Technique (or stonework:AttackTechnique) it performs, with no intervening Procedure, Plan, or Step. The lightweight form is the common one for sightings and incident timelines ('actor performed T1003.001 against this host at this time'); it can be elaborated into a Step-decomposed Plan later without changing the executionOf assertion. Each run of a Plan is its own CyberActivity, executionOf the same Plan; the executions of its Steps are stonework:partOfExecution the run. Use stonework:correspondsToStep for the finer-grained link between an executing CyberActivity and an individual Step when a Plan is present."
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#executionOutcomeFailed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#ExecutionOutcome"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The execution ended without doing what the Step is for."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#executionOutcomeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "failed"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Failed"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#executionOutcomeScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/terms/isPartOf" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "STONEWORK Execution Outcome Scheme"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The controlled vocabulary of how an execution of a Step or Plan ended."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "STONEWORK Execution Outcome Scheme"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#executionOutcomeSucceeded",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#ExecutionOutcome"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The execution did what the Step is for. A search that ran and found nothing succeeded."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#executionOutcomeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "succeeded"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Succeeded"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#executionOutcomeTimedOut",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#ExecutionOutcome"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The execution was abandoned because it ran past its time limit."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#executionOutcomeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "timed-out"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Timed out"
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#expirationDate",
@@ -7152,6 +8068,196 @@
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "expirationDate"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#exploitMaturityPoc",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#ExploitMaturity"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A proof-of-concept exploit exists. It may be unreliable or require a specific target."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#exploitMaturityScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "poc"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Proof of Concept"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#exploitMaturityScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/terms/isPartOf" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "STONEWORK Exploit Maturity Scheme"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The controlled vocabulary of how mature a known exploit is."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "STONEWORK Exploit Maturity Scheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Ordered from least to most mature: poc, then weaponized."
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#exploitMaturityWeaponized",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#ExploitMaturity"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The exploit is reliable against most targets, or it is built into an attack tool or malware."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#exploitMaturityScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "weaponized"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Weaponized"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#exploitationReportBotnet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#ExploitationReportKind"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The source reports the vulnerability as exploited by a botnet."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#exploitationReportKindScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "botnet"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Exploited by a Botnet"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#exploitationReportGeneral",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#ExploitationReportKind"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The source reports the vulnerability as exploited without saying by whom."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#exploitationReportKindScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "exploited"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Exploited"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#exploitationReportKindScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/terms/isPartOf" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "STONEWORK Exploitation Report Kind Scheme"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The controlled vocabulary of kinds of exploitation report."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "STONEWORK Exploitation Report Kind Scheme"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#exploitationReportRansomware",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#ExploitationReportKind"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The source reports the vulnerability as exploited in ransomware campaigns."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#exploitationReportKindScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "ransomware"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Exploited by Ransomware"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#exploitationReportThreatActor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#ExploitationReportKind"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The source reports the vulnerability as exploited by a threat actor or group."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#exploitationReportKindScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "threat-actor"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Exploited by a Threat Actor"
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#exploits",
@@ -7879,6 +8985,75 @@
     "@value" : "The range is a stonework:VersionedProduct individual whose IRI is derived deterministically from the CPE identifier. Populated by CVE/patch ingest."
   } ]
 }, {
+  "@id" : "https://cyberterrain.org/ns/stonework#flowKindExclusive",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#FlowKind"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "One path. As a split, exactly one of the Step's outgoing Transitions is taken, one whose guard holds. As a join, the Step may start as soon as any one of its incoming Transitions is taken."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#flowKindScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "exclusive"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Exclusive"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#flowKindParallel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#FlowKind"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "All paths. As a split, every outgoing Transition whose guard holds is taken, and the branches run concurrently. As a join, the Step starts only after the execution of every Step it is entered from, by a Transition taken in the same run, has ended."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#flowKindScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "parallel"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Parallel"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#flowKindScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/terms/isPartOf" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "STONEWORK Flow Kind Scheme"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The controlled vocabulary of the ways control flow splits after a Step or joins before one."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "STONEWORK Flow Kind Scheme"
+  } ]
+}, {
   "@id" : "https://cyberterrain.org/ns/stonework#fqdn",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -7936,10 +9111,10 @@
   "@id" : "https://cyberterrain.org/ns/stonework#generatedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid86"
+    "@id" : "_:genid90"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid89"
+    "@id" : "_:genid93"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -7956,7 +9131,7 @@
     "@id" : "https://cyberterrain.org/ns/stonework#Event"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid93"
+    "@id" : "_:genid97"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -7973,7 +9148,7 @@
     "@id" : "https://cyberterrain.org/ns/stonework#AccessControlList"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid96"
+    "@id" : "_:genid100"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -8061,6 +9236,24 @@
     "@value" : "Used for guards that test whether a Variable was bound to an instance of a particular class (e.g. testing that an attempt's outcome Variable was bound to a stonework:SecurityCondition instance) rather than testing equality against a scalar."
   } ]
 }, {
+  "@id" : "https://cyberterrain.org/ns/stonework#guardValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Transition"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The individual that guardVariable's stonework:boundTo value must be for the Transition to be taken."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "guardValue"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Tests identity with an individual, such as a category value (stonework:executionOutcomeFailed) or a named asset, where stonework:guardType tests class membership and stonework:guardLiteralValue a literal. Mirrors stonework:predictedValue on the Hypothesis side. Range deliberately unset: the value may be any individual."
+  } ]
+}, {
   "@id" : "https://cyberterrain.org/ns/stonework#guardVariable",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -8115,6 +9308,26 @@
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "hasAccountType"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#hasAffectedStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#VulnerabilityAssessment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#AffectedStatus"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categorizedBy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a vulnerability assessment to the applicability judgment it records."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "hasAffectedStatus"
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#hasArtifact",
@@ -8281,6 +9494,51 @@
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "hasExecution"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#hasExploitMaturity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#ExploitMaturity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categorizedBy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a vulnerability or an individual exploit to its exploit maturity."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "hasExploitMaturity"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "At most one per subject (stonework:ExploitMaturityShape). On a vulnerability it is a convenience projection: the highest maturity currently known for it, where weaponized ranks above poc. An exploit reference, such as a stonework:OnlineReference or stonework:Tool, carries that exploit's own maturity. Domain is unset so each of these subjects is valid. Dated history is not recorded on this property."
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#hasExploitationReportKind",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#MetricObservation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#ExploitationReportKind"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categorizedBy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates an exploitation-report observation to the kind of report it records."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "hasExploitationReportKind"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "At most one per observation (stonework:ExploitationReportKindShape). A source that reports several kinds for one vulnerability records one observation per kind."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#hasFalsePositiveRate",
@@ -8609,7 +9867,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#hasMalwareType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid99"
+    "@id" : "_:genid103"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#MalwareType"
@@ -8633,7 +9891,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#hasMember",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid102"
+    "@id" : "_:genid106"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#memberOf"
@@ -8690,7 +9948,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#hasMonetaryValue",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid106"
+    "@id" : "_:genid110"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#MonetaryAmount"
@@ -8731,7 +9989,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#hasNetworkAddress",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid110"
+    "@id" : "_:genid114"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#IPAddress"
@@ -8853,10 +10111,37 @@
     "@value" : "hasPhoneNumber"
   } ]
 }, {
+  "@id" : "https://cyberterrain.org/ns/stonework#hasPlaybookType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Plan"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#PlaybookType"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://docs.oasis-open.org/cacao/security-playbooks/v2.0/security-playbooks-v2.0.html"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categorizedBy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a Plan to what it is for: attack, detection, engagement, investigation, mitigation, notification, prevention or remediation."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "hasPlaybookType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Not functional: a Plan may have several types, as a CACAO playbook may. The Plan subclasses already say some of this (see stonework:PlaybookType); the type is stated explicitly, not inferred, because a ControlPlan can be any of three."
+  } ]
+}, {
   "@id" : "https://cyberterrain.org/ns/stonework#hasPriority",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid113"
+    "@id" : "_:genid117"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#PriorityLevel"
@@ -8925,7 +10210,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#hasProvenance",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid116"
+    "@id" : "_:genid120"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Provenance"
@@ -8965,7 +10250,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#hasRisk",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid119"
+    "@id" : "_:genid123"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Risk"
@@ -9090,13 +10375,10 @@
   "@id" : "https://cyberterrain.org/ns/stonework#hasTechnique",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid123"
+    "@id" : "_:genid127"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Technique"
-  } ],
-  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#techniqueOf"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -9322,6 +10604,45 @@
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "hostname"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#hypothesisAbout",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Hypothesis"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a Hypothesis to something it is about: a technique, actor, account, asset, vulnerability or event."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "hypothesisAbout"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "For finding hypotheses (\"everything we've hypothesized about T1114.003\", \"about the controller's account\"), not for judging them. Not functional: \"the actor is using a forwarding rule on the controller's mailbox\" is about the actor, the technique and the mailbox. The values carry no roles; a claim whose roles matter, or whose parts can fail separately, is split into parts with stonework:hypothesisPart. A compound Hypothesis is also about whatever its parts are about, so it need not repeat them: follow stonework:hypothesisPart* first. Range deliberately unset, like stonework:noteAbout."
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#hypothesisPart",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Hypothesis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Hypothesis"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a compound Hypothesis to one of the claims it is the conjunction of: the compound holds only if every part holds."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "hypothesisPart"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "\"X is doing Y\" is two claims tested differently: that Y is happening (a search can confirm it) and that X is doing it (only attribution evidence can). Testing them together, a failure says only that something is wrong. As parts, each is a Hypothesis with its own prediction, test, status (stonework:hasHypothesisStatus), confidence and evidence, so the parts with status refuted are the ones that failed, and a confirmed part survives a refuted compound for reuse in a new one. Conjunction only: alternatives (\"X or W did it\") are competing Hypotheses, not parts of one. The compound's status and confidence stay explicit, not inferred; consistency requires that a confirmed compound has only confirmed parts, that a compound with a refuted part is refuted, and that its confidence is no higher than any part's. Parts may themselves have parts."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#hypothesisStatusConfirmed",
@@ -9803,7 +11124,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#implementsTechnique",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid128"
+    "@id" : "_:genid132"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Technique"
@@ -10742,7 +12063,7 @@
     "@id" : "https://cyberterrain.org/ns/stonework#IPAddress"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid236"
+    "@id" : "_:genid240"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -10763,7 +12084,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Indicates whether this vulnerability appears in CISA's Known Exploited Vulnerabilities (KEV) catalog."
+    "@value" : "Indicates whether this vulnerability appears in a known-exploited-vulnerabilities catalog."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -10771,7 +12092,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
-    "@value" : "Convenience projection for a current catalog snapshot. A false value is only meaningful as of a specific time; preserve dated membership evidence with stonework:MetricObservation and stonework:metricKevMembership."
+    "@value" : "Convenience projection for one current catalog snapshot. A false value is only meaningful as of a specific time and catalog. Preserve dated membership, and identify the catalog, with stonework:MetricObservation, stonework:metricKevMembership, and stonework:hasProvenance."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#isPacked",
@@ -10850,7 +12171,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#isVulnerableTo",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid132"
+    "@id" : "_:genid136"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Vulnerability"
@@ -10887,7 +12208,7 @@
     "@id" : "https://cyberterrain.org/ns/stonework#Certificate"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid136"
+    "@id" : "_:genid140"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -10896,6 +12217,33 @@
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "issuedTo"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#joinKind",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Step"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#FlowKind"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://www.omg.org/spec/BPMN/2.0.2/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categorizedBy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "When a Step entered by several Transitions may start: exclusive, as soon as one incoming Transition is taken; parallel, only after every incoming Transition taken in the same run."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "joinKind"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Omitted means exclusive. An incoming Transition is taken in a run when its from-Step has an execution that is stonework:partOfExecution that run and its guard held against that execution's binding. A parallel join therefore waits only for the branches that were started in the run, so a parallel join after an inclusive split (a parallel split with guarded Transitions) is well defined for recorded runs. A run whose join execution starts before the execution of a taken incoming branch has ended departs from the Plan: an out-of-order stonework:Deviation. As with stonework:splitKind, there are no gateway nodes; a BPMN converging gateway maps onto the joinKind of the Step it leads to."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#killChainPhaseScheme",
@@ -11190,7 +12538,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#locatedAt",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid139"
+    "@id" : "_:genid143"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Location"
@@ -11269,7 +12617,7 @@
     "@id" : "https://cyberterrain.org/ns/stonework#UserAccount"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid144"
+    "@id" : "_:genid148"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -11444,7 +12792,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#memberOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid147"
+    "@id" : "_:genid151"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -11593,6 +12941,30 @@
     "@value" : "CVSS Base Score"
   } ]
 }, {
+  "@id" : "https://cyberterrain.org/ns/stonework#metricEpssPercentile",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#MetricType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "An EPSS percentile on the 0.0–1.0 scale: the proportion of scored vulnerabilities with an equal or lower EPSS probability."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#metricTypeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "epss-percentile"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "EPSS Percentile"
+  } ]
+}, {
   "@id" : "https://cyberterrain.org/ns/stonework#metricEpssScore",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -11643,7 +13015,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "A dated boolean observation of whether a vulnerability appears in the CISA Known Exploited Vulnerabilities catalog."
+    "@value" : "A dated boolean observation of whether a vulnerability appears in a known-exploited-vulnerabilities catalog."
   } ],
   "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
@@ -11656,6 +13028,10 @@
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "KEV Membership"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "The catalog is the observation's stonework:hasProvenance. Two catalogs are two observations of this same metric type. stonework:isKnownExploited is one current snapshot and does not record which catalog."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#metricLikelihoodScore",
@@ -11704,6 +13080,34 @@
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Normalized Value"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#metricReportedExploited",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#MetricType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A dated boolean observation that a source reported a vulnerability as exploited."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#metricTypeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "reported-exploited"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Reported Exploited"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Distinct from stonework:metricKevMembership, which records catalog membership. A source that separately reports exploitation in general, by a threat actor, by ransomware, or by a botnet records each report as its own observation of this metric type, with the report kind as stonework:hasExploitationReportKind. When the source names the threat actor, malware, or botnet, the observation identifies it with stonework:assertionObject. assertionObject is single-valued, so each named actor, malware, or botnet is its own observation, even when the kind is the same."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#metricRiskScore",
@@ -12226,7 +13630,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#objective",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid239"
+    "@id" : "_:genid243"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -12260,7 +13664,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#observedIn",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid151"
+    "@id" : "_:genid155"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#CyberActivity"
@@ -12298,10 +13702,10 @@
   "@id" : "https://cyberterrain.org/ns/stonework#operatesIn",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid159"
+    "@id" : "_:genid163"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid162"
+    "@id" : "_:genid166"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -12318,7 +13722,7 @@
     "@id" : "https://cyberterrain.org/ns/stonework#Opinion"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid165"
+    "@id" : "_:genid169"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -12445,6 +13849,30 @@
     "@value" : "osVersion"
   } ]
 }, {
+  "@id" : "https://cyberterrain.org/ns/stonework#outcomeVariable",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Behavior"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Variable"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#hasOutputVariable"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The output Variable that records whether an execution of a Step or Plan succeeded, failed or timed out."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "outcomeVariable"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Its value in a run is a stonework:ExecutionOutcome (succeeded, failed, timed out), bound like any other output. Transitions guarded on it with stonework:guardValue express CACAO's on_success and on_failure. Other output Variables carry what the Step found or made; the outcome Variable says only whether it worked, so a search that ran and found nothing has the outcome succeeded."
+  } ]
+}, {
   "@id" : "https://cyberterrain.org/ns/stonework#overlapsWith",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
@@ -12458,7 +13886,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#ownedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid168"
+    "@id" : "_:genid172"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Agent"
@@ -12521,6 +13949,26 @@
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "parentPid"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#partOfExecution",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#CyberActivity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#CyberActivity"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates the execution of a Step to the execution of the Plan or Step it is part of."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@value" : "partOfExecution"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Groups a run's step executions, as a P-Plan bundle groups a plan's execution trace, so that queries over a plan run many times (which steps ran, which were skipped, which values were bound) are asked of one run at a time. Links to the immediate parent only; nested Steps form a chain to the run, which is the execution that is stonework:executionOf the Plan. An execution may be both a Step's execution in one plan and a run of another, as when an investigation's containment Step is carried out by running a ControlPlan: it is then stonework:partOfExecution the investigation, stonework:correspondsToStep the Step, and stonework:executionOf the ControlPlan. Not transitive, so that each execution's parent stays unambiguous; use a SPARQL property path (stonework:partOfExecution+) for every ancestor."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#paymentInstrumentAchTransfer",
@@ -12718,18 +14166,46 @@
   "@id" : "https://cyberterrain.org/ns/stonework#performedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid171"
+    "@id" : "_:genid175"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Agent"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Relates a Process to the Agent that performs it, or a Playbook to the Agent responsible for carrying it out."
+    "@value" : "Relates a Process to the Agent that performs it, or a Plan to the Agent responsible for carrying it out."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "performedBy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "On an execution, name the performer as observed. When the evidence shows only an identity, such as an account in an audit log, the performer is that DigitalIdentity, and the Agent behind it is reached through stonework:accountOf or stonework:attributedToAgent. When an identity may have been used by someone other than its holder, keep the identity as the performer and record the Agent believed responsible with stonework:attributedTo; an analyst who establishes the misuse records a stonework:Deviation. Who is expected to perform a Plan's Steps is given per Step, as Roles (stonework:performerRole)."
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#performerRole",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Step"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://www.w3.org/ns/prov#hadRole"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A Role whose holder is expected to perform this Step: the plan-side assignment of work, as in a BPMN lane."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "performerRole"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "If several Roles are given, a holder of any one of them may perform the Step; a requirement that two people act (dual control) is two Steps, linked by stonework:separatedFrom. An execution conforms when its performer, or the Agent its performer identity belongs to (stonework:accountOf, stonework:attributedToAgent), holds the Role through a stonework:RoleAssignment whose stonework:roleContext is the Plan's performer and which is in force (stonework:validFrom, stonework:validUntil) when the execution starts. Someone acting through a role holder's misused identity passes this check, which is why a misused identity is recorded as a stonework:Deviation."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#phoneNumberOf",
@@ -12782,6 +14258,44 @@
     "@value" : "pid"
   } ]
 }, {
+  "@id" : "https://cyberterrain.org/ns/stonework#planFormat",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Plan"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The machine-readable format a Plan is also kept in, e.g. CACAO JSON for a playbook or BPMN for a business process."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "planFormat"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#planVersion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Plan"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The version string of a Plan."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "planVersion"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "A run follows the version of the Plan individual it is stonework:executionOf."
+  } ]
+}, {
   "@id" : "https://cyberterrain.org/ns/stonework#playbookFormat",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -12790,6 +14304,13 @@
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#planFormat"
+  } ],
+  "http://www.w3.org/2002/07/owl#deprecated" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
     "@value" : "The machine-readable format of the playbook (e.g. CACAO JSON, BPMN, YAML)."
@@ -12797,6 +14318,223 @@
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "playbookFormat"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Deprecated: use stonework:planFormat, which applies to every stonework:Plan."
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#playbookTypeAttack",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#PlaybookType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Penetration testing or adversary emulation, or an adversary's own operation as reconstructed from intelligence. stonework:OperationPlan is this type."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#playbookTypeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "attack"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Attack"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#playbookTypeDetection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#PlaybookType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Detecting a known security event or expected security-relevant activity, or threat hunting. stonework:DetectionPlan is this type."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#playbookTypeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "detection"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Detection"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#playbookTypeEngagement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#PlaybookType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Denial, deception and other adversary engagement that raises the adversary's cost or lowers the value of its operations (see MITRE Engage)."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#playbookTypeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "engagement"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Engagement"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#playbookTypeInvestigation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#PlaybookType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Investigating what a security event, incident or other activity has affected. stonework:InvestigationPlan is this type."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#playbookTypeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "investigation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Investigation"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#playbookTypeMitigation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#PlaybookType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Reducing or limiting the impact of an event or incident until it can be remediated. A stonework:ControlPlan is often this type."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#playbookTypeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "mitigation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Mitigation"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#playbookTypeNotification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#PlaybookType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Notifying others and disseminating information or playbooks about an event, incident or threat."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#playbookTypeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "notification"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Notification"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#playbookTypePrevention",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#PlaybookType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Preventing a known or expected event, incident or threat from occurring. A stonework:ControlPlan is often this type."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#playbookTypeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "prevention"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Prevention"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#playbookTypeRemediation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#PlaybookType"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Returning affected systems to a known good state after an event or incident. A stonework:ControlPlan is often this type."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#playbookTypeScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "remediation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Remediation"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#playbookTypeScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/terms/isPartOf" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "STONEWORK Playbook Type Scheme"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The controlled vocabulary of what a Plan is for, aligned with CACAO 2.0's playbook types."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "STONEWORK Playbook Type Scheme"
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#playbookVersion",
@@ -12807,6 +14545,13 @@
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#planVersion"
+  } ],
+  "http://www.w3.org/2002/07/owl#deprecated" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
     "@value" : "The version string of the playbook."
@@ -12814,6 +14559,10 @@
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "playbookVersion"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Deprecated: use stonework:planVersion, which applies to every stonework:Plan."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#playsRole",
@@ -12860,7 +14609,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#posesThreat",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid176"
+    "@id" : "_:genid180"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Threat"
@@ -12908,7 +14657,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
-    "@value" : "Deliberately distinct from stonework:precedes, whose domain and range are IntelligenceProduct (report-version succession) — an unrelated relationship. precededByStep expresses a graph that may contain cycles: an edge targeting an already-reached Step is a loop, not an error. Use stonework:Transition instead when the edge itself needs a guard condition or other structure attached."
+    "@value" : "Deliberately distinct from stonework:precedes, whose domain and range are IntelligenceProduct (report-version succession) — an unrelated relationship. precededByStep expresses a graph that may contain cycles: an edge targeting an already-reached Step is a loop, not an error. A Step with several precededByStep values follows all of them; Steps with no precededByStep path between them are unordered and may be performed in parallel, so a dependency graph of precededByStep edges expresses parallel work without stonework:splitKind or stonework:joinKind. Use stonework:Transition instead when the edge itself needs a guard condition or other structure attached."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#precedes",
@@ -13167,10 +14916,10 @@
   "@id" : "https://cyberterrain.org/ns/stonework#producesReport",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid179"
+    "@id" : "_:genid183"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid182"
+    "@id" : "_:genid186"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -13462,10 +15211,10 @@
   "@id" : "https://cyberterrain.org/ns/stonework#protects",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid185"
+    "@id" : "_:genid189"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid188"
+    "@id" : "_:genid192"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -13482,7 +15231,7 @@
     "@id" : "https://cyberterrain.org/ns/stonework#Provenance"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid191"
+    "@id" : "_:genid195"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -13798,7 +15547,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#reliability",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid243"
+    "@id" : "_:genid247"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -13815,7 +15564,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#remediates",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid194"
+    "@id" : "_:genid198"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -13828,7 +15577,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#reportedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid197"
+    "@id" : "_:genid201"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Agent"
@@ -14255,7 +16004,7 @@
     "@id" : "https://cyberterrain.org/ns/stonework#RoleAssignment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid200"
+    "@id" : "_:genid204"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -14394,7 +16143,7 @@
     "@id" : "https://cyberterrain.org/ns/stonework#ThreatScenario"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid203"
+    "@id" : "_:genid207"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -14441,6 +16190,27 @@
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "STONEWORK Sector Scheme"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#separatedFrom",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Step"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Step"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates two Steps of a Plan that, in any one run, must be performed by different Agents (segregation of duties)."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "separatedFrom"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Checked per run: a violation when the executions of the two Steps resolve to the same Agent, through stonework:accountOf or stonework:attributedToAgent where the performer is an identity. Roles alone can't enforce separation, since one Agent can hold both Roles. The check is undetermined when either performer is unknown or doesn't resolve to an Agent. Nor can it see one Agent acting through two people's identities: that is a misused identity, established as a stonework:Deviation."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#serialNumber",
@@ -14530,7 +16300,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#severity",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid246"
+    "@id" : "_:genid250"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -14579,7 +16349,7 @@
     "@id" : "https://cyberterrain.org/ns/stonework#Sighting"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid206"
+    "@id" : "_:genid210"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -14867,6 +16637,33 @@
     "@value" : "spawns"
   } ]
 }, {
+  "@id" : "https://cyberterrain.org/ns/stonework#splitKind",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Step"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#FlowKind"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://www.omg.org/spec/BPMN/2.0.2/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categorizedBy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "How a Step's outgoing Transitions are taken when it finishes: exclusive, exactly one, whose guard holds; parallel, every one whose guard holds, as concurrent branches."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "splitKind"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Omitted means exclusive, the meaning several outgoing Transitions had before splitKind existed. With parallel, an unguarded Transition is always taken, so a parallel split whose Transitions are all unguarded is BPMN's parallel gateway, and one whose Transitions are guarded is its inclusive gateway. The branches may overlap in time; the Step where they meet says by its stonework:joinKind whether it waits for them all. As in YAWL, a split is a property of the Step it follows, not a separate gateway node, so every Step remains a unit of action; a BPMN diverging gateway maps onto the splitKind of the Step before it."
+  } ]
+}, {
   "@id" : "https://cyberterrain.org/ns/stonework#srcPort",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -14923,6 +16720,27 @@
     "@value" : "Most CTI procedure write-ups (a numbered list of adversary actions) are linear. stepOrder is a low-overhead alternative to precededByStep for that common case; the two are not mutually exclusive."
   } ]
 }, {
+  "@id" : "https://cyberterrain.org/ns/stonework#stepTarget",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Step"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#CyberEntity"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "What a Step is meant to act on: a specific entity, or a Variable whose value in the run is the target."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "stepTarget"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "The plan-level counterpart of stonework:actsOn, as stonework:performerRole is of stonework:performedBy; CACAO's targets on an action step. A specific entity (the mail tenant) is the target in every run. A stonework:Variable (itself a CyberEntity) means whatever that Variable is bound to in the run, such as the mailbox being contained. An execution whose actsOn is neither departs from the Plan: a wrong-target stonework:Deviation."
+  } ]
+}, {
   "@id" : "https://cyberterrain.org/ns/stonework#storedIn",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -14943,7 +16761,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#storedOn",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid209"
+    "@id" : "_:genid213"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Host"
@@ -15069,6 +16887,30 @@
     "@value" : "supersedes"
   } ]
 }, {
+  "@id" : "https://cyberterrain.org/ns/stonework#suppliedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Variable"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://www.omg.org/spec/BPMN/2.0.2/"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a Variable to the Role whose holders supply its value from outside the Plan, as a message from a participant whose own plan isn't modelled."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "suppliedBy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "BPMN's message flow from a black-box pool: the supplier who sends an invoice, a customer who places an order. The value is bound in the execution that received it. When the sender's plan is modelled, a Step of that plan declares the Variable with stonework:hasOutputVariable instead, and the receiving execution records stonework:usedBinding of the sender's binding. A Variable may have both: a payment request is supplied by the supplier, and a business email compromise actor's OperationPlan can produce one too, which the receiving Step can't tell apart from the real thing. Steps whose input Variables are supplied from outside the organization are its attack surface for messages."
+  } ]
+}, {
   "@id" : "https://cyberterrain.org/ns/stonework#targets",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
@@ -15125,7 +16967,10 @@
     "@id" : "https://cyberterrain.org/ns/stonework#"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid213"
+    "@id" : "_:genid217"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#hasTechnique"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -16040,17 +17885,17 @@
   "@id" : "https://cyberterrain.org/ns/stonework#triggeredBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#Playbook"
+    "@id" : "https://cyberterrain.org/ns/stonework#Plan"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid216"
+    "@id" : "_:genid220"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#triggersPlaybook"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Relates a Playbook to the Event or Incident that initiates its execution."
+    "@value" : "Relates a Plan to the Event or Incident that initiates its execution."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -16060,18 +17905,22 @@
   "@id" : "https://cyberterrain.org/ns/stonework#triggersPlaybook",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid219"
+    "@id" : "_:genid223"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#Playbook"
+    "@id" : "https://cyberterrain.org/ns/stonework#Plan"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Relates an Event or Incident to a Playbook invoked in response."
+    "@value" : "Relates an Event or Incident to a Plan invoked in response."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "triggersPlaybook"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Named when only Playbooks could be triggered; since 0.12.0 its range is any stonework:Plan."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#updateFrequency",
@@ -16110,19 +17959,20 @@
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#url",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid249"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "The URL of the online resource."
+    "@value" : "The URL of an online resource, or of the canonical web page describing an entity."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "url"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Domain is intentionally unset. For a stonework:Feed, stonework:OnlineReference, or stonework:Publication it is the resource's own URL; for a framework entity, such as an ATT&CK technique, it is the entity's page on the framework's site (attack:url is declared rdfs:subPropertyOf this property)."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#urlOf",
@@ -16136,6 +17986,29 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@value" : "urlOf"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#usedBinding",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#CyberActivity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#VariableBinding"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://www.w3.org/ns/prov#used"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates an execution to a VariableBinding whose value it received as input."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@value" : "usedBinding"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Mirrors prov:used. Records data flow in a run: the binding a Step's execution received for one of its input Variables, usually bound by an earlier Step's execution. Recorded rather than inferred from times, because after a loop an output Variable has several bindings in the same run."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#userAgentString",
@@ -16171,7 +18044,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#usesDetectionRule",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid222"
+    "@id" : "_:genid226"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#DetectionRule"
@@ -16192,7 +18065,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#usesInfrastructure",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid225"
+    "@id" : "_:genid229"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Infrastructure"
@@ -16322,10 +18195,10 @@
   "@id" : "https://cyberterrain.org/ns/stonework#variantOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid230"
+    "@id" : "_:genid234"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid233"
+    "@id" : "_:genid237"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
