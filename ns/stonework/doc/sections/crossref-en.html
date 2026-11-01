@@ -16,6 +16,8 @@ This section provides details for each class and property defined by STONEWORK.
   <li><a href="#Assessment" title="https://cyberterrain.org/ns/stonework#Assessment">Assessment</a></li>
   <li><a href="#AttackPattern" title="https://cyberterrain.org/ns/stonework#AttackPattern">Attack Pattern</a></li>
   <li><a href="#AttackTechnique" title="https://cyberterrain.org/ns/stonework#AttackTechnique">Attack Technique</a></li>
+  <li><a href="#AuthenticationMethod" title="https://cyberterrain.org/ns/stonework#AuthenticationMethod">Authentication Method</a></li>
+  <li><a href="#AuthenticationVerdict" title="https://cyberterrain.org/ns/stonework#AuthenticationVerdict">Authentication Verdict</a></li>
   <li><a href="#AutonomousSystem" title="https://cyberterrain.org/ns/stonework#AutonomousSystem">Autonomous System</a></li>
   <li><a href="#BankAccountNumber" title="https://cyberterrain.org/ns/stonework#BankAccountNumber">Bank Account Number</a></li>
   <li><a href="#Behavior" title="https://cyberterrain.org/ns/stonework#Behavior">Behavior</a></li>
@@ -52,6 +54,7 @@ This section provides details for each class and property defined by STONEWORK.
   <li><a href="#Directory" title="https://cyberterrain.org/ns/stonework#Directory">Directory</a></li>
   <li><a href="#Domain" title="https://cyberterrain.org/ns/stonework#Domain">Domain</a></li>
   <li><a href="#EmailAddress" title="https://cyberterrain.org/ns/stonework#EmailAddress">Email Address</a></li>
+  <li><a href="#EmailAuthenticationResult" title="https://cyberterrain.org/ns/stonework#EmailAuthenticationResult">Email Authentication Result</a></li>
   <li><a href="#EmailMessage" title="https://cyberterrain.org/ns/stonework#EmailMessage">Email Message</a></li>
   <li><a href="#Event" title="https://cyberterrain.org/ns/stonework#Event">Event</a></li>
   <li><a href="#ExecutionOutcome" title="https://cyberterrain.org/ns/stonework#ExecutionOutcome">Execution Outcome</a></li>
@@ -101,6 +104,7 @@ This section provides details for each class and property defined by STONEWORK.
   <li><a href="#Location" title="https://cyberterrain.org/ns/stonework#Location">Location</a></li>
   <li><a href="#Log" title="https://cyberterrain.org/ns/stonework#Log">Log</a></li>
   <li><a href="#MACAddress" title="https://cyberterrain.org/ns/stonework#MACAddress">MAC Address</a></li>
+  <li><a href="#MailboxRule" title="https://cyberterrain.org/ns/stonework#MailboxRule">Mailbox Rule</a></li>
   <li><a href="#Malware" title="https://cyberterrain.org/ns/stonework#Malware">Malware</a></li>
   <li><a href="#MalwareAnalysis" title="https://cyberterrain.org/ns/stonework#MalwareAnalysis">Malware Analysis</a></li>
   <li><a href="#MalwareFamily" title="https://cyberterrain.org/ns/stonework#MalwareFamily">Malware Family</a></li>
@@ -454,7 +458,7 @@ This section provides details for each class and property defined by STONEWORK.
     has sub-classes
    </dt>
    <dd>
-    <a href="#CvssMetric" title="https://cyberterrain.org/ns/stonework#CvssMetric">CVSS Metric</a> <sup class="type-c" title="class">c</sup>, <a href="#VulnerabilityAssessment" title="https://cyberterrain.org/ns/stonework#VulnerabilityAssessment">Vulnerability Assessment</a> <sup class="type-c" title="class">c</sup>
+    <a href="#CvssMetric" title="https://cyberterrain.org/ns/stonework#CvssMetric">CVSS Metric</a> <sup class="type-c" title="class">c</sup>, <a href="#EmailAuthenticationResult" title="https://cyberterrain.org/ns/stonework#EmailAuthenticationResult">Email Authentication Result</a> <sup class="type-c" title="class">c</sup>, <a href="#VulnerabilityAssessment" title="https://cyberterrain.org/ns/stonework#VulnerabilityAssessment">Vulnerability Assessment</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     is in domain of
@@ -527,6 +531,60 @@ This section provides details for each class and property defined by STONEWORK.
    </dt>
    <dd>
     <a href="#addresses" title="https://cyberterrain.org/ns/stonework#addresses">addresses</a> <sup class="type-op" title="object property">op</sup>, <a href="#counters" title="https://cyberterrain.org/ns/stonework#counters">counters</a> <sup class="type-op" title="object property">op</sup>, <a href="#scenarioTechnique" title="https://cyberterrain.org/ns/stonework#scenarioTechnique">scenarioTechnique</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="AuthenticationMethod">
+  <h3>Authentication Method<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#AuthenticationMethod</p>
+  <div class="comment">
+   <span class="markdown">A sender-authentication method for email.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Category" title="https://cyberterrain.org/ns/stonework#Category">Category</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasAuthenticationMethod" title="https://cyberterrain.org/ns/stonework#hasAuthenticationMethod">hasAuthenticationMethod</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#authenticationMethodARC" title="https://cyberterrain.org/ns/stonework#authenticationMethodARC">ARC</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#authenticationMethodDKIM" title="https://cyberterrain.org/ns/stonework#authenticationMethodDKIM">DKIM</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#authenticationMethodDMARC" title="https://cyberterrain.org/ns/stonework#authenticationMethodDMARC">DMARC</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#authenticationMethodSPF" title="https://cyberterrain.org/ns/stonework#authenticationMethodSPF">SPF</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="AuthenticationVerdict">
+  <h3>Authentication Verdict<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#AuthenticationVerdict</p>
+  <div class="comment">
+   <span class="markdown">A verdict of a sender-authentication check on an email.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Category" title="https://cyberterrain.org/ns/stonework#Category">Category</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasAuthenticationVerdict" title="https://cyberterrain.org/ns/stonework#hasAuthenticationVerdict">hasAuthenticationVerdict</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    has members
+   </dt>
+   <dd>
+    <a href="#authenticationVerdictFail" title="https://cyberterrain.org/ns/stonework#authenticationVerdictFail">Fail</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#authenticationVerdictNeutral" title="https://cyberterrain.org/ns/stonework#authenticationVerdictNeutral">Neutral</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#authenticationVerdictNone" title="https://cyberterrain.org/ns/stonework#authenticationVerdictNone">None</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#authenticationVerdictPass" title="https://cyberterrain.org/ns/stonework#authenticationVerdictPass">Pass</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#authenticationVerdictPermError" title="https://cyberterrain.org/ns/stonework#authenticationVerdictPermError">Permanent error</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#authenticationVerdictPolicy" title="https://cyberterrain.org/ns/stonework#authenticationVerdictPolicy">Policy</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#authenticationVerdictSoftFail" title="https://cyberterrain.org/ns/stonework#authenticationVerdictSoftFail">Soft fail</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#authenticationVerdictTempError" title="https://cyberterrain.org/ns/stonework#authenticationVerdictTempError">Temporary error</a> <sup class="type-ni" title="named individual">ni</sup>
    </dd>
   </dl>
  </div>
@@ -694,7 +752,7 @@ This section provides details for each class and property defined by STONEWORK.
     has sub-classes
    </dt>
    <dd>
-    <a href="#AccountType" title="https://cyberterrain.org/ns/stonework#AccountType">Account Type</a> <sup class="type-c" title="class">c</sup>, <a href="#AffectedStatus" title="https://cyberterrain.org/ns/stonework#AffectedStatus">Affected Status</a> <sup class="type-c" title="class">c</sup>, <a href="#DeviationKind" title="https://cyberterrain.org/ns/stonework#DeviationKind">Deviation Kind</a> <sup class="type-c" title="class">c</sup>, <a href="#ExecutionOutcome" title="https://cyberterrain.org/ns/stonework#ExecutionOutcome">Execution Outcome</a> <sup class="type-c" title="class">c</sup>, <a href="#ExploitMaturity" title="https://cyberterrain.org/ns/stonework#ExploitMaturity">Exploit Maturity</a> <sup class="type-c" title="class">c</sup>, <a href="#ExploitationReportKind" title="https://cyberterrain.org/ns/stonework#ExploitationReportKind">Exploitation Report Kind</a> <sup class="type-c" title="class">c</sup>, <a href="#FalsePositiveRate" title="https://cyberterrain.org/ns/stonework#FalsePositiveRate">False Positive Rate</a> <sup class="type-c" title="class">c</sup>, <a href="#FinancialAccountType" title="https://cyberterrain.org/ns/stonework#FinancialAccountType">Financial Account Type</a> <sup class="type-c" title="class">c</sup>, <a href="#FinancialInstitutionType" title="https://cyberterrain.org/ns/stonework#FinancialInstitutionType">Financial Institution Type</a> <sup class="type-c" title="class">c</sup>, <a href="#FlowKind" title="https://cyberterrain.org/ns/stonework#FlowKind">Flow Kind</a> <sup class="type-c" title="class">c</sup>, <a href="#HypothesisStatus" title="https://cyberterrain.org/ns/stonework#HypothesisStatus">Hypothesis Status</a> <sup class="type-c" title="class">c</sup>, <a href="#ImpactLevel" title="https://cyberterrain.org/ns/stonework#ImpactLevel">Impact Level</a> <sup class="type-c" title="class">c</sup>, <a href="#ImpactType" title="https://cyberterrain.org/ns/stonework#ImpactType">Impact Type</a> <sup class="type-c" title="class">c</sup>, <a href="#IncidentStatus" title="https://cyberterrain.org/ns/stonework#IncidentStatus">Incident Status</a> <sup class="type-c" title="class">c</sup>, <a href="#InfrastructureType" title="https://cyberterrain.org/ns/stonework#InfrastructureType">Infrastructure Type</a> <sup class="type-c" title="class">c</sup>, <a href="#InvestigationOutcome" title="https://cyberterrain.org/ns/stonework#InvestigationOutcome">Investigation Outcome</a> <sup class="type-c" title="class">c</sup>, <a href="#InvestigationStatus" title="https://cyberterrain.org/ns/stonework#InvestigationStatus">Investigation Status</a> <sup class="type-c" title="class">c</sup>, <a href="#KillChainPhase" title="https://cyberterrain.org/ns/stonework#KillChainPhase">Kill Chain Phase</a> <sup class="type-c" title="class">c</sup>, <a href="#LikelihoodLevel" title="https://cyberterrain.org/ns/stonework#LikelihoodLevel">Likelihood Level</a> <sup class="type-c" title="class">c</sup>, <a href="#MalwareType" title="https://cyberterrain.org/ns/stonework#MalwareType">Malware Type</a> <sup class="type-c" title="class">c</sup>, <a href="#Markings" title="https://cyberterrain.org/ns/stonework#Markings">Markings</a> <sup class="type-c" title="class">c</sup>, <a href="#MetricType" title="https://cyberterrain.org/ns/stonework#MetricType">Metric Type</a> <sup class="type-c" title="class">c</sup>, <a href="#Motivation" title="https://cyberterrain.org/ns/stonework#Motivation">Motivation</a> <sup class="type-c" title="class">c</sup>, <a href="#PaymentInstrument" title="https://cyberterrain.org/ns/stonework#PaymentInstrument">Payment Instrument</a> <sup class="type-c" title="class">c</sup>, <a href="#PlaybookType" title="https://cyberterrain.org/ns/stonework#PlaybookType">Playbook Type</a> <sup class="type-c" title="class">c</sup>, <a href="#PriorityLevel" title="https://cyberterrain.org/ns/stonework#PriorityLevel">Priority Level</a> <sup class="type-c" title="class">c</sup>, <a href="#ProductType" title="https://cyberterrain.org/ns/stonework#ProductType">Product Type</a> <sup class="type-c" title="class">c</sup>, <a href="#ResourceLevel" title="https://cyberterrain.org/ns/stonework#ResourceLevel">Resource Level</a> <sup class="type-c" title="class">c</sup>, <a href="#RiskLevel" title="https://cyberterrain.org/ns/stonework#RiskLevel">Risk Level</a> <sup class="type-c" title="class">c</sup>, <a href="#Sector" title="https://cyberterrain.org/ns/stonework#Sector">Sector</a> <sup class="type-c" title="class">c</sup>, <a href="#SophisticationLevel" title="https://cyberterrain.org/ns/stonework#SophisticationLevel">Sophistication Level</a> <sup class="type-c" title="class">c</sup>, <a href="#ThreatActorRole" title="https://cyberterrain.org/ns/stonework#ThreatActorRole">Threat Actor Role</a> <sup class="type-c" title="class">c</sup>, <a href="#ThreatActorType" title="https://cyberterrain.org/ns/stonework#ThreatActorType">Threat Actor Type</a> <sup class="type-c" title="class">c</sup>, <a href="#TransactionType" title="https://cyberterrain.org/ns/stonework#TransactionType">Transaction Type</a> <sup class="type-c" title="class">c</sup>
+    <a href="#AccountType" title="https://cyberterrain.org/ns/stonework#AccountType">Account Type</a> <sup class="type-c" title="class">c</sup>, <a href="#AffectedStatus" title="https://cyberterrain.org/ns/stonework#AffectedStatus">Affected Status</a> <sup class="type-c" title="class">c</sup>, <a href="#AuthenticationMethod" title="https://cyberterrain.org/ns/stonework#AuthenticationMethod">Authentication Method</a> <sup class="type-c" title="class">c</sup>, <a href="#AuthenticationVerdict" title="https://cyberterrain.org/ns/stonework#AuthenticationVerdict">Authentication Verdict</a> <sup class="type-c" title="class">c</sup>, <a href="#DeviationKind" title="https://cyberterrain.org/ns/stonework#DeviationKind">Deviation Kind</a> <sup class="type-c" title="class">c</sup>, <a href="#ExecutionOutcome" title="https://cyberterrain.org/ns/stonework#ExecutionOutcome">Execution Outcome</a> <sup class="type-c" title="class">c</sup>, <a href="#ExploitMaturity" title="https://cyberterrain.org/ns/stonework#ExploitMaturity">Exploit Maturity</a> <sup class="type-c" title="class">c</sup>, <a href="#ExploitationReportKind" title="https://cyberterrain.org/ns/stonework#ExploitationReportKind">Exploitation Report Kind</a> <sup class="type-c" title="class">c</sup>, <a href="#FalsePositiveRate" title="https://cyberterrain.org/ns/stonework#FalsePositiveRate">False Positive Rate</a> <sup class="type-c" title="class">c</sup>, <a href="#FinancialAccountType" title="https://cyberterrain.org/ns/stonework#FinancialAccountType">Financial Account Type</a> <sup class="type-c" title="class">c</sup>, <a href="#FinancialInstitutionType" title="https://cyberterrain.org/ns/stonework#FinancialInstitutionType">Financial Institution Type</a> <sup class="type-c" title="class">c</sup>, <a href="#FlowKind" title="https://cyberterrain.org/ns/stonework#FlowKind">Flow Kind</a> <sup class="type-c" title="class">c</sup>, <a href="#HypothesisStatus" title="https://cyberterrain.org/ns/stonework#HypothesisStatus">Hypothesis Status</a> <sup class="type-c" title="class">c</sup>, <a href="#ImpactLevel" title="https://cyberterrain.org/ns/stonework#ImpactLevel">Impact Level</a> <sup class="type-c" title="class">c</sup>, <a href="#ImpactType" title="https://cyberterrain.org/ns/stonework#ImpactType">Impact Type</a> <sup class="type-c" title="class">c</sup>, <a href="#IncidentStatus" title="https://cyberterrain.org/ns/stonework#IncidentStatus">Incident Status</a> <sup class="type-c" title="class">c</sup>, <a href="#InfrastructureType" title="https://cyberterrain.org/ns/stonework#InfrastructureType">Infrastructure Type</a> <sup class="type-c" title="class">c</sup>, <a href="#InvestigationOutcome" title="https://cyberterrain.org/ns/stonework#InvestigationOutcome">Investigation Outcome</a> <sup class="type-c" title="class">c</sup>, <a href="#InvestigationStatus" title="https://cyberterrain.org/ns/stonework#InvestigationStatus">Investigation Status</a> <sup class="type-c" title="class">c</sup>, <a href="#KillChainPhase" title="https://cyberterrain.org/ns/stonework#KillChainPhase">Kill Chain Phase</a> <sup class="type-c" title="class">c</sup>, <a href="#LikelihoodLevel" title="https://cyberterrain.org/ns/stonework#LikelihoodLevel">Likelihood Level</a> <sup class="type-c" title="class">c</sup>, <a href="#MalwareType" title="https://cyberterrain.org/ns/stonework#MalwareType">Malware Type</a> <sup class="type-c" title="class">c</sup>, <a href="#Markings" title="https://cyberterrain.org/ns/stonework#Markings">Markings</a> <sup class="type-c" title="class">c</sup>, <a href="#MetricType" title="https://cyberterrain.org/ns/stonework#MetricType">Metric Type</a> <sup class="type-c" title="class">c</sup>, <a href="#Motivation" title="https://cyberterrain.org/ns/stonework#Motivation">Motivation</a> <sup class="type-c" title="class">c</sup>, <a href="#PaymentInstrument" title="https://cyberterrain.org/ns/stonework#PaymentInstrument">Payment Instrument</a> <sup class="type-c" title="class">c</sup>, <a href="#PlaybookType" title="https://cyberterrain.org/ns/stonework#PlaybookType">Playbook Type</a> <sup class="type-c" title="class">c</sup>, <a href="#PriorityLevel" title="https://cyberterrain.org/ns/stonework#PriorityLevel">Priority Level</a> <sup class="type-c" title="class">c</sup>, <a href="#ProductType" title="https://cyberterrain.org/ns/stonework#ProductType">Product Type</a> <sup class="type-c" title="class">c</sup>, <a href="#ResourceLevel" title="https://cyberterrain.org/ns/stonework#ResourceLevel">Resource Level</a> <sup class="type-c" title="class">c</sup>, <a href="#RiskLevel" title="https://cyberterrain.org/ns/stonework#RiskLevel">Risk Level</a> <sup class="type-c" title="class">c</sup>, <a href="#Sector" title="https://cyberterrain.org/ns/stonework#Sector">Sector</a> <sup class="type-c" title="class">c</sup>, <a href="#SophisticationLevel" title="https://cyberterrain.org/ns/stonework#SophisticationLevel">Sophistication Level</a> <sup class="type-c" title="class">c</sup>, <a href="#ThreatActorRole" title="https://cyberterrain.org/ns/stonework#ThreatActorRole">Threat Actor Role</a> <sup class="type-c" title="class">c</sup>, <a href="#ThreatActorType" title="https://cyberterrain.org/ns/stonework#ThreatActorType">Threat Actor Type</a> <sup class="type-c" title="class">c</sup>, <a href="#TransactionType" title="https://cyberterrain.org/ns/stonework#TransactionType">Transaction Type</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     is in range of
@@ -1033,7 +1091,7 @@ This section provides details for each class and property defined by STONEWORK.
     is in domain of
    </dt>
    <dd>
-    <a href="#actsOn" title="https://cyberterrain.org/ns/stonework#actsOn">actsOn</a> <sup class="type-op" title="object property">op</sup>, <a href="#correspondsToStep" title="https://cyberterrain.org/ns/stonework#correspondsToStep">correspondsToStep</a> <sup class="type-op" title="object property">op</sup>, <a href="#endedAtTime" title="https://cyberterrain.org/ns/stonework#endedAtTime">endedAtTime</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#executionOf" title="https://cyberterrain.org/ns/stonework#executionOf">executionOf</a> <sup class="type-op" title="object property">op</sup>, <a href="#memberOfActivityCluster" title="https://cyberterrain.org/ns/stonework#memberOfActivityCluster">memberOfActivityCluster</a> <sup class="type-op" title="object property">op</sup>, <a href="#partOfExecution" title="https://cyberterrain.org/ns/stonework#partOfExecution">partOfExecution</a> <sup class="type-op" title="object property">op</sup>, <a href="#produces" title="https://cyberterrain.org/ns/stonework#produces">produces</a> <sup class="type-op" title="object property">op</sup>, <a href="#startedAtTime" title="https://cyberterrain.org/ns/stonework#startedAtTime">startedAtTime</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#usedBinding" title="https://cyberterrain.org/ns/stonework#usedBinding">usedBinding</a> <sup class="type-op" title="object property">op</sup>, <a href="#usesInfrastructure" title="https://cyberterrain.org/ns/stonework#usesInfrastructure">usesInfrastructure</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#actsOn" title="https://cyberterrain.org/ns/stonework#actsOn">actsOn</a> <sup class="type-op" title="object property">op</sup>, <a href="#correspondsToStep" title="https://cyberterrain.org/ns/stonework#correspondsToStep">correspondsToStep</a> <sup class="type-op" title="object property">op</sup>, <a href="#endedAtTime" title="https://cyberterrain.org/ns/stonework#endedAtTime">endedAtTime</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#executionOf" title="https://cyberterrain.org/ns/stonework#executionOf">executionOf</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasDestinationAddress" title="https://cyberterrain.org/ns/stonework#hasDestinationAddress">hasDestinationAddress</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasSourceAddress" title="https://cyberterrain.org/ns/stonework#hasSourceAddress">hasSourceAddress</a> <sup class="type-op" title="object property">op</sup>, <a href="#memberOfActivityCluster" title="https://cyberterrain.org/ns/stonework#memberOfActivityCluster">memberOfActivityCluster</a> <sup class="type-op" title="object property">op</sup>, <a href="#partOfExecution" title="https://cyberterrain.org/ns/stonework#partOfExecution">partOfExecution</a> <sup class="type-op" title="object property">op</sup>, <a href="#produces" title="https://cyberterrain.org/ns/stonework#produces">produces</a> <sup class="type-op" title="object property">op</sup>, <a href="#startedAtTime" title="https://cyberterrain.org/ns/stonework#startedAtTime">startedAtTime</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#usedBinding" title="https://cyberterrain.org/ns/stonework#usedBinding">usedBinding</a> <sup class="type-op" title="object property">op</sup>, <a href="#usedUserAgent" title="https://cyberterrain.org/ns/stonework#usedUserAgent">usedUserAgent</a> <sup class="type-op" title="object property">op</sup>, <a href="#usesInfrastructure" title="https://cyberterrain.org/ns/stonework#usesInfrastructure">usesInfrastructure</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
@@ -1318,7 +1376,7 @@ This section provides details for each class and property defined by STONEWORK.
     has sub-classes
    </dt>
    <dd>
-    <a href="#AccessControlList" title="https://cyberterrain.org/ns/stonework#AccessControlList">Access Control List</a> <sup class="type-c" title="class">c</sup>, <a href="#Certificate" title="https://cyberterrain.org/ns/stonework#Certificate">Certificate</a> <sup class="type-c" title="class">c</sup>, <a href="#Directory" title="https://cyberterrain.org/ns/stonework#Directory">Directory</a> <sup class="type-c" title="class">c</sup>, <a href="#EmailMessage" title="https://cyberterrain.org/ns/stonework#EmailMessage">Email Message</a> <sup class="type-c" title="class">c</sup>, <a href="#File" title="https://cyberterrain.org/ns/stonework#File">File</a> <sup class="type-c" title="class">c</sup>, <a href="#Log" title="https://cyberterrain.org/ns/stonework#Log">Log</a> <sup class="type-c" title="class">c</sup>, <a href="#Mutex" title="https://cyberterrain.org/ns/stonework#Mutex">Mutex</a> <sup class="type-c" title="class">c</sup>, <a href="#NetworkTraffic" title="https://cyberterrain.org/ns/stonework#NetworkTraffic">Network Traffic</a> <sup class="type-c" title="class">c</sup>, <a href="#Registry" title="https://cyberterrain.org/ns/stonework#Registry">Registry</a> <sup class="type-c" title="class">c</sup>, <a href="#RuntimeProcess" title="https://cyberterrain.org/ns/stonework#RuntimeProcess">Runtime Process</a> <sup class="type-c" title="class">c</sup>
+    <a href="#AccessControlList" title="https://cyberterrain.org/ns/stonework#AccessControlList">Access Control List</a> <sup class="type-c" title="class">c</sup>, <a href="#Certificate" title="https://cyberterrain.org/ns/stonework#Certificate">Certificate</a> <sup class="type-c" title="class">c</sup>, <a href="#Directory" title="https://cyberterrain.org/ns/stonework#Directory">Directory</a> <sup class="type-c" title="class">c</sup>, <a href="#EmailMessage" title="https://cyberterrain.org/ns/stonework#EmailMessage">Email Message</a> <sup class="type-c" title="class">c</sup>, <a href="#File" title="https://cyberterrain.org/ns/stonework#File">File</a> <sup class="type-c" title="class">c</sup>, <a href="#Log" title="https://cyberterrain.org/ns/stonework#Log">Log</a> <sup class="type-c" title="class">c</sup>, <a href="#MailboxRule" title="https://cyberterrain.org/ns/stonework#MailboxRule">Mailbox Rule</a> <sup class="type-c" title="class">c</sup>, <a href="#Mutex" title="https://cyberterrain.org/ns/stonework#Mutex">Mutex</a> <sup class="type-c" title="class">c</sup>, <a href="#NetworkTraffic" title="https://cyberterrain.org/ns/stonework#NetworkTraffic">Network Traffic</a> <sup class="type-c" title="class">c</sup>, <a href="#Registry" title="https://cyberterrain.org/ns/stonework#Registry">Registry</a> <sup class="type-c" title="class">c</sup>, <a href="#RuntimeProcess" title="https://cyberterrain.org/ns/stonework#RuntimeProcess">Runtime Process</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     is in domain of
@@ -1330,7 +1388,7 @@ This section provides details for each class and property defined by STONEWORK.
     is in range of
    </dt>
    <dd>
-    <a href="#collects" title="https://cyberterrain.org/ns/stonework#collects">collects</a> <sup class="type-op" title="object property">op</sup>, <a href="#derivedFrom" title="https://cyberterrain.org/ns/stonework#derivedFrom">derivedFrom</a> <sup class="type-op" title="object property">op</sup>, <a href="#drops" title="https://cyberterrain.org/ns/stonework#drops">drops</a> <sup class="type-op" title="object property">op</sup>, <a href="#evidencedBy" title="https://cyberterrain.org/ns/stonework#evidencedBy">evidencedBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasArtifact" title="https://cyberterrain.org/ns/stonework#hasArtifact">hasArtifact</a> <sup class="type-op" title="object property">op</sup>, <a href="#protects" title="https://cyberterrain.org/ns/stonework#protects">protects</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#collects" title="https://cyberterrain.org/ns/stonework#collects">collects</a> <sup class="type-op" title="object property">op</sup>, <a href="#derivedFrom" title="https://cyberterrain.org/ns/stonework#derivedFrom">derivedFrom</a> <sup class="type-op" title="object property">op</sup>, <a href="#drops" title="https://cyberterrain.org/ns/stonework#drops">drops</a> <sup class="type-op" title="object property">op</sup>, <a href="#evidencedBy" title="https://cyberterrain.org/ns/stonework#evidencedBy">evidencedBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#generatedFrom" title="https://cyberterrain.org/ns/stonework#generatedFrom">generatedFrom</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasArtifact" title="https://cyberterrain.org/ns/stonework#hasArtifact">hasArtifact</a> <sup class="type-op" title="object property">op</sup>, <a href="#protects" title="https://cyberterrain.org/ns/stonework#protects">protects</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -1414,7 +1472,7 @@ This section provides details for each class and property defined by STONEWORK.
     is in range of
    </dt>
    <dd>
-    <a href="#issuedTo" title="https://cyberterrain.org/ns/stonework#issuedTo">issuedTo</a> <sup class="type-op" title="object property">op</sup>, <a href="#subdomainOf" title="https://cyberterrain.org/ns/stonework#subdomainOf">subdomainOf</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#authenticatedDomain" title="https://cyberterrain.org/ns/stonework#authenticatedDomain">authenticatedDomain</a> <sup class="type-op" title="object property">op</sup>, <a href="#issuedTo" title="https://cyberterrain.org/ns/stonework#issuedTo">issuedTo</a> <sup class="type-op" title="object property">op</sup>, <a href="#subdomainOf" title="https://cyberterrain.org/ns/stonework#subdomainOf">subdomainOf</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -1441,7 +1499,34 @@ This section provides details for each class and property defined by STONEWORK.
     is in range of
    </dt>
    <dd>
-    <a href="#hasEmail" title="https://cyberterrain.org/ns/stonework#hasEmail">hasEmail</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#forwardsTo" title="https://cyberterrain.org/ns/stonework#forwardsTo">forwardsTo</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasBccAddress" title="https://cyberterrain.org/ns/stonework#hasBccAddress">hasBccAddress</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasCcAddress" title="https://cyberterrain.org/ns/stonework#hasCcAddress">hasCcAddress</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasEmail" title="https://cyberterrain.org/ns/stonework#hasEmail">hasEmail</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasFromAddress" title="https://cyberterrain.org/ns/stonework#hasFromAddress">hasFromAddress</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasReplyToAddress" title="https://cyberterrain.org/ns/stonework#hasReplyToAddress">hasReplyToAddress</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasReturnPathAddress" title="https://cyberterrain.org/ns/stonework#hasReturnPathAddress">hasReturnPathAddress</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasSenderAddress" title="https://cyberterrain.org/ns/stonework#hasSenderAddress">hasSenderAddress</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasToAddress" title="https://cyberterrain.org/ns/stonework#hasToAddress">hasToAddress</a> <sup class="type-op" title="object property">op</sup>, <a href="#matchesSender" title="https://cyberterrain.org/ns/stonework#matchesSender">matchesSender</a> <sup class="type-op" title="object property">op</sup>, <a href="#redirectsTo" title="https://cyberterrain.org/ns/stonework#redirectsTo">redirectsTo</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="EmailAuthenticationResult">
+  <h3>Email Authentication Result<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#EmailAuthenticationResult</p>
+  <div class="comment">
+   <span class="markdown">The verdict of one sender-authentication check (SPF, DKIM, DMARC or ARC) on an EmailMessage, as a receiving server recorded it in an Authentication-Results header: the method, the verdict, the domain checked, and the server that checked.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Assessment" title="https://cyberterrain.org/ns/stonework#Assessment">Assessment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#authenticatedBy" title="https://cyberterrain.org/ns/stonework#authenticatedBy">authenticatedBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#authenticatedDomain" title="https://cyberterrain.org/ns/stonework#authenticatedDomain">authenticatedDomain</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasAuthenticationMethod" title="https://cyberterrain.org/ns/stonework#hasAuthenticationMethod">hasAuthenticationMethod</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasAuthenticationVerdict" title="https://cyberterrain.org/ns/stonework#hasAuthenticationVerdict">hasAuthenticationVerdict</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasAuthenticationResult" title="https://cyberterrain.org/ns/stonework#hasAuthenticationResult">hasAuthenticationResult</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -1457,6 +1542,18 @@ This section provides details for each class and property defined by STONEWORK.
    </dt>
    <dd>
     <a href="#DigitalArtifact" title="https://cyberterrain.org/ns/stonework#DigitalArtifact">Digital Artifact</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#emailBody" title="https://cyberterrain.org/ns/stonework#emailBody">emailBody</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#emailSubject" title="https://cyberterrain.org/ns/stonework#emailSubject">emailSubject</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#fromDisplayName" title="https://cyberterrain.org/ns/stonework#fromDisplayName">fromDisplayName</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasAttachment" title="https://cyberterrain.org/ns/stonework#hasAttachment">hasAttachment</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasAuthenticationResult" title="https://cyberterrain.org/ns/stonework#hasAuthenticationResult">hasAuthenticationResult</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasBccAddress" title="https://cyberterrain.org/ns/stonework#hasBccAddress">hasBccAddress</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasCcAddress" title="https://cyberterrain.org/ns/stonework#hasCcAddress">hasCcAddress</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasFromAddress" title="https://cyberterrain.org/ns/stonework#hasFromAddress">hasFromAddress</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasReplyToAddress" title="https://cyberterrain.org/ns/stonework#hasReplyToAddress">hasReplyToAddress</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasReturnPathAddress" title="https://cyberterrain.org/ns/stonework#hasReturnPathAddress">hasReturnPathAddress</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasSenderAddress" title="https://cyberterrain.org/ns/stonework#hasSenderAddress">hasSenderAddress</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasToAddress" title="https://cyberterrain.org/ns/stonework#hasToAddress">hasToAddress</a> <sup class="type-op" title="object property">op</sup>, <a href="#inReplyTo" title="https://cyberterrain.org/ns/stonework#inReplyTo">inReplyTo</a> <sup class="type-op" title="object property">op</sup>, <a href="#messageId" title="https://cyberterrain.org/ns/stonework#messageId">messageId</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#referencesMessage" title="https://cyberterrain.org/ns/stonework#referencesMessage">referencesMessage</a> <sup class="type-op" title="object property">op</sup>, <a href="#sentAtTime" title="https://cyberterrain.org/ns/stonework#sentAtTime">sentAtTime</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#inReplyTo" title="https://cyberterrain.org/ns/stonework#inReplyTo">inReplyTo</a> <sup class="type-op" title="object property">op</sup>, <a href="#referencesMessage" title="https://cyberterrain.org/ns/stonework#referencesMessage">referencesMessage</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -1633,7 +1730,7 @@ This section provides details for each class and property defined by STONEWORK.
     is in range of
    </dt>
    <dd>
-    <a href="#accessesFile" title="https://cyberterrain.org/ns/stonework#accessesFile">accessesFile</a> <sup class="type-op" title="object property">op</sup>, <a href="#containsFile" title="https://cyberterrain.org/ns/stonework#containsFile">containsFile</a> <sup class="type-op" title="object property">op</sup>, <a href="#downloads" title="https://cyberterrain.org/ns/stonework#downloads">downloads</a> <sup class="type-op" title="object property">op</sup>, <a href="#transfersFile" title="https://cyberterrain.org/ns/stonework#transfersFile">transfersFile</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#accessesFile" title="https://cyberterrain.org/ns/stonework#accessesFile">accessesFile</a> <sup class="type-op" title="object property">op</sup>, <a href="#containsFile" title="https://cyberterrain.org/ns/stonework#containsFile">containsFile</a> <sup class="type-op" title="object property">op</sup>, <a href="#downloads" title="https://cyberterrain.org/ns/stonework#downloads">downloads</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasAttachment" title="https://cyberterrain.org/ns/stonework#hasAttachment">hasAttachment</a> <sup class="type-op" title="object property">op</sup>, <a href="#transfersFile" title="https://cyberterrain.org/ns/stonework#transfersFile">transfersFile</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -2266,7 +2363,7 @@ This section provides details for each class and property defined by STONEWORK.
     is in range of
    </dt>
    <dd>
-    <a href="#affectsAsset" title="https://cyberterrain.org/ns/stonework#affectsAsset">affectsAsset</a> <sup class="type-op" title="object property">op</sup>, <a href="#appliesTo" title="https://cyberterrain.org/ns/stonework#appliesTo">appliesTo</a> <sup class="type-op" title="object property">op</sup>, <a href="#communicatesWith" title="https://cyberterrain.org/ns/stonework#communicatesWith">communicatesWith</a> <sup class="type-op" title="object property">op</sup>, <a href="#deliveredVia" title="https://cyberterrain.org/ns/stonework#deliveredVia">deliveredVia</a> <sup class="type-op" title="object property">op</sup>, <a href="#derivedFrom" title="https://cyberterrain.org/ns/stonework#derivedFrom">derivedFrom</a> <sup class="type-op" title="object property">op</sup>, <a href="#describesInfrastructure" title="https://cyberterrain.org/ns/stonework#describesInfrastructure">describes infrastructure</a> <sup class="type-op" title="object property">op</sup>, <a href="#installedOn" title="https://cyberterrain.org/ns/stonework#installedOn">installedOn</a> <sup class="type-op" title="object property">op</sup>, <a href="#resolvesTo" title="https://cyberterrain.org/ns/stonework#resolvesTo">resolvesTo</a> <sup class="type-op" title="object property">op</sup>, <a href="#scenarioAsset" title="https://cyberterrain.org/ns/stonework#scenarioAsset">scenarioAsset</a> <sup class="type-op" title="object property">op</sup>, <a href="#sightedAt" title="https://cyberterrain.org/ns/stonework#sightedAt">sightedAt</a> <sup class="type-op" title="object property">op</sup>, <a href="#storedIn" title="https://cyberterrain.org/ns/stonework#storedIn">storedIn</a> <sup class="type-op" title="object property">op</sup>, <a href="#usesInfrastructure" title="https://cyberterrain.org/ns/stonework#usesInfrastructure">usesInfrastructure</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#affectsAsset" title="https://cyberterrain.org/ns/stonework#affectsAsset">affectsAsset</a> <sup class="type-op" title="object property">op</sup>, <a href="#appliesTo" title="https://cyberterrain.org/ns/stonework#appliesTo">appliesTo</a> <sup class="type-op" title="object property">op</sup>, <a href="#authenticatedBy" title="https://cyberterrain.org/ns/stonework#authenticatedBy">authenticatedBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#communicatesWith" title="https://cyberterrain.org/ns/stonework#communicatesWith">communicatesWith</a> <sup class="type-op" title="object property">op</sup>, <a href="#deliveredVia" title="https://cyberterrain.org/ns/stonework#deliveredVia">deliveredVia</a> <sup class="type-op" title="object property">op</sup>, <a href="#derivedFrom" title="https://cyberterrain.org/ns/stonework#derivedFrom">derivedFrom</a> <sup class="type-op" title="object property">op</sup>, <a href="#describesInfrastructure" title="https://cyberterrain.org/ns/stonework#describesInfrastructure">describes infrastructure</a> <sup class="type-op" title="object property">op</sup>, <a href="#installedOn" title="https://cyberterrain.org/ns/stonework#installedOn">installedOn</a> <sup class="type-op" title="object property">op</sup>, <a href="#resolvesTo" title="https://cyberterrain.org/ns/stonework#resolvesTo">resolvesTo</a> <sup class="type-op" title="object property">op</sup>, <a href="#scenarioAsset" title="https://cyberterrain.org/ns/stonework#scenarioAsset">scenarioAsset</a> <sup class="type-op" title="object property">op</sup>, <a href="#sightedAt" title="https://cyberterrain.org/ns/stonework#sightedAt">sightedAt</a> <sup class="type-op" title="object property">op</sup>, <a href="#storedIn" title="https://cyberterrain.org/ns/stonework#storedIn">storedIn</a> <sup class="type-op" title="object property">op</sup>, <a href="#usesInfrastructure" title="https://cyberterrain.org/ns/stonework#usesInfrastructure">usesInfrastructure</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -2628,12 +2725,6 @@ This section provides details for each class and property defined by STONEWORK.
    <dd>
     <a href="#generatedBy" title="https://cyberterrain.org/ns/stonework#generatedBy">generatedBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#logSource" title="https://cyberterrain.org/ns/stonework#logSource">logSource</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#rawEntry" title="https://cyberterrain.org/ns/stonework#rawEntry">rawEntry</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
-   <dt>
-    is in range of
-   </dt>
-   <dd>
-    <a href="#generatedFrom" title="https://cyberterrain.org/ns/stonework#generatedFrom">generatedFrom</a> <sup class="type-op" title="object property">op</sup>
-   </dd>
   </dl>
  </div>
  <div class="entity" id="MACAddress">
@@ -2648,6 +2739,27 @@ This section provides details for each class and property defined by STONEWORK.
    </dt>
    <dd>
     <a href="#Identifier" title="https://cyberterrain.org/ns/stonework#Identifier">Identifier</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MailboxRule">
+  <h3>Mailbox Rule<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#MailboxRule</p>
+  <div class="comment">
+   <span class="markdown">A rule a mailbox applies automatically to the email it receives: conditions that select messages, and actions taken on them, such as forwarding, moving or deleting.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#DigitalArtifact" title="https://cyberterrain.org/ns/stonework#DigitalArtifact">Digital Artifact</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#deletesMessage" title="https://cyberterrain.org/ns/stonework#deletesMessage">deletesMessage</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#forwardsTo" title="https://cyberterrain.org/ns/stonework#forwardsTo">forwardsTo</a> <sup class="type-op" title="object property">op</sup>, <a href="#hiddenFromUser" title="https://cyberterrain.org/ns/stonework#hiddenFromUser">hiddenFromUser</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#marksAsRead" title="https://cyberterrain.org/ns/stonework#marksAsRead">marksAsRead</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#matchesKeyword" title="https://cyberterrain.org/ns/stonework#matchesKeyword">matchesKeyword</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#matchesSender" title="https://cyberterrain.org/ns/stonework#matchesSender">matchesSender</a> <sup class="type-op" title="object property">op</sup>, <a href="#movesToFolder" title="https://cyberterrain.org/ns/stonework#movesToFolder">movesToFolder</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#redirectsTo" title="https://cyberterrain.org/ns/stonework#redirectsTo">redirectsTo</a> <sup class="type-op" title="object property">op</sup>, <a href="#ruleContent" title="https://cyberterrain.org/ns/stonework#ruleContent">ruleContent</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#ruleEnabled" title="https://cyberterrain.org/ns/stonework#ruleEnabled">ruleEnabled</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#ruleName" title="https://cyberterrain.org/ns/stonework#ruleName">ruleName</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#ruleOfMailbox" title="https://cyberterrain.org/ns/stonework#ruleOfMailbox">ruleOfMailbox</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -3022,13 +3134,7 @@ This section provides details for each class and property defined by STONEWORK.
     is in domain of
    </dt>
    <dd>
-    <a href="#byteCount" title="https://cyberterrain.org/ns/stonework#byteCount">byteCount</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#dstPort" title="https://cyberterrain.org/ns/stonework#dstPort">dstPort</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#generatedBy" title="https://cyberterrain.org/ns/stonework#generatedBy">generatedBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasDestinationAddress" title="https://cyberterrain.org/ns/stonework#hasDestinationAddress">hasDestinationAddress</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasSourceAddress" title="https://cyberterrain.org/ns/stonework#hasSourceAddress">hasSourceAddress</a> <sup class="type-op" title="object property">op</sup>, <a href="#initiatedBy" title="https://cyberterrain.org/ns/stonework#initiatedBy">initiatedBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#networkProtocol" title="https://cyberterrain.org/ns/stonework#networkProtocol">networkProtocol</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#packetCount" title="https://cyberterrain.org/ns/stonework#packetCount">packetCount</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#srcPort" title="https://cyberterrain.org/ns/stonework#srcPort">srcPort</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#targetsService" title="https://cyberterrain.org/ns/stonework#targetsService">targetsService</a> <sup class="type-op" title="object property">op</sup>, <a href="#transfersFile" title="https://cyberterrain.org/ns/stonework#transfersFile">transfersFile</a> <sup class="type-op" title="object property">op</sup>
-   </dd>
-   <dt>
-    is in range of
-   </dt>
-   <dd>
-    <a href="#generatedFrom" title="https://cyberterrain.org/ns/stonework#generatedFrom">generatedFrom</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#byteCount" title="https://cyberterrain.org/ns/stonework#byteCount">byteCount</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#dstPort" title="https://cyberterrain.org/ns/stonework#dstPort">dstPort</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#generatedBy" title="https://cyberterrain.org/ns/stonework#generatedBy">generatedBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasDestinationAddress" title="https://cyberterrain.org/ns/stonework#hasDestinationAddress">hasDestinationAddress</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasSourceAddress" title="https://cyberterrain.org/ns/stonework#hasSourceAddress">hasSourceAddress</a> <sup class="type-op" title="object property">op</sup>, <a href="#initiatedBy" title="https://cyberterrain.org/ns/stonework#initiatedBy">initiatedBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#networkProtocol" title="https://cyberterrain.org/ns/stonework#networkProtocol">networkProtocol</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#packetCount" title="https://cyberterrain.org/ns/stonework#packetCount">packetCount</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#srcPort" title="https://cyberterrain.org/ns/stonework#srcPort">srcPort</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#targetsService" title="https://cyberterrain.org/ns/stonework#targetsService">targetsService</a> <sup class="type-op" title="object property">op</sup>, <a href="#transfersFile" title="https://cyberterrain.org/ns/stonework#transfersFile">transfersFile</a> <sup class="type-op" title="object property">op</sup>, <a href="#usedUserAgent" title="https://cyberterrain.org/ns/stonework#usedUserAgent">usedUserAgent</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -4579,7 +4685,7 @@ This section provides details for each class and property defined by STONEWORK.
     is in range of
    </dt>
    <dd>
-    <a href="#grantedTo" title="https://cyberterrain.org/ns/stonework#grantedTo">grantedTo</a> <sup class="type-op" title="object property">op</sup>, <a href="#launchedBy" title="https://cyberterrain.org/ns/stonework#launchedBy">launchedBy</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#grantedTo" title="https://cyberterrain.org/ns/stonework#grantedTo">grantedTo</a> <sup class="type-op" title="object property">op</sup>, <a href="#launchedBy" title="https://cyberterrain.org/ns/stonework#launchedBy">launchedBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#ruleOfMailbox" title="https://cyberterrain.org/ns/stonework#ruleOfMailbox">ruleOfMailbox</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -4601,6 +4707,12 @@ This section provides details for each class and property defined by STONEWORK.
    </dt>
    <dd>
     <a href="#userAgentString" title="https://cyberterrain.org/ns/stonework#userAgentString">userAgentString</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#usedUserAgent" title="https://cyberterrain.org/ns/stonework#usedUserAgent">usedUserAgent</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -4832,6 +4944,8 @@ This section provides details for each class and property defined by STONEWORK.
   <li><a href="#associatedWith" title="https://cyberterrain.org/ns/stonework#associatedWith">associatedWith</a></li>
   <li><a href="#attributedTo" title="https://cyberterrain.org/ns/stonework#attributedTo">attributedTo</a></li>
   <li><a href="#attributedToAgent" title="https://cyberterrain.org/ns/stonework#attributedToAgent">attributedToAgent</a></li>
+  <li><a href="#authenticatedBy" title="https://cyberterrain.org/ns/stonework#authenticatedBy">authenticatedBy</a></li>
+  <li><a href="#authenticatedDomain" title="https://cyberterrain.org/ns/stonework#authenticatedDomain">authenticatedDomain</a></li>
   <li><a href="#authoredBy" title="https://cyberterrain.org/ns/stonework#authoredBy">authoredBy</a></li>
   <li><a href="#beneficiaryAccount" title="https://cyberterrain.org/ns/stonework#beneficiaryAccount">beneficiaryAccount</a></li>
   <li><a href="#beneficiaryMonetaryValue" title="https://cyberterrain.org/ns/stonework#beneficiaryMonetaryValue">beneficiaryMonetaryValue</a></li>
@@ -4885,6 +4999,7 @@ This section provides details for each class and property defined by STONEWORK.
   <li><a href="#exploitsWeakness" title="https://cyberterrain.org/ns/stonework#exploitsWeakness">exploitsWeakness</a></li>
   <li><a href="#exposesService" title="https://cyberterrain.org/ns/stonework#exposesService">exposesService</a></li>
   <li><a href="#fixedInProduct" title="https://cyberterrain.org/ns/stonework#fixedInProduct">fixedInProduct</a></li>
+  <li><a href="#forwardsTo" title="https://cyberterrain.org/ns/stonework#forwardsTo">forwardsTo</a></li>
   <li><a href="#fromStep" title="https://cyberterrain.org/ns/stonework#fromStep">fromStep</a></li>
   <li><a href="#fundsActivity" title="https://cyberterrain.org/ns/stonework#fundsActivity">fundsActivity</a></li>
   <li><a href="#generatedBy" title="https://cyberterrain.org/ns/stonework#generatedBy">generatedBy</a></li>
@@ -4900,7 +5015,13 @@ This section provides details for each class and property defined by STONEWORK.
   <li><a href="#hasAccountType" title="https://cyberterrain.org/ns/stonework#hasAccountType">hasAccountType</a></li>
   <li><a href="#hasAffectedStatus" title="https://cyberterrain.org/ns/stonework#hasAffectedStatus">hasAffectedStatus</a></li>
   <li><a href="#hasArtifact" title="https://cyberterrain.org/ns/stonework#hasArtifact">hasArtifact</a></li>
+  <li><a href="#hasAttachment" title="https://cyberterrain.org/ns/stonework#hasAttachment">hasAttachment</a></li>
+  <li><a href="#hasAuthenticationMethod" title="https://cyberterrain.org/ns/stonework#hasAuthenticationMethod">hasAuthenticationMethod</a></li>
+  <li><a href="#hasAuthenticationResult" title="https://cyberterrain.org/ns/stonework#hasAuthenticationResult">hasAuthenticationResult</a></li>
+  <li><a href="#hasAuthenticationVerdict" title="https://cyberterrain.org/ns/stonework#hasAuthenticationVerdict">hasAuthenticationVerdict</a></li>
+  <li><a href="#hasBccAddress" title="https://cyberterrain.org/ns/stonework#hasBccAddress">hasBccAddress</a></li>
   <li><a href="#hasBehavior" title="https://cyberterrain.org/ns/stonework#hasBehavior">hasBehavior</a></li>
+  <li><a href="#hasCcAddress" title="https://cyberterrain.org/ns/stonework#hasCcAddress">hasCcAddress</a></li>
   <li><a href="#hasCvssMetric" title="https://cyberterrain.org/ns/stonework#hasCvssMetric">hasCvssMetric</a></li>
   <li><a href="#hasDependency" title="https://cyberterrain.org/ns/stonework#hasDependency">hasDependency</a></li>
   <li><a href="#hasDestinationAddress" title="https://cyberterrain.org/ns/stonework#hasDestinationAddress">hasDestinationAddress</a></li>
@@ -4910,6 +5031,7 @@ This section provides details for each class and property defined by STONEWORK.
   <li><a href="#hasExploitationReportKind" title="https://cyberterrain.org/ns/stonework#hasExploitationReportKind">hasExploitationReportKind</a></li>
   <li><a href="#hasExploitMaturity" title="https://cyberterrain.org/ns/stonework#hasExploitMaturity">hasExploitMaturity</a></li>
   <li><a href="#hasFalsePositiveRate" title="https://cyberterrain.org/ns/stonework#hasFalsePositiveRate">hasFalsePositiveRate</a></li>
+  <li><a href="#hasFromAddress" title="https://cyberterrain.org/ns/stonework#hasFromAddress">hasFromAddress</a></li>
   <li><a href="#hasHash" title="https://cyberterrain.org/ns/stonework#hasHash">hasHash</a></li>
   <li><a href="#hashOf" title="https://cyberterrain.org/ns/stonework#hashOf">hashOf</a></li>
   <li><a href="#hasHypothesisStatus" title="https://cyberterrain.org/ns/stonework#hasHypothesisStatus">hasHypothesisStatus</a></li>
@@ -4944,16 +5066,20 @@ This section provides details for each class and property defined by STONEWORK.
   <li><a href="#hasProductInstallation" title="https://cyberterrain.org/ns/stonework#hasProductInstallation">hasProductInstallation</a></li>
   <li><a href="#hasProductType" title="https://cyberterrain.org/ns/stonework#hasProductType">hasProductType</a></li>
   <li><a href="#hasProvenance" title="https://cyberterrain.org/ns/stonework#hasProvenance">hasProvenance</a></li>
+  <li><a href="#hasReplyToAddress" title="https://cyberterrain.org/ns/stonework#hasReplyToAddress">hasReplyToAddress</a></li>
   <li><a href="#hasResourceLevel" title="https://cyberterrain.org/ns/stonework#hasResourceLevel">hasResourceLevel</a></li>
+  <li><a href="#hasReturnPathAddress" title="https://cyberterrain.org/ns/stonework#hasReturnPathAddress">hasReturnPathAddress</a></li>
   <li><a href="#hasRisk" title="https://cyberterrain.org/ns/stonework#hasRisk">hasRisk</a></li>
   <li><a href="#hasRiskLevel" title="https://cyberterrain.org/ns/stonework#hasRiskLevel">hasRiskLevel</a></li>
   <li><a href="#hasRoleAssignment" title="https://cyberterrain.org/ns/stonework#hasRoleAssignment">hasRoleAssignment</a></li>
+  <li><a href="#hasSenderAddress" title="https://cyberterrain.org/ns/stonework#hasSenderAddress">hasSenderAddress</a></li>
   <li><a href="#hasSignature" title="https://cyberterrain.org/ns/stonework#hasSignature">hasSignature</a></li>
   <li><a href="#hasSophisticationLevel" title="https://cyberterrain.org/ns/stonework#hasSophisticationLevel">hasSophisticationLevel</a></li>
   <li><a href="#hasSourceAddress" title="https://cyberterrain.org/ns/stonework#hasSourceAddress">hasSourceAddress</a></li>
   <li><a href="#hasStep" title="https://cyberterrain.org/ns/stonework#hasStep">hasStep</a></li>
   <li><a href="#hasTechnique" title="https://cyberterrain.org/ns/stonework#hasTechnique">hasTechnique</a></li>
   <li><a href="#hasThreatActorType" title="https://cyberterrain.org/ns/stonework#hasThreatActorType">hasThreatActorType</a></li>
+  <li><a href="#hasToAddress" title="https://cyberterrain.org/ns/stonework#hasToAddress">hasToAddress</a></li>
   <li><a href="#hasVendor" title="https://cyberterrain.org/ns/stonework#hasVendor">hasVendor</a></li>
   <li><a href="#hasVersion" title="https://cyberterrain.org/ns/stonework#hasVersion">hasVersion</a></li>
   <li><a href="#hasWeakness" title="https://cyberterrain.org/ns/stonework#hasWeakness">hasWeakness</a></li>
@@ -4971,6 +5097,7 @@ This section provides details for each class and property defined by STONEWORK.
   <li><a href="#inBlock" title="https://cyberterrain.org/ns/stonework#inBlock">inBlock</a></li>
   <li><a href="#indicates" title="https://cyberterrain.org/ns/stonework#indicates">indicates</a></li>
   <li><a href="#initiatedBy" title="https://cyberterrain.org/ns/stonework#initiatedBy">initiatedBy</a></li>
+  <li><a href="#inReplyTo" title="https://cyberterrain.org/ns/stonework#inReplyTo">inReplyTo</a></li>
   <li><a href="#installationOf" title="https://cyberterrain.org/ns/stonework#installationOf">installation of</a></li>
   <li><a href="#installedOn" title="https://cyberterrain.org/ns/stonework#installedOn">installedOn</a></li>
   <li><a href="#intermediaryAccount" title="https://cyberterrain.org/ns/stonework#intermediaryAccount">intermediaryAccount</a></li>
@@ -4994,6 +5121,7 @@ This section provides details for each class and property defined by STONEWORK.
   <li><a href="#madeBySensor" title="https://cyberterrain.org/ns/stonework#madeBySensor">madeBySensor</a></li>
   <li><a href="#manifestsAs" title="https://cyberterrain.org/ns/stonework#manifestsAs">manifestsAs</a></li>
   <li><a href="#markingRef" title="https://cyberterrain.org/ns/stonework#markingRef">markingRef</a></li>
+  <li><a href="#matchesSender" title="https://cyberterrain.org/ns/stonework#matchesSender">matchesSender</a></li>
   <li><a href="#memberOf" title="https://cyberterrain.org/ns/stonework#memberOf">memberOf</a></li>
   <li><a href="#memberOfActivityCluster" title="https://cyberterrain.org/ns/stonework#memberOfActivityCluster">memberOfActivityCluster</a></li>
   <li><a href="#memberOfFamily" title="https://cyberterrain.org/ns/stonework#memberOfFamily">memberOfFamily</a></li>
@@ -5032,7 +5160,9 @@ This section provides details for each class and property defined by STONEWORK.
   <li><a href="#producesReport" title="https://cyberterrain.org/ns/stonework#producesReport">producesReport</a></li>
   <li><a href="#protects" title="https://cyberterrain.org/ns/stonework#protects">protects</a></li>
   <li><a href="#provenanceOf" title="https://cyberterrain.org/ns/stonework#provenanceOf">provenanceOf</a></li>
+  <li><a href="#redirectsTo" title="https://cyberterrain.org/ns/stonework#redirectsTo">redirectsTo</a></li>
   <li><a href="#references" title="https://cyberterrain.org/ns/stonework#references">references</a></li>
+  <li><a href="#referencesMessage" title="https://cyberterrain.org/ns/stonework#referencesMessage">referencesMessage</a></li>
   <li><a href="#refersTo" title="https://cyberterrain.org/ns/stonework#refersTo">refersTo</a></li>
   <li><a href="#refines" title="https://cyberterrain.org/ns/stonework#refines">refines</a></li>
   <li><a href="#registeredTo" title="https://cyberterrain.org/ns/stonework#registeredTo">registeredTo</a></li>
@@ -5050,6 +5180,7 @@ This section provides details for each class and property defined by STONEWORK.
   <li><a href="#riskOfScenario" title="https://cyberterrain.org/ns/stonework#riskOfScenario">riskOfScenario</a></li>
   <li><a href="#roleContext" title="https://cyberterrain.org/ns/stonework#roleContext">roleContext</a></li>
   <li><a href="#rolePlayer" title="https://cyberterrain.org/ns/stonework#rolePlayer">rolePlayer</a></li>
+  <li><a href="#ruleOfMailbox" title="https://cyberterrain.org/ns/stonework#ruleOfMailbox">ruleOfMailbox</a></li>
   <li><a href="#runs" title="https://cyberterrain.org/ns/stonework#runs">runs</a></li>
   <li><a href="#scenarioActor" title="https://cyberterrain.org/ns/stonework#scenarioActor">scenarioActor</a></li>
   <li><a href="#scenarioAsset" title="https://cyberterrain.org/ns/stonework#scenarioAsset">scenarioAsset</a></li>
@@ -5083,6 +5214,7 @@ This section provides details for each class and property defined by STONEWORK.
   <li><a href="#triggersPlaybook" title="https://cyberterrain.org/ns/stonework#triggersPlaybook">triggersPlaybook</a></li>
   <li><a href="#urlOf" title="https://cyberterrain.org/ns/stonework#urlOf">urlOf</a></li>
   <li><a href="#usedBinding" title="https://cyberterrain.org/ns/stonework#usedBinding">usedBinding</a></li>
+  <li><a href="#usedUserAgent" title="https://cyberterrain.org/ns/stonework#usedUserAgent">usedUserAgent</a></li>
   <li><a href="#uses" title="https://cyberterrain.org/ns/stonework#uses">uses</a></li>
   <li><a href="#usesDetectionRule" title="https://cyberterrain.org/ns/stonework#usesDetectionRule">usesDetectionRule</a></li>
   <li><a href="#usesInfrastructure" title="https://cyberterrain.org/ns/stonework#usesInfrastructure">usesInfrastructure</a></li>
@@ -5614,6 +5746,54 @@ This section provides details for each class and property defined by STONEWORK.
    </dl>
   </div>
  </div>
+ <div class="entity" id="authenticatedBy">
+  <h3>authenticatedBy<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#authenticatedBy</p>
+  <div class="comment">
+   <span class="markdown">The server that performed an authentication check and recorded its result (the authserv-id of an Authentication-Results header).</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#EmailAuthenticationResult" title="https://cyberterrain.org/ns/stonework#EmailAuthenticationResult">Email Authentication Result</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Infrastructure" title="https://cyberterrain.org/ns/stonework#Infrastructure">Infrastructure</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="authenticatedDomain">
+  <h3>authenticatedDomain<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#authenticatedDomain</p>
+  <div class="comment">
+   <span class="markdown">The domain an authentication check evaluated: the envelope sender's domain for SPF, the signing domain for DKIM, the From domain for DMARC.</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#EmailAuthenticationResult" title="https://cyberterrain.org/ns/stonework#EmailAuthenticationResult">Email Authentication Result</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Domain" title="https://cyberterrain.org/ns/stonework#Domain">Domain</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="authoredBy">
   <h3>authoredBy<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#authoredBy</p>
@@ -5773,7 +5953,7 @@ This section provides details for each class and property defined by STONEWORK.
      has sub-properties
     </dt>
     <dd>
-     <a href="#deviationKind" title="https://cyberterrain.org/ns/stonework#deviationKind">deviationKind</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasAccountType" title="https://cyberterrain.org/ns/stonework#hasAccountType">hasAccountType</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasAffectedStatus" title="https://cyberterrain.org/ns/stonework#hasAffectedStatus">hasAffectedStatus</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasExploitMaturity" title="https://cyberterrain.org/ns/stonework#hasExploitMaturity">hasExploitMaturity</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasExploitationReportKind" title="https://cyberterrain.org/ns/stonework#hasExploitationReportKind">hasExploitationReportKind</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasFalsePositiveRate" title="https://cyberterrain.org/ns/stonework#hasFalsePositiveRate">hasFalsePositiveRate</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasHypothesisStatus" title="https://cyberterrain.org/ns/stonework#hasHypothesisStatus">hasHypothesisStatus</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasImpactLevel" title="https://cyberterrain.org/ns/stonework#hasImpactLevel">hasImpactLevel</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasImpactType" title="https://cyberterrain.org/ns/stonework#hasImpactType">hasImpactType</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasIncidentStatus" title="https://cyberterrain.org/ns/stonework#hasIncidentStatus">hasIncidentStatus</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasInfrastructureType" title="https://cyberterrain.org/ns/stonework#hasInfrastructureType">hasInfrastructureType</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasInvestigationOutcome" title="https://cyberterrain.org/ns/stonework#hasInvestigationOutcome">hasInvestigationOutcome</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasInvestigationStatus" title="https://cyberterrain.org/ns/stonework#hasInvestigationStatus">hasInvestigationStatus</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasLikelihoodLevel" title="https://cyberterrain.org/ns/stonework#hasLikelihoodLevel">hasLikelihoodLevel</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasMalwareType" title="https://cyberterrain.org/ns/stonework#hasMalwareType">hasMalwareType</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasMotivation" title="https://cyberterrain.org/ns/stonework#hasMotivation">hasMotivation</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasPlaybookType" title="https://cyberterrain.org/ns/stonework#hasPlaybookType">hasPlaybookType</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasPriority" title="https://cyberterrain.org/ns/stonework#hasPriority">hasPriority</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasProductType" title="https://cyberterrain.org/ns/stonework#hasProductType">hasProductType</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasResourceLevel" title="https://cyberterrain.org/ns/stonework#hasResourceLevel">hasResourceLevel</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasRiskLevel" title="https://cyberterrain.org/ns/stonework#hasRiskLevel">hasRiskLevel</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasSophisticationLevel" title="https://cyberterrain.org/ns/stonework#hasSophisticationLevel">hasSophisticationLevel</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasThreatActorType" title="https://cyberterrain.org/ns/stonework#hasThreatActorType">hasThreatActorType</a> <sup class="type-op" title="object property">op</sup>, <a href="#joinKind" title="https://cyberterrain.org/ns/stonework#joinKind">joinKind</a> <sup class="type-op" title="object property">op</sup>, <a href="#splitKind" title="https://cyberterrain.org/ns/stonework#splitKind">splitKind</a> <sup class="type-op" title="object property">op</sup>
+     <a href="#deviationKind" title="https://cyberterrain.org/ns/stonework#deviationKind">deviationKind</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasAccountType" title="https://cyberterrain.org/ns/stonework#hasAccountType">hasAccountType</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasAffectedStatus" title="https://cyberterrain.org/ns/stonework#hasAffectedStatus">hasAffectedStatus</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasAuthenticationMethod" title="https://cyberterrain.org/ns/stonework#hasAuthenticationMethod">hasAuthenticationMethod</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasAuthenticationVerdict" title="https://cyberterrain.org/ns/stonework#hasAuthenticationVerdict">hasAuthenticationVerdict</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasExploitMaturity" title="https://cyberterrain.org/ns/stonework#hasExploitMaturity">hasExploitMaturity</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasExploitationReportKind" title="https://cyberterrain.org/ns/stonework#hasExploitationReportKind">hasExploitationReportKind</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasFalsePositiveRate" title="https://cyberterrain.org/ns/stonework#hasFalsePositiveRate">hasFalsePositiveRate</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasHypothesisStatus" title="https://cyberterrain.org/ns/stonework#hasHypothesisStatus">hasHypothesisStatus</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasImpactLevel" title="https://cyberterrain.org/ns/stonework#hasImpactLevel">hasImpactLevel</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasImpactType" title="https://cyberterrain.org/ns/stonework#hasImpactType">hasImpactType</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasIncidentStatus" title="https://cyberterrain.org/ns/stonework#hasIncidentStatus">hasIncidentStatus</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasInfrastructureType" title="https://cyberterrain.org/ns/stonework#hasInfrastructureType">hasInfrastructureType</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasInvestigationOutcome" title="https://cyberterrain.org/ns/stonework#hasInvestigationOutcome">hasInvestigationOutcome</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasInvestigationStatus" title="https://cyberterrain.org/ns/stonework#hasInvestigationStatus">hasInvestigationStatus</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasLikelihoodLevel" title="https://cyberterrain.org/ns/stonework#hasLikelihoodLevel">hasLikelihoodLevel</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasMalwareType" title="https://cyberterrain.org/ns/stonework#hasMalwareType">hasMalwareType</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasMotivation" title="https://cyberterrain.org/ns/stonework#hasMotivation">hasMotivation</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasPlaybookType" title="https://cyberterrain.org/ns/stonework#hasPlaybookType">hasPlaybookType</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasPriority" title="https://cyberterrain.org/ns/stonework#hasPriority">hasPriority</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasProductType" title="https://cyberterrain.org/ns/stonework#hasProductType">hasProductType</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasResourceLevel" title="https://cyberterrain.org/ns/stonework#hasResourceLevel">hasResourceLevel</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasRiskLevel" title="https://cyberterrain.org/ns/stonework#hasRiskLevel">hasRiskLevel</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasSophisticationLevel" title="https://cyberterrain.org/ns/stonework#hasSophisticationLevel">hasSophisticationLevel</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasThreatActorType" title="https://cyberterrain.org/ns/stonework#hasThreatActorType">hasThreatActorType</a> <sup class="type-op" title="object property">op</sup>, <a href="#joinKind" title="https://cyberterrain.org/ns/stonework#joinKind">joinKind</a> <sup class="type-op" title="object property">op</sup>, <a href="#splitKind" title="https://cyberterrain.org/ns/stonework#splitKind">splitKind</a> <sup class="type-op" title="object property">op</sup>
     </dd>
     <dt>
      has range
@@ -6849,6 +7029,29 @@ This section provides details for each class and property defined by STONEWORK.
    </dl>
   </div>
  </div>
+ <div class="entity" id="forwardsTo">
+  <h3>forwardsTo<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#forwardsTo</p>
+  <div class="comment">
+   <span class="markdown">An address a MailboxRule forwards the messages it selects to, inline or as attachments.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#MailboxRule" title="https://cyberterrain.org/ns/stonework#MailboxRule">Mailbox Rule</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#EmailAddress" title="https://cyberterrain.org/ns/stonework#EmailAddress">Email Address</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="fromStep">
   <h3>fromStep<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#fromStep</p>
@@ -6923,7 +7126,7 @@ This section provides details for each class and property defined by STONEWORK.
   <h3>generatedFrom<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#generatedFrom</p>
   <div class="comment">
-   <span class="markdown">Links an Event to the raw log or network traffic from which it was derived.</span>
+   <span class="markdown">Links an Event to the raw record from which it was derived: a log, network traffic, or another artifact such as an EmailMessage whose Received headers record its route.</span>
   </div>
   <div class="description">
    <dl>
@@ -6937,7 +7140,7 @@ This section provides details for each class and property defined by STONEWORK.
      has range
     </dt>
     <dd>
-     <a href="#Log" title="https://cyberterrain.org/ns/stonework#Log">Log</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#NetworkTraffic" title="https://cyberterrain.org/ns/stonework#NetworkTraffic">Network Traffic</a> <sup class="type-c" title="class">c</sup>
+     <a href="#DigitalArtifact" title="https://cyberterrain.org/ns/stonework#DigitalArtifact">Digital Artifact</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -7218,6 +7421,135 @@ This section provides details for each class and property defined by STONEWORK.
    </dl>
   </div>
  </div>
+ <div class="entity" id="hasAttachment">
+  <h3>hasAttachment<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#hasAttachment</p>
+  <div class="comment">
+   <span class="markdown">A File attached to an EmailMessage.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#EmailMessage" title="https://cyberterrain.org/ns/stonework#EmailMessage">Email Message</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#File" title="https://cyberterrain.org/ns/stonework#File">File</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasAuthenticationMethod">
+  <h3>hasAuthenticationMethod<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#hasAuthenticationMethod</p>
+  <div class="comment">
+   <span class="markdown">The method of a sender-authentication check: SPF, DKIM, DMARC or ARC.</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#categorizedBy" title="https://cyberterrain.org/ns/stonework#categorizedBy">categorizedBy</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#EmailAuthenticationResult" title="https://cyberterrain.org/ns/stonework#EmailAuthenticationResult">Email Authentication Result</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#AuthenticationMethod" title="https://cyberterrain.org/ns/stonework#AuthenticationMethod">Authentication Method</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasAuthenticationResult">
+  <h3>hasAuthenticationResult<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#hasAuthenticationResult</p>
+  <div class="comment">
+   <span class="markdown">The result of a sender-authentication check a receiving server performed on an EmailMessage.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#EmailMessage" title="https://cyberterrain.org/ns/stonework#EmailMessage">Email Message</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#EmailAuthenticationResult" title="https://cyberterrain.org/ns/stonework#EmailAuthenticationResult">Email Authentication Result</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasAuthenticationVerdict">
+  <h3>hasAuthenticationVerdict<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#hasAuthenticationVerdict</p>
+  <div class="comment">
+   <span class="markdown">The verdict a sender-authentication check reached.</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#categorizedBy" title="https://cyberterrain.org/ns/stonework#categorizedBy">categorizedBy</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#EmailAuthenticationResult" title="https://cyberterrain.org/ns/stonework#EmailAuthenticationResult">Email Authentication Result</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#AuthenticationVerdict" title="https://cyberterrain.org/ns/stonework#AuthenticationVerdict">Authentication Verdict</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasBccAddress">
+  <h3>hasBccAddress<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#hasBccAddress</p>
+  <div class="comment">
+   <span class="markdown">An address in an EmailMessage's Bcc header, where the sender's copy records one.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#EmailMessage" title="https://cyberterrain.org/ns/stonework#EmailMessage">Email Message</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#EmailAddress" title="https://cyberterrain.org/ns/stonework#EmailAddress">Email Address</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="hasBehavior">
   <h3>hasBehavior<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#hasBehavior</p>
@@ -7231,6 +7563,29 @@ This section provides details for each class and property defined by STONEWORK.
     </dt>
     <dd>
      <a href="#Behavior" title="https://cyberterrain.org/ns/stonework#Behavior">Behavior</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasCcAddress">
+  <h3>hasCcAddress<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#hasCcAddress</p>
+  <div class="comment">
+   <span class="markdown">An address in an EmailMessage's Cc header.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#EmailMessage" title="https://cyberterrain.org/ns/stonework#EmailMessage">Email Message</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#EmailAddress" title="https://cyberterrain.org/ns/stonework#EmailAddress">Email Address</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -7297,7 +7652,7 @@ This section provides details for each class and property defined by STONEWORK.
   <h3>hasDestinationAddress<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#hasDestinationAddress</p>
   <div class="comment">
-   <span class="markdown">Relates NetworkTraffic to the destination IP address.</span>
+   <span class="markdown">Relates NetworkTraffic, or an activity observed on the network, to the destination IP address.</span>
   </div>
   <div class="description">
    <dl>
@@ -7305,7 +7660,7 @@ This section provides details for each class and property defined by STONEWORK.
      has domain
     </dt>
     <dd>
-     <a href="#NetworkTraffic" title="https://cyberterrain.org/ns/stonework#NetworkTraffic">Network Traffic</a> <sup class="type-c" title="class">c</sup>
+     <a href="#CyberActivity" title="https://cyberterrain.org/ns/stonework#CyberActivity">Cyber Activity</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#NetworkTraffic" title="https://cyberterrain.org/ns/stonework#NetworkTraffic">Network Traffic</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -7474,6 +7829,30 @@ This section provides details for each class and property defined by STONEWORK.
     </dt>
     <dd>
      <a href="#FalsePositiveRate" title="https://cyberterrain.org/ns/stonework#FalsePositiveRate">False Positive Rate</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasFromAddress">
+  <h3>hasFromAddress<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#hasFromAddress</p>
+  <div class="comment">
+   <span class="markdown">The address in an EmailMessage's From header: the author the recipient sees.</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#EmailMessage" title="https://cyberterrain.org/ns/stonework#EmailMessage">Email Message</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#EmailAddress" title="https://cyberterrain.org/ns/stonework#EmailAddress">Email Address</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -8377,6 +8756,29 @@ This section provides details for each class and property defined by STONEWORK.
    </dl>
   </div>
  </div>
+ <div class="entity" id="hasReplyToAddress">
+  <h3>hasReplyToAddress<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#hasReplyToAddress</p>
+  <div class="comment">
+   <span class="markdown">An address in an EmailMessage's Reply-To header, where replies go.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#EmailMessage" title="https://cyberterrain.org/ns/stonework#EmailMessage">Email Message</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#EmailAddress" title="https://cyberterrain.org/ns/stonework#EmailAddress">Email Address</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="hasResourceLevel">
   <h3>hasResourceLevel<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#hasResourceLevel</p>
@@ -8402,6 +8804,30 @@ This section provides details for each class and property defined by STONEWORK.
     </dt>
     <dd>
      <a href="#ResourceLevel" title="https://cyberterrain.org/ns/stonework#ResourceLevel">Resource Level</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasReturnPathAddress">
+  <h3>hasReturnPathAddress<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#hasReturnPathAddress</p>
+  <div class="comment">
+   <span class="markdown">The address in an EmailMessage's Return-Path header: the envelope sender, where bounces go and whose domain SPF checks.</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#EmailMessage" title="https://cyberterrain.org/ns/stonework#EmailMessage">Email Message</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#EmailAddress" title="https://cyberterrain.org/ns/stonework#EmailAddress">Email Address</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -8487,6 +8913,30 @@ This section provides details for each class and property defined by STONEWORK.
    </dl>
   </div>
  </div>
+ <div class="entity" id="hasSenderAddress">
+  <h3>hasSenderAddress<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#hasSenderAddress</p>
+  <div class="comment">
+   <span class="markdown">The address in an EmailMessage's Sender header: the mailbox that sent the message on the author's behalf.</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#EmailMessage" title="https://cyberterrain.org/ns/stonework#EmailMessage">Email Message</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#EmailAddress" title="https://cyberterrain.org/ns/stonework#EmailAddress">Email Address</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="hasSignature">
   <h3>hasSignature<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#hasSignature</p>
@@ -8537,7 +8987,7 @@ This section provides details for each class and property defined by STONEWORK.
   <h3>hasSourceAddress<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#hasSourceAddress</p>
   <div class="comment">
-   <span class="markdown">Relates NetworkTraffic to the source IP address.</span>
+   <span class="markdown">Relates NetworkTraffic, or an activity observed on the network, to the source IP address: the client of a sign-in, the sending server of a Received hop.</span>
   </div>
   <div class="description">
    <dl>
@@ -8545,7 +8995,7 @@ This section provides details for each class and property defined by STONEWORK.
      has domain
     </dt>
     <dd>
-     <a href="#NetworkTraffic" title="https://cyberterrain.org/ns/stonework#NetworkTraffic">Network Traffic</a> <sup class="type-c" title="class">c</sup>
+     <a href="#CyberActivity" title="https://cyberterrain.org/ns/stonework#CyberActivity">Cyber Activity</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#NetworkTraffic" title="https://cyberterrain.org/ns/stonework#NetworkTraffic">Network Traffic</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -8640,6 +9090,29 @@ This section provides details for each class and property defined by STONEWORK.
     </dt>
     <dd>
      <a href="#ThreatActorType" title="https://cyberterrain.org/ns/stonework#ThreatActorType">Threat Actor Type</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasToAddress">
+  <h3>hasToAddress<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#hasToAddress</p>
+  <div class="comment">
+   <span class="markdown">An address in an EmailMessage's To header.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#EmailMessage" title="https://cyberterrain.org/ns/stonework#EmailMessage">Email Message</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#EmailAddress" title="https://cyberterrain.org/ns/stonework#EmailAddress">Email Address</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -9075,6 +9548,29 @@ This section provides details for each class and property defined by STONEWORK.
     </dt>
     <dd>
      <a href="#RuntimeProcess" title="https://cyberterrain.org/ns/stonework#RuntimeProcess">Runtime Process</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="inReplyTo">
+  <h3>inReplyTo<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#inReplyTo</p>
+  <div class="comment">
+   <span class="markdown">The EmailMessage this one answers, named by its Message-ID in the In-Reply-To header.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#EmailMessage" title="https://cyberterrain.org/ns/stonework#EmailMessage">Email Message</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#EmailMessage" title="https://cyberterrain.org/ns/stonework#EmailMessage">Email Message</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -9629,6 +10125,29 @@ This section provides details for each class and property defined by STONEWORK.
     </dt>
     <dd>
      <a href="#Markings" title="https://cyberterrain.org/ns/stonework#Markings">Markings</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="matchesSender">
+  <h3>matchesSender<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#matchesSender</p>
+  <div class="comment">
+   <span class="markdown">A sender whose messages a MailboxRule selects.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#MailboxRule" title="https://cyberterrain.org/ns/stonework#MailboxRule">Mailbox Rule</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#EmailAddress" title="https://cyberterrain.org/ns/stonework#EmailAddress">Email Address</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -10535,11 +11054,57 @@ This section provides details for each class and property defined by STONEWORK.
    </dl>
   </div>
  </div>
+ <div class="entity" id="redirectsTo">
+  <h3>redirectsTo<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#redirectsTo</p>
+  <div class="comment">
+   <span class="markdown">An address a MailboxRule redirects the messages it selects to, keeping the original sender, so the recipient sees them as if sent directly.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#MailboxRule" title="https://cyberterrain.org/ns/stonework#MailboxRule">Mailbox Rule</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#EmailAddress" title="https://cyberterrain.org/ns/stonework#EmailAddress">Email Address</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="references">
   <h3>references<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#references</p>
   <div class="comment">
    <span class="markdown">Generic reference from one entity to another. Use a more specific property where one exists.</span>
+  </div>
+ </div>
+ <div class="entity" id="referencesMessage">
+  <h3>referencesMessage<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#referencesMessage</p>
+  <div class="comment">
+   <span class="markdown">An earlier EmailMessage of the same thread, named by its Message-ID in the References header.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#EmailMessage" title="https://cyberterrain.org/ns/stonework#EmailMessage">Email Message</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#EmailMessage" title="https://cyberterrain.org/ns/stonework#EmailMessage">Email Message</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
   </div>
  </div>
  <div class="entity" id="refersTo">
@@ -10889,6 +11454,30 @@ This section provides details for each class and property defined by STONEWORK.
     </dt>
     <dd>
      <a href="#hasRoleAssignment" title="https://cyberterrain.org/ns/stonework#hasRoleAssignment">hasRoleAssignment</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="ruleOfMailbox">
+  <h3>ruleOfMailbox<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#ruleOfMailbox</p>
+  <div class="comment">
+   <span class="markdown">The mailbox account a MailboxRule belongs to and applies to.</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#MailboxRule" title="https://cyberterrain.org/ns/stonework#MailboxRule">Mailbox Rule</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#UserAccount" title="https://cyberterrain.org/ns/stonework#UserAccount">User Account</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -11664,6 +12253,29 @@ This section provides details for each class and property defined by STONEWORK.
    </dl>
   </div>
  </div>
+ <div class="entity" id="usedUserAgent">
+  <h3>usedUserAgent<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#usedUserAgent</p>
+  <div class="comment">
+   <span class="markdown">Relates an activity, such as a sign-in, or NetworkTraffic to the UserAgent its client presented.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#CyberActivity" title="https://cyberterrain.org/ns/stonework#CyberActivity">Cyber Activity</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#NetworkTraffic" title="https://cyberterrain.org/ns/stonework#NetworkTraffic">Network Traffic</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#UserAgent" title="https://cyberterrain.org/ns/stonework#UserAgent">User Agent</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="uses">
   <h3>uses<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#uses</p>
@@ -11990,10 +12602,13 @@ This section provides details for each class and property defined by STONEWORK.
   <li><a href="#dateAssigned" title="https://cyberterrain.org/ns/stonework#dateAssigned">dateAssigned</a></li>
   <li><a href="#datePublic" title="https://cyberterrain.org/ns/stonework#datePublic">datePublic</a></li>
   <li><a href="#dateUpdated" title="https://cyberterrain.org/ns/stonework#dateUpdated">dateUpdated</a></li>
+  <li><a href="#deletesMessage" title="https://cyberterrain.org/ns/stonework#deletesMessage">deletesMessage</a></li>
   <li><a href="#description" title="https://cyberterrain.org/ns/stonework#description">description</a></li>
   <li><a href="#displayName" title="https://cyberterrain.org/ns/stonework#displayName">displayName</a></li>
   <li><a href="#domainName" title="https://cyberterrain.org/ns/stonework#domainName">domainName</a></li>
   <li><a href="#dstPort" title="https://cyberterrain.org/ns/stonework#dstPort">dstPort</a></li>
+  <li><a href="#emailBody" title="https://cyberterrain.org/ns/stonework#emailBody">emailBody</a></li>
+  <li><a href="#emailSubject" title="https://cyberterrain.org/ns/stonework#emailSubject">emailSubject</a></li>
   <li><a href="#emailValue" title="https://cyberterrain.org/ns/stonework#emailValue">emailValue</a></li>
   <li><a href="#endedAtTime" title="https://cyberterrain.org/ns/stonework#endedAtTime">endedAtTime</a></li>
   <li><a href="#epssPercentile" title="https://cyberterrain.org/ns/stonework#epssPercentile">epssPercentile</a></li>
@@ -12007,10 +12622,12 @@ This section provides details for each class and property defined by STONEWORK.
   <li><a href="#fileSize" title="https://cyberterrain.org/ns/stonework#fileSize">fileSize</a></li>
   <li><a href="#firstSeen" title="https://cyberterrain.org/ns/stonework#firstSeen">firstSeen</a></li>
   <li><a href="#fqdn" title="https://cyberterrain.org/ns/stonework#fqdn">fqdn</a></li>
+  <li><a href="#fromDisplayName" title="https://cyberterrain.org/ns/stonework#fromDisplayName">fromDisplayName</a></li>
   <li><a href="#groupName" title="https://cyberterrain.org/ns/stonework#groupName">groupName</a></li>
   <li><a href="#guardLiteralValue" title="https://cyberterrain.org/ns/stonework#guardLiteralValue">guardLiteralValue</a></li>
   <li><a href="#hashAlgorithm" title="https://cyberterrain.org/ns/stonework#hashAlgorithm">hashAlgorithm</a></li>
   <li><a href="#hashValue" title="https://cyberterrain.org/ns/stonework#hashValue">hashValue</a></li>
+  <li><a href="#hiddenFromUser" title="https://cyberterrain.org/ns/stonework#hiddenFromUser">hiddenFromUser</a></li>
   <li><a href="#hostname" title="https://cyberterrain.org/ns/stonework#hostname">hostname</a></li>
   <li><a href="#iban" title="https://cyberterrain.org/ns/stonework#iban">iban</a></li>
   <li><a href="#ipValue" title="https://cyberterrain.org/ns/stonework#ipValue">ipValue</a></li>
@@ -12025,11 +12642,15 @@ This section provides details for each class and property defined by STONEWORK.
   <li><a href="#locationPrecision" title="https://cyberterrain.org/ns/stonework#locationPrecision">locationPrecision</a></li>
   <li><a href="#logSource" title="https://cyberterrain.org/ns/stonework#logSource">logSource</a></li>
   <li><a href="#longitude" title="https://cyberterrain.org/ns/stonework#longitude">longitude</a></li>
+  <li><a href="#marksAsRead" title="https://cyberterrain.org/ns/stonework#marksAsRead">marksAsRead</a></li>
+  <li><a href="#matchesKeyword" title="https://cyberterrain.org/ns/stonework#matchesKeyword">matchesKeyword</a></li>
+  <li><a href="#messageId" title="https://cyberterrain.org/ns/stonework#messageId">messageId</a></li>
   <li><a href="#metricValue" title="https://cyberterrain.org/ns/stonework#metricValue">metricValue</a></li>
   <li><a href="#mimeType" title="https://cyberterrain.org/ns/stonework#mimeType">mimeType</a></li>
   <li><a href="#minorUnitDigits" title="https://cyberterrain.org/ns/stonework#minorUnitDigits">minorUnitDigits</a></li>
   <li><a href="#modelVersion" title="https://cyberterrain.org/ns/stonework#modelVersion">modelVersion</a></li>
   <li><a href="#modified" title="https://cyberterrain.org/ns/stonework#modified">modified</a></li>
+  <li><a href="#movesToFolder" title="https://cyberterrain.org/ns/stonework#movesToFolder">movesToFolder</a></li>
   <li><a href="#mutexName" title="https://cyberterrain.org/ns/stonework#mutexName">mutexName</a></li>
   <li><a href="#networkProtocol" title="https://cyberterrain.org/ns/stonework#networkProtocol">networkProtocol</a></li>
   <li><a href="#objective" title="https://cyberterrain.org/ns/stonework#objective">objective</a></li>
@@ -12062,9 +12683,11 @@ This section provides details for each class and property defined by STONEWORK.
   <li><a href="#reliability" title="https://cyberterrain.org/ns/stonework#reliability">reliability</a></li>
   <li><a href="#riskScore" title="https://cyberterrain.org/ns/stonework#riskScore">riskScore</a></li>
   <li><a href="#ruleContent" title="https://cyberterrain.org/ns/stonework#ruleContent">ruleContent</a></li>
+  <li><a href="#ruleEnabled" title="https://cyberterrain.org/ns/stonework#ruleEnabled">ruleEnabled</a></li>
   <li><a href="#ruleFormat" title="https://cyberterrain.org/ns/stonework#ruleFormat">ruleFormat</a></li>
   <li><a href="#ruleName" title="https://cyberterrain.org/ns/stonework#ruleName">ruleName</a></li>
   <li><a href="#ruleVersion" title="https://cyberterrain.org/ns/stonework#ruleVersion">ruleVersion</a></li>
+  <li><a href="#sentAtTime" title="https://cyberterrain.org/ns/stonework#sentAtTime">sentAtTime</a></li>
   <li><a href="#serialNumber" title="https://cyberterrain.org/ns/stonework#serialNumber">serial number</a></li>
   <li><a href="#serviceBanner" title="https://cyberterrain.org/ns/stonework#serviceBanner">serviceBanner</a></li>
   <li><a href="#serviceName" title="https://cyberterrain.org/ns/stonework#serviceName">serviceName</a></li>
@@ -13138,6 +13761,30 @@ This section provides details for each class and property defined by STONEWORK.
    </dl>
   </div>
  </div>
+ <div class="entity" id="deletesMessage">
+  <h3>deletesMessage<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#deletesMessage</p>
+  <div class="comment">
+   <span class="markdown">Whether a MailboxRule deletes the messages it selects.</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#MailboxRule" title="https://cyberterrain.org/ns/stonework#MailboxRule">Mailbox Rule</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="description">
   <h3>description<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#description</p>
@@ -13226,6 +13873,53 @@ This section provides details for each class and property defined by STONEWORK.
     </dt>
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#unsignedShort" target="_blank" title="http://www.w3.org/2001/XMLSchema#unsignedShort">unsigned Short</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="emailBody">
+  <h3>emailBody<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#emailBody</p>
+  <div class="comment">
+   <span class="markdown">The text of an EmailMessage's body (its text/plain part, or the text of its HTML part).</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#EmailMessage" title="https://cyberterrain.org/ns/stonework#EmailMessage">Email Message</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="emailSubject">
+  <h3>emailSubject<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#emailSubject</p>
+  <div class="comment">
+   <span class="markdown">The Subject header of an EmailMessage.</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#EmailMessage" title="https://cyberterrain.org/ns/stonework#EmailMessage">Email Message</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
     </dd>
    </dl>
   </div>
@@ -13524,6 +14218,30 @@ This section provides details for each class and property defined by STONEWORK.
    </dl>
   </div>
  </div>
+ <div class="entity" id="fromDisplayName">
+  <h3>fromDisplayName<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#fromDisplayName</p>
+  <div class="comment">
+   <span class="markdown">The display name in an EmailMessage's From header, as this message gave it.</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#EmailMessage" title="https://cyberterrain.org/ns/stonework#EmailMessage">Email Message</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="groupName">
   <h3>groupName<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#groupName</p>
@@ -13615,6 +14333,30 @@ This section provides details for each class and property defined by STONEWORK.
     </dt>
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hiddenFromUser">
+  <h3>hiddenFromUser<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#hiddenFromUser</p>
+  <div class="comment">
+   <span class="markdown">Whether a MailboxRule is hidden from the mailbox's holder, so that it appears in neither the mail client nor the mailbox settings and only an administrative query finds it.</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#MailboxRule" title="https://cyberterrain.org/ns/stonework#MailboxRule">Mailbox Rule</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
     </dd>
    </dl>
   </div>
@@ -13938,6 +14680,77 @@ This section provides details for each class and property defined by STONEWORK.
    </dl>
   </div>
  </div>
+ <div class="entity" id="marksAsRead">
+  <h3>marksAsRead<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#marksAsRead</p>
+  <div class="comment">
+   <span class="markdown">Whether a MailboxRule marks the messages it selects as read.</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#MailboxRule" title="https://cyberterrain.org/ns/stonework#MailboxRule">Mailbox Rule</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="matchesKeyword">
+  <h3>matchesKeyword<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#matchesKeyword</p>
+  <div class="comment">
+   <span class="markdown">A word or phrase a MailboxRule looks for in a message's subject or body to select it.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#MailboxRule" title="https://cyberterrain.org/ns/stonework#MailboxRule">Mailbox Rule</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="messageId">
+  <h3>messageId<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#messageId</p>
+  <div class="comment">
+   <span class="markdown">The Message-ID header of an EmailMessage, with its angle brackets.</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#EmailMessage" title="https://cyberterrain.org/ns/stonework#EmailMessage">Email Message</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="metricValue">
   <h3>metricValue<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#metricValue</p>
@@ -14052,6 +14865,30 @@ This section provides details for each class and property defined by STONEWORK.
     </dt>
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="movesToFolder">
+  <h3>movesToFolder<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#movesToFolder</p>
+  <div class="comment">
+   <span class="markdown">The name of the folder a MailboxRule moves the messages it selects to.</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#MailboxRule" title="https://cyberterrain.org/ns/stonework#MailboxRule">Mailbox Rule</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
     </dd>
    </dl>
   </div>
@@ -14809,7 +15646,7 @@ This section provides details for each class and property defined by STONEWORK.
   <h3>ruleContent<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#ruleContent</p>
   <div class="comment">
-   <span class="markdown">The full text content of the detection rule.</span>
+   <span class="markdown">The full text content of a detection rule, or the recorded definition of a mailbox rule (its conditions and actions as the mail service reports them).</span>
   </div>
   <div class="description">
    <dl>
@@ -14817,13 +15654,37 @@ This section provides details for each class and property defined by STONEWORK.
      has domain
     </dt>
     <dd>
-     <a href="#DetectionRule" title="https://cyberterrain.org/ns/stonework#DetectionRule">Detection Rule</a> <sup class="type-c" title="class">c</sup>
+     <a href="#DetectionRule" title="https://cyberterrain.org/ns/stonework#DetectionRule">Detection Rule</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#MailboxRule" title="https://cyberterrain.org/ns/stonework#MailboxRule">Mailbox Rule</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
     </dt>
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="ruleEnabled">
+  <h3>ruleEnabled<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#ruleEnabled</p>
+  <div class="comment">
+   <span class="markdown">Whether a MailboxRule is enabled, as last recorded.</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#MailboxRule" title="https://cyberterrain.org/ns/stonework#MailboxRule">Mailbox Rule</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#boolean" target="_blank" title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
     </dd>
    </dl>
   </div>
@@ -14855,7 +15716,7 @@ This section provides details for each class and property defined by STONEWORK.
   <h3>ruleName<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#ruleName</p>
   <div class="comment">
-   <span class="markdown">The human-readable name of the detection rule.</span>
+   <span class="markdown">The human-readable name of a detection rule or mailbox rule.</span>
   </div>
   <div class="description">
    <dl>
@@ -14863,7 +15724,7 @@ This section provides details for each class and property defined by STONEWORK.
      has domain
     </dt>
     <dd>
-     <a href="#DetectionRule" title="https://cyberterrain.org/ns/stonework#DetectionRule">Detection Rule</a> <sup class="type-c" title="class">c</sup>
+     <a href="#DetectionRule" title="https://cyberterrain.org/ns/stonework#DetectionRule">Detection Rule</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#MailboxRule" title="https://cyberterrain.org/ns/stonework#MailboxRule">Mailbox Rule</a> <sup class="type-c" title="class">c</sup>
     </dd>
     <dt>
      has range
@@ -14893,6 +15754,30 @@ This section provides details for each class and property defined by STONEWORK.
     </dt>
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="sentAtTime">
+  <h3>sentAtTime<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#sentAtTime</p>
+  <div class="comment">
+   <span class="markdown">The time in an EmailMessage's Date header.</span>
+  </div>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#EmailMessage" title="https://cyberterrain.org/ns/stonework#EmailMessage">Email Message</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a>
     </dd>
    </dl>
   </div>
@@ -15511,6 +16396,7 @@ This section provides details for each class and property defined by STONEWORK.
   <li><a href="#infraTypeAmplification" title="https://cyberterrain.org/ns/stonework#infraTypeAmplification">Amplification</a></li>
   <li><a href="#infraTypeAnonymization" title="https://cyberterrain.org/ns/stonework#infraTypeAnonymization">Anonymization</a></li>
   <li><a href="#productTypeApplication" title="https://cyberterrain.org/ns/stonework#productTypeApplication">Application</a></li>
+  <li><a href="#authenticationMethodARC" title="https://cyberterrain.org/ns/stonework#authenticationMethodARC">ARC</a></li>
   <li><a href="#playbookTypeAttack" title="https://cyberterrain.org/ns/stonework#playbookTypeAttack">Attack</a></li>
   <li><a href="#impactTypeAvailability" title="https://cyberterrain.org/ns/stonework#impactTypeAvailability">Availability</a></li>
   <li><a href="#Backdoor" title="https://cyberterrain.org/ns/stonework#Backdoor">Backdoor</a></li>
@@ -15553,6 +16439,8 @@ This section provides details for each class and property defined by STONEWORK.
   <li><a href="#transactionTypeDeposit" title="https://cyberterrain.org/ns/stonework#transactionTypeDeposit">Deposit</a></li>
   <li><a href="#playbookTypeDetection" title="https://cyberterrain.org/ns/stonework#playbookTypeDetection">Detection</a></li>
   <li><a href="#threatActorRoleDirector" title="https://cyberterrain.org/ns/stonework#threatActorRoleDirector">Director</a></li>
+  <li><a href="#authenticationMethodDKIM" title="https://cyberterrain.org/ns/stonework#authenticationMethodDKIM">DKIM</a></li>
+  <li><a href="#authenticationMethodDMARC" title="https://cyberterrain.org/ns/stonework#authenticationMethodDMARC">DMARC</a></li>
   <li><a href="#accountTypeDomain" title="https://cyberterrain.org/ns/stonework#accountTypeDomain">Domain</a></li>
   <li><a href="#motivationDominance" title="https://cyberterrain.org/ns/stonework#motivationDominance">Dominance</a></li>
   <li><a href="#Downloader" title="https://cyberterrain.org/ns/stonework#Downloader">Downloader</a></li>
@@ -15572,6 +16460,7 @@ This section provides details for each class and property defined by STONEWORK.
   <li><a href="#exploitationReportBotnet" title="https://cyberterrain.org/ns/stonework#exploitationReportBotnet">Exploited by a Botnet</a></li>
   <li><a href="#exploitationReportThreatActor" title="https://cyberterrain.org/ns/stonework#exploitationReportThreatActor">Exploited by a Threat Actor</a></li>
   <li><a href="#exploitationReportRansomware" title="https://cyberterrain.org/ns/stonework#exploitationReportRansomware">Exploited by Ransomware</a></li>
+  <li><a href="#authenticationVerdictFail" title="https://cyberterrain.org/ns/stonework#authenticationVerdictFail">Fail</a></li>
   <li><a href="#executionOutcomeFailed" title="https://cyberterrain.org/ns/stonework#executionOutcomeFailed">Failed</a></li>
   <li><a href="#investigationOutcomeFalsePositive" title="https://cyberterrain.org/ns/stonework#investigationOutcomeFalsePositive">False Positive</a></li>
   <li><a href="#transactionTypeFee" title="https://cyberterrain.org/ns/stonework#transactionTypeFee">Fee</a></li>
@@ -15627,6 +16516,8 @@ This section provides details for each class and property defined by STONEWORK.
   <li><a href="#paymentInstrumentMoneyOrder" title="https://cyberterrain.org/ns/stonework#paymentInstrumentMoneyOrder">Money Order</a></li>
   <li><a href="#financialInstitutionTypeMoneyServicesBusiness" title="https://cyberterrain.org/ns/stonework#financialInstitutionTypeMoneyServicesBusiness">Money Services Business</a></li>
   <li><a href="#threatActorTypeNationState" title="https://cyberterrain.org/ns/stonework#threatActorTypeNationState">Nation State</a></li>
+  <li><a href="#authenticationVerdictNeutral" title="https://cyberterrain.org/ns/stonework#authenticationVerdictNeutral">Neutral</a></li>
+  <li><a href="#authenticationVerdictNone" title="https://cyberterrain.org/ns/stonework#authenticationVerdictNone">None</a></li>
   <li><a href="#sophisticationLevelNone" title="https://cyberterrain.org/ns/stonework#sophisticationLevelNone">None</a></li>
   <li><a href="#metricNormalizedValue" title="https://cyberterrain.org/ns/stonework#metricNormalizedValue">Normalized Value</a></li>
   <li><a href="#NotEquals" title="https://cyberterrain.org/ns/stonework#NotEquals">Not Equals</a></li>
@@ -15642,13 +16533,16 @@ This section provides details for each class and property defined by STONEWORK.
   <li><a href="#deviationKindOutOfOrder" title="https://cyberterrain.org/ns/stonework#deviationKindOutOfOrder">Out of order</a></li>
   <li><a href="#productTypePackage" title="https://cyberterrain.org/ns/stonework#productTypePackage">Package</a></li>
   <li><a href="#flowKindParallel" title="https://cyberterrain.org/ns/stonework#flowKindParallel">Parallel</a></li>
+  <li><a href="#authenticationVerdictPass" title="https://cyberterrain.org/ns/stonework#authenticationVerdictPass">Pass</a></li>
   <li><a href="#transactionTypePayment" title="https://cyberterrain.org/ns/stonework#transactionTypePayment">Payment</a></li>
   <li><a href="#financialInstitutionTypePaymentProcessor" title="https://cyberterrain.org/ns/stonework#financialInstitutionTypePaymentProcessor">Payment Processor</a></li>
   <li><a href="#financialAccountTypePaymentServiceAccount" title="https://cyberterrain.org/ns/stonework#financialAccountTypePaymentServiceAccount">Payment Service Account</a></li>
   <li><a href="#hypothesisStatusPending" title="https://cyberterrain.org/ns/stonework#hypothesisStatusPending">Pending</a></li>
+  <li><a href="#authenticationVerdictPermError" title="https://cyberterrain.org/ns/stonework#authenticationVerdictPermError">Permanent error</a></li>
   <li><a href="#motivationPersonalGain" title="https://cyberterrain.org/ns/stonework#motivationPersonalGain">Personal Gain</a></li>
   <li><a href="#motivationPersonalSatisfaction" title="https://cyberterrain.org/ns/stonework#motivationPersonalSatisfaction">Personal Satisfaction</a></li>
   <li><a href="#infraTypePhishing" title="https://cyberterrain.org/ns/stonework#infraTypePhishing">Phishing</a></li>
+  <li><a href="#authenticationVerdictPolicy" title="https://cyberterrain.org/ns/stonework#authenticationVerdictPolicy">Policy</a></li>
   <li><a href="#likelihoodLevelPossible" title="https://cyberterrain.org/ns/stonework#likelihoodLevelPossible">Possible</a></li>
   <li><a href="#currencyGBP" title="https://cyberterrain.org/ns/stonework#currencyGBP">Pound Sterling</a></li>
   <li><a href="#financialAccountTypePrepaidCard" title="https://cyberterrain.org/ns/stonework#financialAccountTypePrepaidCard">Prepaid Card</a></li>
@@ -15681,6 +16575,8 @@ This section provides details for each class and property defined by STONEWORK.
   <li><a href="#productTypeService" title="https://cyberterrain.org/ns/stonework#productTypeService">Service</a></li>
   <li><a href="#impactLevelSevere" title="https://cyberterrain.org/ns/stonework#impactLevelSevere">Severe</a></li>
   <li><a href="#deviationKindSkipped" title="https://cyberterrain.org/ns/stonework#deviationKindSkipped">Skipped</a></li>
+  <li><a href="#authenticationVerdictSoftFail" title="https://cyberterrain.org/ns/stonework#authenticationVerdictSoftFail">Soft fail</a></li>
+  <li><a href="#authenticationMethodSPF" title="https://cyberterrain.org/ns/stonework#authenticationMethodSPF">SPF</a></li>
   <li><a href="#threatActorRoleSponsor" title="https://cyberterrain.org/ns/stonework#threatActorRoleSponsor">Sponsor</a></li>
   <li><a href="#threatActorTypeSpy" title="https://cyberterrain.org/ns/stonework#threatActorTypeSpy">Spy</a></li>
   <li><a href="#Spyware" title="https://cyberterrain.org/ns/stonework#Spyware">Spyware</a></li>
@@ -15688,6 +16584,8 @@ This section provides details for each class and property defined by STONEWORK.
   <li><a href="#" title="https://cyberterrain.org/ns/stonework#"> <span>STONEWORK</span> </a></li>
   <li><a href="#accountTypeScheme" title="https://cyberterrain.org/ns/stonework#accountTypeScheme">STONEWORK Account Type Scheme</a></li>
   <li><a href="#affectedStatusScheme" title="https://cyberterrain.org/ns/stonework#affectedStatusScheme">STONEWORK Affected Status Scheme</a></li>
+  <li><a href="#authenticationMethodScheme" title="https://cyberterrain.org/ns/stonework#authenticationMethodScheme">STONEWORK Authentication Method Scheme</a></li>
+  <li><a href="#authenticationVerdictScheme" title="https://cyberterrain.org/ns/stonework#authenticationVerdictScheme">STONEWORK Authentication Verdict Scheme</a></li>
   <li><a href="#categoryScheme" title="https://cyberterrain.org/ns/stonework#categoryScheme">STONEWORK Category Scheme</a></li>
   <li><a href="#markingScheme" title="https://cyberterrain.org/ns/stonework#markingScheme">STONEWORK Data Marking Scheme</a></li>
   <li><a href="#deviationKindScheme" title="https://cyberterrain.org/ns/stonework#deviationKindScheme">STONEWORK Deviation Kind Scheme</a></li>
@@ -15727,6 +16625,7 @@ This section provides details for each class and property defined by STONEWORK.
   <li><a href="#executionOutcomeSucceeded" title="https://cyberterrain.org/ns/stonework#executionOutcomeSucceeded">Succeeded</a></li>
   <li><a href="#currencyCHF" title="https://cyberterrain.org/ns/stonework#currencyCHF">Swiss Franc</a></li>
   <li><a href="#resourceLevelTeam" title="https://cyberterrain.org/ns/stonework#resourceLevelTeam">Team</a></li>
+  <li><a href="#authenticationVerdictTempError" title="https://cyberterrain.org/ns/stonework#authenticationVerdictTempError">Temporary error</a></li>
   <li><a href="#threatActorTypeTerrorist" title="https://cyberterrain.org/ns/stonework#threatActorTypeTerrorist">Terrorist</a></li>
   <li><a href="#executionOutcomeTimedOut" title="https://cyberterrain.org/ns/stonework#executionOutcomeTimedOut">Timed out</a></li>
   <li><a href="#tlpAmber" title="https://cyberterrain.org/ns/stonework#tlpAmber">TLP:AMBER</a></li>
@@ -16257,6 +17156,42 @@ This section provides details for each class and property defined by STONEWORK.
    </dd>
    <dd>
     <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Application"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="authenticationMethodARC">
+  <h3>ARC<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#authenticationMethodARC</p>
+  <div class="comment">
+   <span class="markdown">Authenticated Received Chain (RFC 8617): the authentication results recorded by the intermediaries that forwarded the message, sealed so a later receiver can rely on them.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#AuthenticationMethod" title="https://cyberterrain.org/ns/stonework#AuthenticationMethod">Authentication Method</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#notation" target="_blank" title="http://www.w3.org/2004/02/skos/core#notation">notation</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"arc"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Authenticated Received Chain (RFC 8617): the authentication results recorded by the intermediaries that forwarded the message, sealed so a later receiver can rely on them."@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#authenticationMethodScheme" title="https://cyberterrain.org/ns/stonework#authenticationMethodScheme">STONEWORK Authentication Method Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#categoryScheme" title="https://cyberterrain.org/ns/stonework#categoryScheme">STONEWORK Category Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"ARC"@en</span>
    </dd>
   </dl>
  </div>
@@ -17766,6 +18701,78 @@ This section provides details for each class and property defined by STONEWORK.
    </dd>
   </dl>
  </div>
+ <div class="entity" id="authenticationMethodDKIM">
+  <h3>DKIM<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#authenticationMethodDKIM</p>
+  <div class="comment">
+   <span class="markdown">DomainKeys Identified Mail (RFC 6376): a signature over the message's headers and body by a signing domain, checked against that domain's published key.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#AuthenticationMethod" title="https://cyberterrain.org/ns/stonework#AuthenticationMethod">Authentication Method</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#notation" target="_blank" title="http://www.w3.org/2004/02/skos/core#notation">notation</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"dkim"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"DomainKeys Identified Mail (RFC 6376): a signature over the message's headers and body by a signing domain, checked against that domain's published key."@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#authenticationMethodScheme" title="https://cyberterrain.org/ns/stonework#authenticationMethodScheme">STONEWORK Authentication Method Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#categoryScheme" title="https://cyberterrain.org/ns/stonework#categoryScheme">STONEWORK Category Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"DKIM"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="authenticationMethodDMARC">
+  <h3>DMARC<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#authenticationMethodDMARC</p>
+  <div class="comment">
+   <span class="markdown">Domain-based Message Authentication, Reporting and Conformance (RFC 7489): whether the From domain is aligned with a domain that passed SPF or DKIM, under the From domain's published policy.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#AuthenticationMethod" title="https://cyberterrain.org/ns/stonework#AuthenticationMethod">Authentication Method</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#notation" target="_blank" title="http://www.w3.org/2004/02/skos/core#notation">notation</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"dmarc"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Domain-based Message Authentication, Reporting and Conformance (RFC 7489): whether the From domain is aligned with a domain that passed SPF or DKIM, under the From domain's published policy."@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#authenticationMethodScheme" title="https://cyberterrain.org/ns/stonework#authenticationMethodScheme">STONEWORK Authentication Method Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#categoryScheme" title="https://cyberterrain.org/ns/stonework#categoryScheme">STONEWORK Category Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"DMARC"@en</span>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="accountTypeDomain">
   <h3>Domain<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#accountTypeDomain</p>
@@ -18429,6 +19436,42 @@ This section provides details for each class and property defined by STONEWORK.
    </dd>
    <dd>
     <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Exploited by Ransomware"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="authenticationVerdictFail">
+  <h3>Fail<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#authenticationVerdictFail</p>
+  <div class="comment">
+   <span class="markdown">The check ran and the message failed it.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#AuthenticationVerdict" title="https://cyberterrain.org/ns/stonework#AuthenticationVerdict">Authentication Verdict</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#notation" target="_blank" title="http://www.w3.org/2004/02/skos/core#notation">notation</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"fail"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"The check ran and the message failed it."@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#authenticationVerdictScheme" title="https://cyberterrain.org/ns/stonework#authenticationVerdictScheme">STONEWORK Authentication Verdict Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#categoryScheme" title="https://cyberterrain.org/ns/stonework#categoryScheme">STONEWORK Category Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Fail"@en</span>
    </dd>
   </dl>
  </div>
@@ -20373,6 +21416,78 @@ This section provides details for each class and property defined by STONEWORK.
    </dd>
   </dl>
  </div>
+ <div class="entity" id="authenticationVerdictNeutral">
+  <h3>Neutral<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#authenticationVerdictNeutral</p>
+  <div class="comment">
+   <span class="markdown">The domain's policy makes no assertion about this sender.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#AuthenticationVerdict" title="https://cyberterrain.org/ns/stonework#AuthenticationVerdict">Authentication Verdict</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#notation" target="_blank" title="http://www.w3.org/2004/02/skos/core#notation">notation</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"neutral"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"The domain's policy makes no assertion about this sender."@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#authenticationVerdictScheme" title="https://cyberterrain.org/ns/stonework#authenticationVerdictScheme">STONEWORK Authentication Verdict Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#categoryScheme" title="https://cyberterrain.org/ns/stonework#categoryScheme">STONEWORK Category Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Neutral"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="authenticationVerdictNone">
+  <h3>None<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#authenticationVerdictNone</p>
+  <div class="comment">
+   <span class="markdown">There was nothing to check: no policy, record or signature.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#AuthenticationVerdict" title="https://cyberterrain.org/ns/stonework#AuthenticationVerdict">Authentication Verdict</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#notation" target="_blank" title="http://www.w3.org/2004/02/skos/core#notation">notation</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"none"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"There was nothing to check: no policy, record or signature."@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#authenticationVerdictScheme" title="https://cyberterrain.org/ns/stonework#authenticationVerdictScheme">STONEWORK Authentication Verdict Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#categoryScheme" title="https://cyberterrain.org/ns/stonework#categoryScheme">STONEWORK Category Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"None"@en</span>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="sophisticationLevelNone">
   <h3>None<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#sophisticationLevelNone</p>
@@ -20904,6 +22019,42 @@ This section provides details for each class and property defined by STONEWORK.
    </dd>
   </dl>
  </div>
+ <div class="entity" id="authenticationVerdictPass">
+  <h3>Pass<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#authenticationVerdictPass</p>
+  <div class="comment">
+   <span class="markdown">The check ran and the message passed it. A pass authenticates the domain checked, which may be a lookalike the actor registered.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#AuthenticationVerdict" title="https://cyberterrain.org/ns/stonework#AuthenticationVerdict">Authentication Verdict</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#notation" target="_blank" title="http://www.w3.org/2004/02/skos/core#notation">notation</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"pass"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"The check ran and the message passed it. A pass authenticates the domain checked, which may be a lookalike the actor registered."@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#authenticationVerdictScheme" title="https://cyberterrain.org/ns/stonework#authenticationVerdictScheme">STONEWORK Authentication Verdict Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#categoryScheme" title="https://cyberterrain.org/ns/stonework#categoryScheme">STONEWORK Category Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Pass"@en</span>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="transactionTypePayment">
   <h3>Payment<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#transactionTypePayment</p>
@@ -21048,6 +22199,42 @@ This section provides details for each class and property defined by STONEWORK.
    </dd>
   </dl>
  </div>
+ <div class="entity" id="authenticationVerdictPermError">
+  <h3>Permanent error<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#authenticationVerdictPermError</p>
+  <div class="comment">
+   <span class="markdown">The check could not be completed because the domain's published records are invalid.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#AuthenticationVerdict" title="https://cyberterrain.org/ns/stonework#AuthenticationVerdict">Authentication Verdict</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#notation" target="_blank" title="http://www.w3.org/2004/02/skos/core#notation">notation</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"permerror"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"The check could not be completed because the domain's published records are invalid."@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#authenticationVerdictScheme" title="https://cyberterrain.org/ns/stonework#authenticationVerdictScheme">STONEWORK Authentication Verdict Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#categoryScheme" title="https://cyberterrain.org/ns/stonework#categoryScheme">STONEWORK Category Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Permanent error"@en</span>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="motivationPersonalGain">
   <h3>Personal Gain<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#motivationPersonalGain</p>
@@ -21153,6 +22340,42 @@ This section provides details for each class and property defined by STONEWORK.
    </dd>
    <dd>
     <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Phishing"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="authenticationVerdictPolicy">
+  <h3>Policy<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#authenticationVerdictPolicy</p>
+  <div class="comment">
+   <span class="markdown">The message passed the check technically, but a local policy of the receiving server overrode the result.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#AuthenticationVerdict" title="https://cyberterrain.org/ns/stonework#AuthenticationVerdict">Authentication Verdict</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#notation" target="_blank" title="http://www.w3.org/2004/02/skos/core#notation">notation</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"policy"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"The message passed the check technically, but a local policy of the receiving server overrode the result."@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#authenticationVerdictScheme" title="https://cyberterrain.org/ns/stonework#authenticationVerdictScheme">STONEWORK Authentication Verdict Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#categoryScheme" title="https://cyberterrain.org/ns/stonework#categoryScheme">STONEWORK Category Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Policy"@en</span>
    </dd>
   </dl>
  </div>
@@ -22299,6 +23522,78 @@ This section provides details for each class and property defined by STONEWORK.
    </dd>
   </dl>
  </div>
+ <div class="entity" id="authenticationVerdictSoftFail">
+  <h3>Soft fail<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#authenticationVerdictSoftFail</p>
+  <div class="comment">
+   <span class="markdown">The domain's policy says the sender is probably not authorized, without asking for rejection (SPF ~all).</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#AuthenticationVerdict" title="https://cyberterrain.org/ns/stonework#AuthenticationVerdict">Authentication Verdict</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#notation" target="_blank" title="http://www.w3.org/2004/02/skos/core#notation">notation</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"softfail"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"The domain's policy says the sender is probably not authorized, without asking for rejection (SPF ~all)."@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#authenticationVerdictScheme" title="https://cyberterrain.org/ns/stonework#authenticationVerdictScheme">STONEWORK Authentication Verdict Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#categoryScheme" title="https://cyberterrain.org/ns/stonework#categoryScheme">STONEWORK Category Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Soft fail"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="authenticationMethodSPF">
+  <h3>SPF<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#authenticationMethodSPF</p>
+  <div class="comment">
+   <span class="markdown">Sender Policy Framework (RFC 7208): whether the sending server is authorized to send for the envelope sender's domain.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#AuthenticationMethod" title="https://cyberterrain.org/ns/stonework#AuthenticationMethod">Authentication Method</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#notation" target="_blank" title="http://www.w3.org/2004/02/skos/core#notation">notation</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"spf"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Sender Policy Framework (RFC 7208): whether the sending server is authorized to send for the envelope sender's domain."@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#authenticationMethodScheme" title="https://cyberterrain.org/ns/stonework#authenticationMethodScheme">STONEWORK Authentication Method Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#categoryScheme" title="https://cyberterrain.org/ns/stonework#categoryScheme">STONEWORK Category Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"SPF"@en</span>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="threatActorRoleSponsor">
   <h3>Sponsor<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#threatActorRoleSponsor</p>
@@ -22526,6 +23821,66 @@ This section provides details for each class and property defined by STONEWORK.
    </dd>
    <dd>
     <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"STONEWORK Affected Status Scheme"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="authenticationMethodScheme">
+  <h3>STONEWORK Authentication Method Scheme<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#authenticationMethodScheme</p>
+  <div class="comment">
+   <span class="markdown">The controlled vocabulary of sender-authentication methods for email.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/title" target="_blank" title="http://purl.org/dc/terms/title">title</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"STONEWORK Authentication Method Scheme"@en</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/isPartOf" target="_blank" title="http://purl.org/dc/terms/isPartOf">is Part Of</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#categoryScheme" title="https://cyberterrain.org/ns/stonework#categoryScheme">STONEWORK Category Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"The controlled vocabulary of sender-authentication methods for email."@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"STONEWORK Authentication Method Scheme"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="authenticationVerdictScheme">
+  <h3>STONEWORK Authentication Verdict Scheme<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#authenticationVerdictScheme</p>
+  <div class="comment">
+   <span class="markdown">The controlled vocabulary of the verdicts of sender-authentication checks on email.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#ConceptScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://purl.org/dc/terms/title" target="_blank" title="http://purl.org/dc/terms/title">title</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"STONEWORK Authentication Verdict Scheme"@en</span>
+   </dd>
+   <dd>
+    <a href="http://purl.org/dc/terms/isPartOf" target="_blank" title="http://purl.org/dc/terms/isPartOf">is Part Of</a> <sup class="type-ap" title="annotation property">ap</sup> <a href="#categoryScheme" title="https://cyberterrain.org/ns/stonework#categoryScheme">STONEWORK Category Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"The controlled vocabulary of the verdicts of sender-authentication checks on email."@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"STONEWORK Authentication Verdict Scheme"@en</span>
    </dd>
   </dl>
  </div>
@@ -23838,6 +25193,42 @@ This section provides details for each class and property defined by STONEWORK.
    </dd>
    <dd>
     <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Team"@en</span>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="authenticationVerdictTempError">
+  <h3>Temporary error<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#authenticationVerdictTempError</p>
+  <div class="comment">
+   <span class="markdown">The check could not be completed because of a transient error, such as a DNS timeout.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    belongs to
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#Concept" target="_blank" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dd>
+    <a href="#AuthenticationVerdict" title="https://cyberterrain.org/ns/stonework#AuthenticationVerdict">Authentication Verdict</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#notation" target="_blank" title="http://www.w3.org/2004/02/skos/core#notation">notation</a> <sup class="type-dp" title="data property">dp</sup> <span class="literal">"temperror"</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#definition" target="_blank" title="http://www.w3.org/2004/02/skos/core#definition">definition</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"The check could not be completed because of a transient error, such as a DNS timeout."@en</span>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#authenticationVerdictScheme" title="https://cyberterrain.org/ns/stonework#authenticationVerdictScheme">STONEWORK Authentication Verdict Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#inScheme" target="_blank" title="http://www.w3.org/2004/02/skos/core#inScheme">in Scheme</a> <sup class="type-op" title="object property">op</sup> <a href="#categoryScheme" title="https://cyberterrain.org/ns/stonework#categoryScheme">STONEWORK Category Scheme</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dd>
+    <a href="http://www.w3.org/2004/02/skos/core#prefLabel" target="_blank" title="http://www.w3.org/2004/02/skos/core#prefLabel">pref Label</a> <sup class="type-ap" title="annotation property">ap</sup> <span class="literal">"Temporary error"@en</span>
    </dd>
   </dl>
  </div>

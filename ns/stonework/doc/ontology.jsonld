@@ -25,9 +25,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "https://cyberterrain.org/ns/stonework#UserAccount"
+      "@id" : "https://cyberterrain.org/ns/stonework#CyberActivity"
     }, {
-      "@id" : "https://cyberterrain.org/ns/stonework#UserGroup"
+      "@id" : "https://cyberterrain.org/ns/stonework#NetworkTraffic"
     } ]
   } ]
 }, {
@@ -111,13 +111,23 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
+      "@id" : "https://cyberterrain.org/ns/stonework#CyberActivity"
+    }, {
+      "@id" : "https://cyberterrain.org/ns/stonework#NetworkTraffic"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid130",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
       "@id" : "https://cyberterrain.org/ns/stonework#Tactic"
     }, {
       "@id" : "https://cyberterrain.org/ns/stonework#Technique"
     } ]
   } ]
 }, {
-  "@id" : "_:genid132",
+  "@id" : "_:genid135",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -129,7 +139,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid136",
+  "@id" : "_:genid139",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -155,7 +165,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid140",
+  "@id" : "_:genid143",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -165,7 +175,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid143",
+  "@id" : "_:genid146",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -179,7 +189,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid148",
+  "@id" : "_:genid151",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -189,7 +199,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid151",
+  "@id" : "_:genid154",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -201,7 +211,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid155",
+  "@id" : "_:genid158",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -221,7 +231,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid163",
+  "@id" : "_:genid166",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -231,7 +241,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid166",
+  "@id" : "_:genid169",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -241,7 +251,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid169",
+  "@id" : "_:genid172",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -251,7 +261,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid172",
+  "@id" : "_:genid175",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -261,7 +271,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid175",
+  "@id" : "_:genid178",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -271,7 +281,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid180",
+  "@id" : "_:genid183",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -281,7 +291,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid183",
+  "@id" : "_:genid186",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -291,23 +301,13 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid186",
+  "@id" : "_:genid189",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
       "@id" : "https://cyberterrain.org/ns/stonework#Assessment"
     }, {
       "@id" : "https://cyberterrain.org/ns/stonework#Report"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid189",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://cyberterrain.org/ns/stonework#AccessControlList"
-    }, {
-      "@id" : "https://cyberterrain.org/ns/stonework#Countermeasure"
     } ]
   } ]
 }, {
@@ -325,13 +325,23 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
+      "@id" : "https://cyberterrain.org/ns/stonework#AccessControlList"
+    }, {
+      "@id" : "https://cyberterrain.org/ns/stonework#Countermeasure"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid195",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
       "@id" : "https://cyberterrain.org/ns/stonework#DataAsset"
     }, {
       "@id" : "https://cyberterrain.org/ns/stonework#DigitalArtifact"
     } ]
   } ]
 }, {
-  "@id" : "_:genid195",
+  "@id" : "_:genid198",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -341,7 +351,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid198",
+  "@id" : "_:genid201",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -351,7 +361,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid201",
+  "@id" : "_:genid204",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -361,7 +371,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid204",
+  "@id" : "_:genid207",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -371,7 +381,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid207",
+  "@id" : "_:genid210",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -381,7 +391,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid210",
+  "@id" : "_:genid213",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -391,7 +401,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid213",
+  "@id" : "_:genid216",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -400,16 +410,6 @@
       "@id" : "https://cyberterrain.org/ns/stonework#File"
     }, {
       "@id" : "https://cyberterrain.org/ns/stonework#Registry"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid217",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://cyberterrain.org/ns/stonework#Tactic"
-    }, {
-      "@id" : "https://cyberterrain.org/ns/stonework#Technique"
     } ]
   } ]
 }, {
@@ -427,9 +427,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "https://cyberterrain.org/ns/stonework#Event"
+      "@id" : "https://cyberterrain.org/ns/stonework#Tactic"
     }, {
-      "@id" : "https://cyberterrain.org/ns/stonework#Incident"
+      "@id" : "https://cyberterrain.org/ns/stonework#Technique"
     } ]
   } ]
 }, {
@@ -447,13 +447,33 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
+      "@id" : "https://cyberterrain.org/ns/stonework#Event"
+    }, {
+      "@id" : "https://cyberterrain.org/ns/stonework#Incident"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid229",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://cyberterrain.org/ns/stonework#CyberActivity"
+    }, {
+      "@id" : "https://cyberterrain.org/ns/stonework#NetworkTraffic"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid232",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
       "@id" : "https://cyberterrain.org/ns/stonework#DetectionPlan"
     }, {
       "@id" : "https://cyberterrain.org/ns/stonework#Step"
     } ]
   } ]
 }, {
-  "@id" : "_:genid229",
+  "@id" : "_:genid235",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -467,27 +487,27 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid234",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://cyberterrain.org/ns/stonework#MalwareFamily"
-    }, {
-      "@id" : "https://cyberterrain.org/ns/stonework#MalwareSample"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid237",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://cyberterrain.org/ns/stonework#MalwareFamily"
-    }, {
-      "@id" : "https://cyberterrain.org/ns/stonework#MalwareSample"
-    } ]
-  } ]
-}, {
   "@id" : "_:genid240",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://cyberterrain.org/ns/stonework#MalwareFamily"
+    }, {
+      "@id" : "https://cyberterrain.org/ns/stonework#MalwareSample"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid243",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://cyberterrain.org/ns/stonework#MalwareFamily"
+    }, {
+      "@id" : "https://cyberterrain.org/ns/stonework#MalwareSample"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid246",
   "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
   "http://www.w3.org/2002/07/owl#oneOf" : [ {
     "@list" : [ {
@@ -499,7 +519,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid243",
+  "@id" : "_:genid249",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -508,16 +528,6 @@
       "@id" : "https://cyberterrain.org/ns/stonework#Operation"
     }, {
       "@id" : "https://cyberterrain.org/ns/stonework#ThreatActor"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid247",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://cyberterrain.org/ns/stonework#HumanSource"
-    }, {
-      "@id" : "https://cyberterrain.org/ns/stonework#Provenance"
     } ]
   } ]
 }, {
@@ -531,7 +541,37 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid250",
+  "@id" : "_:genid253",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://cyberterrain.org/ns/stonework#HumanSource"
+    }, {
+      "@id" : "https://cyberterrain.org/ns/stonework#Provenance"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid256",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://cyberterrain.org/ns/stonework#DetectionRule"
+    }, {
+      "@id" : "https://cyberterrain.org/ns/stonework#MailboxRule"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid259",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://cyberterrain.org/ns/stonework#DetectionRule"
+    }, {
+      "@id" : "https://cyberterrain.org/ns/stonework#MailboxRule"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid262",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -541,7 +581,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid253",
+  "@id" : "_:genid265",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#accountTypeScheme"
@@ -550,7 +590,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid254",
+  "@id" : "_:genid266",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#affectedStatusScheme"
@@ -559,7 +599,25 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid255",
+  "@id" : "_:genid267",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#authenticationMethodScheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
+  "@id" : "_:genid268",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#authenticationVerdictScheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
+  "@id" : "_:genid269",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -572,7 +630,7 @@
     "@id" : "https://cyberterrain.org/ns/stonework#installationOf"
   } ]
 }, {
-  "@id" : "_:genid256",
+  "@id" : "_:genid270",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
@@ -581,7 +639,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid257",
+  "@id" : "_:genid271",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#deviationKindScheme"
@@ -590,7 +648,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid258",
+  "@id" : "_:genid272",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#executionOutcomeScheme"
@@ -599,7 +657,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid259",
+  "@id" : "_:genid273",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#exploitMaturityScheme"
@@ -608,7 +666,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid260",
+  "@id" : "_:genid274",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#exploitationReportKindScheme"
@@ -617,7 +675,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid261",
+  "@id" : "_:genid275",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#falsePositiveRateScheme"
@@ -626,7 +684,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid262",
+  "@id" : "_:genid276",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#financialAccountTypeScheme"
@@ -635,7 +693,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid263",
+  "@id" : "_:genid277",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#financialInstitutionTypeScheme"
@@ -644,7 +702,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid264",
+  "@id" : "_:genid278",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#flowKindScheme"
@@ -653,136 +711,10 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid265",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#hypothesisStatusScheme"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
-  } ]
-}, {
-  "@id" : "_:genid266",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#impactLevelScheme"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
-  } ]
-}, {
-  "@id" : "_:genid267",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#impactTypeScheme"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
-  } ]
-}, {
-  "@id" : "_:genid268",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#incidentStatusScheme"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
-  } ]
-}, {
-  "@id" : "_:genid269",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#industryScheme"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
-  } ]
-}, {
-  "@id" : "_:genid270",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#infrastructureTypeScheme"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
-  } ]
-}, {
-  "@id" : "_:genid271",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#investigationOutcomeScheme"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
-  } ]
-}, {
-  "@id" : "_:genid272",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#investigationStatusScheme"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
-  } ]
-}, {
-  "@id" : "_:genid273",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#killChainPhaseScheme"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
-  } ]
-}, {
-  "@id" : "_:genid274",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#likelihoodLevelScheme"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
-  } ]
-}, {
-  "@id" : "_:genid275",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#malwareTypeScheme"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
-  } ]
-}, {
-  "@id" : "_:genid276",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#markingScheme"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
-  } ]
-}, {
-  "@id" : "_:genid277",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#metricTypeScheme"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
-  } ]
-}, {
-  "@id" : "_:genid278",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#motivationScheme"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
-  } ]
-}, {
   "@id" : "_:genid279",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#paymentInstrumentScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#hypothesisStatusScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -805,7 +737,7 @@
   "@id" : "_:genid280",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#playbookTypeScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#impactLevelScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -814,13 +746,139 @@
   "@id" : "_:genid281",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#priorityLevelScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#impactTypeScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
   "@id" : "_:genid282",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#incidentStatusScheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
+  "@id" : "_:genid283",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#industryScheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
+  "@id" : "_:genid284",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#infrastructureTypeScheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
+  "@id" : "_:genid285",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#investigationOutcomeScheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
+  "@id" : "_:genid286",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#investigationStatusScheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
+  "@id" : "_:genid287",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#killChainPhaseScheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
+  "@id" : "_:genid288",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#likelihoodLevelScheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
+  "@id" : "_:genid289",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#malwareTypeScheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
+  "@id" : "_:genid290",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#markingScheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
+  "@id" : "_:genid291",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#metricTypeScheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
+  "@id" : "_:genid292",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#motivationScheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
+  "@id" : "_:genid293",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#paymentInstrumentScheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
+  "@id" : "_:genid294",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#playbookTypeScheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
+  "@id" : "_:genid295",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#priorityLevelScheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
+  "@id" : "_:genid296",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -833,7 +891,7 @@
     "@id" : "https://cyberterrain.org/ns/stonework#installationOf"
   } ]
 }, {
-  "@id" : "_:genid283",
+  "@id" : "_:genid297",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#productTypeScheme"
@@ -842,7 +900,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid284",
+  "@id" : "_:genid298",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#resourceLevelScheme"
@@ -851,7 +909,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid285",
+  "@id" : "_:genid299",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#riskLevelScheme"
@@ -860,7 +918,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid286",
+  "@id" : "_:genid300",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#sectorScheme"
@@ -869,7 +927,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid287",
+  "@id" : "_:genid301",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#sophisticationLevelScheme"
@@ -878,7 +936,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid288",
+  "@id" : "_:genid302",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#threatActorRoleScheme"
@@ -887,7 +945,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid289",
+  "@id" : "_:genid303",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#threatActorTypeScheme"
@@ -896,7 +954,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid290",
+  "@id" : "_:genid304",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#transactionTypeScheme"
@@ -1133,9 +1191,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "https://cyberterrain.org/ns/stonework#Log"
+      "@id" : "https://cyberterrain.org/ns/stonework#UserAccount"
     }, {
-      "@id" : "https://cyberterrain.org/ns/stonework#NetworkTraffic"
+      "@id" : "https://cyberterrain.org/ns/stonework#UserGroup"
     } ]
   } ]
 }, {
@@ -1222,10 +1280,10 @@
     "@value" : "STONEWORK"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework/0.12.0"
+    "@id" : "https://cyberterrain.org/ns/stonework/0.13.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.12.0"
+    "@value" : "0.13.0"
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#AIAgent",
@@ -1299,7 +1357,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid253"
+    "@id" : "_:genid265"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -1357,7 +1415,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid254"
+    "@id" : "_:genid266"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -1479,6 +1537,46 @@
     "@value" : "Aligns with MITRE ATT&CK techniques and D3FEND OffensiveTechnique. The MITRE ATT&CK-shaped realization of stonework:AttackPattern — operationalized for execution, as distinct from CAPEC's more abstract taxonomy-entry shape (capec:AttackPattern, also a stonework:AttackPattern). Framework-specific subclasses (e.g. attack:Technique) provide the concrete individuals. A specific, concrete realization of this technique is modeled as a stonework:Procedure, linked back via stonework:implementedBy."
   } ]
 }, {
+  "@id" : "https://cyberterrain.org/ns/stonework#AuthenticationMethod",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Category"
+  }, {
+    "@id" : "_:genid267"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A sender-authentication method for email."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Authentication Method"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Applied via stonework:hasAuthenticationMethod to EmailAuthenticationResult individuals. Named individuals: SPF, DKIM, DMARC, ARC."
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#AuthenticationVerdict",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Category"
+  }, {
+    "@id" : "_:genid268"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A verdict of a sender-authentication check on an email."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Authentication Verdict"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Applied via stonework:hasAuthenticationVerdict to EmailAuthenticationResult individuals. The verdicts of an Authentication-Results header (RFC 8601): pass, fail, soft fail, neutral, none, temporary error, permanent error, policy."
+  } ]
+}, {
   "@id" : "https://cyberterrain.org/ns/stonework#AutonomousSystem",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
@@ -1560,7 +1658,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#ComponentContext"
   }, {
-    "@id" : "_:genid255"
+    "@id" : "_:genid269"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -1663,7 +1761,7 @@
   }, {
     "@id" : "https://cyberterrain.org/ns/stonework#CyberEntity"
   }, {
-    "@id" : "_:genid256"
+    "@id" : "_:genid270"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2086,7 +2184,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid257"
+    "@id" : "_:genid271"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2217,6 +2315,24 @@
     "@value" : "Email Address"
   } ]
 }, {
+  "@id" : "https://cyberterrain.org/ns/stonework#EmailAuthenticationResult",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Assessment"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The verdict of one sender-authentication check (SPF, DKIM, DMARC or ARC) on an EmailMessage, as a receiving server recorded it in an Authentication-Results header: the method, the verdict, the domain checked, and the server that checked."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Email Authentication Result"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "A pass authenticates the domain, not the sender's honesty: a lookalike domain registered by an actor passes SPF, DKIM and DMARC for itself. Compare stonework:authenticatedDomain with the domain the recipient expected. The method and verdict are categories (stonework:hasAuthenticationMethod, stonework:hasAuthenticationVerdict)."
+  } ]
+}, {
   "@id" : "https://cyberterrain.org/ns/stonework#EmailMessage",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
@@ -2232,7 +2348,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
-    "@value" : "Distinct from stonework:EmailAddress, which represents the sender/recipient identifier. An EmailMessage is the content artifact itself. Used to represent phishing lures, spear-phishing emails, or other email-borne threat delivery mechanisms. Corresponds to STIX EmailMessage SCO."
+    "@value" : "Distinct from stonework:EmailAddress, which represents the sender/recipient identifier. An EmailMessage is the content artifact itself. Used to represent phishing lures, spear-phishing emails, or other email-borne threat delivery mechanisms. Corresponds to STIX EmailMessage SCO. Its headers: the addresses by role (stonework:hasFromAddress, hasSenderAddress, hasReplyToAddress, hasReturnPathAddress, hasToAddress, hasCcAddress, hasBccAddress), stonework:fromDisplayName, emailSubject, sentAtTime, messageId, the thread (inReplyTo, referencesMessage), and the receiving servers' stonework:hasAuthenticationResult. Each Received header is a hop: a stonework:Event generatedFrom the message, with its time (startedAtTime), the sending server's address (hasSourceAddress) and the receiving server (occursOn)."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#Equals",
@@ -2275,7 +2391,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid258"
+    "@id" : "_:genid272"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2319,7 +2435,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid259"
+    "@id" : "_:genid273"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2339,7 +2455,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid260"
+    "@id" : "_:genid274"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2359,7 +2475,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid261"
+    "@id" : "_:genid275"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2427,7 +2543,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid262"
+    "@id" : "_:genid276"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2461,7 +2577,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid263"
+    "@id" : "_:genid277"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2495,7 +2611,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid264"
+    "@id" : "_:genid278"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2662,7 +2778,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid265"
+    "@id" : "_:genid279"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2799,7 +2915,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid266"
+    "@id" : "_:genid280"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2815,7 +2931,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid267"
+    "@id" : "_:genid281"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2848,7 +2964,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid268"
+    "@id" : "_:genid282"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2882,7 +2998,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Sector"
   }, {
-    "@id" : "_:genid269"
+    "@id" : "_:genid283"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2915,7 +3031,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid270"
+    "@id" : "_:genid284"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2969,7 +3085,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid271"
+    "@id" : "_:genid285"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -3006,7 +3122,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid272"
+    "@id" : "_:genid286"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -3046,7 +3162,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid273"
+    "@id" : "_:genid287"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -3136,7 +3252,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid274"
+    "@id" : "_:genid288"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -3198,6 +3314,24 @@
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
     "@value" : "Covers 48-bit and 64-bit MAC address representations, including values carried by the STIX 2.1 MAC Address SCO."
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#MailboxRule",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#DigitalArtifact"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A rule a mailbox applies automatically to the email it receives: conditions that select messages, and actions taken on them, such as forwarding, moving or deleting."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Mailbox Rule"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Covers server-side inbox rules (Exchange, Microsoft 365), client rules and webmail filters (Gmail). An actor holding a mailbox's credentials creates one to read mail without signing in again (ATT&CK T1114.003, Email Forwarding Rule) or to keep replies and warnings from the holder (T1564.008, Email Hiding Rules). The activity that creates a rule produces it (stonework:produces); later changes and its removal are activities that act on it (stonework:actsOn). Rules applied by the mail service to a whole organization (transport or mail-flow rules) are not mailbox rules."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#Malware",
@@ -3281,7 +3415,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid275"
+    "@id" : "_:genid289"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -3301,7 +3435,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid276"
+    "@id" : "_:genid290"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -3335,7 +3469,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid277"
+    "@id" : "_:genid291"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -3408,7 +3542,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid278"
+    "@id" : "_:genid292"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -3611,7 +3745,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid279"
+    "@id" : "_:genid293"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -3725,7 +3859,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid280"
+    "@id" : "_:genid294"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -3745,7 +3879,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid281"
+    "@id" : "_:genid295"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -3829,7 +3963,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#ComponentContext"
   }, {
-    "@id" : "_:genid282"
+    "@id" : "_:genid296"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -3848,7 +3982,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid283"
+    "@id" : "_:genid297"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -4052,7 +4186,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid284"
+    "@id" : "_:genid298"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -4103,7 +4237,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid285"
+    "@id" : "_:genid299"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -4243,7 +4377,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid286"
+    "@id" : "_:genid300"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -4412,7 +4546,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid287"
+    "@id" : "_:genid301"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -4584,7 +4718,7 @@
   }, {
     "@id" : "https://cyberterrain.org/ns/stonework#Role"
   }, {
-    "@id" : "_:genid288"
+    "@id" : "_:genid302"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -4604,7 +4738,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid289"
+    "@id" : "_:genid303"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -4663,7 +4797,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid290"
+    "@id" : "_:genid304"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -5834,6 +5968,370 @@
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
     "@value" : "Names the identity's holder, not whoever used it on a given occasion. When an identity is used by someone else, such as an actor holding a victim's stolen credentials, the activity keeps the identity as its stonework:performedBy and names the Agent responsible with stonework:attributedTo. That someone else controlled the identity for a period, such as an actor holding a mailbox's credentials from its compromise to its containment, is a stonework:IdentityControl."
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#authenticatedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#EmailAuthenticationResult"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Infrastructure"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The server that performed an authentication check and recorded its result (the authserv-id of an Authentication-Results header)."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "authenticatedBy"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#authenticatedDomain",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#EmailAuthenticationResult"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Domain"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The domain an authentication check evaluated: the envelope sender's domain for SPF, the signing domain for DKIM, the From domain for DMARC."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "authenticatedDomain"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#authenticationMethodARC",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#AuthenticationMethod"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Authenticated Received Chain (RFC 8617): the authentication results recorded by the intermediaries that forwarded the message, sealed so a later receiver can rely on them."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#authenticationMethodScheme"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "arc"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "ARC"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#authenticationMethodDKIM",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#AuthenticationMethod"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "DomainKeys Identified Mail (RFC 6376): a signature over the message's headers and body by a signing domain, checked against that domain's published key."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#authenticationMethodScheme"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "dkim"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "DKIM"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#authenticationMethodDMARC",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#AuthenticationMethod"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Domain-based Message Authentication, Reporting and Conformance (RFC 7489): whether the From domain is aligned with a domain that passed SPF or DKIM, under the From domain's published policy."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#authenticationMethodScheme"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "dmarc"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "DMARC"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#authenticationMethodSPF",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#AuthenticationMethod"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Sender Policy Framework (RFC 7208): whether the sending server is authorized to send for the envelope sender's domain."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#authenticationMethodScheme"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "spf"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "SPF"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#authenticationMethodScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/terms/isPartOf" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "STONEWORK Authentication Method Scheme"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The controlled vocabulary of sender-authentication methods for email."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "STONEWORK Authentication Method Scheme"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#authenticationVerdictFail",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#AuthenticationVerdict"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The check ran and the message failed it."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#authenticationVerdictScheme"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "fail"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Fail"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#authenticationVerdictNeutral",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#AuthenticationVerdict"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The domain's policy makes no assertion about this sender."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#authenticationVerdictScheme"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "neutral"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Neutral"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#authenticationVerdictNone",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#AuthenticationVerdict"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "There was nothing to check: no policy, record or signature."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#authenticationVerdictScheme"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "none"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "None"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#authenticationVerdictPass",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#AuthenticationVerdict"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The check ran and the message passed it. A pass authenticates the domain checked, which may be a lookalike the actor registered."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#authenticationVerdictScheme"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "pass"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Pass"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#authenticationVerdictPermError",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#AuthenticationVerdict"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The check could not be completed because the domain's published records are invalid."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#authenticationVerdictScheme"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "permerror"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Permanent error"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#authenticationVerdictPolicy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#AuthenticationVerdict"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The message passed the check technically, but a local policy of the receiving server overrode the result."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#authenticationVerdictScheme"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "policy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Policy"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#authenticationVerdictScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/terms/isPartOf" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "STONEWORK Authentication Verdict Scheme"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The controlled vocabulary of the verdicts of sender-authentication checks on email."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "STONEWORK Authentication Verdict Scheme"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#authenticationVerdictSoftFail",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#AuthenticationVerdict"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The domain's policy says the sender is probably not authorized, without asking for rejection (SPF ~all)."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#authenticationVerdictScheme"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "softfail"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Soft fail"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#authenticationVerdictTempError",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#AuthenticationVerdict"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The check could not be completed because of a transient error, such as a DNS timeout."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#authenticationVerdictScheme"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "temperror"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Temporary error"
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#authoredBy",
@@ -7268,6 +7766,23 @@
     "@value" : "BPMN's default sequence flow, and the default case of a CACAO switch-condition. The Transition leaves this Step (its stonework:fromStep is this Step) and carries no guard of its own: it is the otherwise branch, so a plan doesn't have to spell out the negation of every other guard. It applies to either stonework:splitKind: with a parallel split, the default is taken only when none of the guarded branches is."
   } ]
 }, {
+  "@id" : "https://cyberterrain.org/ns/stonework#deletesMessage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#MailboxRule"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Whether a MailboxRule deletes the messages it selects."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "deletesMessage"
+  } ]
+}, {
   "@id" : "https://cyberterrain.org/ns/stonework#deliveredVia",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -7717,6 +8232,23 @@
     "@value" : "dstPort"
   } ]
 }, {
+  "@id" : "https://cyberterrain.org/ns/stonework#emailBody",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#EmailMessage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The text of an EmailMessage's body (its text/plain part, or the text of its HTML part)."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "emailBody"
+  } ]
+}, {
   "@id" : "https://cyberterrain.org/ns/stonework#emailOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -7734,6 +8266,23 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@value" : "emailOf"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#emailSubject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#EmailMessage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The Subject header of an EmailMessage."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "emailSubject"
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#emailValue",
@@ -9054,6 +9603,23 @@
     "@value" : "STONEWORK Flow Kind Scheme"
   } ]
 }, {
+  "@id" : "https://cyberterrain.org/ns/stonework#forwardsTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#MailboxRule"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#EmailAddress"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "An address a MailboxRule forwards the messages it selects to, inline or as attachments."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "forwardsTo"
+  } ]
+}, {
   "@id" : "https://cyberterrain.org/ns/stonework#fqdn",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -9069,6 +9635,27 @@
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "fqdn"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#fromDisplayName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#EmailMessage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The display name in an EmailMessage's From header, as this message gave it."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "fromDisplayName"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Recorded on the message, not the address, because the sender chooses it per message: display-name spoofing pairs a trusted name with an unrelated address. stonework:displayName on an EmailAddress is the name usually associated with the address."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#fromStep",
@@ -9131,15 +9718,19 @@
     "@id" : "https://cyberterrain.org/ns/stonework#Event"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid97"
+    "@id" : "https://cyberterrain.org/ns/stonework#DigitalArtifact"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Links an Event to the raw log or network traffic from which it was derived."
+    "@value" : "Links an Event to the raw record from which it was derived: a log, network traffic, or another artifact such as an EmailMessage whose Received headers record its route."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "generatedFrom"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "The Event keeps this link when an analyst later assigns it to a Step (stonework:correspondsToStep), so an execution found in evidence stays traceable to the record it came from. Name the record within the artifact with stonework:externalId on the Event, such as an audit-log record's identifier."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#grantedTo",
@@ -9148,7 +9739,7 @@
     "@id" : "https://cyberterrain.org/ns/stonework#AccessControlList"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid100"
+    "@id" : "_:genid97"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -9351,6 +9942,97 @@
     "@value" : "Optional — a MalwareSample may be known via hashes or threat reports without the binary being available. When present, the artifact provides retrievable binary evidence. Corresponds to the STIX 2.1 sample_refs property on the malware SDO."
   } ]
 }, {
+  "@id" : "https://cyberterrain.org/ns/stonework#hasAttachment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#EmailMessage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#File"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A File attached to an EmailMessage."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "hasAttachment"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#hasAuthenticationMethod",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#EmailAuthenticationResult"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#AuthenticationMethod"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categorizedBy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The method of a sender-authentication check: SPF, DKIM, DMARC or ARC."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "hasAuthenticationMethod"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#hasAuthenticationResult",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#EmailMessage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#EmailAuthenticationResult"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The result of a sender-authentication check a receiving server performed on an EmailMessage."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "hasAuthenticationResult"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#hasAuthenticationVerdict",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#EmailAuthenticationResult"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#AuthenticationVerdict"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categorizedBy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The verdict a sender-authentication check reached."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "hasAuthenticationVerdict"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#hasBccAddress",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#EmailMessage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#EmailAddress"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "An address in an EmailMessage's Bcc header, where the sender's copy records one."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "hasBccAddress"
+  } ]
+}, {
   "@id" : "https://cyberterrain.org/ns/stonework#hasBehavior",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
@@ -9383,6 +10065,23 @@
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
     "@value" : "Each BomEntry carries the component's VersionedProduct reference (via stonework:installationOf) and any component-specific metadata (PURL, license, hash, component type). Range is BomEntry rather than VersionedProduct directly because the same VersionedProduct may appear in multiple SBOMs with different component-level attributes."
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#hasCcAddress",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#EmailMessage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#EmailAddress"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "An address in an EmailMessage's Cc header."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "hasCcAddress"
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#hasCvssMetric",
@@ -9432,14 +10131,14 @@
   "@id" : "https://cyberterrain.org/ns/stonework#hasDestinationAddress",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#NetworkTraffic"
+    "@id" : "_:genid100"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#IPAddress"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Relates NetworkTraffic to the destination IP address."
+    "@value" : "Relates NetworkTraffic, or an activity observed on the network, to the destination IP address."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -9559,6 +10258,27 @@
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "hasFalsePositiveRate"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#hasFromAddress",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#EmailMessage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#EmailAddress"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The address in an EmailMessage's From header: the author the recipient sees."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "hasFromAddress"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Single-valued, as STIX's from_ref is. RFC 5322 allows a list of authors, with a Sender; record the first author here."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#hasHash",
@@ -10227,6 +10947,27 @@
     "@value" : "hasProvenance"
   } ]
 }, {
+  "@id" : "https://cyberterrain.org/ns/stonework#hasReplyToAddress",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#EmailMessage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#EmailAddress"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "An address in an EmailMessage's Reply-To header, where replies go."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "hasReplyToAddress"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "A Reply-To that differs from the From address sends the recipient's answer to someone else, a common step in business email compromise. STIX has no Reply-To property."
+  } ]
+}, {
   "@id" : "https://cyberterrain.org/ns/stonework#hasResourceLevel",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -10245,6 +10986,23 @@
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "hasResourceLevel"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#hasReturnPathAddress",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#EmailMessage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#EmailAddress"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The address in an EmailMessage's Return-Path header: the envelope sender, where bounces go and whose domain SPF checks."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "hasReturnPathAddress"
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#hasRisk",
@@ -10301,6 +11059,23 @@
     "@value" : "hasRoleAssignment"
   } ]
 }, {
+  "@id" : "https://cyberterrain.org/ns/stonework#hasSenderAddress",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#EmailMessage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#EmailAddress"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The address in an EmailMessage's Sender header: the mailbox that sent the message on the author's behalf."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "hasSenderAddress"
+  } ]
+}, {
   "@id" : "https://cyberterrain.org/ns/stonework#hasSignature",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
@@ -10338,18 +11113,22 @@
   "@id" : "https://cyberterrain.org/ns/stonework#hasSourceAddress",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#NetworkTraffic"
+    "@id" : "_:genid127"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#IPAddress"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Relates NetworkTraffic to the source IP address."
+    "@value" : "Relates NetworkTraffic, or an activity observed on the network, to the source IP address: the client of a sign-in, the sending server of a Received hop."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "hasSourceAddress"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Where the address was is a fact about the address: say it with stonework:locatedAt on the IPAddress (a geolocation lookup gives a Country or Region), not on the activity."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#hasStep",
@@ -10375,7 +11154,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#hasTechnique",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid127"
+    "@id" : "_:genid130"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Technique"
@@ -10410,6 +11189,23 @@
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
     "@value" : "A threat actor may have multiple types (e.g. nation-state actor who is also a spy). Aligns with the STIX 2.1 threat-actor-type open vocabulary."
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#hasToAddress",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#EmailMessage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#EmailAddress"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "An address in an EmailMessage's To header."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "hasToAddress"
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#hasVendor",
@@ -10554,6 +11350,27 @@
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
     "@value" : "Optional. Absent for a self-custody crypto wallet or an account whose institution is unknown; present and pointing at a virtual asset service provider for a custodial wallet."
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#hiddenFromUser",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#MailboxRule"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Whether a MailboxRule is hidden from the mailbox's holder, so that it appears in neither the mail client nor the mailbox settings and only an administrative query finds it."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "hiddenFromUser"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "A hidden rule is distinct from a rule that hides messages, such as one that moves them to a folder the holder never opens (stonework:movesToFolder)."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#hostedBy",
@@ -11124,7 +11941,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#implementsTechnique",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid132"
+    "@id" : "_:genid135"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Technique"
@@ -11159,6 +11976,27 @@
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "inBlock"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#inReplyTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#EmailMessage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#EmailMessage"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The EmailMessage this one answers, named by its Message-ID in the In-Reply-To header."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "inReplyTo"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "The answered message need not be at hand: give it its stonework:messageId and nothing else, and it is the same resource when its own copy is added. A reply placed in a genuine thread is how an actor who has read the thread makes a request look routine."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#incidentStatusClosed",
@@ -12063,7 +12901,7 @@
     "@id" : "https://cyberterrain.org/ns/stonework#IPAddress"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid240"
+    "@id" : "_:genid246"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -12171,7 +13009,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#isVulnerableTo",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid136"
+    "@id" : "_:genid139"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Vulnerability"
@@ -12208,7 +13046,7 @@
     "@id" : "https://cyberterrain.org/ns/stonework#Certificate"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid140"
+    "@id" : "_:genid143"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -12538,7 +13376,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#locatedAt",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid143"
+    "@id" : "_:genid146"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Location"
@@ -12617,7 +13455,7 @@
     "@id" : "https://cyberterrain.org/ns/stonework#UserAccount"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid148"
+    "@id" : "_:genid151"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -12789,10 +13627,65 @@
     "@value" : "STONEWORK Data Marking Scheme"
   } ]
 }, {
+  "@id" : "https://cyberterrain.org/ns/stonework#marksAsRead",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#MailboxRule"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Whether a MailboxRule marks the messages it selects as read."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "marksAsRead"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#matchesKeyword",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#MailboxRule"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A word or phrase a MailboxRule looks for in a message's subject or body to select it."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "matchesKeyword"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "One property whichever part of the message the rule searches; the exact conditions are in stonework:ruleContent."
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#matchesSender",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#MailboxRule"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#EmailAddress"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A sender whose messages a MailboxRule selects."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "matchesSender"
+  } ]
+}, {
   "@id" : "https://cyberterrain.org/ns/stonework#memberOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid151"
+    "@id" : "_:genid154"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -12867,6 +13760,23 @@
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
     "@value" : "Keeps the merged Investigation as a record rather than deleting it, so its identity, findings and history stay traceable. A merge is an analyst's decision; when and by whom are recorded through stonework:hasProvenance or a stonework:QualifiedAssertion."
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#messageId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#EmailMessage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The Message-ID header of an EmailMessage, with its angle brackets."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "messageId"
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#metricAccountBalance",
@@ -13579,6 +14489,27 @@
     "@value" : "Unpredictable"
   } ]
 }, {
+  "@id" : "https://cyberterrain.org/ns/stonework#movesToFolder",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#MailboxRule"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The name of the folder a MailboxRule moves the messages it selects to."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "movesToFolder"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Folders the holder rarely opens, such as RSS Feeds, Conversation History or Archive, keep selected messages out of sight (T1564.008)."
+  } ]
+}, {
   "@id" : "https://cyberterrain.org/ns/stonework#mutexName",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -13630,7 +14561,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#objective",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid243"
+    "@id" : "_:genid249"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -13664,7 +14595,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#observedIn",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid155"
+    "@id" : "_:genid158"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#CyberActivity"
@@ -13702,10 +14633,10 @@
   "@id" : "https://cyberterrain.org/ns/stonework#operatesIn",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid163"
+    "@id" : "_:genid166"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid166"
+    "@id" : "_:genid169"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -13722,7 +14653,7 @@
     "@id" : "https://cyberterrain.org/ns/stonework#Opinion"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid169"
+    "@id" : "_:genid172"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -13886,7 +14817,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#ownedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid172"
+    "@id" : "_:genid175"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Agent"
@@ -14166,7 +15097,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#performedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid175"
+    "@id" : "_:genid178"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Agent"
@@ -14609,7 +15540,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#posesThreat",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid180"
+    "@id" : "_:genid183"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Threat"
@@ -14916,10 +15847,10 @@
   "@id" : "https://cyberterrain.org/ns/stonework#producesReport",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid183"
+    "@id" : "_:genid186"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid186"
+    "@id" : "_:genid189"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -15211,10 +16142,10 @@
   "@id" : "https://cyberterrain.org/ns/stonework#protects",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid189"
+    "@id" : "_:genid192"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid192"
+    "@id" : "_:genid195"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -15231,7 +16162,7 @@
     "@id" : "https://cyberterrain.org/ns/stonework#Provenance"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid195"
+    "@id" : "_:genid198"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -15297,6 +16228,23 @@
     "@value" : "rawEntry"
   } ]
 }, {
+  "@id" : "https://cyberterrain.org/ns/stonework#redirectsTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#MailboxRule"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#EmailAddress"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "An address a MailboxRule redirects the messages it selects to, keeping the original sender, so the recipient sees them as if sent directly."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "redirectsTo"
+  } ]
+}, {
   "@id" : "https://cyberterrain.org/ns/stonework#references",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
@@ -15305,6 +16253,23 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@value" : "references"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#referencesMessage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#EmailMessage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#EmailMessage"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "An earlier EmailMessage of the same thread, named by its Message-ID in the References header."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "referencesMessage"
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#refersTo",
@@ -15547,7 +16512,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#reliability",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid247"
+    "@id" : "_:genid253"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -15564,7 +16529,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#remediates",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid198"
+    "@id" : "_:genid201"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -15577,7 +16542,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#reportedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid201"
+    "@id" : "_:genid204"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Agent"
@@ -16004,7 +16969,7 @@
     "@id" : "https://cyberterrain.org/ns/stonework#RoleAssignment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid204"
+    "@id" : "_:genid207"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -16038,18 +17003,35 @@
   "@id" : "https://cyberterrain.org/ns/stonework#ruleContent",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#DetectionRule"
+    "@id" : "_:genid256"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "The full text content of the detection rule."
+    "@value" : "The full text content of a detection rule, or the recorded definition of a mailbox rule (its conditions and actions as the mail service reports them)."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "ruleContent"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#ruleEnabled",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#MailboxRule"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Whether a MailboxRule is enabled, as last recorded."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "ruleEnabled"
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#ruleFormat",
@@ -16072,18 +17054,35 @@
   "@id" : "https://cyberterrain.org/ns/stonework#ruleName",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#DetectionRule"
+    "@id" : "_:genid259"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "The human-readable name of the detection rule."
+    "@value" : "The human-readable name of a detection rule or mailbox rule."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "ruleName"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#ruleOfMailbox",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#MailboxRule"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#UserAccount"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The mailbox account a MailboxRule belongs to and applies to."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "ruleOfMailbox"
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#ruleVersion",
@@ -16143,7 +17142,7 @@
     "@id" : "https://cyberterrain.org/ns/stonework#ThreatScenario"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid207"
+    "@id" : "_:genid210"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -16190,6 +17189,27 @@
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "STONEWORK Sector Scheme"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#sentAtTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#EmailMessage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The time in an EmailMessage's Date header."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "sentAtTime"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "The sending client sets the Date header, so this is the sender's claim. The times receiving servers observed are on the Received hops, each a stonework:Event generatedFrom the message."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#separatedFrom",
@@ -16300,7 +17320,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#severity",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid250"
+    "@id" : "_:genid262"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -16349,7 +17369,7 @@
     "@id" : "https://cyberterrain.org/ns/stonework#Sighting"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid210"
+    "@id" : "_:genid213"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -16761,7 +17781,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#storedOn",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid213"
+    "@id" : "_:genid216"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Host"
@@ -16967,7 +17987,7 @@
     "@id" : "https://cyberterrain.org/ns/stonework#"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid217"
+    "@id" : "_:genid220"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#hasTechnique"
@@ -17888,7 +18908,7 @@
     "@id" : "https://cyberterrain.org/ns/stonework#Plan"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid220"
+    "@id" : "_:genid223"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#triggersPlaybook"
@@ -17905,7 +18925,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#triggersPlaybook",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid223"
+    "@id" : "_:genid226"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Plan"
@@ -18011,6 +19031,27 @@
     "@value" : "Mirrors prov:used. Records data flow in a run: the binding a Step's execution received for one of its input Variables, usually bound by an earlier Step's execution. Recorded rather than inferred from times, because after a loop an output Variable has several bindings in the same run."
   } ]
 }, {
+  "@id" : "https://cyberterrain.org/ns/stonework#usedUserAgent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid229"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#UserAgent"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates an activity, such as a sign-in, or NetworkTraffic to the UserAgent its client presented."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "usedUserAgent"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "A sign-in with a user agent its account has never presented, or one typical of scripted clients, is a common sign of a session the holder didn't start."
+  } ]
+}, {
   "@id" : "https://cyberterrain.org/ns/stonework#userAgentString",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -18044,7 +19085,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#usesDetectionRule",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid226"
+    "@id" : "_:genid232"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#DetectionRule"
@@ -18065,7 +19106,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#usesInfrastructure",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid229"
+    "@id" : "_:genid235"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Infrastructure"
@@ -18195,10 +19236,10 @@
   "@id" : "https://cyberterrain.org/ns/stonework#variantOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid234"
+    "@id" : "_:genid240"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid237"
+    "@id" : "_:genid243"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",

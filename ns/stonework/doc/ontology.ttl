@@ -7,11 +7,11 @@
 @base <https://cyberterrain.org/ns/stonework#> .
 
 <https://cyberterrain.org/ns/stonework#> rdf:type owl:Ontology ;
-                                          owl:versionIRI <https://cyberterrain.org/ns/stonework/0.12.0> ;
+                                          owl:versionIRI <https://cyberterrain.org/ns/stonework/0.13.0> ;
                                           <http://purl.org/dc/terms/creator> "Hohimer Intelligence Strategies LLC" ;
                                           <http://purl.org/dc/terms/license> <https://opensource.org/licenses/MIT> ;
                                           rdfs:label "STONEWORK"@en ;
-                                          owl:versionInfo "0.12.0" .
+                                          owl:versionInfo "0.13.0" .
 
 #################################################################
 #    Annotation properties
@@ -301,6 +301,24 @@ xsd:date rdf:type rdfs:Datatype .
                    <http://www.w3.org/2004/02/skos/core#definition> "Links a digital identity to the real-world Agent it is believed to belong to." ;
                    <http://www.w3.org/2004/02/skos/core#prefLabel> "attributedToAgent" ;
                    <http://www.w3.org/2004/02/skos/core#scopeNote> "Names the identity's holder, not whoever used it on a given occasion. When an identity is used by someone else, such as an actor holding a victim's stolen credentials, the activity keeps the identity as its stonework:performedBy and names the Agent responsible with stonework:attributedTo. That someone else controlled the identity for a period, such as an actor holding a mailbox's credentials from its compromise to its containment, is a stonework:IdentityControl."@en .
+
+
+###  https://cyberterrain.org/ns/stonework#authenticatedBy
+:authenticatedBy rdf:type owl:ObjectProperty ,
+                          owl:FunctionalProperty ;
+                 rdfs:domain :EmailAuthenticationResult ;
+                 rdfs:range :Infrastructure ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "The server that performed an authentication check and recorded its result (the authserv-id of an Authentication-Results header)."@en ;
+                 <http://www.w3.org/2004/02/skos/core#prefLabel> "authenticatedBy"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#authenticatedDomain
+:authenticatedDomain rdf:type owl:ObjectProperty ,
+                              owl:FunctionalProperty ;
+                     rdfs:domain :EmailAuthenticationResult ;
+                     rdfs:range :Domain ;
+                     <http://www.w3.org/2004/02/skos/core#definition> "The domain an authentication check evaluated: the envelope sender's domain for SPF, the signing domain for DKIM, the From domain for DMARC."@en ;
+                     <http://www.w3.org/2004/02/skos/core#prefLabel> "authenticatedDomain"@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#authoredBy
@@ -836,6 +854,14 @@ xsd:date rdf:type rdfs:Datatype .
                 <http://www.w3.org/2004/02/skos/core#scopeNote> "The range is a stonework:VersionedProduct individual whose IRI is derived deterministically from the CPE identifier. Populated by CVE/patch ingest."@en .
 
 
+###  https://cyberterrain.org/ns/stonework#forwardsTo
+:forwardsTo rdf:type owl:ObjectProperty ;
+            rdfs:domain :MailboxRule ;
+            rdfs:range :EmailAddress ;
+            <http://www.w3.org/2004/02/skos/core#definition> "An address a MailboxRule forwards the messages it selects to, inline or as attachments."@en ;
+            <http://www.w3.org/2004/02/skos/core#prefLabel> "forwardsTo"@en .
+
+
 ###  https://cyberterrain.org/ns/stonework#fromStep
 :fromStep rdf:type owl:ObjectProperty ,
                    owl:FunctionalProperty ;
@@ -874,13 +900,10 @@ xsd:date rdf:type rdfs:Datatype .
 ###  https://cyberterrain.org/ns/stonework#generatedFrom
 :generatedFrom rdf:type owl:ObjectProperty ;
                rdfs:domain :Event ;
-               rdfs:range [ rdf:type owl:Class ;
-                            owl:unionOf ( :Log
-                                          :NetworkTraffic
-                                        )
-                          ] ;
-               <http://www.w3.org/2004/02/skos/core#definition> "Links an Event to the raw log or network traffic from which it was derived."@en ;
-               <http://www.w3.org/2004/02/skos/core#prefLabel> "generatedFrom"@en .
+               rdfs:range :DigitalArtifact ;
+               <http://www.w3.org/2004/02/skos/core#definition> "Links an Event to the raw record from which it was derived: a log, network traffic, or another artifact such as an EmailMessage whose Received headers record its route."@en ;
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "generatedFrom"@en ;
+               <http://www.w3.org/2004/02/skos/core#scopeNote> "The Event keeps this link when an analyst later assigns it to a Step (stonework:correspondsToStep), so an execution found in evidence stays traceable to the record it came from. Name the record within the artifact with stonework:externalId on the Event, such as an audit-log record's identifier."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#grantedTo
@@ -970,6 +993,50 @@ xsd:date rdf:type rdfs:Datatype .
              <http://www.w3.org/2004/02/skos/core#scopeNote> "Optional — a MalwareSample may be known via hashes or threat reports without the binary being available. When present, the artifact provides retrievable binary evidence. Corresponds to the STIX 2.1 sample_refs property on the malware SDO."@en .
 
 
+###  https://cyberterrain.org/ns/stonework#hasAttachment
+:hasAttachment rdf:type owl:ObjectProperty ;
+               rdfs:domain :EmailMessage ;
+               rdfs:range :File ;
+               <http://www.w3.org/2004/02/skos/core#definition> "A File attached to an EmailMessage."@en ;
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "hasAttachment"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#hasAuthenticationMethod
+:hasAuthenticationMethod rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :categorizedBy ;
+                         rdf:type owl:FunctionalProperty ;
+                         rdfs:domain :EmailAuthenticationResult ;
+                         rdfs:range :AuthenticationMethod ;
+                         <http://www.w3.org/2004/02/skos/core#definition> "The method of a sender-authentication check: SPF, DKIM, DMARC or ARC."@en ;
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "hasAuthenticationMethod"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#hasAuthenticationResult
+:hasAuthenticationResult rdf:type owl:ObjectProperty ;
+                         rdfs:domain :EmailMessage ;
+                         rdfs:range :EmailAuthenticationResult ;
+                         <http://www.w3.org/2004/02/skos/core#definition> "The result of a sender-authentication check a receiving server performed on an EmailMessage."@en ;
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "hasAuthenticationResult"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#hasAuthenticationVerdict
+:hasAuthenticationVerdict rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf :categorizedBy ;
+                          rdf:type owl:FunctionalProperty ;
+                          rdfs:domain :EmailAuthenticationResult ;
+                          rdfs:range :AuthenticationVerdict ;
+                          <http://www.w3.org/2004/02/skos/core#definition> "The verdict a sender-authentication check reached."@en ;
+                          <http://www.w3.org/2004/02/skos/core#prefLabel> "hasAuthenticationVerdict"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#hasBccAddress
+:hasBccAddress rdf:type owl:ObjectProperty ;
+               rdfs:domain :EmailMessage ;
+               rdfs:range :EmailAddress ;
+               <http://www.w3.org/2004/02/skos/core#definition> "An address in an EmailMessage's Bcc header, where the sender's copy records one."@en ;
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "hasBccAddress"@en .
+
+
 ###  https://cyberterrain.org/ns/stonework#hasBehavior
 :hasBehavior rdf:type owl:ObjectProperty ;
              rdfs:range :Behavior ;
@@ -984,6 +1051,14 @@ xsd:date rdf:type rdfs:Datatype .
              <http://www.w3.org/2004/02/skos/core#definition> "Relates a Software Bill of Materials to one of its component entries."@en ;
              <http://www.w3.org/2004/02/skos/core#prefLabel> "has BOM entry" ;
              <http://www.w3.org/2004/02/skos/core#scopeNote> "Each BomEntry carries the component's VersionedProduct reference (via stonework:installationOf) and any component-specific metadata (PURL, license, hash, component type). Range is BomEntry rather than VersionedProduct directly because the same VersionedProduct may appear in multiple SBOMs with different component-level attributes."@en .
+
+
+###  https://cyberterrain.org/ns/stonework#hasCcAddress
+:hasCcAddress rdf:type owl:ObjectProperty ;
+              rdfs:domain :EmailMessage ;
+              rdfs:range :EmailAddress ;
+              <http://www.w3.org/2004/02/skos/core#definition> "An address in an EmailMessage's Cc header."@en ;
+              <http://www.w3.org/2004/02/skos/core#prefLabel> "hasCcAddress"@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#hasCvssMetric
@@ -1007,9 +1082,13 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://cyberterrain.org/ns/stonework#hasDestinationAddress
 :hasDestinationAddress rdf:type owl:ObjectProperty ;
-                       rdfs:domain :NetworkTraffic ;
+                       rdfs:domain [ rdf:type owl:Class ;
+                                     owl:unionOf ( :CyberActivity
+                                                   :NetworkTraffic
+                                                 )
+                                   ] ;
                        rdfs:range :IPAddress ;
-                       <http://www.w3.org/2004/02/skos/core#definition> "Relates NetworkTraffic to the destination IP address."@en ;
+                       <http://www.w3.org/2004/02/skos/core#definition> "Relates NetworkTraffic, or an activity observed on the network, to the destination IP address."@en ;
                        <http://www.w3.org/2004/02/skos/core#prefLabel> "hasDestinationAddress"@en .
 
 
@@ -1063,6 +1142,16 @@ xsd:date rdf:type rdfs:Datatype .
                       rdfs:range :FalsePositiveRate ;
                       <http://www.w3.org/2004/02/skos/core#definition> "Relates a detection rule to an ordinal assessment of its expected false-positive frequency."@en ;
                       <http://www.w3.org/2004/02/skos/core#prefLabel> "hasFalsePositiveRate"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#hasFromAddress
+:hasFromAddress rdf:type owl:ObjectProperty ,
+                         owl:FunctionalProperty ;
+                rdfs:domain :EmailMessage ;
+                rdfs:range :EmailAddress ;
+                <http://www.w3.org/2004/02/skos/core#definition> "The address in an EmailMessage's From header: the author the recipient sees."@en ;
+                <http://www.w3.org/2004/02/skos/core#prefLabel> "hasFromAddress"@en ;
+                <http://www.w3.org/2004/02/skos/core#scopeNote> "Single-valued, as STIX's from_ref is. RFC 5322 allows a list of authors, with a Sender; record the first author here."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#hasHash
@@ -1394,6 +1483,15 @@ xsd:date rdf:type rdfs:Datatype .
                <http://www.w3.org/2004/02/skos/core#prefLabel> "hasProvenance"@en .
 
 
+###  https://cyberterrain.org/ns/stonework#hasReplyToAddress
+:hasReplyToAddress rdf:type owl:ObjectProperty ;
+                   rdfs:domain :EmailMessage ;
+                   rdfs:range :EmailAddress ;
+                   <http://www.w3.org/2004/02/skos/core#definition> "An address in an EmailMessage's Reply-To header, where replies go."@en ;
+                   <http://www.w3.org/2004/02/skos/core#prefLabel> "hasReplyToAddress"@en ;
+                   <http://www.w3.org/2004/02/skos/core#scopeNote> "A Reply-To that differs from the From address sends the recipient's answer to someone else, a common step in business email compromise. STIX has no Reply-To property."@en .
+
+
 ###  https://cyberterrain.org/ns/stonework#hasResourceLevel
 :hasResourceLevel rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf :categorizedBy ;
@@ -1401,6 +1499,15 @@ xsd:date rdf:type rdfs:Datatype .
                   rdfs:range :ResourceLevel ;
                   <http://www.w3.org/2004/02/skos/core#definition> "Relates a threat actor to an assessment of the organizational resources available to it."@en ;
                   <http://www.w3.org/2004/02/skos/core#prefLabel> "hasResourceLevel"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#hasReturnPathAddress
+:hasReturnPathAddress rdf:type owl:ObjectProperty ,
+                               owl:FunctionalProperty ;
+                      rdfs:domain :EmailMessage ;
+                      rdfs:range :EmailAddress ;
+                      <http://www.w3.org/2004/02/skos/core#definition> "The address in an EmailMessage's Return-Path header: the envelope sender, where bounces go and whose domain SPF checks."@en ;
+                      <http://www.w3.org/2004/02/skos/core#prefLabel> "hasReturnPathAddress"@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#hasRisk
@@ -1433,6 +1540,15 @@ xsd:date rdf:type rdfs:Datatype .
                    <http://www.w3.org/2004/02/skos/core#prefLabel> "hasRoleAssignment"@en .
 
 
+###  https://cyberterrain.org/ns/stonework#hasSenderAddress
+:hasSenderAddress rdf:type owl:ObjectProperty ,
+                           owl:FunctionalProperty ;
+                  rdfs:domain :EmailMessage ;
+                  rdfs:range :EmailAddress ;
+                  <http://www.w3.org/2004/02/skos/core#definition> "The address in an EmailMessage's Sender header: the mailbox that sent the message on the author's behalf."@en ;
+                  <http://www.w3.org/2004/02/skos/core#prefLabel> "hasSenderAddress"@en .
+
+
 ###  https://cyberterrain.org/ns/stonework#hasSignature
 :hasSignature rdf:type owl:ObjectProperty ;
               rdfs:range :Signature ;
@@ -1451,10 +1567,15 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://cyberterrain.org/ns/stonework#hasSourceAddress
 :hasSourceAddress rdf:type owl:ObjectProperty ;
-                  rdfs:domain :NetworkTraffic ;
+                  rdfs:domain [ rdf:type owl:Class ;
+                                owl:unionOf ( :CyberActivity
+                                              :NetworkTraffic
+                                            )
+                              ] ;
                   rdfs:range :IPAddress ;
-                  <http://www.w3.org/2004/02/skos/core#definition> "Relates NetworkTraffic to the source IP address."@en ;
-                  <http://www.w3.org/2004/02/skos/core#prefLabel> "hasSourceAddress"@en .
+                  <http://www.w3.org/2004/02/skos/core#definition> "Relates NetworkTraffic, or an activity observed on the network, to the source IP address: the client of a sign-in, the sending server of a Received hop."@en ;
+                  <http://www.w3.org/2004/02/skos/core#prefLabel> "hasSourceAddress"@en ;
+                  <http://www.w3.org/2004/02/skos/core#scopeNote> "Where the address was is a fact about the address: say it with stonework:locatedAt on the IPAddress (a geolocation lookup gives a Country or Region), not on the activity."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#hasStep
@@ -1487,6 +1608,14 @@ xsd:date rdf:type rdfs:Datatype .
                     <http://www.w3.org/2004/02/skos/core#definition> "Relates a threat actor to one or more classifications describing their organizational form or primary mode of operation."@en ;
                     <http://www.w3.org/2004/02/skos/core#prefLabel> "hasThreatActorType"@en ;
                     <http://www.w3.org/2004/02/skos/core#scopeNote> "A threat actor may have multiple types (e.g. nation-state actor who is also a spy). Aligns with the STIX 2.1 threat-actor-type open vocabulary."@en .
+
+
+###  https://cyberterrain.org/ns/stonework#hasToAddress
+:hasToAddress rdf:type owl:ObjectProperty ;
+              rdfs:domain :EmailMessage ;
+              rdfs:range :EmailAddress ;
+              <http://www.w3.org/2004/02/skos/core#definition> "An address in an EmailMessage's To header."@en ;
+              <http://www.w3.org/2004/02/skos/core#prefLabel> "hasToAddress"@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#hasVendor
@@ -1634,6 +1763,15 @@ xsd:date rdf:type rdfs:Datatype .
          rdfs:range :IPBlock ;
          <http://www.w3.org/2004/02/skos/core#definition> "Relates an IPAddress to the IPBlock whose address space contains it."@en ;
          <http://www.w3.org/2004/02/skos/core#prefLabel> "inBlock"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#inReplyTo
+:inReplyTo rdf:type owl:ObjectProperty ;
+           rdfs:domain :EmailMessage ;
+           rdfs:range :EmailMessage ;
+           <http://www.w3.org/2004/02/skos/core#definition> "The EmailMessage this one answers, named by its Message-ID in the In-Reply-To header."@en ;
+           <http://www.w3.org/2004/02/skos/core#prefLabel> "inReplyTo"@en ;
+           <http://www.w3.org/2004/02/skos/core#scopeNote> "The answered message need not be at hand: give it its stonework:messageId and nothing else, and it is the same resource when its own copy is added. A reply placed in a genuine thread is how an actor who has read the thread makes a request look routine."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#indicates
@@ -1871,6 +2009,14 @@ xsd:date rdf:type rdfs:Datatype .
             rdfs:range :Markings ;
             <http://www.w3.org/2004/02/skos/core#definition> "Reference to the Markings applied by this marking entry." ;
             <http://www.w3.org/2004/02/skos/core#prefLabel> "markingRef" .
+
+
+###  https://cyberterrain.org/ns/stonework#matchesSender
+:matchesSender rdf:type owl:ObjectProperty ;
+               rdfs:domain :MailboxRule ;
+               rdfs:range :EmailAddress ;
+               <http://www.w3.org/2004/02/skos/core#definition> "A sender whose messages a MailboxRule selects."@en ;
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "matchesSender"@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#memberOf
@@ -2260,10 +2406,26 @@ xsd:date rdf:type rdfs:Datatype .
               <http://www.w3.org/2004/02/skos/core#prefLabel> "provenanceOf"@en .
 
 
+###  https://cyberterrain.org/ns/stonework#redirectsTo
+:redirectsTo rdf:type owl:ObjectProperty ;
+             rdfs:domain :MailboxRule ;
+             rdfs:range :EmailAddress ;
+             <http://www.w3.org/2004/02/skos/core#definition> "An address a MailboxRule redirects the messages it selects to, keeping the original sender, so the recipient sees them as if sent directly."@en ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "redirectsTo"@en .
+
+
 ###  https://cyberterrain.org/ns/stonework#references
 :references rdf:type owl:ObjectProperty ;
             <http://www.w3.org/2004/02/skos/core#definition> "Generic reference from one entity to another. Use a more specific property where one exists."@en ;
             <http://www.w3.org/2004/02/skos/core#prefLabel> "references" .
+
+
+###  https://cyberterrain.org/ns/stonework#referencesMessage
+:referencesMessage rdf:type owl:ObjectProperty ;
+                   rdfs:domain :EmailMessage ;
+                   rdfs:range :EmailMessage ;
+                   <http://www.w3.org/2004/02/skos/core#definition> "An earlier EmailMessage of the same thread, named by its Message-ID in the References header."@en ;
+                   <http://www.w3.org/2004/02/skos/core#prefLabel> "referencesMessage"@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#refersTo
@@ -2412,6 +2574,15 @@ xsd:date rdf:type rdfs:Datatype .
             rdfs:range :CyberEntity ;
             <http://www.w3.org/2004/02/skos/core#definition> "The entity that bears the Role in a qualified RoleAssignment."@en ;
             <http://www.w3.org/2004/02/skos/core#prefLabel> "rolePlayer"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#ruleOfMailbox
+:ruleOfMailbox rdf:type owl:ObjectProperty ,
+                        owl:FunctionalProperty ;
+               rdfs:domain :MailboxRule ;
+               rdfs:range :UserAccount ;
+               <http://www.w3.org/2004/02/skos/core#definition> "The mailbox account a MailboxRule belongs to and applies to."@en ;
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "ruleOfMailbox"@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#runs
@@ -2724,6 +2895,19 @@ xsd:date rdf:type rdfs:Datatype .
              <http://www.w3.org/2004/02/skos/core#definition> "Relates an execution to a VariableBinding whose value it received as input."@en ;
              <http://www.w3.org/2004/02/skos/core#prefLabel> "usedBinding" ;
              <http://www.w3.org/2004/02/skos/core#scopeNote> "Mirrors prov:used. Records data flow in a run: the binding a Step's execution received for one of its input Variables, usually bound by an earlier Step's execution. Recorded rather than inferred from times, because after a loop an output Variable has several bindings in the same run."@en .
+
+
+###  https://cyberterrain.org/ns/stonework#usedUserAgent
+:usedUserAgent rdf:type owl:ObjectProperty ;
+               rdfs:domain [ rdf:type owl:Class ;
+                             owl:unionOf ( :CyberActivity
+                                           :NetworkTraffic
+                                         )
+                           ] ;
+               rdfs:range :UserAgent ;
+               <http://www.w3.org/2004/02/skos/core#definition> "Relates an activity, such as a sign-in, or NetworkTraffic to the UserAgent its client presented."@en ;
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "usedUserAgent"@en ;
+               <http://www.w3.org/2004/02/skos/core#scopeNote> "A sign-in with a user agent its account has never presented, or one typical of scripted clients, is a common sign of a session the holder didn't start."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#uses
@@ -3266,6 +3450,15 @@ xsd:date rdf:type rdfs:Datatype .
              <http://www.w3.org/2004/02/skos/core#scopeNote> "Corresponds to cveMetadata.dateUpdated in CVE JSON 5.x and equivalent update timestamps from other vulnerability sources. cve:dateUpdated is declared rdfs:subPropertyOf this property (one-way)."@en .
 
 
+###  https://cyberterrain.org/ns/stonework#deletesMessage
+:deletesMessage rdf:type owl:DatatypeProperty ,
+                         owl:FunctionalProperty ;
+                rdfs:domain :MailboxRule ;
+                rdfs:range xsd:boolean ;
+                <http://www.w3.org/2004/02/skos/core#definition> "Whether a MailboxRule deletes the messages it selects."@en ;
+                <http://www.w3.org/2004/02/skos/core#prefLabel> "deletesMessage"@en .
+
+
 ###  https://cyberterrain.org/ns/stonework#description
 :description rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf <http://purl.org/dc/terms/description> ;
@@ -3297,6 +3490,23 @@ xsd:date rdf:type rdfs:Datatype .
          rdfs:range xsd:unsignedShort ;
          <http://www.w3.org/2004/02/skos/core#definition> "The destination TCP/UDP port number."@en ;
          <http://www.w3.org/2004/02/skos/core#prefLabel> "dstPort"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#emailBody
+:emailBody rdf:type owl:DatatypeProperty ;
+           rdfs:domain :EmailMessage ;
+           rdfs:range xsd:string ;
+           <http://www.w3.org/2004/02/skos/core#definition> "The text of an EmailMessage's body (its text/plain part, or the text of its HTML part)."@en ;
+           <http://www.w3.org/2004/02/skos/core#prefLabel> "emailBody"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#emailSubject
+:emailSubject rdf:type owl:DatatypeProperty ,
+                       owl:FunctionalProperty ;
+              rdfs:domain :EmailMessage ;
+              rdfs:range xsd:string ;
+              <http://www.w3.org/2004/02/skos/core#definition> "The Subject header of an EmailMessage."@en ;
+              <http://www.w3.org/2004/02/skos/core#prefLabel> "emailSubject"@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#emailValue
@@ -3408,6 +3618,16 @@ xsd:date rdf:type rdfs:Datatype .
       <http://www.w3.org/2004/02/skos/core#prefLabel> "fqdn"@en .
 
 
+###  https://cyberterrain.org/ns/stonework#fromDisplayName
+:fromDisplayName rdf:type owl:DatatypeProperty ,
+                          owl:FunctionalProperty ;
+                 rdfs:domain :EmailMessage ;
+                 rdfs:range xsd:string ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "The display name in an EmailMessage's From header, as this message gave it."@en ;
+                 <http://www.w3.org/2004/02/skos/core#prefLabel> "fromDisplayName"@en ;
+                 <http://www.w3.org/2004/02/skos/core#scopeNote> "Recorded on the message, not the address, because the sender chooses it per message: display-name spoofing pairs a trusted name with an unrelated address. stonework:displayName on an EmailAddress is the name usually associated with the address."@en .
+
+
 ###  https://cyberterrain.org/ns/stonework#groupName
 :groupName rdf:type owl:DatatypeProperty ;
            rdfs:domain :UserGroup ;
@@ -3442,6 +3662,16 @@ xsd:date rdf:type rdfs:Datatype .
            rdfs:range xsd:string ;
            <http://www.w3.org/2004/02/skos/core#definition> "The hex-encoded digest produced by the hash algorithm."@en ;
            <http://www.w3.org/2004/02/skos/core#prefLabel> "hashValue"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#hiddenFromUser
+:hiddenFromUser rdf:type owl:DatatypeProperty ,
+                         owl:FunctionalProperty ;
+                rdfs:domain :MailboxRule ;
+                rdfs:range xsd:boolean ;
+                <http://www.w3.org/2004/02/skos/core#definition> "Whether a MailboxRule is hidden from the mailbox's holder, so that it appears in neither the mail client nor the mailbox settings and only an administrative query finds it."@en ;
+                <http://www.w3.org/2004/02/skos/core#prefLabel> "hiddenFromUser"@en ;
+                <http://www.w3.org/2004/02/skos/core#scopeNote> "A hidden rule is distinct from a rule that hides messages, such as one that moves them to a folder the holder never opens (stonework:movesToFolder)."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#hostname
@@ -3570,6 +3800,33 @@ xsd:date rdf:type rdfs:Datatype .
            <http://www.w3.org/2004/02/skos/core#prefLabel> "longitude"@en .
 
 
+###  https://cyberterrain.org/ns/stonework#marksAsRead
+:marksAsRead rdf:type owl:DatatypeProperty ,
+                      owl:FunctionalProperty ;
+             rdfs:domain :MailboxRule ;
+             rdfs:range xsd:boolean ;
+             <http://www.w3.org/2004/02/skos/core#definition> "Whether a MailboxRule marks the messages it selects as read."@en ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "marksAsRead"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#matchesKeyword
+:matchesKeyword rdf:type owl:DatatypeProperty ;
+                rdfs:domain :MailboxRule ;
+                rdfs:range xsd:string ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A word or phrase a MailboxRule looks for in a message's subject or body to select it."@en ;
+                <http://www.w3.org/2004/02/skos/core#prefLabel> "matchesKeyword"@en ;
+                <http://www.w3.org/2004/02/skos/core#scopeNote> "One property whichever part of the message the rule searches; the exact conditions are in stonework:ruleContent."@en .
+
+
+###  https://cyberterrain.org/ns/stonework#messageId
+:messageId rdf:type owl:DatatypeProperty ,
+                    owl:FunctionalProperty ;
+           rdfs:domain :EmailMessage ;
+           rdfs:range xsd:string ;
+           <http://www.w3.org/2004/02/skos/core#definition> "The Message-ID header of an EmailMessage, with its angle brackets."@en ;
+           <http://www.w3.org/2004/02/skos/core#prefLabel> "messageId"@en .
+
+
 ###  https://cyberterrain.org/ns/stonework#metricValue
 :metricValue rdf:type owl:DatatypeProperty ,
                       owl:FunctionalProperty ;
@@ -3612,6 +3869,16 @@ xsd:date rdf:type rdfs:Datatype .
           <http://www.w3.org/2004/02/skos/core#definition> "The timestamp when this individual was last modified."@en ;
           <http://www.w3.org/2004/02/skos/core#prefLabel> "modified"@en ;
           <http://www.w3.org/2004/02/skos/core#scopeNote> "Compatibility alias for dcterms:modified. Prefer dcterms:modified in newly authored data."@en .
+
+
+###  https://cyberterrain.org/ns/stonework#movesToFolder
+:movesToFolder rdf:type owl:DatatypeProperty ,
+                        owl:FunctionalProperty ;
+               rdfs:domain :MailboxRule ;
+               rdfs:range xsd:string ;
+               <http://www.w3.org/2004/02/skos/core#definition> "The name of the folder a MailboxRule moves the messages it selects to."@en ;
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "movesToFolder"@en ;
+               <http://www.w3.org/2004/02/skos/core#scopeNote> "Folders the holder rarely opens, such as RSS Feeds, Conversation History or Archive, keep selected messages out of sight (T1564.008)."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#mutexName
@@ -3887,10 +4154,23 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://cyberterrain.org/ns/stonework#ruleContent
 :ruleContent rdf:type owl:DatatypeProperty ;
-             rdfs:domain :DetectionRule ;
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( :DetectionRule
+                                         :MailboxRule
+                                       )
+                         ] ;
              rdfs:range xsd:string ;
-             <http://www.w3.org/2004/02/skos/core#definition> "The full text content of the detection rule."@en ;
+             <http://www.w3.org/2004/02/skos/core#definition> "The full text content of a detection rule, or the recorded definition of a mailbox rule (its conditions and actions as the mail service reports them)."@en ;
              <http://www.w3.org/2004/02/skos/core#prefLabel> "ruleContent"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#ruleEnabled
+:ruleEnabled rdf:type owl:DatatypeProperty ,
+                      owl:FunctionalProperty ;
+             rdfs:domain :MailboxRule ;
+             rdfs:range xsd:boolean ;
+             <http://www.w3.org/2004/02/skos/core#definition> "Whether a MailboxRule is enabled, as last recorded."@en ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "ruleEnabled"@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#ruleFormat
@@ -3903,9 +4183,13 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://cyberterrain.org/ns/stonework#ruleName
 :ruleName rdf:type owl:DatatypeProperty ;
-          rdfs:domain :DetectionRule ;
+          rdfs:domain [ rdf:type owl:Class ;
+                        owl:unionOf ( :DetectionRule
+                                      :MailboxRule
+                                    )
+                      ] ;
           rdfs:range xsd:string ;
-          <http://www.w3.org/2004/02/skos/core#definition> "The human-readable name of the detection rule."@en ;
+          <http://www.w3.org/2004/02/skos/core#definition> "The human-readable name of a detection rule or mailbox rule."@en ;
           <http://www.w3.org/2004/02/skos/core#prefLabel> "ruleName"@en .
 
 
@@ -3915,6 +4199,16 @@ xsd:date rdf:type rdfs:Datatype .
              rdfs:range xsd:string ;
              <http://www.w3.org/2004/02/skos/core#definition> "The version string of the detection rule."@en ;
              <http://www.w3.org/2004/02/skos/core#prefLabel> "ruleVersion"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#sentAtTime
+:sentAtTime rdf:type owl:DatatypeProperty ,
+                     owl:FunctionalProperty ;
+            rdfs:domain :EmailMessage ;
+            rdfs:range xsd:dateTime ;
+            <http://www.w3.org/2004/02/skos/core#definition> "The time in an EmailMessage's Date header."@en ;
+            <http://www.w3.org/2004/02/skos/core#prefLabel> "sentAtTime"@en ;
+            <http://www.w3.org/2004/02/skos/core#scopeNote> "The sending client sets the Date header, so this is the sender's claim. The times receiving servers observed are on the Received hops, each a stonework:Event generatedFrom the message."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#serialNumber
@@ -4269,6 +4563,30 @@ rdfs:Class rdf:type owl:Class .
                  <http://www.w3.org/2004/02/skos/core#scopeNote> "Aligns with MITRE ATT&CK techniques and D3FEND OffensiveTechnique. The MITRE ATT&CK-shaped realization of stonework:AttackPattern — operationalized for execution, as distinct from CAPEC's more abstract taxonomy-entry shape (capec:AttackPattern, also a stonework:AttackPattern). Framework-specific subclasses (e.g. attack:Technique) provide the concrete individuals. A specific, concrete realization of this technique is modeled as a stonework:Procedure, linked back via stonework:implementedBy."@en .
 
 
+###  https://cyberterrain.org/ns/stonework#AuthenticationMethod
+:AuthenticationMethod rdf:type owl:Class ;
+                      rdfs:subClassOf :Category ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                        owl:hasValue :authenticationMethodScheme
+                                      ] ;
+                      <http://www.w3.org/2004/02/skos/core#definition> "A sender-authentication method for email."@en ;
+                      <http://www.w3.org/2004/02/skos/core#prefLabel> "Authentication Method"@en ;
+                      <http://www.w3.org/2004/02/skos/core#scopeNote> "Applied via stonework:hasAuthenticationMethod to EmailAuthenticationResult individuals. Named individuals: SPF, DKIM, DMARC, ARC."@en .
+
+
+###  https://cyberterrain.org/ns/stonework#AuthenticationVerdict
+:AuthenticationVerdict rdf:type owl:Class ;
+                       rdfs:subClassOf :Category ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                         owl:hasValue :authenticationVerdictScheme
+                                       ] ;
+                       <http://www.w3.org/2004/02/skos/core#definition> "A verdict of a sender-authentication check on an email."@en ;
+                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Authentication Verdict"@en ;
+                       <http://www.w3.org/2004/02/skos/core#scopeNote> "Applied via stonework:hasAuthenticationVerdict to EmailAuthenticationResult individuals. The verdicts of an Authentication-Results header (RFC 8601): pass, fail, soft fail, neutral, none, temporary error, permanent error, policy."@en .
+
+
 ###  https://cyberterrain.org/ns/stonework#AutonomousSystem
 :AutonomousSystem rdf:type owl:Class ;
                   rdfs:subClassOf :Infrastructure ;
@@ -4564,12 +4882,20 @@ rdfs:Class rdf:type owl:Class .
               <http://www.w3.org/2004/02/skos/core#prefLabel> "Email Address"@en .
 
 
+###  https://cyberterrain.org/ns/stonework#EmailAuthenticationResult
+:EmailAuthenticationResult rdf:type owl:Class ;
+                           rdfs:subClassOf :Assessment ;
+                           <http://www.w3.org/2004/02/skos/core#definition> "The verdict of one sender-authentication check (SPF, DKIM, DMARC or ARC) on an EmailMessage, as a receiving server recorded it in an Authentication-Results header: the method, the verdict, the domain checked, and the server that checked."@en ;
+                           <http://www.w3.org/2004/02/skos/core#prefLabel> "Email Authentication Result"@en ;
+                           <http://www.w3.org/2004/02/skos/core#scopeNote> "A pass authenticates the domain, not the sender's honesty: a lookalike domain registered by an actor passes SPF, DKIM and DMARC for itself. Compare stonework:authenticatedDomain with the domain the recipient expected. The method and verdict are categories (stonework:hasAuthenticationMethod, stonework:hasAuthenticationVerdict)."@en .
+
+
 ###  https://cyberterrain.org/ns/stonework#EmailMessage
 :EmailMessage rdf:type owl:Class ;
               rdfs:subClassOf :DigitalArtifact ;
               <http://www.w3.org/2004/02/skos/core#definition> "A discrete email communication, including headers, body content, and optional attachments, transmitted over an email protocol."@en ;
               <http://www.w3.org/2004/02/skos/core#prefLabel> "Email Message"@en ;
-              <http://www.w3.org/2004/02/skos/core#scopeNote> "Distinct from stonework:EmailAddress, which represents the sender/recipient identifier. An EmailMessage is the content artifact itself. Used to represent phishing lures, spear-phishing emails, or other email-borne threat delivery mechanisms. Corresponds to STIX EmailMessage SCO."@en .
+              <http://www.w3.org/2004/02/skos/core#scopeNote> "Distinct from stonework:EmailAddress, which represents the sender/recipient identifier. An EmailMessage is the content artifact itself. Used to represent phishing lures, spear-phishing emails, or other email-borne threat delivery mechanisms. Corresponds to STIX EmailMessage SCO. Its headers: the addresses by role (stonework:hasFromAddress, hasSenderAddress, hasReplyToAddress, hasReturnPathAddress, hasToAddress, hasCcAddress, hasBccAddress), stonework:fromDisplayName, emailSubject, sentAtTime, messageId, the thread (inReplyTo, referencesMessage), and the receiving servers' stonework:hasAuthenticationResult. Each Received header is a hop: a stonework:Event generatedFrom the message, with its time (startedAtTime), the sending server's address (hasSourceAddress) and the receiving server (occursOn)."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#Event
@@ -5011,6 +5337,14 @@ rdfs:Class rdf:type owl:Class .
             <http://www.w3.org/2004/02/skos/core#definition> "A media access control address that identifies a network interface at the data-link layer."@en ;
             <http://www.w3.org/2004/02/skos/core#prefLabel> "MAC Address"@en ;
             <http://www.w3.org/2004/02/skos/core#scopeNote> "Covers 48-bit and 64-bit MAC address representations, including values carried by the STIX 2.1 MAC Address SCO."@en .
+
+
+###  https://cyberterrain.org/ns/stonework#MailboxRule
+:MailboxRule rdf:type owl:Class ;
+             rdfs:subClassOf :DigitalArtifact ;
+             <http://www.w3.org/2004/02/skos/core#definition> "A rule a mailbox applies automatically to the email it receives: conditions that select messages, and actions taken on them, such as forwarding, moving or deleting."@en ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "Mailbox Rule"@en ;
+             <http://www.w3.org/2004/02/skos/core#scopeNote> "Covers server-side inbox rules (Exchange, Microsoft 365), client rules and webmail filters (Gmail). An actor holding a mailbox's credentials creates one to read mail without signing in again (ATT&CK T1114.003, Email Forwarding Rule) or to keep replies and warnings from the holder (T1564.008, Email Hiding Rules). The activity that creates a rule produces it (stonework:produces); later changes and its removal are activities that act on it (stonework:actsOn). Rules applied by the mail service to a whole organization (transport or mail-flow rules) are not mailbox rules."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#Malware
@@ -6170,6 +6504,156 @@ rdfs:Class rdf:type owl:Class .
                        <http://www.w3.org/2004/02/skos/core#inScheme> :affectedStatusScheme ,
                                                                       :categoryScheme ;
                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Unknown"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#authenticationMethodARC
+:authenticationMethodARC rdf:type owl:NamedIndividual ,
+                                  <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                  :AuthenticationMethod ;
+                         <http://www.w3.org/2004/02/skos/core#notation> "arc" ;
+                         <http://www.w3.org/2004/02/skos/core#definition> "Authenticated Received Chain (RFC 8617): the authentication results recorded by the intermediaries that forwarded the message, sealed so a later receiver can rely on them."@en ;
+                         <http://www.w3.org/2004/02/skos/core#inScheme> :authenticationMethodScheme ,
+                                                                        :categoryScheme ;
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "ARC"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#authenticationMethodDKIM
+:authenticationMethodDKIM rdf:type owl:NamedIndividual ,
+                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                   :AuthenticationMethod ;
+                          <http://www.w3.org/2004/02/skos/core#notation> "dkim" ;
+                          <http://www.w3.org/2004/02/skos/core#definition> "DomainKeys Identified Mail (RFC 6376): a signature over the message's headers and body by a signing domain, checked against that domain's published key."@en ;
+                          <http://www.w3.org/2004/02/skos/core#inScheme> :authenticationMethodScheme ,
+                                                                         :categoryScheme ;
+                          <http://www.w3.org/2004/02/skos/core#prefLabel> "DKIM"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#authenticationMethodDMARC
+:authenticationMethodDMARC rdf:type owl:NamedIndividual ,
+                                    <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                    :AuthenticationMethod ;
+                           <http://www.w3.org/2004/02/skos/core#notation> "dmarc" ;
+                           <http://www.w3.org/2004/02/skos/core#definition> "Domain-based Message Authentication, Reporting and Conformance (RFC 7489): whether the From domain is aligned with a domain that passed SPF or DKIM, under the From domain's published policy."@en ;
+                           <http://www.w3.org/2004/02/skos/core#inScheme> :authenticationMethodScheme ,
+                                                                          :categoryScheme ;
+                           <http://www.w3.org/2004/02/skos/core#prefLabel> "DMARC"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#authenticationMethodSPF
+:authenticationMethodSPF rdf:type owl:NamedIndividual ,
+                                  <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                  :AuthenticationMethod ;
+                         <http://www.w3.org/2004/02/skos/core#notation> "spf" ;
+                         <http://www.w3.org/2004/02/skos/core#definition> "Sender Policy Framework (RFC 7208): whether the sending server is authorized to send for the envelope sender's domain."@en ;
+                         <http://www.w3.org/2004/02/skos/core#inScheme> :authenticationMethodScheme ,
+                                                                        :categoryScheme ;
+                         <http://www.w3.org/2004/02/skos/core#prefLabel> "SPF"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#authenticationMethodScheme
+:authenticationMethodScheme rdf:type owl:NamedIndividual ,
+                                     <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                            <http://purl.org/dc/terms/title> "STONEWORK Authentication Method Scheme"@en ;
+                            <http://purl.org/dc/terms/isPartOf> :categoryScheme ;
+                            <http://www.w3.org/2004/02/skos/core#definition> "The controlled vocabulary of sender-authentication methods for email."@en ;
+                            <http://www.w3.org/2004/02/skos/core#prefLabel> "STONEWORK Authentication Method Scheme"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#authenticationVerdictFail
+:authenticationVerdictFail rdf:type owl:NamedIndividual ,
+                                    <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                    :AuthenticationVerdict ;
+                           <http://www.w3.org/2004/02/skos/core#notation> "fail" ;
+                           <http://www.w3.org/2004/02/skos/core#definition> "The check ran and the message failed it."@en ;
+                           <http://www.w3.org/2004/02/skos/core#inScheme> :authenticationVerdictScheme ,
+                                                                          :categoryScheme ;
+                           <http://www.w3.org/2004/02/skos/core#prefLabel> "Fail"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#authenticationVerdictNeutral
+:authenticationVerdictNeutral rdf:type owl:NamedIndividual ,
+                                       <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                       :AuthenticationVerdict ;
+                              <http://www.w3.org/2004/02/skos/core#notation> "neutral" ;
+                              <http://www.w3.org/2004/02/skos/core#definition> "The domain's policy makes no assertion about this sender."@en ;
+                              <http://www.w3.org/2004/02/skos/core#inScheme> :authenticationVerdictScheme ,
+                                                                             :categoryScheme ;
+                              <http://www.w3.org/2004/02/skos/core#prefLabel> "Neutral"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#authenticationVerdictNone
+:authenticationVerdictNone rdf:type owl:NamedIndividual ,
+                                    <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                    :AuthenticationVerdict ;
+                           <http://www.w3.org/2004/02/skos/core#notation> "none" ;
+                           <http://www.w3.org/2004/02/skos/core#definition> "There was nothing to check: no policy, record or signature."@en ;
+                           <http://www.w3.org/2004/02/skos/core#inScheme> :authenticationVerdictScheme ,
+                                                                          :categoryScheme ;
+                           <http://www.w3.org/2004/02/skos/core#prefLabel> "None"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#authenticationVerdictPass
+:authenticationVerdictPass rdf:type owl:NamedIndividual ,
+                                    <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                    :AuthenticationVerdict ;
+                           <http://www.w3.org/2004/02/skos/core#notation> "pass" ;
+                           <http://www.w3.org/2004/02/skos/core#definition> "The check ran and the message passed it. A pass authenticates the domain checked, which may be a lookalike the actor registered."@en ;
+                           <http://www.w3.org/2004/02/skos/core#inScheme> :authenticationVerdictScheme ,
+                                                                          :categoryScheme ;
+                           <http://www.w3.org/2004/02/skos/core#prefLabel> "Pass"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#authenticationVerdictPermError
+:authenticationVerdictPermError rdf:type owl:NamedIndividual ,
+                                         <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                         :AuthenticationVerdict ;
+                                <http://www.w3.org/2004/02/skos/core#notation> "permerror" ;
+                                <http://www.w3.org/2004/02/skos/core#definition> "The check could not be completed because the domain's published records are invalid."@en ;
+                                <http://www.w3.org/2004/02/skos/core#inScheme> :authenticationVerdictScheme ,
+                                                                               :categoryScheme ;
+                                <http://www.w3.org/2004/02/skos/core#prefLabel> "Permanent error"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#authenticationVerdictPolicy
+:authenticationVerdictPolicy rdf:type owl:NamedIndividual ,
+                                      <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                      :AuthenticationVerdict ;
+                             <http://www.w3.org/2004/02/skos/core#notation> "policy" ;
+                             <http://www.w3.org/2004/02/skos/core#definition> "The message passed the check technically, but a local policy of the receiving server overrode the result."@en ;
+                             <http://www.w3.org/2004/02/skos/core#inScheme> :authenticationVerdictScheme ,
+                                                                            :categoryScheme ;
+                             <http://www.w3.org/2004/02/skos/core#prefLabel> "Policy"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#authenticationVerdictScheme
+:authenticationVerdictScheme rdf:type owl:NamedIndividual ,
+                                      <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                             <http://purl.org/dc/terms/title> "STONEWORK Authentication Verdict Scheme"@en ;
+                             <http://purl.org/dc/terms/isPartOf> :categoryScheme ;
+                             <http://www.w3.org/2004/02/skos/core#definition> "The controlled vocabulary of the verdicts of sender-authentication checks on email."@en ;
+                             <http://www.w3.org/2004/02/skos/core#prefLabel> "STONEWORK Authentication Verdict Scheme"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#authenticationVerdictSoftFail
+:authenticationVerdictSoftFail rdf:type owl:NamedIndividual ,
+                                        <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                        :AuthenticationVerdict ;
+                               <http://www.w3.org/2004/02/skos/core#notation> "softfail" ;
+                               <http://www.w3.org/2004/02/skos/core#definition> "The domain's policy says the sender is probably not authorized, without asking for rejection (SPF ~all)."@en ;
+                               <http://www.w3.org/2004/02/skos/core#inScheme> :authenticationVerdictScheme ,
+                                                                              :categoryScheme ;
+                               <http://www.w3.org/2004/02/skos/core#prefLabel> "Soft fail"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#authenticationVerdictTempError
+:authenticationVerdictTempError rdf:type owl:NamedIndividual ,
+                                         <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                         :AuthenticationVerdict ;
+                                <http://www.w3.org/2004/02/skos/core#notation> "temperror" ;
+                                <http://www.w3.org/2004/02/skos/core#definition> "The check could not be completed because of a transient error, such as a DNS timeout."@en ;
+                                <http://www.w3.org/2004/02/skos/core#inScheme> :authenticationVerdictScheme ,
+                                                                               :categoryScheme ;
+                                <http://www.w3.org/2004/02/skos/core#prefLabel> "Temporary error"@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#categoryScheme
