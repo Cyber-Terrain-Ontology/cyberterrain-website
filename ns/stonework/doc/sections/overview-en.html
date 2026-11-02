@@ -53,12 +53,16 @@ This ontology has the following classes and properties.</span>
          title="https://cyberterrain.org/ns/stonework#AttackTechnique">Attack Technique</a>
    </li>
    <li>
-      <a href="#AuthenticationMethod"
-         title="https://cyberterrain.org/ns/stonework#AuthenticationMethod">Authentication Method</a>
+      <a href="#AuthenticationFactor"
+         title="https://cyberterrain.org/ns/stonework#AuthenticationFactor">Authentication Factor</a>
    </li>
    <li>
       <a href="#AuthenticationVerdict"
          title="https://cyberterrain.org/ns/stonework#AuthenticationVerdict">Authentication Verdict</a>
+   </li>
+   <li>
+      <a href="#AuthenticatorType"
+         title="https://cyberterrain.org/ns/stonework#AuthenticatorType">Authenticator Type</a>
    </li>
    <li>
       <a href="#AutonomousSystem"
@@ -191,6 +195,10 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#EmailAddress"
          title="https://cyberterrain.org/ns/stonework#EmailAddress">Email Address</a>
+   </li>
+   <li>
+      <a href="#EmailAuthenticationMethod"
+         title="https://cyberterrain.org/ns/stonework#EmailAuthenticationMethod">Email Authentication Method</a>
    </li>
    <li>
       <a href="#EmailAuthenticationResult"
@@ -787,6 +795,14 @@ This ontology has the following classes and properties.</span>
          title="https://cyberterrain.org/ns/stonework#authenticatedDomain">authenticatedDomain</a>
    </li>
    <li>
+      <a href="#authenticatedWith"
+         title="https://cyberterrain.org/ns/stonework#authenticatedWith">authenticatedWith</a>
+   </li>
+   <li>
+      <a href="#authenticationFactor"
+         title="https://cyberterrain.org/ns/stonework#authenticationFactor">authenticationFactor</a>
+   </li>
+   <li>
       <a href="#authoredBy" title="https://cyberterrain.org/ns/stonework#authoredBy">authoredBy</a>
    </li>
    <li>
@@ -1045,10 +1061,6 @@ This ontology has the following classes and properties.</span>
          title="https://cyberterrain.org/ns/stonework#hasAttachment">hasAttachment</a>
    </li>
    <li>
-      <a href="#hasAuthenticationMethod"
-         title="https://cyberterrain.org/ns/stonework#hasAuthenticationMethod">hasAuthenticationMethod</a>
-   </li>
-   <li>
       <a href="#hasAuthenticationResult"
          title="https://cyberterrain.org/ns/stonework#hasAuthenticationResult">hasAuthenticationResult</a>
    </li>
@@ -1082,6 +1094,10 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#hasEmail" title="https://cyberterrain.org/ns/stonework#hasEmail">hasEmail</a>
+   </li>
+   <li>
+      <a href="#hasEmailAuthenticationMethod"
+         title="https://cyberterrain.org/ns/stonework#hasEmailAuthenticationMethod">hasEmailAuthenticationMethod</a>
    </li>
    <li>
       <a href="#hasEvent" title="https://cyberterrain.org/ns/stonework#hasEvent">hasEvent</a>
@@ -1200,6 +1216,10 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#hasOnlineReference"
          title="https://cyberterrain.org/ns/stonework#hasOnlineReference">hasOnlineReference</a>
+   </li>
+   <li>
+      <a href="#hasOutcome"
+         title="https://cyberterrain.org/ns/stonework#hasOutcome">hasOutcome</a>
    </li>
    <li>
       <a href="#hasOutput" title="https://cyberterrain.org/ns/stonework#hasOutput">hasOutput</a>
@@ -2186,6 +2206,10 @@ This ontology has the following classes and properties.</span>
       <a href="#osVersion" title="https://cyberterrain.org/ns/stonework#osVersion">osVersion</a>
    </li>
    <li>
+      <a href="#outcomeDetail"
+         title="https://cyberterrain.org/ns/stonework#outcomeDetail">outcomeDetail</a>
+   </li>
+   <li>
       <a href="#packerName"
          title="https://cyberterrain.org/ns/stonework#packerName">packerName</a>
    </li>
@@ -2195,6 +2219,10 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#parentPid" title="https://cyberterrain.org/ns/stonework#parentPid">parentPid</a>
+   </li>
+   <li>
+      <a href="#phishingResistant"
+         title="https://cyberterrain.org/ns/stonework#phishingResistant">phishingResistant</a>
    </li>
    <li>
       <a href="#phoneValue"
@@ -2451,16 +2479,24 @@ This ontology has the following classes and properties.</span>
          title="https://cyberterrain.org/ns/stonework#infraTypeAnonymization">Anonymization</a>
    </li>
    <li>
+      <a href="#authenticatorApiKey"
+         title="https://cyberterrain.org/ns/stonework#authenticatorApiKey">API key or client secret</a>
+   </li>
+   <li>
       <a href="#productTypeApplication"
          title="https://cyberterrain.org/ns/stonework#productTypeApplication">Application</a>
    </li>
    <li>
-      <a href="#authenticationMethodARC"
-         title="https://cyberterrain.org/ns/stonework#authenticationMethodARC">ARC</a>
+      <a href="#emailAuthenticationMethodARC"
+         title="https://cyberterrain.org/ns/stonework#emailAuthenticationMethodARC">ARC</a>
    </li>
    <li>
       <a href="#playbookTypeAttack"
          title="https://cyberterrain.org/ns/stonework#playbookTypeAttack">Attack</a>
+   </li>
+   <li>
+      <a href="#authenticatorTotpApp"
+         title="https://cyberterrain.org/ns/stonework#authenticatorTotpApp">Authenticator-app code</a>
    </li>
    <li>
       <a href="#impactTypeAvailability"
@@ -2514,6 +2550,10 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#currencyCNY"
          title="https://cyberterrain.org/ns/stonework#currencyCNY">Chinese Yuan</a>
+   </li>
+   <li>
+      <a href="#authenticatorClientCertificate"
+         title="https://cyberterrain.org/ns/stonework#authenticatorClientCertificate">Client certificate</a>
    </li>
    <li>
       <a href="#incidentStatusClosed"
@@ -2623,12 +2663,12 @@ This ontology has the following classes and properties.</span>
          title="https://cyberterrain.org/ns/stonework#threatActorRoleDirector">Director</a>
    </li>
    <li>
-      <a href="#authenticationMethodDKIM"
-         title="https://cyberterrain.org/ns/stonework#authenticationMethodDKIM">DKIM</a>
+      <a href="#emailAuthenticationMethodDKIM"
+         title="https://cyberterrain.org/ns/stonework#emailAuthenticationMethodDKIM">DKIM</a>
    </li>
    <li>
-      <a href="#authenticationMethodDMARC"
-         title="https://cyberterrain.org/ns/stonework#authenticationMethodDMARC">DMARC</a>
+      <a href="#emailAuthenticationMethodDMARC"
+         title="https://cyberterrain.org/ns/stonework#emailAuthenticationMethodDMARC">DMARC</a>
    </li>
    <li>
       <a href="#accountTypeDomain"
@@ -2644,6 +2684,10 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#Dropper" title="https://cyberterrain.org/ns/stonework#Dropper">Dropper</a>
+   </li>
+   <li>
+      <a href="#authenticatorEmailCode"
+         title="https://cyberterrain.org/ns/stonework#authenticatorEmailCode">Email code</a>
    </li>
    <li>
       <a href="#playbookTypeEngagement"
@@ -2716,8 +2760,16 @@ This ontology has the following classes and properties.</span>
          title="https://cyberterrain.org/ns/stonework#investigationOutcomeFalsePositive">False Positive</a>
    </li>
    <li>
+      <a href="#authenticatorFederatedAssertion"
+         title="https://cyberterrain.org/ns/stonework#authenticatorFederatedAssertion">Federated assertion</a>
+   </li>
+   <li>
       <a href="#transactionTypeFee"
          title="https://cyberterrain.org/ns/stonework#transactionTypeFee">Fee</a>
+   </li>
+   <li>
+      <a href="#authenticatorFido2SecurityKey"
+         title="https://cyberterrain.org/ns/stonework#authenticatorFido2SecurityKey">FIDO2 security key</a>
    </li>
    <li>
       <a href="#impactTypeFinancial"
@@ -2754,6 +2806,10 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#productTypeHardware"
          title="https://cyberterrain.org/ns/stonework#productTypeHardware">Hardware</a>
+   </li>
+   <li>
+      <a href="#authenticatorHardwareOtpToken"
+         title="https://cyberterrain.org/ns/stonework#authenticatorHardwareOtpToken">Hardware OTP token</a>
    </li>
    <li>
       <a href="#falsePositiveRateHigh"
@@ -2804,6 +2860,10 @@ This ontology has the following classes and properties.</span>
          title="https://cyberterrain.org/ns/stonework#threatActorRoleInfrastructureOperator">Infrastructure Operator</a>
    </li>
    <li>
+      <a href="#authenticationFactorInherence"
+         title="https://cyberterrain.org/ns/stonework#authenticationFactorInherence">Inherence</a>
+   </li>
+   <li>
       <a href="#sophisticationLevelInnovator"
          title="https://cyberterrain.org/ns/stonework#sophisticationLevelInnovator">Innovator</a>
    </li>
@@ -2824,6 +2884,10 @@ This ontology has the following classes and properties.</span>
          title="https://cyberterrain.org/ns/stonework#sophisticationLevelIntermediate">Intermediate</a>
    </li>
    <li>
+      <a href="#executionOutcomeInterrupted"
+         title="https://cyberterrain.org/ns/stonework#executionOutcomeInterrupted">Interrupted</a>
+   </li>
+   <li>
       <a href="#playbookTypeInvestigation"
          title="https://cyberterrain.org/ns/stonework#playbookTypeInvestigation">Investigation</a>
    </li>
@@ -2838,6 +2902,10 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#Keylogger"
          title="https://cyberterrain.org/ns/stonework#Keylogger">Keylogger</a>
+   </li>
+   <li>
+      <a href="#authenticationFactorKnowledge"
+         title="https://cyberterrain.org/ns/stonework#authenticationFactorKnowledge">Knowledge</a>
    </li>
    <li>
       <a href="#LessThan" title="https://cyberterrain.org/ns/stonework#LessThan">Less Than</a>
@@ -2999,6 +3067,10 @@ This ontology has the following classes and properties.</span>
          title="https://cyberterrain.org/ns/stonework#authenticationVerdictPass">Pass</a>
    </li>
    <li>
+      <a href="#authenticatorPassword"
+         title="https://cyberterrain.org/ns/stonework#authenticatorPassword">Password</a>
+   </li>
+   <li>
       <a href="#transactionTypePayment"
          title="https://cyberterrain.org/ns/stonework#transactionTypePayment">Payment</a>
    </li>
@@ -3031,8 +3103,20 @@ This ontology has the following classes and properties.</span>
          title="https://cyberterrain.org/ns/stonework#infraTypePhishing">Phishing</a>
    </li>
    <li>
+      <a href="#authenticatorPIN"
+         title="https://cyberterrain.org/ns/stonework#authenticatorPIN">PIN</a>
+   </li>
+   <li>
+      <a href="#authenticatorPlatformPasskey"
+         title="https://cyberterrain.org/ns/stonework#authenticatorPlatformPasskey">Platform passkey</a>
+   </li>
+   <li>
       <a href="#authenticationVerdictPolicy"
          title="https://cyberterrain.org/ns/stonework#authenticationVerdictPolicy">Policy</a>
+   </li>
+   <li>
+      <a href="#authenticationFactorPossession"
+         title="https://cyberterrain.org/ns/stonework#authenticationFactorPossession">Possession</a>
    </li>
    <li>
       <a href="#likelihoodLevelPossible"
@@ -3055,6 +3139,10 @@ This ontology has the following classes and properties.</span>
          title="https://cyberterrain.org/ns/stonework#exploitMaturityPoc">Proof of Concept</a>
    </li>
    <li>
+      <a href="#authenticatorPushApproval"
+         title="https://cyberterrain.org/ns/stonework#authenticatorPushApproval">Push approval</a>
+   </li>
+   <li>
       <a href="#Ransomware"
          title="https://cyberterrain.org/ns/stonework#Ransomware">Ransomware</a>
    </li>
@@ -3065,6 +3153,10 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#infraTypeReconnaissance"
          title="https://cyberterrain.org/ns/stonework#infraTypeReconnaissance">Reconnaissance</a>
+   </li>
+   <li>
+      <a href="#authenticatorRecoveryCode"
+         title="https://cyberterrain.org/ns/stonework#authenticatorRecoveryCode">Recovery code</a>
    </li>
    <li>
       <a href="#hypothesisStatusRefuted"
@@ -3154,6 +3246,10 @@ This ontology has the following classes and properties.</span>
          title="https://cyberterrain.org/ns/stonework#productTypeService">Service</a>
    </li>
    <li>
+      <a href="#authenticatorSessionToken"
+         title="https://cyberterrain.org/ns/stonework#authenticatorSessionToken">Session token</a>
+   </li>
+   <li>
       <a href="#impactLevelSevere"
          title="https://cyberterrain.org/ns/stonework#impactLevelSevere">Severe</a>
    </li>
@@ -3162,12 +3258,20 @@ This ontology has the following classes and properties.</span>
          title="https://cyberterrain.org/ns/stonework#deviationKindSkipped">Skipped</a>
    </li>
    <li>
+      <a href="#authenticatorSmartCard"
+         title="https://cyberterrain.org/ns/stonework#authenticatorSmartCard">Smart card</a>
+   </li>
+   <li>
+      <a href="#authenticatorSmsCode"
+         title="https://cyberterrain.org/ns/stonework#authenticatorSmsCode">SMS code</a>
+   </li>
+   <li>
       <a href="#authenticationVerdictSoftFail"
          title="https://cyberterrain.org/ns/stonework#authenticationVerdictSoftFail">Soft fail</a>
    </li>
    <li>
-      <a href="#authenticationMethodSPF"
-         title="https://cyberterrain.org/ns/stonework#authenticationMethodSPF">SPF</a>
+      <a href="#emailAuthenticationMethodSPF"
+         title="https://cyberterrain.org/ns/stonework#emailAuthenticationMethodSPF">SPF</a>
    </li>
    <li>
       <a href="#threatActorRoleSponsor"
@@ -3179,6 +3283,10 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#Spyware" title="https://cyberterrain.org/ns/stonework#Spyware">Spyware</a>
+   </li>
+   <li>
+      <a href="#authenticatorSshKey"
+         title="https://cyberterrain.org/ns/stonework#authenticatorSshKey">SSH key</a>
    </li>
    <li>
       <a href="#infraTypeStaging"
@@ -3198,12 +3306,16 @@ This ontology has the following classes and properties.</span>
          title="https://cyberterrain.org/ns/stonework#affectedStatusScheme">STONEWORK Affected Status Scheme</a>
    </li>
    <li>
-      <a href="#authenticationMethodScheme"
-         title="https://cyberterrain.org/ns/stonework#authenticationMethodScheme">STONEWORK Authentication Method Scheme</a>
+      <a href="#authenticationFactorScheme"
+         title="https://cyberterrain.org/ns/stonework#authenticationFactorScheme">STONEWORK Authentication Factor Scheme</a>
    </li>
    <li>
       <a href="#authenticationVerdictScheme"
          title="https://cyberterrain.org/ns/stonework#authenticationVerdictScheme">STONEWORK Authentication Verdict Scheme</a>
+   </li>
+   <li>
+      <a href="#authenticatorTypeScheme"
+         title="https://cyberterrain.org/ns/stonework#authenticatorTypeScheme">STONEWORK Authenticator Type Scheme</a>
    </li>
    <li>
       <a href="#categoryScheme"
@@ -3216,6 +3328,10 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#deviationKindScheme"
          title="https://cyberterrain.org/ns/stonework#deviationKindScheme">STONEWORK Deviation Kind Scheme</a>
+   </li>
+   <li>
+      <a href="#emailAuthenticationMethodScheme"
+         title="https://cyberterrain.org/ns/stonework#emailAuthenticationMethodScheme">STONEWORK Email Authentication Method Scheme</a>
    </li>
    <li>
       <a href="#executionOutcomeScheme"
@@ -3434,6 +3550,10 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#Virus" title="https://cyberterrain.org/ns/stonework#Virus">Virus</a>
+   </li>
+   <li>
+      <a href="#authenticatorVoiceCall"
+         title="https://cyberterrain.org/ns/stonework#authenticatorVoiceCall">Voice call</a>
    </li>
    <li>
       <a href="#exploitMaturityWeaponized"

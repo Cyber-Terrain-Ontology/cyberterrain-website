@@ -1,9 +1,9 @@
 <https://cyberterrain.org/ns/stonework#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://cyberterrain.org/ns/stonework#> <http://www.w3.org/2002/07/owl#versionIRI> <https://cyberterrain.org/ns/stonework/0.13.0> .
+<https://cyberterrain.org/ns/stonework#> <http://www.w3.org/2002/07/owl#versionIRI> <https://cyberterrain.org/ns/stonework/0.14.0> .
 <https://cyberterrain.org/ns/stonework#> <http://purl.org/dc/terms/creator> "Hohimer Intelligence Strategies LLC" .
 <https://cyberterrain.org/ns/stonework#> <http://purl.org/dc/terms/license> <https://opensource.org/licenses/MIT> .
 <https://cyberterrain.org/ns/stonework#> <http://www.w3.org/2000/01/rdf-schema#label> "STONEWORK"@en .
-<https://cyberterrain.org/ns/stonework#> <http://www.w3.org/2002/07/owl#versionInfo> "0.13.0" .
+<https://cyberterrain.org/ns/stonework#> <http://www.w3.org/2002/07/owl#versionInfo> "0.14.0" .
 # 
 # 
 # #################################################################
@@ -337,6 +337,24 @@ _:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://cyberterrain.org/ns/stonework#authenticatedDomain> <http://www.w3.org/2000/01/rdf-schema#range> <https://cyberterrain.org/ns/stonework#Domain> .
 <https://cyberterrain.org/ns/stonework#authenticatedDomain> <http://www.w3.org/2004/02/skos/core#definition> "The domain an authentication check evaluated: the envelope sender's domain for SPF, the signing domain for DKIM, the From domain for DMARC."@en .
 <https://cyberterrain.org/ns/stonework#authenticatedDomain> <http://www.w3.org/2004/02/skos/core#prefLabel> "authenticatedDomain"@en .
+# 
+# https://cyberterrain.org/ns/stonework#authenticatedWith
+<https://cyberterrain.org/ns/stonework#authenticatedWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://cyberterrain.org/ns/stonework#authenticatedWith> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://cyberterrain.org/ns/stonework#categorizedBy> .
+<https://cyberterrain.org/ns/stonework#authenticatedWith> <http://www.w3.org/2000/01/rdf-schema#domain> <https://cyberterrain.org/ns/stonework#CyberActivity> .
+<https://cyberterrain.org/ns/stonework#authenticatedWith> <http://www.w3.org/2000/01/rdf-schema#range> <https://cyberterrain.org/ns/stonework#AuthenticatorType> .
+<https://cyberterrain.org/ns/stonework#authenticatedWith> <http://www.w3.org/2004/02/skos/core#definition> "An authenticator presented in an activity, such as a sign-in."@en .
+<https://cyberterrain.org/ns/stonework#authenticatedWith> <http://www.w3.org/2004/02/skos/core#prefLabel> "authenticatedWith"@en .
+<https://cyberterrain.org/ns/stonework#authenticatedWith> <http://www.w3.org/2004/02/skos/core#scopeNote> "Several for a multifactor sign-in (a password and a push approval). A sign-in that presented a session token rather than authenticating afresh is authenticatedWith stonework:authenticatorSessionToken, with no stonework:authenticationFactor."@en .
+# 
+# https://cyberterrain.org/ns/stonework#authenticationFactor
+<https://cyberterrain.org/ns/stonework#authenticationFactor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://cyberterrain.org/ns/stonework#authenticationFactor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://cyberterrain.org/ns/stonework#categorizedBy> .
+<https://cyberterrain.org/ns/stonework#authenticationFactor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://cyberterrain.org/ns/stonework#CyberActivity> .
+<https://cyberterrain.org/ns/stonework#authenticationFactor> <http://www.w3.org/2000/01/rdf-schema#range> <https://cyberterrain.org/ns/stonework#AuthenticationFactor> .
+<https://cyberterrain.org/ns/stonework#authenticationFactor> <http://www.w3.org/2004/02/skos/core#definition> "A distinct factor the verifier checked in an activity."@en .
+<https://cyberterrain.org/ns/stonework#authenticationFactor> <http://www.w3.org/2004/02/skos/core#prefLabel> "authenticationFactor"@en .
+<https://cyberterrain.org/ns/stonework#authenticationFactor> <http://www.w3.org/2004/02/skos/core#scopeNote> "Counted per activity: one is single-factor, two or more multifactor. Recorded only as far as the evidence shows; a log that reports MFA without naming the methods supports no more than its description."@en .
 # 
 # https://cyberterrain.org/ns/stonework#authoredBy
 <https://cyberterrain.org/ns/stonework#authoredBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -1045,15 +1063,6 @@ _:genid97 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://cyberterrain.org/ns/stonework#hasAttachment> <http://www.w3.org/2004/02/skos/core#definition> "A File attached to an EmailMessage."@en .
 <https://cyberterrain.org/ns/stonework#hasAttachment> <http://www.w3.org/2004/02/skos/core#prefLabel> "hasAttachment"@en .
 # 
-# https://cyberterrain.org/ns/stonework#hasAuthenticationMethod
-<https://cyberterrain.org/ns/stonework#hasAuthenticationMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://cyberterrain.org/ns/stonework#hasAuthenticationMethod> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://cyberterrain.org/ns/stonework#categorizedBy> .
-<https://cyberterrain.org/ns/stonework#hasAuthenticationMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
-<https://cyberterrain.org/ns/stonework#hasAuthenticationMethod> <http://www.w3.org/2000/01/rdf-schema#domain> <https://cyberterrain.org/ns/stonework#EmailAuthenticationResult> .
-<https://cyberterrain.org/ns/stonework#hasAuthenticationMethod> <http://www.w3.org/2000/01/rdf-schema#range> <https://cyberterrain.org/ns/stonework#AuthenticationMethod> .
-<https://cyberterrain.org/ns/stonework#hasAuthenticationMethod> <http://www.w3.org/2004/02/skos/core#definition> "The method of a sender-authentication check: SPF, DKIM, DMARC or ARC."@en .
-<https://cyberterrain.org/ns/stonework#hasAuthenticationMethod> <http://www.w3.org/2004/02/skos/core#prefLabel> "hasAuthenticationMethod"@en .
-# 
 # https://cyberterrain.org/ns/stonework#hasAuthenticationResult
 <https://cyberterrain.org/ns/stonework#hasAuthenticationResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://cyberterrain.org/ns/stonework#hasAuthenticationResult> <http://www.w3.org/2000/01/rdf-schema#domain> <https://cyberterrain.org/ns/stonework#EmailMessage> .
@@ -1136,6 +1145,15 @@ _:genid100 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://cyberterrain.org/ns/stonework#hasEmail> <http://www.w3.org/2000/01/rdf-schema#range> <https://cyberterrain.org/ns/stonework#EmailAddress> .
 <https://cyberterrain.org/ns/stonework#hasEmail> <http://www.w3.org/2004/02/skos/core#definition> "An EmailAddress associated with this Agent."@en .
 <https://cyberterrain.org/ns/stonework#hasEmail> <http://www.w3.org/2004/02/skos/core#prefLabel> "hasEmail" .
+# 
+# https://cyberterrain.org/ns/stonework#hasEmailAuthenticationMethod
+<https://cyberterrain.org/ns/stonework#hasEmailAuthenticationMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://cyberterrain.org/ns/stonework#hasEmailAuthenticationMethod> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://cyberterrain.org/ns/stonework#categorizedBy> .
+<https://cyberterrain.org/ns/stonework#hasEmailAuthenticationMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://cyberterrain.org/ns/stonework#hasEmailAuthenticationMethod> <http://www.w3.org/2000/01/rdf-schema#domain> <https://cyberterrain.org/ns/stonework#EmailAuthenticationResult> .
+<https://cyberterrain.org/ns/stonework#hasEmailAuthenticationMethod> <http://www.w3.org/2000/01/rdf-schema#range> <https://cyberterrain.org/ns/stonework#EmailAuthenticationMethod> .
+<https://cyberterrain.org/ns/stonework#hasEmailAuthenticationMethod> <http://www.w3.org/2004/02/skos/core#definition> "The method of a sender-authentication check: SPF, DKIM, DMARC or ARC."@en .
+<https://cyberterrain.org/ns/stonework#hasEmailAuthenticationMethod> <http://www.w3.org/2004/02/skos/core#prefLabel> "hasEmailAuthenticationMethod"@en .
 # 
 # https://cyberterrain.org/ns/stonework#hasEvent
 <https://cyberterrain.org/ns/stonework#hasEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -1256,8 +1274,8 @@ _:genid100 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # 
 # https://cyberterrain.org/ns/stonework#hasInput
 <https://cyberterrain.org/ns/stonework#hasInput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://cyberterrain.org/ns/stonework#hasInput> <http://www.w3.org/2000/01/rdf-schema#domain> <https://cyberterrain.org/ns/stonework#Process> .
-<https://cyberterrain.org/ns/stonework#hasInput> <http://www.w3.org/2004/02/skos/core#definition> "Relates a Process to its input data or artifacts."@en .
+<https://cyberterrain.org/ns/stonework#hasInput> <http://www.w3.org/2000/01/rdf-schema#domain> <https://cyberterrain.org/ns/stonework#CyberActivity> .
+<https://cyberterrain.org/ns/stonework#hasInput> <http://www.w3.org/2004/02/skos/core#definition> "Relates an activity to its input data or artifacts, or to an activity it takes up, such as the payment an approval acts on."@en .
 <https://cyberterrain.org/ns/stonework#hasInput> <http://www.w3.org/2004/02/skos/core#prefLabel> "hasInput"@en .
 # 
 # https://cyberterrain.org/ns/stonework#hasInputVariable
@@ -1419,10 +1437,20 @@ _:genid114 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://cyberterrain.org/ns/stonework#hasOnlineReference> <http://www.w3.org/2004/02/skos/core#definition> "Associates any object with an OnlineReference (blog post, advisory URL, disclosure, vendor bulletin). Primary arc into the OnlineReference class."@en .
 <https://cyberterrain.org/ns/stonework#hasOnlineReference> <http://www.w3.org/2004/02/skos/core#prefLabel> "hasOnlineReference"@en .
 # 
+# https://cyberterrain.org/ns/stonework#hasOutcome
+<https://cyberterrain.org/ns/stonework#hasOutcome> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://cyberterrain.org/ns/stonework#hasOutcome> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://cyberterrain.org/ns/stonework#categorizedBy> .
+<https://cyberterrain.org/ns/stonework#hasOutcome> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://cyberterrain.org/ns/stonework#hasOutcome> <http://www.w3.org/2000/01/rdf-schema#domain> <https://cyberterrain.org/ns/stonework#CyberActivity> .
+<https://cyberterrain.org/ns/stonework#hasOutcome> <http://www.w3.org/2000/01/rdf-schema#range> <https://cyberterrain.org/ns/stonework#ExecutionOutcome> .
+<https://cyberterrain.org/ns/stonework#hasOutcome> <http://www.w3.org/2004/02/skos/core#definition> "How an activity ended, as observed: succeeded, failed, timed out or interrupted."@en .
+<https://cyberterrain.org/ns/stonework#hasOutcome> <http://www.w3.org/2004/02/skos/core#prefLabel> "hasOutcome"@en .
+<https://cyberterrain.org/ns/stonework#hasOutcome> <http://www.w3.org/2004/02/skos/core#scopeNote> "The observed fact, for any activity, including a raw record outside any plan, such as a failed sign-in. In a run of a Step with a stonework:outcomeVariable, that Variable's binding holds the same value. Why it ended so, as the source reports it, is stonework:outcomeDetail."@en .
+# 
 # https://cyberterrain.org/ns/stonework#hasOutput
 <https://cyberterrain.org/ns/stonework#hasOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://cyberterrain.org/ns/stonework#hasOutput> <http://www.w3.org/2000/01/rdf-schema#domain> <https://cyberterrain.org/ns/stonework#Process> .
-<https://cyberterrain.org/ns/stonework#hasOutput> <http://www.w3.org/2004/02/skos/core#definition> "Relates a Process to the data or artifacts it produces."@en .
+<https://cyberterrain.org/ns/stonework#hasOutput> <http://www.w3.org/2000/01/rdf-schema#domain> <https://cyberterrain.org/ns/stonework#CyberActivity> .
+<https://cyberterrain.org/ns/stonework#hasOutput> <http://www.w3.org/2004/02/skos/core#definition> "Relates an activity to what it produces as output, data, artifacts or an activity it sets going, such as the wire a release sends."@en .
 <https://cyberterrain.org/ns/stonework#hasOutput> <http://www.w3.org/2004/02/skos/core#prefLabel> "hasOutput"@en .
 # 
 # https://cyberterrain.org/ns/stonework#hasOutputVariable
@@ -2276,13 +2304,13 @@ _:genid175 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 _:genid178 <http://www.w3.org/2002/07/owl#unionOf> _:genid180 .
 _:genid180 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid179 .
 _:genid179 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid179 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://cyberterrain.org/ns/stonework#Process> .
+_:genid179 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://cyberterrain.org/ns/stonework#Plan> .
 _:genid179 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid180 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://cyberterrain.org/ns/stonework#Plan> .
+_:genid180 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://cyberterrain.org/ns/stonework#CyberActivity> .
 _:genid180 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid178 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://cyberterrain.org/ns/stonework#performedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://cyberterrain.org/ns/stonework#Agent> .
-<https://cyberterrain.org/ns/stonework#performedBy> <http://www.w3.org/2004/02/skos/core#definition> "Relates a Process to the Agent that performs it, or a Plan to the Agent responsible for carrying it out."@en .
+<https://cyberterrain.org/ns/stonework#performedBy> <http://www.w3.org/2004/02/skos/core#definition> "Relates an activity (a Process, an Event such as a log record, or any other CyberActivity) to the Agent that performed it, or a Plan to the Agent responsible for carrying it out."@en .
 <https://cyberterrain.org/ns/stonework#performedBy> <http://www.w3.org/2004/02/skos/core#prefLabel> "performedBy"@en .
 <https://cyberterrain.org/ns/stonework#performedBy> <http://www.w3.org/2004/02/skos/core#scopeNote> "On an execution, name the performer as observed. When the evidence shows only an identity, such as an account in an audit log, the performer is that DigitalIdentity, and the Agent behind it is reached through stonework:accountOf or stonework:attributedToAgent. When an identity may have been used by someone other than its holder, keep the identity as the performer and record the Agent believed responsible with stonework:attributedTo; an analyst who establishes the misuse records a stonework:Deviation. Who is expected to perform a Plan's Steps is given per Step, as Roles (stonework:performerRole)."@en .
 # 
@@ -3879,6 +3907,13 @@ _:genid249 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://cyberterrain.org/ns/stonework#osVersion> <http://www.w3.org/2004/02/skos/core#definition> "The version string of the operating system."@en .
 <https://cyberterrain.org/ns/stonework#osVersion> <http://www.w3.org/2004/02/skos/core#prefLabel> "osVersion"@en .
 # 
+# https://cyberterrain.org/ns/stonework#outcomeDetail
+<https://cyberterrain.org/ns/stonework#outcomeDetail> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://cyberterrain.org/ns/stonework#outcomeDetail> <http://www.w3.org/2000/01/rdf-schema#domain> <https://cyberterrain.org/ns/stonework#CyberActivity> .
+<https://cyberterrain.org/ns/stonework#outcomeDetail> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://cyberterrain.org/ns/stonework#outcomeDetail> <http://www.w3.org/2004/02/skos/core#definition> "Why an activity ended as it did, as the source system reports it, such as an error code and its message."@en .
+<https://cyberterrain.org/ns/stonework#outcomeDetail> <http://www.w3.org/2004/02/skos/core#prefLabel> "outcomeDetail"@en .
+# 
 # https://cyberterrain.org/ns/stonework#packerName
 <https://cyberterrain.org/ns/stonework#packerName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://cyberterrain.org/ns/stonework#packerName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://cyberterrain.org/ns/stonework#MalwareSample> .
@@ -3899,6 +3934,14 @@ _:genid249 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://cyberterrain.org/ns/stonework#parentPid> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 <https://cyberterrain.org/ns/stonework#parentPid> <http://www.w3.org/2004/02/skos/core#definition> "The process identifier of the parent process."@en .
 <https://cyberterrain.org/ns/stonework#parentPid> <http://www.w3.org/2004/02/skos/core#prefLabel> "parentPid"@en .
+# 
+# https://cyberterrain.org/ns/stonework#phishingResistant
+<https://cyberterrain.org/ns/stonework#phishingResistant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://cyberterrain.org/ns/stonework#phishingResistant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://cyberterrain.org/ns/stonework#phishingResistant> <http://www.w3.org/2000/01/rdf-schema#domain> <https://cyberterrain.org/ns/stonework#AuthenticatorType> .
+<https://cyberterrain.org/ns/stonework#phishingResistant> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://cyberterrain.org/ns/stonework#phishingResistant> <http://www.w3.org/2004/02/skos/core#definition> "Whether an authenticator type is bound to the site it authenticates to, so that a phishing proxy relaying the sign-in can't use it."@en .
+<https://cyberterrain.org/ns/stonework#phishingResistant> <http://www.w3.org/2004/02/skos/core#prefLabel> "phishingResistant"@en .
 # 
 # https://cyberterrain.org/ns/stonework#phoneValue
 <https://cyberterrain.org/ns/stonework#phoneValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -4457,17 +4500,17 @@ _:genid266 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://cyberterrain.org/ns/stonework#AttackTechnique> <http://www.w3.org/2004/02/skos/core#prefLabel> "Attack Technique"@en .
 <https://cyberterrain.org/ns/stonework#AttackTechnique> <http://www.w3.org/2004/02/skos/core#scopeNote> "Aligns with MITRE ATT&CK techniques and D3FEND OffensiveTechnique. The MITRE ATT&CK-shaped realization of stonework:AttackPattern — operationalized for execution, as distinct from CAPEC's more abstract taxonomy-entry shape (capec:AttackPattern, also a stonework:AttackPattern). Framework-specific subclasses (e.g. attack:Technique) provide the concrete individuals. A specific, concrete realization of this technique is modeled as a stonework:Procedure, linked back via stonework:implementedBy."@en .
 # 
-# https://cyberterrain.org/ns/stonework#AuthenticationMethod
-<https://cyberterrain.org/ns/stonework#AuthenticationMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://cyberterrain.org/ns/stonework#AuthenticationMethod> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cyberterrain.org/ns/stonework#Category> .
-<https://cyberterrain.org/ns/stonework#AuthenticationMethod> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid267 .
-_:genid267 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#authenticationMethodScheme> .
-<https://cyberterrain.org/ns/stonework#authenticationMethodScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# https://cyberterrain.org/ns/stonework#AuthenticationFactor
+<https://cyberterrain.org/ns/stonework#AuthenticationFactor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://cyberterrain.org/ns/stonework#AuthenticationFactor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cyberterrain.org/ns/stonework#Category> .
+<https://cyberterrain.org/ns/stonework#AuthenticationFactor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid267 .
+_:genid267 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#authenticationFactorScheme> .
+<https://cyberterrain.org/ns/stonework#authenticationFactorScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 _:genid267 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
 _:genid267 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://cyberterrain.org/ns/stonework#AuthenticationMethod> <http://www.w3.org/2004/02/skos/core#definition> "A sender-authentication method for email."@en .
-<https://cyberterrain.org/ns/stonework#AuthenticationMethod> <http://www.w3.org/2004/02/skos/core#prefLabel> "Authentication Method"@en .
-<https://cyberterrain.org/ns/stonework#AuthenticationMethod> <http://www.w3.org/2004/02/skos/core#scopeNote> "Applied via stonework:hasAuthenticationMethod to EmailAuthenticationResult individuals. Named individuals: SPF, DKIM, DMARC, ARC."@en .
+<https://cyberterrain.org/ns/stonework#AuthenticationFactor> <http://www.w3.org/2004/02/skos/core#definition> "A kind of evidence of identity a verifier checks: knowledge, possession or inherence."@en .
+<https://cyberterrain.org/ns/stonework#AuthenticationFactor> <http://www.w3.org/2004/02/skos/core#prefLabel> "Authentication Factor"@en .
+<https://cyberterrain.org/ns/stonework#AuthenticationFactor> <http://www.w3.org/2004/02/skos/core#scopeNote> "Applied via stonework:authenticationFactor to the activity in which the factor was checked. One distinct factor is single-factor authentication; two or more, multifactor; none, an activity that relied on an earlier authentication (a session token)."@en .
 # 
 # https://cyberterrain.org/ns/stonework#AuthenticationVerdict
 <https://cyberterrain.org/ns/stonework#AuthenticationVerdict> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -4480,6 +4523,18 @@ _:genid268 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://cyberterrain.org/ns/stonework#AuthenticationVerdict> <http://www.w3.org/2004/02/skos/core#definition> "A verdict of a sender-authentication check on an email."@en .
 <https://cyberterrain.org/ns/stonework#AuthenticationVerdict> <http://www.w3.org/2004/02/skos/core#prefLabel> "Authentication Verdict"@en .
 <https://cyberterrain.org/ns/stonework#AuthenticationVerdict> <http://www.w3.org/2004/02/skos/core#scopeNote> "Applied via stonework:hasAuthenticationVerdict to EmailAuthenticationResult individuals. The verdicts of an Authentication-Results header (RFC 8601): pass, fail, soft fail, neutral, none, temporary error, permanent error, policy."@en .
+# 
+# https://cyberterrain.org/ns/stonework#AuthenticatorType
+<https://cyberterrain.org/ns/stonework#AuthenticatorType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://cyberterrain.org/ns/stonework#AuthenticatorType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cyberterrain.org/ns/stonework#Category> .
+<https://cyberterrain.org/ns/stonework#AuthenticatorType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid269 .
+_:genid269 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#authenticatorTypeScheme> .
+<https://cyberterrain.org/ns/stonework#authenticatorTypeScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid269 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid269 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://cyberterrain.org/ns/stonework#AuthenticatorType> <http://www.w3.org/2004/02/skos/core#definition> "A kind of authenticator a user or program presents to prove its identity, after NIST SP 800-63B: passwords, one-time codes and approvals, cryptographic keys, and the tokens and assertions that stand in for a fresh authentication."@en .
+<https://cyberterrain.org/ns/stonework#AuthenticatorType> <http://www.w3.org/2004/02/skos/core#prefLabel> "Authenticator Type"@en .
+<https://cyberterrain.org/ns/stonework#AuthenticatorType> <http://www.w3.org/2004/02/skos/core#scopeNote> "Applied via stonework:authenticatedWith to the activity in which it was presented. Which factors an authenticator amounted to is recorded per activity (stonework:authenticationFactor), since a FIDO2 key is one factor or two depending on whether the user was verified that time. stonework:phishingResistant marks the types bound to the site's origin, which a relaying phishing proxy can't use."@en .
 # 
 # https://cyberterrain.org/ns/stonework#AutonomousSystem
 <https://cyberterrain.org/ns/stonework#AutonomousSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -4504,11 +4559,11 @@ _:genid268 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # https://cyberterrain.org/ns/stonework#BomEntry
 <https://cyberterrain.org/ns/stonework#BomEntry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://cyberterrain.org/ns/stonework#BomEntry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cyberterrain.org/ns/stonework#ComponentContext> .
-<https://cyberterrain.org/ns/stonework#BomEntry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid269 .
-_:genid269 <http://www.w3.org/2002/07/owl#onClass> <https://cyberterrain.org/ns/stonework#VersionedProduct> .
-_:genid269 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid269 <http://www.w3.org/2002/07/owl#onProperty> <https://cyberterrain.org/ns/stonework#installationOf> .
-_:genid269 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://cyberterrain.org/ns/stonework#BomEntry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid270 .
+_:genid270 <http://www.w3.org/2002/07/owl#onClass> <https://cyberterrain.org/ns/stonework#VersionedProduct> .
+_:genid270 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid270 <http://www.w3.org/2002/07/owl#onProperty> <https://cyberterrain.org/ns/stonework#installationOf> .
+_:genid270 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://cyberterrain.org/ns/stonework#BomEntry> <http://www.w3.org/2000/01/rdf-schema#comment> "BomEntry is the STONEWORK representation of a CycloneDX component element or SPDX package entry. It links a VersionedProduct into the context of a particular SBOM document via stonework:installationOf, and may carry component-specific metadata (PURL, license, hash, component type) that does not belong on the VersionedProduct itself."@en .
 <https://cyberterrain.org/ns/stonework#BomEntry> <http://www.w3.org/2004/02/skos/core#definition> "A single component entry within a Software Bill of Materials, asserting that a specific VersionedProduct is included in the artifact or system described by the SBOM."@en .
 <https://cyberterrain.org/ns/stonework#BomEntry> <http://www.w3.org/2004/02/skos/core#prefLabel> "BOM Entry" .
@@ -4532,11 +4587,11 @@ _:genid269 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://cyberterrain.org/ns/stonework#Category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://cyberterrain.org/ns/stonework#Category> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
 <https://cyberterrain.org/ns/stonework#Category> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cyberterrain.org/ns/stonework#CyberEntity> .
-<https://cyberterrain.org/ns/stonework#Category> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid270 .
-_:genid270 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#categoryScheme> .
+<https://cyberterrain.org/ns/stonework#Category> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid271 .
+_:genid271 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#categoryScheme> .
 <https://cyberterrain.org/ns/stonework#categoryScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-_:genid270 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid270 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid271 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid271 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://cyberterrain.org/ns/stonework#Category> <http://www.w3.org/2004/02/skos/core#definition> "A classification or tagging concept used to group or qualify other individuals in a particular context."@en .
 <https://cyberterrain.org/ns/stonework#Category> <http://www.w3.org/2004/02/skos/core#prefLabel> "Category"@en .
 <https://cyberterrain.org/ns/stonework#Category> <http://www.w3.org/2004/02/skos/core#scopeNote> "Categories are reified so they can be referenced, versioned, or scoped. They are not rigid types."@en .
@@ -4702,11 +4757,11 @@ _:genid270 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # https://cyberterrain.org/ns/stonework#DeviationKind
 <https://cyberterrain.org/ns/stonework#DeviationKind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://cyberterrain.org/ns/stonework#DeviationKind> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cyberterrain.org/ns/stonework#Category> .
-<https://cyberterrain.org/ns/stonework#DeviationKind> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid271 .
-_:genid271 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#deviationKindScheme> .
+<https://cyberterrain.org/ns/stonework#DeviationKind> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid272 .
+_:genid272 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#deviationKindScheme> .
 <https://cyberterrain.org/ns/stonework#deviationKindScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-_:genid271 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid271 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid272 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid272 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://cyberterrain.org/ns/stonework#DeviationKind> <http://www.w3.org/2004/02/skos/core#definition> "A classification of how a run departed from its Plan."@en .
 <https://cyberterrain.org/ns/stonework#DeviationKind> <http://www.w3.org/2004/02/skos/core#prefLabel> "Deviation Kind"@en .
 <https://cyberterrain.org/ns/stonework#DeviationKind> <http://www.w3.org/2004/02/skos/core#scopeNote> "Applied via stonework:deviationKind to Deviation individuals. Named individuals: skipped, wrong role, same agent, out of order, misused identity, wrong target."@en .
@@ -4742,12 +4797,24 @@ _:genid271 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://cyberterrain.org/ns/stonework#EmailAddress> <http://www.w3.org/2004/02/skos/core#definition> "Represents a single email address, optionally associating it with a display name and a user account." .
 <https://cyberterrain.org/ns/stonework#EmailAddress> <http://www.w3.org/2004/02/skos/core#prefLabel> "Email Address"@en .
 # 
+# https://cyberterrain.org/ns/stonework#EmailAuthenticationMethod
+<https://cyberterrain.org/ns/stonework#EmailAuthenticationMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://cyberterrain.org/ns/stonework#EmailAuthenticationMethod> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cyberterrain.org/ns/stonework#Category> .
+<https://cyberterrain.org/ns/stonework#EmailAuthenticationMethod> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid273 .
+_:genid273 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#emailAuthenticationMethodScheme> .
+<https://cyberterrain.org/ns/stonework#emailAuthenticationMethodScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+_:genid273 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid273 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://cyberterrain.org/ns/stonework#EmailAuthenticationMethod> <http://www.w3.org/2004/02/skos/core#definition> "A sender-authentication method for email."@en .
+<https://cyberterrain.org/ns/stonework#EmailAuthenticationMethod> <http://www.w3.org/2004/02/skos/core#prefLabel> "Email Authentication Method"@en .
+<https://cyberterrain.org/ns/stonework#EmailAuthenticationMethod> <http://www.w3.org/2004/02/skos/core#scopeNote> "Applied via stonework:hasEmailAuthenticationMethod to EmailAuthenticationResult individuals. Named individuals: SPF, DKIM, DMARC, ARC."@en .
+# 
 # https://cyberterrain.org/ns/stonework#EmailAuthenticationResult
 <https://cyberterrain.org/ns/stonework#EmailAuthenticationResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://cyberterrain.org/ns/stonework#EmailAuthenticationResult> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cyberterrain.org/ns/stonework#Assessment> .
 <https://cyberterrain.org/ns/stonework#EmailAuthenticationResult> <http://www.w3.org/2004/02/skos/core#definition> "The verdict of one sender-authentication check (SPF, DKIM, DMARC or ARC) on an EmailMessage, as a receiving server recorded it in an Authentication-Results header: the method, the verdict, the domain checked, and the server that checked."@en .
 <https://cyberterrain.org/ns/stonework#EmailAuthenticationResult> <http://www.w3.org/2004/02/skos/core#prefLabel> "Email Authentication Result"@en .
-<https://cyberterrain.org/ns/stonework#EmailAuthenticationResult> <http://www.w3.org/2004/02/skos/core#scopeNote> "A pass authenticates the domain, not the sender's honesty: a lookalike domain registered by an actor passes SPF, DKIM and DMARC for itself. Compare stonework:authenticatedDomain with the domain the recipient expected. The method and verdict are categories (stonework:hasAuthenticationMethod, stonework:hasAuthenticationVerdict)."@en .
+<https://cyberterrain.org/ns/stonework#EmailAuthenticationResult> <http://www.w3.org/2004/02/skos/core#scopeNote> "A pass authenticates the domain, not the sender's honesty: a lookalike domain registered by an actor passes SPF, DKIM and DMARC for itself. Compare stonework:authenticatedDomain with the domain the recipient expected. The method and verdict are categories (stonework:hasEmailAuthenticationMethod, stonework:hasAuthenticationVerdict)."@en .
 # 
 # https://cyberterrain.org/ns/stonework#EmailMessage
 <https://cyberterrain.org/ns/stonework#EmailMessage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -4761,28 +4828,28 @@ _:genid271 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://cyberterrain.org/ns/stonework#Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cyberterrain.org/ns/stonework#CyberActivity> .
 <https://cyberterrain.org/ns/stonework#Event> <http://www.w3.org/2004/02/skos/core#definition> "An atomic, observable occurrence in a system, network, or environment that has potential security relevance but has not yet been assessed or declared as an Incident."@en .
 <https://cyberterrain.org/ns/stonework#Event> <http://www.w3.org/2004/02/skos/core#prefLabel> "Event"@en .
-<https://cyberterrain.org/ns/stonework#Event> <http://www.w3.org/2004/02/skos/core#scopeNote> "Represents the pre-triage state — a raw log entry, alert, or sensor observation. Distinguished from Incident by the absence of human or automated assessment declaring it significant and adverse. Useful for SIEM, log-based, and threat hunting use cases."@en .
+<https://cyberterrain.org/ns/stonework#Event> <http://www.w3.org/2004/02/skos/core#scopeNote> "Represents the pre-triage state — a raw log entry, alert, or sensor observation. Distinguished from Incident by the absence of human or automated assessment declaring it significant and adverse. Useful for SIEM, log-based, and threat hunting use cases. An Event parsed from a record keeps the link to it (stonework:generatedFrom) and names who performed it (stonework:performedBy). When an analyst places it in a run (stonework:correspondsToStep, stonework:partOfExecution) it stays an Event: it is the execution of that Step without changing type, and its link to the record remains."@en .
 # 
 # https://cyberterrain.org/ns/stonework#ExecutionOutcome
 <https://cyberterrain.org/ns/stonework#ExecutionOutcome> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://cyberterrain.org/ns/stonework#ExecutionOutcome> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cyberterrain.org/ns/stonework#Category> .
-<https://cyberterrain.org/ns/stonework#ExecutionOutcome> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid272 .
-_:genid272 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#executionOutcomeScheme> .
+<https://cyberterrain.org/ns/stonework#ExecutionOutcome> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid274 .
+_:genid274 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#executionOutcomeScheme> .
 <https://cyberterrain.org/ns/stonework#executionOutcomeScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-_:genid272 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid272 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://cyberterrain.org/ns/stonework#ExecutionOutcome> <http://www.w3.org/2004/02/skos/core#definition> "Whether an execution of a Step or Plan succeeded, failed or timed out."@en .
+_:genid274 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid274 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://cyberterrain.org/ns/stonework#ExecutionOutcome> <http://www.w3.org/2004/02/skos/core#definition> "How an execution of a Step or Plan, or any observed activity, ended: succeeded, failed, timed out or interrupted."@en .
 <https://cyberterrain.org/ns/stonework#ExecutionOutcome> <http://www.w3.org/2004/02/skos/core#prefLabel> "Execution Outcome"@en .
-<https://cyberterrain.org/ns/stonework#ExecutionOutcome> <http://www.w3.org/2004/02/skos/core#scopeNote> "The value of a Step's stonework:outcomeVariable in a run. Named individuals: succeeded, failed, timed out. A timeout is kept apart from other failures, as CACAO reports it separately."@en .
+<https://cyberterrain.org/ns/stonework#ExecutionOutcome> <http://www.w3.org/2004/02/skos/core#scopeNote> "The value of a Step's stonework:outcomeVariable in a run, and of stonework:hasOutcome on any activity. Named individuals: succeeded, failed, timed out, interrupted. A timeout is kept apart from other failures, as CACAO reports it separately; interrupted (not in CACAO) is an activity that paused for something more, such as a further authentication step, and continues in another record."@en .
 # 
 # https://cyberterrain.org/ns/stonework#ExploitMaturity
 <https://cyberterrain.org/ns/stonework#ExploitMaturity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://cyberterrain.org/ns/stonework#ExploitMaturity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cyberterrain.org/ns/stonework#Category> .
-<https://cyberterrain.org/ns/stonework#ExploitMaturity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid273 .
-_:genid273 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#exploitMaturityScheme> .
+<https://cyberterrain.org/ns/stonework#ExploitMaturity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid275 .
+_:genid275 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#exploitMaturityScheme> .
 <https://cyberterrain.org/ns/stonework#exploitMaturityScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-_:genid273 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid273 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid275 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid275 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://cyberterrain.org/ns/stonework#ExploitMaturity> <http://www.w3.org/2004/02/skos/core#definition> "How mature a known exploit for a vulnerability is."@en .
 <https://cyberterrain.org/ns/stonework#ExploitMaturity> <http://www.w3.org/2004/02/skos/core#prefLabel> "Exploit Maturity"@en .
 <https://cyberterrain.org/ns/stonework#ExploitMaturity> <http://www.w3.org/2004/02/skos/core#scopeNote> "Applied with stonework:hasExploitMaturity. poc means a proof of concept exists. weaponized means the exploit is reliable against most targets or is built into an attack tool or malware. A source report that exploitation was observed is stonework:metricReportedExploited. Membership in a known-exploited catalog is stonework:metricKevMembership, with the catalog named by the observation's provenance."@en .
@@ -4790,11 +4857,11 @@ _:genid273 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # https://cyberterrain.org/ns/stonework#ExploitationReportKind
 <https://cyberterrain.org/ns/stonework#ExploitationReportKind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://cyberterrain.org/ns/stonework#ExploitationReportKind> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cyberterrain.org/ns/stonework#Category> .
-<https://cyberterrain.org/ns/stonework#ExploitationReportKind> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid274 .
-_:genid274 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#exploitationReportKindScheme> .
+<https://cyberterrain.org/ns/stonework#ExploitationReportKind> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid276 .
+_:genid276 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#exploitationReportKindScheme> .
 <https://cyberterrain.org/ns/stonework#exploitationReportKindScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-_:genid274 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid274 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid276 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid276 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://cyberterrain.org/ns/stonework#ExploitationReportKind> <http://www.w3.org/2004/02/skos/core#definition> "What a source's report that a vulnerability was exploited says about who exploited it."@en .
 <https://cyberterrain.org/ns/stonework#ExploitationReportKind> <http://www.w3.org/2004/02/skos/core#prefLabel> "Exploitation Report Kind"@en .
 <https://cyberterrain.org/ns/stonework#ExploitationReportKind> <http://www.w3.org/2004/02/skos/core#scopeNote> "Applied with stonework:hasExploitationReportKind to a stonework:MetricObservation of stonework:metricReportedExploited."@en .
@@ -4802,11 +4869,11 @@ _:genid274 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # https://cyberterrain.org/ns/stonework#FalsePositiveRate
 <https://cyberterrain.org/ns/stonework#FalsePositiveRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://cyberterrain.org/ns/stonework#FalsePositiveRate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cyberterrain.org/ns/stonework#Category> .
-<https://cyberterrain.org/ns/stonework#FalsePositiveRate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid275 .
-_:genid275 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#falsePositiveRateScheme> .
+<https://cyberterrain.org/ns/stonework#FalsePositiveRate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid277 .
+_:genid277 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#falsePositiveRateScheme> .
 <https://cyberterrain.org/ns/stonework#falsePositiveRateScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-_:genid275 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid275 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid277 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid277 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://cyberterrain.org/ns/stonework#FalsePositiveRate> <http://www.w3.org/2004/02/skos/core#definition> "An ordinal classification of the expected false-positive frequency of a detection rule."@en .
 <https://cyberterrain.org/ns/stonework#FalsePositiveRate> <http://www.w3.org/2004/02/skos/core#prefLabel> "False Positive Rate"@en .
 # 
@@ -4834,11 +4901,11 @@ _:genid275 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # https://cyberterrain.org/ns/stonework#FinancialAccountType
 <https://cyberterrain.org/ns/stonework#FinancialAccountType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://cyberterrain.org/ns/stonework#FinancialAccountType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cyberterrain.org/ns/stonework#Category> .
-<https://cyberterrain.org/ns/stonework#FinancialAccountType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid276 .
-_:genid276 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#financialAccountTypeScheme> .
+<https://cyberterrain.org/ns/stonework#FinancialAccountType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid278 .
+_:genid278 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#financialAccountTypeScheme> .
 <https://cyberterrain.org/ns/stonework#financialAccountTypeScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-_:genid276 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid276 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid278 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid278 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://cyberterrain.org/ns/stonework#FinancialAccountType> <http://www.w3.org/2004/02/skos/core#definition> "A classification of a financial account by the kind of value custody or service it represents."@en .
 <https://cyberterrain.org/ns/stonework#FinancialAccountType> <http://www.w3.org/2004/02/skos/core#prefLabel> "Financial Account Type"@en .
 # 
@@ -4852,11 +4919,11 @@ _:genid276 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # https://cyberterrain.org/ns/stonework#FinancialInstitutionType
 <https://cyberterrain.org/ns/stonework#FinancialInstitutionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://cyberterrain.org/ns/stonework#FinancialInstitutionType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cyberterrain.org/ns/stonework#Category> .
-<https://cyberterrain.org/ns/stonework#FinancialInstitutionType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid277 .
-_:genid277 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#financialInstitutionTypeScheme> .
+<https://cyberterrain.org/ns/stonework#FinancialInstitutionType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid279 .
+_:genid279 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#financialInstitutionTypeScheme> .
 <https://cyberterrain.org/ns/stonework#financialInstitutionTypeScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-_:genid277 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid277 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid279 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid279 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://cyberterrain.org/ns/stonework#FinancialInstitutionType> <http://www.w3.org/2004/02/skos/core#definition> "A classification of a financial institution by its regulatory form and the service it provides."@en .
 <https://cyberterrain.org/ns/stonework#FinancialInstitutionType> <http://www.w3.org/2004/02/skos/core#prefLabel> "Financial Institution Type"@en .
 # 
@@ -4870,11 +4937,11 @@ _:genid277 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # https://cyberterrain.org/ns/stonework#FlowKind
 <https://cyberterrain.org/ns/stonework#FlowKind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://cyberterrain.org/ns/stonework#FlowKind> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cyberterrain.org/ns/stonework#Category> .
-<https://cyberterrain.org/ns/stonework#FlowKind> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid278 .
-_:genid278 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#flowKindScheme> .
+<https://cyberterrain.org/ns/stonework#FlowKind> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid280 .
+_:genid280 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#flowKindScheme> .
 <https://cyberterrain.org/ns/stonework#flowKindScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-_:genid278 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid278 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid280 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid280 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://cyberterrain.org/ns/stonework#FlowKind> <http://www.w3.org/2004/02/skos/core#definition> "A classification of how control flow splits after a Step or joins before one."@en .
 <https://cyberterrain.org/ns/stonework#FlowKind> <http://www.w3.org/2004/02/skos/core#prefLabel> "Flow Kind"@en .
 <https://cyberterrain.org/ns/stonework#FlowKind> <http://www.w3.org/2004/02/skos/core#scopeNote> "Applied via stonework:splitKind and stonework:joinKind to Steps. Named individuals: exclusive, parallel."@en .
@@ -4929,11 +4996,11 @@ _:genid278 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # https://cyberterrain.org/ns/stonework#HypothesisStatus
 <https://cyberterrain.org/ns/stonework#HypothesisStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://cyberterrain.org/ns/stonework#HypothesisStatus> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cyberterrain.org/ns/stonework#Category> .
-<https://cyberterrain.org/ns/stonework#HypothesisStatus> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid279 .
-_:genid279 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#hypothesisStatusScheme> .
+<https://cyberterrain.org/ns/stonework#HypothesisStatus> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid281 .
+_:genid281 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#hypothesisStatusScheme> .
 <https://cyberterrain.org/ns/stonework#hypothesisStatusScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-_:genid279 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid279 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid281 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid281 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://cyberterrain.org/ns/stonework#HypothesisStatus> <http://www.w3.org/2004/02/skos/core#definition> "A classification of a Hypothesis's position in the confirm/refute lifecycle."@en .
 <https://cyberterrain.org/ns/stonework#HypothesisStatus> <http://www.w3.org/2004/02/skos/core#prefLabel> "Hypothesis Status"@en .
 <https://cyberterrain.org/ns/stonework#HypothesisStatus> <http://www.w3.org/2004/02/skos/core#scopeNote> "Applied via stonework:hasHypothesisStatus to Hypothesis individuals. Named individuals: pending (not yet tested), confirmed (actual result matched the prediction), refuted (actual result did not match the prediction)."@en .
@@ -4989,22 +5056,22 @@ _:genid279 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # https://cyberterrain.org/ns/stonework#ImpactLevel
 <https://cyberterrain.org/ns/stonework#ImpactLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://cyberterrain.org/ns/stonework#ImpactLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cyberterrain.org/ns/stonework#Category> .
-<https://cyberterrain.org/ns/stonework#ImpactLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid280 .
-_:genid280 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#impactLevelScheme> .
+<https://cyberterrain.org/ns/stonework#ImpactLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid282 .
+_:genid282 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#impactLevelScheme> .
 <https://cyberterrain.org/ns/stonework#impactLevelScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-_:genid280 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid280 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid282 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid282 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://cyberterrain.org/ns/stonework#ImpactLevel> <http://www.w3.org/2004/02/skos/core#definition> "An ordinal classification of the magnitude of a security impact."@en .
 <https://cyberterrain.org/ns/stonework#ImpactLevel> <http://www.w3.org/2004/02/skos/core#prefLabel> "Impact Level"@en .
 # 
 # https://cyberterrain.org/ns/stonework#ImpactType
 <https://cyberterrain.org/ns/stonework#ImpactType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://cyberterrain.org/ns/stonework#ImpactType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cyberterrain.org/ns/stonework#Category> .
-<https://cyberterrain.org/ns/stonework#ImpactType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid281 .
-_:genid281 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#impactTypeScheme> .
+<https://cyberterrain.org/ns/stonework#ImpactType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid283 .
+_:genid283 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#impactTypeScheme> .
 <https://cyberterrain.org/ns/stonework#impactTypeScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-_:genid281 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid281 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid283 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid283 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://cyberterrain.org/ns/stonework#ImpactType> <http://www.w3.org/2004/02/skos/core#definition> "A classification of the security dimension or consequence affected by an impact."@en .
 <https://cyberterrain.org/ns/stonework#ImpactType> <http://www.w3.org/2004/02/skos/core#prefLabel> "Impact Type"@en .
 # 
@@ -5018,11 +5085,11 @@ _:genid281 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # https://cyberterrain.org/ns/stonework#IncidentStatus
 <https://cyberterrain.org/ns/stonework#IncidentStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://cyberterrain.org/ns/stonework#IncidentStatus> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cyberterrain.org/ns/stonework#Category> .
-<https://cyberterrain.org/ns/stonework#IncidentStatus> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid282 .
-_:genid282 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#incidentStatusScheme> .
+<https://cyberterrain.org/ns/stonework#IncidentStatus> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid284 .
+_:genid284 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#incidentStatusScheme> .
 <https://cyberterrain.org/ns/stonework#incidentStatusScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-_:genid282 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid282 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid284 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid284 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://cyberterrain.org/ns/stonework#IncidentStatus> <http://www.w3.org/2004/02/skos/core#definition> "A classification of an incident's position in the response lifecycle."@en .
 <https://cyberterrain.org/ns/stonework#IncidentStatus> <http://www.w3.org/2004/02/skos/core#prefLabel> "Incident Status"@en .
 # 
@@ -5036,11 +5103,11 @@ _:genid282 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # https://cyberterrain.org/ns/stonework#Industry
 <https://cyberterrain.org/ns/stonework#Industry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://cyberterrain.org/ns/stonework#Industry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cyberterrain.org/ns/stonework#Sector> .
-<https://cyberterrain.org/ns/stonework#Industry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid283 .
-_:genid283 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#industryScheme> .
+<https://cyberterrain.org/ns/stonework#Industry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid285 .
+_:genid285 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#industryScheme> .
 <https://cyberterrain.org/ns/stonework#industryScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-_:genid283 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid283 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid285 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid285 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://cyberterrain.org/ns/stonework#Industry> <http://www.w3.org/2004/02/skos/core#definition> "A specific branch of economic activity or commercial sector (typically modeled using NAICS or similar codes)."@en .
 <https://cyberterrain.org/ns/stonework#Industry> <http://www.w3.org/2004/02/skos/core#prefLabel> "Industry"@en .
 <https://cyberterrain.org/ns/stonework#Industry> <http://www.w3.org/2004/02/skos/core#scopeNote> "Examples: Financial Services, Manufacturing, Retail, Pharmaceuticals."@en .
@@ -5054,11 +5121,11 @@ _:genid283 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # https://cyberterrain.org/ns/stonework#InfrastructureType
 <https://cyberterrain.org/ns/stonework#InfrastructureType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://cyberterrain.org/ns/stonework#InfrastructureType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cyberterrain.org/ns/stonework#Category> .
-<https://cyberterrain.org/ns/stonework#InfrastructureType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid284 .
-_:genid284 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#infrastructureTypeScheme> .
+<https://cyberterrain.org/ns/stonework#InfrastructureType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid286 .
+_:genid286 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#infrastructureTypeScheme> .
 <https://cyberterrain.org/ns/stonework#infrastructureTypeScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-_:genid284 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid284 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid286 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid286 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://cyberterrain.org/ns/stonework#InfrastructureType> <http://www.w3.org/2004/02/skos/core#definition> "A classification of infrastructure by its operational role or purpose within a cyber operation."@en .
 <https://cyberterrain.org/ns/stonework#InfrastructureType> <http://www.w3.org/2004/02/skos/core#prefLabel> "Infrastructure Type"@en .
 <https://cyberterrain.org/ns/stonework#InfrastructureType> <http://www.w3.org/2004/02/skos/core#scopeNote> "Applied via stonework:categorizedBy to Infrastructure individuals. Covers both adversary-controlled infrastructure (C2, staging, phishing) and defender infrastructure (firewall, workstation). Aligns with the STIX 2.1 infrastructure-type open vocabulary."@en .
@@ -5080,11 +5147,11 @@ _:genid284 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # https://cyberterrain.org/ns/stonework#InvestigationOutcome
 <https://cyberterrain.org/ns/stonework#InvestigationOutcome> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://cyberterrain.org/ns/stonework#InvestigationOutcome> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cyberterrain.org/ns/stonework#Category> .
-<https://cyberterrain.org/ns/stonework#InvestigationOutcome> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid285 .
-_:genid285 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#investigationOutcomeScheme> .
+<https://cyberterrain.org/ns/stonework#InvestigationOutcome> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid287 .
+_:genid287 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#investigationOutcomeScheme> .
 <https://cyberterrain.org/ns/stonework#investigationOutcomeScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-_:genid285 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid285 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid287 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid287 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://cyberterrain.org/ns/stonework#InvestigationOutcome> <http://www.w3.org/2004/02/skos/core#definition> "A classification of how a closed investigation ended."@en .
 <https://cyberterrain.org/ns/stonework#InvestigationOutcome> <http://www.w3.org/2004/02/skos/core#prefLabel> "Investigation Outcome"@en .
 # 
@@ -5099,22 +5166,22 @@ _:genid285 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # https://cyberterrain.org/ns/stonework#InvestigationStatus
 <https://cyberterrain.org/ns/stonework#InvestigationStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://cyberterrain.org/ns/stonework#InvestigationStatus> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cyberterrain.org/ns/stonework#Category> .
-<https://cyberterrain.org/ns/stonework#InvestigationStatus> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid286 .
-_:genid286 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#investigationStatusScheme> .
+<https://cyberterrain.org/ns/stonework#InvestigationStatus> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid288 .
+_:genid288 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#investigationStatusScheme> .
 <https://cyberterrain.org/ns/stonework#investigationStatusScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-_:genid286 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid286 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid288 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid288 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://cyberterrain.org/ns/stonework#InvestigationStatus> <http://www.w3.org/2004/02/skos/core#definition> "A classification of an investigation's position in its lifecycle."@en .
 <https://cyberterrain.org/ns/stonework#InvestigationStatus> <http://www.w3.org/2004/02/skos/core#prefLabel> "Investigation Status"@en .
 # 
 # https://cyberterrain.org/ns/stonework#KillChainPhase
 <https://cyberterrain.org/ns/stonework#KillChainPhase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://cyberterrain.org/ns/stonework#KillChainPhase> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cyberterrain.org/ns/stonework#Category> .
-<https://cyberterrain.org/ns/stonework#KillChainPhase> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid287 .
-_:genid287 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#killChainPhaseScheme> .
+<https://cyberterrain.org/ns/stonework#KillChainPhase> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid289 .
+_:genid289 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#killChainPhaseScheme> .
 <https://cyberterrain.org/ns/stonework#killChainPhaseScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-_:genid287 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid287 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid289 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid289 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://cyberterrain.org/ns/stonework#KillChainPhase> <http://www.w3.org/2004/02/skos/core#definition> "A named phase within a kill chain or attack lifecycle framework used to categorize the stage of an offensive or defensive operation."@en .
 <https://cyberterrain.org/ns/stonework#KillChainPhase> <http://www.w3.org/2004/02/skos/core#prefLabel> "Kill Chain Phase"@en .
 <https://cyberterrain.org/ns/stonework#KillChainPhase> <http://www.w3.org/2004/02/skos/core#scopeNote> "Applies to both offensive frameworks (Lockheed Martin Cyber Kill Chain, MITRE ATT&CK) and defensive lifecycle models. Used to tag AttackTechniques, Procedures, or Events with their operational phase."@en .
@@ -5137,11 +5204,11 @@ _:genid287 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # https://cyberterrain.org/ns/stonework#LikelihoodLevel
 <https://cyberterrain.org/ns/stonework#LikelihoodLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://cyberterrain.org/ns/stonework#LikelihoodLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cyberterrain.org/ns/stonework#Category> .
-<https://cyberterrain.org/ns/stonework#LikelihoodLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid288 .
-_:genid288 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#likelihoodLevelScheme> .
+<https://cyberterrain.org/ns/stonework#LikelihoodLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid290 .
+_:genid290 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#likelihoodLevelScheme> .
 <https://cyberterrain.org/ns/stonework#likelihoodLevelScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-_:genid288 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid288 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid290 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid290 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://cyberterrain.org/ns/stonework#LikelihoodLevel> <http://www.w3.org/2004/02/skos/core#definition> "An ordinal classification of the assessed likelihood that a security outcome will occur."@en .
 <https://cyberterrain.org/ns/stonework#LikelihoodLevel> <http://www.w3.org/2004/02/skos/core#prefLabel> "Likelihood Level"@en .
 # 
@@ -5206,11 +5273,11 @@ _:genid288 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # https://cyberterrain.org/ns/stonework#MalwareType
 <https://cyberterrain.org/ns/stonework#MalwareType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://cyberterrain.org/ns/stonework#MalwareType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cyberterrain.org/ns/stonework#Category> .
-<https://cyberterrain.org/ns/stonework#MalwareType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid289 .
-_:genid289 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#malwareTypeScheme> .
+<https://cyberterrain.org/ns/stonework#MalwareType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid291 .
+_:genid291 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#malwareTypeScheme> .
 <https://cyberterrain.org/ns/stonework#malwareTypeScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-_:genid289 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid289 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid291 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid291 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://cyberterrain.org/ns/stonework#MalwareType> <http://www.w3.org/2004/02/skos/core#definition> "A behavioral or functional classification of malware, describing what the malware does rather than what it is. Corresponds to the STIX 2.1 malware-type open vocabulary."@en .
 <https://cyberterrain.org/ns/stonework#MalwareType> <http://www.w3.org/2004/02/skos/core#prefLabel> "Malware Type"@en .
 <https://cyberterrain.org/ns/stonework#MalwareType> <http://www.w3.org/2004/02/skos/core#scopeNote> "Instances (e.g., stonework:Ransomware, stonework:Trojan) are assigned via stonework:categorizedBy. A malware object may carry multiple types. The skos:notation value gives the STIX 2.1 wire-format string for aspirational round-trip export."@en .
@@ -5218,11 +5285,11 @@ _:genid289 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # https://cyberterrain.org/ns/stonework#Markings
 <https://cyberterrain.org/ns/stonework#Markings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://cyberterrain.org/ns/stonework#Markings> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cyberterrain.org/ns/stonework#Category> .
-<https://cyberterrain.org/ns/stonework#Markings> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid290 .
-_:genid290 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#markingScheme> .
+<https://cyberterrain.org/ns/stonework#Markings> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid292 .
+_:genid292 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#markingScheme> .
 <https://cyberterrain.org/ns/stonework#markingScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-_:genid290 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid290 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid292 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid292 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://cyberterrain.org/ns/stonework#Markings> <http://www.w3.org/2004/02/skos/core#definition> "Defines a data handling marking used to restrict or label how data can be shared or handled, such as TLP markings. Referenced by object_marking_refs or granular_markings."@en .
 <https://cyberterrain.org/ns/stonework#Markings> <http://www.w3.org/2004/02/skos/core#prefLabel> "Markings"@en .
 # 
@@ -5236,11 +5303,11 @@ _:genid290 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # https://cyberterrain.org/ns/stonework#MetricType
 <https://cyberterrain.org/ns/stonework#MetricType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://cyberterrain.org/ns/stonework#MetricType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cyberterrain.org/ns/stonework#Category> .
-<https://cyberterrain.org/ns/stonework#MetricType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid291 .
-_:genid291 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#metricTypeScheme> .
+<https://cyberterrain.org/ns/stonework#MetricType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid293 .
+_:genid293 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#metricTypeScheme> .
 <https://cyberterrain.org/ns/stonework#metricTypeScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-_:genid291 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid291 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid293 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid293 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://cyberterrain.org/ns/stonework#MetricType> <http://www.w3.org/2004/02/skos/core#definition> "A controlled classification identifying the meaning and scale of a qualified metric observation."@en .
 <https://cyberterrain.org/ns/stonework#MetricType> <http://www.w3.org/2004/02/skos/core#prefLabel> "Metric Type"@en .
 # 
@@ -5270,11 +5337,11 @@ _:genid291 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # https://cyberterrain.org/ns/stonework#Motivation
 <https://cyberterrain.org/ns/stonework#Motivation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://cyberterrain.org/ns/stonework#Motivation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cyberterrain.org/ns/stonework#Category> .
-<https://cyberterrain.org/ns/stonework#Motivation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid292 .
-_:genid292 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#motivationScheme> .
+<https://cyberterrain.org/ns/stonework#Motivation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid294 .
+_:genid294 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#motivationScheme> .
 <https://cyberterrain.org/ns/stonework#motivationScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-_:genid292 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid292 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid294 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid294 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://cyberterrain.org/ns/stonework#Motivation> <http://www.w3.org/2004/02/skos/core#definition> "The reason or driving force behind an adversary's decision to conduct an attack or operation."@en .
 <https://cyberterrain.org/ns/stonework#Motivation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Motivation"@en .
 <https://cyberterrain.org/ns/stonework#Motivation> <http://www.w3.org/2004/02/skos/core#scopeNote> "Applied via stonework:categorizedBy to ThreatActor, Campaign, or Operation individuals. Named individuals cover the STIX 2.1 attack-motivation open vocabulary. Custom motivations may be added as additional individuals."@en .
@@ -5351,11 +5418,11 @@ _:genid292 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # https://cyberterrain.org/ns/stonework#PaymentInstrument
 <https://cyberterrain.org/ns/stonework#PaymentInstrument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://cyberterrain.org/ns/stonework#PaymentInstrument> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cyberterrain.org/ns/stonework#Category> .
-<https://cyberterrain.org/ns/stonework#PaymentInstrument> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid293 .
-_:genid293 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#paymentInstrumentScheme> .
+<https://cyberterrain.org/ns/stonework#PaymentInstrument> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid295 .
+_:genid295 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#paymentInstrumentScheme> .
 <https://cyberterrain.org/ns/stonework#paymentInstrumentScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-_:genid293 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid293 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid295 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid295 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://cyberterrain.org/ns/stonework#PaymentInstrument> <http://www.w3.org/2004/02/skos/core#definition> "A classification of the instrument or rail used to move value in a financial transaction."@en .
 <https://cyberterrain.org/ns/stonework#PaymentInstrument> <http://www.w3.org/2004/02/skos/core#prefLabel> "Payment Instrument"@en .
 # 
@@ -5401,11 +5468,11 @@ _:genid293 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # https://cyberterrain.org/ns/stonework#PlaybookType
 <https://cyberterrain.org/ns/stonework#PlaybookType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://cyberterrain.org/ns/stonework#PlaybookType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cyberterrain.org/ns/stonework#Category> .
-<https://cyberterrain.org/ns/stonework#PlaybookType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid294 .
-_:genid294 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#playbookTypeScheme> .
+<https://cyberterrain.org/ns/stonework#PlaybookType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid296 .
+_:genid296 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#playbookTypeScheme> .
 <https://cyberterrain.org/ns/stonework#playbookTypeScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-_:genid294 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid294 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid296 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid296 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://cyberterrain.org/ns/stonework#PlaybookType> <http://www.w3.org/2004/02/skos/core#definition> "A classification of what a Plan is for, from the CACAO playbook types."@en .
 <https://cyberterrain.org/ns/stonework#PlaybookType> <http://www.w3.org/2004/02/skos/core#prefLabel> "Playbook Type"@en .
 <https://cyberterrain.org/ns/stonework#PlaybookType> <http://www.w3.org/2004/02/skos/core#scopeNote> "Applied via stonework:hasPlaybookType. The values are CACAO 2.0's playbook-type-ov. STONEWORK's Plan subclasses correspond: OperationPlan to attack, DetectionPlan to detection, InvestigationPlan to investigation, and ControlPlan to mitigation, prevention or remediation; engagement and notification have no subclass."@en .
@@ -5413,11 +5480,11 @@ _:genid294 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # https://cyberterrain.org/ns/stonework#PriorityLevel
 <https://cyberterrain.org/ns/stonework#PriorityLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://cyberterrain.org/ns/stonework#PriorityLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cyberterrain.org/ns/stonework#Category> .
-<https://cyberterrain.org/ns/stonework#PriorityLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid295 .
-_:genid295 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#priorityLevelScheme> .
+<https://cyberterrain.org/ns/stonework#PriorityLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid297 .
+_:genid297 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#priorityLevelScheme> .
 <https://cyberterrain.org/ns/stonework#priorityLevelScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-_:genid295 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid295 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid297 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid297 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://cyberterrain.org/ns/stonework#PriorityLevel> <http://www.w3.org/2004/02/skos/core#definition> "A classification of how urgently something should be worked, relative to other work."@en .
 <https://cyberterrain.org/ns/stonework#PriorityLevel> <http://www.w3.org/2004/02/skos/core#prefLabel> "Priority Level"@en .
 # 
@@ -5450,11 +5517,11 @@ _:genid295 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # https://cyberterrain.org/ns/stonework#ProductInstallation
 <https://cyberterrain.org/ns/stonework#ProductInstallation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://cyberterrain.org/ns/stonework#ProductInstallation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cyberterrain.org/ns/stonework#ComponentContext> .
-<https://cyberterrain.org/ns/stonework#ProductInstallation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid296 .
-_:genid296 <http://www.w3.org/2002/07/owl#onClass> <https://cyberterrain.org/ns/stonework#VersionedProduct> .
-_:genid296 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid296 <http://www.w3.org/2002/07/owl#onProperty> <https://cyberterrain.org/ns/stonework#installationOf> .
-_:genid296 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://cyberterrain.org/ns/stonework#ProductInstallation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid298 .
+_:genid298 <http://www.w3.org/2002/07/owl#onClass> <https://cyberterrain.org/ns/stonework#VersionedProduct> .
+_:genid298 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid298 <http://www.w3.org/2002/07/owl#onProperty> <https://cyberterrain.org/ns/stonework#installationOf> .
+_:genid298 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://cyberterrain.org/ns/stonework#ProductInstallation> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the most granular product identity level: not what software exists, but where and how it is installed. Multiple ProductInstallation individuals may reference the same VersionedProduct."@en .
 <https://cyberterrain.org/ns/stonework#ProductInstallation> <http://www.w3.org/2004/02/skos/core#definition> "A specific installed instance of a VersionedProduct on a particular system or environment, as identified by a SWID tag or equivalent installation record."@en .
 <https://cyberterrain.org/ns/stonework#ProductInstallation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Product Installation" .
@@ -5463,11 +5530,11 @@ _:genid296 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # https://cyberterrain.org/ns/stonework#ProductType
 <https://cyberterrain.org/ns/stonework#ProductType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://cyberterrain.org/ns/stonework#ProductType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cyberterrain.org/ns/stonework#Category> .
-<https://cyberterrain.org/ns/stonework#ProductType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid297 .
-_:genid297 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#productTypeScheme> .
+<https://cyberterrain.org/ns/stonework#ProductType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid299 .
+_:genid299 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#productTypeScheme> .
 <https://cyberterrain.org/ns/stonework#productTypeScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-_:genid297 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid297 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid299 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid299 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://cyberterrain.org/ns/stonework#ProductType> <http://www.w3.org/2004/02/skos/core#definition> "A classification of a product by its primary functional category within a system or architecture."@en .
 <https://cyberterrain.org/ns/stonework#ProductType> <http://www.w3.org/2004/02/skos/core#prefLabel> "Product Type"@en .
 <https://cyberterrain.org/ns/stonework#ProductType> <http://www.w3.org/2004/02/skos/core#scopeNote> "Applied via stonework:hasProductType to Product individuals. Aligns with CPE component type designations. A product may have more than one type (e.g. an embedded OS is both firmware and operating-system)."@en .
@@ -5525,11 +5592,11 @@ _:genid297 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # https://cyberterrain.org/ns/stonework#ResourceLevel
 <https://cyberterrain.org/ns/stonework#ResourceLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://cyberterrain.org/ns/stonework#ResourceLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cyberterrain.org/ns/stonework#Category> .
-<https://cyberterrain.org/ns/stonework#ResourceLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid298 .
-_:genid298 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#resourceLevelScheme> .
+<https://cyberterrain.org/ns/stonework#ResourceLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid300 .
+_:genid300 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#resourceLevelScheme> .
 <https://cyberterrain.org/ns/stonework#resourceLevelScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-_:genid298 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid298 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid300 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid300 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://cyberterrain.org/ns/stonework#ResourceLevel> <http://www.w3.org/2004/02/skos/core#definition> "A classification of the organizational resources available to a threat actor."@en .
 <https://cyberterrain.org/ns/stonework#ResourceLevel> <http://www.w3.org/2004/02/skos/core#prefLabel> "Resource Level"@en .
 # 
@@ -5551,11 +5618,11 @@ _:genid298 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # https://cyberterrain.org/ns/stonework#RiskLevel
 <https://cyberterrain.org/ns/stonework#RiskLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://cyberterrain.org/ns/stonework#RiskLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cyberterrain.org/ns/stonework#Category> .
-<https://cyberterrain.org/ns/stonework#RiskLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid299 .
-_:genid299 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#riskLevelScheme> .
+<https://cyberterrain.org/ns/stonework#RiskLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid301 .
+_:genid301 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#riskLevelScheme> .
 <https://cyberterrain.org/ns/stonework#riskLevelScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-_:genid299 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid299 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid301 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid301 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://cyberterrain.org/ns/stonework#RiskLevel> <http://www.w3.org/2004/02/skos/core#definition> "An ordinal classification of the assessed magnitude of a security risk."@en .
 <https://cyberterrain.org/ns/stonework#RiskLevel> <http://www.w3.org/2004/02/skos/core#prefLabel> "Risk Level"@en .
 # 
@@ -5583,11 +5650,11 @@ _:genid299 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # https://cyberterrain.org/ns/stonework#Sector
 <https://cyberterrain.org/ns/stonework#Sector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://cyberterrain.org/ns/stonework#Sector> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cyberterrain.org/ns/stonework#Category> .
-<https://cyberterrain.org/ns/stonework#Sector> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid300 .
-_:genid300 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#sectorScheme> .
+<https://cyberterrain.org/ns/stonework#Sector> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid302 .
+_:genid302 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#sectorScheme> .
 <https://cyberterrain.org/ns/stonework#sectorScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-_:genid300 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid300 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid302 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid302 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://cyberterrain.org/ns/stonework#Sector> <http://www.w3.org/2004/02/skos/core#definition> "A broad division or category of economic activity, infrastructure, or society used for classification and targeting purposes."@en .
 <https://cyberterrain.org/ns/stonework#Sector> <http://www.w3.org/2004/02/skos/core#prefLabel> "Sector"@en .
 <https://cyberterrain.org/ns/stonework#Sector> <http://www.w3.org/2004/02/skos/core#scopeNote> "Can represent both commercial industries and critical infrastructure sectors (e.g., from CISA or NIST frameworks)."@en .
@@ -5654,11 +5721,11 @@ _:genid300 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # https://cyberterrain.org/ns/stonework#SophisticationLevel
 <https://cyberterrain.org/ns/stonework#SophisticationLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://cyberterrain.org/ns/stonework#SophisticationLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cyberterrain.org/ns/stonework#Category> .
-<https://cyberterrain.org/ns/stonework#SophisticationLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid301 .
-_:genid301 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#sophisticationLevelScheme> .
+<https://cyberterrain.org/ns/stonework#SophisticationLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid303 .
+_:genid303 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#sophisticationLevelScheme> .
 <https://cyberterrain.org/ns/stonework#sophisticationLevelScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-_:genid301 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid301 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid303 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid303 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://cyberterrain.org/ns/stonework#SophisticationLevel> <http://www.w3.org/2004/02/skos/core#definition> "A classification of a threat actor's assessed technical sophistication."@en .
 <https://cyberterrain.org/ns/stonework#SophisticationLevel> <http://www.w3.org/2004/02/skos/core#prefLabel> "Sophistication Level"@en .
 # 
@@ -5720,11 +5787,11 @@ _:genid301 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://cyberterrain.org/ns/stonework#ThreatActorRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://cyberterrain.org/ns/stonework#ThreatActorRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cyberterrain.org/ns/stonework#Category> .
 <https://cyberterrain.org/ns/stonework#ThreatActorRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cyberterrain.org/ns/stonework#Role> .
-<https://cyberterrain.org/ns/stonework#ThreatActorRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid302 .
-_:genid302 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#threatActorRoleScheme> .
+<https://cyberterrain.org/ns/stonework#ThreatActorRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid304 .
+_:genid304 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#threatActorRoleScheme> .
 <https://cyberterrain.org/ns/stonework#threatActorRoleScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-_:genid302 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid302 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid304 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid304 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://cyberterrain.org/ns/stonework#ThreatActorRole> <http://www.w3.org/2004/02/skos/core#definition> "A controlled role type describing the function played by a threat actor within a specific operation, campaign, or criminal organization."@en .
 <https://cyberterrain.org/ns/stonework#ThreatActorRole> <http://www.w3.org/2004/02/skos/core#prefLabel> "Threat Actor Role"@en .
 <https://cyberterrain.org/ns/stonework#ThreatActorRole> <http://www.w3.org/2004/02/skos/core#scopeNote> "A threat actor may play different roles across operations — a nation-state actor may be a sponsor in one campaign and a director in another. Use stonework:RoleAssignment for contextual modeling; stonework:playsRole is the context-free STIX-compatible projection."@en .
@@ -5732,11 +5799,11 @@ _:genid302 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # https://cyberterrain.org/ns/stonework#ThreatActorType
 <https://cyberterrain.org/ns/stonework#ThreatActorType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://cyberterrain.org/ns/stonework#ThreatActorType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cyberterrain.org/ns/stonework#Category> .
-<https://cyberterrain.org/ns/stonework#ThreatActorType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid303 .
-_:genid303 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#threatActorTypeScheme> .
+<https://cyberterrain.org/ns/stonework#ThreatActorType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid305 .
+_:genid305 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#threatActorTypeScheme> .
 <https://cyberterrain.org/ns/stonework#threatActorTypeScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-_:genid303 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid303 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid305 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid305 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://cyberterrain.org/ns/stonework#ThreatActorType> <http://www.w3.org/2004/02/skos/core#definition> "A classification of a threat actor by their organizational form, affiliation, or primary mode of operation."@en .
 <https://cyberterrain.org/ns/stonework#ThreatActorType> <http://www.w3.org/2004/02/skos/core#prefLabel> "Threat Actor Type"@en .
 <https://cyberterrain.org/ns/stonework#ThreatActorType> <http://www.w3.org/2004/02/skos/core#scopeNote> "Applied via stonework:categorizedBy to ThreatActor individuals. A threat actor may have multiple types. Aligns with the STIX 2.1 threat-actor-type open vocabulary."@en .
@@ -5759,11 +5826,11 @@ _:genid303 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 # https://cyberterrain.org/ns/stonework#TransactionType
 <https://cyberterrain.org/ns/stonework#TransactionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://cyberterrain.org/ns/stonework#TransactionType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cyberterrain.org/ns/stonework#Category> .
-<https://cyberterrain.org/ns/stonework#TransactionType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid304 .
-_:genid304 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#transactionTypeScheme> .
+<https://cyberterrain.org/ns/stonework#TransactionType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid306 .
+_:genid306 <http://www.w3.org/2002/07/owl#hasValue> <https://cyberterrain.org/ns/stonework#transactionTypeScheme> .
 <https://cyberterrain.org/ns/stonework#transactionTypeScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-_:genid304 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid304 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid306 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid306 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://cyberterrain.org/ns/stonework#TransactionType> <http://www.w3.org/2004/02/skos/core#definition> "A classification of a financial transaction by the kind of movement it represents."@en .
 <https://cyberterrain.org/ns/stonework#TransactionType> <http://www.w3.org/2004/02/skos/core#prefLabel> "Transaction Type"@en .
 # 
@@ -6227,52 +6294,42 @@ _:genid304 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://cyberterrain.org/ns/stonework#affectedStatusUnknown> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#categoryScheme> .
 <https://cyberterrain.org/ns/stonework#affectedStatusUnknown> <http://www.w3.org/2004/02/skos/core#prefLabel> "Unknown"@en .
 # 
-# https://cyberterrain.org/ns/stonework#authenticationMethodARC
-<https://cyberterrain.org/ns/stonework#authenticationMethodARC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://cyberterrain.org/ns/stonework#authenticationMethodARC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
-<https://cyberterrain.org/ns/stonework#authenticationMethodARC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://cyberterrain.org/ns/stonework#AuthenticationMethod> .
-<https://cyberterrain.org/ns/stonework#authenticationMethodARC> <http://www.w3.org/2004/02/skos/core#notation> "arc" .
-<https://cyberterrain.org/ns/stonework#authenticationMethodARC> <http://www.w3.org/2004/02/skos/core#definition> "Authenticated Received Chain (RFC 8617): the authentication results recorded by the intermediaries that forwarded the message, sealed so a later receiver can rely on them."@en .
-<https://cyberterrain.org/ns/stonework#authenticationMethodARC> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#authenticationMethodScheme> .
-<https://cyberterrain.org/ns/stonework#authenticationMethodARC> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#categoryScheme> .
-<https://cyberterrain.org/ns/stonework#authenticationMethodARC> <http://www.w3.org/2004/02/skos/core#prefLabel> "ARC"@en .
+# https://cyberterrain.org/ns/stonework#authenticationFactorInherence
+<https://cyberterrain.org/ns/stonework#authenticationFactorInherence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://cyberterrain.org/ns/stonework#authenticationFactorInherence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://cyberterrain.org/ns/stonework#authenticationFactorInherence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://cyberterrain.org/ns/stonework#AuthenticationFactor> .
+<https://cyberterrain.org/ns/stonework#authenticationFactorInherence> <http://www.w3.org/2004/02/skos/core#notation> "inherence" .
+<https://cyberterrain.org/ns/stonework#authenticationFactorInherence> <http://www.w3.org/2004/02/skos/core#definition> "Something the user is: a fingerprint, face or other biometric."@en .
+<https://cyberterrain.org/ns/stonework#authenticationFactorInherence> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#authenticationFactorScheme> .
+<https://cyberterrain.org/ns/stonework#authenticationFactorInherence> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#categoryScheme> .
+<https://cyberterrain.org/ns/stonework#authenticationFactorInherence> <http://www.w3.org/2004/02/skos/core#prefLabel> "Inherence"@en .
 # 
-# https://cyberterrain.org/ns/stonework#authenticationMethodDKIM
-<https://cyberterrain.org/ns/stonework#authenticationMethodDKIM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://cyberterrain.org/ns/stonework#authenticationMethodDKIM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
-<https://cyberterrain.org/ns/stonework#authenticationMethodDKIM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://cyberterrain.org/ns/stonework#AuthenticationMethod> .
-<https://cyberterrain.org/ns/stonework#authenticationMethodDKIM> <http://www.w3.org/2004/02/skos/core#notation> "dkim" .
-<https://cyberterrain.org/ns/stonework#authenticationMethodDKIM> <http://www.w3.org/2004/02/skos/core#definition> "DomainKeys Identified Mail (RFC 6376): a signature over the message's headers and body by a signing domain, checked against that domain's published key."@en .
-<https://cyberterrain.org/ns/stonework#authenticationMethodDKIM> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#authenticationMethodScheme> .
-<https://cyberterrain.org/ns/stonework#authenticationMethodDKIM> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#categoryScheme> .
-<https://cyberterrain.org/ns/stonework#authenticationMethodDKIM> <http://www.w3.org/2004/02/skos/core#prefLabel> "DKIM"@en .
+# https://cyberterrain.org/ns/stonework#authenticationFactorKnowledge
+<https://cyberterrain.org/ns/stonework#authenticationFactorKnowledge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://cyberterrain.org/ns/stonework#authenticationFactorKnowledge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://cyberterrain.org/ns/stonework#authenticationFactorKnowledge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://cyberterrain.org/ns/stonework#AuthenticationFactor> .
+<https://cyberterrain.org/ns/stonework#authenticationFactorKnowledge> <http://www.w3.org/2004/02/skos/core#notation> "knowledge" .
+<https://cyberterrain.org/ns/stonework#authenticationFactorKnowledge> <http://www.w3.org/2004/02/skos/core#definition> "Something the user knows: a password, PIN or passphrase."@en .
+<https://cyberterrain.org/ns/stonework#authenticationFactorKnowledge> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#authenticationFactorScheme> .
+<https://cyberterrain.org/ns/stonework#authenticationFactorKnowledge> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#categoryScheme> .
+<https://cyberterrain.org/ns/stonework#authenticationFactorKnowledge> <http://www.w3.org/2004/02/skos/core#prefLabel> "Knowledge"@en .
 # 
-# https://cyberterrain.org/ns/stonework#authenticationMethodDMARC
-<https://cyberterrain.org/ns/stonework#authenticationMethodDMARC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://cyberterrain.org/ns/stonework#authenticationMethodDMARC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
-<https://cyberterrain.org/ns/stonework#authenticationMethodDMARC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://cyberterrain.org/ns/stonework#AuthenticationMethod> .
-<https://cyberterrain.org/ns/stonework#authenticationMethodDMARC> <http://www.w3.org/2004/02/skos/core#notation> "dmarc" .
-<https://cyberterrain.org/ns/stonework#authenticationMethodDMARC> <http://www.w3.org/2004/02/skos/core#definition> "Domain-based Message Authentication, Reporting and Conformance (RFC 7489): whether the From domain is aligned with a domain that passed SPF or DKIM, under the From domain's published policy."@en .
-<https://cyberterrain.org/ns/stonework#authenticationMethodDMARC> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#authenticationMethodScheme> .
-<https://cyberterrain.org/ns/stonework#authenticationMethodDMARC> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#categoryScheme> .
-<https://cyberterrain.org/ns/stonework#authenticationMethodDMARC> <http://www.w3.org/2004/02/skos/core#prefLabel> "DMARC"@en .
+# https://cyberterrain.org/ns/stonework#authenticationFactorPossession
+<https://cyberterrain.org/ns/stonework#authenticationFactorPossession> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://cyberterrain.org/ns/stonework#authenticationFactorPossession> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://cyberterrain.org/ns/stonework#authenticationFactorPossession> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://cyberterrain.org/ns/stonework#AuthenticationFactor> .
+<https://cyberterrain.org/ns/stonework#authenticationFactorPossession> <http://www.w3.org/2004/02/skos/core#notation> "possession" .
+<https://cyberterrain.org/ns/stonework#authenticationFactorPossession> <http://www.w3.org/2004/02/skos/core#definition> "Something the user has: a device, key, token or phone."@en .
+<https://cyberterrain.org/ns/stonework#authenticationFactorPossession> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#authenticationFactorScheme> .
+<https://cyberterrain.org/ns/stonework#authenticationFactorPossession> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#categoryScheme> .
+<https://cyberterrain.org/ns/stonework#authenticationFactorPossession> <http://www.w3.org/2004/02/skos/core#prefLabel> "Possession"@en .
 # 
-# https://cyberterrain.org/ns/stonework#authenticationMethodSPF
-<https://cyberterrain.org/ns/stonework#authenticationMethodSPF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://cyberterrain.org/ns/stonework#authenticationMethodSPF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
-<https://cyberterrain.org/ns/stonework#authenticationMethodSPF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://cyberterrain.org/ns/stonework#AuthenticationMethod> .
-<https://cyberterrain.org/ns/stonework#authenticationMethodSPF> <http://www.w3.org/2004/02/skos/core#notation> "spf" .
-<https://cyberterrain.org/ns/stonework#authenticationMethodSPF> <http://www.w3.org/2004/02/skos/core#definition> "Sender Policy Framework (RFC 7208): whether the sending server is authorized to send for the envelope sender's domain."@en .
-<https://cyberterrain.org/ns/stonework#authenticationMethodSPF> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#authenticationMethodScheme> .
-<https://cyberterrain.org/ns/stonework#authenticationMethodSPF> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#categoryScheme> .
-<https://cyberterrain.org/ns/stonework#authenticationMethodSPF> <http://www.w3.org/2004/02/skos/core#prefLabel> "SPF"@en .
-# 
-# https://cyberterrain.org/ns/stonework#authenticationMethodScheme
-<https://cyberterrain.org/ns/stonework#authenticationMethodScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
-<https://cyberterrain.org/ns/stonework#authenticationMethodScheme> <http://purl.org/dc/terms/title> "STONEWORK Authentication Method Scheme"@en .
-<https://cyberterrain.org/ns/stonework#authenticationMethodScheme> <http://purl.org/dc/terms/isPartOf> <https://cyberterrain.org/ns/stonework#categoryScheme> .
-<https://cyberterrain.org/ns/stonework#authenticationMethodScheme> <http://www.w3.org/2004/02/skos/core#definition> "The controlled vocabulary of sender-authentication methods for email."@en .
-<https://cyberterrain.org/ns/stonework#authenticationMethodScheme> <http://www.w3.org/2004/02/skos/core#prefLabel> "STONEWORK Authentication Method Scheme"@en .
+# https://cyberterrain.org/ns/stonework#authenticationFactorScheme
+<https://cyberterrain.org/ns/stonework#authenticationFactorScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<https://cyberterrain.org/ns/stonework#authenticationFactorScheme> <http://purl.org/dc/terms/title> "STONEWORK Authentication Factor Scheme"@en .
+<https://cyberterrain.org/ns/stonework#authenticationFactorScheme> <http://purl.org/dc/terms/isPartOf> <https://cyberterrain.org/ns/stonework#categoryScheme> .
+<https://cyberterrain.org/ns/stonework#authenticationFactorScheme> <http://www.w3.org/2004/02/skos/core#definition> "The controlled vocabulary of authentication factors."@en .
+<https://cyberterrain.org/ns/stonework#authenticationFactorScheme> <http://www.w3.org/2004/02/skos/core#prefLabel> "STONEWORK Authentication Factor Scheme"@en .
 # 
 # https://cyberterrain.org/ns/stonework#authenticationVerdictFail
 <https://cyberterrain.org/ns/stonework#authenticationVerdictFail> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -6360,6 +6417,187 @@ _:genid304 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://cyberterrain.org/ns/stonework#authenticationVerdictTempError> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#authenticationVerdictScheme> .
 <https://cyberterrain.org/ns/stonework#authenticationVerdictTempError> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#categoryScheme> .
 <https://cyberterrain.org/ns/stonework#authenticationVerdictTempError> <http://www.w3.org/2004/02/skos/core#prefLabel> "Temporary error"@en .
+# 
+# https://cyberterrain.org/ns/stonework#authenticatorApiKey
+<https://cyberterrain.org/ns/stonework#authenticatorApiKey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://cyberterrain.org/ns/stonework#authenticatorApiKey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://cyberterrain.org/ns/stonework#authenticatorApiKey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://cyberterrain.org/ns/stonework#AuthenticatorType> .
+<https://cyberterrain.org/ns/stonework#authenticatorApiKey> <http://www.w3.org/2004/02/skos/core#notation> "api-key" .
+<https://cyberterrain.org/ns/stonework#authenticatorApiKey> <http://www.w3.org/2004/02/skos/core#definition> "A long-lived secret a program presents for itself: an API key, a client secret, an application password."@en .
+<https://cyberterrain.org/ns/stonework#authenticatorApiKey> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#authenticatorTypeScheme> .
+<https://cyberterrain.org/ns/stonework#authenticatorApiKey> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#categoryScheme> .
+<https://cyberterrain.org/ns/stonework#authenticatorApiKey> <http://www.w3.org/2004/02/skos/core#prefLabel> "API key or client secret"@en .
+# 
+# https://cyberterrain.org/ns/stonework#authenticatorClientCertificate
+<https://cyberterrain.org/ns/stonework#authenticatorClientCertificate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://cyberterrain.org/ns/stonework#authenticatorClientCertificate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://cyberterrain.org/ns/stonework#authenticatorClientCertificate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://cyberterrain.org/ns/stonework#AuthenticatorType> .
+<https://cyberterrain.org/ns/stonework#authenticatorClientCertificate> <http://www.w3.org/2004/02/skos/core#notation> "client-certificate" .
+<https://cyberterrain.org/ns/stonework#authenticatorClientCertificate> <https://cyberterrain.org/ns/stonework#phishingResistant> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<https://cyberterrain.org/ns/stonework#authenticatorClientCertificate> <http://www.w3.org/2004/02/skos/core#definition> "A certificate and private key held in software, presented in a TLS handshake or certificate-based sign-in."@en .
+<https://cyberterrain.org/ns/stonework#authenticatorClientCertificate> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#authenticatorTypeScheme> .
+<https://cyberterrain.org/ns/stonework#authenticatorClientCertificate> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#categoryScheme> .
+<https://cyberterrain.org/ns/stonework#authenticatorClientCertificate> <http://www.w3.org/2004/02/skos/core#prefLabel> "Client certificate"@en .
+# 
+# https://cyberterrain.org/ns/stonework#authenticatorEmailCode
+<https://cyberterrain.org/ns/stonework#authenticatorEmailCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://cyberterrain.org/ns/stonework#authenticatorEmailCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://cyberterrain.org/ns/stonework#authenticatorEmailCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://cyberterrain.org/ns/stonework#AuthenticatorType> .
+<https://cyberterrain.org/ns/stonework#authenticatorEmailCode> <http://www.w3.org/2004/02/skos/core#notation> "email-code" .
+<https://cyberterrain.org/ns/stonework#authenticatorEmailCode> <http://www.w3.org/2004/02/skos/core#definition> "A one-time code or link sent to a registered email address."@en .
+<https://cyberterrain.org/ns/stonework#authenticatorEmailCode> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#authenticatorTypeScheme> .
+<https://cyberterrain.org/ns/stonework#authenticatorEmailCode> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#categoryScheme> .
+<https://cyberterrain.org/ns/stonework#authenticatorEmailCode> <http://www.w3.org/2004/02/skos/core#prefLabel> "Email code"@en .
+# 
+# https://cyberterrain.org/ns/stonework#authenticatorFederatedAssertion
+<https://cyberterrain.org/ns/stonework#authenticatorFederatedAssertion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://cyberterrain.org/ns/stonework#authenticatorFederatedAssertion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://cyberterrain.org/ns/stonework#authenticatorFederatedAssertion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://cyberterrain.org/ns/stonework#AuthenticatorType> .
+<https://cyberterrain.org/ns/stonework#authenticatorFederatedAssertion> <http://www.w3.org/2004/02/skos/core#notation> "federated" .
+<https://cyberterrain.org/ns/stonework#authenticatorFederatedAssertion> <http://www.w3.org/2004/02/skos/core#definition> "A SAML assertion or OpenID Connect token from another identity provider, which authenticated the user itself."@en .
+<https://cyberterrain.org/ns/stonework#authenticatorFederatedAssertion> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#authenticatorTypeScheme> .
+<https://cyberterrain.org/ns/stonework#authenticatorFederatedAssertion> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#categoryScheme> .
+<https://cyberterrain.org/ns/stonework#authenticatorFederatedAssertion> <http://www.w3.org/2004/02/skos/core#prefLabel> "Federated assertion"@en .
+# 
+# https://cyberterrain.org/ns/stonework#authenticatorFido2SecurityKey
+<https://cyberterrain.org/ns/stonework#authenticatorFido2SecurityKey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://cyberterrain.org/ns/stonework#authenticatorFido2SecurityKey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://cyberterrain.org/ns/stonework#authenticatorFido2SecurityKey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://cyberterrain.org/ns/stonework#AuthenticatorType> .
+<https://cyberterrain.org/ns/stonework#authenticatorFido2SecurityKey> <http://www.w3.org/2004/02/skos/core#notation> "fido2-key" .
+<https://cyberterrain.org/ns/stonework#authenticatorFido2SecurityKey> <https://cyberterrain.org/ns/stonework#phishingResistant> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<https://cyberterrain.org/ns/stonework#authenticatorFido2SecurityKey> <http://www.w3.org/2004/02/skos/core#definition> "A roaming hardware key that signs a challenge bound to the site's origin (WebAuthn/FIDO2), with or without user verification by PIN or biometric."@en .
+<https://cyberterrain.org/ns/stonework#authenticatorFido2SecurityKey> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#authenticatorTypeScheme> .
+<https://cyberterrain.org/ns/stonework#authenticatorFido2SecurityKey> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#categoryScheme> .
+<https://cyberterrain.org/ns/stonework#authenticatorFido2SecurityKey> <http://www.w3.org/2004/02/skos/core#prefLabel> "FIDO2 security key"@en .
+# 
+# https://cyberterrain.org/ns/stonework#authenticatorHardwareOtpToken
+<https://cyberterrain.org/ns/stonework#authenticatorHardwareOtpToken> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://cyberterrain.org/ns/stonework#authenticatorHardwareOtpToken> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://cyberterrain.org/ns/stonework#authenticatorHardwareOtpToken> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://cyberterrain.org/ns/stonework#AuthenticatorType> .
+<https://cyberterrain.org/ns/stonework#authenticatorHardwareOtpToken> <http://www.w3.org/2004/02/skos/core#notation> "hardware-otp" .
+<https://cyberterrain.org/ns/stonework#authenticatorHardwareOtpToken> <http://www.w3.org/2004/02/skos/core#definition> "A one-time code shown by a dedicated hardware token."@en .
+<https://cyberterrain.org/ns/stonework#authenticatorHardwareOtpToken> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#authenticatorTypeScheme> .
+<https://cyberterrain.org/ns/stonework#authenticatorHardwareOtpToken> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#categoryScheme> .
+<https://cyberterrain.org/ns/stonework#authenticatorHardwareOtpToken> <http://www.w3.org/2004/02/skos/core#prefLabel> "Hardware OTP token"@en .
+# 
+# https://cyberterrain.org/ns/stonework#authenticatorPIN
+<https://cyberterrain.org/ns/stonework#authenticatorPIN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://cyberterrain.org/ns/stonework#authenticatorPIN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://cyberterrain.org/ns/stonework#authenticatorPIN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://cyberterrain.org/ns/stonework#AuthenticatorType> .
+<https://cyberterrain.org/ns/stonework#authenticatorPIN> <http://www.w3.org/2004/02/skos/core#notation> "pin" .
+<https://cyberterrain.org/ns/stonework#authenticatorPIN> <http://www.w3.org/2004/02/skos/core#definition> "A short memorized number, checked by the verifier (a PIN that only unlocks a device is that device's user verification, not a separate authenticator)."@en .
+<https://cyberterrain.org/ns/stonework#authenticatorPIN> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#authenticatorTypeScheme> .
+<https://cyberterrain.org/ns/stonework#authenticatorPIN> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#categoryScheme> .
+<https://cyberterrain.org/ns/stonework#authenticatorPIN> <http://www.w3.org/2004/02/skos/core#prefLabel> "PIN"@en .
+# 
+# https://cyberterrain.org/ns/stonework#authenticatorPassword
+<https://cyberterrain.org/ns/stonework#authenticatorPassword> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://cyberterrain.org/ns/stonework#authenticatorPassword> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://cyberterrain.org/ns/stonework#authenticatorPassword> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://cyberterrain.org/ns/stonework#AuthenticatorType> .
+<https://cyberterrain.org/ns/stonework#authenticatorPassword> <http://www.w3.org/2004/02/skos/core#notation> "password" .
+<https://cyberterrain.org/ns/stonework#authenticatorPassword> <http://www.w3.org/2004/02/skos/core#definition> "A memorized secret the user types."@en .
+<https://cyberterrain.org/ns/stonework#authenticatorPassword> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#authenticatorTypeScheme> .
+<https://cyberterrain.org/ns/stonework#authenticatorPassword> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#categoryScheme> .
+<https://cyberterrain.org/ns/stonework#authenticatorPassword> <http://www.w3.org/2004/02/skos/core#prefLabel> "Password"@en .
+# 
+# https://cyberterrain.org/ns/stonework#authenticatorPlatformPasskey
+<https://cyberterrain.org/ns/stonework#authenticatorPlatformPasskey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://cyberterrain.org/ns/stonework#authenticatorPlatformPasskey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://cyberterrain.org/ns/stonework#authenticatorPlatformPasskey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://cyberterrain.org/ns/stonework#AuthenticatorType> .
+<https://cyberterrain.org/ns/stonework#authenticatorPlatformPasskey> <http://www.w3.org/2004/02/skos/core#notation> "passkey" .
+<https://cyberterrain.org/ns/stonework#authenticatorPlatformPasskey> <https://cyberterrain.org/ns/stonework#phishingResistant> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<https://cyberterrain.org/ns/stonework#authenticatorPlatformPasskey> <http://www.w3.org/2004/02/skos/core#definition> "A FIDO2 credential held by the user's device or its keychain, unlocked by the device's PIN or biometric (for example Windows Hello for Business, Touch ID)."@en .
+<https://cyberterrain.org/ns/stonework#authenticatorPlatformPasskey> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#authenticatorTypeScheme> .
+<https://cyberterrain.org/ns/stonework#authenticatorPlatformPasskey> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#categoryScheme> .
+<https://cyberterrain.org/ns/stonework#authenticatorPlatformPasskey> <http://www.w3.org/2004/02/skos/core#prefLabel> "Platform passkey"@en .
+# 
+# https://cyberterrain.org/ns/stonework#authenticatorPushApproval
+<https://cyberterrain.org/ns/stonework#authenticatorPushApproval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://cyberterrain.org/ns/stonework#authenticatorPushApproval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://cyberterrain.org/ns/stonework#authenticatorPushApproval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://cyberterrain.org/ns/stonework#AuthenticatorType> .
+<https://cyberterrain.org/ns/stonework#authenticatorPushApproval> <http://www.w3.org/2004/02/skos/core#notation> "push" .
+<https://cyberterrain.org/ns/stonework#authenticatorPushApproval> <http://www.w3.org/2004/02/skos/core#definition> "An approval tapped on a registered device in response to a notification, with or without number matching."@en .
+<https://cyberterrain.org/ns/stonework#authenticatorPushApproval> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#authenticatorTypeScheme> .
+<https://cyberterrain.org/ns/stonework#authenticatorPushApproval> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#categoryScheme> .
+<https://cyberterrain.org/ns/stonework#authenticatorPushApproval> <http://www.w3.org/2004/02/skos/core#prefLabel> "Push approval"@en .
+# 
+# https://cyberterrain.org/ns/stonework#authenticatorRecoveryCode
+<https://cyberterrain.org/ns/stonework#authenticatorRecoveryCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://cyberterrain.org/ns/stonework#authenticatorRecoveryCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://cyberterrain.org/ns/stonework#authenticatorRecoveryCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://cyberterrain.org/ns/stonework#AuthenticatorType> .
+<https://cyberterrain.org/ns/stonework#authenticatorRecoveryCode> <http://www.w3.org/2004/02/skos/core#notation> "recovery-code" .
+<https://cyberterrain.org/ns/stonework#authenticatorRecoveryCode> <http://www.w3.org/2004/02/skos/core#definition> "A pre-issued one-time code from a printed or saved list (NIST SP 800-63B: look-up secret)."@en .
+<https://cyberterrain.org/ns/stonework#authenticatorRecoveryCode> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#authenticatorTypeScheme> .
+<https://cyberterrain.org/ns/stonework#authenticatorRecoveryCode> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#categoryScheme> .
+<https://cyberterrain.org/ns/stonework#authenticatorRecoveryCode> <http://www.w3.org/2004/02/skos/core#prefLabel> "Recovery code"@en .
+# 
+# https://cyberterrain.org/ns/stonework#authenticatorSessionToken
+<https://cyberterrain.org/ns/stonework#authenticatorSessionToken> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://cyberterrain.org/ns/stonework#authenticatorSessionToken> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://cyberterrain.org/ns/stonework#authenticatorSessionToken> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://cyberterrain.org/ns/stonework#AuthenticatorType> .
+<https://cyberterrain.org/ns/stonework#authenticatorSessionToken> <http://www.w3.org/2004/02/skos/core#notation> "session-token" .
+<https://cyberterrain.org/ns/stonework#authenticatorSessionToken> <http://www.w3.org/2004/02/skos/core#definition> "A bearer token from an earlier authentication (a session cookie, an access or refresh token) presented in place of a fresh one. It proves the earlier authentication, not who presents it: a stolen token is replayed without any factor (ATT&CK T1539, T1550.001)."@en .
+<https://cyberterrain.org/ns/stonework#authenticatorSessionToken> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#authenticatorTypeScheme> .
+<https://cyberterrain.org/ns/stonework#authenticatorSessionToken> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#categoryScheme> .
+<https://cyberterrain.org/ns/stonework#authenticatorSessionToken> <http://www.w3.org/2004/02/skos/core#prefLabel> "Session token"@en .
+# 
+# https://cyberterrain.org/ns/stonework#authenticatorSmartCard
+<https://cyberterrain.org/ns/stonework#authenticatorSmartCard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://cyberterrain.org/ns/stonework#authenticatorSmartCard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://cyberterrain.org/ns/stonework#authenticatorSmartCard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://cyberterrain.org/ns/stonework#AuthenticatorType> .
+<https://cyberterrain.org/ns/stonework#authenticatorSmartCard> <http://www.w3.org/2004/02/skos/core#notation> "smart-card" .
+<https://cyberterrain.org/ns/stonework#authenticatorSmartCard> <https://cyberterrain.org/ns/stonework#phishingResistant> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<https://cyberterrain.org/ns/stonework#authenticatorSmartCard> <http://www.w3.org/2004/02/skos/core#definition> "A card or token holding a private key and certificate, unlocked by a PIN (for example PIV or CAC)."@en .
+<https://cyberterrain.org/ns/stonework#authenticatorSmartCard> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#authenticatorTypeScheme> .
+<https://cyberterrain.org/ns/stonework#authenticatorSmartCard> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#categoryScheme> .
+<https://cyberterrain.org/ns/stonework#authenticatorSmartCard> <http://www.w3.org/2004/02/skos/core#prefLabel> "Smart card"@en .
+# 
+# https://cyberterrain.org/ns/stonework#authenticatorSmsCode
+<https://cyberterrain.org/ns/stonework#authenticatorSmsCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://cyberterrain.org/ns/stonework#authenticatorSmsCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://cyberterrain.org/ns/stonework#authenticatorSmsCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://cyberterrain.org/ns/stonework#AuthenticatorType> .
+<https://cyberterrain.org/ns/stonework#authenticatorSmsCode> <http://www.w3.org/2004/02/skos/core#notation> "sms" .
+<https://cyberterrain.org/ns/stonework#authenticatorSmsCode> <http://www.w3.org/2004/02/skos/core#definition> "A one-time code sent by text message to a registered phone."@en .
+<https://cyberterrain.org/ns/stonework#authenticatorSmsCode> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#authenticatorTypeScheme> .
+<https://cyberterrain.org/ns/stonework#authenticatorSmsCode> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#categoryScheme> .
+<https://cyberterrain.org/ns/stonework#authenticatorSmsCode> <http://www.w3.org/2004/02/skos/core#prefLabel> "SMS code"@en .
+# 
+# https://cyberterrain.org/ns/stonework#authenticatorSshKey
+<https://cyberterrain.org/ns/stonework#authenticatorSshKey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://cyberterrain.org/ns/stonework#authenticatorSshKey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://cyberterrain.org/ns/stonework#authenticatorSshKey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://cyberterrain.org/ns/stonework#AuthenticatorType> .
+<https://cyberterrain.org/ns/stonework#authenticatorSshKey> <http://www.w3.org/2004/02/skos/core#notation> "ssh-key" .
+<https://cyberterrain.org/ns/stonework#authenticatorSshKey> <http://www.w3.org/2004/02/skos/core#definition> "A private key presented in an SSH public-key authentication. A passphrase on the key is checked only on the client, so the server sees possession alone."@en .
+<https://cyberterrain.org/ns/stonework#authenticatorSshKey> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#authenticatorTypeScheme> .
+<https://cyberterrain.org/ns/stonework#authenticatorSshKey> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#categoryScheme> .
+<https://cyberterrain.org/ns/stonework#authenticatorSshKey> <http://www.w3.org/2004/02/skos/core#prefLabel> "SSH key"@en .
+# 
+# https://cyberterrain.org/ns/stonework#authenticatorTotpApp
+<https://cyberterrain.org/ns/stonework#authenticatorTotpApp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://cyberterrain.org/ns/stonework#authenticatorTotpApp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://cyberterrain.org/ns/stonework#authenticatorTotpApp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://cyberterrain.org/ns/stonework#AuthenticatorType> .
+<https://cyberterrain.org/ns/stonework#authenticatorTotpApp> <http://www.w3.org/2004/02/skos/core#notation> "totp" .
+<https://cyberterrain.org/ns/stonework#authenticatorTotpApp> <http://www.w3.org/2004/02/skos/core#definition> "A time-based one-time code generated by an app on a registered device (NIST SP 800-63B: single-factor OTP software)."@en .
+<https://cyberterrain.org/ns/stonework#authenticatorTotpApp> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#authenticatorTypeScheme> .
+<https://cyberterrain.org/ns/stonework#authenticatorTotpApp> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#categoryScheme> .
+<https://cyberterrain.org/ns/stonework#authenticatorTotpApp> <http://www.w3.org/2004/02/skos/core#prefLabel> "Authenticator-app code"@en .
+# 
+# https://cyberterrain.org/ns/stonework#authenticatorTypeScheme
+<https://cyberterrain.org/ns/stonework#authenticatorTypeScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<https://cyberterrain.org/ns/stonework#authenticatorTypeScheme> <http://purl.org/dc/terms/title> "STONEWORK Authenticator Type Scheme"@en .
+<https://cyberterrain.org/ns/stonework#authenticatorTypeScheme> <http://purl.org/dc/terms/isPartOf> <https://cyberterrain.org/ns/stonework#categoryScheme> .
+<https://cyberterrain.org/ns/stonework#authenticatorTypeScheme> <http://www.w3.org/2004/02/skos/core#definition> "The controlled vocabulary of authenticator types."@en .
+<https://cyberterrain.org/ns/stonework#authenticatorTypeScheme> <http://www.w3.org/2004/02/skos/core#prefLabel> "STONEWORK Authenticator Type Scheme"@en .
+# 
+# https://cyberterrain.org/ns/stonework#authenticatorVoiceCall
+<https://cyberterrain.org/ns/stonework#authenticatorVoiceCall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://cyberterrain.org/ns/stonework#authenticatorVoiceCall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://cyberterrain.org/ns/stonework#authenticatorVoiceCall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://cyberterrain.org/ns/stonework#AuthenticatorType> .
+<https://cyberterrain.org/ns/stonework#authenticatorVoiceCall> <http://www.w3.org/2004/02/skos/core#notation> "voice" .
+<https://cyberterrain.org/ns/stonework#authenticatorVoiceCall> <http://www.w3.org/2004/02/skos/core#definition> "A code or approval given in an automated phone call to a registered number."@en .
+<https://cyberterrain.org/ns/stonework#authenticatorVoiceCall> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#authenticatorTypeScheme> .
+<https://cyberterrain.org/ns/stonework#authenticatorVoiceCall> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#categoryScheme> .
+<https://cyberterrain.org/ns/stonework#authenticatorVoiceCall> <http://www.w3.org/2004/02/skos/core#prefLabel> "Voice call"@en .
 # 
 # https://cyberterrain.org/ns/stonework#categoryScheme
 <https://cyberterrain.org/ns/stonework#categoryScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
@@ -6508,6 +6746,53 @@ _:genid304 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://cyberterrain.org/ns/stonework#deviationKindWrongTarget> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#deviationKindScheme> .
 <https://cyberterrain.org/ns/stonework#deviationKindWrongTarget> <http://www.w3.org/2004/02/skos/core#prefLabel> "Wrong target"@en .
 # 
+# https://cyberterrain.org/ns/stonework#emailAuthenticationMethodARC
+<https://cyberterrain.org/ns/stonework#emailAuthenticationMethodARC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://cyberterrain.org/ns/stonework#emailAuthenticationMethodARC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://cyberterrain.org/ns/stonework#emailAuthenticationMethodARC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://cyberterrain.org/ns/stonework#EmailAuthenticationMethod> .
+<https://cyberterrain.org/ns/stonework#emailAuthenticationMethodARC> <http://www.w3.org/2004/02/skos/core#notation> "arc" .
+<https://cyberterrain.org/ns/stonework#emailAuthenticationMethodARC> <http://www.w3.org/2004/02/skos/core#definition> "Authenticated Received Chain (RFC 8617): the authentication results recorded by the intermediaries that forwarded the message, sealed so a later receiver can rely on them."@en .
+<https://cyberterrain.org/ns/stonework#emailAuthenticationMethodARC> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#categoryScheme> .
+<https://cyberterrain.org/ns/stonework#emailAuthenticationMethodARC> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#emailAuthenticationMethodScheme> .
+<https://cyberterrain.org/ns/stonework#emailAuthenticationMethodARC> <http://www.w3.org/2004/02/skos/core#prefLabel> "ARC"@en .
+# 
+# https://cyberterrain.org/ns/stonework#emailAuthenticationMethodDKIM
+<https://cyberterrain.org/ns/stonework#emailAuthenticationMethodDKIM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://cyberterrain.org/ns/stonework#emailAuthenticationMethodDKIM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://cyberterrain.org/ns/stonework#emailAuthenticationMethodDKIM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://cyberterrain.org/ns/stonework#EmailAuthenticationMethod> .
+<https://cyberterrain.org/ns/stonework#emailAuthenticationMethodDKIM> <http://www.w3.org/2004/02/skos/core#notation> "dkim" .
+<https://cyberterrain.org/ns/stonework#emailAuthenticationMethodDKIM> <http://www.w3.org/2004/02/skos/core#definition> "DomainKeys Identified Mail (RFC 6376): a signature over the message's headers and body by a signing domain, checked against that domain's published key."@en .
+<https://cyberterrain.org/ns/stonework#emailAuthenticationMethodDKIM> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#categoryScheme> .
+<https://cyberterrain.org/ns/stonework#emailAuthenticationMethodDKIM> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#emailAuthenticationMethodScheme> .
+<https://cyberterrain.org/ns/stonework#emailAuthenticationMethodDKIM> <http://www.w3.org/2004/02/skos/core#prefLabel> "DKIM"@en .
+# 
+# https://cyberterrain.org/ns/stonework#emailAuthenticationMethodDMARC
+<https://cyberterrain.org/ns/stonework#emailAuthenticationMethodDMARC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://cyberterrain.org/ns/stonework#emailAuthenticationMethodDMARC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://cyberterrain.org/ns/stonework#emailAuthenticationMethodDMARC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://cyberterrain.org/ns/stonework#EmailAuthenticationMethod> .
+<https://cyberterrain.org/ns/stonework#emailAuthenticationMethodDMARC> <http://www.w3.org/2004/02/skos/core#notation> "dmarc" .
+<https://cyberterrain.org/ns/stonework#emailAuthenticationMethodDMARC> <http://www.w3.org/2004/02/skos/core#definition> "Domain-based Message Authentication, Reporting and Conformance (RFC 7489): whether the From domain is aligned with a domain that passed SPF or DKIM, under the From domain's published policy."@en .
+<https://cyberterrain.org/ns/stonework#emailAuthenticationMethodDMARC> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#categoryScheme> .
+<https://cyberterrain.org/ns/stonework#emailAuthenticationMethodDMARC> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#emailAuthenticationMethodScheme> .
+<https://cyberterrain.org/ns/stonework#emailAuthenticationMethodDMARC> <http://www.w3.org/2004/02/skos/core#prefLabel> "DMARC"@en .
+# 
+# https://cyberterrain.org/ns/stonework#emailAuthenticationMethodSPF
+<https://cyberterrain.org/ns/stonework#emailAuthenticationMethodSPF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://cyberterrain.org/ns/stonework#emailAuthenticationMethodSPF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://cyberterrain.org/ns/stonework#emailAuthenticationMethodSPF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://cyberterrain.org/ns/stonework#EmailAuthenticationMethod> .
+<https://cyberterrain.org/ns/stonework#emailAuthenticationMethodSPF> <http://www.w3.org/2004/02/skos/core#notation> "spf" .
+<https://cyberterrain.org/ns/stonework#emailAuthenticationMethodSPF> <http://www.w3.org/2004/02/skos/core#definition> "Sender Policy Framework (RFC 7208): whether the sending server is authorized to send for the envelope sender's domain."@en .
+<https://cyberterrain.org/ns/stonework#emailAuthenticationMethodSPF> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#categoryScheme> .
+<https://cyberterrain.org/ns/stonework#emailAuthenticationMethodSPF> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#emailAuthenticationMethodScheme> .
+<https://cyberterrain.org/ns/stonework#emailAuthenticationMethodSPF> <http://www.w3.org/2004/02/skos/core#prefLabel> "SPF"@en .
+# 
+# https://cyberterrain.org/ns/stonework#emailAuthenticationMethodScheme
+<https://cyberterrain.org/ns/stonework#emailAuthenticationMethodScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<https://cyberterrain.org/ns/stonework#emailAuthenticationMethodScheme> <http://purl.org/dc/terms/title> "STONEWORK Email Authentication Method Scheme"@en .
+<https://cyberterrain.org/ns/stonework#emailAuthenticationMethodScheme> <http://purl.org/dc/terms/isPartOf> <https://cyberterrain.org/ns/stonework#categoryScheme> .
+<https://cyberterrain.org/ns/stonework#emailAuthenticationMethodScheme> <http://www.w3.org/2004/02/skos/core#definition> "The controlled vocabulary of sender-authentication methods for email."@en .
+<https://cyberterrain.org/ns/stonework#emailAuthenticationMethodScheme> <http://www.w3.org/2004/02/skos/core#prefLabel> "STONEWORK Email Authentication Method Scheme"@en .
+# 
 # https://cyberterrain.org/ns/stonework#evidence
 <https://cyberterrain.org/ns/stonework#evidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://cyberterrain.org/ns/stonework#evidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
@@ -6526,6 +6811,16 @@ _:genid304 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://cyberterrain.org/ns/stonework#executionOutcomeFailed> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#categoryScheme> .
 <https://cyberterrain.org/ns/stonework#executionOutcomeFailed> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#executionOutcomeScheme> .
 <https://cyberterrain.org/ns/stonework#executionOutcomeFailed> <http://www.w3.org/2004/02/skos/core#prefLabel> "Failed"@en .
+# 
+# https://cyberterrain.org/ns/stonework#executionOutcomeInterrupted
+<https://cyberterrain.org/ns/stonework#executionOutcomeInterrupted> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://cyberterrain.org/ns/stonework#executionOutcomeInterrupted> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://cyberterrain.org/ns/stonework#executionOutcomeInterrupted> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://cyberterrain.org/ns/stonework#ExecutionOutcome> .
+<https://cyberterrain.org/ns/stonework#executionOutcomeInterrupted> <http://www.w3.org/2004/02/skos/core#notation> "interrupted" .
+<https://cyberterrain.org/ns/stonework#executionOutcomeInterrupted> <http://www.w3.org/2004/02/skos/core#definition> "The execution paused for something more, such as a further authentication step or the user's consent, and continues in another record. Neither a success nor a failure yet."@en .
+<https://cyberterrain.org/ns/stonework#executionOutcomeInterrupted> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#categoryScheme> .
+<https://cyberterrain.org/ns/stonework#executionOutcomeInterrupted> <http://www.w3.org/2004/02/skos/core#inScheme> <https://cyberterrain.org/ns/stonework#executionOutcomeScheme> .
+<https://cyberterrain.org/ns/stonework#executionOutcomeInterrupted> <http://www.w3.org/2004/02/skos/core#prefLabel> "Interrupted"@en .
 # 
 # https://cyberterrain.org/ns/stonework#executionOutcomeScheme
 <https://cyberterrain.org/ns/stonework#executionOutcomeScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .

@@ -14,8 +14,8 @@
 	dcterms:description "A semantic threat ontology and research framework that serves as the ground-truth model for cyber threat intelligence in the CyberTerrain ecosystem. It provides an extensible foundation for modeling cyber threat intelligence concepts, objects, relationships, workflows, and knowledge, and aligns with established CTI framework ontologies — including STONES (STIX 2.1), ATT&CK, CAPEC, CWE, CVE, and CPE — as authoritative reference vocabularies rather than ontologies it imports and extends." ;
 	dcterms:license <https://opensource.org/licenses/MIT> ;
 	dcterms:title "STONEWORK — Semantic Threat Ontology and Research Framework"@en ;
-	owl:versionIRI <https://cyberterrain.org/ns/stonework/0.13.0> ;
-	owl:versionInfo "0.13.0" ;
+	owl:versionIRI <https://cyberterrain.org/ns/stonework/0.14.0> ;
+	owl:versionInfo "0.14.0" ;
 	.
 
 stonework:AIAgent
@@ -152,19 +152,19 @@ stonework:AttackTechnique
 	skos:scopeNote "Aligns with MITRE ATT&CK techniques and D3FEND OffensiveTechnique. The MITRE ATT&CK-shaped realization of stonework:AttackPattern — operationalized for execution, as distinct from CAPEC's more abstract taxonomy-entry shape (capec:AttackPattern, also a stonework:AttackPattern). Framework-specific subclasses (e.g. attack:Technique) provide the concrete individuals. A specific, concrete realization of this technique is modeled as a stonework:Procedure, linked back via stonework:implementedBy."@en ;
 	.
 
-stonework:AuthenticationMethod
+stonework:AuthenticationFactor
 	a owl:Class ;
 	rdfs:subClassOf
 		stonework:Category ,
 		[
 			a owl:Restriction ;
 			owl:onProperty skos:inScheme ;
-			owl:hasValue stonework:authenticationMethodScheme ;
+			owl:hasValue stonework:authenticationFactorScheme ;
 		]
 		;
-	skos:definition "A sender-authentication method for email."@en ;
-	skos:prefLabel "Authentication Method"@en ;
-	skos:scopeNote "Applied via stonework:hasAuthenticationMethod to EmailAuthenticationResult individuals. Named individuals: SPF, DKIM, DMARC, ARC."@en ;
+	skos:definition "A kind of evidence of identity a verifier checks: knowledge, possession or inherence."@en ;
+	skos:prefLabel "Authentication Factor"@en ;
+	skos:scopeNote "Applied via stonework:authenticationFactor to the activity in which the factor was checked. One distinct factor is single-factor authentication; two or more, multifactor; none, an activity that relied on an earlier authentication (a session token)."@en ;
 	.
 
 stonework:AuthenticationVerdict
@@ -180,6 +180,21 @@ stonework:AuthenticationVerdict
 	skos:definition "A verdict of a sender-authentication check on an email."@en ;
 	skos:prefLabel "Authentication Verdict"@en ;
 	skos:scopeNote "Applied via stonework:hasAuthenticationVerdict to EmailAuthenticationResult individuals. The verdicts of an Authentication-Results header (RFC 8601): pass, fail, soft fail, neutral, none, temporary error, permanent error, policy."@en ;
+	.
+
+stonework:AuthenticatorType
+	a owl:Class ;
+	rdfs:subClassOf
+		stonework:Category ,
+		[
+			a owl:Restriction ;
+			owl:onProperty skos:inScheme ;
+			owl:hasValue stonework:authenticatorTypeScheme ;
+		]
+		;
+	skos:definition "A kind of authenticator a user or program presents to prove its identity, after NIST SP 800-63B: passwords, one-time codes and approvals, cryptographic keys, and the tokens and assertions that stand in for a fresh authentication."@en ;
+	skos:prefLabel "Authenticator Type"@en ;
+	skos:scopeNote "Applied via stonework:authenticatedWith to the activity in which it was presented. Which factors an authenticator amounted to is recorded per activity (stonework:authenticationFactor), since a FIDO2 key is one factor or two depending on whether the user was verified that time. stonework:phishingResistant marks the types bound to the site's origin, which a relaying phishing proxy can't use."@en ;
 	.
 
 stonework:AutonomousSystem
@@ -578,12 +593,27 @@ stonework:EmailAddress
 	skos:prefLabel "Email Address"@en ;
 	.
 
+stonework:EmailAuthenticationMethod
+	a owl:Class ;
+	rdfs:subClassOf
+		stonework:Category ,
+		[
+			a owl:Restriction ;
+			owl:onProperty skos:inScheme ;
+			owl:hasValue stonework:emailAuthenticationMethodScheme ;
+		]
+		;
+	skos:definition "A sender-authentication method for email."@en ;
+	skos:prefLabel "Email Authentication Method"@en ;
+	skos:scopeNote "Applied via stonework:hasEmailAuthenticationMethod to EmailAuthenticationResult individuals. Named individuals: SPF, DKIM, DMARC, ARC."@en ;
+	.
+
 stonework:EmailAuthenticationResult
 	a owl:Class ;
 	rdfs:subClassOf stonework:Assessment ;
 	skos:definition "The verdict of one sender-authentication check (SPF, DKIM, DMARC or ARC) on an EmailMessage, as a receiving server recorded it in an Authentication-Results header: the method, the verdict, the domain checked, and the server that checked."@en ;
 	skos:prefLabel "Email Authentication Result"@en ;
-	skos:scopeNote "A pass authenticates the domain, not the sender's honesty: a lookalike domain registered by an actor passes SPF, DKIM and DMARC for itself. Compare stonework:authenticatedDomain with the domain the recipient expected. The method and verdict are categories (stonework:hasAuthenticationMethod, stonework:hasAuthenticationVerdict)."@en ;
+	skos:scopeNote "A pass authenticates the domain, not the sender's honesty: a lookalike domain registered by an actor passes SPF, DKIM and DMARC for itself. Compare stonework:authenticatedDomain with the domain the recipient expected. The method and verdict are categories (stonework:hasEmailAuthenticationMethod, stonework:hasAuthenticationVerdict)."@en ;
 	.
 
 stonework:EmailMessage
@@ -609,7 +639,7 @@ stonework:Event
 	rdfs:subClassOf stonework:CyberActivity ;
 	skos:definition "An atomic, observable occurrence in a system, network, or environment that has potential security relevance but has not yet been assessed or declared as an Incident."@en ;
 	skos:prefLabel "Event"@en ;
-	skos:scopeNote "Represents the pre-triage state — a raw log entry, alert, or sensor observation. Distinguished from Incident by the absence of human or automated assessment declaring it significant and adverse. Useful for SIEM, log-based, and threat hunting use cases."@en ;
+	skos:scopeNote "Represents the pre-triage state — a raw log entry, alert, or sensor observation. Distinguished from Incident by the absence of human or automated assessment declaring it significant and adverse. Useful for SIEM, log-based, and threat hunting use cases. An Event parsed from a record keeps the link to it (stonework:generatedFrom) and names who performed it (stonework:performedBy). When an analyst places it in a run (stonework:correspondsToStep, stonework:partOfExecution) it stays an Event: it is the execution of that Step without changing type, and its link to the record remains."@en ;
 	.
 
 stonework:ExecutionOutcome
@@ -622,9 +652,9 @@ stonework:ExecutionOutcome
 			owl:hasValue stonework:executionOutcomeScheme ;
 		]
 		;
-	skos:definition "Whether an execution of a Step or Plan succeeded, failed or timed out."@en ;
+	skos:definition "How an execution of a Step or Plan, or any observed activity, ended: succeeded, failed, timed out or interrupted."@en ;
 	skos:prefLabel "Execution Outcome"@en ;
-	skos:scopeNote "The value of a Step's stonework:outcomeVariable in a run. Named individuals: succeeded, failed, timed out. A timeout is kept apart from other failures, as CACAO reports it separately."@en ;
+	skos:scopeNote "The value of a Step's stonework:outcomeVariable in a run, and of stonework:hasOutcome on any activity. Named individuals: succeeded, failed, timed out, interrupted. A timeout is kept apart from other failures, as CACAO reports it separately; interrupted (not in CACAO) is an activity that paused for something more, such as a further authentication step, and continues in another record."@en ;
 	.
 
 stonework:ExploitKit
@@ -2703,72 +2733,77 @@ stonework:authenticatedDomain
 	skos:prefLabel "authenticatedDomain"@en ;
 	.
 
-stonework:authenticationMethodARC
+stonework:authenticatedWith
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf stonework:categorizedBy ;
+	rdfs:domain stonework:CyberActivity ;
+	rdfs:range stonework:AuthenticatorType ;
+	skos:definition "An authenticator presented in an activity, such as a sign-in."@en ;
+	skos:prefLabel "authenticatedWith"@en ;
+	skos:scopeNote "Several for a multifactor sign-in (a password and a push approval). A sign-in that presented a session token rather than authenticating afresh is authenticatedWith stonework:authenticatorSessionToken, with no stonework:authenticationFactor."@en ;
+	.
+
+stonework:authenticationFactor
+	a owl:ObjectProperty ;
+	rdfs:subPropertyOf stonework:categorizedBy ;
+	rdfs:domain stonework:CyberActivity ;
+	rdfs:range stonework:AuthenticationFactor ;
+	skos:definition "A distinct factor the verifier checked in an activity."@en ;
+	skos:prefLabel "authenticationFactor"@en ;
+	skos:scopeNote "Counted per activity: one is single-factor, two or more multifactor. Recorded only as far as the evidence shows; a log that reports MFA without naming the methods supports no more than its description."@en ;
+	.
+
+stonework:authenticationFactorInherence
 	a
 		owl:NamedIndividual ,
 		skos:Concept ,
-		stonework:AuthenticationMethod
+		stonework:AuthenticationFactor
 		;
-	skos:definition "Authenticated Received Chain (RFC 8617): the authentication results recorded by the intermediaries that forwarded the message, sealed so a later receiver can rely on them."@en ;
+	skos:definition "Something the user is: a fingerprint, face or other biometric."@en ;
 	skos:inScheme
-		stonework:authenticationMethodScheme ,
+		stonework:authenticationFactorScheme ,
 		stonework:categoryScheme
 		;
-	skos:notation "arc" ;
-	skos:prefLabel "ARC"@en ;
+	skos:notation "inherence" ;
+	skos:prefLabel "Inherence"@en ;
 	.
 
-stonework:authenticationMethodDKIM
+stonework:authenticationFactorKnowledge
 	a
 		owl:NamedIndividual ,
 		skos:Concept ,
-		stonework:AuthenticationMethod
+		stonework:AuthenticationFactor
 		;
-	skos:definition "DomainKeys Identified Mail (RFC 6376): a signature over the message's headers and body by a signing domain, checked against that domain's published key."@en ;
+	skos:definition "Something the user knows: a password, PIN or passphrase."@en ;
 	skos:inScheme
-		stonework:authenticationMethodScheme ,
+		stonework:authenticationFactorScheme ,
 		stonework:categoryScheme
 		;
-	skos:notation "dkim" ;
-	skos:prefLabel "DKIM"@en ;
+	skos:notation "knowledge" ;
+	skos:prefLabel "Knowledge"@en ;
 	.
 
-stonework:authenticationMethodDMARC
+stonework:authenticationFactorPossession
 	a
 		owl:NamedIndividual ,
 		skos:Concept ,
-		stonework:AuthenticationMethod
+		stonework:AuthenticationFactor
 		;
-	skos:definition "Domain-based Message Authentication, Reporting and Conformance (RFC 7489): whether the From domain is aligned with a domain that passed SPF or DKIM, under the From domain's published policy."@en ;
+	skos:definition "Something the user has: a device, key, token or phone."@en ;
 	skos:inScheme
-		stonework:authenticationMethodScheme ,
+		stonework:authenticationFactorScheme ,
 		stonework:categoryScheme
 		;
-	skos:notation "dmarc" ;
-	skos:prefLabel "DMARC"@en ;
+	skos:notation "possession" ;
+	skos:prefLabel "Possession"@en ;
 	.
 
-stonework:authenticationMethodSPF
-	a
-		owl:NamedIndividual ,
-		skos:Concept ,
-		stonework:AuthenticationMethod
-		;
-	skos:definition "Sender Policy Framework (RFC 7208): whether the sending server is authorized to send for the envelope sender's domain."@en ;
-	skos:inScheme
-		stonework:authenticationMethodScheme ,
-		stonework:categoryScheme
-		;
-	skos:notation "spf" ;
-	skos:prefLabel "SPF"@en ;
-	.
-
-stonework:authenticationMethodScheme
+stonework:authenticationFactorScheme
 	a skos:ConceptScheme ;
 	dcterms:isPartOf stonework:categoryScheme ;
-	dcterms:title "STONEWORK Authentication Method Scheme"@en ;
-	skos:definition "The controlled vocabulary of sender-authentication methods for email."@en ;
-	skos:prefLabel "STONEWORK Authentication Method Scheme"@en ;
+	dcterms:title "STONEWORK Authentication Factor Scheme"@en ;
+	skos:definition "The controlled vocabulary of authentication factors."@en ;
+	skos:prefLabel "STONEWORK Authentication Factor Scheme"@en ;
 	.
 
 stonework:authenticationVerdictFail
@@ -2897,6 +2932,273 @@ stonework:authenticationVerdictTempError
 		;
 	skos:notation "temperror" ;
 	skos:prefLabel "Temporary error"@en ;
+	.
+
+stonework:authenticatorApiKey
+	a
+		owl:NamedIndividual ,
+		skos:Concept ,
+		stonework:AuthenticatorType
+		;
+	skos:definition "A long-lived secret a program presents for itself: an API key, a client secret, an application password."@en ;
+	skos:inScheme
+		stonework:authenticatorTypeScheme ,
+		stonework:categoryScheme
+		;
+	skos:notation "api-key" ;
+	skos:prefLabel "API key or client secret"@en ;
+	.
+
+stonework:authenticatorClientCertificate
+	a
+		owl:NamedIndividual ,
+		skos:Concept ,
+		stonework:AuthenticatorType
+		;
+	skos:definition "A certificate and private key held in software, presented in a TLS handshake or certificate-based sign-in."@en ;
+	skos:inScheme
+		stonework:authenticatorTypeScheme ,
+		stonework:categoryScheme
+		;
+	skos:notation "client-certificate" ;
+	skos:prefLabel "Client certificate"@en ;
+	stonework:phishingResistant "true"^^xsd:boolean ;
+	.
+
+stonework:authenticatorEmailCode
+	a
+		owl:NamedIndividual ,
+		skos:Concept ,
+		stonework:AuthenticatorType
+		;
+	skos:definition "A one-time code or link sent to a registered email address."@en ;
+	skos:inScheme
+		stonework:authenticatorTypeScheme ,
+		stonework:categoryScheme
+		;
+	skos:notation "email-code" ;
+	skos:prefLabel "Email code"@en ;
+	.
+
+stonework:authenticatorFederatedAssertion
+	a
+		owl:NamedIndividual ,
+		skos:Concept ,
+		stonework:AuthenticatorType
+		;
+	skos:definition "A SAML assertion or OpenID Connect token from another identity provider, which authenticated the user itself."@en ;
+	skos:inScheme
+		stonework:authenticatorTypeScheme ,
+		stonework:categoryScheme
+		;
+	skos:notation "federated" ;
+	skos:prefLabel "Federated assertion"@en ;
+	.
+
+stonework:authenticatorFido2SecurityKey
+	a
+		owl:NamedIndividual ,
+		skos:Concept ,
+		stonework:AuthenticatorType
+		;
+	skos:definition "A roaming hardware key that signs a challenge bound to the site's origin (WebAuthn/FIDO2), with or without user verification by PIN or biometric."@en ;
+	skos:inScheme
+		stonework:authenticatorTypeScheme ,
+		stonework:categoryScheme
+		;
+	skos:notation "fido2-key" ;
+	skos:prefLabel "FIDO2 security key"@en ;
+	stonework:phishingResistant "true"^^xsd:boolean ;
+	.
+
+stonework:authenticatorHardwareOtpToken
+	a
+		owl:NamedIndividual ,
+		skos:Concept ,
+		stonework:AuthenticatorType
+		;
+	skos:definition "A one-time code shown by a dedicated hardware token."@en ;
+	skos:inScheme
+		stonework:authenticatorTypeScheme ,
+		stonework:categoryScheme
+		;
+	skos:notation "hardware-otp" ;
+	skos:prefLabel "Hardware OTP token"@en ;
+	.
+
+stonework:authenticatorPIN
+	a
+		owl:NamedIndividual ,
+		skos:Concept ,
+		stonework:AuthenticatorType
+		;
+	skos:definition "A short memorized number, checked by the verifier (a PIN that only unlocks a device is that device's user verification, not a separate authenticator)."@en ;
+	skos:inScheme
+		stonework:authenticatorTypeScheme ,
+		stonework:categoryScheme
+		;
+	skos:notation "pin" ;
+	skos:prefLabel "PIN"@en ;
+	.
+
+stonework:authenticatorPassword
+	a
+		owl:NamedIndividual ,
+		skos:Concept ,
+		stonework:AuthenticatorType
+		;
+	skos:definition "A memorized secret the user types."@en ;
+	skos:inScheme
+		stonework:authenticatorTypeScheme ,
+		stonework:categoryScheme
+		;
+	skos:notation "password" ;
+	skos:prefLabel "Password"@en ;
+	.
+
+stonework:authenticatorPlatformPasskey
+	a
+		owl:NamedIndividual ,
+		skos:Concept ,
+		stonework:AuthenticatorType
+		;
+	skos:definition "A FIDO2 credential held by the user's device or its keychain, unlocked by the device's PIN or biometric (for example Windows Hello for Business, Touch ID)."@en ;
+	skos:inScheme
+		stonework:authenticatorTypeScheme ,
+		stonework:categoryScheme
+		;
+	skos:notation "passkey" ;
+	skos:prefLabel "Platform passkey"@en ;
+	stonework:phishingResistant "true"^^xsd:boolean ;
+	.
+
+stonework:authenticatorPushApproval
+	a
+		owl:NamedIndividual ,
+		skos:Concept ,
+		stonework:AuthenticatorType
+		;
+	skos:definition "An approval tapped on a registered device in response to a notification, with or without number matching."@en ;
+	skos:inScheme
+		stonework:authenticatorTypeScheme ,
+		stonework:categoryScheme
+		;
+	skos:notation "push" ;
+	skos:prefLabel "Push approval"@en ;
+	.
+
+stonework:authenticatorRecoveryCode
+	a
+		owl:NamedIndividual ,
+		skos:Concept ,
+		stonework:AuthenticatorType
+		;
+	skos:definition "A pre-issued one-time code from a printed or saved list (NIST SP 800-63B: look-up secret)."@en ;
+	skos:inScheme
+		stonework:authenticatorTypeScheme ,
+		stonework:categoryScheme
+		;
+	skos:notation "recovery-code" ;
+	skos:prefLabel "Recovery code"@en ;
+	.
+
+stonework:authenticatorSessionToken
+	a
+		owl:NamedIndividual ,
+		skos:Concept ,
+		stonework:AuthenticatorType
+		;
+	skos:definition "A bearer token from an earlier authentication (a session cookie, an access or refresh token) presented in place of a fresh one. It proves the earlier authentication, not who presents it: a stolen token is replayed without any factor (ATT&CK T1539, T1550.001)."@en ;
+	skos:inScheme
+		stonework:authenticatorTypeScheme ,
+		stonework:categoryScheme
+		;
+	skos:notation "session-token" ;
+	skos:prefLabel "Session token"@en ;
+	.
+
+stonework:authenticatorSmartCard
+	a
+		owl:NamedIndividual ,
+		skos:Concept ,
+		stonework:AuthenticatorType
+		;
+	skos:definition "A card or token holding a private key and certificate, unlocked by a PIN (for example PIV or CAC)."@en ;
+	skos:inScheme
+		stonework:authenticatorTypeScheme ,
+		stonework:categoryScheme
+		;
+	skos:notation "smart-card" ;
+	skos:prefLabel "Smart card"@en ;
+	stonework:phishingResistant "true"^^xsd:boolean ;
+	.
+
+stonework:authenticatorSmsCode
+	a
+		owl:NamedIndividual ,
+		skos:Concept ,
+		stonework:AuthenticatorType
+		;
+	skos:definition "A one-time code sent by text message to a registered phone."@en ;
+	skos:inScheme
+		stonework:authenticatorTypeScheme ,
+		stonework:categoryScheme
+		;
+	skos:notation "sms" ;
+	skos:prefLabel "SMS code"@en ;
+	.
+
+stonework:authenticatorSshKey
+	a
+		owl:NamedIndividual ,
+		skos:Concept ,
+		stonework:AuthenticatorType
+		;
+	skos:definition "A private key presented in an SSH public-key authentication. A passphrase on the key is checked only on the client, so the server sees possession alone."@en ;
+	skos:inScheme
+		stonework:authenticatorTypeScheme ,
+		stonework:categoryScheme
+		;
+	skos:notation "ssh-key" ;
+	skos:prefLabel "SSH key"@en ;
+	.
+
+stonework:authenticatorTotpApp
+	a
+		owl:NamedIndividual ,
+		skos:Concept ,
+		stonework:AuthenticatorType
+		;
+	skos:definition "A time-based one-time code generated by an app on a registered device (NIST SP 800-63B: single-factor OTP software)."@en ;
+	skos:inScheme
+		stonework:authenticatorTypeScheme ,
+		stonework:categoryScheme
+		;
+	skos:notation "totp" ;
+	skos:prefLabel "Authenticator-app code"@en ;
+	.
+
+stonework:authenticatorTypeScheme
+	a skos:ConceptScheme ;
+	dcterms:isPartOf stonework:categoryScheme ;
+	dcterms:title "STONEWORK Authenticator Type Scheme"@en ;
+	skos:definition "The controlled vocabulary of authenticator types."@en ;
+	skos:prefLabel "STONEWORK Authenticator Type Scheme"@en ;
+	.
+
+stonework:authenticatorVoiceCall
+	a
+		owl:NamedIndividual ,
+		skos:Concept ,
+		stonework:AuthenticatorType
+		;
+	skos:definition "A code or approval given in an automated phone call to a registered number."@en ;
+	skos:inScheme
+		stonework:authenticatorTypeScheme ,
+		stonework:categoryScheme
+		;
+	skos:notation "voice" ;
+	skos:prefLabel "Voice call"@en ;
 	.
 
 stonework:authoredBy
@@ -3981,6 +4283,74 @@ stonework:dstPort
 	skos:prefLabel "dstPort"@en ;
 	.
 
+stonework:emailAuthenticationMethodARC
+	a
+		owl:NamedIndividual ,
+		skos:Concept ,
+		stonework:EmailAuthenticationMethod
+		;
+	skos:definition "Authenticated Received Chain (RFC 8617): the authentication results recorded by the intermediaries that forwarded the message, sealed so a later receiver can rely on them."@en ;
+	skos:inScheme
+		stonework:categoryScheme ,
+		stonework:emailAuthenticationMethodScheme
+		;
+	skos:notation "arc" ;
+	skos:prefLabel "ARC"@en ;
+	.
+
+stonework:emailAuthenticationMethodDKIM
+	a
+		owl:NamedIndividual ,
+		skos:Concept ,
+		stonework:EmailAuthenticationMethod
+		;
+	skos:definition "DomainKeys Identified Mail (RFC 6376): a signature over the message's headers and body by a signing domain, checked against that domain's published key."@en ;
+	skos:inScheme
+		stonework:categoryScheme ,
+		stonework:emailAuthenticationMethodScheme
+		;
+	skos:notation "dkim" ;
+	skos:prefLabel "DKIM"@en ;
+	.
+
+stonework:emailAuthenticationMethodDMARC
+	a
+		owl:NamedIndividual ,
+		skos:Concept ,
+		stonework:EmailAuthenticationMethod
+		;
+	skos:definition "Domain-based Message Authentication, Reporting and Conformance (RFC 7489): whether the From domain is aligned with a domain that passed SPF or DKIM, under the From domain's published policy."@en ;
+	skos:inScheme
+		stonework:categoryScheme ,
+		stonework:emailAuthenticationMethodScheme
+		;
+	skos:notation "dmarc" ;
+	skos:prefLabel "DMARC"@en ;
+	.
+
+stonework:emailAuthenticationMethodSPF
+	a
+		owl:NamedIndividual ,
+		skos:Concept ,
+		stonework:EmailAuthenticationMethod
+		;
+	skos:definition "Sender Policy Framework (RFC 7208): whether the sending server is authorized to send for the envelope sender's domain."@en ;
+	skos:inScheme
+		stonework:categoryScheme ,
+		stonework:emailAuthenticationMethodScheme
+		;
+	skos:notation "spf" ;
+	skos:prefLabel "SPF"@en ;
+	.
+
+stonework:emailAuthenticationMethodScheme
+	a skos:ConceptScheme ;
+	dcterms:isPartOf stonework:categoryScheme ;
+	dcterms:title "STONEWORK Email Authentication Method Scheme"@en ;
+	skos:definition "The controlled vocabulary of sender-authentication methods for email."@en ;
+	skos:prefLabel "STONEWORK Email Authentication Method Scheme"@en ;
+	.
+
 stonework:emailBody
 	a owl:DatatypeProperty ;
 	rdfs:domain stonework:EmailMessage ;
@@ -4141,6 +4511,21 @@ stonework:executionOutcomeFailed
 		;
 	skos:notation "failed" ;
 	skos:prefLabel "Failed"@en ;
+	.
+
+stonework:executionOutcomeInterrupted
+	a
+		owl:NamedIndividual ,
+		skos:Concept ,
+		stonework:ExecutionOutcome
+		;
+	skos:definition "The execution paused for something more, such as a further authentication step or the user's consent, and continues in another record. Neither a success nor a failure yet."@en ;
+	skos:inScheme
+		stonework:categoryScheme ,
+		stonework:executionOutcomeScheme
+		;
+	skos:notation "interrupted" ;
+	skos:prefLabel "Interrupted"@en ;
 	.
 
 stonework:executionOutcomeScheme
@@ -4940,18 +5325,6 @@ stonework:hasAttachment
 	skos:prefLabel "hasAttachment"@en ;
 	.
 
-stonework:hasAuthenticationMethod
-	a
-		owl:ObjectProperty ,
-		owl:FunctionalProperty
-		;
-	rdfs:subPropertyOf stonework:categorizedBy ;
-	rdfs:domain stonework:EmailAuthenticationResult ;
-	rdfs:range stonework:AuthenticationMethod ;
-	skos:definition "The method of a sender-authentication check: SPF, DKIM, DMARC or ARC."@en ;
-	skos:prefLabel "hasAuthenticationMethod"@en ;
-	.
-
 stonework:hasAuthenticationResult
 	a owl:ObjectProperty ;
 	rdfs:domain stonework:EmailMessage ;
@@ -5044,6 +5417,18 @@ stonework:hasEmail
 	owl:inverseOf stonework:emailOf ;
 	skos:definition "An EmailAddress associated with this Agent."@en ;
 	skos:prefLabel "hasEmail" ;
+	.
+
+stonework:hasEmailAuthenticationMethod
+	a
+		owl:ObjectProperty ,
+		owl:FunctionalProperty
+		;
+	rdfs:subPropertyOf stonework:categorizedBy ;
+	rdfs:domain stonework:EmailAuthenticationResult ;
+	rdfs:range stonework:EmailAuthenticationMethod ;
+	skos:definition "The method of a sender-authentication check: SPF, DKIM, DMARC or ARC."@en ;
+	skos:prefLabel "hasEmailAuthenticationMethod"@en ;
 	.
 
 stonework:hasEvent
@@ -5182,8 +5567,8 @@ stonework:hasInfrastructureType
 
 stonework:hasInput
 	a owl:ObjectProperty ;
-	rdfs:domain stonework:Process ;
-	skos:definition "Relates a Process to its input data or artifacts."@en ;
+	rdfs:domain stonework:CyberActivity ;
+	skos:definition "Relates an activity to its input data or artifacts, or to an activity it takes up, such as the payment an approval acts on."@en ;
 	skos:prefLabel "hasInput"@en ;
 	.
 
@@ -5353,10 +5738,23 @@ stonework:hasOnlineReference
 	skos:prefLabel "hasOnlineReference"@en ;
 	.
 
+stonework:hasOutcome
+	a
+		owl:ObjectProperty ,
+		owl:FunctionalProperty
+		;
+	rdfs:subPropertyOf stonework:categorizedBy ;
+	rdfs:domain stonework:CyberActivity ;
+	rdfs:range stonework:ExecutionOutcome ;
+	skos:definition "How an activity ended, as observed: succeeded, failed, timed out or interrupted."@en ;
+	skos:prefLabel "hasOutcome"@en ;
+	skos:scopeNote "The observed fact, for any activity, including a raw record outside any plan, such as a failed sign-in. In a run of a Step with a stonework:outcomeVariable, that Variable's binding holds the same value. Why it ended so, as the source reports it, is stonework:outcomeDetail."@en ;
+	.
+
 stonework:hasOutput
 	a owl:ObjectProperty ;
-	rdfs:domain stonework:Process ;
-	skos:definition "Relates a Process to the data or artifacts it produces."@en ;
+	rdfs:domain stonework:CyberActivity ;
+	skos:definition "Relates an activity to what it produces as output, data, artifacts or an activity it sets going, such as the wire a release sends."@en ;
 	skos:prefLabel "hasOutput"@en ;
 	.
 
@@ -7621,6 +8019,14 @@ stonework:osVersion
 	skos:prefLabel "osVersion"@en ;
 	.
 
+stonework:outcomeDetail
+	a owl:DatatypeProperty ;
+	rdfs:domain stonework:CyberActivity ;
+	rdfs:range xsd:string ;
+	skos:definition "Why an activity ended as it did, as the source system reports it, such as an error code and its message."@en ;
+	skos:prefLabel "outcomeDetail"@en ;
+	.
+
 stonework:outcomeVariable
 	a
 		owl:ObjectProperty ,
@@ -7809,12 +8215,12 @@ stonework:performedBy
 	rdfs:domain [
 		a owl:Class ;
 		owl:unionOf (
+			stonework:CyberActivity
 			stonework:Plan
-			stonework:Process
 		) ;
 	] ;
 	rdfs:range stonework:Agent ;
-	skos:definition "Relates a Process to the Agent that performs it, or a Plan to the Agent responsible for carrying it out."@en ;
+	skos:definition "Relates an activity (a Process, an Event such as a log record, or any other CyberActivity) to the Agent that performed it, or a Plan to the Agent responsible for carrying it out."@en ;
 	skos:prefLabel "performedBy"@en ;
 	skos:scopeNote "On an execution, name the performer as observed. When the evidence shows only an identity, such as an account in an audit log, the performer is that DigitalIdentity, and the Agent behind it is reached through stonework:accountOf or stonework:attributedToAgent. When an identity may have been used by someone other than its holder, keep the identity as the performer and record the Agent believed responsible with stonework:attributedTo; an analyst who establishes the misuse records a stonework:Deviation. Who is expected to perform a Plan's Steps is given per Step, as Roles (stonework:performerRole)."@en ;
 	.
@@ -7827,6 +8233,17 @@ stonework:performerRole
 	skos:definition "A Role whose holder is expected to perform this Step: the plan-side assignment of work, as in a BPMN lane."@en ;
 	skos:prefLabel "performerRole"@en ;
 	skos:scopeNote "If several Roles are given, a holder of any one of them may perform the Step; a requirement that two people act (dual control) is two Steps, linked by stonework:separatedFrom. An execution conforms when its performer, or the Agent its performer identity belongs to (stonework:accountOf, stonework:attributedToAgent), holds the Role through a stonework:RoleAssignment whose stonework:roleContext is the Plan's performer and which is in force (stonework:validFrom, stonework:validUntil) when the execution starts. Someone acting through a role holder's misused identity passes this check, which is why a misused identity is recorded as a stonework:Deviation."@en ;
+	.
+
+stonework:phishingResistant
+	a
+		owl:DatatypeProperty ,
+		owl:FunctionalProperty
+		;
+	rdfs:domain stonework:AuthenticatorType ;
+	rdfs:range xsd:boolean ;
+	skos:definition "Whether an authenticator type is bound to the site it authenticates to, so that a phishing proxy relaying the sign-in can't use it."@en ;
+	skos:prefLabel "phishingResistant"@en ;
 	.
 
 stonework:phoneNumberOf

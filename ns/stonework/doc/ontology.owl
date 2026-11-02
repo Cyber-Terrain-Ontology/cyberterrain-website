@@ -10,11 +10,11 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:stonework="https://cyberterrain.org/ns/stonework#">
     <owl:Ontology rdf:about="https://cyberterrain.org/ns/stonework#">
-        <owl:versionIRI rdf:resource="https://cyberterrain.org/ns/stonework/0.13.0"/>
+        <owl:versionIRI rdf:resource="https://cyberterrain.org/ns/stonework/0.14.0"/>
         <terms:creator>Hohimer Intelligence Strategies LLC</terms:creator>
         <terms:license rdf:resource="https://opensource.org/licenses/MIT"/>
         <rdfs:label xml:lang="en">STONEWORK</rdfs:label>
-        <owl:versionInfo>0.13.0</owl:versionInfo>
+        <owl:versionInfo>0.14.0</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -505,6 +505,34 @@
         <rdfs:range rdf:resource="https://cyberterrain.org/ns/stonework#Domain"/>
         <skos:definition xml:lang="en">The domain an authentication check evaluated: the envelope sender&apos;s domain for SPF, the signing domain for DKIM, the From domain for DMARC.</skos:definition>
         <skos:prefLabel xml:lang="en">authenticatedDomain</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#authenticatedWith -->
+
+
+    <owl:ObjectProperty rdf:about="https://cyberterrain.org/ns/stonework#authenticatedWith">
+        <rdfs:subPropertyOf rdf:resource="https://cyberterrain.org/ns/stonework#categorizedBy"/>
+        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#CyberActivity"/>
+        <rdfs:range rdf:resource="https://cyberterrain.org/ns/stonework#AuthenticatorType"/>
+        <skos:definition xml:lang="en">An authenticator presented in an activity, such as a sign-in.</skos:definition>
+        <skos:prefLabel xml:lang="en">authenticatedWith</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Several for a multifactor sign-in (a password and a push approval). A sign-in that presented a session token rather than authenticating afresh is authenticatedWith stonework:authenticatorSessionToken, with no stonework:authenticationFactor.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#authenticationFactor -->
+
+
+    <owl:ObjectProperty rdf:about="https://cyberterrain.org/ns/stonework#authenticationFactor">
+        <rdfs:subPropertyOf rdf:resource="https://cyberterrain.org/ns/stonework#categorizedBy"/>
+        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#CyberActivity"/>
+        <rdfs:range rdf:resource="https://cyberterrain.org/ns/stonework#AuthenticationFactor"/>
+        <skos:definition xml:lang="en">A distinct factor the verifier checked in an activity.</skos:definition>
+        <skos:prefLabel xml:lang="en">authenticationFactor</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Counted per activity: one is single-factor, two or more multifactor. Recorded only as far as the evidence shows; a log that reports MFA without naming the methods supports no more than its description.</skos:scopeNote>
     </owl:ObjectProperty>
     
 
@@ -1521,20 +1549,6 @@
     
 
 
-    <!-- https://cyberterrain.org/ns/stonework#hasAuthenticationMethod -->
-
-
-    <owl:ObjectProperty rdf:about="https://cyberterrain.org/ns/stonework#hasAuthenticationMethod">
-        <rdfs:subPropertyOf rdf:resource="https://cyberterrain.org/ns/stonework#categorizedBy"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#EmailAuthenticationResult"/>
-        <rdfs:range rdf:resource="https://cyberterrain.org/ns/stonework#AuthenticationMethod"/>
-        <skos:definition xml:lang="en">The method of a sender-authentication check: SPF, DKIM, DMARC or ARC.</skos:definition>
-        <skos:prefLabel xml:lang="en">hasAuthenticationMethod</skos:prefLabel>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://cyberterrain.org/ns/stonework#hasAuthenticationResult -->
 
 
@@ -1663,6 +1677,20 @@
         <rdfs:range rdf:resource="https://cyberterrain.org/ns/stonework#EmailAddress"/>
         <skos:definition xml:lang="en">An EmailAddress associated with this Agent.</skos:definition>
         <skos:prefLabel>hasEmail</skos:prefLabel>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#hasEmailAuthenticationMethod -->
+
+
+    <owl:ObjectProperty rdf:about="https://cyberterrain.org/ns/stonework#hasEmailAuthenticationMethod">
+        <rdfs:subPropertyOf rdf:resource="https://cyberterrain.org/ns/stonework#categorizedBy"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#EmailAuthenticationResult"/>
+        <rdfs:range rdf:resource="https://cyberterrain.org/ns/stonework#EmailAuthenticationMethod"/>
+        <skos:definition xml:lang="en">The method of a sender-authentication check: SPF, DKIM, DMARC or ARC.</skos:definition>
+        <skos:prefLabel xml:lang="en">hasEmailAuthenticationMethod</skos:prefLabel>
     </owl:ObjectProperty>
     
 
@@ -1863,8 +1891,8 @@
 
 
     <owl:ObjectProperty rdf:about="https://cyberterrain.org/ns/stonework#hasInput">
-        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#Process"/>
-        <skos:definition xml:lang="en">Relates a Process to its input data or artifacts.</skos:definition>
+        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#CyberActivity"/>
+        <skos:definition xml:lang="en">Relates an activity to its input data or artifacts, or to an activity it takes up, such as the payment an approval acts on.</skos:definition>
         <skos:prefLabel xml:lang="en">hasInput</skos:prefLabel>
     </owl:ObjectProperty>
     
@@ -2096,12 +2124,27 @@
     
 
 
+    <!-- https://cyberterrain.org/ns/stonework#hasOutcome -->
+
+
+    <owl:ObjectProperty rdf:about="https://cyberterrain.org/ns/stonework#hasOutcome">
+        <rdfs:subPropertyOf rdf:resource="https://cyberterrain.org/ns/stonework#categorizedBy"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#CyberActivity"/>
+        <rdfs:range rdf:resource="https://cyberterrain.org/ns/stonework#ExecutionOutcome"/>
+        <skos:definition xml:lang="en">How an activity ended, as observed: succeeded, failed, timed out or interrupted.</skos:definition>
+        <skos:prefLabel xml:lang="en">hasOutcome</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">The observed fact, for any activity, including a raw record outside any plan, such as a failed sign-in. In a run of a Step with a stonework:outcomeVariable, that Variable&apos;s binding holds the same value. Why it ended so, as the source reports it, is stonework:outcomeDetail.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://cyberterrain.org/ns/stonework#hasOutput -->
 
 
     <owl:ObjectProperty rdf:about="https://cyberterrain.org/ns/stonework#hasOutput">
-        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#Process"/>
-        <skos:definition xml:lang="en">Relates a Process to the data or artifacts it produces.</skos:definition>
+        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#CyberActivity"/>
+        <skos:definition xml:lang="en">Relates an activity to what it produces as output, data, artifacts or an activity it sets going, such as the wire a release sends.</skos:definition>
         <skos:prefLabel xml:lang="en">hasOutput</skos:prefLabel>
     </owl:ObjectProperty>
     
@@ -3358,13 +3401,13 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://cyberterrain.org/ns/stonework#CyberActivity"/>
                     <rdf:Description rdf:about="https://cyberterrain.org/ns/stonework#Plan"/>
-                    <rdf:Description rdf:about="https://cyberterrain.org/ns/stonework#Process"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="https://cyberterrain.org/ns/stonework#Agent"/>
-        <skos:definition xml:lang="en">Relates a Process to the Agent that performs it, or a Plan to the Agent responsible for carrying it out.</skos:definition>
+        <skos:definition xml:lang="en">Relates an activity (a Process, an Event such as a log record, or any other CyberActivity) to the Agent that performed it, or a Plan to the Agent responsible for carrying it out.</skos:definition>
         <skos:prefLabel xml:lang="en">performedBy</skos:prefLabel>
         <skos:scopeNote xml:lang="en">On an execution, name the performer as observed. When the evidence shows only an identity, such as an account in an audit log, the performer is that DigitalIdentity, and the Agent behind it is reached through stonework:accountOf or stonework:attributedToAgent. When an identity may have been used by someone other than its holder, keep the identity as the performer and record the Agent believed responsible with stonework:attributedTo; an analyst who establishes the misuse records a stonework:Deviation. Who is expected to perform a Plan&apos;s Steps is given per Step, as Roles (stonework:performerRole).</skos:scopeNote>
     </owl:ObjectProperty>
@@ -5870,6 +5913,18 @@
     
 
 
+    <!-- https://cyberterrain.org/ns/stonework#outcomeDetail -->
+
+
+    <owl:DatatypeProperty rdf:about="https://cyberterrain.org/ns/stonework#outcomeDetail">
+        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#CyberActivity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <skos:definition xml:lang="en">Why an activity ended as it did, as the source system reports it, such as an error code and its message.</skos:definition>
+        <skos:prefLabel xml:lang="en">outcomeDetail</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://cyberterrain.org/ns/stonework#packerName -->
 
 
@@ -5902,6 +5957,19 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
         <skos:definition xml:lang="en">The process identifier of the parent process.</skos:definition>
         <skos:prefLabel xml:lang="en">parentPid</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#phishingResistant -->
+
+
+    <owl:DatatypeProperty rdf:about="https://cyberterrain.org/ns/stonework#phishingResistant">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#AuthenticatorType"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <skos:definition xml:lang="en">Whether an authenticator type is bound to the site it authenticates to, so that a phishing proxy relaying the sign-in can&apos;t use it.</skos:definition>
+        <skos:prefLabel xml:lang="en">phishingResistant</skos:prefLabel>
     </owl:DatatypeProperty>
     
 
@@ -6811,20 +6879,20 @@
     
 
 
-    <!-- https://cyberterrain.org/ns/stonework#AuthenticationMethod -->
+    <!-- https://cyberterrain.org/ns/stonework#AuthenticationFactor -->
 
 
-    <owl:Class rdf:about="https://cyberterrain.org/ns/stonework#AuthenticationMethod">
+    <owl:Class rdf:about="https://cyberterrain.org/ns/stonework#AuthenticationFactor">
         <rdfs:subClassOf rdf:resource="https://cyberterrain.org/ns/stonework#Category"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
-                <owl:hasValue rdf:resource="https://cyberterrain.org/ns/stonework#authenticationMethodScheme"/>
+                <owl:hasValue rdf:resource="https://cyberterrain.org/ns/stonework#authenticationFactorScheme"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <skos:definition xml:lang="en">A sender-authentication method for email.</skos:definition>
-        <skos:prefLabel xml:lang="en">Authentication Method</skos:prefLabel>
-        <skos:scopeNote xml:lang="en">Applied via stonework:hasAuthenticationMethod to EmailAuthenticationResult individuals. Named individuals: SPF, DKIM, DMARC, ARC.</skos:scopeNote>
+        <skos:definition xml:lang="en">A kind of evidence of identity a verifier checks: knowledge, possession or inherence.</skos:definition>
+        <skos:prefLabel xml:lang="en">Authentication Factor</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Applied via stonework:authenticationFactor to the activity in which the factor was checked. One distinct factor is single-factor authentication; two or more, multifactor; none, an activity that relied on an earlier authentication (a session token).</skos:scopeNote>
     </owl:Class>
     
 
@@ -6843,6 +6911,24 @@
         <skos:definition xml:lang="en">A verdict of a sender-authentication check on an email.</skos:definition>
         <skos:prefLabel xml:lang="en">Authentication Verdict</skos:prefLabel>
         <skos:scopeNote xml:lang="en">Applied via stonework:hasAuthenticationVerdict to EmailAuthenticationResult individuals. The verdicts of an Authentication-Results header (RFC 8601): pass, fail, soft fail, neutral, none, temporary error, permanent error, policy.</skos:scopeNote>
+    </owl:Class>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#AuthenticatorType -->
+
+
+    <owl:Class rdf:about="https://cyberterrain.org/ns/stonework#AuthenticatorType">
+        <rdfs:subClassOf rdf:resource="https://cyberterrain.org/ns/stonework#Category"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+                <owl:hasValue rdf:resource="https://cyberterrain.org/ns/stonework#authenticatorTypeScheme"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:definition xml:lang="en">A kind of authenticator a user or program presents to prove its identity, after NIST SP 800-63B: passwords, one-time codes and approvals, cryptographic keys, and the tokens and assertions that stand in for a fresh authentication.</skos:definition>
+        <skos:prefLabel xml:lang="en">Authenticator Type</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Applied via stonework:authenticatedWith to the activity in which it was presented. Which factors an authenticator amounted to is recorded per activity (stonework:authenticationFactor), since a FIDO2 key is one factor or two depending on whether the user was verified that time. stonework:phishingResistant marks the types bound to the site&apos;s origin, which a relaying phishing proxy can&apos;t use.</skos:scopeNote>
     </owl:Class>
     
 
@@ -7292,6 +7378,24 @@
     
 
 
+    <!-- https://cyberterrain.org/ns/stonework#EmailAuthenticationMethod -->
+
+
+    <owl:Class rdf:about="https://cyberterrain.org/ns/stonework#EmailAuthenticationMethod">
+        <rdfs:subClassOf rdf:resource="https://cyberterrain.org/ns/stonework#Category"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
+                <owl:hasValue rdf:resource="https://cyberterrain.org/ns/stonework#emailAuthenticationMethodScheme"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:definition xml:lang="en">A sender-authentication method for email.</skos:definition>
+        <skos:prefLabel xml:lang="en">Email Authentication Method</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Applied via stonework:hasEmailAuthenticationMethod to EmailAuthenticationResult individuals. Named individuals: SPF, DKIM, DMARC, ARC.</skos:scopeNote>
+    </owl:Class>
+    
+
+
     <!-- https://cyberterrain.org/ns/stonework#EmailAuthenticationResult -->
 
 
@@ -7299,7 +7403,7 @@
         <rdfs:subClassOf rdf:resource="https://cyberterrain.org/ns/stonework#Assessment"/>
         <skos:definition xml:lang="en">The verdict of one sender-authentication check (SPF, DKIM, DMARC or ARC) on an EmailMessage, as a receiving server recorded it in an Authentication-Results header: the method, the verdict, the domain checked, and the server that checked.</skos:definition>
         <skos:prefLabel xml:lang="en">Email Authentication Result</skos:prefLabel>
-        <skos:scopeNote xml:lang="en">A pass authenticates the domain, not the sender&apos;s honesty: a lookalike domain registered by an actor passes SPF, DKIM and DMARC for itself. Compare stonework:authenticatedDomain with the domain the recipient expected. The method and verdict are categories (stonework:hasAuthenticationMethod, stonework:hasAuthenticationVerdict).</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">A pass authenticates the domain, not the sender&apos;s honesty: a lookalike domain registered by an actor passes SPF, DKIM and DMARC for itself. Compare stonework:authenticatedDomain with the domain the recipient expected. The method and verdict are categories (stonework:hasEmailAuthenticationMethod, stonework:hasAuthenticationVerdict).</skos:scopeNote>
     </owl:Class>
     
 
@@ -7323,7 +7427,7 @@
         <rdfs:subClassOf rdf:resource="https://cyberterrain.org/ns/stonework#CyberActivity"/>
         <skos:definition xml:lang="en">An atomic, observable occurrence in a system, network, or environment that has potential security relevance but has not yet been assessed or declared as an Incident.</skos:definition>
         <skos:prefLabel xml:lang="en">Event</skos:prefLabel>
-        <skos:scopeNote xml:lang="en">Represents the pre-triage state — a raw log entry, alert, or sensor observation. Distinguished from Incident by the absence of human or automated assessment declaring it significant and adverse. Useful for SIEM, log-based, and threat hunting use cases.</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">Represents the pre-triage state — a raw log entry, alert, or sensor observation. Distinguished from Incident by the absence of human or automated assessment declaring it significant and adverse. Useful for SIEM, log-based, and threat hunting use cases. An Event parsed from a record keeps the link to it (stonework:generatedFrom) and names who performed it (stonework:performedBy). When an analyst places it in a run (stonework:correspondsToStep, stonework:partOfExecution) it stays an Event: it is the execution of that Step without changing type, and its link to the record remains.</skos:scopeNote>
     </owl:Class>
     
 
@@ -7339,9 +7443,9 @@
                 <owl:hasValue rdf:resource="https://cyberterrain.org/ns/stonework#executionOutcomeScheme"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <skos:definition xml:lang="en">Whether an execution of a Step or Plan succeeded, failed or timed out.</skos:definition>
+        <skos:definition xml:lang="en">How an execution of a Step or Plan, or any observed activity, ended: succeeded, failed, timed out or interrupted.</skos:definition>
         <skos:prefLabel xml:lang="en">Execution Outcome</skos:prefLabel>
-        <skos:scopeNote xml:lang="en">The value of a Step&apos;s stonework:outcomeVariable in a run. Named individuals: succeeded, failed, timed out. A timeout is kept apart from other failures, as CACAO reports it separately.</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">The value of a Step&apos;s stonework:outcomeVariable in a run, and of stonework:hasOutcome on any activity. Named individuals: succeeded, failed, timed out, interrupted. A timeout is kept apart from other failures, as CACAO reports it separately; interrupted (not in CACAO) is an activity that paused for something more, such as a further authentication step, and continues in another record.</skos:scopeNote>
     </owl:Class>
     
 
@@ -9686,75 +9790,60 @@
     
 
 
-    <!-- https://cyberterrain.org/ns/stonework#authenticationMethodARC -->
+    <!-- https://cyberterrain.org/ns/stonework#authenticationFactorInherence -->
 
 
-    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#authenticationMethodARC">
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#authenticationFactorInherence">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#AuthenticationMethod"/>
-        <skos:notation>arc</skos:notation>
-        <skos:definition xml:lang="en">Authenticated Received Chain (RFC 8617): the authentication results recorded by the intermediaries that forwarded the message, sealed so a later receiver can rely on them.</skos:definition>
-        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#authenticationMethodScheme"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#AuthenticationFactor"/>
+        <skos:notation>inherence</skos:notation>
+        <skos:definition xml:lang="en">Something the user is: a fingerprint, face or other biometric.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#authenticationFactorScheme"/>
         <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
-        <skos:prefLabel xml:lang="en">ARC</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Inherence</skos:prefLabel>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://cyberterrain.org/ns/stonework#authenticationMethodDKIM -->
+    <!-- https://cyberterrain.org/ns/stonework#authenticationFactorKnowledge -->
 
 
-    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#authenticationMethodDKIM">
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#authenticationFactorKnowledge">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#AuthenticationMethod"/>
-        <skos:notation>dkim</skos:notation>
-        <skos:definition xml:lang="en">DomainKeys Identified Mail (RFC 6376): a signature over the message&apos;s headers and body by a signing domain, checked against that domain&apos;s published key.</skos:definition>
-        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#authenticationMethodScheme"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#AuthenticationFactor"/>
+        <skos:notation>knowledge</skos:notation>
+        <skos:definition xml:lang="en">Something the user knows: a password, PIN or passphrase.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#authenticationFactorScheme"/>
         <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
-        <skos:prefLabel xml:lang="en">DKIM</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Knowledge</skos:prefLabel>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://cyberterrain.org/ns/stonework#authenticationMethodDMARC -->
+    <!-- https://cyberterrain.org/ns/stonework#authenticationFactorPossession -->
 
 
-    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#authenticationMethodDMARC">
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#authenticationFactorPossession">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#AuthenticationMethod"/>
-        <skos:notation>dmarc</skos:notation>
-        <skos:definition xml:lang="en">Domain-based Message Authentication, Reporting and Conformance (RFC 7489): whether the From domain is aligned with a domain that passed SPF or DKIM, under the From domain&apos;s published policy.</skos:definition>
-        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#authenticationMethodScheme"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#AuthenticationFactor"/>
+        <skos:notation>possession</skos:notation>
+        <skos:definition xml:lang="en">Something the user has: a device, key, token or phone.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#authenticationFactorScheme"/>
         <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
-        <skos:prefLabel xml:lang="en">DMARC</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Possession</skos:prefLabel>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://cyberterrain.org/ns/stonework#authenticationMethodSPF -->
+    <!-- https://cyberterrain.org/ns/stonework#authenticationFactorScheme -->
 
 
-    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#authenticationMethodSPF">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#AuthenticationMethod"/>
-        <skos:notation>spf</skos:notation>
-        <skos:definition xml:lang="en">Sender Policy Framework (RFC 7208): whether the sending server is authorized to send for the envelope sender&apos;s domain.</skos:definition>
-        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#authenticationMethodScheme"/>
-        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
-        <skos:prefLabel xml:lang="en">SPF</skos:prefLabel>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://cyberterrain.org/ns/stonework#authenticationMethodScheme -->
-
-
-    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#authenticationMethodScheme">
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#authenticationFactorScheme">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
-        <terms:title xml:lang="en">STONEWORK Authentication Method Scheme</terms:title>
+        <terms:title xml:lang="en">STONEWORK Authentication Factor Scheme</terms:title>
         <terms:isPartOf rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
-        <skos:definition xml:lang="en">The controlled vocabulary of sender-authentication methods for email.</skos:definition>
-        <skos:prefLabel xml:lang="en">STONEWORK Authentication Method Scheme</skos:prefLabel>
+        <skos:definition xml:lang="en">The controlled vocabulary of authentication factors.</skos:definition>
+        <skos:prefLabel xml:lang="en">STONEWORK Authentication Factor Scheme</skos:prefLabel>
     </owl:NamedIndividual>
     
 
@@ -9888,6 +9977,278 @@
         <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#authenticationVerdictScheme"/>
         <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
         <skos:prefLabel xml:lang="en">Temporary error</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#authenticatorApiKey -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#authenticatorApiKey">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#AuthenticatorType"/>
+        <skos:notation>api-key</skos:notation>
+        <skos:definition xml:lang="en">A long-lived secret a program presents for itself: an API key, a client secret, an application password.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#authenticatorTypeScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:prefLabel xml:lang="en">API key or client secret</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#authenticatorClientCertificate -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#authenticatorClientCertificate">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#AuthenticatorType"/>
+        <skos:notation>client-certificate</skos:notation>
+        <phishingResistant rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</phishingResistant>
+        <skos:definition xml:lang="en">A certificate and private key held in software, presented in a TLS handshake or certificate-based sign-in.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#authenticatorTypeScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:prefLabel xml:lang="en">Client certificate</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#authenticatorEmailCode -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#authenticatorEmailCode">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#AuthenticatorType"/>
+        <skos:notation>email-code</skos:notation>
+        <skos:definition xml:lang="en">A one-time code or link sent to a registered email address.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#authenticatorTypeScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:prefLabel xml:lang="en">Email code</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#authenticatorFederatedAssertion -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#authenticatorFederatedAssertion">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#AuthenticatorType"/>
+        <skos:notation>federated</skos:notation>
+        <skos:definition xml:lang="en">A SAML assertion or OpenID Connect token from another identity provider, which authenticated the user itself.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#authenticatorTypeScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:prefLabel xml:lang="en">Federated assertion</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#authenticatorFido2SecurityKey -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#authenticatorFido2SecurityKey">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#AuthenticatorType"/>
+        <skos:notation>fido2-key</skos:notation>
+        <phishingResistant rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</phishingResistant>
+        <skos:definition xml:lang="en">A roaming hardware key that signs a challenge bound to the site&apos;s origin (WebAuthn/FIDO2), with or without user verification by PIN or biometric.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#authenticatorTypeScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:prefLabel xml:lang="en">FIDO2 security key</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#authenticatorHardwareOtpToken -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#authenticatorHardwareOtpToken">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#AuthenticatorType"/>
+        <skos:notation>hardware-otp</skos:notation>
+        <skos:definition xml:lang="en">A one-time code shown by a dedicated hardware token.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#authenticatorTypeScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:prefLabel xml:lang="en">Hardware OTP token</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#authenticatorPIN -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#authenticatorPIN">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#AuthenticatorType"/>
+        <skos:notation>pin</skos:notation>
+        <skos:definition xml:lang="en">A short memorized number, checked by the verifier (a PIN that only unlocks a device is that device&apos;s user verification, not a separate authenticator).</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#authenticatorTypeScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:prefLabel xml:lang="en">PIN</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#authenticatorPassword -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#authenticatorPassword">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#AuthenticatorType"/>
+        <skos:notation>password</skos:notation>
+        <skos:definition xml:lang="en">A memorized secret the user types.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#authenticatorTypeScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:prefLabel xml:lang="en">Password</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#authenticatorPlatformPasskey -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#authenticatorPlatformPasskey">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#AuthenticatorType"/>
+        <skos:notation>passkey</skos:notation>
+        <phishingResistant rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</phishingResistant>
+        <skos:definition xml:lang="en">A FIDO2 credential held by the user&apos;s device or its keychain, unlocked by the device&apos;s PIN or biometric (for example Windows Hello for Business, Touch ID).</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#authenticatorTypeScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:prefLabel xml:lang="en">Platform passkey</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#authenticatorPushApproval -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#authenticatorPushApproval">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#AuthenticatorType"/>
+        <skos:notation>push</skos:notation>
+        <skos:definition xml:lang="en">An approval tapped on a registered device in response to a notification, with or without number matching.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#authenticatorTypeScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:prefLabel xml:lang="en">Push approval</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#authenticatorRecoveryCode -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#authenticatorRecoveryCode">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#AuthenticatorType"/>
+        <skos:notation>recovery-code</skos:notation>
+        <skos:definition xml:lang="en">A pre-issued one-time code from a printed or saved list (NIST SP 800-63B: look-up secret).</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#authenticatorTypeScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:prefLabel xml:lang="en">Recovery code</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#authenticatorSessionToken -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#authenticatorSessionToken">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#AuthenticatorType"/>
+        <skos:notation>session-token</skos:notation>
+        <skos:definition xml:lang="en">A bearer token from an earlier authentication (a session cookie, an access or refresh token) presented in place of a fresh one. It proves the earlier authentication, not who presents it: a stolen token is replayed without any factor (ATT&amp;CK T1539, T1550.001).</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#authenticatorTypeScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:prefLabel xml:lang="en">Session token</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#authenticatorSmartCard -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#authenticatorSmartCard">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#AuthenticatorType"/>
+        <skos:notation>smart-card</skos:notation>
+        <phishingResistant rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</phishingResistant>
+        <skos:definition xml:lang="en">A card or token holding a private key and certificate, unlocked by a PIN (for example PIV or CAC).</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#authenticatorTypeScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:prefLabel xml:lang="en">Smart card</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#authenticatorSmsCode -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#authenticatorSmsCode">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#AuthenticatorType"/>
+        <skos:notation>sms</skos:notation>
+        <skos:definition xml:lang="en">A one-time code sent by text message to a registered phone.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#authenticatorTypeScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:prefLabel xml:lang="en">SMS code</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#authenticatorSshKey -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#authenticatorSshKey">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#AuthenticatorType"/>
+        <skos:notation>ssh-key</skos:notation>
+        <skos:definition xml:lang="en">A private key presented in an SSH public-key authentication. A passphrase on the key is checked only on the client, so the server sees possession alone.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#authenticatorTypeScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:prefLabel xml:lang="en">SSH key</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#authenticatorTotpApp -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#authenticatorTotpApp">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#AuthenticatorType"/>
+        <skos:notation>totp</skos:notation>
+        <skos:definition xml:lang="en">A time-based one-time code generated by an app on a registered device (NIST SP 800-63B: single-factor OTP software).</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#authenticatorTypeScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:prefLabel xml:lang="en">Authenticator-app code</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#authenticatorTypeScheme -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#authenticatorTypeScheme">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <terms:title xml:lang="en">STONEWORK Authenticator Type Scheme</terms:title>
+        <terms:isPartOf rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:definition xml:lang="en">The controlled vocabulary of authenticator types.</skos:definition>
+        <skos:prefLabel xml:lang="en">STONEWORK Authenticator Type Scheme</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#authenticatorVoiceCall -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#authenticatorVoiceCall">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#AuthenticatorType"/>
+        <skos:notation>voice</skos:notation>
+        <skos:definition xml:lang="en">A code or approval given in an automated phone call to a registered number.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#authenticatorTypeScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:prefLabel xml:lang="en">Voice call</skos:prefLabel>
     </owl:NamedIndividual>
     
 
@@ -10121,6 +10482,79 @@
     
 
 
+    <!-- https://cyberterrain.org/ns/stonework#emailAuthenticationMethodARC -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#emailAuthenticationMethodARC">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#EmailAuthenticationMethod"/>
+        <skos:notation>arc</skos:notation>
+        <skos:definition xml:lang="en">Authenticated Received Chain (RFC 8617): the authentication results recorded by the intermediaries that forwarded the message, sealed so a later receiver can rely on them.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#emailAuthenticationMethodScheme"/>
+        <skos:prefLabel xml:lang="en">ARC</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#emailAuthenticationMethodDKIM -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#emailAuthenticationMethodDKIM">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#EmailAuthenticationMethod"/>
+        <skos:notation>dkim</skos:notation>
+        <skos:definition xml:lang="en">DomainKeys Identified Mail (RFC 6376): a signature over the message&apos;s headers and body by a signing domain, checked against that domain&apos;s published key.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#emailAuthenticationMethodScheme"/>
+        <skos:prefLabel xml:lang="en">DKIM</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#emailAuthenticationMethodDMARC -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#emailAuthenticationMethodDMARC">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#EmailAuthenticationMethod"/>
+        <skos:notation>dmarc</skos:notation>
+        <skos:definition xml:lang="en">Domain-based Message Authentication, Reporting and Conformance (RFC 7489): whether the From domain is aligned with a domain that passed SPF or DKIM, under the From domain&apos;s published policy.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#emailAuthenticationMethodScheme"/>
+        <skos:prefLabel xml:lang="en">DMARC</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#emailAuthenticationMethodSPF -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#emailAuthenticationMethodSPF">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#EmailAuthenticationMethod"/>
+        <skos:notation>spf</skos:notation>
+        <skos:definition xml:lang="en">Sender Policy Framework (RFC 7208): whether the sending server is authorized to send for the envelope sender&apos;s domain.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#emailAuthenticationMethodScheme"/>
+        <skos:prefLabel xml:lang="en">SPF</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#emailAuthenticationMethodScheme -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#emailAuthenticationMethodScheme">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <terms:title xml:lang="en">STONEWORK Email Authentication Method Scheme</terms:title>
+        <terms:isPartOf rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:definition xml:lang="en">The controlled vocabulary of sender-authentication methods for email.</skos:definition>
+        <skos:prefLabel xml:lang="en">STONEWORK Email Authentication Method Scheme</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://cyberterrain.org/ns/stonework#evidence -->
 
 
@@ -10146,6 +10580,21 @@
         <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
         <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#executionOutcomeScheme"/>
         <skos:prefLabel xml:lang="en">Failed</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#executionOutcomeInterrupted -->
+
+
+    <owl:NamedIndividual rdf:about="https://cyberterrain.org/ns/stonework#executionOutcomeInterrupted">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdf:type rdf:resource="https://cyberterrain.org/ns/stonework#ExecutionOutcome"/>
+        <skos:notation>interrupted</skos:notation>
+        <skos:definition xml:lang="en">The execution paused for something more, such as a further authentication step or the user&apos;s consent, and continues in another record. Neither a success nor a failure yet.</skos:definition>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#categoryScheme"/>
+        <skos:inScheme rdf:resource="https://cyberterrain.org/ns/stonework#executionOutcomeScheme"/>
+        <skos:prefLabel xml:lang="en">Interrupted</skos:prefLabel>
     </owl:NamedIndividual>
     
 
