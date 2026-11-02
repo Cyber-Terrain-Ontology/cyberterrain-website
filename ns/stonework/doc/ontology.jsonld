@@ -930,7 +930,7 @@
   "@id" : "_:genid301",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#riskLevelScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#reviewFindingScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -939,7 +939,7 @@
   "@id" : "_:genid302",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#sectorScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#riskLevelScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -948,7 +948,7 @@
   "@id" : "_:genid303",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#sophisticationLevelScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#sectorScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -957,7 +957,7 @@
   "@id" : "_:genid304",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#threatActorRoleScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#sophisticationLevelScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -966,13 +966,22 @@
   "@id" : "_:genid305",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#threatActorTypeScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#threatActorRoleScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
   "@id" : "_:genid306",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#threatActorTypeScheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
+  "@id" : "_:genid307",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#transactionTypeScheme"
@@ -1298,10 +1307,10 @@
     "@value" : "STONEWORK"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework/0.14.0"
+    "@id" : "https://cyberterrain.org/ns/stonework/0.15.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.14.0"
+    "@value" : "0.15.0"
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#AIAgent",
@@ -3135,7 +3144,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
-    "@value" : "Includes digital forensics, threat hunting, root cause analysis, and incident investigations, and the cases an analyst works. Its subject is stonework:investigates; its sources are stonework:examines (intelligence products) and stonework:collects (digital artifacts as evidence); its hypotheses are stonework:testsHypothesis; its output is stonework:producesReport. Who works it is stonework:performedBy and stonework:leadInvestigator; when, stonework:startedAtTime and stonework:endedAtTime. Its lifecycle is stonework:hasInvestigationStatus, how it ended is stonework:hasInvestigationOutcome, and its urgency is stonework:hasPriority (all in categories.ttl). An Investigation merged into another keeps its record, linked by stonework:mergedInto."
+    "@value" : "Includes digital forensics, threat hunting, root cause analysis, and incident investigations, and the cases an analyst works. Its subject is stonework:investigates; its sources are stonework:examines (intelligence products) and stonework:collects (digital artifacts as evidence); its hypotheses are stonework:testsHypothesis; its reviews of records are stonework:Reviews that are stonework:partOfExecution it; its output is stonework:producesReport. Who works it is stonework:performedBy and stonework:leadInvestigator; when, stonework:startedAtTime and stonework:endedAtTime. Its lifecycle is stonework:hasInvestigationStatus, how it ended is stonework:hasInvestigationOutcome, and its urgency is stonework:hasPriority (all in categories.ttl). An Investigation merged into another keeps its record, linked by stonework:mergedInto."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#InvestigationOutcome",
@@ -4255,6 +4264,43 @@
     "@value" : "Resource Level"
   } ]
 }, {
+  "@id" : "https://cyberterrain.org/ns/stonework#Review",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://ontology.caseontology.org/case/investigation/InvestigativeAction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Process"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "An analyst's examination of records or artifacts, as part of an investigation, ending in a judgment of whether they are relevant to it."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Review"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "The records reviewed are stonework:hasInput; the investigation is the execution the review is stonework:partOfExecution (directly, or through the execution of one of its Steps; when the investigation follows an InvestigationPlan, the Step a review carries out is stonework:correspondsToStep); the analyst is stonework:performedBy; when, stonework:startedAtTime and stonework:endedAtTime. What it found is stonework:hasReviewFinding (in categories.ttl), which applies to every input: records found relevant and records found not relevant are two Reviews. A later Review of the same record in the same investigation supersedes an earlier one, and both stay as the record of the work. A finding of not relevant says nothing about whether a record is true, benign or malicious: correctness is a stonework:Opinion, and how a whole investigation ended is stonework:hasInvestigationOutcome. Follows the CASE investigative action: who examined what, when, and what resulted."
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#ReviewFinding",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Category"
+  }, {
+    "@id" : "_:genid301"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A classification of what a review found about the records it examined, relative to the investigation it is part of."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Review Finding"
+  } ]
+}, {
   "@id" : "https://cyberterrain.org/ns/stonework#Risk",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -4295,7 +4341,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid301"
+    "@id" : "_:genid302"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -4435,7 +4481,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid302"
+    "@id" : "_:genid303"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -4604,7 +4650,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid303"
+    "@id" : "_:genid304"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -4776,7 +4822,7 @@
   }, {
     "@id" : "https://cyberterrain.org/ns/stonework#Role"
   }, {
-    "@id" : "_:genid304"
+    "@id" : "_:genid305"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -4796,7 +4842,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid305"
+    "@id" : "_:genid306"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -4855,7 +4901,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid306"
+    "@id" : "_:genid307"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -11697,6 +11743,30 @@
     "@value" : "hasReturnPathAddress"
   } ]
 }, {
+  "@id" : "https://cyberterrain.org/ns/stonework#hasReviewFinding",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Review"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#ReviewFinding"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categorizedBy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a Review to what it found about the records it examined."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "hasReviewFinding"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "The finding applies to every record the Review takes as input (stonework:hasInput). Relevance is to the investigation the Review is part of: the same record can be relevant to one investigation and not to another."
+  } ]
+}, {
   "@id" : "https://cyberterrain.org/ns/stonework#hasRisk",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -17523,6 +17593,75 @@
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
     "@value" : "Use for a victim's ransom payment linked to the incident it responds to, restitution or remediation payments, and similar contextual relationships. Use stonework:fundsActivity only when the transaction finances the linked activity."
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#reviewFindingNotRelevant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#ReviewFinding"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The records were examined and do not bear on the investigation. They are not judged false or benign, only not relevant to it."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#reviewFindingScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "not-relevant"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Not Relevant"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#reviewFindingRelevant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#ReviewFinding"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The records bear on the investigation and are kept for analysis."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#reviewFindingScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "relevant"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Relevant"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#reviewFindingScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/terms/isPartOf" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "STONEWORK Review Finding Scheme"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The controlled vocabulary of what a review of records found."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "STONEWORK Review Finding Scheme"
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#revokedBy",

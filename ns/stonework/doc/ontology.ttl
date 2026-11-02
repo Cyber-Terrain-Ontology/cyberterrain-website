@@ -7,11 +7,11 @@
 @base <https://cyberterrain.org/ns/stonework#> .
 
 <https://cyberterrain.org/ns/stonework#> rdf:type owl:Ontology ;
-                                          owl:versionIRI <https://cyberterrain.org/ns/stonework/0.14.0> ;
+                                          owl:versionIRI <https://cyberterrain.org/ns/stonework/0.15.0> ;
                                           <http://purl.org/dc/terms/creator> "Hohimer Intelligence Strategies LLC" ;
                                           <http://purl.org/dc/terms/license> <https://opensource.org/licenses/MIT> ;
                                           rdfs:label "STONEWORK"@en ;
-                                          owl:versionInfo "0.14.0" .
+                                          owl:versionInfo "0.15.0" .
 
 #################################################################
 #    Annotation properties
@@ -1539,6 +1539,17 @@ xsd:date rdf:type rdfs:Datatype .
                       rdfs:range :EmailAddress ;
                       <http://www.w3.org/2004/02/skos/core#definition> "The address in an EmailMessage's Return-Path header: the envelope sender, where bounces go and whose domain SPF checks."@en ;
                       <http://www.w3.org/2004/02/skos/core#prefLabel> "hasReturnPathAddress"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#hasReviewFinding
+:hasReviewFinding rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :categorizedBy ;
+                  rdf:type owl:FunctionalProperty ;
+                  rdfs:domain :Review ;
+                  rdfs:range :ReviewFinding ;
+                  <http://www.w3.org/2004/02/skos/core#definition> "Relates a Review to what it found about the records it examined."@en ;
+                  <http://www.w3.org/2004/02/skos/core#prefLabel> "hasReviewFinding"@en ;
+                  <http://www.w3.org/2004/02/skos/core#scopeNote> "The finding applies to every record the Review takes as input (stonework:hasInput). Relevance is to the investigation the Review is part of: the same record can be relevant to one investigation and not to another."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#hasRisk
@@ -5313,7 +5324,7 @@ rdfs:Class rdf:type owl:Class .
                rdfs:subClassOf :Process ;
                <http://www.w3.org/2004/02/skos/core#definition> "A systematic Process of inquiry, evidence collection, analysis, hypothesis testing, and conclusion to understand, attribute, or resolve security incidents, threats, anomalies, or other matters of interest." ;
                <http://www.w3.org/2004/02/skos/core#prefLabel> "Investigation" ;
-               <http://www.w3.org/2004/02/skos/core#scopeNote> "Includes digital forensics, threat hunting, root cause analysis, and incident investigations, and the cases an analyst works. Its subject is stonework:investigates; its sources are stonework:examines (intelligence products) and stonework:collects (digital artifacts as evidence); its hypotheses are stonework:testsHypothesis; its output is stonework:producesReport. Who works it is stonework:performedBy and stonework:leadInvestigator; when, stonework:startedAtTime and stonework:endedAtTime. Its lifecycle is stonework:hasInvestigationStatus, how it ended is stonework:hasInvestigationOutcome, and its urgency is stonework:hasPriority (all in categories.ttl). An Investigation merged into another keeps its record, linked by stonework:mergedInto."@en .
+               <http://www.w3.org/2004/02/skos/core#scopeNote> "Includes digital forensics, threat hunting, root cause analysis, and incident investigations, and the cases an analyst works. Its subject is stonework:investigates; its sources are stonework:examines (intelligence products) and stonework:collects (digital artifacts as evidence); its hypotheses are stonework:testsHypothesis; its reviews of records are stonework:Reviews that are stonework:partOfExecution it; its output is stonework:producesReport. Who works it is stonework:performedBy and stonework:leadInvestigator; when, stonework:startedAtTime and stonework:endedAtTime. Its lifecycle is stonework:hasInvestigationStatus, how it ended is stonework:hasInvestigationOutcome, and its urgency is stonework:hasPriority (all in categories.ttl). An Investigation merged into another keeps its record, linked by stonework:mergedInto."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#InvestigationOutcome
@@ -5812,6 +5823,26 @@ rdfs:Class rdf:type owl:Class .
                                ] ;
                <http://www.w3.org/2004/02/skos/core#definition> "A classification of the organizational resources available to a threat actor."@en ;
                <http://www.w3.org/2004/02/skos/core#prefLabel> "Resource Level"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#Review
+:Review rdf:type owl:Class ;
+        rdfs:subClassOf :Process ;
+        rdfs:seeAlso <https://ontology.caseontology.org/case/investigation/InvestigativeAction> ;
+        <http://www.w3.org/2004/02/skos/core#definition> "An analyst's examination of records or artifacts, as part of an investigation, ending in a judgment of whether they are relevant to it."@en ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel> "Review"@en ;
+        <http://www.w3.org/2004/02/skos/core#scopeNote> "The records reviewed are stonework:hasInput; the investigation is the execution the review is stonework:partOfExecution (directly, or through the execution of one of its Steps; when the investigation follows an InvestigationPlan, the Step a review carries out is stonework:correspondsToStep); the analyst is stonework:performedBy; when, stonework:startedAtTime and stonework:endedAtTime. What it found is stonework:hasReviewFinding (in categories.ttl), which applies to every input: records found relevant and records found not relevant are two Reviews. A later Review of the same record in the same investigation supersedes an earlier one, and both stay as the record of the work. A finding of not relevant says nothing about whether a record is true, benign or malicious: correctness is a stonework:Opinion, and how a whole investigation ended is stonework:hasInvestigationOutcome. Follows the CASE investigative action: who examined what, when, and what resulted."@en .
+
+
+###  https://cyberterrain.org/ns/stonework#ReviewFinding
+:ReviewFinding rdf:type owl:Class ;
+               rdfs:subClassOf :Category ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty <http://www.w3.org/2004/02/skos/core#inScheme> ;
+                                 owl:hasValue :reviewFindingScheme
+                               ] ;
+               <http://www.w3.org/2004/02/skos/core#definition> "A classification of what a review found about the records it examined, relative to the investigation it is part of."@en ;
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "Review Finding"@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#Risk
@@ -8826,6 +8857,37 @@ rdfs:Class rdf:type owl:Class .
                    <http://www.w3.org/2004/02/skos/core#inScheme> :categoryScheme ,
                                                                   :resourceLevelScheme ;
                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Team"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#reviewFindingNotRelevant
+:reviewFindingNotRelevant rdf:type owl:NamedIndividual ,
+                                   <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                   :ReviewFinding ;
+                          <http://www.w3.org/2004/02/skos/core#notation> "not-relevant" ;
+                          <http://www.w3.org/2004/02/skos/core#definition> "The records were examined and do not bear on the investigation. They are not judged false or benign, only not relevant to it."@en ;
+                          <http://www.w3.org/2004/02/skos/core#inScheme> :categoryScheme ,
+                                                                         :reviewFindingScheme ;
+                          <http://www.w3.org/2004/02/skos/core#prefLabel> "Not Relevant"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#reviewFindingRelevant
+:reviewFindingRelevant rdf:type owl:NamedIndividual ,
+                                <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                :ReviewFinding ;
+                       <http://www.w3.org/2004/02/skos/core#notation> "relevant" ;
+                       <http://www.w3.org/2004/02/skos/core#definition> "The records bear on the investigation and are kept for analysis."@en ;
+                       <http://www.w3.org/2004/02/skos/core#inScheme> :categoryScheme ,
+                                                                      :reviewFindingScheme ;
+                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Relevant"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#reviewFindingScheme
+:reviewFindingScheme rdf:type owl:NamedIndividual ,
+                              <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                     <http://purl.org/dc/terms/title> "STONEWORK Review Finding Scheme"@en ;
+                     <http://purl.org/dc/terms/isPartOf> :categoryScheme ;
+                     <http://www.w3.org/2004/02/skos/core#definition> "The controlled vocabulary of what a review of records found."@en ;
+                     <http://www.w3.org/2004/02/skos/core#prefLabel> "STONEWORK Review Finding Scheme"@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#riskLevelCritical
