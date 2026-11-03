@@ -10,11 +10,11 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:stonework="https://cyberterrain.org/ns/stonework#">
     <owl:Ontology rdf:about="https://cyberterrain.org/ns/stonework#">
-        <owl:versionIRI rdf:resource="https://cyberterrain.org/ns/stonework/0.16.0"/>
+        <owl:versionIRI rdf:resource="https://cyberterrain.org/ns/stonework/0.17.0"/>
         <terms:creator>Hohimer Intelligence Strategies LLC</terms:creator>
         <terms:license rdf:resource="https://opensource.org/licenses/MIT"/>
         <rdfs:label xml:lang="en">STONEWORK</rdfs:label>
-        <owl:versionInfo>0.16.0</owl:versionInfo>
+        <owl:versionInfo>0.17.0</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -2647,7 +2647,7 @@
         <rdfs:range rdf:resource="https://cyberterrain.org/ns/stonework#Behavior"/>
         <skos:definition xml:lang="en">Relates a concrete, Step-decomposed Behavior to the more abstract Behavior it is a specific realization of.</skos:definition>
         <skos:prefLabel>implements</skos:prefLabel>
-        <skos:scopeNote xml:lang="en">General-purpose relationship covering both offense (a Procedure implements a Technique) and defense (a ControlPlan implements a Control) with one property rather than a bespoke one per pairing.</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">General-purpose relationship covering both offense (a Procedure implements a Technique) and defense (a ControlPlan implements a Control) with one property rather than a bespoke one per pairing. A Step that runs another Plan stonework:invokesPlan it; an organization&apos;s Plan adapted from a template implements the template.</skos:scopeNote>
     </owl:ObjectProperty>
     
 
@@ -2800,6 +2800,22 @@
         <skos:definition xml:lang="en">Relates an Investigation to the subject being investigated.</skos:definition>
         <skos:prefLabel xml:lang="en">investigates</skos:prefLabel>
         <skos:scopeNote xml:lang="en">Range intentionally unset: an Investigation may examine any matter of interest, among them an Incident, Campaign, ThreatActor or MalwareSample, a CyberActivityCluster, a Vulnerability or a Product&apos;s exposure to it, an Indicator, or an Infrastructure. The earlier union range (Campaign, Incident, MalwareSample, ThreatActor) rejected nothing: OWL only inferred that any other subject belonged to the union, which misclassified it.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#invokesPlan -->
+
+
+    <owl:ObjectProperty rdf:about="https://cyberterrain.org/ns/stonework#invokesPlan">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#Step"/>
+        <rdfs:range rdf:resource="https://cyberterrain.org/ns/stonework#Plan"/>
+        <rdfs:seeAlso rdf:resource="https://docs.oasis-open.org/cacao/security-playbooks/v2.0/security-playbooks-v2.0.html"/>
+        <rdfs:seeAlso rdf:resource="https://www.omg.org/spec/BPMN/2.0.2/"/>
+        <skos:definition xml:lang="en">Relates a Step to the Plan that performing it runs: each execution of the Step is a run of that Plan.</skos:definition>
+        <skos:prefLabel xml:lang="en">invokesPlan</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">BPMN&apos;s call activity, CACAO&apos;s playbook-action. The execution that is stonework:correspondsToStep the Step is also stonework:executionOf the invoked Plan, and the invoked Plan&apos;s Step executions are stonework:partOfExecution of it: one activity, the Step&apos;s performance and the Plan&apos;s run. Not stonework:implements, which relates something concrete to the more abstract thing it realizes; running a containment plan carries out the Control the plan implements, which the path invokesPlan/implements reaches. Composition within one participant&apos;s plans only: between participants only data passes (see stonework:suppliedBy). A Plan doesn&apos;t invoke itself through its own Steps.</skos:scopeNote>
     </owl:ObjectProperty>
     
 
@@ -3855,6 +3871,20 @@
         <skos:definition xml:lang="en">A cyber activity whose occurrence prompted or provides the context for this financial transaction, without asserting that the transaction financed the activity.</skos:definition>
         <skos:prefLabel xml:lang="en">respondsToActivity</skos:prefLabel>
         <skos:scopeNote xml:lang="en">Use for a victim&apos;s ransom payment linked to the incident it responds to, restitution or remediation payments, and similar contextual relationships. Use stonework:fundsActivity only when the transaction finances the linked activity.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#revisionOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://cyberterrain.org/ns/stonework#revisionOf">
+        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#Plan"/>
+        <rdfs:range rdf:resource="https://cyberterrain.org/ns/stonework#Plan"/>
+        <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/prov#wasRevisionOf"/>
+        <skos:definition xml:lang="en">Relates a Plan to the earlier version of the same plan it revises.</skos:definition>
+        <skos:prefLabel xml:lang="en">revisionOf</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Each version of a plan is its own Plan individual, with its stonework:planVersion, and a run is checked against the version it is stonework:executionOf. Once a Plan has runs, change it by making a revision rather than editing it: an edit in place would have past runs judged against a process they never followed. A Plan with no runs can be edited. Not transitive: the chain of versions is followed in a query, so withdrawing one link withdraws nothing else. After PROV-O&apos;s wasRevisionOf. A Plan adapted from a template stonework:implements the template instead: it is a realization, not a version.</skos:scopeNote>
     </owl:ObjectProperty>
     
 
