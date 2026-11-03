@@ -10,11 +10,11 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:stonework="https://cyberterrain.org/ns/stonework#">
     <owl:Ontology rdf:about="https://cyberterrain.org/ns/stonework#">
-        <owl:versionIRI rdf:resource="https://cyberterrain.org/ns/stonework/0.15.0"/>
+        <owl:versionIRI rdf:resource="https://cyberterrain.org/ns/stonework/0.16.0"/>
         <terms:creator>Hohimer Intelligence Strategies LLC</terms:creator>
         <terms:license rdf:resource="https://opensource.org/licenses/MIT"/>
         <rdfs:label xml:lang="en">STONEWORK</rdfs:label>
-        <owl:versionInfo>0.15.0</owl:versionInfo>
+        <owl:versionInfo>0.16.0</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -465,7 +465,7 @@
     <owl:ObjectProperty rdf:about="https://cyberterrain.org/ns/stonework#attributedTo">
         <skos:definition>Links a CyberActivity to the Agent responsible for, or associated with, performing it.</skos:definition>
         <skos:prefLabel>attributedTo</skos:prefLabel>
-        <skos:scopeNote xml:lang="en">Domain/range intentionally left unset: this property is a direct lift of the STIX 2.1 relationship_type &apos;attributed-to&apos; shortcut. STIX does not schema-constrain which SDO/SCO types may appear as source_ref/target_ref for a given relationship_type — that&apos;s producer convention, not enforceable structure, and a closed domain/range here would misrepresent real STIX 2.1 data and mislead reasoner-based consumers. In practice the object is typically a stonework:Agent — most often a stonework:ThreatActor in the adversarial case, matching STIX&apos;s own convention for &apos;attributed-to&apos; — but stonework:CyberActivity is a general occurrence class covering defensive and neutral activities too (Investigations, a ControlPlan&apos;s Process), so the performer need not be adversarial.</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">Domain/range intentionally left unset: this property is a direct lift of the STIX 2.1 relationship_type &apos;attributed-to&apos; shortcut. STIX does not schema-constrain which SDO/SCO types may appear as source_ref/target_ref for a given relationship_type — that&apos;s producer convention, not enforceable structure, and a closed domain/range here would misrepresent real STIX 2.1 data and mislead reasoner-based consumers. In practice the object is typically a stonework:Agent — most often a stonework:ThreatActor in the adversarial case, matching STIX&apos;s own convention for &apos;attributed-to&apos; — but stonework:CyberActivity is a general occurrence class covering defensive and neutral activities too (Investigations, a ControlPlan&apos;s Process), so the performer need not be adversarial. A run&apos;s attribution covers its executions (stonework:partOfExecution, at any depth), unless one is attributed otherwise; query it through the run rather than copying it onto each execution, so it can be withdrawn in one place. While who is behind an activity is open, attribute it to a persona, a stonework:DigitalIdentity that isn&apos;t an Account, such as &quot;whoever created the rule&quot;; when that is established, the persona is stonework:attributedToAgent the Agent, and nothing attributed to the persona needs to change. Two personas that may be one actor are kept apart until a Hypothesis says they are.</skos:scopeNote>
     </owl:ObjectProperty>
     
 
@@ -1230,6 +1230,7 @@
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://cyberterrain.org/ns/stonework#CyberActivity"/>
                     <rdf:Description rdf:about="https://cyberterrain.org/ns/stonework#Deviation"/>
                     <rdf:Description rdf:about="https://cyberterrain.org/ns/stonework#IdentityControl"/>
                     <rdf:Description rdf:about="https://cyberterrain.org/ns/stonework#Sighting"/>
@@ -1237,8 +1238,9 @@
             </owl:Class>
         </rdfs:domain>
         <rdfs:range rdf:resource="https://cyberterrain.org/ns/stonework#DigitalArtifact"/>
-        <skos:definition xml:lang="en">A Sighting, Deviation or IdentityControl is substantiated by this DigitalArtifact (memory dump, PCAP, log excerpt, sample, call record, recorded statement). Connects analytical observation to forensic evidence.</skos:definition>
+        <skos:definition xml:lang="en">A Sighting, Deviation, IdentityControl or activity is substantiated by this DigitalArtifact (memory dump, PCAP, log excerpt, sample, call record, recorded statement). Connects analytical observation to forensic evidence.</skos:definition>
         <skos:prefLabel xml:lang="en">evidencedBy</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">An activity parsed from a system&apos;s own record is stonework:generatedFrom that record: it is recorded. An activity established otherwise, such as a phone call a signed statement describes, or an analyst&apos;s own step in an investigation, is evidencedBy the artifacts that show it: it is reported, and only as good as they are. An activity can be both. When the evidence bounds an activity&apos;s start but doesn&apos;t give it, use stonework:startedNotBefore and stonework:startedNotAfter rather than an estimated stonework:startedAtTime.</skos:scopeNote>
     </owl:ObjectProperty>
     
 
@@ -3692,9 +3694,9 @@
 
 
     <owl:ObjectProperty rdf:about="https://cyberterrain.org/ns/stonework#refersTo">
-        <skos:definition xml:lang="en">Relates an object, typically from an intelligence source, to the canonical entity it refers to, such as an ATT&amp;CK technique, a CVE, or a malware family, when the two are distinct individuals.</skos:definition>
+        <skos:definition xml:lang="en">Relates an object, from an intelligence source or from evidence, to the canonical entity it refers to, such as an ATT&amp;CK technique, a CVE, a malware family, or one of the organization&apos;s own assets or accounts, when the two are distinct individuals.</skos:definition>
         <skos:prefLabel xml:lang="en">refersTo</skos:prefLabel>
-        <skos:scopeNote xml:lang="en">Unlike owl:sameAs, it does not merge the two individuals&apos; properties. Two STIX objects with different STIX IDs are different objects even when both describe T1059: stones:stixId is functional, so owl:sameAs between them is inconsistent. Unlike skos:exactMatch, it does not make either end a skos:Concept. Domain and range intentionally unset: any intelligence object can refer to any canonical entity. A link found by a heuristic, such as an identifier parsed from a name, should carry its method and confidence through a stonework:QualifiedAssertion or stonework:hasProvenance.</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">Unlike owl:sameAs, it does not merge the two individuals&apos; properties. Two STIX objects with different STIX IDs are different objects even when both describe T1059: stones:stixId is functional, so owl:sameAs between them is inconsistent. Unlike skos:exactMatch, it does not make either end a skos:Concept. Domain and range intentionally unset: any intelligence object can refer to any canonical entity. A link found by a heuristic, such as an identifier parsed from a name, should carry its method and confidence through a stonework:QualifiedAssertion or stonework:hasProvenance. The same holds for what evidence names: the resource a log or message gives a tenant, an account or a host refersTo the organization&apos;s own entity for it, such as a Plan Step&apos;s target, without merging the two. Neither symmetric nor transitive, so nothing follows from it unless an application follows it: an analyst can retract the link without retracting anything inferred from it, and competing links can stand side by side until one is judged.</skos:scopeNote>
     </owl:ObjectProperty>
     
 
@@ -6475,6 +6477,36 @@
         <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/prov#startedAtTime"/>
         <skos:definition xml:lang="en">The date and time at which a CyberActivity began.</skos:definition>
         <skos:prefLabel>startedAtTime</skos:prefLabel>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#startedNotAfter -->
+
+
+    <owl:DatatypeProperty rdf:about="https://cyberterrain.org/ns/stonework#startedNotAfter">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#CyberActivity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:seeAlso rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P82b_end_of_the_begin"/>
+        <skos:definition xml:lang="en">The latest time at which a CyberActivity can have begun, when the evidence bounds its start but doesn&apos;t give it.</skos:definition>
+        <skos:prefLabel xml:lang="en">startedNotAfter</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">See stonework:startedNotBefore. CIDOC CRM&apos;s &quot;end of the begin&quot; (P82b).</skos:scopeNote>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#startedNotBefore -->
+
+
+    <owl:DatatypeProperty rdf:about="https://cyberterrain.org/ns/stonework#startedNotBefore">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#CyberActivity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:seeAlso rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P82a_begin_of_the_begin"/>
+        <skos:definition xml:lang="en">The earliest time at which a CyberActivity can have begun, when the evidence bounds its start but doesn&apos;t give it.</skos:definition>
+        <skos:prefLabel xml:lang="en">startedNotBefore</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">With stonework:startedNotAfter, a window for a start that isn&apos;t known exactly, such as a call a statement places between two logged events, in place of an estimated stonework:startedAtTime: an estimate on a timeline reads as a fact. Either bound can be given alone. When the start is known, use stonework:startedAtTime; bounds given as well must contain it. A comparison with another time is undetermined while the window overlaps it. CIDOC CRM&apos;s &quot;begin of the begin&quot; (P82a).</skos:scopeNote>
     </owl:DatatypeProperty>
     
 

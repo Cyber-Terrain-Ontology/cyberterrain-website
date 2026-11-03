@@ -21,7 +21,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid100",
+  "@id" : "_:genid101",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -31,7 +31,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid103",
+  "@id" : "_:genid104",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -41,7 +41,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid106",
+  "@id" : "_:genid107",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -53,7 +53,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid110",
+  "@id" : "_:genid111",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -65,7 +65,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid114",
+  "@id" : "_:genid115",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -75,7 +75,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid117",
+  "@id" : "_:genid118",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -85,7 +85,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid120",
+  "@id" : "_:genid121",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -95,7 +95,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid123",
+  "@id" : "_:genid124",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -107,7 +107,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid127",
+  "@id" : "_:genid128",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -117,7 +117,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid130",
+  "@id" : "_:genid131",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -127,25 +127,13 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid135",
+  "@id" : "_:genid136",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
       "@id" : "https://cyberterrain.org/ns/stonework#Malware"
     }, {
       "@id" : "https://cyberterrain.org/ns/stonework#Product"
-    }, {
-      "@id" : "https://cyberterrain.org/ns/stonework#VersionedProduct"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid139",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://cyberterrain.org/ns/stonework#Host"
-    }, {
-      "@id" : "https://cyberterrain.org/ns/stonework#NetworkService"
     }, {
       "@id" : "https://cyberterrain.org/ns/stonework#VersionedProduct"
     } ]
@@ -165,7 +153,19 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid143",
+  "@id" : "_:genid140",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://cyberterrain.org/ns/stonework#Host"
+    }, {
+      "@id" : "https://cyberterrain.org/ns/stonework#NetworkService"
+    }, {
+      "@id" : "https://cyberterrain.org/ns/stonework#VersionedProduct"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid144",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -175,7 +175,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid146",
+  "@id" : "_:genid147",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -189,7 +189,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid151",
+  "@id" : "_:genid152",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -199,7 +199,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid154",
+  "@id" : "_:genid155",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -211,7 +211,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid158",
+  "@id" : "_:genid159",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -231,7 +231,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid166",
+  "@id" : "_:genid167",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -241,7 +241,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid169",
+  "@id" : "_:genid170",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -251,7 +251,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid172",
+  "@id" : "_:genid173",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -261,7 +261,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid175",
+  "@id" : "_:genid176",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -271,7 +271,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid178",
+  "@id" : "_:genid179",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -281,7 +281,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid183",
+  "@id" : "_:genid184",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -291,23 +291,13 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid186",
+  "@id" : "_:genid187",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
       "@id" : "https://cyberterrain.org/ns/stonework#Investigation"
     }, {
       "@id" : "https://cyberterrain.org/ns/stonework#Process"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid189",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://cyberterrain.org/ns/stonework#Assessment"
-    }, {
-      "@id" : "https://cyberterrain.org/ns/stonework#Report"
     } ]
   } ]
 }, {
@@ -321,7 +311,17 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid192",
+  "@id" : "_:genid190",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://cyberterrain.org/ns/stonework#Assessment"
+    }, {
+      "@id" : "https://cyberterrain.org/ns/stonework#Report"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid193",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -331,7 +331,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid195",
+  "@id" : "_:genid196",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -341,7 +341,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid198",
+  "@id" : "_:genid199",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -351,7 +351,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid201",
+  "@id" : "_:genid202",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -361,7 +361,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid204",
+  "@id" : "_:genid205",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -371,7 +371,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid207",
+  "@id" : "_:genid208",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -381,7 +381,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid210",
+  "@id" : "_:genid211",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -391,7 +391,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid213",
+  "@id" : "_:genid214",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -401,7 +401,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid216",
+  "@id" : "_:genid217",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -423,7 +423,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid220",
+  "@id" : "_:genid221",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -433,7 +433,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid223",
+  "@id" : "_:genid224",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -443,7 +443,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid226",
+  "@id" : "_:genid227",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -453,7 +453,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid229",
+  "@id" : "_:genid230",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -463,7 +463,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid232",
+  "@id" : "_:genid233",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -473,7 +473,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid235",
+  "@id" : "_:genid236",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -487,7 +487,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid240",
+  "@id" : "_:genid241",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -497,7 +497,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid243",
+  "@id" : "_:genid244",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -507,7 +507,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid246",
+  "@id" : "_:genid247",
   "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ],
   "http://www.w3.org/2002/07/owl#oneOf" : [ {
     "@list" : [ {
@@ -516,18 +516,6 @@
     }, {
       "@type" : "http://www.w3.org/2001/XMLSchema#integer",
       "@value" : "6"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid249",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://cyberterrain.org/ns/stonework#Campaign"
-    }, {
-      "@id" : "https://cyberterrain.org/ns/stonework#Operation"
-    }, {
-      "@id" : "https://cyberterrain.org/ns/stonework#ThreatActor"
     } ]
   } ]
 }, {
@@ -541,7 +529,19 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid253",
+  "@id" : "_:genid250",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://cyberterrain.org/ns/stonework#Campaign"
+    }, {
+      "@id" : "https://cyberterrain.org/ns/stonework#Operation"
+    }, {
+      "@id" : "https://cyberterrain.org/ns/stonework#ThreatActor"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid254",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -551,7 +551,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid256",
+  "@id" : "_:genid257",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -561,7 +561,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid259",
+  "@id" : "_:genid260",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -571,7 +571,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid262",
+  "@id" : "_:genid263",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -581,7 +581,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid265",
+  "@id" : "_:genid266",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#accountTypeScheme"
@@ -590,7 +590,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid266",
+  "@id" : "_:genid267",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#affectedStatusScheme"
@@ -599,7 +599,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid267",
+  "@id" : "_:genid268",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#authenticationFactorScheme"
@@ -608,7 +608,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid268",
+  "@id" : "_:genid269",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#authenticationVerdictScheme"
@@ -617,7 +617,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid269",
+  "@id" : "_:genid270",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#authenticatorTypeScheme"
@@ -626,7 +626,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid270",
+  "@id" : "_:genid271",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -639,7 +639,7 @@
     "@id" : "https://cyberterrain.org/ns/stonework#installationOf"
   } ]
 }, {
-  "@id" : "_:genid271",
+  "@id" : "_:genid272",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
@@ -648,7 +648,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid272",
+  "@id" : "_:genid273",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#deviationKindScheme"
@@ -657,7 +657,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid273",
+  "@id" : "_:genid274",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#emailAuthenticationMethodScheme"
@@ -666,7 +666,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid274",
+  "@id" : "_:genid275",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#executionOutcomeScheme"
@@ -675,7 +675,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid275",
+  "@id" : "_:genid276",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#exploitMaturityScheme"
@@ -684,7 +684,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid276",
+  "@id" : "_:genid277",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#exploitationReportKindScheme"
@@ -693,7 +693,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid277",
+  "@id" : "_:genid278",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#falsePositiveRateScheme"
@@ -702,19 +702,10 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid278",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#financialAccountTypeScheme"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
-  } ]
-}, {
   "@id" : "_:genid279",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#financialInstitutionTypeScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#financialAccountTypeScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -737,7 +728,7 @@
   "@id" : "_:genid280",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#flowKindScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#financialInstitutionTypeScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -746,7 +737,7 @@
   "@id" : "_:genid281",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#hypothesisStatusScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#flowKindScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -755,7 +746,7 @@
   "@id" : "_:genid282",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#impactLevelScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#hypothesisStatusScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -764,7 +755,7 @@
   "@id" : "_:genid283",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#impactTypeScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#impactLevelScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -773,7 +764,7 @@
   "@id" : "_:genid284",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#incidentStatusScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#impactTypeScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -782,7 +773,7 @@
   "@id" : "_:genid285",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#industryScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#incidentStatusScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -791,7 +782,7 @@
   "@id" : "_:genid286",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#infrastructureTypeScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#industryScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -800,7 +791,7 @@
   "@id" : "_:genid287",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#investigationOutcomeScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#infrastructureTypeScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -809,7 +800,7 @@
   "@id" : "_:genid288",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#investigationStatusScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#investigationOutcomeScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -818,7 +809,7 @@
   "@id" : "_:genid289",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#killChainPhaseScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#investigationStatusScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -827,7 +818,7 @@
   "@id" : "_:genid290",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#likelihoodLevelScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#killChainPhaseScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -836,7 +827,7 @@
   "@id" : "_:genid291",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#malwareTypeScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#likelihoodLevelScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -845,7 +836,7 @@
   "@id" : "_:genid292",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#markingScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#malwareTypeScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -854,7 +845,7 @@
   "@id" : "_:genid293",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#metricTypeScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#markingScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -863,7 +854,7 @@
   "@id" : "_:genid294",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#motivationScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#metricTypeScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -872,7 +863,7 @@
   "@id" : "_:genid295",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#paymentInstrumentScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#motivationScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -881,7 +872,7 @@
   "@id" : "_:genid296",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#playbookTypeScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#paymentInstrumentScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
@@ -890,13 +881,22 @@
   "@id" : "_:genid297",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework#priorityLevelScheme"
+    "@id" : "https://cyberterrain.org/ns/stonework#playbookTypeScheme"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
   "@id" : "_:genid298",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#priorityLevelScheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ]
+}, {
+  "@id" : "_:genid299",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -909,7 +909,7 @@
     "@id" : "https://cyberterrain.org/ns/stonework#installationOf"
   } ]
 }, {
-  "@id" : "_:genid299",
+  "@id" : "_:genid300",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#productTypeScheme"
@@ -918,7 +918,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid300",
+  "@id" : "_:genid301",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#resourceLevelScheme"
@@ -927,7 +927,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid301",
+  "@id" : "_:genid302",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#reviewFindingScheme"
@@ -936,7 +936,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid302",
+  "@id" : "_:genid303",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#riskLevelScheme"
@@ -945,7 +945,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid303",
+  "@id" : "_:genid304",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#sectorScheme"
@@ -954,7 +954,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid304",
+  "@id" : "_:genid305",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#sophisticationLevelScheme"
@@ -963,7 +963,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid305",
+  "@id" : "_:genid306",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#threatActorRoleScheme"
@@ -972,7 +972,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid306",
+  "@id" : "_:genid307",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#threatActorTypeScheme"
@@ -981,7 +981,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid307",
+  "@id" : "_:genid308",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#transactionTypeScheme"
@@ -1184,6 +1184,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
+      "@id" : "https://cyberterrain.org/ns/stonework#CyberActivity"
+    }, {
       "@id" : "https://cyberterrain.org/ns/stonework#Deviation"
     }, {
       "@id" : "https://cyberterrain.org/ns/stonework#IdentityControl"
@@ -1192,7 +1194,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid90",
+  "@id" : "_:genid91",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -1202,7 +1204,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid93",
+  "@id" : "_:genid94",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -1214,7 +1216,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid97",
+  "@id" : "_:genid98",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -1307,10 +1309,10 @@
     "@value" : "STONEWORK"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework/0.15.0"
+    "@id" : "https://cyberterrain.org/ns/stonework/0.16.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.15.0"
+    "@value" : "0.16.0"
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#AIAgent",
@@ -1384,7 +1386,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid265"
+    "@id" : "_:genid266"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -1442,7 +1444,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid266"
+    "@id" : "_:genid267"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -1569,7 +1571,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid267"
+    "@id" : "_:genid268"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -1589,7 +1591,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid268"
+    "@id" : "_:genid269"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -1609,7 +1611,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid269"
+    "@id" : "_:genid270"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -1705,7 +1707,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#ComponentContext"
   }, {
-    "@id" : "_:genid270"
+    "@id" : "_:genid271"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -1808,7 +1810,7 @@
   }, {
     "@id" : "https://cyberterrain.org/ns/stonework#CyberEntity"
   }, {
-    "@id" : "_:genid271"
+    "@id" : "_:genid272"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2231,7 +2233,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid272"
+    "@id" : "_:genid273"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2367,7 +2369,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid273"
+    "@id" : "_:genid274"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2458,7 +2460,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid274"
+    "@id" : "_:genid275"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2502,7 +2504,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid275"
+    "@id" : "_:genid276"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2522,7 +2524,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid276"
+    "@id" : "_:genid277"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2542,7 +2544,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid277"
+    "@id" : "_:genid278"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2610,7 +2612,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid278"
+    "@id" : "_:genid279"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2644,7 +2646,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid279"
+    "@id" : "_:genid280"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2678,7 +2680,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid280"
+    "@id" : "_:genid281"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2845,7 +2847,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid281"
+    "@id" : "_:genid282"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2982,7 +2984,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid282"
+    "@id" : "_:genid283"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -2998,7 +3000,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid283"
+    "@id" : "_:genid284"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -3031,7 +3033,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid284"
+    "@id" : "_:genid285"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -3065,7 +3067,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Sector"
   }, {
-    "@id" : "_:genid285"
+    "@id" : "_:genid286"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -3098,7 +3100,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid286"
+    "@id" : "_:genid287"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -3152,7 +3154,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid287"
+    "@id" : "_:genid288"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -3189,7 +3191,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid288"
+    "@id" : "_:genid289"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -3229,7 +3231,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid289"
+    "@id" : "_:genid290"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -3319,7 +3321,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid290"
+    "@id" : "_:genid291"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -3482,7 +3484,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid291"
+    "@id" : "_:genid292"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -3502,7 +3504,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid292"
+    "@id" : "_:genid293"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -3536,7 +3538,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid293"
+    "@id" : "_:genid294"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -3609,7 +3611,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid294"
+    "@id" : "_:genid295"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -3812,7 +3814,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid295"
+    "@id" : "_:genid296"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -3926,7 +3928,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid296"
+    "@id" : "_:genid297"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -3946,7 +3948,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid297"
+    "@id" : "_:genid298"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -4030,7 +4032,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#ComponentContext"
   }, {
-    "@id" : "_:genid298"
+    "@id" : "_:genid299"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -4049,7 +4051,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid299"
+    "@id" : "_:genid300"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -4253,7 +4255,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid300"
+    "@id" : "_:genid301"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -4290,7 +4292,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid301"
+    "@id" : "_:genid302"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -4341,7 +4343,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid302"
+    "@id" : "_:genid303"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -4481,7 +4483,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid303"
+    "@id" : "_:genid304"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -4650,7 +4652,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid304"
+    "@id" : "_:genid305"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -4822,7 +4824,7 @@
   }, {
     "@id" : "https://cyberterrain.org/ns/stonework#Role"
   }, {
-    "@id" : "_:genid305"
+    "@id" : "_:genid306"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -4842,7 +4844,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid306"
+    "@id" : "_:genid307"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -4901,7 +4903,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Category"
   }, {
-    "@id" : "_:genid307"
+    "@id" : "_:genid308"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -6052,7 +6054,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
-    "@value" : "Domain/range intentionally left unset: this property is a direct lift of the STIX 2.1 relationship_type 'attributed-to' shortcut. STIX does not schema-constrain which SDO/SCO types may appear as source_ref/target_ref for a given relationship_type — that's producer convention, not enforceable structure, and a closed domain/range here would misrepresent real STIX 2.1 data and mislead reasoner-based consumers. In practice the object is typically a stonework:Agent — most often a stonework:ThreatActor in the adversarial case, matching STIX's own convention for 'attributed-to' — but stonework:CyberActivity is a general occurrence class covering defensive and neutral activities too (Investigations, a ControlPlan's Process), so the performer need not be adversarial."
+    "@value" : "Domain/range intentionally left unset: this property is a direct lift of the STIX 2.1 relationship_type 'attributed-to' shortcut. STIX does not schema-constrain which SDO/SCO types may appear as source_ref/target_ref for a given relationship_type — that's producer convention, not enforceable structure, and a closed domain/range here would misrepresent real STIX 2.1 data and mislead reasoner-based consumers. In practice the object is typically a stonework:Agent — most often a stonework:ThreatActor in the adversarial case, matching STIX's own convention for 'attributed-to' — but stonework:CyberActivity is a general occurrence class covering defensive and neutral activities too (Investigations, a ControlPlan's Process), so the performer need not be adversarial. A run's attribution covers its executions (stonework:partOfExecution, at any depth), unless one is attributed otherwise; query it through the run rather than copying it onto each execution, so it can be withdrawn in one place. While who is behind an activity is open, attribute it to a persona, a stonework:DigitalIdentity that isn't an Account, such as \"whoever created the rule\"; when that is established, the persona is stonework:attributedToAgent the Agent, and nothing attributed to the persona needs to change. Two personas that may be one actor are kept apart until a Hypothesis says they are."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#attributedToAgent",
@@ -9110,11 +9112,15 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "A Sighting, Deviation or IdentityControl is substantiated by this DigitalArtifact (memory dump, PCAP, log excerpt, sample, call record, recorded statement). Connects analytical observation to forensic evidence."
+    "@value" : "A Sighting, Deviation, IdentityControl or activity is substantiated by this DigitalArtifact (memory dump, PCAP, log excerpt, sample, call record, recorded statement). Connects analytical observation to forensic evidence."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "evidencedBy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "An activity parsed from a system's own record is stonework:generatedFrom that record: it is recorded. An activity established otherwise, such as a phone call a signed statement describes, or an analyst's own step in an investigation, is evidencedBy the artifacts that show it: it is reported, and only as good as they are. An activity can be both. When the evidence bounds an activity's start but doesn't give it, use stonework:startedNotBefore and stonework:startedNotAfter rather than an estimated stonework:startedAtTime."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#examines",
@@ -10412,10 +10418,10 @@
   "@id" : "https://cyberterrain.org/ns/stonework#generatedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid90"
+    "@id" : "_:genid91"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid93"
+    "@id" : "_:genid94"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -10453,7 +10459,7 @@
     "@id" : "https://cyberterrain.org/ns/stonework#AccessControlList"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid97"
+    "@id" : "_:genid98"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -10825,7 +10831,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#hasDestinationAddress",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid100"
+    "@id" : "_:genid101"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#IPAddress"
@@ -11301,7 +11307,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#hasMalwareType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid103"
+    "@id" : "_:genid104"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#MalwareType"
@@ -11325,7 +11331,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#hasMember",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid106"
+    "@id" : "_:genid107"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#memberOf"
@@ -11382,7 +11388,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#hasMonetaryValue",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid110"
+    "@id" : "_:genid111"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#MonetaryAmount"
@@ -11423,7 +11429,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#hasNetworkAddress",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid114"
+    "@id" : "_:genid115"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#IPAddress"
@@ -11599,7 +11605,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#hasPriority",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid117"
+    "@id" : "_:genid118"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#PriorityLevel"
@@ -11668,7 +11674,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#hasProvenance",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid120"
+    "@id" : "_:genid121"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Provenance"
@@ -11770,7 +11776,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#hasRisk",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid123"
+    "@id" : "_:genid124"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Risk"
@@ -11875,7 +11881,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#hasSourceAddress",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid127"
+    "@id" : "_:genid128"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#IPAddress"
@@ -11916,7 +11922,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#hasTechnique",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid130"
+    "@id" : "_:genid131"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Technique"
@@ -12703,7 +12709,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#implementsTechnique",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid135"
+    "@id" : "_:genid136"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Technique"
@@ -13663,7 +13669,7 @@
     "@id" : "https://cyberterrain.org/ns/stonework#IPAddress"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid246"
+    "@id" : "_:genid247"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -13771,7 +13777,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#isVulnerableTo",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid139"
+    "@id" : "_:genid140"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Vulnerability"
@@ -13808,7 +13814,7 @@
     "@id" : "https://cyberterrain.org/ns/stonework#Certificate"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid143"
+    "@id" : "_:genid144"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -14138,7 +14144,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#locatedAt",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid146"
+    "@id" : "_:genid147"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Location"
@@ -14217,7 +14223,7 @@
     "@id" : "https://cyberterrain.org/ns/stonework#UserAccount"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid151"
+    "@id" : "_:genid152"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -14447,7 +14453,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#memberOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid154"
+    "@id" : "_:genid155"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -15323,7 +15329,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#objective",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid249"
+    "@id" : "_:genid250"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -15357,7 +15363,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#observedIn",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid158"
+    "@id" : "_:genid159"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#CyberActivity"
@@ -15395,10 +15401,10 @@
   "@id" : "https://cyberterrain.org/ns/stonework#operatesIn",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid166"
+    "@id" : "_:genid167"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid169"
+    "@id" : "_:genid170"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -15415,7 +15421,7 @@
     "@id" : "https://cyberterrain.org/ns/stonework#Opinion"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid172"
+    "@id" : "_:genid173"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -15596,7 +15602,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#ownedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid175"
+    "@id" : "_:genid176"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Agent"
@@ -15876,7 +15882,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#performedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid178"
+    "@id" : "_:genid179"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Agent"
@@ -16336,7 +16342,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#posesThreat",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid183"
+    "@id" : "_:genid184"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Threat"
@@ -16643,10 +16649,10 @@
   "@id" : "https://cyberterrain.org/ns/stonework#producesReport",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid186"
+    "@id" : "_:genid187"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid189"
+    "@id" : "_:genid190"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -16938,10 +16944,10 @@
   "@id" : "https://cyberterrain.org/ns/stonework#protects",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid192"
+    "@id" : "_:genid193"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid195"
+    "@id" : "_:genid196"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -16958,7 +16964,7 @@
     "@id" : "https://cyberterrain.org/ns/stonework#Provenance"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid198"
+    "@id" : "_:genid199"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -17072,7 +17078,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
-    "@value" : "Relates an object, typically from an intelligence source, to the canonical entity it refers to, such as an ATT&CK technique, a CVE, or a malware family, when the two are distinct individuals."
+    "@value" : "Relates an object, from an intelligence source or from evidence, to the canonical entity it refers to, such as an ATT&CK technique, a CVE, a malware family, or one of the organization's own assets or accounts, when the two are distinct individuals."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -17080,7 +17086,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
-    "@value" : "Unlike owl:sameAs, it does not merge the two individuals' properties. Two STIX objects with different STIX IDs are different objects even when both describe T1059: stones:stixId is functional, so owl:sameAs between them is inconsistent. Unlike skos:exactMatch, it does not make either end a skos:Concept. Domain and range intentionally unset: any intelligence object can refer to any canonical entity. A link found by a heuristic, such as an identifier parsed from a name, should carry its method and confidence through a stonework:QualifiedAssertion or stonework:hasProvenance."
+    "@value" : "Unlike owl:sameAs, it does not merge the two individuals' properties. Two STIX objects with different STIX IDs are different objects even when both describe T1059: stones:stixId is functional, so owl:sameAs between them is inconsistent. Unlike skos:exactMatch, it does not make either end a skos:Concept. Domain and range intentionally unset: any intelligence object can refer to any canonical entity. A link found by a heuristic, such as an identifier parsed from a name, should carry its method and confidence through a stonework:QualifiedAssertion or stonework:hasProvenance. The same holds for what evidence names: the resource a log or message gives a tenant, an account or a host refersTo the organization's own entity for it, such as a Plan Step's target, without merging the two. Neither symmetric nor transitive, so nothing follows from it unless an application follows it: an analyst can retract the link without retracting anything inferred from it, and competing links can stand side by side until one is judged."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#refines",
@@ -17308,7 +17314,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#reliability",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid253"
+    "@id" : "_:genid254"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -17325,7 +17331,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#remediates",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid201"
+    "@id" : "_:genid202"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -17338,7 +17344,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#reportedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid204"
+    "@id" : "_:genid205"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Agent"
@@ -17834,7 +17840,7 @@
     "@id" : "https://cyberterrain.org/ns/stonework#RoleAssignment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid207"
+    "@id" : "_:genid208"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -17868,7 +17874,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#ruleContent",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid256"
+    "@id" : "_:genid257"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -17919,7 +17925,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#ruleName",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid259"
+    "@id" : "_:genid260"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -18007,7 +18013,7 @@
     "@id" : "https://cyberterrain.org/ns/stonework#ThreatScenario"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid210"
+    "@id" : "_:genid211"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -18185,7 +18191,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#severity",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid262"
+    "@id" : "_:genid263"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -18234,7 +18240,7 @@
     "@id" : "https://cyberterrain.org/ns/stonework#Sighting"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid213"
+    "@id" : "_:genid214"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
@@ -18585,6 +18591,54 @@
     "@value" : "startedAtTime"
   } ]
 }, {
+  "@id" : "https://cyberterrain.org/ns/stonework#startedNotAfter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#CyberActivity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://www.cidoc-crm.org/cidoc-crm/P82b_end_of_the_begin"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The latest time at which a CyberActivity can have begun, when the evidence bounds its start but doesn't give it."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "startedNotAfter"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "See stonework:startedNotBefore. CIDOC CRM's \"end of the begin\" (P82b)."
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#startedNotBefore",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#CyberActivity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://www.cidoc-crm.org/cidoc-crm/P82a_begin_of_the_begin"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The earliest time at which a CyberActivity can have begun, when the evidence bounds its start but doesn't give it."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "startedNotBefore"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "With stonework:startedNotAfter, a window for a start that isn't known exactly, such as a call a statement places between two logged events, in place of an estimated stonework:startedAtTime: an estimate on a timeline reads as a fact. Either bound can be given alone. When the start is known, use stonework:startedAtTime; bounds given as well must contain it. A comparison with another time is undetermined while the window overlaps it. CIDOC CRM's \"begin of the begin\" (P82a)."
+  } ]
+}, {
   "@id" : "https://cyberterrain.org/ns/stonework#stepOrder",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
@@ -18646,7 +18700,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#storedOn",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid216"
+    "@id" : "_:genid217"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Host"
@@ -18852,7 +18906,7 @@
     "@id" : "https://cyberterrain.org/ns/stonework#"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid220"
+    "@id" : "_:genid221"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#hasTechnique"
@@ -19773,7 +19827,7 @@
     "@id" : "https://cyberterrain.org/ns/stonework#Plan"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid223"
+    "@id" : "_:genid224"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#triggersPlaybook"
@@ -19790,7 +19844,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#triggersPlaybook",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid226"
+    "@id" : "_:genid227"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Plan"
@@ -19899,7 +19953,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#usedUserAgent",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid229"
+    "@id" : "_:genid230"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#UserAgent"
@@ -19950,7 +20004,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#usesDetectionRule",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid232"
+    "@id" : "_:genid233"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#DetectionRule"
@@ -19971,7 +20025,7 @@
   "@id" : "https://cyberterrain.org/ns/stonework#usesInfrastructure",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid235"
+    "@id" : "_:genid236"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Infrastructure"
@@ -20101,10 +20155,10 @@
   "@id" : "https://cyberterrain.org/ns/stonework#variantOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid240"
+    "@id" : "_:genid241"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid243"
+    "@id" : "_:genid244"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
