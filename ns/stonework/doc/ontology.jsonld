@@ -1309,10 +1309,10 @@
     "@value" : "STONEWORK"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework/0.17.0"
+    "@id" : "https://cyberterrain.org/ns/stonework/0.18.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.17.0"
+    "@value" : "0.18.0"
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#AIAgent",
@@ -3759,6 +3759,10 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Playbook"
   } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "en",
+    "@value" : "Attack plan"
+  } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@language" : "en",
     "@value" : "A Playbook specifically representing an adversary's operational plan — the offensive counterpart within the Playbook hierarchy."
@@ -3768,7 +3772,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
-    "@value" : "Named to avoid colliding with the already-established stonework:AttackPattern and stonework:AttackTechnique, and to align with stonework:Operation, whose definition ('a coordinated set of activities... unified command, intent, or resourcing') describes the executed counterpart of an OperationPlan. Generic stonework:Playbook remains available for the undifferentiated or defensive case."
+    "@value" : "Named to avoid colliding with the already-established stonework:AttackPattern and stonework:AttackTechnique, and to align with stonework:Operation, whose definition ('a coordinated set of activities... unified command, intent, or resourcing') describes the executed counterpart of an OperationPlan. Generic stonework:Playbook remains available for the undifferentiated or defensive case. User interfaces may call it an attack plan (its altLabel), the phrase practitioners use for an adversary's procedures in order, each carrying out a technique under the tactic it serves."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#Opinion",
@@ -5955,6 +5959,27 @@
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
     "@value" : "Range is intentionally unset because framework relationships may originate from either a CyberEntity, a CyberActivity, or another externally defined resource."
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#assessesExploitationOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#CourseOfAction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Vulnerability"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a CourseOfAction to a Vulnerability whose exploitation it determines, such as forensic triage or a compromise assessment."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "assessesExploitationOf"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Distinct from stonework:mitigatesVulnerability, which addresses the vulnerability itself. Patching closes the way in; this course of action asks whether someone already came through it. A source that directs both, such as CISA's catalog entries that require forensic triage, gives two courses of action."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#assessmentOf",
@@ -14979,6 +15004,10 @@
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "mitigatesVulnerability"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "A course of action that determines whether the vulnerability was exploited, rather than addressing it, is stonework:assessesExploitationOf."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#modelVersion",

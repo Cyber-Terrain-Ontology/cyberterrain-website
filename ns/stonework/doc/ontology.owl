@@ -10,11 +10,11 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:stonework="https://cyberterrain.org/ns/stonework#">
     <owl:Ontology rdf:about="https://cyberterrain.org/ns/stonework#">
-        <owl:versionIRI rdf:resource="https://cyberterrain.org/ns/stonework/0.17.0"/>
+        <owl:versionIRI rdf:resource="https://cyberterrain.org/ns/stonework/0.18.0"/>
         <terms:creator>Hohimer Intelligence Strategies LLC</terms:creator>
         <terms:license rdf:resource="https://opensource.org/licenses/MIT"/>
         <rdfs:label xml:lang="en">STONEWORK</rdfs:label>
-        <owl:versionInfo>0.17.0</owl:versionInfo>
+        <owl:versionInfo>0.18.0</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -406,6 +406,19 @@
         <skos:definition xml:lang="en">Identifies the resource in the subject or source position of a qualified assertion.</skos:definition>
         <skos:prefLabel xml:lang="en">assertion subject</skos:prefLabel>
         <skos:scopeNote xml:lang="en">Range is intentionally unset because framework relationships may originate from either a CyberEntity, a CyberActivity, or another externally defined resource.</skos:scopeNote>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://cyberterrain.org/ns/stonework#assessesExploitationOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://cyberterrain.org/ns/stonework#assessesExploitationOf">
+        <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#CourseOfAction"/>
+        <rdfs:range rdf:resource="https://cyberterrain.org/ns/stonework#Vulnerability"/>
+        <skos:definition xml:lang="en">Relates a CourseOfAction to a Vulnerability whose exploitation it determines, such as forensic triage or a compromise assessment.</skos:definition>
+        <skos:prefLabel xml:lang="en">assessesExploitationOf</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">Distinct from stonework:mitigatesVulnerability, which addresses the vulnerability itself. Patching closes the way in; this course of action asks whether someone already came through it. A source that directs both, such as CISA&apos;s catalog entries that require forensic triage, gives two courses of action.</skos:scopeNote>
     </owl:ObjectProperty>
     
 
@@ -3220,6 +3233,7 @@
         <rdfs:range rdf:resource="https://cyberterrain.org/ns/stonework#Vulnerability"/>
         <skos:definition xml:lang="en">A CourseOfAction (patch, workaround, compensating control) addresses this Vulnerability. Distinct from stonework:mitigates (Countermeasure → AttackPattern).</skos:definition>
         <skos:prefLabel xml:lang="en">mitigatesVulnerability</skos:prefLabel>
+        <skos:scopeNote xml:lang="en">A course of action that determines whether the vulnerability was exploited, rather than addressing it, is stonework:assessesExploitationOf.</skos:scopeNote>
     </owl:ObjectProperty>
     
 
@@ -8433,9 +8447,10 @@
 
     <owl:Class rdf:about="https://cyberterrain.org/ns/stonework#OperationPlan">
         <rdfs:subClassOf rdf:resource="https://cyberterrain.org/ns/stonework#Playbook"/>
+        <skos:altLabel xml:lang="en">Attack plan</skos:altLabel>
         <skos:definition xml:lang="en">A Playbook specifically representing an adversary&apos;s operational plan — the offensive counterpart within the Playbook hierarchy.</skos:definition>
         <skos:prefLabel>Operation Plan</skos:prefLabel>
-        <skos:scopeNote xml:lang="en">Named to avoid colliding with the already-established stonework:AttackPattern and stonework:AttackTechnique, and to align with stonework:Operation, whose definition (&apos;a coordinated set of activities... unified command, intent, or resourcing&apos;) describes the executed counterpart of an OperationPlan. Generic stonework:Playbook remains available for the undifferentiated or defensive case.</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">Named to avoid colliding with the already-established stonework:AttackPattern and stonework:AttackTechnique, and to align with stonework:Operation, whose definition (&apos;a coordinated set of activities... unified command, intent, or resourcing&apos;) describes the executed counterpart of an OperationPlan. Generic stonework:Playbook remains available for the undifferentiated or defensive case. User interfaces may call it an attack plan (its altLabel), the phrase practitioners use for an adversary&apos;s procedures in order, each carrying out a technique under the tactic it serves.</skos:scopeNote>
     </owl:Class>
     
 

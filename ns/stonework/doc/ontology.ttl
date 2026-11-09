@@ -7,11 +7,11 @@
 @base <https://cyberterrain.org/ns/stonework#> .
 
 <https://cyberterrain.org/ns/stonework#> rdf:type owl:Ontology ;
-                                          owl:versionIRI <https://cyberterrain.org/ns/stonework/0.17.0> ;
+                                          owl:versionIRI <https://cyberterrain.org/ns/stonework/0.18.0> ;
                                           <http://purl.org/dc/terms/creator> "Hohimer Intelligence Strategies LLC" ;
                                           <http://purl.org/dc/terms/license> <https://opensource.org/licenses/MIT> ;
                                           rdfs:label "STONEWORK"@en ;
-                                          owl:versionInfo "0.17.0" .
+                                          owl:versionInfo "0.18.0" .
 
 #################################################################
 #    Annotation properties
@@ -252,6 +252,15 @@ xsd:date rdf:type rdfs:Datatype .
                   <http://www.w3.org/2004/02/skos/core#definition> "Identifies the resource in the subject or source position of a qualified assertion."@en ;
                   <http://www.w3.org/2004/02/skos/core#prefLabel> "assertion subject"@en ;
                   <http://www.w3.org/2004/02/skos/core#scopeNote> "Range is intentionally unset because framework relationships may originate from either a CyberEntity, a CyberActivity, or another externally defined resource."@en .
+
+
+###  https://cyberterrain.org/ns/stonework#assessesExploitationOf
+:assessesExploitationOf rdf:type owl:ObjectProperty ;
+                        rdfs:domain :CourseOfAction ;
+                        rdfs:range :Vulnerability ;
+                        <http://www.w3.org/2004/02/skos/core#definition> "Relates a CourseOfAction to a Vulnerability whose exploitation it determines, such as forensic triage or a compromise assessment."@en ;
+                        <http://www.w3.org/2004/02/skos/core#prefLabel> "assessesExploitationOf"@en ;
+                        <http://www.w3.org/2004/02/skos/core#scopeNote> "Distinct from stonework:mitigatesVulnerability, which addresses the vulnerability itself. Patching closes the way in; this course of action asks whether someone already came through it. A source that directs both, such as CISA's catalog entries that require forensic triage, gives two courses of action."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#assessmentOf
@@ -2160,7 +2169,8 @@ xsd:date rdf:type rdfs:Datatype .
                         rdfs:domain :CourseOfAction ;
                         rdfs:range :Vulnerability ;
                         <http://www.w3.org/2004/02/skos/core#definition> "A CourseOfAction (patch, workaround, compensating control) addresses this Vulnerability. Distinct from stonework:mitigates (Countermeasure → AttackPattern)."@en ;
-                        <http://www.w3.org/2004/02/skos/core#prefLabel> "mitigatesVulnerability"@en .
+                        <http://www.w3.org/2004/02/skos/core#prefLabel> "mitigatesVulnerability"@en ;
+                        <http://www.w3.org/2004/02/skos/core#scopeNote> "A course of action that determines whether the vulnerability was exploited, rather than addressing it, is stonework:assessesExploitationOf."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#noteAbout
@@ -5647,9 +5657,10 @@ rdfs:Class rdf:type owl:Class .
 ###  https://cyberterrain.org/ns/stonework#OperationPlan
 :OperationPlan rdf:type owl:Class ;
                rdfs:subClassOf :Playbook ;
+               <http://www.w3.org/2004/02/skos/core#altLabel> "Attack plan"@en ;
                <http://www.w3.org/2004/02/skos/core#definition> "A Playbook specifically representing an adversary's operational plan — the offensive counterpart within the Playbook hierarchy."@en ;
                <http://www.w3.org/2004/02/skos/core#prefLabel> "Operation Plan" ;
-               <http://www.w3.org/2004/02/skos/core#scopeNote> "Named to avoid colliding with the already-established stonework:AttackPattern and stonework:AttackTechnique, and to align with stonework:Operation, whose definition ('a coordinated set of activities... unified command, intent, or resourcing') describes the executed counterpart of an OperationPlan. Generic stonework:Playbook remains available for the undifferentiated or defensive case."@en .
+               <http://www.w3.org/2004/02/skos/core#scopeNote> "Named to avoid colliding with the already-established stonework:AttackPattern and stonework:AttackTechnique, and to align with stonework:Operation, whose definition ('a coordinated set of activities... unified command, intent, or resourcing') describes the executed counterpart of an OperationPlan. Generic stonework:Playbook remains available for the undifferentiated or defensive case. User interfaces may call it an attack plan (its altLabel), the phrase practitioners use for an adversary's procedures in order, each carrying out a technique under the tactic it serves."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#Opinion

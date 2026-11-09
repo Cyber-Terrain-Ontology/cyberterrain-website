@@ -999,7 +999,7 @@ This section provides details for each class and property defined by STONEWORK.
     is in domain of
    </dt>
    <dd>
-    <a href="#addressesAttack" title="https://cyberterrain.org/ns/stonework#addressesAttack">addressesAttack</a> <sup class="type-op" title="object property">op</sup>, <a href="#appliesControl" title="https://cyberterrain.org/ns/stonework#appliesControl">appliesControl</a> <sup class="type-op" title="object property">op</sup>, <a href="#mitigatesVulnerability" title="https://cyberterrain.org/ns/stonework#mitigatesVulnerability">mitigatesVulnerability</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#addressesAttack" title="https://cyberterrain.org/ns/stonework#addressesAttack">addressesAttack</a> <sup class="type-op" title="object property">op</sup>, <a href="#appliesControl" title="https://cyberterrain.org/ns/stonework#appliesControl">appliesControl</a> <sup class="type-op" title="object property">op</sup>, <a href="#assessesExploitationOf" title="https://cyberterrain.org/ns/stonework#assessesExploitationOf">assessesExploitationOf</a> <sup class="type-op" title="object property">op</sup>, <a href="#mitigatesVulnerability" title="https://cyberterrain.org/ns/stonework#mitigatesVulnerability">mitigatesVulnerability</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -4980,7 +4980,7 @@ This section provides details for each class and property defined by STONEWORK.
     is in range of
    </dt>
    <dd>
-    <a href="#cvssMetricFor" title="https://cyberterrain.org/ns/stonework#cvssMetricFor">cvssMetricFor</a> <sup class="type-op" title="object property">op</sup>, <a href="#isVulnerableTo" title="https://cyberterrain.org/ns/stonework#isVulnerableTo">isVulnerableTo</a> <sup class="type-op" title="object property">op</sup>, <a href="#mitigatesVulnerability" title="https://cyberterrain.org/ns/stonework#mitigatesVulnerability">mitigatesVulnerability</a> <sup class="type-op" title="object property">op</sup>, <a href="#remediates" title="https://cyberterrain.org/ns/stonework#remediates">remediates</a> <sup class="type-op" title="object property">op</sup>, <a href="#supersededBy" title="https://cyberterrain.org/ns/stonework#supersededBy">supersededBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#weaknessOf" title="https://cyberterrain.org/ns/stonework#weaknessOf">weaknessOf</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#assessesExploitationOf" title="https://cyberterrain.org/ns/stonework#assessesExploitationOf">assessesExploitationOf</a> <sup class="type-op" title="object property">op</sup>, <a href="#cvssMetricFor" title="https://cyberterrain.org/ns/stonework#cvssMetricFor">cvssMetricFor</a> <sup class="type-op" title="object property">op</sup>, <a href="#isVulnerableTo" title="https://cyberterrain.org/ns/stonework#isVulnerableTo">isVulnerableTo</a> <sup class="type-op" title="object property">op</sup>, <a href="#mitigatesVulnerability" title="https://cyberterrain.org/ns/stonework#mitigatesVulnerability">mitigatesVulnerability</a> <sup class="type-op" title="object property">op</sup>, <a href="#remediates" title="https://cyberterrain.org/ns/stonework#remediates">remediates</a> <sup class="type-op" title="object property">op</sup>, <a href="#supersededBy" title="https://cyberterrain.org/ns/stonework#supersededBy">supersededBy</a> <sup class="type-op" title="object property">op</sup>, <a href="#weaknessOf" title="https://cyberterrain.org/ns/stonework#weaknessOf">weaknessOf</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -5056,6 +5056,7 @@ This section provides details for each class and property defined by STONEWORK.
   <li><a href="#appliesTo" title="https://cyberterrain.org/ns/stonework#appliesTo">appliesTo</a></li>
   <li><a href="#assertionObject" title="https://cyberterrain.org/ns/stonework#assertionObject">assertion object</a></li>
   <li><a href="#assertionSubject" title="https://cyberterrain.org/ns/stonework#assertionSubject">assertion subject</a></li>
+  <li><a href="#assessesExploitationOf" title="https://cyberterrain.org/ns/stonework#assessesExploitationOf">assessesExploitationOf</a></li>
   <li><a href="#assessmentOf" title="https://cyberterrain.org/ns/stonework#assessmentOf">assessmentOf</a></li>
   <li><a href="#assignedBy" title="https://cyberterrain.org/ns/stonework#assignedBy">assignedBy</a></li>
   <li><a href="#assignedRole" title="https://cyberterrain.org/ns/stonework#assignedRole">assignedRole</a></li>
@@ -5758,6 +5759,29 @@ This section provides details for each class and property defined by STONEWORK.
     </dt>
     <dd>
      <a href="#QualifiedAssertion" title="https://cyberterrain.org/ns/stonework#QualifiedAssertion">Qualified Assertion</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="assessesExploitationOf">
+  <h3>assessesExploitationOf<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stonework#assessesExploitationOf</p>
+  <div class="comment">
+   <span class="markdown">Relates a CourseOfAction to a Vulnerability whose exploitation it determines, such as forensic triage or a compromise assessment.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#CourseOfAction" title="https://cyberterrain.org/ns/stonework#CourseOfAction">Course of Action</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Vulnerability" title="https://cyberterrain.org/ns/stonework#Vulnerability">Vulnerability</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
