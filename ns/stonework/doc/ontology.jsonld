@@ -1309,10 +1309,10 @@
     "@value" : "STONEWORK"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework/0.18.0"
+    "@id" : "https://cyberterrain.org/ns/stonework/0.19.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.18.0"
+    "@value" : "0.19.0"
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#AIAgent",
@@ -2839,7 +2839,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
-    "@value" : "Formalizes the anticipated side of the Variable lifecycle described in stonework:Variable's scopeNote: a Hypothesis names, in advance, the value an output Variable is predicted to be bound to. Linked to the Variable it predicts via stonework:predictsVariable, and to the prediction itself via stonework:predictedType (a class, the common case — mirrors stonework:guardType), stonework:predictedValue (a specific individual), or stonework:predictedLiteral (a scalar) — mirroring stonework:boundTo/stonework:boundToLiteral on the actual-result side. A Hypothesis is judged against the stonework:VariableBinding of its Variable in the Investigation that tests it (stonework:testsHypothesis): the binding stonework:boundIn that Investigation or in an execution stonework:partOfExecution it. When a run binds the Variable more than once, as when one search Step is run for each of several mailboxes, the Step's own execution (itself an Investigation) tests the Hypothesis, so that one binding judges it. A Transition's guard properties, which test a Variable's actual bound value, implicitly test agreement with whichever Hypothesis predicted that Variable — confirming it if they match, refuting it otherwise. May attach at any level of a Step/Plan decomposition, since stonework:Step is itself a stonework:Behavior. What a Hypothesis is about is stonework:hypothesisAbout. A compound claim, such as \"actor X is using technique Y\", is a Hypothesis whose stonework:hypothesisPart values are its separately testable claims (the activity, the attribution), so a refuted compound shows which part failed."
+    "@value" : "Formalizes the anticipated side of the Variable lifecycle described in stonework:Variable's scopeNote: a Hypothesis names, in advance, the value an output Variable is predicted to be bound to. Linked to the Variable it predicts via stonework:predictsVariable, and to the prediction itself via stonework:predictedType (a class, the common case — mirrors stonework:guardType), stonework:predictedValue (a specific individual), or stonework:predictedLiteral (a scalar) — mirroring stonework:boundTo/stonework:boundToLiteral on the actual-result side. A Hypothesis is judged against the stonework:VariableBinding of its Variable in the Investigation that tests it (stonework:testsHypothesis): the binding stonework:boundIn that Investigation or in an execution stonework:partOfExecution it. When a run binds the Variable more than once, as when one search Step is run for each of several mailboxes, the Step's own execution (itself an Investigation) tests the Hypothesis, so that one binding judges it. A Transition's guard properties, which test a Variable's actual bound value, implicitly test agreement with whichever Hypothesis predicted that Variable — confirming it if they match, refuting it otherwise. May attach at any level of a Step/Plan decomposition, since stonework:Step is itself a stonework:Behavior. What a Hypothesis is about is stonework:hypothesisAbout. A compound claim, such as \"actor X is using technique Y\", is a Hypothesis whose stonework:hypothesisPart values are its separately testable claims (the activity, the attribution), so a refuted compound shows which part failed. Lineage keeps the earlier Hypothesis: stonework:splitFrom names the one this was split from, stonework:absorbedInto the one this was merged into, and stonework:obsoletes the one this replaces. The earlier Hypothesis's status becomes superseded unless it was already confirmed or refuted."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#HypothesisStatus",
@@ -5270,6 +5270,27 @@
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "abaRoutingNumber"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#absorbedInto",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Hypothesis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Hypothesis"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a Hypothesis to the Hypothesis it was merged into, once they were concluded to be the same claim."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "absorbedInto"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "Keeps the absorbed Hypothesis rather than deleting it, so its identity, tests and status stay traceable. A merge is an analyst's decision; when and by whom are recorded through stonework:hasProvenance or a stonework:QualifiedAssertion. Functional: one survivor. Not transitive: the chain is followed in a query, so withdrawing one link withdraws nothing else. An Investigation uses stonework:mergedInto, not this property. The absorbed Hypothesis's status is superseded unless it was already confirmed or refuted."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#accessesFile",
@@ -11059,7 +11080,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
-    "@value" : "Kept explicit (rather than inferred from which Transition fired) so a Hypothesis's status is directly queryable without replaying the Step graph it was tested in."
+    "@value" : "Kept explicit (rather than inferred from which Transition fired) so a Hypothesis's status is directly queryable without replaying the Step graph it was tested in. A Hypothesis set aside by its lineage before a verdict (split, merged into another, or replaced) is superseded, so a query for live Hypotheses need not follow the lineage; one already confirmed or refuted keeps that status."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#hasIPBlock",
@@ -12346,6 +12367,34 @@
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "STONEWORK Hypothesis Status Scheme"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#hypothesisStatusSuperseded",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#HypothesisStatus"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The Hypothesis was set aside before it was confirmed or refuted: split into others (stonework:splitFrom), merged into another (stonework:absorbedInto), or replaced by a later one (stonework:obsoletes)."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#categoryScheme"
+  }, {
+    "@id" : "https://cyberterrain.org/ns/stonework#hypothesisStatusScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#notation" : [ {
+    "@value" : "superseded"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Superseded"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "No longer being tested, and no verdict reached. The record is kept, and its lineage says what took its place. A Hypothesis already confirmed or refuted keeps that status when a later one replaces it."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#iban",
@@ -14578,7 +14627,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
-    "@value" : "Keeps the merged Investigation as a record rather than deleting it, so its identity, findings and history stay traceable. A merge is an analyst's decision; when and by whom are recorded through stonework:hasProvenance or a stonework:QualifiedAssertion."
+    "@value" : "Keeps the merged Investigation as a record rather than deleting it, so its identity, findings and history stay traceable. A merge is an analyst's decision; when and by whom are recorded through stonework:hasProvenance or a stonework:QualifiedAssertion. A Hypothesis merged into another uses stonework:absorbedInto."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#messageId",
@@ -15434,6 +15483,30 @@
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
     "@value" : "A general-purpose shortcut: the kind of context is conveyed by typing the CyberActivity, so narrower subproperties per activity type are unnecessary. Asserting this property does not imply that the object is a Campaign; type it explicitly when that matters. When an observation needs its own metadata, such as observer, time, location, count, or confidence, model it as a stonework:Sighting instead. Not an inverse of stonework:uses, which records that an actor, campaign, or malware employs a technique or tool rather than that an entity was seen in an activity."
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#obsoletes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Hypothesis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Hypothesis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://purl.org/dc/terms/replaces"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a Hypothesis to an earlier Hypothesis it replaces."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "obsoletes"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "The later Hypothesis obsoletes the earlier one, which is kept. Use it when a refuted or faded Hypothesis is replaced by the one formed from it. One Hypothesis may obsolete more than one earlier Hypothesis. Not transitive: follow the chain in a query, so withdrawing one link withdraws nothing else. After Dublin Core replaces. A split is stonework:splitFrom, and a merge is stonework:absorbedInto. stonework:hypothesisPart is a conjunction of one claim, not a successor. The earlier Hypothesis keeps a confirmed or refuted status; otherwise it becomes superseded."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#occursOn",
@@ -18605,6 +18678,27 @@
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "spawns"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stonework#splitFrom",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Hypothesis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stonework#Hypothesis"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a Hypothesis to the Hypothesis it was split from."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "splitFrom"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@language" : "en",
+    "@value" : "A Hypothesis that has started to catch two patterns is kept, and each pattern is a new Hypothesis that splitFrom it. Several may name the same parent. Functional: one parent. Not transitive. Not stonework:hypothesisPart: parts are the conjunction of one claim, while a split is two claims that used to be one. The parent is not deleted; its status is superseded unless it was already confirmed or refuted."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#splitKind",

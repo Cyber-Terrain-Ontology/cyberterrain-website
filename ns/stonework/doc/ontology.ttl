@@ -7,11 +7,11 @@
 @base <https://cyberterrain.org/ns/stonework#> .
 
 <https://cyberterrain.org/ns/stonework#> rdf:type owl:Ontology ;
-                                          owl:versionIRI <https://cyberterrain.org/ns/stonework/0.18.0> ;
+                                          owl:versionIRI <https://cyberterrain.org/ns/stonework/0.19.0> ;
                                           <http://purl.org/dc/terms/creator> "Hohimer Intelligence Strategies LLC" ;
                                           <http://purl.org/dc/terms/license> <https://opensource.org/licenses/MIT> ;
                                           rdfs:label "STONEWORK"@en ;
-                                          owl:versionInfo "0.18.0" .
+                                          owl:versionInfo "0.19.0" .
 
 #################################################################
 #    Annotation properties
@@ -60,6 +60,16 @@ xsd:date rdf:type rdfs:Datatype .
 #################################################################
 #    Object Properties
 #################################################################
+
+###  https://cyberterrain.org/ns/stonework#absorbedInto
+:absorbedInto rdf:type owl:ObjectProperty ,
+                       owl:FunctionalProperty ;
+              rdfs:domain :Hypothesis ;
+              rdfs:range :Hypothesis ;
+              <http://www.w3.org/2004/02/skos/core#definition> "Relates a Hypothesis to the Hypothesis it was merged into, once they were concluded to be the same claim."@en ;
+              <http://www.w3.org/2004/02/skos/core#prefLabel> "absorbedInto"@en ;
+              <http://www.w3.org/2004/02/skos/core#scopeNote> "Keeps the absorbed Hypothesis rather than deleting it, so its identity, tests and status stay traceable. A merge is an analyst's decision; when and by whom are recorded through stonework:hasProvenance or a stonework:QualifiedAssertion. Functional: one survivor. Not transitive: the chain is followed in a query, so withdrawing one link withdraws nothing else. An Investigation uses stonework:mergedInto, not this property. The absorbed Hypothesis's status is superseded unless it was already confirmed or refuted."@en .
+
 
 ###  https://cyberterrain.org/ns/stonework#accessesFile
 :accessesFile rdf:type owl:ObjectProperty ;
@@ -1199,7 +1209,7 @@ xsd:date rdf:type rdfs:Datatype .
                      rdfs:range :HypothesisStatus ;
                      <http://www.w3.org/2004/02/skos/core#definition> "Relates a Hypothesis to its current status in the confirm/refute lifecycle."@en ;
                      <http://www.w3.org/2004/02/skos/core#prefLabel> "hasHypothesisStatus"@en ;
-                     <http://www.w3.org/2004/02/skos/core#scopeNote> "Kept explicit (rather than inferred from which Transition fired) so a Hypothesis's status is directly queryable without replaying the Step graph it was tested in."@en .
+                     <http://www.w3.org/2004/02/skos/core#scopeNote> "Kept explicit (rather than inferred from which Transition fired) so a Hypothesis's status is directly queryable without replaying the Step graph it was tested in. A Hypothesis set aside by its lineage before a verdict (split, merged into another, or replaced) is superseded, so a query for live Hypotheses need not follow the lineage; one already confirmed or refuted keeps that status."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#hasIPBlock
@@ -2126,7 +2136,7 @@ xsd:date rdf:type rdfs:Datatype .
             rdfs:range :Investigation ;
             <http://www.w3.org/2004/02/skos/core#definition> "Relates an Investigation to the Investigation it was merged into, once analysts concluded the two examine the same matter."@en ;
             <http://www.w3.org/2004/02/skos/core#prefLabel> "mergedInto"@en ;
-            <http://www.w3.org/2004/02/skos/core#scopeNote> "Keeps the merged Investigation as a record rather than deleting it, so its identity, findings and history stay traceable. A merge is an analyst's decision; when and by whom are recorded through stonework:hasProvenance or a stonework:QualifiedAssertion."@en .
+            <http://www.w3.org/2004/02/skos/core#scopeNote> "Keeps the merged Investigation as a record rather than deleting it, so its identity, findings and history stay traceable. A merge is an analyst's decision; when and by whom are recorded through stonework:hasProvenance or a stonework:QualifiedAssertion. A Hypothesis merged into another uses stonework:absorbedInto."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#metricFor
@@ -2196,6 +2206,16 @@ xsd:date rdf:type rdfs:Datatype .
             <http://www.w3.org/2004/02/skos/core#definition> "Relates an observed entity, such as a DigitalArtifact, Infrastructure, Malware, Product, Behavior, Identifier, or SecurityCondition, to the CyberActivity (for example a Campaign, Incident, or Event) in which it was observed or collected."@en ;
             <http://www.w3.org/2004/02/skos/core#prefLabel> "observedIn"@en ;
             <http://www.w3.org/2004/02/skos/core#scopeNote> "A general-purpose shortcut: the kind of context is conveyed by typing the CyberActivity, so narrower subproperties per activity type are unnecessary. Asserting this property does not imply that the object is a Campaign; type it explicitly when that matters. When an observation needs its own metadata, such as observer, time, location, count, or confidence, model it as a stonework:Sighting instead. Not an inverse of stonework:uses, which records that an actor, campaign, or malware employs a technique or tool rather than that an entity was seen in an activity."@en .
+
+
+###  https://cyberterrain.org/ns/stonework#obsoletes
+:obsoletes rdf:type owl:ObjectProperty ;
+           rdfs:domain :Hypothesis ;
+           rdfs:range :Hypothesis ;
+           rdfs:seeAlso <http://purl.org/dc/terms/replaces> ;
+           <http://www.w3.org/2004/02/skos/core#definition> "Relates a Hypothesis to an earlier Hypothesis it replaces."@en ;
+           <http://www.w3.org/2004/02/skos/core#prefLabel> "obsoletes"@en ;
+           <http://www.w3.org/2004/02/skos/core#scopeNote> "The later Hypothesis obsoletes the earlier one, which is kept. Use it when a refuted or faded Hypothesis is replaced by the one formed from it. One Hypothesis may obsolete more than one earlier Hypothesis. Not transitive: follow the chain in a query, so withdrawing one link withdraws nothing else. After Dublin Core replaces. A split is stonework:splitFrom, and a merge is stonework:absorbedInto. stonework:hypothesisPart is a conjunction of one claim, not a successor. The earlier Hypothesis keeps a confirmed or refuted status; otherwise it becomes superseded."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#occursOn
@@ -2765,6 +2785,16 @@ xsd:date rdf:type rdfs:Datatype .
         rdfs:range :RuntimeProcess ;
         <http://www.w3.org/2004/02/skos/core#definition> "A RuntimeProcess creates a child process. Inverse of stonework:hasParentProcess; enables top-down process tree traversal for execution chain analysis."@en ;
         <http://www.w3.org/2004/02/skos/core#prefLabel> "spawns"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#splitFrom
+:splitFrom rdf:type owl:ObjectProperty ,
+                    owl:FunctionalProperty ;
+           rdfs:domain :Hypothesis ;
+           rdfs:range :Hypothesis ;
+           <http://www.w3.org/2004/02/skos/core#definition> "Relates a Hypothesis to the Hypothesis it was split from."@en ;
+           <http://www.w3.org/2004/02/skos/core#prefLabel> "splitFrom"@en ;
+           <http://www.w3.org/2004/02/skos/core#scopeNote> "A Hypothesis that has started to catch two patterns is kept, and each pattern is a new Hypothesis that splitFrom it. Several may name the same parent. Functional: one parent. Not transitive. Not stonework:hypothesisPart: parts are the conjunction of one claim, while a split is two claims that used to be one. The parent is not deleted; its status is superseded unless it was already confirmed or refuted."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#splitKind
@@ -5217,7 +5247,7 @@ rdfs:Class rdf:type owl:Class .
             rdfs:subClassOf :IntelligenceProduct ;
             <http://www.w3.org/2004/02/skos/core#definition> "A structured, falsifiable prediction about the value a Variable will resolve to once the Behavior or Step declaring that Variable executes."@en ;
             <http://www.w3.org/2004/02/skos/core#prefLabel> "Hypothesis" ;
-            <http://www.w3.org/2004/02/skos/core#scopeNote> "Formalizes the anticipated side of the Variable lifecycle described in stonework:Variable's scopeNote: a Hypothesis names, in advance, the value an output Variable is predicted to be bound to. Linked to the Variable it predicts via stonework:predictsVariable, and to the prediction itself via stonework:predictedType (a class, the common case — mirrors stonework:guardType), stonework:predictedValue (a specific individual), or stonework:predictedLiteral (a scalar) — mirroring stonework:boundTo/stonework:boundToLiteral on the actual-result side. A Hypothesis is judged against the stonework:VariableBinding of its Variable in the Investigation that tests it (stonework:testsHypothesis): the binding stonework:boundIn that Investigation or in an execution stonework:partOfExecution it. When a run binds the Variable more than once, as when one search Step is run for each of several mailboxes, the Step's own execution (itself an Investigation) tests the Hypothesis, so that one binding judges it. A Transition's guard properties, which test a Variable's actual bound value, implicitly test agreement with whichever Hypothesis predicted that Variable — confirming it if they match, refuting it otherwise. May attach at any level of a Step/Plan decomposition, since stonework:Step is itself a stonework:Behavior. What a Hypothesis is about is stonework:hypothesisAbout. A compound claim, such as \"actor X is using technique Y\", is a Hypothesis whose stonework:hypothesisPart values are its separately testable claims (the activity, the attribution), so a refuted compound shows which part failed."@en .
+            <http://www.w3.org/2004/02/skos/core#scopeNote> "Formalizes the anticipated side of the Variable lifecycle described in stonework:Variable's scopeNote: a Hypothesis names, in advance, the value an output Variable is predicted to be bound to. Linked to the Variable it predicts via stonework:predictsVariable, and to the prediction itself via stonework:predictedType (a class, the common case — mirrors stonework:guardType), stonework:predictedValue (a specific individual), or stonework:predictedLiteral (a scalar) — mirroring stonework:boundTo/stonework:boundToLiteral on the actual-result side. A Hypothesis is judged against the stonework:VariableBinding of its Variable in the Investigation that tests it (stonework:testsHypothesis): the binding stonework:boundIn that Investigation or in an execution stonework:partOfExecution it. When a run binds the Variable more than once, as when one search Step is run for each of several mailboxes, the Step's own execution (itself an Investigation) tests the Hypothesis, so that one binding judges it. A Transition's guard properties, which test a Variable's actual bound value, implicitly test agreement with whichever Hypothesis predicted that Variable — confirming it if they match, refuting it otherwise. May attach at any level of a Step/Plan decomposition, since stonework:Step is itself a stonework:Behavior. What a Hypothesis is about is stonework:hypothesisAbout. A compound claim, such as \"actor X is using technique Y\", is a Hypothesis whose stonework:hypothesisPart values are its separately testable claims (the activity, the attribution), so a refuted compound shows which part failed. Lineage keeps the earlier Hypothesis: stonework:splitFrom names the one this was split from, stonework:absorbedInto the one this was merged into, and stonework:obsoletes the one this replaces. The earlier Hypothesis's status becomes superseded unless it was already confirmed or refuted."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#HypothesisStatus
@@ -7688,6 +7718,18 @@ rdfs:Class rdf:type owl:Class .
                         <http://purl.org/dc/terms/isPartOf> :categoryScheme ;
                         <http://www.w3.org/2004/02/skos/core#definition> "The controlled vocabulary of hypothesis lifecycle states."@en ;
                         <http://www.w3.org/2004/02/skos/core#prefLabel> "STONEWORK Hypothesis Status Scheme"@en .
+
+
+###  https://cyberterrain.org/ns/stonework#hypothesisStatusSuperseded
+:hypothesisStatusSuperseded rdf:type owl:NamedIndividual ,
+                                     <http://www.w3.org/2004/02/skos/core#Concept> ,
+                                     :HypothesisStatus ;
+                            <http://www.w3.org/2004/02/skos/core#notation> "superseded" ;
+                            <http://www.w3.org/2004/02/skos/core#definition> "The Hypothesis was set aside before it was confirmed or refuted: split into others (stonework:splitFrom), merged into another (stonework:absorbedInto), or replaced by a later one (stonework:obsoletes)."@en ;
+                            <http://www.w3.org/2004/02/skos/core#inScheme> :categoryScheme ,
+                                                                           :hypothesisStatusScheme ;
+                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Superseded"@en ;
+                            <http://www.w3.org/2004/02/skos/core#scopeNote> "No longer being tested, and no verdict reached. The record is kept, and its lineage says what took its place. A Hypothesis already confirmed or refuted keeps that status when a later one replaces it."@en .
 
 
 ###  https://cyberterrain.org/ns/stonework#impactLevelCatastrophic
