@@ -10,11 +10,11 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:stonework="https://cyberterrain.org/ns/stonework#">
     <owl:Ontology rdf:about="https://cyberterrain.org/ns/stonework#">
-        <owl:versionIRI rdf:resource="https://cyberterrain.org/ns/stonework/0.20.0"/>
+        <owl:versionIRI rdf:resource="https://cyberterrain.org/ns/stonework/0.20.1"/>
         <terms:creator>Hohimer Intelligence Strategies LLC</terms:creator>
         <terms:license rdf:resource="https://opensource.org/licenses/MIT"/>
         <rdfs:label xml:lang="en">STONEWORK</rdfs:label>
-        <owl:versionInfo>0.20.0</owl:versionInfo>
+        <owl:versionInfo>0.20.1</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -735,11 +735,12 @@
 
     <owl:ObjectProperty rdf:about="https://cyberterrain.org/ns/stonework#competesWith">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
         <rdfs:domain rdf:resource="https://cyberterrain.org/ns/stonework#Hypothesis"/>
         <rdfs:range rdf:resource="https://cyberterrain.org/ns/stonework#Hypothesis"/>
         <skos:definition xml:lang="en">Relates two Hypotheses that answer the same question, where the analyst does not accept both.</skos:definition>
         <skos:prefLabel xml:lang="en">competesWith</skos:prefLabel>
-        <skos:scopeNote xml:lang="en">Stated, not inferred, and not transitive: with three alternatives, each pair is asserted. A query follows either direction, stonework:competesWith|^stonework:competesWith, because the inverse is not stored. Not a lineage link. stonework:splitFrom, stonework:absorbedInto and stonework:obsoletes relate a Hypothesis to its own history; competesWith relates rivals that are open at the same time. stonework:hypothesisPart is a conjunction of one claim, not an alternative. Confirming one Hypothesis does not refute its rivals; each status stays explicit. A warning reports when both are confirmed, since either a confirmation or the rivalry is wrong. The matrix that rates each item of evidence against each Hypothesis is not this property.</skos:scopeNote>
+        <skos:scopeNote xml:lang="en">Stated, not inferred, not transitive, and irreflexive: a Hypothesis does not compete with itself. With three alternatives, each pair is asserted. A query follows either direction, stonework:competesWith|^stonework:competesWith, because the inverse is not inferred. Not a lineage link. stonework:splitFrom, stonework:absorbedInto and stonework:obsoletes relate a Hypothesis to its own history; competesWith relates rivals that are open at the same time. stonework:hypothesisPart is a conjunction of one claim, not an alternative. Confirming one Hypothesis does not refute its rivals; each status stays explicit. A warning reports when both are confirmed, since either a confirmation or the rivalry is wrong. The matrix that rates each item of evidence against each Hypothesis is not this property.</skos:scopeNote>
     </owl:ObjectProperty>
     
 

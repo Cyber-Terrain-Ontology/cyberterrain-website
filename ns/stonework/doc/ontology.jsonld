@@ -1309,10 +1309,10 @@
     "@value" : "STONEWORK"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://cyberterrain.org/ns/stonework/0.20.0"
+    "@id" : "https://cyberterrain.org/ns/stonework/0.20.1"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.20.0"
+    "@value" : "0.20.1"
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#AIAgent",
@@ -7399,7 +7399,7 @@
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#competesWith",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://cyberterrain.org/ns/stonework#Hypothesis"
   } ],
@@ -7416,7 +7416,7 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
     "@language" : "en",
-    "@value" : "Stated, not inferred, and not transitive: with three alternatives, each pair is asserted. A query follows either direction, stonework:competesWith|^stonework:competesWith, because the inverse is not stored. Not a lineage link. stonework:splitFrom, stonework:absorbedInto and stonework:obsoletes relate a Hypothesis to its own history; competesWith relates rivals that are open at the same time. stonework:hypothesisPart is a conjunction of one claim, not an alternative. Confirming one Hypothesis does not refute its rivals; each status stays explicit. A warning reports when both are confirmed, since either a confirmation or the rivalry is wrong. The matrix that rates each item of evidence against each Hypothesis is not this property."
+    "@value" : "Stated, not inferred, not transitive, and irreflexive: a Hypothesis does not compete with itself. With three alternatives, each pair is asserted. A query follows either direction, stonework:competesWith|^stonework:competesWith, because the inverse is not inferred. Not a lineage link. stonework:splitFrom, stonework:absorbedInto and stonework:obsoletes relate a Hypothesis to its own history; competesWith relates rivals that are open at the same time. stonework:hypothesisPart is a conjunction of one claim, not an alternative. Confirming one Hypothesis does not refute its rivals; each status stays explicit. A warning reports when both are confirmed, since either a confirmation or the rivalry is wrong. The matrix that rates each item of evidence against each Hypothesis is not this property."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stonework#compilationTimestamp",
