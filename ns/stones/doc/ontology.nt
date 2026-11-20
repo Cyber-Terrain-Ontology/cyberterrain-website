@@ -1,5 +1,5 @@
 <https://cyberterrain.org/ns/stones#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://cyberterrain.org/ns/stones#> <http://www.w3.org/2002/07/owl#versionIRI> <https://cyberterrain.org/ns/stones/0.2.0> .
+<https://cyberterrain.org/ns/stones#> <http://www.w3.org/2002/07/owl#versionIRI> <https://cyberterrain.org/ns/stones/0.3.0> .
 <https://cyberterrain.org/ns/stones#> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2004/02/skos/core> .
 <https://cyberterrain.org/ns/stones#> <http://purl.org/dc/terms/creator> "Hohimer Intelligence Strategies LLC" .
 <https://cyberterrain.org/ns/stones#> <http://purl.org/dc/terms/description> "An OWL 2 ontology modelling the STIX 2.1 specification. Provides a class hierarchy for all STIX Domain Objects (SDOs), Cyber Observable Objects (SCOs), Relationship Objects (SROs), Meta Objects, and structured sub-types, together with datatype and object properties covering all standard STIX properties."@en .
@@ -7,7 +7,7 @@
 <https://cyberterrain.org/ns/stones#> <http://purl.org/dc/terms/title> "STONES — STIX ONtology Expression System"@en .
 <https://cyberterrain.org/ns/stones#> <http://www.w3.org/2000/01/rdf-schema#label> "STONES"@en .
 <https://cyberterrain.org/ns/stones#> <http://www.w3.org/2002/07/owl#priorVersion> <https://cyberterrain.org/ns/stones/0.1.0> .
-<https://cyberterrain.org/ns/stones#> <http://www.w3.org/2002/07/owl#versionInfo> "0.2.0" .
+<https://cyberterrain.org/ns/stones#> <http://www.w3.org/2002/07/owl#versionInfo> "0.3.0" .
 # 
 # 
 # #################################################################
@@ -339,6 +339,39 @@
 <https://cyberterrain.org/ns/stones#killChainPhases> <http://www.w3.org/2000/01/rdf-schema#comment> "(STIX: kill_chain_phases)" .
 <https://cyberterrain.org/ns/stones#killChainPhases> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://cyberterrain.org/ns/stones#> .
 <https://cyberterrain.org/ns/stones#killChainPhases> <http://www.w3.org/2004/02/skos/core#definition> "Kill chain phase(s) associated with this attack-pattern, indicator, infrastructure, malware, or tool." .
+# 
+# https://cyberterrain.org/ns/stones#listItem
+<https://cyberterrain.org/ns/stones#listItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://cyberterrain.org/ns/stones#listItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> .
+<https://cyberterrain.org/ns/stones#listItem> <http://www.w3.org/2000/01/rdf-schema#domain> <https://cyberterrain.org/ns/stones#ListOrder> .
+<https://cyberterrain.org/ns/stones#listItem> <http://www.w3.org/2000/01/rdf-schema#range> <https://cyberterrain.org/ns/stones#ListItem> .
+<https://cyberterrain.org/ns/stones#listItem> <http://www.w3.org/2000/01/rdf-schema#comment> "(not a STIX property: serialization fidelity)" .
+<https://cyberterrain.org/ns/stones#listItem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://cyberterrain.org/ns/stones#> .
+<https://cyberterrain.org/ns/stones#listItem> <http://www.w3.org/2004/02/skos/core#definition> "One member of this ListOrder." .
+# 
+# https://cyberterrain.org/ns/stones#listOrder
+<https://cyberterrain.org/ns/stones#listOrder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://cyberterrain.org/ns/stones#listOrder> <http://www.w3.org/2000/01/rdf-schema#domain> <https://cyberterrain.org/ns/stones#StixObject> .
+<https://cyberterrain.org/ns/stones#listOrder> <http://www.w3.org/2000/01/rdf-schema#range> <https://cyberterrain.org/ns/stones#ListOrder> .
+<https://cyberterrain.org/ns/stones#listOrder> <http://www.w3.org/2000/01/rdf-schema#comment> "(not a STIX property: serialization fidelity)" .
+<https://cyberterrain.org/ns/stones#listOrder> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://cyberterrain.org/ns/stones#> .
+<https://cyberterrain.org/ns/stones#listOrder> <http://www.w3.org/2004/02/skos/core#definition> "The recorded order of one of this object's list-valued properties." .
+# 
+# https://cyberterrain.org/ns/stones#listProperty
+<https://cyberterrain.org/ns/stones#listProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://cyberterrain.org/ns/stones#listProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://cyberterrain.org/ns/stones#listProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <https://cyberterrain.org/ns/stones#ListOrder> .
+<https://cyberterrain.org/ns/stones#listProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "(not a STIX property: serialization fidelity)" .
+<https://cyberterrain.org/ns/stones#listProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://cyberterrain.org/ns/stones#> .
+<https://cyberterrain.org/ns/stones#listProperty> <http://www.w3.org/2004/02/skos/core#definition> "The STONES property whose order this ListOrder records, e.g. stones:aliases (the property IRI used as an individual: OWL 2 punning)." .
+# 
+# https://cyberterrain.org/ns/stones#listRef
+<https://cyberterrain.org/ns/stones#listRef> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://cyberterrain.org/ns/stones#listRef> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://cyberterrain.org/ns/stones#listRef> <http://www.w3.org/2000/01/rdf-schema#domain> <https://cyberterrain.org/ns/stones#ListItem> .
+<https://cyberterrain.org/ns/stones#listRef> <http://www.w3.org/2000/01/rdf-schema#comment> "(not a STIX property: serialization fidelity)" .
+<https://cyberterrain.org/ns/stones#listRef> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://cyberterrain.org/ns/stones#> .
+<https://cyberterrain.org/ns/stones#listRef> <http://www.w3.org/2004/02/skos/core#definition> "The member, when it is an IRI (a reference, vocabulary value, external reference or kill-chain phase): the same IRI the list's property points to." .
 # 
 # https://cyberterrain.org/ns/stones#malwareTypes
 <https://cyberterrain.org/ns/stones#malwareTypes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -1468,6 +1501,23 @@
 <https://cyberterrain.org/ns/stones#latitude> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://cyberterrain.org/ns/stones#> .
 <https://cyberterrain.org/ns/stones#latitude> <http://www.w3.org/2004/02/skos/core#definition> "Latitude in decimal degrees, range -90 to 90. Required when longitude is present." .
 # 
+# https://cyberterrain.org/ns/stones#listIndex
+<https://cyberterrain.org/ns/stones#listIndex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://cyberterrain.org/ns/stones#listIndex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://cyberterrain.org/ns/stones#listIndex> <http://www.w3.org/2000/01/rdf-schema#domain> <https://cyberterrain.org/ns/stones#ListItem> .
+<https://cyberterrain.org/ns/stones#listIndex> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<https://cyberterrain.org/ns/stones#listIndex> <http://www.w3.org/2000/01/rdf-schema#comment> "(not a STIX property: serialization fidelity)" .
+<https://cyberterrain.org/ns/stones#listIndex> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://cyberterrain.org/ns/stones#> .
+<https://cyberterrain.org/ns/stones#listIndex> <http://www.w3.org/2004/02/skos/core#definition> "Zero-based position of this member in the list as it was in the STIX JSON." .
+# 
+# https://cyberterrain.org/ns/stones#listValue
+<https://cyberterrain.org/ns/stones#listValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://cyberterrain.org/ns/stones#listValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://cyberterrain.org/ns/stones#listValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://cyberterrain.org/ns/stones#ListItem> .
+<https://cyberterrain.org/ns/stones#listValue> <http://www.w3.org/2000/01/rdf-schema#comment> "(not a STIX property: serialization fidelity)" .
+<https://cyberterrain.org/ns/stones#listValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://cyberterrain.org/ns/stones#> .
+<https://cyberterrain.org/ns/stones#listValue> <http://www.w3.org/2004/02/skos/core#definition> "The member, when it is a literal: the same literal the list's property has." .
+# 
 # https://cyberterrain.org/ns/stones#longitude
 <https://cyberterrain.org/ns/stones#longitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://cyberterrain.org/ns/stones#longitude> <http://www.w3.org/2000/01/rdf-schema#domain> <https://cyberterrain.org/ns/stones#Location> .
@@ -2139,6 +2189,16 @@
 <https://cyberterrain.org/ns/stones#uid> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://cyberterrain.org/ns/stones#> .
 <https://cyberterrain.org/ns/stones#uid> <http://www.w3.org/2004/02/skos/core#definition> "Numeric UNIX user ID (UID)." .
 # 
+# https://cyberterrain.org/ns/stones#unmodeledProperties
+<https://cyberterrain.org/ns/stones#unmodeledProperties> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://cyberterrain.org/ns/stones#unmodeledProperties> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://cyberterrain.org/ns/stones#unmodeledProperties> <http://www.w3.org/2000/01/rdf-schema#domain> <https://cyberterrain.org/ns/stones#StixObject> .
+<https://cyberterrain.org/ns/stones#unmodeledProperties> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://cyberterrain.org/ns/stones#unmodeledProperties> <http://www.w3.org/2000/01/rdf-schema#comment> "(not a STIX property: serialization fidelity)" .
+<https://cyberterrain.org/ns/stones#unmodeledProperties> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://cyberterrain.org/ns/stones#> .
+<https://cyberterrain.org/ns/stones#unmodeledProperties> <http://www.w3.org/2004/02/skos/core#definition> "The STIX properties of this object that its STONES triples don't carry exactly, verbatim, as one JSON object (e.g. extensions, granular_markings, custom x_ properties). Kept so the STIX JSON can be regenerated exactly; not queryable as structure." .
+<https://cyberterrain.org/ns/stones#unmodeledProperties> <http://www.w3.org/2004/02/skos/core#scopeNote> "An xsd:string rather than rdf:JSON, which is not in the OWL 2 datatype map. Each key here is a candidate for a modeled STONES property." .
+# 
 # https://cyberterrain.org/ns/stones#url
 <https://cyberterrain.org/ns/stones#url> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://cyberterrain.org/ns/stones#url> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
@@ -2792,6 +2852,20 @@ _:genid107 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://cyberterrain.org/ns/stones#LanguageContentObject> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://cyberterrain.org/ns/stones#> .
 <https://cyberterrain.org/ns/stones#LanguageContentObject> <http://www.w3.org/2004/02/skos/core#definition> "Provides translations of string properties of another STIX object into different languages. Allows internationalisation without modifying the original object." .
 <https://cyberterrain.org/ns/stones#LanguageContentObject> <http://www.w3.org/2004/02/skos/core#prefLabel> "Language Content Object"@en .
+# 
+# https://cyberterrain.org/ns/stones#ListItem
+<https://cyberterrain.org/ns/stones#ListItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://cyberterrain.org/ns/stones#ListItem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://cyberterrain.org/ns/stones#> .
+<https://cyberterrain.org/ns/stones#ListItem> <http://www.w3.org/2004/02/skos/core#definition> "One member of a ListOrder: its position (stones:listIndex) and the value the list's property has for it (stones:listValue for a literal, stones:listRef for an IRI)." .
+<https://cyberterrain.org/ns/stones#ListItem> <http://www.w3.org/2004/02/skos/core#prefLabel> "List Item"@en .
+<https://cyberterrain.org/ns/stones#ListItem> <http://www.w3.org/2004/02/skos/core#scopeNote> "Index nodes rather than an rdf:List because OWL 2 DL reserves rdf:first and rdf:rest, and STONES data is consistency-checked with OWL reasoners. Not aligned to STONEWORK." .
+# 
+# https://cyberterrain.org/ns/stones#ListOrder
+<https://cyberterrain.org/ns/stones#ListOrder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://cyberterrain.org/ns/stones#ListOrder> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://cyberterrain.org/ns/stones#> .
+<https://cyberterrain.org/ns/stones#ListOrder> <http://www.w3.org/2004/02/skos/core#definition> "The order of one list-valued STIX property on one STIX object, as it was in the STIX JSON. STONES writes a list's members as separate triples, which carry no order; a ListOrder records it, one ListItem per member." .
+<https://cyberterrain.org/ns/stones#ListOrder> <http://www.w3.org/2004/02/skos/core#prefLabel> "List Order"@en .
+<https://cyberterrain.org/ns/stones#ListOrder> <http://www.w3.org/2004/02/skos/core#scopeNote> "Serialization fidelity, not a STIX concept or a claim about the cyber domain: it exists so a STIX document can be regenerated exactly from its STONES triples. Not aligned to STONEWORK. Written only where the order differs from the members sorted, which is the order a reader gets without one." .
 # 
 # https://cyberterrain.org/ns/stones#Location
 <https://cyberterrain.org/ns/stones#Location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -5519,11 +5593,23 @@ _:genid296 <http://www.w3.org/2002/07/owl#members> _:genid299 .
 _:genid299 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid298 .
 _:genid298 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid297 .
 _:genid297 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid297 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://cyberterrain.org/ns/stones#StixMetaObject> .
+_:genid297 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://cyberterrain.org/ns/stones#StixObject> .
 _:genid297 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid298 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://cyberterrain.org/ns/stones#StixCoreObject> .
+_:genid298 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://cyberterrain.org/ns/stones#ListOrder> .
 _:genid298 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid299 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://cyberterrain.org/ns/stones#StixBundle> .
+_:genid299 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://cyberterrain.org/ns/stones#ListItem> .
 _:genid299 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid300 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid300 <http://www.w3.org/2002/07/owl#members> _:genid303 .
+_:genid303 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid302 .
+_:genid302 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid301 .
+_:genid301 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid301 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://cyberterrain.org/ns/stones#StixMetaObject> .
+_:genid301 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid302 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://cyberterrain.org/ns/stones#StixCoreObject> .
+_:genid302 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid303 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://cyberterrain.org/ns/stones#StixBundle> .
+_:genid303 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

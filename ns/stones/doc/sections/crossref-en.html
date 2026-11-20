@@ -41,6 +41,8 @@ This section provides details for each class and property defined by STONES.
   <li><a href="#IPv6AddressObject" title="https://cyberterrain.org/ns/stones#IPv6AddressObject">IPv6 Address Object</a></li>
   <li><a href="#KillChainPhase" title="https://cyberterrain.org/ns/stones#KillChainPhase">Kill Chain Phase</a></li>
   <li><a href="#LanguageContentObject" title="https://cyberterrain.org/ns/stones#LanguageContentObject">Language Content Object</a></li>
+  <li><a href="#ListItem" title="https://cyberterrain.org/ns/stones#ListItem">List Item</a></li>
+  <li><a href="#ListOrder" title="https://cyberterrain.org/ns/stones#ListOrder">List Order</a></li>
   <li><a href="#Location" title="https://cyberterrain.org/ns/stones#Location">Location</a></li>
   <li><a href="#MACAddressObject" title="https://cyberterrain.org/ns/stones#MACAddressObject">MAC Address Object</a></li>
   <li><a href="#Malware" title="https://cyberterrain.org/ns/stones#Malware">Malware</a></li>
@@ -1278,6 +1280,76 @@ This section provides details for each class and property defined by STONES.
    </dd>
   </dl>
  </div>
+ <div class="entity" id="ListItem">
+  <h3>List Item<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stones#ListItem</p>
+  <div class="comment">
+   <span class="markdown">One member of a ListOrder: its position (stones:listIndex) and the value the list's property has for it (stones:listValue for a literal, stones:listRef for an IRI).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://cyberterrain.org/ns/stones#">https://cyberterrain.org/ns/stones#</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#listIndex" title="https://cyberterrain.org/ns/stones#listIndex">list Index</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#listRef" title="https://cyberterrain.org/ns/stones#listRef">list Ref</a> <sup class="type-op" title="object property">op</sup>, <a href="#listValue" title="https://cyberterrain.org/ns/stones#listValue">list Value</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#listItem" title="https://cyberterrain.org/ns/stones#listItem">list Item</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#ListOrder" title="https://cyberterrain.org/ns/stones#ListOrder">List Order</a> <sup class="type-c" title="class">c</sup>, <a href="#StixObject" title="https://cyberterrain.org/ns/stones#StixObject">STIX Object</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ListOrder">
+  <h3>List Order<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stones#ListOrder</p>
+  <div class="comment">
+   <span class="markdown">The order of one list-valued STIX property on one STIX object, as it was in the STIX JSON. STONES writes a list's members as separate triples, which carry no order; a ListOrder records it, one ListItem per member.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://cyberterrain.org/ns/stones#">https://cyberterrain.org/ns/stones#</a>
+   </dd>
+  </dl>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#listItem" title="https://cyberterrain.org/ns/stones#listItem">list Item</a> <sup class="type-op" title="object property">op</sup>, <a href="#listProperty" title="https://cyberterrain.org/ns/stones#listProperty">list Property</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#listOrder" title="https://cyberterrain.org/ns/stones#listOrder">list Order</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#ListItem" title="https://cyberterrain.org/ns/stones#ListItem">List Item</a> <sup class="type-c" title="class">c</sup>, <a href="#StixObject" title="https://cyberterrain.org/ns/stones#StixObject">STIX Object</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
  <div class="entity" id="Location">
   <h3>Location<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://cyberterrain.org/ns/stones#Location</p>
@@ -2331,7 +2403,7 @@ This section provides details for each class and property defined by STONES.
     is in domain of
    </dt>
    <dd>
-    <a href="#confidence" title="https://cyberterrain.org/ns/stones#confidence">confidence</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#created" title="https://cyberterrain.org/ns/stones#created">created</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#createdByRef" title="https://cyberterrain.org/ns/stones#createdByRef">created By Ref</a> <sup class="type-op" title="object property">op</sup>, <a href="#externalReferences" title="https://cyberterrain.org/ns/stones#externalReferences">external References</a> <sup class="type-op" title="object property">op</sup>, <a href="#granularMarkings" title="https://cyberterrain.org/ns/stones#granularMarkings">granular Markings</a> <sup class="type-op" title="object property">op</sup>, <a href="#labels" title="https://cyberterrain.org/ns/stones#labels">labels</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#modified" title="https://cyberterrain.org/ns/stones#modified">modified</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#objectMarkingRefs" title="https://cyberterrain.org/ns/stones#objectMarkingRefs">object Marking Refs</a> <sup class="type-op" title="object property">op</sup>, <a href="#revoked" title="https://cyberterrain.org/ns/stones#revoked">revoked</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#specVersion" title="https://cyberterrain.org/ns/stones#specVersion">spec Version</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#stixId" title="https://cyberterrain.org/ns/stones#stixId">stix Id</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#stixType" title="https://cyberterrain.org/ns/stones#stixType">stix Type</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#confidence" title="https://cyberterrain.org/ns/stones#confidence">confidence</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#created" title="https://cyberterrain.org/ns/stones#created">created</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#createdByRef" title="https://cyberterrain.org/ns/stones#createdByRef">created By Ref</a> <sup class="type-op" title="object property">op</sup>, <a href="#externalReferences" title="https://cyberterrain.org/ns/stones#externalReferences">external References</a> <sup class="type-op" title="object property">op</sup>, <a href="#granularMarkings" title="https://cyberterrain.org/ns/stones#granularMarkings">granular Markings</a> <sup class="type-op" title="object property">op</sup>, <a href="#labels" title="https://cyberterrain.org/ns/stones#labels">labels</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#listOrder" title="https://cyberterrain.org/ns/stones#listOrder">list Order</a> <sup class="type-op" title="object property">op</sup>, <a href="#modified" title="https://cyberterrain.org/ns/stones#modified">modified</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#objectMarkingRefs" title="https://cyberterrain.org/ns/stones#objectMarkingRefs">object Marking Refs</a> <sup class="type-op" title="object property">op</sup>, <a href="#revoked" title="https://cyberterrain.org/ns/stones#revoked">revoked</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#specVersion" title="https://cyberterrain.org/ns/stones#specVersion">spec Version</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#stixId" title="https://cyberterrain.org/ns/stones#stixId">stix Id</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#stixType" title="https://cyberterrain.org/ns/stones#stixType">stix Type</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#unmodeledProperties" title="https://cyberterrain.org/ns/stones#unmodeledProperties">unmodeled Properties</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
    <dt>
     is in range of
@@ -2349,7 +2421,7 @@ This section provides details for each class and property defined by STONES.
     is disjoint with
    </dt>
    <dd>
-    <a href="#StixSubType" title="https://cyberterrain.org/ns/stones#StixSubType">STIX Sub-Type</a> <sup class="type-c" title="class">c</sup>
+    <a href="#StixSubType" title="https://cyberterrain.org/ns/stones#StixSubType">STIX Sub-Type</a> <sup class="type-c" title="class">c</sup>, <a href="#ListItem" title="https://cyberterrain.org/ns/stones#ListItem">List Item</a> <sup class="type-c" title="class">c</sup>, <a href="#ListOrder" title="https://cyberterrain.org/ns/stones#ListOrder">List Order</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -3068,6 +3140,10 @@ This section provides details for each class and property defined by STONES.
   <li><a href="#installedSoftwareRefs" title="https://cyberterrain.org/ns/stones#installedSoftwareRefs"> <span>installed Software Refs</span> </a></li>
   <li><a href="#integrityLevel" title="https://cyberterrain.org/ns/stones#integrityLevel"> <span>integrity Level</span> </a></li>
   <li><a href="#killChainPhases" title="https://cyberterrain.org/ns/stones#killChainPhases"> <span>kill Chain Phases</span> </a></li>
+  <li><a href="#listItem" title="https://cyberterrain.org/ns/stones#listItem"> <span>list Item</span> </a></li>
+  <li><a href="#listOrder" title="https://cyberterrain.org/ns/stones#listOrder"> <span>list Order</span> </a></li>
+  <li><a href="#listProperty" title="https://cyberterrain.org/ns/stones#listProperty"> <span>list Property</span> </a></li>
+  <li><a href="#listRef" title="https://cyberterrain.org/ns/stones#listRef"> <span>list Ref</span> </a></li>
   <li><a href="#malwareTypes" title="https://cyberterrain.org/ns/stones#malwareTypes"> <span>malware Types</span> </a></li>
   <li><a href="#markingRef" title="https://cyberterrain.org/ns/stones#markingRef"> <span>marking Ref</span> </a></li>
   <li><a href="#messageBodyRef" title="https://cyberterrain.org/ns/stones#messageBodyRef"> <span>message Body Ref</span> </a></li>
@@ -4418,6 +4494,133 @@ This section provides details for each class and property defined by STONES.
     </dt>
     <dd>
      <a href="#KillChainPhase" title="https://cyberterrain.org/ns/stones#KillChainPhase">Kill Chain Phase</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="listItem">
+  <h3>list Item<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stones#listItem</p>
+  <div class="comment">
+   <span class="markdown">(not a STIX property: serialization fidelity)</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">One member of this ListOrder.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://cyberterrain.org/ns/stones#">https://cyberterrain.org/ns/stones#</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <p><strong>has characteristics: </strong> inverse functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ListOrder" title="https://cyberterrain.org/ns/stones#ListOrder">List Order</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#ListItem" title="https://cyberterrain.org/ns/stones#ListItem">List Item</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="listOrder">
+  <h3>list Order<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stones#listOrder</p>
+  <div class="comment">
+   <span class="markdown">(not a STIX property: serialization fidelity)</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">The recorded order of one of this object's list-valued properties.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://cyberterrain.org/ns/stones#">https://cyberterrain.org/ns/stones#</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#StixObject" title="https://cyberterrain.org/ns/stones#StixObject">STIX Object</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#ListOrder" title="https://cyberterrain.org/ns/stones#ListOrder">List Order</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="listProperty">
+  <h3>list Property<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stones#listProperty</p>
+  <div class="comment">
+   <span class="markdown">(not a STIX property: serialization fidelity)</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">The STONES property whose order this ListOrder records, e.g. stones:aliases (the property IRI used as an individual: OWL 2 punning).</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://cyberterrain.org/ns/stones#">https://cyberterrain.org/ns/stones#</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ListOrder" title="https://cyberterrain.org/ns/stones#ListOrder">List Order</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="listRef">
+  <h3>list Ref<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stones#listRef</p>
+  <div class="comment">
+   <span class="markdown">(not a STIX property: serialization fidelity)</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">The member, when it is an IRI (a reference, vocabulary value, external reference or kill-chain phase): the same IRI the list's property points to.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://cyberterrain.org/ns/stones#">https://cyberterrain.org/ns/stones#</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ListItem" title="https://cyberterrain.org/ns/stones#ListItem">List Item</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -6043,6 +6246,8 @@ This section provides details for each class and property defined by STONES.
   <li><a href="#lastObserved" title="https://cyberterrain.org/ns/stones#lastObserved"> <span>last Observed</span> </a></li>
   <li><a href="#lastSeen" title="https://cyberterrain.org/ns/stones#lastSeen"> <span>last Seen</span> </a></li>
   <li><a href="#latitude" title="https://cyberterrain.org/ns/stones#latitude"> <span>latitude</span> </a></li>
+  <li><a href="#listIndex" title="https://cyberterrain.org/ns/stones#listIndex"> <span>list Index</span> </a></li>
+  <li><a href="#listValue" title="https://cyberterrain.org/ns/stones#listValue"> <span>list Value</span> </a></li>
   <li><a href="#longitude" title="https://cyberterrain.org/ns/stones#longitude"> <span>longitude</span> </a></li>
   <li><a href="#machineHex" title="https://cyberterrain.org/ns/stones#machineHex"> <span>machine Hex</span> </a></li>
   <li><a href="#magicNumberHex" title="https://cyberterrain.org/ns/stones#magicNumberHex"> <span>magic Number Hex</span> </a></li>
@@ -6130,6 +6335,7 @@ This section provides details for each class and property defined by STONES.
   <li><a href="#tlp" title="https://cyberterrain.org/ns/stones#tlp"> <span>tlp</span> </a></li>
   <li><a href="#toolVersion" title="https://cyberterrain.org/ns/stones#toolVersion"> <span>tool Version</span> </a></li>
   <li><a href="#uid" title="https://cyberterrain.org/ns/stones#uid"> <span>uid</span> </a></li>
+  <li><a href="#unmodeledProperties" title="https://cyberterrain.org/ns/stones#unmodeledProperties"> <span>unmodeled Properties</span> </a></li>
   <li><a href="#url" title="https://cyberterrain.org/ns/stones#url"> <span>url</span> </a></li>
   <li><a href="#userId" title="https://cyberterrain.org/ns/stones#userId"> <span>user Id</span> </a></li>
   <li><a href="#validFrom" title="https://cyberterrain.org/ns/stones#validFrom"> <span>valid From</span> </a></li>
@@ -9305,6 +9511,70 @@ This section provides details for each class and property defined by STONES.
    </dl>
   </div>
  </div>
+ <div class="entity" id="listIndex">
+  <h3>list Index<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stones#listIndex</p>
+  <div class="comment">
+   <span class="markdown">(not a STIX property: serialization fidelity)</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">Zero-based position of this member in the list as it was in the STIX JSON.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://cyberterrain.org/ns/stones#">https://cyberterrain.org/ns/stones#</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ListItem" title="https://cyberterrain.org/ns/stones#ListItem">List Item</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#nonNegativeInteger" target="_blank" title="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">non Negative Integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="listValue">
+  <h3>list Value<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stones#listValue</p>
+  <div class="comment">
+   <span class="markdown">(not a STIX property: serialization fidelity)</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">The member, when it is a literal: the same literal the list's property has.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://cyberterrain.org/ns/stones#">https://cyberterrain.org/ns/stones#</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#ListItem" title="https://cyberterrain.org/ns/stones#ListItem">List Item</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="longitude">
   <h3>longitude<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://cyberterrain.org/ns/stones#longitude</p>
@@ -12099,6 +12369,41 @@ This section provides details for each class and property defined by STONES.
     </dt>
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#integer" target="_blank" title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="unmodeledProperties">
+  <h3>unmodeled Properties<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://cyberterrain.org/ns/stones#unmodeledProperties</p>
+  <div class="comment">
+   <span class="markdown">(not a STIX property: serialization fidelity)</span>
+  </div>
+  <div class="comment">
+   <span class="markdown">The STIX properties of this object that its STONES triples don't carry exactly, verbatim, as one JSON object (e.g. extensions, granular_markings, custom x_ properties). Kept so the STIX JSON can be regenerated exactly; not queryable as structure.</span>
+  </div>
+  <dl class="definedBy">
+   <dt>
+    Is defined by
+   </dt>
+   <dd>
+    <a href="https://cyberterrain.org/ns/stones#">https://cyberterrain.org/ns/stones#</a>
+   </dd>
+  </dl>
+  <div class="description">
+   <p><strong>has characteristics: </strong> functional</p>
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#StixObject" title="https://cyberterrain.org/ns/stones#StixObject">STIX Object</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
     </dd>
    </dl>
   </div>

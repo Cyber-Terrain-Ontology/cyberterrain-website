@@ -1127,6 +1127,18 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
+      "@id" : "https://cyberterrain.org/ns/stones#ListItem"
+    }, {
+      "@id" : "https://cyberterrain.org/ns/stones#ListOrder"
+    }, {
+      "@id" : "https://cyberterrain.org/ns/stones#StixObject"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid300",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
       "@id" : "https://cyberterrain.org/ns/stones#StixBundle"
     }, {
       "@id" : "https://cyberterrain.org/ns/stones#StixCoreObject"
@@ -1579,10 +1591,10 @@
     "@id" : "https://cyberterrain.org/ns/stones/0.1.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://cyberterrain.org/ns/stones/0.2.0"
+    "@id" : "https://cyberterrain.org/ns/stones/0.3.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.2.0"
+    "@value" : "0.3.0"
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stones#AccountTypeVocabulary",
@@ -2166,6 +2178,38 @@
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Language Content Object"
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stones#ListItem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "One member of a ListOrder: its position (stones:listIndex) and the value the list's property has for it (stones:listValue for a literal, stones:listRef for an IRI)."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "List Item"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "Index nodes rather than an rdf:List because OWL 2 DL reserves rdf:first and rdf:rest, and STONES data is consistency-checked with OWL reasoners. Not aligned to STONEWORK."
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stones#ListOrder",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "The order of one list-valued STIX property on one STIX object, as it was in the STIX JSON. STONES writes a list's members as separate triples, which carry no order; a ListOrder records it, one ListItem per member."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "List Order"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "Serialization fidelity, not a STIX concept or a claim about the cyber domain: it exists so a STIX document can be regenerated exactly from its STONES triples. Not aligned to STONEWORK. Written only where the order differs from the members sorted, which is the order a reader gets without one."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stones#Location",
@@ -5370,6 +5414,105 @@
     "@value" : "Latitude in decimal degrees, range -90 to 90. Required when longitude is present."
   } ]
 }, {
+  "@id" : "https://cyberterrain.org/ns/stones#listIndex",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "(not a STIX property: serialization fidelity)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#ListItem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "Zero-based position of this member in the list as it was in the STIX JSON."
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stones#listItem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#InverseFunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "(not a STIX property: serialization fidelity)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#ListOrder"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#ListItem"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "One member of this ListOrder."
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stones#listOrder",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "(not a STIX property: serialization fidelity)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#StixObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#ListOrder"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "The recorded order of one of this object's list-valued properties."
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stones#listProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "(not a STIX property: serialization fidelity)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#ListOrder"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "The STONES property whose order this ListOrder records, e.g. stones:aliases (the property IRI used as an individual: OWL 2 punning)."
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stones#listRef",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "(not a STIX property: serialization fidelity)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#ListItem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "The member, when it is an IRI (a reference, vocabulary value, external reference or kill-chain phase): the same IRI the list's property points to."
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stones#listValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "(not a STIX property: serialization fidelity)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#ListItem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "The member, when it is a literal: the same literal the list's property has."
+  } ]
+}, {
   "@id" : "https://cyberterrain.org/ns/stones#longitude",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -7606,6 +7749,27 @@
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "Numeric UNIX user ID (UID)."
+  } ]
+}, {
+  "@id" : "https://cyberterrain.org/ns/stones#unmodeledProperties",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "(not a STIX property: serialization fidelity)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#StixObject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "The STIX properties of this object that its STONES triples don't carry exactly, verbatim, as one JSON object (e.g. extensions, granular_markings, custom x_ properties). Kept so the STIX JSON can be regenerated exactly; not queryable as structure."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#scopeNote" : [ {
+    "@value" : "An xsd:string rather than rdf:JSON, which is not in the OWL 2 datatype map. Each key here is a candidate for a modeled STONES property."
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stones#url",
