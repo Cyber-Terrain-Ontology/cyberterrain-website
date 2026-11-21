@@ -7,7 +7,7 @@
       "en" : "STONES — STIX ONtology Expression System"
     },
     "iri" : "https://cyberterrain.org/ns/stones#",
-    "version" : "0.3.0",
+    "version" : "0.3.1",
     "author" : [ "Hohimer Intelligence Strategies LLC" ],
     "description" : {
       "en" : "An OWL 2 ontology modelling the STIX 2.1 specification. Provides a class hierarchy for all STIX Domain Objects (SDOs), Cyber Observable Objects (SCOs), Relationship Objects (SROs), Meta Objects, and structured sub-types, together with datatype and object properties covering all standard STIX properties."
@@ -25,7 +25,7 @@
       "priorVersion" : [ {
         "identifier" : "priorVersion",
         "language" : "undefined",
-        "value" : "https://cyberterrain.org/ns/stones/0.1.0",
+        "value" : "https://cyberterrain.org/ns/stones/0.3.0",
         "type" : "iri"
       } ],
       "creator" : [ {
@@ -37,7 +37,7 @@
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
-        "value" : "0.3.0",
+        "value" : "0.3.1",
         "type" : "label"
       } ],
       "title" : [ {
@@ -302,7 +302,7 @@
     "id" : "247",
     "type" : "owl:Class"
   }, {
-    "id" : "33",
+    "id" : "36",
     "type" : "owl:intersectionOf"
   }, {
     "id" : "259",
@@ -317,7 +317,7 @@
     "id" : "263",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "99",
+    "id" : "97",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "267",
@@ -395,7 +395,7 @@
     "id" : "176",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "199",
+    "id" : "198",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "344",
@@ -515,7 +515,7 @@
     "id" : "402",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "198",
+    "id" : "197",
     "type" : "owl:Class"
   }, {
     "id" : "403",
@@ -647,7 +647,7 @@
     "id" : "293",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "451",
+    "id" : "453",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "493",
@@ -668,7 +668,7 @@
     "id" : "497",
     "type" : "owl:Class"
   }, {
-    "id" : "35",
+    "id" : "33",
     "type" : "owl:intersectionOf"
   }, {
     "id" : "335",
@@ -713,7 +713,7 @@
     "id" : "512",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "97",
+    "id" : "99",
     "type" : "owl:Class"
   }, {
     "id" : "411",
@@ -728,10 +728,10 @@
     "id" : "31",
     "type" : "owl:Class"
   }, {
-    "id" : "93",
+    "id" : "42",
     "type" : "owl:intersectionOf"
   }, {
-    "id" : "42",
+    "id" : "93",
     "type" : "owl:intersectionOf"
   }, {
     "id" : "141",
@@ -785,7 +785,7 @@
     "id" : "38",
     "type" : "owl:Class"
   }, {
-    "id" : "171",
+    "id" : "172",
     "type" : "owl:intersectionOf"
   }, {
     "id" : "130",
@@ -794,7 +794,7 @@
     "id" : "266",
     "type" : "owl:Class"
   }, {
-    "id" : "453",
+    "id" : "451",
     "type" : "owl:intersectionOf"
   }, {
     "id" : "131",
@@ -812,7 +812,7 @@
     "id" : "552",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "36",
+    "id" : "34",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "174",
@@ -830,7 +830,7 @@
     "id" : "523",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "206",
+    "id" : "208",
     "type" : "owl:Class"
   }, {
     "id" : "477",
@@ -842,7 +842,7 @@
     "id" : "624",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "591",
+    "id" : "589",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "91",
@@ -860,10 +860,10 @@
     "id" : "353",
     "type" : "owl:Class"
   }, {
-    "id" : "234",
+    "id" : "48",
     "type" : "owl:Class"
   }, {
-    "id" : "48",
+    "id" : "234",
     "type" : "owl:Class"
   }, {
     "id" : "50",
@@ -884,7 +884,7 @@
     "id" : "636",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "586",
+    "id" : "587",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "136",
@@ -944,7 +944,7 @@
     "id" : "351",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "406",
+    "id" : "405",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "597",
@@ -968,7 +968,7 @@
     "id" : "359",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "208",
+    "id" : "206",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "669",
@@ -1361,16 +1361,16 @@
       "IRI-based" : "ThreatActorSophisticationVocabulary"
     },
     "individuals" : [ {
-      "iri" : "https://cyberterrain.org/ns/stonex#_advanced",
-      "baseIri" : "https://cyberterrain.org/ns/stonex",
-      "labels" : {
-        "IRI-based" : "_advanced"
-      }
-    }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_none",
       "baseIri" : "https://cyberterrain.org/ns/stonex",
       "labels" : {
         "IRI-based" : "_none"
+      }
+    }, {
+      "iri" : "https://cyberterrain.org/ns/stonex#_advanced",
+      "baseIri" : "https://cyberterrain.org/ns/stonex",
+      "labels" : {
+        "IRI-based" : "_advanced"
       }
     }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_strategic",
@@ -1553,7 +1553,7 @@
     "label" : {
       "IRI-based" : "StixCyberobservableObject"
     },
-    "subClasses" : [ "2", "6", "9", "18", "21", "24", "27", "130", "131", "132", "133", "93", "42", "134", "33", "135", "136", "128" ],
+    "subClasses" : [ "2", "6", "9", "18", "21", "24", "27", "130", "131", "132", "133", "93", "42", "134", "36", "135", "136", "128" ],
     "id" : "3",
     "superClasses" : [ "129" ]
   }, {
@@ -1600,6 +1600,12 @@
         "IRI-based" : "_firewall"
       }
     }, {
+      "iri" : "https://cyberterrain.org/ns/stonex#_reconnaissance",
+      "baseIri" : "https://cyberterrain.org/ns/stonex",
+      "labels" : {
+        "IRI-based" : "_reconnaissance"
+      }
+    }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_anonymization",
       "baseIri" : "https://cyberterrain.org/ns/stonex",
       "labels" : {
@@ -1610,12 +1616,6 @@
       "baseIri" : "https://cyberterrain.org/ns/stonex",
       "labels" : {
         "IRI-based" : "_hosting-target-lists"
-      }
-    }, {
-      "iri" : "https://cyberterrain.org/ns/stonex#_reconnaissance",
-      "baseIri" : "https://cyberterrain.org/ns/stonex",
-      "labels" : {
-        "IRI-based" : "_reconnaissance"
       }
     }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_command-and-control",
@@ -1680,16 +1680,16 @@
       "IRI-based" : "AccountTypeVocabulary"
     },
     "individuals" : [ {
-      "iri" : "https://cyberterrain.org/ns/stonex#_windows-local",
-      "baseIri" : "https://cyberterrain.org/ns/stonex",
-      "labels" : {
-        "IRI-based" : "_windows-local"
-      }
-    }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_unix",
       "baseIri" : "https://cyberterrain.org/ns/stonex",
       "labels" : {
         "IRI-based" : "_unix"
+      }
+    }, {
+      "iri" : "https://cyberterrain.org/ns/stonex#_windows-local",
+      "baseIri" : "https://cyberterrain.org/ns/stonex",
+      "labels" : {
+        "IRI-based" : "_windows-local"
       }
     }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_windows-domain",
@@ -1704,16 +1704,16 @@
         "IRI-based" : "_twitter"
       }
     }, {
-      "iri" : "https://cyberterrain.org/ns/stonex#_openid",
-      "baseIri" : "https://cyberterrain.org/ns/stonex",
-      "labels" : {
-        "IRI-based" : "_openid"
-      }
-    }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_skype",
       "baseIri" : "https://cyberterrain.org/ns/stonex",
       "labels" : {
         "IRI-based" : "_skype"
+      }
+    }, {
+      "iri" : "https://cyberterrain.org/ns/stonex#_openid",
+      "baseIri" : "https://cyberterrain.org/ns/stonex",
+      "labels" : {
+        "IRI-based" : "_openid"
       }
     }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_facebook",
@@ -1728,16 +1728,16 @@
         "IRI-based" : "_nis"
       }
     }, {
-      "iri" : "https://cyberterrain.org/ns/stonex#_radius",
-      "baseIri" : "https://cyberterrain.org/ns/stonex",
-      "labels" : {
-        "IRI-based" : "_radius"
-      }
-    }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_ldap",
       "baseIri" : "https://cyberterrain.org/ns/stonex",
       "labels" : {
         "IRI-based" : "_ldap"
+      }
+    }, {
+      "iri" : "https://cyberterrain.org/ns/stonex#_radius",
+      "baseIri" : "https://cyberterrain.org/ns/stonex",
+      "labels" : {
+        "IRI-based" : "_radius"
       }
     }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_tacacs",
@@ -2078,16 +2078,16 @@
       "IRI-based" : "MalwareTypeVocabulary"
     },
     "individuals" : [ {
-      "iri" : "https://cyberterrain.org/ns/stonex#_bootkit",
-      "baseIri" : "https://cyberterrain.org/ns/stonex",
-      "labels" : {
-        "IRI-based" : "_bootkit"
-      }
-    }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_unknown",
       "baseIri" : "https://cyberterrain.org/ns/stonex",
       "labels" : {
         "IRI-based" : "_unknown"
+      }
+    }, {
+      "iri" : "https://cyberterrain.org/ns/stonex#_bootkit",
+      "baseIri" : "https://cyberterrain.org/ns/stonex",
+      "labels" : {
+        "IRI-based" : "_bootkit"
       }
     }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_dropper",
@@ -2108,16 +2108,16 @@
         "IRI-based" : "_ddos"
       }
     }, {
-      "iri" : "https://cyberterrain.org/ns/stonex#_virus",
-      "baseIri" : "https://cyberterrain.org/ns/stonex",
-      "labels" : {
-        "IRI-based" : "_virus"
-      }
-    }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_wiper",
       "baseIri" : "https://cyberterrain.org/ns/stonex",
       "labels" : {
         "IRI-based" : "_wiper"
+      }
+    }, {
+      "iri" : "https://cyberterrain.org/ns/stonex#_virus",
+      "baseIri" : "https://cyberterrain.org/ns/stonex",
+      "labels" : {
+        "IRI-based" : "_virus"
       }
     }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_spyware",
@@ -2168,16 +2168,16 @@
         "IRI-based" : "_rootkit"
       }
     }, {
-      "iri" : "https://cyberterrain.org/ns/stonex#_ransomware",
-      "baseIri" : "https://cyberterrain.org/ns/stonex",
-      "labels" : {
-        "IRI-based" : "_ransomware"
-      }
-    }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_screen-capture",
       "baseIri" : "https://cyberterrain.org/ns/stonex",
       "labels" : {
         "IRI-based" : "_screen-capture"
+      }
+    }, {
+      "iri" : "https://cyberterrain.org/ns/stonex#_ransomware",
+      "baseIri" : "https://cyberterrain.org/ns/stonex",
+      "labels" : {
+        "IRI-based" : "_ransomware"
       }
     }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_worm",
@@ -2192,16 +2192,16 @@
         "IRI-based" : "_downloader"
       }
     }, {
-      "iri" : "https://cyberterrain.org/ns/stonex#_webshell",
-      "baseIri" : "https://cyberterrain.org/ns/stonex",
-      "labels" : {
-        "IRI-based" : "_webshell"
-      }
-    }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_trojan",
       "baseIri" : "https://cyberterrain.org/ns/stonex",
       "labels" : {
         "IRI-based" : "_trojan"
+      }
+    }, {
+      "iri" : "https://cyberterrain.org/ns/stonex#_webshell",
+      "baseIri" : "https://cyberterrain.org/ns/stonex",
+      "labels" : {
+        "IRI-based" : "_webshell"
       }
     }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_resource-exploitation",
@@ -2241,7 +2241,7 @@
     },
     "intersection" : [ "31" ],
     "attributes" : [ "intersection" ],
-    "id" : "33",
+    "id" : "36",
     "superClasses" : [ "3" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
@@ -2319,28 +2319,28 @@
         "IRI-based" : "_utilities"
       }
     }, {
-      "iri" : "https://cyberterrain.org/ns/stonex#_water",
-      "baseIri" : "https://cyberterrain.org/ns/stonex",
-      "labels" : {
-        "IRI-based" : "_water"
-      }
-    }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_pharmaceuticals",
       "baseIri" : "https://cyberterrain.org/ns/stonex",
       "labels" : {
         "IRI-based" : "_pharmaceuticals"
       }
     }, {
-      "iri" : "https://cyberterrain.org/ns/stonex#_chemical",
+      "iri" : "https://cyberterrain.org/ns/stonex#_water",
       "baseIri" : "https://cyberterrain.org/ns/stonex",
       "labels" : {
-        "IRI-based" : "_chemical"
+        "IRI-based" : "_water"
       }
     }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_aerospace",
       "baseIri" : "https://cyberterrain.org/ns/stonex",
       "labels" : {
         "IRI-based" : "_aerospace"
+      }
+    }, {
+      "iri" : "https://cyberterrain.org/ns/stonex#_chemical",
+      "baseIri" : "https://cyberterrain.org/ns/stonex",
+      "labels" : {
+        "IRI-based" : "_chemical"
       }
     }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_communications",
@@ -2409,10 +2409,10 @@
         "IRI-based" : "_manufacturing"
       }
     }, {
-      "iri" : "https://cyberterrain.org/ns/stonex#_technology",
+      "iri" : "https://cyberterrain.org/ns/stonex#_government",
       "baseIri" : "https://cyberterrain.org/ns/stonex",
       "labels" : {
-        "IRI-based" : "_technology"
+        "IRI-based" : "_government"
       }
     }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_nuclear",
@@ -2421,10 +2421,10 @@
         "IRI-based" : "_nuclear"
       }
     }, {
-      "iri" : "https://cyberterrain.org/ns/stonex#_government",
+      "iri" : "https://cyberterrain.org/ns/stonex#_technology",
       "baseIri" : "https://cyberterrain.org/ns/stonex",
       "labels" : {
-        "IRI-based" : "_government"
+        "IRI-based" : "_technology"
       }
     }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_construction",
@@ -2487,7 +2487,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#float",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "99",
+    "id" : "97",
     "label" : {
       "IRI-based" : "float"
     }
@@ -2598,7 +2598,7 @@
     "label" : {
       "IRI-based" : "StixRelationshipObject"
     },
-    "subClasses" : [ "35", "210" ],
+    "subClasses" : [ "33", "210" ],
     "id" : "192",
     "superClasses" : [ "129" ]
   }, {
@@ -2661,16 +2661,16 @@
       "IRI-based" : "ToolTypeVocabulary"
     },
     "individuals" : [ {
-      "iri" : "https://cyberterrain.org/ns/stonex#_unknown",
-      "baseIri" : "https://cyberterrain.org/ns/stonex",
-      "labels" : {
-        "IRI-based" : "_unknown"
-      }
-    }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_credential-exploitation",
       "baseIri" : "https://cyberterrain.org/ns/stonex",
       "labels" : {
         "IRI-based" : "_credential-exploitation"
+      }
+    }, {
+      "iri" : "https://cyberterrain.org/ns/stonex#_unknown",
+      "baseIri" : "https://cyberterrain.org/ns/stonex",
+      "labels" : {
+        "IRI-based" : "_unknown"
       }
     }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_vulnerability-scanning",
@@ -2685,28 +2685,28 @@
         "IRI-based" : "_remote-access"
       }
     }, {
-      "iri" : "https://cyberterrain.org/ns/stonex#_denial-of-service",
-      "baseIri" : "https://cyberterrain.org/ns/stonex",
-      "labels" : {
-        "IRI-based" : "_denial-of-service"
-      }
-    }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_exploitation",
       "baseIri" : "https://cyberterrain.org/ns/stonex",
       "labels" : {
         "IRI-based" : "_exploitation"
       }
     }, {
-      "iri" : "https://cyberterrain.org/ns/stonex#_network-capture",
+      "iri" : "https://cyberterrain.org/ns/stonex#_denial-of-service",
       "baseIri" : "https://cyberterrain.org/ns/stonex",
       "labels" : {
-        "IRI-based" : "_network-capture"
+        "IRI-based" : "_denial-of-service"
       }
     }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_information-gathering",
       "baseIri" : "https://cyberterrain.org/ns/stonex",
       "labels" : {
         "IRI-based" : "_information-gathering"
+      }
+    }, {
+      "iri" : "https://cyberterrain.org/ns/stonex#_network-capture",
+      "baseIri" : "https://cyberterrain.org/ns/stonex",
+      "labels" : {
+        "IRI-based" : "_network-capture"
       }
     } ],
     "id" : "229",
@@ -2846,7 +2846,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "199",
+    "id" : "198",
     "label" : {
       "IRI-based" : "string"
     }
@@ -3250,7 +3250,7 @@
     "label" : {
       "IRI-based" : "X509V3Extensions"
     },
-    "id" : "198",
+    "id" : "197",
     "superClasses" : [ "212" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
@@ -3726,7 +3726,7 @@
       "definition" : [ {
         "identifier" : "definition",
         "language" : "undefined",
-        "value" : "Abstract class for STIX Core Objects, comprising SDOs, SCOs, and SROs. Core objects carry a type-qualified identifier and created/modified timestamps, and may be referenced by other objects.",
+        "value" : "Abstract class for STIX Core Objects, comprising SDOs, SCOs, and SROs. Core objects carry a type-qualified identifier and may be referenced by other objects. SDOs and SROs also require created and modified timestamps; SCOs have neither.",
         "type" : "label"
       } ]
     },
@@ -3760,7 +3760,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "451",
+    "id" : "453",
     "label" : {
       "IRI-based" : "boolean"
     }
@@ -3905,7 +3905,7 @@
     },
     "intersection" : [ "31" ],
     "attributes" : [ "intersection" ],
-    "id" : "35",
+    "id" : "33",
     "superClasses" : [ "192" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -4236,7 +4236,7 @@
     "label" : {
       "IRI-based" : "WindowsRegistryValue"
     },
-    "id" : "97",
+    "id" : "99",
     "superClasses" : [ "212" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#integer",
@@ -4289,37 +4289,6 @@
     "subClasses" : [ "129", "518", "30" ],
     "id" : "31"
   }, {
-    "iri" : "https://cyberterrain.org/ns/stones#UserAccountObject",
-    "baseIri" : "https://cyberterrain.org/ns/stones",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://cyberterrain.org/ns/stones#",
-        "type" : "iri"
-      } ],
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "en",
-        "value" : "User Account Object",
-        "type" : "label"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "undefined",
-        "value" : "Represents a user account on a system or service, including local OS accounts, cloud accounts, and social media accounts. Supports a unix-account extension for POSIX attributes.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "UserAccountObject"
-    },
-    "intersection" : [ "31" ],
-    "attributes" : [ "intersection" ],
-    "id" : "93",
-    "superClasses" : [ "3" ]
-  }, {
     "iri" : "https://cyberterrain.org/ns/stones#WindowsRegistryKeyObject",
     "baseIri" : "https://cyberterrain.org/ns/stones",
     "instances" : 0,
@@ -4349,6 +4318,37 @@
     "intersection" : [ "31" ],
     "attributes" : [ "intersection" ],
     "id" : "42",
+    "superClasses" : [ "3" ]
+  }, {
+    "iri" : "https://cyberterrain.org/ns/stones#UserAccountObject",
+    "baseIri" : "https://cyberterrain.org/ns/stones",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://cyberterrain.org/ns/stones#",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "User Account Object",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "Represents a user account on a system or service, including local OS accounts, cloud accounts, and social media accounts. Supports a unix-account extension for POSIX attributes.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "UserAccountObject"
+    },
+    "intersection" : [ "31" ],
+    "attributes" : [ "intersection" ],
+    "id" : "93",
     "superClasses" : [ "3" ]
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#IntrusionSet",
@@ -4472,16 +4472,16 @@
       "IRI-based" : "MalwareCapabilitesVocabulary"
     },
     "individuals" : [ {
-      "iri" : "https://cyberterrain.org/ns/stonex#_accesses-remote-machines",
-      "baseIri" : "https://cyberterrain.org/ns/stonex",
-      "labels" : {
-        "IRI-based" : "_accesses-remote-machines"
-      }
-    }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_probes-network-environment",
       "baseIri" : "https://cyberterrain.org/ns/stonex",
       "labels" : {
         "IRI-based" : "_probes-network-environment"
+      }
+    }, {
+      "iri" : "https://cyberterrain.org/ns/stonex#_accesses-remote-machines",
+      "baseIri" : "https://cyberterrain.org/ns/stonex",
+      "labels" : {
+        "IRI-based" : "_accesses-remote-machines"
       }
     }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_captures-input-peripherals",
@@ -4538,12 +4538,6 @@
         "IRI-based" : "_steals-authentication-credentials"
       }
     }, {
-      "iri" : "https://cyberterrain.org/ns/stonex#_exfiltrates-data",
-      "baseIri" : "https://cyberterrain.org/ns/stonex",
-      "labels" : {
-        "IRI-based" : "_exfiltrates-data"
-      }
-    }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_installs-other-components",
       "baseIri" : "https://cyberterrain.org/ns/stonex",
       "labels" : {
@@ -4560,6 +4554,12 @@
       "baseIri" : "https://cyberterrain.org/ns/stonex",
       "labels" : {
         "IRI-based" : "_emails-spam"
+      }
+    }, {
+      "iri" : "https://cyberterrain.org/ns/stonex#_exfiltrates-data",
+      "baseIri" : "https://cyberterrain.org/ns/stonex",
+      "labels" : {
+        "IRI-based" : "_exfiltrates-data"
       }
     }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_escalates-privileges",
@@ -4580,12 +4580,6 @@
         "IRI-based" : "_fingerprints-host"
       }
     }, {
-      "iri" : "https://cyberterrain.org/ns/stonex#_determines-c2-server",
-      "baseIri" : "https://cyberterrain.org/ns/stonex",
-      "labels" : {
-        "IRI-based" : "_determines-c2-server"
-      }
-    }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_anti-emulation",
       "baseIri" : "https://cyberterrain.org/ns/stonex",
       "labels" : {
@@ -4596,6 +4590,12 @@
       "baseIri" : "https://cyberterrain.org/ns/stonex",
       "labels" : {
         "IRI-based" : "_degrades-system-updates"
+      }
+    }, {
+      "iri" : "https://cyberterrain.org/ns/stonex#_determines-c2-server",
+      "baseIri" : "https://cyberterrain.org/ns/stonex",
+      "labels" : {
+        "IRI-based" : "_determines-c2-server"
       }
     }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_self-modifies",
@@ -4710,16 +4710,16 @@
         "IRI-based" : "_insider-accidental"
       }
     }, {
-      "iri" : "https://cyberterrain.org/ns/stonex#_crime-syndicate",
-      "baseIri" : "https://cyberterrain.org/ns/stonex",
-      "labels" : {
-        "IRI-based" : "_crime-syndicate"
-      }
-    }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_insider-disgruntled",
       "baseIri" : "https://cyberterrain.org/ns/stonex",
       "labels" : {
         "IRI-based" : "_insider-disgruntled"
+      }
+    }, {
+      "iri" : "https://cyberterrain.org/ns/stonex#_crime-syndicate",
+      "baseIri" : "https://cyberterrain.org/ns/stonex",
+      "labels" : {
+        "IRI-based" : "_crime-syndicate"
       }
     }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_activist",
@@ -4728,16 +4728,16 @@
         "IRI-based" : "_activist"
       }
     }, {
-      "iri" : "https://cyberterrain.org/ns/stonex#_spy",
-      "baseIri" : "https://cyberterrain.org/ns/stonex",
-      "labels" : {
-        "IRI-based" : "_spy"
-      }
-    }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_hacker",
       "baseIri" : "https://cyberterrain.org/ns/stonex",
       "labels" : {
         "IRI-based" : "_hacker"
+      }
+    }, {
+      "iri" : "https://cyberterrain.org/ns/stonex#_spy",
+      "baseIri" : "https://cyberterrain.org/ns/stonex",
+      "labels" : {
+        "IRI-based" : "_spy"
       }
     }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_nation-state",
@@ -4821,28 +4821,28 @@
         "IRI-based" : "_SHA3-224"
       }
     }, {
-      "iri" : "https://cyberterrain.org/ns/stonex#_SHA-256",
-      "baseIri" : "https://cyberterrain.org/ns/stonex",
-      "labels" : {
-        "IRI-based" : "_SHA-256"
-      }
-    }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_MD6",
       "baseIri" : "https://cyberterrain.org/ns/stonex",
       "labels" : {
         "IRI-based" : "_MD6"
       }
     }, {
-      "iri" : "https://cyberterrain.org/ns/stonex#_SHA3-512",
+      "iri" : "https://cyberterrain.org/ns/stonex#_SHA-256",
       "baseIri" : "https://cyberterrain.org/ns/stonex",
       "labels" : {
-        "IRI-based" : "_SHA3-512"
+        "IRI-based" : "_SHA-256"
       }
     }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_RIPEMD-160",
       "baseIri" : "https://cyberterrain.org/ns/stonex",
       "labels" : {
         "IRI-based" : "_RIPEMD-160"
+      }
+    }, {
+      "iri" : "https://cyberterrain.org/ns/stonex#_SHA3-512",
+      "baseIri" : "https://cyberterrain.org/ns/stonex",
+      "labels" : {
+        "IRI-based" : "_SHA3-512"
       }
     }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_MD5",
@@ -5161,7 +5161,7 @@
     },
     "intersection" : [ "31" ],
     "attributes" : [ "intersection" ],
-    "id" : "171",
+    "id" : "172",
     "superClasses" : [ "48" ]
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#IPv4AddressObject",
@@ -5208,16 +5208,16 @@
         "IRI-based" : "_tool"
       }
     }, {
-      "iri" : "https://cyberterrain.org/ns/stonex#_observed-data",
-      "baseIri" : "https://cyberterrain.org/ns/stonex",
-      "labels" : {
-        "IRI-based" : "_observed-data"
-      }
-    }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_threat-report",
       "baseIri" : "https://cyberterrain.org/ns/stonex",
       "labels" : {
         "IRI-based" : "_threat-report"
+      }
+    }, {
+      "iri" : "https://cyberterrain.org/ns/stonex#_observed-data",
+      "baseIri" : "https://cyberterrain.org/ns/stonex",
+      "labels" : {
+        "IRI-based" : "_observed-data"
       }
     }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_identity",
@@ -5256,16 +5256,16 @@
         "IRI-based" : "_vulnerability"
       }
     }, {
-      "iri" : "https://cyberterrain.org/ns/stonex#_indicator",
-      "baseIri" : "https://cyberterrain.org/ns/stonex",
-      "labels" : {
-        "IRI-based" : "_indicator"
-      }
-    }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_threat-actor",
       "baseIri" : "https://cyberterrain.org/ns/stonex",
       "labels" : {
         "IRI-based" : "_threat-actor"
+      }
+    }, {
+      "iri" : "https://cyberterrain.org/ns/stonex#_indicator",
+      "baseIri" : "https://cyberterrain.org/ns/stonex",
+      "labels" : {
+        "IRI-based" : "_indicator"
       }
     } ],
     "id" : "266",
@@ -5299,7 +5299,7 @@
     },
     "intersection" : [ "31" ],
     "attributes" : [ "intersection" ],
-    "id" : "453",
+    "id" : "451",
     "superClasses" : [ "48" ]
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#DomainNameObject",
@@ -5431,7 +5431,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "36",
+    "id" : "34",
     "label" : {
       "IRI-based" : "boolean"
     }
@@ -5497,7 +5497,7 @@
     "label" : {
       "IRI-based" : "HashEntry"
     },
-    "id" : "206",
+    "id" : "208",
     "superClasses" : [ "212" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
@@ -5545,7 +5545,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "591",
+    "id" : "589",
     "label" : {
       "IRI-based" : "string"
     }
@@ -5654,7 +5654,7 @@
     "label" : {
       "IRI-based" : "StixSubType"
     },
-    "subClasses" : [ "497", "485", "198", "328", "211", "206", "409", "97", "386" ],
+    "subClasses" : [ "497", "485", "197", "328", "211", "208", "409", "99", "386" ],
     "id" : "212"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#Vocabulary",
@@ -5665,6 +5665,36 @@
     },
     "subClasses" : [ "101", "38" ],
     "id" : "353"
+  }, {
+    "iri" : "https://cyberterrain.org/ns/stones#StixDomainObject",
+    "baseIri" : "https://cyberterrain.org/ns/stones",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://cyberterrain.org/ns/stones#",
+        "type" : "iri"
+      } ],
+      "prefLabel" : [ {
+        "identifier" : "prefLabel",
+        "language" : "en",
+        "value" : "STIX Domain Object",
+        "type" : "label"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "Abstract class for STIX Domain Objects (SDOs), which represent modelled cyber threat intelligence concepts such as malware, campaigns, threat actors, and vulnerabilities.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "StixDomainObject"
+    },
+    "subClasses" : [ "304", "254", "82", "451", "481", "279", "284", "428", "47", "317", "126", "172", "438", "167", "88", "447", "45", "141" ],
+    "id" : "48",
+    "superClasses" : [ "129" ]
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#ImplementationLanguageVocabulary",
     "baseIri" : "https://cyberterrain.org/ns/stones",
@@ -5709,16 +5739,16 @@
         "IRI-based" : "_javascript"
       }
     }, {
-      "iri" : "https://cyberterrain.org/ns/stonex#_applescript",
-      "baseIri" : "https://cyberterrain.org/ns/stonex",
-      "labels" : {
-        "IRI-based" : "_applescript"
-      }
-    }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_go",
       "baseIri" : "https://cyberterrain.org/ns/stonex",
       "labels" : {
         "IRI-based" : "_go"
+      }
+    }, {
+      "iri" : "https://cyberterrain.org/ns/stonex#_applescript",
+      "baseIri" : "https://cyberterrain.org/ns/stonex",
+      "labels" : {
+        "IRI-based" : "_applescript"
       }
     }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_scala",
@@ -5739,22 +5769,28 @@
         "IRI-based" : "_bash"
       }
     }, {
-      "iri" : "https://cyberterrain.org/ns/stonex#_python",
-      "baseIri" : "https://cyberterrain.org/ns/stonex",
-      "labels" : {
-        "IRI-based" : "_python"
-      }
-    }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_ruby",
       "baseIri" : "https://cyberterrain.org/ns/stonex",
       "labels" : {
         "IRI-based" : "_ruby"
       }
     }, {
+      "iri" : "https://cyberterrain.org/ns/stonex#_python",
+      "baseIri" : "https://cyberterrain.org/ns/stonex",
+      "labels" : {
+        "IRI-based" : "_python"
+      }
+    }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_visual-basic",
       "baseIri" : "https://cyberterrain.org/ns/stonex",
       "labels" : {
         "IRI-based" : "_visual-basic"
+      }
+    }, {
+      "iri" : "https://cyberterrain.org/ns/stonex#_php",
+      "baseIri" : "https://cyberterrain.org/ns/stonex",
+      "labels" : {
+        "IRI-based" : "_php"
       }
     }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_swift",
@@ -5769,22 +5805,16 @@
         "IRI-based" : "_lua"
       }
     }, {
-      "iri" : "https://cyberterrain.org/ns/stonex#_php",
+      "iri" : "https://cyberterrain.org/ns/stonex#_perl",
       "baseIri" : "https://cyberterrain.org/ns/stonex",
       "labels" : {
-        "IRI-based" : "_php"
+        "IRI-based" : "_perl"
       }
     }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_powershell",
       "baseIri" : "https://cyberterrain.org/ns/stonex",
       "labels" : {
         "IRI-based" : "_powershell"
-      }
-    }, {
-      "iri" : "https://cyberterrain.org/ns/stonex#_perl",
-      "baseIri" : "https://cyberterrain.org/ns/stonex",
-      "labels" : {
-        "IRI-based" : "_perl"
       }
     }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_c-plus-plus",
@@ -5801,36 +5831,6 @@
     } ],
     "id" : "234",
     "superClasses" : [ "101" ]
-  }, {
-    "iri" : "https://cyberterrain.org/ns/stones#StixDomainObject",
-    "baseIri" : "https://cyberterrain.org/ns/stones",
-    "instances" : 0,
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://cyberterrain.org/ns/stones#",
-        "type" : "iri"
-      } ],
-      "prefLabel" : [ {
-        "identifier" : "prefLabel",
-        "language" : "en",
-        "value" : "STIX Domain Object",
-        "type" : "label"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "undefined",
-        "value" : "Abstract class for STIX Domain Objects (SDOs), which represent modelled cyber threat intelligence concepts such as malware, campaigns, threat actors, and vulnerabilities.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "StixDomainObject"
-    },
-    "subClasses" : [ "304", "254", "82", "453", "481", "279", "284", "428", "47", "317", "126", "171", "438", "167", "88", "447", "45", "141" ],
-    "id" : "48",
-    "superClasses" : [ "129" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
@@ -5876,7 +5876,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "586",
+    "id" : "587",
     "label" : {
       "IRI-based" : "string"
     }
@@ -6072,16 +6072,16 @@
       "IRI-based" : "IndicatorTypeVocabulary"
     },
     "individuals" : [ {
-      "iri" : "https://cyberterrain.org/ns/stonex#_unknown",
-      "baseIri" : "https://cyberterrain.org/ns/stonex",
-      "labels" : {
-        "IRI-based" : "_unknown"
-      }
-    }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_benign",
       "baseIri" : "https://cyberterrain.org/ns/stonex",
       "labels" : {
         "IRI-based" : "_benign"
+      }
+    }, {
+      "iri" : "https://cyberterrain.org/ns/stonex#_unknown",
+      "baseIri" : "https://cyberterrain.org/ns/stonex",
+      "labels" : {
+        "IRI-based" : "_unknown"
       }
     }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_anonymization",
@@ -6186,6 +6186,12 @@
         "IRI-based" : "_personal-satisfaction"
       }
     }, {
+      "iri" : "https://cyberterrain.org/ns/stonex#_coercion",
+      "baseIri" : "https://cyberterrain.org/ns/stonex",
+      "labels" : {
+        "IRI-based" : "_coercion"
+      }
+    }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_revenge",
       "baseIri" : "https://cyberterrain.org/ns/stonex",
       "labels" : {
@@ -6196,12 +6202,6 @@
       "baseIri" : "https://cyberterrain.org/ns/stonex",
       "labels" : {
         "IRI-based" : "_personal-gain"
-      }
-    }, {
-      "iri" : "https://cyberterrain.org/ns/stonex#_coercion",
-      "baseIri" : "https://cyberterrain.org/ns/stonex",
-      "labels" : {
-        "IRI-based" : "_coercion"
       }
     }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_unpredictable",
@@ -6307,7 +6307,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#integer",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "406",
+    "id" : "405",
     "label" : {
       "IRI-based" : "integer"
     }
@@ -6456,7 +6456,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "208",
+    "id" : "206",
     "label" : {
       "IRI-based" : "string"
     }
@@ -6545,16 +6545,16 @@
         "IRI-based" : "_compromises"
       }
     }, {
-      "iri" : "https://cyberterrain.org/ns/stonex#_remediates",
-      "baseIri" : "https://cyberterrain.org/ns/stonex",
-      "labels" : {
-        "IRI-based" : "_remediates"
-      }
-    }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_exfiltrates-to",
       "baseIri" : "https://cyberterrain.org/ns/stonex",
       "labels" : {
         "IRI-based" : "_exfiltrates-to"
+      }
+    }, {
+      "iri" : "https://cyberterrain.org/ns/stonex#_remediates",
+      "baseIri" : "https://cyberterrain.org/ns/stonex",
+      "labels" : {
+        "IRI-based" : "_remediates"
       }
     }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_downloads",
@@ -6659,16 +6659,16 @@
         "IRI-based" : "_detects"
       }
     }, {
-      "iri" : "https://cyberterrain.org/ns/stonex#_indicates",
-      "baseIri" : "https://cyberterrain.org/ns/stonex",
-      "labels" : {
-        "IRI-based" : "_indicates"
-      }
-    }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_hosts",
       "baseIri" : "https://cyberterrain.org/ns/stonex",
       "labels" : {
         "IRI-based" : "_hosts"
+      }
+    }, {
+      "iri" : "https://cyberterrain.org/ns/stonex#_indicates",
+      "baseIri" : "https://cyberterrain.org/ns/stonex",
+      "labels" : {
+        "IRI-based" : "_indicates"
       }
     }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_based-on",
@@ -6711,16 +6711,16 @@
       "IRI-based" : "MalwareResultVocabulary"
     },
     "individuals" : [ {
-      "iri" : "https://cyberterrain.org/ns/stonex#_unknown",
-      "baseIri" : "https://cyberterrain.org/ns/stonex",
-      "labels" : {
-        "IRI-based" : "_unknown"
-      }
-    }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_benign",
       "baseIri" : "https://cyberterrain.org/ns/stonex",
       "labels" : {
         "IRI-based" : "_benign"
+      }
+    }, {
+      "iri" : "https://cyberterrain.org/ns/stonex#_unknown",
+      "baseIri" : "https://cyberterrain.org/ns/stonex",
+      "labels" : {
+        "IRI-based" : "_unknown"
       }
     }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_malicious",
@@ -7074,16 +7074,16 @@
         "IRI-based" : "_sparc"
       }
     }, {
-      "iri" : "https://cyberterrain.org/ns/stonex#_arm",
-      "baseIri" : "https://cyberterrain.org/ns/stonex",
-      "labels" : {
-        "IRI-based" : "_arm"
-      }
-    }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_x86-64",
       "baseIri" : "https://cyberterrain.org/ns/stonex",
       "labels" : {
         "IRI-based" : "_x86-64"
+      }
+    }, {
+      "iri" : "https://cyberterrain.org/ns/stonex#_arm",
+      "baseIri" : "https://cyberterrain.org/ns/stonex",
+      "labels" : {
+        "IRI-based" : "_arm"
       }
     }, {
       "iri" : "https://cyberterrain.org/ns/stonex#_powerpc",
@@ -7133,10 +7133,10 @@
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "32",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "34",
     "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "35",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "41",
     "type" : "owl:datatypeProperty"
@@ -7181,10 +7181,10 @@
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "96",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "98",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "102",
     "type" : "owl:datatypeProperty"
@@ -7249,7 +7249,7 @@
     "id" : "170",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "172",
+    "id" : "171",
     "type" : "owl:objectProperty"
   }, {
     "id" : "173",
@@ -7289,10 +7289,10 @@
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "196",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "197",
     "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "199",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "200",
     "type" : "owl:datatypeProperty"
@@ -7301,10 +7301,10 @@
     "type" : "owl:objectProperty"
   }, {
     "id" : "205",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "207",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "209",
     "type" : "owl:objectProperty"
@@ -7565,10 +7565,10 @@
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "404",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "405",
     "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "406",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "407",
     "type" : "owl:objectProperty"
@@ -7796,10 +7796,10 @@
     "type" : "owl:objectProperty"
   }, {
     "id" : "534",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "535",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "536",
     "type" : "owl:objectProperty"
@@ -7927,16 +7927,16 @@
     "id" : "585",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "587",
+    "id" : "586",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "588",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "589",
+    "id" : "590",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "590",
+    "id" : "591",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "592",
@@ -8051,10 +8051,10 @@
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "633",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "634",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "635",
     "type" : "owl:datatypeProperty"
@@ -8338,17 +8338,17 @@
   "propertyAttribute" : [ {
     "range" : "3",
     "domain" : "2",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "1"
   }, {
     "range" : "3",
     "domain" : "6",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "5"
   }, {
     "range" : "3",
     "domain" : "9",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "8"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#semanticRelation",
@@ -8385,54 +8385,27 @@
   }, {
     "range" : "3",
     "domain" : "18",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "17"
   }, {
     "range" : "3",
     "domain" : "21",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "20"
   }, {
     "range" : "3",
     "domain" : "24",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "23"
   }, {
     "range" : "3",
     "domain" : "27",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "26"
-  }, {
-    "iri" : "https://cyberterrain.org/ns/stones#encapsulatedByRef",
-    "baseIri" : "https://cyberterrain.org/ns/stones",
-    "range" : "33",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://cyberterrain.org/ns/stones#",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "undefined",
-        "value" : "Reference to the network-traffic SCO that encapsulates (wraps) this flow.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "encapsulatedByRef"
-    },
-    "domain" : "33",
-    "comment" : {
-      "undefined" : "(STIX: encapsulated_by_ref)"
-    },
-    "attributes" : [ "object" ],
-    "id" : "32"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#summary",
     "baseIri" : "https://cyberterrain.org/ns/stones",
-    "range" : "36",
+    "range" : "34",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -8450,12 +8423,39 @@
     "label" : {
       "IRI-based" : "summary"
     },
-    "domain" : "35",
+    "domain" : "33",
     "comment" : {
       "undefined" : "(STIX: summary)"
     },
     "attributes" : [ "datatype" ],
-    "id" : "34"
+    "id" : "32"
+  }, {
+    "iri" : "https://cyberterrain.org/ns/stones#encapsulatedByRef",
+    "baseIri" : "https://cyberterrain.org/ns/stones",
+    "range" : "36",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://cyberterrain.org/ns/stones#",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "Reference to the network-traffic SCO that encapsulates (wraps) this flow.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "encapsulatedByRef"
+    },
+    "domain" : "36",
+    "comment" : {
+      "undefined" : "(STIX: encapsulated_by_ref)"
+    },
+    "attributes" : [ "object" ],
+    "id" : "35"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#key",
     "baseIri" : "https://cyberterrain.org/ns/stones",
@@ -8537,7 +8537,7 @@
     "comment" : {
       "undefined" : "(STIX: type)"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "49"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#serviceStatus",
@@ -8723,7 +8723,7 @@
     "label" : {
       "IRI-based" : "whereSightedRefs"
     },
-    "domain" : "35",
+    "domain" : "33",
     "comment" : {
       "undefined" : "(STIX: where_sighted_refs)"
     },
@@ -8838,36 +8838,9 @@
     "attributes" : [ "datatype" ],
     "id" : "95"
   }, {
-    "iri" : "https://cyberterrain.org/ns/stones#values",
-    "baseIri" : "https://cyberterrain.org/ns/stones",
-    "range" : "97",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://cyberterrain.org/ns/stones#",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "undefined",
-        "value" : "Windows registry value entries under this key. Each entry is a stones:WindowsRegistryValue individual.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "values"
-    },
-    "domain" : "42",
-    "comment" : {
-      "undefined" : "(STIX: values)"
-    },
-    "attributes" : [ "object" ],
-    "id" : "96"
-  }, {
     "iri" : "https://cyberterrain.org/ns/stones#precision",
     "baseIri" : "https://cyberterrain.org/ns/stones",
-    "range" : "99",
+    "range" : "97",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -8890,6 +8863,33 @@
       "undefined" : "(STIX: precision)"
     },
     "attributes" : [ "datatype" ],
+    "id" : "96"
+  }, {
+    "iri" : "https://cyberterrain.org/ns/stones#values",
+    "baseIri" : "https://cyberterrain.org/ns/stones",
+    "range" : "99",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://cyberterrain.org/ns/stones#",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "Windows registry value entries under this key. Each entry is a stones:WindowsRegistryValue individual.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "values"
+    },
+    "domain" : "42",
+    "comment" : {
+      "undefined" : "(STIX: values)"
+    },
+    "attributes" : [ "object" ],
     "id" : "98"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#descriptions",
@@ -8953,7 +8953,7 @@
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#openedConnectionRefs",
     "baseIri" : "https://cyberterrain.org/ns/stones",
-    "range" : "33",
+    "range" : "36",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -9088,12 +9088,12 @@
   }, {
     "range" : "48",
     "domain" : "141",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "140"
   }, {
     "range" : "30",
     "domain" : "144",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "143"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#labels",
@@ -9125,12 +9125,12 @@
   }, {
     "range" : "30",
     "domain" : "29",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "147"
   }, {
     "range" : "30",
     "domain" : "151",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "150"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#integrityLevel",
@@ -9186,7 +9186,7 @@
     "comment" : {
       "en" : "skos:exactMatch is disjoint with each of the properties skos:broadMatch and skos:relatedMatch."
     },
-    "attributes" : [ "external", "object", "transitive", "symmetric" ],
+    "attributes" : [ "transitive", "symmetric", "external", "object" ],
     "id" : "157"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#peType",
@@ -9352,33 +9352,6 @@
     "attributes" : [ "datatype" ],
     "id" : "168"
   }, {
-    "iri" : "https://cyberterrain.org/ns/stones#personalMotivations",
-    "baseIri" : "https://cyberterrain.org/ns/stones",
-    "range" : "122",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://cyberterrain.org/ns/stones#",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "undefined",
-        "value" : "Personal motivations of this threat actor, distinct from organisational motivations (attack-motivation-ov). Multiple values as multiple triples.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "personalMotivations"
-    },
-    "domain" : "171",
-    "comment" : {
-      "undefined" : "(STIX: personal_motivations)"
-    },
-    "attributes" : [ "object" ],
-    "id" : "170"
-  }, {
     "iri" : "https://cyberterrain.org/ns/stones#objectRefs",
     "baseIri" : "https://cyberterrain.org/ns/stones",
     "range" : "31",
@@ -9405,7 +9378,34 @@
       "undefined" : "(STIX: object_refs)"
     },
     "attributes" : [ "object" ],
-    "id" : "172"
+    "id" : "170"
+  }, {
+    "iri" : "https://cyberterrain.org/ns/stones#personalMotivations",
+    "baseIri" : "https://cyberterrain.org/ns/stones",
+    "range" : "122",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://cyberterrain.org/ns/stones#",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "Personal motivations of this threat actor, distinct from organisational motivations (attack-motivation-ov). Multiple values as multiple triples.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "personalMotivations"
+    },
+    "domain" : "172",
+    "comment" : {
+      "undefined" : "(STIX: personal_motivations)"
+    },
+    "attributes" : [ "object" ],
+    "id" : "171"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#swid",
     "baseIri" : "https://cyberterrain.org/ns/stones",
@@ -9546,7 +9546,7 @@
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#encapsulatesRefs",
     "baseIri" : "https://cyberterrain.org/ns/stones",
-    "range" : "33",
+    "range" : "36",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -9564,7 +9564,7 @@
     "label" : {
       "IRI-based" : "encapsulatesRefs"
     },
-    "domain" : "33",
+    "domain" : "36",
     "comment" : {
       "undefined" : "(STIX: encapsulates_refs)"
     },
@@ -9573,7 +9573,7 @@
   }, {
     "range" : "48",
     "domain" : "45",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "183"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#authors",
@@ -9605,7 +9605,7 @@
   }, {
     "range" : "129",
     "domain" : "3",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "187"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#dstPackets",
@@ -9628,7 +9628,7 @@
     "label" : {
       "IRI-based" : "dstPackets"
     },
-    "domain" : "33",
+    "domain" : "36",
     "comment" : {
       "undefined" : "(STIX: dst_packets)"
     },
@@ -9637,13 +9637,40 @@
   }, {
     "range" : "129",
     "domain" : "192",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "191"
   }, {
     "range" : "31",
     "domain" : "129",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "194"
+  }, {
+    "iri" : "https://cyberterrain.org/ns/stones#nameConstraints",
+    "baseIri" : "https://cyberterrain.org/ns/stones",
+    "range" : "198",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://cyberterrain.org/ns/stones#",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "X.509 v3 name constraints extension value.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "nameConstraints"
+    },
+    "domain" : "197",
+    "comment" : {
+      "undefined" : "(STIX: x509-v3-extensions-type.name_constraints)"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "196"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#dstPayloadRef",
     "baseIri" : "https://cyberterrain.org/ns/stones",
@@ -9665,39 +9692,12 @@
     "label" : {
       "IRI-based" : "dstPayloadRef"
     },
-    "domain" : "33",
+    "domain" : "36",
     "comment" : {
       "undefined" : "(STIX: dst_payload_ref)"
     },
     "attributes" : [ "object" ],
-    "id" : "196"
-  }, {
-    "iri" : "https://cyberterrain.org/ns/stones#nameConstraints",
-    "baseIri" : "https://cyberterrain.org/ns/stones",
-    "range" : "199",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://cyberterrain.org/ns/stones#",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "undefined",
-        "value" : "X.509 v3 name constraints extension value.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "nameConstraints"
-    },
-    "domain" : "198",
-    "comment" : {
-      "undefined" : "(STIX: x509-v3-extensions-type.name_constraints)"
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "197"
+    "id" : "199"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#windowTitle",
     "baseIri" : "https://cyberterrain.org/ns/stones",
@@ -9753,36 +9753,9 @@
     "attributes" : [ "external", "object" ],
     "id" : "201"
   }, {
-    "iri" : "https://cyberterrain.org/ns/stones#fileHeaderHashes",
-    "baseIri" : "https://cyberterrain.org/ns/stones",
-    "range" : "206",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://cyberterrain.org/ns/stones#",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "undefined",
-        "value" : "Hashes of the PE file header, expressed as HashEntry individuals.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "fileHeaderHashes"
-    },
-    "domain" : "105",
-    "comment" : {
-      "undefined" : "(STIX: file_header_hashes)"
-    },
-    "attributes" : [ "object" ],
-    "id" : "205"
-  }, {
     "iri" : "https://cyberterrain.org/ns/stones#serviceName",
     "baseIri" : "https://cyberterrain.org/ns/stones",
-    "range" : "208",
+    "range" : "206",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -9805,6 +9778,33 @@
       "undefined" : "(STIX: windows-service-ext.service_name)"
     },
     "attributes" : [ "datatype" ],
+    "id" : "205"
+  }, {
+    "iri" : "https://cyberterrain.org/ns/stones#fileHeaderHashes",
+    "baseIri" : "https://cyberterrain.org/ns/stones",
+    "range" : "208",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://cyberterrain.org/ns/stones#",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "Hashes of the PE file header, expressed as HashEntry individuals.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "fileHeaderHashes"
+    },
+    "domain" : "105",
+    "comment" : {
+      "undefined" : "(STIX: file_header_hashes)"
+    },
+    "attributes" : [ "object" ],
     "id" : "207"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#targetRef",
@@ -9837,12 +9837,12 @@
   }, {
     "range" : "101",
     "domain" : "214",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "213"
   }, {
     "range" : "101",
     "domain" : "160",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "216"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#lang",
@@ -9874,7 +9874,7 @@
   }, {
     "range" : "101",
     "domain" : "220",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "219"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#value",
@@ -9906,42 +9906,42 @@
   }, {
     "range" : "101",
     "domain" : "224",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "223"
   }, {
     "range" : "101",
     "domain" : "137",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "226"
   }, {
     "range" : "101",
     "domain" : "229",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "228"
   }, {
     "range" : "129",
     "domain" : "48",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "231"
   }, {
     "range" : "101",
     "domain" : "234",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "233"
   }, {
     "range" : "101",
     "domain" : "237",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "236"
   }, {
     "range" : "101",
     "domain" : "100",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "239"
   }, {
     "range" : "101",
     "domain" : "122",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "241"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#certificatePolicies",
@@ -9964,7 +9964,7 @@
     "label" : {
       "IRI-based" : "certificatePolicies"
     },
-    "domain" : "198",
+    "domain" : "197",
     "comment" : {
       "undefined" : "(STIX: x509-v3-extensions-type.certificate_policies)"
     },
@@ -10019,7 +10019,7 @@
     "label" : {
       "IRI-based" : "subjectAlternativeName"
     },
-    "domain" : "198",
+    "domain" : "197",
     "comment" : {
       "undefined" : "(STIX: x509-v3-extensions-type.subject_alternative_name)"
     },
@@ -10073,7 +10073,7 @@
     "label" : {
       "IRI-based" : "sophistication"
     },
-    "domain" : "171",
+    "domain" : "172",
     "comment" : {
       "undefined" : "(STIX: sophistication)"
     },
@@ -10135,52 +10135,52 @@
       "en" : "notation"
     },
     "domain" : "55",
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "256"
   }, {
     "range" : "101",
     "domain" : "258",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "257"
   }, {
     "range" : "101",
     "domain" : "204",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "260"
   }, {
     "range" : "101",
     "domain" : "247",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "262"
   }, {
     "range" : "101",
     "domain" : "83",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "264"
   }, {
     "range" : "101",
     "domain" : "266",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "265"
   }, {
     "range" : "101",
     "domain" : "269",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "268"
   }, {
     "range" : "101",
     "domain" : "272",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "271"
   }, {
     "range" : "101",
     "domain" : "148",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "274"
   }, {
     "range" : "101",
     "domain" : "277",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "276"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#opinion",
@@ -10213,7 +10213,7 @@
   }, {
     "range" : "101",
     "domain" : "114",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "282"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#firstObserved",
@@ -10246,7 +10246,7 @@
   }, {
     "range" : "101",
     "domain" : "288",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "287"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#credentialLastChanged",
@@ -10431,7 +10431,7 @@
     "label" : {
       "IRI-based" : "issuerAlternativeName"
     },
-    "domain" : "198",
+    "domain" : "197",
     "comment" : {
       "undefined" : "(STIX: x509-v3-extensions-type.issuer_alternative_name)"
     },
@@ -10440,7 +10440,7 @@
   }, {
     "range" : "3",
     "domain" : "128",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "302"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#toolTypes",
@@ -10472,28 +10472,28 @@
     "id" : "303"
   }, {
     "range" : "192",
-    "domain" : "35",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "33",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "306"
   }, {
     "range" : "192",
     "domain" : "210",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "308"
   }, {
     "range" : "101",
     "domain" : "310",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "309"
   }, {
     "range" : "101",
     "domain" : "313",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "312"
   }, {
     "range" : "3",
     "domain" : "93",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "315"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#reportTypes",
@@ -10526,27 +10526,27 @@
   }, {
     "range" : "3",
     "domain" : "42",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "319"
   }, {
     "range" : "3",
     "domain" : "134",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "321"
   }, {
     "range" : "3",
-    "domain" : "33",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "36",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "323"
   }, {
     "range" : "3",
     "domain" : "135",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "325"
   }, {
     "range" : "3",
     "domain" : "136",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "327"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#icmpCodeHex",
@@ -10651,7 +10651,7 @@
     "label" : {
       "IRI-based" : "isActive"
     },
-    "domain" : "33",
+    "domain" : "36",
     "comment" : {
       "undefined" : "(STIX: is_active)"
     },
@@ -10710,7 +10710,7 @@
     "comment" : {
       "en" : "For any resource, every item in the list given as the value of the\n      skos:memberList property is also a value of the skos:member property."
     },
-    "attributes" : [ "functional", "external", "object" ],
+    "attributes" : [ "external", "functional", "object" ],
     "id" : "337"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#created",
@@ -10743,22 +10743,22 @@
   }, {
     "range" : "3",
     "domain" : "130",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "341"
   }, {
     "range" : "3",
     "domain" : "131",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "342"
   }, {
     "range" : "3",
     "domain" : "132",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "343"
   }, {
     "range" : "3",
     "domain" : "133",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "345"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#pointerToSymbolTableHex",
@@ -11085,7 +11085,7 @@
     "superproperty" : [ "15" ],
     "domain" : "55",
     "subproperty" : [ "157" ],
-    "attributes" : [ "external", "object", "symmetric" ],
+    "attributes" : [ "symmetric", "external", "object" ],
     "id" : "158"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#hashValue",
@@ -11109,7 +11109,7 @@
       "IRI-based" : "hashValue"
     },
     "minCardinality" : "1",
-    "domain" : "206",
+    "domain" : "208",
     "comment" : {
       "undefined" : "(STIX: hashes dictionary value)"
     },
@@ -11190,7 +11190,7 @@
     "label" : {
       "IRI-based" : "data"
     },
-    "domain" : "97",
+    "domain" : "99",
     "comment" : {
       "undefined" : "(STIX: data)"
     },
@@ -11217,7 +11217,7 @@
     "label" : {
       "IRI-based" : "basicConstraints"
     },
-    "domain" : "198",
+    "domain" : "197",
     "comment" : {
       "undefined" : "(STIX: x509-v3-extensions-type.basic_constraints)"
     },
@@ -11325,12 +11325,39 @@
     "label" : {
       "IRI-based" : "keyUsage"
     },
-    "domain" : "198",
+    "domain" : "197",
     "comment" : {
       "undefined" : "(STIX: x509-v3-extensions-type.key_usage)"
     },
     "attributes" : [ "datatype" ],
     "id" : "401"
+  }, {
+    "iri" : "https://cyberterrain.org/ns/stones#sizeOfOptionalHeader",
+    "baseIri" : "https://cyberterrain.org/ns/stones",
+    "range" : "405",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://cyberterrain.org/ns/stones#",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "Size of the optional PE header in bytes.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "sizeOfOptionalHeader"
+    },
+    "domain" : "55",
+    "comment" : {
+      "undefined" : "(STIX: size_of_optional_header)"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "404"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#childRefs",
     "baseIri" : "https://cyberterrain.org/ns/stones",
@@ -11357,34 +11384,7 @@
       "undefined" : "(STIX: child_refs)"
     },
     "attributes" : [ "object" ],
-    "id" : "404"
-  }, {
-    "iri" : "https://cyberterrain.org/ns/stones#sizeOfOptionalHeader",
-    "baseIri" : "https://cyberterrain.org/ns/stones",
-    "range" : "406",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://cyberterrain.org/ns/stones#",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "undefined",
-        "value" : "Size of the optional PE header in bytes.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "sizeOfOptionalHeader"
-    },
-    "domain" : "55",
-    "comment" : {
-      "undefined" : "(STIX: size_of_optional_header)"
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "405"
+    "id" : "406"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#accountType",
     "baseIri" : "https://cyberterrain.org/ns/stones",
@@ -11514,7 +11514,7 @@
     "label" : {
       "IRI-based" : "srcRef"
     },
-    "domain" : "33",
+    "domain" : "36",
     "comment" : {
       "undefined" : "(STIX: src_ref)"
     },
@@ -11568,7 +11568,7 @@
     "label" : {
       "IRI-based" : "count"
     },
-    "domain" : "35",
+    "domain" : "33",
     "comment" : {
       "undefined" : "(STIX: count)"
     },
@@ -11577,22 +11577,22 @@
   }, {
     "range" : "48",
     "domain" : "284",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "425"
   }, {
     "range" : "48",
     "domain" : "428",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "427"
   }, {
     "range" : "48",
     "domain" : "47",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "430"
   }, {
     "range" : "48",
     "domain" : "317",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "431"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#accountFirstLogin",
@@ -11624,12 +11624,12 @@
   }, {
     "range" : "48",
     "domain" : "126",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "433"
   }, {
     "range" : "48",
-    "domain" : "171",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "172",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "434"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#contentDisposition",
@@ -11661,12 +11661,12 @@
   }, {
     "range" : "48",
     "domain" : "438",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "437"
   }, {
     "range" : "48",
     "domain" : "167",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "439"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#isHidden",
@@ -11725,7 +11725,7 @@
   }, {
     "range" : "48",
     "domain" : "88",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "443"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#inhibitAnyPolicy",
@@ -11748,7 +11748,7 @@
     "label" : {
       "IRI-based" : "inhibitAnyPolicy"
     },
-    "domain" : "198",
+    "domain" : "197",
     "comment" : {
       "undefined" : "(STIX: x509-v3-extensions-type.inhibit_any_policy)"
     },
@@ -11757,7 +11757,7 @@
   }, {
     "range" : "48",
     "domain" : "447",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "446"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#start",
@@ -11780,39 +11780,12 @@
     "label" : {
       "IRI-based" : "start"
     },
-    "domain" : "33",
+    "domain" : "36",
     "comment" : {
       "undefined" : "(STIX: start)"
     },
     "attributes" : [ "datatype" ],
     "id" : "448"
-  }, {
-    "iri" : "https://cyberterrain.org/ns/stones#isPrivileged",
-    "baseIri" : "https://cyberterrain.org/ns/stones",
-    "range" : "451",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://cyberterrain.org/ns/stones#",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "undefined",
-        "value" : "True if this account has elevated privileges.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "isPrivileged"
-    },
-    "domain" : "93",
-    "comment" : {
-      "undefined" : "(STIX: is_privileged)"
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "450"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#abstract",
     "baseIri" : "https://cyberterrain.org/ns/stones",
@@ -11834,9 +11807,36 @@
     "label" : {
       "IRI-based" : "abstract"
     },
-    "domain" : "453",
+    "domain" : "451",
     "comment" : {
       "undefined" : "(STIX: abstract)"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "450"
+  }, {
+    "iri" : "https://cyberterrain.org/ns/stones#isPrivileged",
+    "baseIri" : "https://cyberterrain.org/ns/stones",
+    "range" : "453",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://cyberterrain.org/ns/stones#",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "True if this account has elevated privileges.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "isPrivileged"
+    },
+    "domain" : "93",
+    "comment" : {
+      "undefined" : "(STIX: is_privileged)"
     },
     "attributes" : [ "datatype" ],
     "id" : "452"
@@ -11872,7 +11872,7 @@
     "superproperty" : [ "10" ],
     "domain" : "55",
     "subproperty" : [ "203" ],
-    "attributes" : [ "external", "object", "transitive" ],
+    "attributes" : [ "transitive", "external", "object" ],
     "id" : "13"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#privateKeyUsagePeriodNotAfter",
@@ -11895,7 +11895,7 @@
     "label" : {
       "IRI-based" : "privateKeyUsagePeriodNotAfter"
     },
-    "domain" : "198",
+    "domain" : "197",
     "comment" : {
       "undefined" : "(STIX: x509-v3-extensions-type.private_key_usage_period_not_after)"
     },
@@ -11927,12 +11927,12 @@
     "comment" : {
       "undefined" : "(STIX: id)"
     },
-    "attributes" : [ "key", "functional", "datatype" ],
+    "attributes" : [ "key", "datatype", "functional" ],
     "id" : "459"
   }, {
     "range" : "212",
-    "domain" : "97",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "99",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "463"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#decryptionKey",
@@ -11964,17 +11964,17 @@
   }, {
     "range" : "212",
     "domain" : "386",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "467"
   }, {
     "range" : "353",
     "domain" : "101",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "469"
   }, {
     "range" : "353",
     "domain" : "38",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "470"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#implementationLanguages",
@@ -12006,7 +12006,7 @@
   }, {
     "range" : "48",
     "domain" : "304",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "472"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#broader",
@@ -12047,7 +12047,7 @@
   }, {
     "range" : "48",
     "domain" : "254",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "473"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#validFrom",
@@ -12080,7 +12080,7 @@
   }, {
     "range" : "48",
     "domain" : "82",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "475"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#unmodeledProperties",
@@ -12113,7 +12113,7 @@
     "comment" : {
       "undefined" : "(not a STIX property: serialization fidelity)"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "476"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#comment",
@@ -12144,18 +12144,18 @@
     "id" : "478"
   }, {
     "range" : "48",
-    "domain" : "453",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "451",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "479"
   }, {
     "range" : "48",
     "domain" : "481",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "480"
   }, {
     "range" : "48",
     "domain" : "279",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "482"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#schema",
@@ -12212,33 +12212,6 @@
     "attributes" : [ "object" ],
     "id" : "484"
   }, {
-    "iri" : "https://cyberterrain.org/ns/stones#extendedKeyUsage",
-    "baseIri" : "https://cyberterrain.org/ns/stones",
-    "range" : "436",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://cyberterrain.org/ns/stones#",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "undefined",
-        "value" : "X.509 v3 extended key usage extension value.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "extendedKeyUsage"
-    },
-    "domain" : "198",
-    "comment" : {
-      "undefined" : "(STIX: x509-v3-extensions-type.extended_key_usage)"
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "486"
-  }, {
     "iri" : "https://cyberterrain.org/ns/stones#crlDistributionPoints",
     "baseIri" : "https://cyberterrain.org/ns/stones",
     "range" : "382",
@@ -12259,9 +12232,36 @@
     "label" : {
       "IRI-based" : "crlDistributionPoints"
     },
-    "domain" : "198",
+    "domain" : "197",
     "comment" : {
       "undefined" : "(STIX: x509-v3-extensions-type.crl_distribution_points)"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "486"
+  }, {
+    "iri" : "https://cyberterrain.org/ns/stones#extendedKeyUsage",
+    "baseIri" : "https://cyberterrain.org/ns/stones",
+    "range" : "436",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://cyberterrain.org/ns/stones#",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "X.509 v3 extended key usage extension value.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "extendedKeyUsage"
+    },
+    "domain" : "197",
+    "comment" : {
+      "undefined" : "(STIX: x509-v3-extensions-type.extended_key_usage)"
     },
     "attributes" : [ "datatype" ],
     "id" : "487"
@@ -12506,7 +12506,7 @@
       "IRI-based" : "threatActorTypes"
     },
     "minCardinality" : "1",
-    "domain" : "171",
+    "domain" : "172",
     "comment" : {
       "undefined" : "(STIX: threat_actor_types)"
     },
@@ -12567,6 +12567,33 @@
     "attributes" : [ "datatype" ],
     "id" : "513"
   }, {
+    "iri" : "https://cyberterrain.org/ns/stones#sectors",
+    "baseIri" : "https://cyberterrain.org/ns/stones",
+    "range" : "220",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://cyberterrain.org/ns/stones#",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "Industry sectors this identity operates in (industry-sector-ov). Multiple values as multiple triples.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "sectors"
+    },
+    "domain" : "88",
+    "comment" : {
+      "undefined" : "(STIX: sectors)"
+    },
+    "attributes" : [ "object" ],
+    "id" : "515"
+  }, {
     "iri" : "https://cyberterrain.org/ns/stones#region",
     "baseIri" : "https://cyberterrain.org/ns/stones",
     "range" : "237",
@@ -12591,33 +12618,6 @@
     "domain" : "45",
     "comment" : {
       "undefined" : "(STIX: region)"
-    },
-    "attributes" : [ "object" ],
-    "id" : "515"
-  }, {
-    "iri" : "https://cyberterrain.org/ns/stones#sectors",
-    "baseIri" : "https://cyberterrain.org/ns/stones",
-    "range" : "220",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://cyberterrain.org/ns/stones#",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "undefined",
-        "value" : "Industry sectors this identity operates in (industry-sector-ov). Multiple values as multiple triples.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "sectors"
-    },
-    "domain" : "88",
-    "comment" : {
-      "undefined" : "(STIX: sectors)"
     },
     "attributes" : [ "object" ],
     "id" : "516"
@@ -13010,35 +13010,8 @@
     "comment" : {
       "en" : "skos:related is disjoint with skos:broaderTransitive"
     },
-    "attributes" : [ "external", "object", "symmetric" ],
+    "attributes" : [ "symmetric", "external", "object" ],
     "id" : "14"
-  }, {
-    "iri" : "https://cyberterrain.org/ns/stones#capabilities",
-    "baseIri" : "https://cyberterrain.org/ns/stones",
-    "range" : "272",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://cyberterrain.org/ns/stones#",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "undefined",
-        "value" : "Functional capabilities exhibited by this malware (malware-capabilities-ov). Multiple values as multiple triples.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "capabilities"
-    },
-    "domain" : "126",
-    "comment" : {
-      "undefined" : "(STIX: capabilities)"
-    },
-    "attributes" : [ "object" ],
-    "id" : "534"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#extensionProperties",
     "baseIri" : "https://cyberterrain.org/ns/stones",
@@ -13065,6 +13038,33 @@
       "undefined" : "(STIX: extension_properties)"
     },
     "attributes" : [ "datatype" ],
+    "id" : "534"
+  }, {
+    "iri" : "https://cyberterrain.org/ns/stones#capabilities",
+    "baseIri" : "https://cyberterrain.org/ns/stones",
+    "range" : "272",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://cyberterrain.org/ns/stones#",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "Functional capabilities exhibited by this malware (malware-capabilities-ov). Multiple values as multiple triples.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "capabilities"
+    },
+    "domain" : "126",
+    "comment" : {
+      "undefined" : "(STIX: capabilities)"
+    },
+    "attributes" : [ "object" ],
     "id" : "535"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#srcPayloadRef",
@@ -13087,7 +13087,7 @@
     "label" : {
       "IRI-based" : "srcPayloadRef"
     },
-    "domain" : "33",
+    "domain" : "36",
     "comment" : {
       "undefined" : "(STIX: src_payload_ref)"
     },
@@ -13141,7 +13141,7 @@
     "label" : {
       "IRI-based" : "privateKeyUsagePeriodNotBefore"
     },
-    "domain" : "198",
+    "domain" : "197",
     "comment" : {
       "undefined" : "(STIX: x509-v3-extensions-type.private_key_usage_period_not_before)"
     },
@@ -13762,7 +13762,7 @@
     "label" : {
       "IRI-based" : "authorityKeyIdentifier"
     },
-    "domain" : "198",
+    "domain" : "197",
     "comment" : {
       "undefined" : "(STIX: x509-v3-extensions-type.authority_key_identifier)"
     },
@@ -13796,34 +13796,6 @@
     "attributes" : [ "object" ],
     "id" : "566"
   }, {
-    "iri" : "https://cyberterrain.org/ns/stones#numberObserved",
-    "baseIri" : "https://cyberterrain.org/ns/stones",
-    "range" : "318",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://cyberterrain.org/ns/stones#",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "undefined",
-        "value" : "Number of times the observation occurred. MUST be >= 1.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "numberObserved"
-    },
-    "minCardinality" : "1",
-    "domain" : "284",
-    "comment" : {
-      "undefined" : "(STIX: number_observed)"
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "567"
-  }, {
     "iri" : "https://cyberterrain.org/ns/stones#isDisabled",
     "baseIri" : "https://cyberterrain.org/ns/stones",
     "range" : "501",
@@ -13849,7 +13821,7 @@
       "undefined" : "(STIX: is_disabled)"
     },
     "attributes" : [ "datatype" ],
-    "id" : "568"
+    "id" : "567"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#accountCreated",
     "baseIri" : "https://cyberterrain.org/ns/stones",
@@ -13874,6 +13846,34 @@
     "domain" : "93",
     "comment" : {
       "undefined" : "(STIX: account_created)"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "568"
+  }, {
+    "iri" : "https://cyberterrain.org/ns/stones#numberObserved",
+    "baseIri" : "https://cyberterrain.org/ns/stones",
+    "range" : "318",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://cyberterrain.org/ns/stones#",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "Number of times the observation occurred. MUST be >= 1.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "numberObserved"
+    },
+    "minCardinality" : "1",
+    "domain" : "284",
+    "comment" : {
+      "undefined" : "(STIX: number_observed)"
     },
     "attributes" : [ "datatype" ],
     "id" : "569"
@@ -13956,7 +13956,7 @@
     "comment" : {
       "undefined" : "(not a STIX property: serialization fidelity)"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "572"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#srcByteCount",
@@ -13979,7 +13979,7 @@
     "label" : {
       "IRI-based" : "srcByteCount"
     },
-    "domain" : "33",
+    "domain" : "36",
     "comment" : {
       "undefined" : "(STIX: src_byte_count)"
     },
@@ -14006,7 +14006,7 @@
     "label" : {
       "IRI-based" : "srcPort"
     },
-    "domain" : "33",
+    "domain" : "36",
     "comment" : {
       "undefined" : "(STIX: src_port)"
     },
@@ -14176,33 +14176,6 @@
     "attributes" : [ "datatype" ],
     "id" : "584"
   }, {
-    "iri" : "https://cyberterrain.org/ns/stones#subjectKeyIdentifier",
-    "baseIri" : "https://cyberterrain.org/ns/stones",
-    "range" : "586",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://cyberterrain.org/ns/stones#",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "undefined",
-        "value" : "X.509 v3 subject key identifier.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "subjectKeyIdentifier"
-    },
-    "domain" : "198",
-    "comment" : {
-      "undefined" : "(STIX: x509-v3-extensions-type.subject_key_identifier)"
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "585"
-  }, {
     "iri" : "https://cyberterrain.org/ns/stones#isListening",
     "baseIri" : "https://cyberterrain.org/ns/stones",
     "range" : "494",
@@ -14228,11 +14201,11 @@
       "undefined" : "(STIX: socket-ext.is_listening)"
     },
     "attributes" : [ "datatype" ],
-    "id" : "587"
+    "id" : "585"
   }, {
-    "iri" : "https://cyberterrain.org/ns/stones#payloadBin",
+    "iri" : "https://cyberterrain.org/ns/stones#subjectKeyIdentifier",
     "baseIri" : "https://cyberterrain.org/ns/stones",
-    "range" : "270",
+    "range" : "587",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -14243,16 +14216,43 @@
       "definition" : [ {
         "identifier" : "definition",
         "language" : "undefined",
-        "value" : "Artifact byte content encoded as base64. Mutually exclusive with url.",
+        "value" : "X.509 v3 subject key identifier.",
         "type" : "label"
       } ]
     },
     "label" : {
-      "IRI-based" : "payloadBin"
+      "IRI-based" : "subjectKeyIdentifier"
     },
-    "domain" : "133",
+    "domain" : "197",
     "comment" : {
-      "undefined" : "(STIX: payload_bin)"
+      "undefined" : "(STIX: x509-v3-extensions-type.subject_key_identifier)"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "586"
+  }, {
+    "iri" : "https://cyberterrain.org/ns/stones#userId",
+    "baseIri" : "https://cyberterrain.org/ns/stones",
+    "range" : "589",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://cyberterrain.org/ns/stones#",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "Identifier of the user account, such as a login name or UID.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "userId"
+    },
+    "domain" : "93",
+    "comment" : {
+      "undefined" : "(STIX: user_id)"
     },
     "attributes" : [ "datatype" ],
     "id" : "588"
@@ -14282,33 +14282,6 @@
       "undefined" : "(STIX: number_of_sections)"
     },
     "attributes" : [ "datatype" ],
-    "id" : "589"
-  }, {
-    "iri" : "https://cyberterrain.org/ns/stones#userId",
-    "baseIri" : "https://cyberterrain.org/ns/stones",
-    "range" : "591",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://cyberterrain.org/ns/stones#",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "undefined",
-        "value" : "Identifier of the user account, such as a login name or UID.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "userId"
-    },
-    "domain" : "93",
-    "comment" : {
-      "undefined" : "(STIX: user_id)"
-    },
-    "attributes" : [ "datatype" ],
     "id" : "590"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#revoked",
@@ -14334,6 +14307,33 @@
     "domain" : "31",
     "comment" : {
       "undefined" : "(STIX: revoked)"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "591"
+  }, {
+    "iri" : "https://cyberterrain.org/ns/stones#payloadBin",
+    "baseIri" : "https://cyberterrain.org/ns/stones",
+    "range" : "270",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://cyberterrain.org/ns/stones#",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "Artifact byte content encoded as base64. Mutually exclusive with url.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "payloadBin"
+    },
+    "domain" : "133",
+    "comment" : {
+      "undefined" : "(STIX: payload_bin)"
     },
     "attributes" : [ "datatype" ],
     "id" : "592"
@@ -14524,7 +14524,7 @@
     },
     "superproperty" : [ "14", "15" ],
     "domain" : "55",
-    "attributes" : [ "external", "object", "symmetric" ],
+    "attributes" : [ "symmetric", "external", "object" ],
     "id" : "490"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#modified",
@@ -15031,7 +15031,7 @@
     "label" : {
       "IRI-based" : "dataType"
     },
-    "domain" : "97",
+    "domain" : "99",
     "comment" : {
       "undefined" : "(STIX: data_type)"
     },
@@ -15094,7 +15094,7 @@
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#x509V3Extensions",
     "baseIri" : "https://cyberterrain.org/ns/stones",
-    "range" : "198",
+    "range" : "197",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -15139,7 +15139,7 @@
     "label" : {
       "IRI-based" : "dstPort"
     },
-    "domain" : "33",
+    "domain" : "36",
     "comment" : {
       "undefined" : "(STIX: dst_port)"
     },
@@ -15193,7 +15193,7 @@
     "label" : {
       "IRI-based" : "authorityInfoAccess"
     },
-    "domain" : "198",
+    "domain" : "197",
     "comment" : {
       "undefined" : "(STIX: x509-v3-extensions-type.authority_info_access)"
     },
@@ -15309,33 +15309,6 @@
     "attributes" : [ "datatype" ],
     "id" : "632"
   }, {
-    "iri" : "https://cyberterrain.org/ns/stones#bodyMultipart",
-    "baseIri" : "https://cyberterrain.org/ns/stones",
-    "range" : "386",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://cyberterrain.org/ns/stones#",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "undefined",
-        "value" : "MIME parts of a multipart email message. Each part is a stones:EmailMimePart individual.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "bodyMultipart"
-    },
-    "domain" : "135",
-    "comment" : {
-      "undefined" : "(STIX: body_multipart)"
-    },
-    "attributes" : [ "object" ],
-    "id" : "633"
-  }, {
     "iri" : "https://cyberterrain.org/ns/stones#aliases",
     "baseIri" : "https://cyberterrain.org/ns/stones",
     "range" : "367",
@@ -15361,6 +15334,33 @@
       "undefined" : "(STIX: aliases)"
     },
     "attributes" : [ "datatype" ],
+    "id" : "633"
+  }, {
+    "iri" : "https://cyberterrain.org/ns/stones#bodyMultipart",
+    "baseIri" : "https://cyberterrain.org/ns/stones",
+    "range" : "386",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://cyberterrain.org/ns/stones#",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "MIME parts of a multipart email message. Each part is a stones:EmailMimePart individual.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "bodyMultipart"
+    },
+    "domain" : "135",
+    "comment" : {
+      "undefined" : "(STIX: body_multipart)"
+    },
+    "attributes" : [ "object" ],
     "id" : "634"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#policyConstraints",
@@ -15383,7 +15383,7 @@
     "label" : {
       "IRI-based" : "policyConstraints"
     },
-    "domain" : "198",
+    "domain" : "197",
     "comment" : {
       "undefined" : "(STIX: x509-v3-extensions-type.policy_constraints)"
     },
@@ -15419,7 +15419,7 @@
   }, {
     "range" : "212",
     "domain" : "409",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "639"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#infrastructureTypes",
@@ -15524,7 +15524,7 @@
     "label" : {
       "IRI-based" : "dstByteCount"
     },
-    "domain" : "33",
+    "domain" : "36",
     "comment" : {
       "undefined" : "(STIX: dst_byte_count)"
     },
@@ -15607,7 +15607,7 @@
       "IRI-based" : "algorithm"
     },
     "minCardinality" : "1",
-    "domain" : "206",
+    "domain" : "208",
     "comment" : {
       "undefined" : "(STIX: hashes dictionary key)"
     },
@@ -15634,7 +15634,7 @@
     "label" : {
       "IRI-based" : "subjectDirectoryAttributes"
     },
-    "domain" : "198",
+    "domain" : "197",
     "comment" : {
       "undefined" : "(STIX: x509-v3-extensions-type.subject_directory_attributes)"
     },
@@ -15665,12 +15665,12 @@
     "comment" : {
       "undefined" : "(not a STIX property: serialization fidelity)"
     },
-    "attributes" : [ "functional", "datatype" ],
+    "attributes" : [ "datatype", "functional" ],
     "id" : "648"
   }, {
     "range" : "38",
     "domain" : "388",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "649"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#createdTime",
@@ -15729,12 +15729,12 @@
   }, {
     "range" : "38",
     "domain" : "37",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "652"
   }, {
     "range" : "38",
     "domain" : "505",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "653"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#cpe",
@@ -15766,22 +15766,22 @@
   }, {
     "range" : "212",
     "domain" : "497",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "655"
   }, {
     "range" : "212",
     "domain" : "485",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "656"
   }, {
     "range" : "212",
-    "domain" : "198",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "197",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "658"
   }, {
     "range" : "212",
     "domain" : "328",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "659"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#requestVersion",
@@ -15813,17 +15813,17 @@
   }, {
     "range" : "212",
     "domain" : "211",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "661"
   }, {
     "range" : "212",
-    "domain" : "206",
-    "attributes" : [ "object", "anonymous" ],
+    "domain" : "208",
+    "attributes" : [ "anonymous", "object" ],
     "id" : "662"
   }, {
     "range" : "38",
     "domain" : "338",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "663"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#number",
@@ -15855,7 +15855,7 @@
   }, {
     "range" : "38",
     "domain" : "124",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "665"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#body",
@@ -15970,32 +15970,32 @@
   }, {
     "range" : "31",
     "domain" : "518",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "672"
   }, {
     "range" : "31",
     "domain" : "30",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "673"
   }, {
     "range" : "40",
     "domain" : "39",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "674"
   }, {
     "range" : "38",
     "domain" : "579",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "675"
   }, {
     "range" : "38",
     "domain" : "154",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "676"
   }, {
     "range" : "38",
     "domain" : "280",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "678"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#dstRef",
@@ -16018,7 +16018,7 @@
     "label" : {
       "IRI-based" : "dstRef"
     },
-    "domain" : "33",
+    "domain" : "36",
     "comment" : {
       "undefined" : "(STIX: dst_ref)"
     },
@@ -16027,12 +16027,12 @@
   }, {
     "range" : "38",
     "domain" : "573",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "680"
   }, {
     "range" : "38",
     "domain" : "53",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "681"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#description",
@@ -16136,7 +16136,7 @@
     "label" : {
       "IRI-based" : "srcPackets"
     },
-    "domain" : "33",
+    "domain" : "36",
     "comment" : {
       "undefined" : "(STIX: src_packets)"
     },
@@ -16217,7 +16217,7 @@
     "label" : {
       "IRI-based" : "end"
     },
-    "domain" : "33",
+    "domain" : "36",
     "comment" : {
       "undefined" : "(STIX: end)"
     },
@@ -16244,7 +16244,7 @@
     "label" : {
       "IRI-based" : "policyMappings"
     },
-    "domain" : "198",
+    "domain" : "197",
     "comment" : {
       "undefined" : "(STIX: x509-v3-extensions-type.policy_mappings)"
     },
@@ -16383,7 +16383,7 @@
     "comment" : {
       "undefined" : "(not a STIX property: serialization fidelity)"
     },
-    "attributes" : [ "object", "inverse functional" ],
+    "attributes" : [ "inverse functional", "object" ],
     "id" : "694"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#tlp",
@@ -16413,33 +16413,6 @@
     "attributes" : [ "datatype" ],
     "id" : "695"
   }, {
-    "iri" : "https://cyberterrain.org/ns/stones#aslrEnabled",
-    "baseIri" : "https://cyberterrain.org/ns/stones",
-    "range" : "360",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://cyberterrain.org/ns/stones#",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "undefined",
-        "value" : "True if Address Space Layout Randomisation (ASLR) is enabled for this process.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "aslrEnabled"
-    },
-    "domain" : "55",
-    "comment" : {
-      "undefined" : "(STIX: windows-process-ext.aslr_enabled)"
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "696"
-  }, {
     "iri" : "https://cyberterrain.org/ns/stones#validUntil",
     "baseIri" : "https://cyberterrain.org/ns/stones",
     "range" : "142",
@@ -16463,6 +16436,33 @@
     "domain" : "82",
     "comment" : {
       "undefined" : "(STIX: valid_until)"
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "696"
+  }, {
+    "iri" : "https://cyberterrain.org/ns/stones#aslrEnabled",
+    "baseIri" : "https://cyberterrain.org/ns/stones",
+    "range" : "360",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://cyberterrain.org/ns/stones#",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "undefined",
+        "value" : "True if Address Space Layout Randomisation (ASLR) is enabled for this process.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "aslrEnabled"
+    },
+    "domain" : "55",
+    "comment" : {
+      "undefined" : "(STIX: windows-process-ext.aslr_enabled)"
     },
     "attributes" : [ "datatype" ],
     "id" : "697"
@@ -16514,7 +16514,7 @@
     "label" : {
       "IRI-based" : "protocols"
     },
-    "domain" : "33",
+    "domain" : "36",
     "comment" : {
       "undefined" : "(STIX: protocols)"
     },
@@ -16578,17 +16578,17 @@
   }, {
     "range" : "111",
     "domain" : "11",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "702"
   }, {
     "range" : "372",
     "domain" : "533",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "703"
   }, {
     "range" : "31",
     "domain" : "533",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "704"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#accountExpires",
@@ -16620,27 +16620,27 @@
   }, {
     "range" : "31",
     "domain" : "372",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "706"
   }, {
     "range" : "129",
     "domain" : "518",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "707"
   }, {
     "range" : "30",
     "domain" : "518",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "708"
   }, {
     "range" : "30",
     "domain" : "129",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "709"
   }, {
     "range" : "212",
     "domain" : "31",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "710"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#containsRefs",
@@ -16672,12 +16672,12 @@
   }, {
     "range" : "11",
     "domain" : "40",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "712"
   }, {
     "range" : "111",
     "domain" : "40",
-    "attributes" : [ "object", "anonymous" ],
+    "attributes" : [ "anonymous", "object" ],
     "id" : "713"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#rir",
@@ -16781,7 +16781,7 @@
     "label" : {
       "IRI-based" : "threatActorRoles"
     },
-    "domain" : "171",
+    "domain" : "172",
     "comment" : {
       "undefined" : "(STIX: roles)"
     },
@@ -16809,7 +16809,7 @@
       "IRI-based" : "sightingOfRef"
     },
     "minCardinality" : "1",
-    "domain" : "35",
+    "domain" : "33",
     "comment" : {
       "undefined" : "(STIX: sighting_of_ref)"
     },
@@ -16981,7 +16981,7 @@
     "superproperty" : [ "10" ],
     "domain" : "55",
     "subproperty" : [ "527" ],
-    "attributes" : [ "external", "object", "transitive" ],
+    "attributes" : [ "transitive", "external", "object" ],
     "id" : "12"
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#content",
@@ -17005,7 +17005,7 @@
       "IRI-based" : "content"
     },
     "minCardinality" : "1",
-    "domain" : "453",
+    "domain" : "451",
     "comment" : {
       "undefined" : "(STIX: content)"
     },
@@ -17086,7 +17086,7 @@
     "label" : {
       "IRI-based" : "observedDataRefs"
     },
-    "domain" : "35",
+    "domain" : "33",
     "comment" : {
       "undefined" : "(STIX: observed_data_refs)"
     },
@@ -17095,7 +17095,7 @@
   }, {
     "iri" : "https://cyberterrain.org/ns/stones#hashes",
     "baseIri" : "https://cyberterrain.org/ns/stones",
-    "range" : "206",
+    "range" : "208",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",

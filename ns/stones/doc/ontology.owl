@@ -9,15 +9,15 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://cyberterrain.org/ns/stones#">
-        <owl:versionIRI rdf:resource="https://cyberterrain.org/ns/stones/0.3.0"/>
+        <owl:versionIRI rdf:resource="https://cyberterrain.org/ns/stones/0.3.1"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
         <terms:creator>Hohimer Intelligence Strategies LLC</terms:creator>
         <terms:description xml:lang="en">An OWL 2 ontology modelling the STIX 2.1 specification. Provides a class hierarchy for all STIX Domain Objects (SDOs), Cyber Observable Objects (SCOs), Relationship Objects (SROs), Meta Objects, and structured sub-types, together with datatype and object properties covering all standard STIX properties.</terms:description>
         <terms:license rdf:resource="https://opensource.org/licenses/MIT"/>
         <terms:title xml:lang="en">STONES — STIX ONtology Expression System</terms:title>
         <rdfs:label xml:lang="en">STONES</rdfs:label>
-        <owl:priorVersion rdf:resource="https://cyberterrain.org/ns/stones/0.1.0"/>
-        <owl:versionInfo>0.3.0</owl:versionInfo>
+        <owl:priorVersion rdf:resource="https://cyberterrain.org/ns/stones/0.3.0"/>
+        <owl:versionInfo>0.3.1</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -34,10 +34,31 @@
     
 
 
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
     <!-- http://purl.org/dc/terms/license -->
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
     
 
 
@@ -4084,6 +4105,18 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://cyberterrain.org/ns/stones#StixMetaObject"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://cyberterrain.org/ns/stones#created"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://cyberterrain.org/ns/stones#modified"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:isDefinedBy rdf:resource="https://cyberterrain.org/ns/stones#"/>
         <skos:definition>Defines a schema extension to STIX 2.1. Allows producers to add new properties or new object types in a structured, interoperable way.</skos:definition>
         <skos:prefLabel xml:lang="en">Extension Definition Object</skos:prefLabel>
@@ -4524,6 +4557,18 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://cyberterrain.org/ns/stones#StixMetaObject"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://cyberterrain.org/ns/stones#created"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://cyberterrain.org/ns/stones#modified"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:isDefinedBy rdf:resource="https://cyberterrain.org/ns/stones#"/>
         <skos:definition>Provides translations of string properties of another STIX object into different languages. Allows internationalisation without modifying the original object.</skos:definition>
         <skos:prefLabel xml:lang="en">Language Content Object</skos:prefLabel>
@@ -4732,6 +4777,12 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://cyberterrain.org/ns/stones#StixMetaObject"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://cyberterrain.org/ns/stones#created"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:isDefinedBy rdf:resource="https://cyberterrain.org/ns/stones#"/>
         <skos:definition>Defines a data handling marking used to restrict or label how STIX data can be shared or handled, such as TLP markings. Referenced by object_marking_refs or granular_markings.</skos:definition>
         <skos:prefLabel xml:lang="en">Marking Definition Object</skos:prefLabel>
@@ -5210,20 +5261,8 @@
 
     <owl:Class rdf:about="https://cyberterrain.org/ns/stones#StixCoreObject">
         <rdfs:subClassOf rdf:resource="https://cyberterrain.org/ns/stones#StixObject"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cyberterrain.org/ns/stones#created"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://cyberterrain.org/ns/stones#modified"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:isDefinedBy rdf:resource="https://cyberterrain.org/ns/stones#"/>
-        <skos:definition>Abstract class for STIX Core Objects, comprising SDOs, SCOs, and SROs. Core objects carry a type-qualified identifier and created/modified timestamps, and may be referenced by other objects.</skos:definition>
+        <skos:definition>Abstract class for STIX Core Objects, comprising SDOs, SCOs, and SROs. Core objects carry a type-qualified identifier and may be referenced by other objects. SDOs and SROs also require created and modified timestamps; SCOs have neither.</skos:definition>
         <skos:prefLabel xml:lang="en">STIX Core Object</skos:prefLabel>
     </owl:Class>
     
@@ -5246,6 +5285,18 @@
 
     <owl:Class rdf:about="https://cyberterrain.org/ns/stones#StixDomainObject">
         <rdfs:subClassOf rdf:resource="https://cyberterrain.org/ns/stones#StixCoreObject"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://cyberterrain.org/ns/stones#created"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://cyberterrain.org/ns/stones#modified"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:isDefinedBy rdf:resource="https://cyberterrain.org/ns/stones#"/>
         <skos:definition>Abstract class for STIX Domain Objects (SDOs), which represent modelled cyber threat intelligence concepts such as malware, campaigns, threat actors, and vulnerabilities.</skos:definition>
         <skos:prefLabel xml:lang="en">STIX Domain Object</skos:prefLabel>
@@ -5303,6 +5354,18 @@
 
     <owl:Class rdf:about="https://cyberterrain.org/ns/stones#StixRelationshipObject">
         <rdfs:subClassOf rdf:resource="https://cyberterrain.org/ns/stones#StixCoreObject"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://cyberterrain.org/ns/stones#created"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://cyberterrain.org/ns/stones#modified"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:isDefinedBy rdf:resource="https://cyberterrain.org/ns/stones#"/>
         <skos:definition>Abstract class for STIX Relationship Objects (SROs), which link Core Objects to express directed relationships and sightings between them.</skos:definition>
         <skos:prefLabel xml:lang="en">STIX Relationship Object</skos:prefLabel>

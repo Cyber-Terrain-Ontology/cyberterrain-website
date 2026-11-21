@@ -21,22 +21,11 @@
 }, {
   "@id" : "_:genid101",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@value" : "intrusion-set"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://cyberterrain.org/ns/stones#name"
-  } ]
-}, {
-  "@id" : "_:genid102",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://cyberterrain.org/ns/stones#killChainName"
+    "@id" : "https://cyberterrain.org/ns/stones#stixType"
   } ]
 }, {
   "@id" : "_:genid103",
@@ -46,36 +35,46 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://cyberterrain.org/ns/stones#phaseName"
+    "@id" : "https://cyberterrain.org/ns/stones#name"
   } ]
 }, {
   "@id" : "_:genid104",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#killChainName"
+  } ]
+}, {
+  "@id" : "_:genid105",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#phaseName"
+  } ]
+}, {
+  "@id" : "_:genid106",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://cyberterrain.org/ns/stones#StixObject"
     }, {
-      "@id" : "_:genid106"
+      "@id" : "_:genid108"
     } ]
   } ]
 }, {
-  "@id" : "_:genid106",
+  "@id" : "_:genid108",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@value" : "language-content"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://cyberterrain.org/ns/stones#stixType"
-  } ]
-}, {
-  "@id" : "_:genid108",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://cyberterrain.org/ns/stones#StixObject"
-    }, {
-      "@id" : "_:genid110"
-    } ]
   } ]
 }, {
   "@id" : "_:genid11",
@@ -90,6 +89,36 @@
 }, {
   "@id" : "_:genid110",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#created"
+  } ]
+}, {
+  "@id" : "_:genid111",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#modified"
+  } ]
+}, {
+  "@id" : "_:genid112",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://cyberterrain.org/ns/stones#StixObject"
+    }, {
+      "@id" : "_:genid114"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid114",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@value" : "location"
   } ],
@@ -97,7 +126,7 @@
     "@id" : "https://cyberterrain.org/ns/stones#stixType"
   } ]
 }, {
-  "@id" : "_:genid112",
+  "@id" : "_:genid116",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -107,7 +136,7 @@
     "@id" : "https://cyberterrain.org/ns/stones#region"
   } ]
 }, {
-  "@id" : "_:genid113",
+  "@id" : "_:genid117",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -117,7 +146,7 @@
     "@id" : "https://cyberterrain.org/ns/stones#country"
   } ]
 }, {
-  "@id" : "_:genid114",
+  "@id" : "_:genid118",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -127,7 +156,7 @@
     "@id" : "https://cyberterrain.org/ns/stones#latitude"
   } ]
 }, {
-  "@id" : "_:genid115",
+  "@id" : "_:genid119",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -135,25 +164,6 @@
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://cyberterrain.org/ns/stones#longitude"
-  } ]
-}, {
-  "@id" : "_:genid116",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://cyberterrain.org/ns/stones#StixObject"
-    }, {
-      "@id" : "_:genid118"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid118",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@value" : "mac-addr"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://cyberterrain.org/ns/stones#stixType"
   } ]
 }, {
   "@id" : "_:genid120",
@@ -169,13 +179,32 @@
   "@id" : "_:genid122",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@value" : "malware"
+    "@value" : "mac-addr"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://cyberterrain.org/ns/stones#stixType"
   } ]
 }, {
   "@id" : "_:genid124",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://cyberterrain.org/ns/stones#StixObject"
+    }, {
+      "@id" : "_:genid126"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid126",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@value" : "malware"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#stixType"
+  } ]
+}, {
+  "@id" : "_:genid128",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -185,7 +214,7 @@
     "@id" : "https://cyberterrain.org/ns/stones#malwareTypes"
   } ]
 }, {
-  "@id" : "_:genid125",
+  "@id" : "_:genid129",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -193,25 +222,6 @@
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://cyberterrain.org/ns/stones#isFamily"
-  } ]
-}, {
-  "@id" : "_:genid126",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://cyberterrain.org/ns/stones#StixObject"
-    }, {
-      "@id" : "_:genid128"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid128",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@value" : "malware-analysis"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://cyberterrain.org/ns/stones#stixType"
   } ]
 }, {
   "@id" : "_:genid13",
@@ -224,6 +234,25 @@
   } ]
 }, {
   "@id" : "_:genid130",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://cyberterrain.org/ns/stones#StixObject"
+    }, {
+      "@id" : "_:genid132"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid132",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@value" : "malware-analysis"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#stixType"
+  } ]
+}, {
+  "@id" : "_:genid134",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -231,25 +260,6 @@
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://cyberterrain.org/ns/stones#product"
-  } ]
-}, {
-  "@id" : "_:genid131",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://cyberterrain.org/ns/stones#StixObject"
-    }, {
-      "@id" : "_:genid133"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid133",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@value" : "marking-definition"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://cyberterrain.org/ns/stones#stixType"
   } ]
 }, {
   "@id" : "_:genid135",
@@ -265,13 +275,42 @@
   "@id" : "_:genid137",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@value" : "mutex"
+    "@value" : "marking-definition"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://cyberterrain.org/ns/stones#stixType"
   } ]
 }, {
   "@id" : "_:genid139",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#created"
+  } ]
+}, {
+  "@id" : "_:genid140",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://cyberterrain.org/ns/stones#StixObject"
+    }, {
+      "@id" : "_:genid142"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid142",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@value" : "mutex"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#stixType"
+  } ]
+}, {
+  "@id" : "_:genid144",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#oneOf" : [ {
     "@list" : [ {
@@ -293,7 +332,17 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid148",
+  "@id" : "_:genid15",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://cyberterrain.org/ns/stones#StixObject"
+    }, {
+      "@id" : "_:genid17"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid153",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#oneOf" : [ {
     "@list" : [ {
@@ -309,27 +358,17 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid15",
+  "@id" : "_:genid159",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://cyberterrain.org/ns/stones#StixObject"
     }, {
-      "@id" : "_:genid17"
+      "@id" : "_:genid161"
     } ]
   } ]
 }, {
-  "@id" : "_:genid154",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://cyberterrain.org/ns/stones#StixObject"
-    }, {
-      "@id" : "_:genid156"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid156",
+  "@id" : "_:genid161",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@value" : "network-traffic"
@@ -338,17 +377,17 @@
     "@id" : "https://cyberterrain.org/ns/stones#stixType"
   } ]
 }, {
-  "@id" : "_:genid158",
+  "@id" : "_:genid163",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://cyberterrain.org/ns/stones#StixObject"
     }, {
-      "@id" : "_:genid160"
+      "@id" : "_:genid165"
     } ]
   } ]
 }, {
-  "@id" : "_:genid160",
+  "@id" : "_:genid165",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@value" : "note"
@@ -357,7 +396,7 @@
     "@id" : "https://cyberterrain.org/ns/stones#stixType"
   } ]
 }, {
-  "@id" : "_:genid162",
+  "@id" : "_:genid167",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -365,35 +404,6 @@
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://cyberterrain.org/ns/stones#objectRefs"
-  } ]
-}, {
-  "@id" : "_:genid163",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://cyberterrain.org/ns/stones#content"
-  } ]
-}, {
-  "@id" : "_:genid164",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://cyberterrain.org/ns/stones#StixObject"
-    }, {
-      "@id" : "_:genid166"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid166",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@value" : "observed-data"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://cyberterrain.org/ns/stones#stixType"
   } ]
 }, {
   "@id" : "_:genid168",
@@ -403,17 +413,17 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://cyberterrain.org/ns/stones#objectRefs"
+    "@id" : "https://cyberterrain.org/ns/stones#content"
   } ]
 }, {
   "@id" : "_:genid169",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://cyberterrain.org/ns/stones#firstObserved"
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://cyberterrain.org/ns/stones#StixObject"
+    }, {
+      "@id" : "_:genid171"
+    } ]
   } ]
 }, {
   "@id" : "_:genid17",
@@ -425,46 +435,16 @@
     "@id" : "https://cyberterrain.org/ns/stones#stixType"
   } ]
 }, {
-  "@id" : "_:genid170",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://cyberterrain.org/ns/stones#lastObserved"
-  } ]
-}, {
   "@id" : "_:genid171",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://cyberterrain.org/ns/stones#numberObserved"
-  } ]
-}, {
-  "@id" : "_:genid172",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://cyberterrain.org/ns/stones#StixObject"
-    }, {
-      "@id" : "_:genid174"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid174",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@value" : "opinion"
+    "@value" : "observed-data"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://cyberterrain.org/ns/stones#stixType"
   } ]
 }, {
-  "@id" : "_:genid176",
+  "@id" : "_:genid173",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -474,7 +454,66 @@
     "@id" : "https://cyberterrain.org/ns/stones#objectRefs"
   } ]
 }, {
+  "@id" : "_:genid174",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#firstObserved"
+  } ]
+}, {
+  "@id" : "_:genid175",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#lastObserved"
+  } ]
+}, {
+  "@id" : "_:genid176",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#numberObserved"
+  } ]
+}, {
   "@id" : "_:genid177",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://cyberterrain.org/ns/stones#StixObject"
+    }, {
+      "@id" : "_:genid179"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid179",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@value" : "opinion"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#stixType"
+  } ]
+}, {
+  "@id" : "_:genid181",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#objectRefs"
+  } ]
+}, {
+  "@id" : "_:genid182",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -484,7 +523,7 @@
     "@id" : "https://cyberterrain.org/ns/stones#opinion"
   } ]
 }, {
-  "@id" : "_:genid178",
+  "@id" : "_:genid183",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#oneOf" : [ {
     "@list" : [ {
@@ -500,32 +539,13 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid184",
+  "@id" : "_:genid189",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://cyberterrain.org/ns/stones#StixObject"
     }, {
-      "@id" : "_:genid186"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid186",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@value" : "process"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://cyberterrain.org/ns/stones#stixType"
-  } ]
-}, {
-  "@id" : "_:genid188",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://cyberterrain.org/ns/stones#StixObject"
-    }, {
-      "@id" : "_:genid190"
+      "@id" : "_:genid191"
     } ]
   } ]
 }, {
@@ -539,7 +559,26 @@
     "@id" : "https://cyberterrain.org/ns/stones#name"
   } ]
 }, {
-  "@id" : "_:genid190",
+  "@id" : "_:genid191",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@value" : "process"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#stixType"
+  } ]
+}, {
+  "@id" : "_:genid193",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://cyberterrain.org/ns/stones#StixObject"
+    }, {
+      "@id" : "_:genid195"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid195",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@value" : "relationship"
@@ -548,7 +587,7 @@
     "@id" : "https://cyberterrain.org/ns/stones#stixType"
   } ]
 }, {
-  "@id" : "_:genid192",
+  "@id" : "_:genid197",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -558,7 +597,7 @@
     "@id" : "https://cyberterrain.org/ns/stones#sourceRef"
   } ]
 }, {
-  "@id" : "_:genid193",
+  "@id" : "_:genid198",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -568,35 +607,6 @@
     "@id" : "https://cyberterrain.org/ns/stones#targetRef"
   } ]
 }, {
-  "@id" : "_:genid194",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://cyberterrain.org/ns/stones#relationshipType"
-  } ]
-}, {
-  "@id" : "_:genid195",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://cyberterrain.org/ns/stones#StixObject"
-    }, {
-      "@id" : "_:genid197"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid197",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@value" : "report"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://cyberterrain.org/ns/stones#stixType"
-  } ]
-}, {
   "@id" : "_:genid199",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minCardinality" : [ {
@@ -604,7 +614,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://cyberterrain.org/ns/stones#objectRefs"
+    "@id" : "https://cyberterrain.org/ns/stones#relationshipType"
   } ]
 }, {
   "@id" : "_:genid2",
@@ -628,6 +638,35 @@
   } ]
 }, {
   "@id" : "_:genid200",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://cyberterrain.org/ns/stones#StixObject"
+    }, {
+      "@id" : "_:genid202"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid202",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@value" : "report"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#stixType"
+  } ]
+}, {
+  "@id" : "_:genid204",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#objectRefs"
+  } ]
+}, {
+  "@id" : "_:genid205",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -637,7 +676,7 @@
     "@id" : "https://cyberterrain.org/ns/stones#reportTypes"
   } ]
 }, {
-  "@id" : "_:genid201",
+  "@id" : "_:genid206",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -647,35 +686,6 @@
     "@id" : "https://cyberterrain.org/ns/stones#name"
   } ]
 }, {
-  "@id" : "_:genid202",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://cyberterrain.org/ns/stones#published"
-  } ]
-}, {
-  "@id" : "_:genid203",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://cyberterrain.org/ns/stones#StixObject"
-    }, {
-      "@id" : "_:genid205"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid205",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@value" : "sighting"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://cyberterrain.org/ns/stones#stixType"
-  } ]
-}, {
   "@id" : "_:genid207",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minCardinality" : [ {
@@ -683,7 +693,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://cyberterrain.org/ns/stones#sightingOfRef"
+    "@id" : "https://cyberterrain.org/ns/stones#published"
   } ]
 }, {
   "@id" : "_:genid208",
@@ -699,69 +709,58 @@
   "@id" : "_:genid210",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@value" : "software"
+    "@value" : "sighting"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://cyberterrain.org/ns/stones#stixType"
   } ]
 }, {
   "@id" : "_:genid212",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#sightingOfRef"
+  } ]
+}, {
+  "@id" : "_:genid213",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://cyberterrain.org/ns/stones#StixObject"
     }, {
-      "@id" : "_:genid214"
+      "@id" : "_:genid215"
     } ]
   } ]
 }, {
-  "@id" : "_:genid214",
+  "@id" : "_:genid215",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@value" : "software"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#stixType"
+  } ]
+}, {
+  "@id" : "_:genid217",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://cyberterrain.org/ns/stones#StixObject"
+    }, {
+      "@id" : "_:genid219"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid219",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@value" : "bundle"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://cyberterrain.org/ns/stones#stixType"
-  } ]
-}, {
-  "@id" : "_:genid216",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://cyberterrain.org/ns/stones#created"
-  } ]
-}, {
-  "@id" : "_:genid217",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://cyberterrain.org/ns/stones#modified"
-  } ]
-}, {
-  "@id" : "_:genid218",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://cyberterrain.org/ns/stones#specVersion"
-  } ]
-}, {
-  "@id" : "_:genid219",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://cyberterrain.org/ns/stones#stixId"
   } ]
 }, {
   "@id" : "_:genid22",
@@ -773,43 +772,54 @@
     "@id" : "https://cyberterrain.org/ns/stones#stixType"
   } ]
 }, {
-  "@id" : "_:genid220",
+  "@id" : "_:genid221",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://cyberterrain.org/ns/stones#stixType"
+    "@id" : "https://cyberterrain.org/ns/stones#created"
   } ]
 }, {
   "@id" : "_:genid222",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://cyberterrain.org/ns/stones#StixObject"
-    }, {
-      "@id" : "_:genid224"
-    } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#modified"
+  } ]
+}, {
+  "@id" : "_:genid223",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#specVersion"
   } ]
 }, {
   "@id" : "_:genid224",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@value" : "threat-actor"
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://cyberterrain.org/ns/stones#stixType"
+    "@id" : "https://cyberterrain.org/ns/stones#stixId"
   } ]
 }, {
-  "@id" : "_:genid226",
+  "@id" : "_:genid225",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://cyberterrain.org/ns/stones#threatActorTypes"
+    "@id" : "https://cyberterrain.org/ns/stones#stixType"
   } ]
 }, {
   "@id" : "_:genid227",
@@ -819,36 +829,36 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://cyberterrain.org/ns/stones#name"
+    "@id" : "https://cyberterrain.org/ns/stones#created"
   } ]
 }, {
   "@id" : "_:genid228",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://cyberterrain.org/ns/stones#StixObject"
-    }, {
-      "@id" : "_:genid230"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid230",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@value" : "tool"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://cyberterrain.org/ns/stones#stixType"
-  } ]
-}, {
-  "@id" : "_:genid232",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://cyberterrain.org/ns/stones#toolTypes"
+    "@id" : "https://cyberterrain.org/ns/stones#modified"
+  } ]
+}, {
+  "@id" : "_:genid229",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://cyberterrain.org/ns/stones#StixObject"
+    }, {
+      "@id" : "_:genid231"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid231",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@value" : "threat-actor"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#stixType"
   } ]
 }, {
   "@id" : "_:genid233",
@@ -858,36 +868,46 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://cyberterrain.org/ns/stones#name"
+    "@id" : "https://cyberterrain.org/ns/stones#threatActorTypes"
   } ]
 }, {
   "@id" : "_:genid234",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#name"
+  } ]
+}, {
+  "@id" : "_:genid235",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://cyberterrain.org/ns/stones#StixObject"
     }, {
-      "@id" : "_:genid236"
+      "@id" : "_:genid237"
     } ]
   } ]
 }, {
-  "@id" : "_:genid236",
+  "@id" : "_:genid237",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@value" : "url"
+    "@value" : "tool"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://cyberterrain.org/ns/stones#stixType"
   } ]
 }, {
-  "@id" : "_:genid238",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://cyberterrain.org/ns/stones#StixObject"
-    }, {
-      "@id" : "_:genid240"
-    } ]
+  "@id" : "_:genid239",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#toolTypes"
   } ]
 }, {
   "@id" : "_:genid24",
@@ -902,34 +922,6 @@
 }, {
   "@id" : "_:genid240",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@value" : "user-account"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://cyberterrain.org/ns/stones#stixType"
-  } ]
-}, {
-  "@id" : "_:genid242",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://cyberterrain.org/ns/stones#StixObject"
-    }, {
-      "@id" : "_:genid244"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid244",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@value" : "vulnerability"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://cyberterrain.org/ns/stones#stixType"
-  } ]
-}, {
-  "@id" : "_:genid246",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
@@ -938,17 +930,51 @@
     "@id" : "https://cyberterrain.org/ns/stones#name"
   } ]
 }, {
-  "@id" : "_:genid247",
+  "@id" : "_:genid241",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "https://cyberterrain.org/ns/stonex#_high"
+      "@id" : "https://cyberterrain.org/ns/stones#StixObject"
     }, {
-      "@id" : "https://cyberterrain.org/ns/stonex#_low"
+      "@id" : "_:genid243"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid243",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@value" : "url"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#stixType"
+  } ]
+}, {
+  "@id" : "_:genid245",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://cyberterrain.org/ns/stones#StixObject"
     }, {
-      "@id" : "https://cyberterrain.org/ns/stonex#_medium"
+      "@id" : "_:genid247"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid247",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@value" : "user-account"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#stixType"
+  } ]
+}, {
+  "@id" : "_:genid249",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://cyberterrain.org/ns/stones#StixObject"
     }, {
-      "@id" : "https://cyberterrain.org/ns/stonex#_system"
+      "@id" : "_:genid251"
     } ]
   } ]
 }, {
@@ -962,7 +988,16 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid252",
+  "@id" : "_:genid251",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@value" : "vulnerability"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#stixType"
+  } ]
+}, {
+  "@id" : "_:genid253",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -972,7 +1007,31 @@
     "@id" : "https://cyberterrain.org/ns/stones#name"
   } ]
 }, {
-  "@id" : "_:genid253",
+  "@id" : "_:genid254",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@id" : "https://cyberterrain.org/ns/stonex#_high"
+    }, {
+      "@id" : "https://cyberterrain.org/ns/stonex#_low"
+    }, {
+      "@id" : "https://cyberterrain.org/ns/stonex#_medium"
+    }, {
+      "@id" : "https://cyberterrain.org/ns/stonex#_system"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid259",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#name"
+  } ]
+}, {
+  "@id" : "_:genid260",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#oneOf" : [ {
     "@list" : [ {
@@ -1006,16 +1065,6 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid268",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://cyberterrain.org/ns/stones#StixObject"
-    }, {
-      "@id" : "_:genid270"
-    } ]
-  } ]
-}, {
   "@id" : "_:genid27",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
@@ -1025,7 +1074,17 @@
     "@id" : "https://cyberterrain.org/ns/stones#stixType"
   } ]
 }, {
-  "@id" : "_:genid270",
+  "@id" : "_:genid275",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://cyberterrain.org/ns/stones#StixObject"
+    }, {
+      "@id" : "_:genid277"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid277",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@value" : "windows-registry-key"
@@ -1034,7 +1093,7 @@
     "@id" : "https://cyberterrain.org/ns/stones#stixType"
   } ]
 }, {
-  "@id" : "_:genid272",
+  "@id" : "_:genid279",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -1044,7 +1103,7 @@
     "@id" : "https://cyberterrain.org/ns/stones#name"
   } ]
 }, {
-  "@id" : "_:genid273",
+  "@id" : "_:genid280",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#oneOf" : [ {
     "@list" : [ {
@@ -1060,7 +1119,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid279",
+  "@id" : "_:genid286",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#oneOf" : [ {
     "@list" : [ {
@@ -1080,7 +1139,17 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid287",
+  "@id" : "_:genid29",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://cyberterrain.org/ns/stones#StixObject"
+    }, {
+      "@id" : "_:genid31"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid294",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#oneOf" : [ {
     "@list" : [ {
@@ -1094,27 +1163,17 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid29",
+  "@id" : "_:genid299",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://cyberterrain.org/ns/stones#StixObject"
     }, {
-      "@id" : "_:genid31"
+      "@id" : "_:genid301"
     } ]
   } ]
 }, {
-  "@id" : "_:genid292",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://cyberterrain.org/ns/stones#StixObject"
-    }, {
-      "@id" : "_:genid294"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid294",
+  "@id" : "_:genid301",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@value" : "x509-certificate"
@@ -1123,7 +1182,7 @@
     "@id" : "https://cyberterrain.org/ns/stones#stixType"
   } ]
 }, {
-  "@id" : "_:genid296",
+  "@id" : "_:genid303",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -1135,7 +1194,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid300",
+  "@id" : "_:genid307",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -1235,6 +1294,26 @@
   } ]
 }, {
   "@id" : "_:genid49",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#created"
+  } ]
+}, {
+  "@id" : "_:genid50",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#modified"
+  } ]
+}, {
+  "@id" : "_:genid51",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#oneOf" : [ {
     "@list" : [ {
@@ -1250,7 +1329,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid55",
+  "@id" : "_:genid57",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -1260,23 +1339,14 @@
     "@id" : "https://cyberterrain.org/ns/stones#sourceName"
   } ]
 }, {
-  "@id" : "_:genid56",
+  "@id" : "_:genid58",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://cyberterrain.org/ns/stones#StixObject"
     }, {
-      "@id" : "_:genid58"
+      "@id" : "_:genid60"
     } ]
-  } ]
-}, {
-  "@id" : "_:genid58",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@value" : "file"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://cyberterrain.org/ns/stones#stixType"
   } ]
 }, {
   "@id" : "_:genid6",
@@ -1291,6 +1361,15 @@
 }, {
   "@id" : "_:genid60",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@value" : "file"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#stixType"
+  } ]
+}, {
+  "@id" : "_:genid62",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
@@ -1299,7 +1378,7 @@
     "@id" : "https://cyberterrain.org/ns/stones#markingRef"
   } ]
 }, {
-  "@id" : "_:genid61",
+  "@id" : "_:genid63",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -1309,43 +1388,23 @@
     "@id" : "https://cyberterrain.org/ns/stones#selectors"
   } ]
 }, {
-  "@id" : "_:genid62",
+  "@id" : "_:genid64",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://cyberterrain.org/ns/stones#StixObject"
     }, {
-      "@id" : "_:genid64"
+      "@id" : "_:genid66"
     } ]
   } ]
 }, {
-  "@id" : "_:genid64",
+  "@id" : "_:genid66",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@value" : "grouping"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://cyberterrain.org/ns/stones#stixType"
-  } ]
-}, {
-  "@id" : "_:genid66",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://cyberterrain.org/ns/stones#context"
-  } ]
-}, {
-  "@id" : "_:genid67",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://cyberterrain.org/ns/stones#objectRefs"
   } ]
 }, {
   "@id" : "_:genid68",
@@ -1355,7 +1414,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://cyberterrain.org/ns/stones#algorithm"
+    "@id" : "https://cyberterrain.org/ns/stones#context"
   } ]
 }, {
   "@id" : "_:genid69",
@@ -1365,20 +1424,40 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://cyberterrain.org/ns/stones#hashValue"
+    "@id" : "https://cyberterrain.org/ns/stones#objectRefs"
   } ]
 }, {
   "@id" : "_:genid70",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#algorithm"
+  } ]
+}, {
+  "@id" : "_:genid71",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#hashValue"
+  } ]
+}, {
+  "@id" : "_:genid72",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://cyberterrain.org/ns/stones#StixObject"
     }, {
-      "@id" : "_:genid72"
+      "@id" : "_:genid74"
     } ]
   } ]
 }, {
-  "@id" : "_:genid72",
+  "@id" : "_:genid74",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@value" : "ipv4-addr"
@@ -1387,33 +1466,23 @@
     "@id" : "https://cyberterrain.org/ns/stones#stixType"
   } ]
 }, {
-  "@id" : "_:genid74",
+  "@id" : "_:genid76",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://cyberterrain.org/ns/stones#StixObject"
     }, {
-      "@id" : "_:genid76"
+      "@id" : "_:genid78"
     } ]
   } ]
 }, {
-  "@id" : "_:genid76",
+  "@id" : "_:genid78",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@value" : "ipv6-addr"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://cyberterrain.org/ns/stones#stixType"
-  } ]
-}, {
-  "@id" : "_:genid78",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://cyberterrain.org/ns/stones#StixObject"
-    }, {
-      "@id" : "_:genid80"
-    } ]
   } ]
 }, {
   "@id" : "_:genid8",
@@ -1426,6 +1495,16 @@
   } ]
 }, {
   "@id" : "_:genid80",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://cyberterrain.org/ns/stones#StixObject"
+    }, {
+      "@id" : "_:genid82"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid82",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@value" : "identity"
@@ -1434,7 +1513,7 @@
     "@id" : "https://cyberterrain.org/ns/stones#stixType"
   } ]
 }, {
-  "@id" : "_:genid82",
+  "@id" : "_:genid84",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -1444,43 +1523,23 @@
     "@id" : "https://cyberterrain.org/ns/stones#name"
   } ]
 }, {
-  "@id" : "_:genid83",
+  "@id" : "_:genid85",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://cyberterrain.org/ns/stones#StixObject"
     }, {
-      "@id" : "_:genid85"
+      "@id" : "_:genid87"
     } ]
   } ]
 }, {
-  "@id" : "_:genid85",
+  "@id" : "_:genid87",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@value" : "indicator"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://cyberterrain.org/ns/stones#stixType"
-  } ]
-}, {
-  "@id" : "_:genid87",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://cyberterrain.org/ns/stones#indicatorTypes"
-  } ]
-}, {
-  "@id" : "_:genid88",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://cyberterrain.org/ns/stones#patternType"
   } ]
 }, {
   "@id" : "_:genid89",
@@ -1490,7 +1549,7 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://cyberterrain.org/ns/stones#pattern"
+    "@id" : "https://cyberterrain.org/ns/stones#indicatorTypes"
   } ]
 }, {
   "@id" : "_:genid90",
@@ -1500,20 +1559,40 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://cyberterrain.org/ns/stones#validFrom"
+    "@id" : "https://cyberterrain.org/ns/stones#patternType"
   } ]
 }, {
   "@id" : "_:genid91",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#pattern"
+  } ]
+}, {
+  "@id" : "_:genid92",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones#validFrom"
+  } ]
+}, {
+  "@id" : "_:genid93",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://cyberterrain.org/ns/stones#StixObject"
     }, {
-      "@id" : "_:genid93"
+      "@id" : "_:genid95"
     } ]
   } ]
 }, {
-  "@id" : "_:genid93",
+  "@id" : "_:genid95",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@value" : "infrastructure"
@@ -1522,7 +1601,7 @@
     "@id" : "https://cyberterrain.org/ns/stones#stixType"
   } ]
 }, {
-  "@id" : "_:genid95",
+  "@id" : "_:genid97",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -1532,7 +1611,7 @@
     "@id" : "https://cyberterrain.org/ns/stones#infrastructureTypes"
   } ]
 }, {
-  "@id" : "_:genid96",
+  "@id" : "_:genid98",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -1542,26 +1621,26 @@
     "@id" : "https://cyberterrain.org/ns/stones#name"
   } ]
 }, {
-  "@id" : "_:genid97",
+  "@id" : "_:genid99",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://cyberterrain.org/ns/stones#StixObject"
     }, {
-      "@id" : "_:genid99"
+      "@id" : "_:genid101"
     } ]
   } ]
 }, {
-  "@id" : "_:genid99",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@value" : "intrusion-set"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://cyberterrain.org/ns/stones#stixType"
-  } ]
+  "@id" : "http://purl.org/dc/terms/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/title",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stones#",
@@ -1588,13 +1667,13 @@
     "@id" : "http://www.w3.org/2004/02/skos/core"
   } ],
   "http://www.w3.org/2002/07/owl#priorVersion" : [ {
-    "@id" : "https://cyberterrain.org/ns/stones/0.1.0"
-  } ],
-  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
     "@id" : "https://cyberterrain.org/ns/stones/0.3.0"
   } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "https://cyberterrain.org/ns/stones/0.3.1"
+  } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.3.0"
+    "@value" : "0.3.1"
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stones#AccountTypeVocabulary",
@@ -1848,6 +1927,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stones#StixMetaObject"
+  }, {
+    "@id" : "_:genid49"
+  }, {
+    "@id" : "_:genid50"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
     "@id" : "_:genid45"
@@ -1866,7 +1949,7 @@
     "@id" : "https://cyberterrain.org/ns/stones#Enumeration"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid49"
+    "@id" : "_:genid51"
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stones#ExternalReference",
@@ -1877,7 +1960,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stones#StixSubType"
   }, {
-    "@id" : "_:genid55"
+    "@id" : "_:genid57"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "A structured reference to non-STIX information, such as a CVE entry, MITRE ATT&CK technique, or external URL. Used to link STIX content to authoritative external sources."
@@ -1896,7 +1979,7 @@
     "@id" : "https://cyberterrain.org/ns/stones#StixCyberobservableObject"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid56"
+    "@id" : "_:genid58"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "Represents a file with its metadata and optional content reference. Supports extensions for archive files, NTFS streams, PE binaries, PDF documents, and raster images."
@@ -1914,9 +1997,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stones#StixSubType"
   }, {
-    "@id" : "_:genid60"
+    "@id" : "_:genid62"
   }, {
-    "@id" : "_:genid61"
+    "@id" : "_:genid63"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "A property-level data handling marking that applies a marking definition to specific named fields of a STIX object, enabling fine-grained access control."
@@ -1934,12 +2017,12 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stones#StixDomainObject"
   }, {
-    "@id" : "_:genid66"
+    "@id" : "_:genid68"
   }, {
-    "@id" : "_:genid67"
+    "@id" : "_:genid69"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid62"
+    "@id" : "_:genid64"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "Explicitly asserts that a set of STIX objects share a common context without implying the existence of a threat report. Useful for linking related objects without a formal report."
@@ -1963,9 +2046,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stones#StixSubType"
   }, {
-    "@id" : "_:genid68"
+    "@id" : "_:genid70"
   }, {
-    "@id" : "_:genid69"
+    "@id" : "_:genid71"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "A single cryptographic hash entry associating a hashing algorithm with its hex-encoded digest value. Used to represent entries in the STIX hashes dictionary."
@@ -1990,7 +2073,7 @@
     "@id" : "https://cyberterrain.org/ns/stones#StixCyberobservableObject"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid70"
+    "@id" : "_:genid72"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "Represents one or more IPv4 addresses expressed using CIDR notation."
@@ -2009,7 +2092,7 @@
     "@id" : "https://cyberterrain.org/ns/stones#StixCyberobservableObject"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid74"
+    "@id" : "_:genid76"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "Represents one or more IPv6 addresses expressed using CIDR notation."
@@ -2027,10 +2110,10 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stones#StixDomainObject"
   }, {
-    "@id" : "_:genid82"
+    "@id" : "_:genid84"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid78"
+    "@id" : "_:genid80"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "Actual individuals, organisations, or groups, as well as classes of individuals, organisations, systems, or groups. Used to represent victims, producers, or any other real-world actor."
@@ -2060,16 +2143,16 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stones#StixDomainObject"
   }, {
-    "@id" : "_:genid87"
-  }, {
-    "@id" : "_:genid88"
-  }, {
     "@id" : "_:genid89"
   }, {
     "@id" : "_:genid90"
+  }, {
+    "@id" : "_:genid91"
+  }, {
+    "@id" : "_:genid92"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid83"
+    "@id" : "_:genid85"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "Contains a pattern that can be used to detect suspicious or malicious cyber activity. Patterns are expressed using the STIX Patterning Language or another supported pattern language."
@@ -2099,12 +2182,12 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stones#StixDomainObject"
   }, {
-    "@id" : "_:genid95"
+    "@id" : "_:genid97"
   }, {
-    "@id" : "_:genid96"
+    "@id" : "_:genid98"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid91"
+    "@id" : "_:genid93"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "Represents systems, software services, or any group of resources used to conduct cyber operations. Infrastructure is used by threat actors and intrusion sets both offensively and defensively."
@@ -2128,10 +2211,10 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stones#StixDomainObject"
   }, {
-    "@id" : "_:genid101"
+    "@id" : "_:genid103"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid97"
+    "@id" : "_:genid99"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "A grouped set of adversarial behaviours and resources with common properties, believed to be orchestrated by a single organisation. Often represents a named APT group."
@@ -2149,9 +2232,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stones#StixSubType"
   }, {
-    "@id" : "_:genid102"
+    "@id" : "_:genid104"
   }, {
-    "@id" : "_:genid103"
+    "@id" : "_:genid105"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "Represents a phase within a named kill chain framework, such as the MITRE ATT&CK or Lockheed Martin Cyber Kill Chain, used to categorise the stage of an attack."
@@ -2168,9 +2251,13 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stones#StixMetaObject"
+  }, {
+    "@id" : "_:genid110"
+  }, {
+    "@id" : "_:genid111"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid104"
+    "@id" : "_:genid106"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "Provides translations of string properties of another STIX object into different languages. Allows internationalisation without modifying the original object."
@@ -2220,16 +2307,16 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stones#StixDomainObject"
   }, {
-    "@id" : "_:genid112"
+    "@id" : "_:genid116"
   }, {
-    "@id" : "_:genid113"
+    "@id" : "_:genid117"
   }, {
-    "@id" : "_:genid114"
+    "@id" : "_:genid118"
   }, {
-    "@id" : "_:genid115"
+    "@id" : "_:genid119"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid108"
+    "@id" : "_:genid112"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "Represents a geographic location. May be as specific as a latitude/longitude coordinate or as broad as a continent. At least one of region, country, or latitude/longitude must be provided."
@@ -2248,7 +2335,7 @@
     "@id" : "https://cyberterrain.org/ns/stones#StixCyberobservableObject"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid116"
+    "@id" : "_:genid120"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "Represents a single MAC address expressed in lowercase IEEE 802 colon-hexadecimal notation."
@@ -2266,12 +2353,12 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stones#StixDomainObject"
   }, {
-    "@id" : "_:genid124"
+    "@id" : "_:genid128"
   }, {
-    "@id" : "_:genid125"
+    "@id" : "_:genid129"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid120"
+    "@id" : "_:genid124"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "A type of TTP that represents malicious code. Captures both malware families (when is_family is true) and specific instances or samples."
@@ -2289,10 +2376,10 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stones#StixDomainObject"
   }, {
-    "@id" : "_:genid130"
+    "@id" : "_:genid134"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid126"
+    "@id" : "_:genid130"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "Captures the results of a malware analysis process, whether static or dynamic. Represents the output of a specific analysis run on a specific sample."
@@ -2327,9 +2414,11 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stones#StixMetaObject"
+  }, {
+    "@id" : "_:genid139"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid131"
+    "@id" : "_:genid135"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "Defines a data handling marking used to restrict or label how STIX data can be shared or handled, such as TLP markings. Referenced by object_marking_refs or granular_markings."
@@ -2348,7 +2437,7 @@
     "@id" : "https://cyberterrain.org/ns/stones#StixCyberobservableObject"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid135"
+    "@id" : "_:genid140"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "Represents a named mutual-exclusion object, commonly created or checked by malware to prevent multiple concurrent instances from running."
@@ -2364,7 +2453,7 @@
     "@id" : "https://cyberterrain.org/ns/stones#Enumeration"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid139"
+    "@id" : "_:genid144"
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stones#NetworkSocketTypeEnumeration",
@@ -2373,7 +2462,7 @@
     "@id" : "https://cyberterrain.org/ns/stones#Enumeration"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid148"
+    "@id" : "_:genid153"
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stones#NetworkTrafficObject",
@@ -2385,7 +2474,7 @@
     "@id" : "https://cyberterrain.org/ns/stones#StixCyberobservableObject"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid154"
+    "@id" : "_:genid159"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "Represents an arbitrary network traffic flow between source and destination endpoints. Supports extensions for HTTP, ICMP, socket, and TCP specifics."
@@ -2403,12 +2492,12 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stones#StixDomainObject"
   }, {
-    "@id" : "_:genid162"
+    "@id" : "_:genid167"
   }, {
-    "@id" : "_:genid163"
+    "@id" : "_:genid168"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid158"
+    "@id" : "_:genid163"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "Conveys informational text to provide further context and/or to assess the accuracy of existing STIX information. Similar to a comment or annotation on other STIX objects."
@@ -2426,16 +2515,16 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stones#StixDomainObject"
   }, {
-    "@id" : "_:genid168"
+    "@id" : "_:genid173"
   }, {
-    "@id" : "_:genid169"
+    "@id" : "_:genid174"
   }, {
-    "@id" : "_:genid170"
+    "@id" : "_:genid175"
   }, {
-    "@id" : "_:genid171"
+    "@id" : "_:genid176"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid164"
+    "@id" : "_:genid169"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "Conveys information observed on systems and networks, wrapping one or more SCO references together with observation metadata such as first and last observed timestamps."
@@ -2459,12 +2548,12 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stones#StixDomainObject"
   }, {
-    "@id" : "_:genid176"
+    "@id" : "_:genid181"
   }, {
-    "@id" : "_:genid177"
+    "@id" : "_:genid182"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid172"
+    "@id" : "_:genid177"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "An assessment of the correctness of information in one or more STIX objects. Allows analysts to express agreement or disagreement with existing intelligence."
@@ -2480,7 +2569,7 @@
     "@id" : "https://cyberterrain.org/ns/stones#Enumeration"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid178"
+    "@id" : "_:genid183"
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stones#PatternTypeVocabulary",
@@ -2498,7 +2587,7 @@
     "@id" : "https://cyberterrain.org/ns/stones#StixCyberobservableObject"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid184"
+    "@id" : "_:genid189"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "Represents a running or terminated process on a host. Supports extensions for Windows-specific process and service attributes."
@@ -2528,14 +2617,14 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stones#StixRelationshipObject"
   }, {
-    "@id" : "_:genid192"
+    "@id" : "_:genid197"
   }, {
-    "@id" : "_:genid193"
+    "@id" : "_:genid198"
   }, {
-    "@id" : "_:genid194"
+    "@id" : "_:genid199"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid188"
+    "@id" : "_:genid193"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "A directed link between two STIX Core Objects. The semantics of the link are defined by the relationship_type property."
@@ -2559,16 +2648,16 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stones#StixDomainObject"
   }, {
-    "@id" : "_:genid199"
+    "@id" : "_:genid204"
   }, {
-    "@id" : "_:genid200"
+    "@id" : "_:genid205"
   }, {
-    "@id" : "_:genid201"
+    "@id" : "_:genid206"
   }, {
-    "@id" : "_:genid202"
+    "@id" : "_:genid207"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid195"
+    "@id" : "_:genid200"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "A collection of threat intelligence focused on one or more topics, such as a description of a threat actor, malware, or attack technique. Used to package related STIX content."
@@ -2592,10 +2681,10 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stones#StixRelationshipObject"
   }, {
-    "@id" : "_:genid207"
+    "@id" : "_:genid212"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid203"
+    "@id" : "_:genid208"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "Records that a STIX object such as an indicator, malware, tool, or threat actor was seen. Wraps observation metadata around a reference to the sighted object."
@@ -2614,7 +2703,7 @@
     "@id" : "https://cyberterrain.org/ns/stones#StixCyberobservableObject"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid208"
+    "@id" : "_:genid213"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "Represents a software product, including commercial applications, operating systems, libraries, and utilities."
@@ -2633,7 +2722,7 @@
     "@id" : "https://cyberterrain.org/ns/stones#StixObject"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid212"
+    "@id" : "_:genid217"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "A collection of arbitrary STIX objects used as a transport container. Bundles are not Core Objects, carry no modified timestamp, and cannot be referenced by identifier."
@@ -2650,13 +2739,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stones#StixObject"
-  }, {
-    "@id" : "_:genid216"
-  }, {
-    "@id" : "_:genid217"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
-    "@value" : "Abstract class for STIX Core Objects, comprising SDOs, SCOs, and SROs. Core objects carry a type-qualified identifier and created/modified timestamps, and may be referenced by other objects."
+    "@value" : "Abstract class for STIX Core Objects, comprising SDOs, SCOs, and SROs. Core objects carry a type-qualified identifier and may be referenced by other objects. SDOs and SROs also require created and modified timestamps; SCOs have neither."
   } ],
   "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
@@ -2686,6 +2771,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stones#StixCoreObject"
+  }, {
+    "@id" : "_:genid221"
+  }, {
+    "@id" : "_:genid222"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "Abstract class for STIX Domain Objects (SDOs), which represent modelled cyber threat intelligence concepts such as malware, campaigns, threat actors, and vulnerabilities."
@@ -2717,11 +2806,11 @@
     "@id" : "https://cyberterrain.org/ns/stones#"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid218"
+    "@id" : "_:genid223"
   }, {
-    "@id" : "_:genid219"
+    "@id" : "_:genid224"
   }, {
-    "@id" : "_:genid220"
+    "@id" : "_:genid225"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
     "@id" : "https://cyberterrain.org/ns/stones#StixSubType"
@@ -2746,6 +2835,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stones#StixCoreObject"
+  }, {
+    "@id" : "_:genid227"
+  }, {
+    "@id" : "_:genid228"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "Abstract class for STIX Relationship Objects (SROs), which link Core Objects to express directed relationships and sightings between them."
@@ -2776,12 +2869,12 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stones#StixDomainObject"
   }, {
-    "@id" : "_:genid226"
+    "@id" : "_:genid233"
   }, {
-    "@id" : "_:genid227"
+    "@id" : "_:genid234"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid222"
+    "@id" : "_:genid229"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "Actual individuals, groups, or organisations believed to be operating with malicious intent. Unlike Identity, a ThreatActor carries adversarial connotations."
@@ -2817,12 +2910,12 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stones#StixDomainObject"
   }, {
-    "@id" : "_:genid232"
+    "@id" : "_:genid239"
   }, {
-    "@id" : "_:genid233"
+    "@id" : "_:genid240"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid228"
+    "@id" : "_:genid235"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "Legitimate software that can be used by threat actors to perform attacks. Distinguishable from malware by being designed for benign purposes but repurposed maliciously."
@@ -2847,7 +2940,7 @@
     "@id" : "https://cyberterrain.org/ns/stones#StixCyberobservableObject"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid234"
+    "@id" : "_:genid241"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "Represents a Uniform Resource Locator conforming to RFC 3986."
@@ -2866,7 +2959,7 @@
     "@id" : "https://cyberterrain.org/ns/stones#StixCyberobservableObject"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid238"
+    "@id" : "_:genid245"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "Represents a user account on a system or service, including local OS accounts, cloud accounts, and social media accounts. Supports a unix-account extension for POSIX attributes."
@@ -2887,10 +2980,10 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stones#StixDomainObject"
   }, {
-    "@id" : "_:genid246"
+    "@id" : "_:genid253"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid242"
+    "@id" : "_:genid249"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "A mistake in software that can be directly used by a threat actor to gain access to a system or network. Typically identified by a CVE number via an external reference."
@@ -2906,7 +2999,7 @@
     "@id" : "https://cyberterrain.org/ns/stones#Enumeration"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid247"
+    "@id" : "_:genid254"
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stones#WindowsPEBinaryVocabulary",
@@ -2923,7 +3016,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stones#StixSubType"
   }, {
-    "@id" : "_:genid252"
+    "@id" : "_:genid259"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "A single section entry within a Windows PE (Portable Executable) binary, described by its name, size, and optional entropy value."
@@ -2939,7 +3032,7 @@
     "@id" : "https://cyberterrain.org/ns/stones#Enumeration"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid253"
+    "@id" : "_:genid260"
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stones#WindowsRegistryKeyObject",
@@ -2951,7 +3044,7 @@
     "@id" : "https://cyberterrain.org/ns/stones#StixCyberobservableObject"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid268"
+    "@id" : "_:genid275"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "Represents a Windows Registry key with its full path, value entries, modification timestamp, and creator."
@@ -2969,7 +3062,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cyberterrain.org/ns/stones#StixSubType"
   }, {
-    "@id" : "_:genid272"
+    "@id" : "_:genid279"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "A single value entry within a Windows Registry key, comprising a name, a data string, and a registry data type."
@@ -2985,7 +3078,7 @@
     "@id" : "https://cyberterrain.org/ns/stones#Enumeration"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid273"
+    "@id" : "_:genid280"
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stones#WindowsServiceStatusEnumeration",
@@ -2994,7 +3087,7 @@
     "@id" : "https://cyberterrain.org/ns/stones#Enumeration"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid279"
+    "@id" : "_:genid286"
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stones#WindowsServiceTypeEnumeration",
@@ -3003,7 +3096,7 @@
     "@id" : "https://cyberterrain.org/ns/stones#Enumeration"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid287"
+    "@id" : "_:genid294"
   } ]
 }, {
   "@id" : "https://cyberterrain.org/ns/stones#X509CertificateObject",
@@ -3015,7 +3108,7 @@
     "@id" : "https://cyberterrain.org/ns/stones#StixCyberobservableObject"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid292"
+    "@id" : "_:genid299"
   } ],
   "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "Represents an X.509 digital certificate, capturing its subject, issuer, validity window, public key details, and optional v3 extensions."
